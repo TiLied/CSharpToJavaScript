@@ -1,0 +1,92 @@
+<docs>
+<EXT_disjoint_timer_query>
+<summary>
+The <strong>EXT_disjoint_timer_query</strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and provides a way to measure the duration of a set of GL commands, without stalling the rendering pipeline.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension should be available in {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts only. <see cref="EXT_disjoint_timer_query_webgl2"/> is available in {{domxref("WebGL2RenderingContext", "WebGL 2", &amp;quot;&amp;quot;, 1)}} contexts.</para><para>In WebGL 2, the OpenGL method <c>getQueryObject()</c> is renamed to <see cref="WebGL2RenderingContext.GetQueryParameter"/>.<br/>In WebGL 2, other queries (such as occlusion queries and primitive queries) are possible using <see cref="WebGLQuery"/> objects.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EXT_disjoint_timer_query>
+<EXT_disjoint_timer_queryBeginQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.beginQueryEXT()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> starts a timer query.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/beginQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EXT_disjoint_timer_queryBeginQueryEXT>
+<EXT_disjoint_timer_queryCreateQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.createQueryEXT()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes<br/><see cref="WebGLQuery"/> objects, which track the time needed to fully complete<br/>a set of GL commands.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/createQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLQuery"/> object.</returns>
+</EXT_disjoint_timer_queryCreateQueryEXT>
+<EXT_disjoint_timer_queryDeleteQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.deleteQueryEXT()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLQuery"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/deleteQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EXT_disjoint_timer_queryDeleteQueryEXT>
+<EXT_disjoint_timer_queryEndQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.endQueryEXT()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> ends a timer query.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/endQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EXT_disjoint_timer_queryEndQueryEXT>
+<EXT_disjoint_timer_queryGetQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.getQueryEXT()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about a query<br/>target.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/getQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on <c>pname</c>:</returns>
+</EXT_disjoint_timer_queryGetQueryEXT>
+<EXT_disjoint_timer_queryGetQueryObjectEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.getQueryObjectEXT()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the state of a<br/>query object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/getQueryObjectEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on <c>pname</c>:</returns>
+</EXT_disjoint_timer_queryGetQueryObjectEXT>
+<EXT_disjoint_timer_queryIsQueryEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.isQueryEXT()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed object is a <see cref="WebGLQuery"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/isQueryEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a<br/><see cref="WebGLQuery"/> object (<c>true</c>) or not<br/>(<c>false</c>).</returns>
+</EXT_disjoint_timer_queryIsQueryEXT>
+<EXT_disjoint_timer_queryQueryCounterEXT>
+<summary>
+The <strong><c>EXT_disjoint_timer_query.queryCounterEXT()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> records the current time into<br/>the corresponding query object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLQuery"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query/queryCounterEXT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EXT_disjoint_timer_queryQueryCounterEXT>
+</docs>

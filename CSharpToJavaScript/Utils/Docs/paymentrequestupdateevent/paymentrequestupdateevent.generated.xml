@@ -9,15 +9,6 @@ The <strong><c>PaymentRequestUpdateEvent</c></strong> interface is used for even
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestUpdateEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentRequestUpdateEvent>
-<PaymentRequestUpdateEventUpdateWith>
-<summary>
-The <strong><c>updateWith()</c></strong> method of the<br/><see cref="PaymentRequestUpdateEvent"/> interface updates the details of an existing<br/><see cref="PaymentRequest"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</PaymentRequestUpdateEventUpdateWith>
 <PaymentRequestUpdateEventPaymentRequestUpdateEvent>
 <summary>
 The <strong><c>PaymentRequestUpdateEvent()</c></strong> constructor creates a new<br/><see cref="PaymentRequestUpdateEvent"/> object which enables a web page to update the<br/>details of a <see cref="PaymentRequest"/> in response to a user action. Actual updates<br/>are made by passing options to the<br/><see cref="'PaymentRequestUpdateEvent.UpdateWith'"/> method.
@@ -27,4 +18,13 @@ The <strong><c>PaymentRequestUpdateEvent()</c></strong> constructor creates a ne
 </remarks>
 <returns>A new <c>PaymentRequestUpdateEvent</c>.</returns>
 </PaymentRequestUpdateEventPaymentRequestUpdateEvent>
+<PaymentRequestUpdateEventUpdateWith>
+<summary>
+The <strong><c>updateWith()</c></strong> method of the<br/><see cref="PaymentRequestUpdateEvent"/> interface updates the details of an existing<br/><see cref="PaymentRequest"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PaymentRequestUpdateEventUpdateWith>
 </docs>

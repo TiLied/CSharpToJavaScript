@@ -1,0 +1,12 @@
+<docs>
+<WEBGL_color_buffer_float>
+<summary>
+The <strong><c>WEBGL_color_buffer_float</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and adds the ability to render to 32-bit floating-point color buffers.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts only. For {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL 2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, use the <see cref="EXT_color_buffer_float"/> extension.</para><para>The <see cref="OES_texture_float"/> extension implicitly enables this extension.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.RenderbufferStorage"/><br/>-<see cref="OES_texture_float"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_color_buffer_float"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_color_buffer_float>
+</docs>

@@ -8,138 +8,6 @@ In addition, every kind of DOM node is represented by an interface based on<br/>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Node>
-<NodeOwnerDocument>
-<summary>
-The read-only <strong><c>ownerDocument</c></strong> property of the <see cref="Node"/> interface<br/>returns the top-level document object of the node.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Document"/> that is the top-level object in which all the<br/>child nodes are created.If this property is used on a node that is itself a document, the value is <c>null</c>.</value>
-</NodeOwnerDocument>
-<NodePreviousSibling>
-<summary>
-The read-only <strong><c>previousSibling</c></strong> property of the <see cref="Node"/> interface<br/>returns the node immediately preceding the specified one in its parent&amp;apos;s<br/><see cref="Node.ChildNodes"/> list,<br/>or <c>null</c> if the specified node is the first in that list.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Browsers insert text nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><c>Node.firstChild</c></see><br/>or <c>Node.previousSibling</c><br/>may refer to a whitespace text node rather than the actual element the author intended to get.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see> for more information.</para><para>You can use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling"><c>previousElementSibling</c></see><br/>to get the previous element node (skipping text nodes and any other non-element nodes).</para><para>To navigate the opposite way through the child nodes list use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">Node.nextSibling</see>.</para></blockquote>
-<para>-<see cref="Node.NextSibling"/><br/>-<see cref="Element.PreviousElementSibling"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/> representing the previous sibling of the current node,<br/>or <c>null</c> if there are none.</value>
-</NodePreviousSibling>
-<NodeReplaceChild>
-<summary>
-The <strong><c>replaceChild()</c></strong> method of the <see cref="Node"/> interface replaces a child node within the given (parent) node.
-</summary>
-<remarks>
-<para>-<see cref="Node.RemoveChild"/><br/>-<see cref="Element.ReplaceWith"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>The replaced <see cref="Node"/>. This is the same node as <c>oldChild</c>.</returns>
-</NodeReplaceChild>
-<NodeChildNodes>
-<summary>
-The read-only <strong><c>childNodes</c></strong> property of the <see cref="Node"/> interface returns a live<br/><see cref="NodeList"/> of child <see cref="Node"/> of the given element where<br/>the first child node is assigned index <c>0</c>. Child nodes include elements, text and<br/>comments.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <see cref="NodeList"/> being live means that its content is changed each time<br/>new children are added or removed.</para><para>Browsers insert text nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <c>Node.childNodes[0]</c><br/>may refer to a whitespace text node rather than the actual element the author intended to get.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see> for more information.</para></blockquote><para>The items in the collection of nodes are objects, not strings. To get data from node<br/>objects, use their properties. For example, to get the name of the first<br/>childNode, you can use <c>elementNodeReference.childNodes[0].nodeName</c>.</para><para>The <see cref="Document"/> object itself has two children: the Doctype declaration and the<br/>root element, typically referred to as <c>documentElement</c>. In HTML<br/>documents the latter is the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element.</para><para>It is important to keep in mind that <c>childNodes</c> includes <strong>all</strong> child nodes,<br/>including non-element nodes like text and comment.<br/>To get a collection containing only elements, use <see cref="Element.Children"/> instead.</para>
-<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Node.LastChild"/><br/>-<see cref="Node.NextSibling"/><br/>-<see cref="Node.PreviousSibling"/><br/>-<see cref="Element.Children"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A live <see cref="NodeList"/> containing the children of the node.<blockquote class="NOTE"><h5>NOTE</h5>Several calls to <c>childNodes</c> return the <strong>same</strong> <see cref="NodeList"/>.</blockquote></value>
-</NodeChildNodes>
-<NodeInsertBefore>
-<summary>
-The <strong><c>insertBefore()</c></strong> method of the <see cref="Node"/> interface<br/>inserts a node before a <strong>reference node</strong> as a child of a specified <strong>parent node</strong>.
-</summary>
-<remarks>
-<para>If the given node already exists in the document,<br/><c>insertBefore()</c> moves it from its current position to the new position.<br/>(That is, it will automatically be removed from its existing parent<br/>before appending it to the specified new parent.)</para><para>This means that a node cannot be in two locations of the document simultaneously.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <see cref="Node.CloneNode"/> can be used to make a copy<br/>of the node before appending it under the new parent. Note that the copies made with<br/><c>cloneNode()</c> will not be automatically kept in sync.</para></blockquote><para>If the given child is a <see cref="DocumentFragment"/>, the entire contents of the<br/><c>DocumentFragment</c> are moved into the child list of the specified parent<br/>node.</para>
-<para>-<see cref="Node.RemoveChild"/><br/>-<see cref="Node.ReplaceChild"/><br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Node.HasChildNodes"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/>-<see cref="Element.Prepend"/><br/>-<see cref="Element.Before"/><br/>-<see cref="Element.After"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns the added child (unless <c>newNode</c> is a <see cref="DocumentFragment"/>,<br/>in which case the empty <see cref="DocumentFragment"/> is returned).</returns>
-</NodeInsertBefore>
-<NodeFirstChild>
-<summary>
-The read-only <strong><c>firstChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the node&amp;apos;s first child in the tree,<br/>or <c>null</c> if the node has no children.
-</summary>
-<remarks>
-<para>If the node is a <see cref="Document"/>,<br/>this property returns the first node in the list of its direct children.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property returns any type of node that is the first child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the first <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.FirstElementChild"/>.</para></blockquote>
-<para>-<see cref="Element.FirstElementChild"/><br/>-<see cref="Node.LastChild"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/>, or <c>null</c> if there are none.</value>
-</NodeFirstChild>
-<NodeCloneNode>
-<summary>
-The <strong><c>cloneNode()</c></strong> method of the <see cref="Node"/> interface<br/>returns a duplicate of the node on which this method was called.<br/>Its parameter controls if the subtree contained in a node is also cloned or not.
-</summary>
-<remarks>
-<para>Cloning a node copies all of its attributes and their values,<br/>including intrinsic (inline) listeners. It does <strong>not</strong> copy event listeners added<br/>using <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><c>addEventListener()</c></see> or<br/>those assigned to element properties (e.g., <c>node.onclick = someFunction</c>).<br/>Additionally, for a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element, the painted image is not copied.</para><blockquote class="WARNING"><h5>WARNING</h5><para><c>cloneNode()</c> may lead to duplicate element IDs in a document!</para><para>If the original node has an <c>id</c> attribute, and the clone<br/>will be placed in the same document, then you should modify the clone&amp;apos;s ID to be<br/>unique.</para><para>Also, <c>name</c> attributes may need to be modified,<br/>depending on whether duplicate names are expected.</para></blockquote><para>To clone a node to insert into a <strong>different</strong> document, use<br/><see cref="Document.ImportNode"/> instead.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>The new <see cref="Node"/> cloned.<br/>The cloned node has no parent and is not part of the document,<br/><strong>until</strong> it is added to another node that is part of the document,<br/>using <see cref="Node.AppendChild"/> or a similar method.</returns>
-</NodeCloneNode>
-<NodeParentElement>
-<summary>
-The read-only <strong><c>parentElement</c></strong> property of <see cref="Node"/> interface<br/>returns the DOM node's parent <see cref="Element"/>, or <c>null</c> if the node either has no<br/>parent, or its parent isn't a DOM <see cref="Element"/>. <see cref="Node.ParentNode"/> on the other hand returns any kind of parent, regardless of its type.
-</summary>
-<remarks>
-<para>-<see cref="Node.ParentNode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="Element"/> that is the parent element of the current node,<br/>or <c>null</c> if there isn&amp;apos;t one.</value>
-</NodeParentElement>
-<NodeHasChildNodes>
-<summary>
-The <strong><c>hasChildNodes()</c></strong> method of the <see cref="Node"/> interface<br/>returns a boolean value indicating<br/>whether the given <see cref="Node"/> has <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes">child nodes</see> or not.
-</summary>
-<remarks>
-<para>-<see cref="Node.ChildNodes"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value that is <c>true</c> if the node has child nodes, and<br/><c>false</c> otherwise.</returns>
-</NodeHasChildNodes>
-<NodeNodeValue>
-<summary>
-The <strong><c>nodeValue</c></strong> property of the <see cref="Node"/> interface returns or sets the value of the current node.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the value of the current node, if any.<br/>For the document itself, <c>nodeValue</c> returns <c>null</c>.<br/>For text, comment, and CDATA nodes, <c>nodeValue</c> returns the content of the node.<br/>For attribute nodes, the value of the attribute is returned.The following table shows the return values for different types of nodes.<table><tr><td>Node</td><td>Value of nodeValue</td></tr><tr><td><see cref="CDATASection"/></td><td>Content of the CDATA section</td></tr><tr><td><see cref="Comment"/></td><td>Content of the comment</td></tr><tr><td><see cref="Document"/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentFragment"/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentType"/></td><td><c>null</c></td></tr><tr><td><see cref="Element"/></td><td><c>null</c></td></tr><tr><td><see cref="NamedNodeMap"/></td><td><c>null</c></td></tr><tr><td><see cref="ProcessingInstruction"/></td><td>Entire content excluding the target</td></tr><tr><td><see cref="Text"/></td><td>Content of the text node</td></tr></table><blockquote class="NOTE"><h5>NOTE</h5>When <c>nodeValue</c> is defined to be <c>null</c>, setting it has no effect.</blockquote></value>
-</NodeNodeValue>
-<NodeIsDefaultNamespace>
-<summary>
-The <strong><c>isDefaultNamespace()</c></strong> method of the <see cref="Node"/> interface accepts a namespace URI as an argument.<br/>It returns a boolean value that is <c>true</c> if the namespace is the default namespace on the given node and <c>false</c> if not.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The default namespace of an HTML element is always <c>&amp;quot;&amp;quot;</c>. For a SVG element, it is set by the <c>xmlns</c> attribute.</para></blockquote>
-<para>-<see cref="Node.LookupNamespaceURI"/><br/>-<see cref="Node.LookupPrefix"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value that holds the return value <c>true</c> or <c>false</c>, indicating if the parameter is the default namespace, or not.</returns>
-</NodeIsDefaultNamespace>
-<NodeLookupPrefix>
-<summary>
-The <strong><c>lookupPrefix()</c></strong> method of the <see cref="Node"/> interface<br/>returns a string containing the prefix for a given namespace URI, if present,<br/>and <c>null</c> if not.<br/>When multiple prefixes are possible, the first prefix is returned.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string containing the corresponding prefix, or <c>null</c> if none has been found.<br/>If <c>namespace</c> is null, or the empty string, <c>lookupPrefix()</c> returns <c>null</c>.If the node is a <see cref="DocumentType"/> or a <see cref="DocumentFragment"/>,<br/><c>lookupPrefix()</c> always returns <c>null</c>.</returns>
-</NodeLookupPrefix>
-<NodeSelectstart>
-<summary>
-The <strong><c>selectstart</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection API</see> is fired when a user starts a new selection.
-</summary>
-<remarks>
-<para>If the event is canceled, the selection is not changed.</para>
-<para>-<see cref="Documentselectionchange"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/selectstart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</NodeSelectstart>
 <NodeAppendChild>
 <summary>
 The <strong><c>appendChild()</c></strong> method of the <see cref="Node"/> interface adds a node to the end of the list of children of a specified parent node.
@@ -151,149 +19,6 @@ The <strong><c>appendChild()</c></strong> method of the <see cref="Node"/> inter
 </remarks>
 <returns>A <see cref="Node"/> that is the appended child (<c>child</c>), except when <c>child</c> is a <see cref="DocumentFragment"/>, in which case the empty <see cref="DocumentFragment"/> is returned.</returns>
 </NodeAppendChild>
-<NodeNodeType>
-<summary>
-The read-only <strong><c>nodeType</c></strong> property of a <see cref="Node"/> interface is an integer<br/>that identifies what the node is. It distinguishes different kind of nodes from each other,<br/>such as <see cref="Element"/>, <see cref="Text"/> and <see cref="Comment"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer which specifies the type of the node. Possible values are:The following constants have been deprecated and are not in use anymore: <c>Node.ENTITY_REFERENCE_NODE</c> (<c>5</c>),<br/><c>Node.ENTITY_NODE</c> (<c>6</c>), and <c>Node.NOTATION_NODE</c> (<c>12</c>).</value>
-</NodeNodeType>
-<NodeNormalize>
-<summary>
-The <strong><c>normalize()</c></strong> method of the <see cref="Node"/> interface puts the specified node<br/>and all of its sub-tree into a <strong>normalized</strong> form.<br/>In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
-</summary>
-<remarks>
-<para>-<see cref="Text.SplitText"/>, its opposite.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None.</returns>
-</NodeNormalize>
-<NodeLastChild>
-<summary>
-The read-only <strong><c>lastChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the last child of the node, or <c>null</c> if there are no child nodes.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property returns any type of node that is the last child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the last <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.LastElementChild"/>.</para></blockquote>
-<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Element.LastElementChild"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/> that is the last child of the node, or <c>null</c> if there are no child nodes.</value>
-</NodeLastChild>
-<NodeNextSibling>
-<summary>
-The read-only <strong><c>nextSibling</c></strong> property of the <see cref="Node"/> interface<br/>returns the node immediately following the specified one in their<br/>parent's <see cref="Node.ChildNodes"/>, or returns <c>null</c><br/>if the specified node is the last child in the parent element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Browsers insert <see cref="Text"/> nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><c>Node.firstChild</c></see><br/>or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><c>Node.previousSibling</c></see><br/>may refer to a whitespace text node rather than the actual element the author<br/>intended to get.</para><para>The section <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see><br/>contains more information about this behavior.</para><para>You can use <see cref="Element.NextElementSibling"/> to obtain the next element<br/>skipping any whitespace nodes, other between-element text, or comments.</para><para>To navigate the opposite way through the child nodes list use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling">Node.previousSibling</see>.</para></blockquote>
-<para>-<see cref="Element.NextElementSibling"/><br/>-<see cref="Node.PreviousSibling"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/> representing the next sibling of the current node,<br/>or <c>null</c> if there are none.</value>
-</NodeNextSibling>
-<NodeLookupNamespaceURI>
-<summary>
-The <strong><c>lookupNamespaceURI()</c></strong> method of the <see cref="Node"/> interface<br/>takes a prefix as parameter and returns the namespace URI associated with it on the given node if found (and<br/><c>null</c> if not). This method&amp;apos;s existence allows <c>Node</c> objects to be passed as a namespace resolver to <see cref="XPathEvaluator.CreateExpression"/> and <see cref="XPathEvaluator.Evaluate"/>.
-</summary>
-<remarks>
-<para>-<see cref="Node.LookupPrefix"/><br/>-<see cref="Node.IsDefaultNameSpace"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string containing the namespace URI corresponding to the prefix.</returns>
-</NodeLookupNamespaceURI>
-<NodeTextContent>
-<summary>
-The <strong><c>textContent</c></strong> property of the <see cref="Node"/><br/>interface represents the text content of the node and its descendants.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><c>textContent</c> and <see cref="HTMLElement.InnerText"/> are easily confused,<br/>but the two properties are <see href="https://developer.mozilla.org#differences_from_innertext">different in important ways</see>.</para></blockquote>
-<para>-<see cref="HTMLElement.InnerText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>. Its value depends on the situation:<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>textContent</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
-</NodeTextContent>
-<NodeIsSameNode>
-<summary>
-The <strong><c>isSameNode()</c></strong> method of the <see cref="Node"/> interface<br/>is a legacy alias the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">for the <c>===</c> strict equality operator</see>.<br/>That is, it tests whether two nodes are the same<br/>(in other words, whether they reference the same object).
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>There is no need to use <c>isSameNode()</c>; instead use the <c>===</c> strict equality operator.</para></blockquote>
-<para>-<see cref="Node.IsEqualNode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value that is <c>true</c> if both nodes are strictly equal, <c>false</c> if not.</returns>
-</NodeIsSameNode>
-<NodeGetRootNode>
-<summary>
-The <strong><c>getRootNode()</c></strong> method of the <see cref="Node"/> interface<br/>returns the context object&amp;apos;s root,<br/>which optionally includes the shadow root if it is available.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An object inheriting from <see cref="'Node'"/>. This will differ in exact form depending<br/>on where you call <c>getRootNode()</c>; for example:</returns>
-</NodeGetRootNode>
-<NodeParentNode>
-<summary>
-The read-only <strong><c>parentNode</c></strong> property of the <see cref="Node"/> interface<br/>returns the parent of the specified node in the DOM tree.
-</summary>
-<remarks>
-<para><c>Document</c> and <c>DocumentFragment</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">nodes</see> can never have a parent, so<br/><c>parentNode</c> will always return <c>null</c>.<br/>It also returns <c>null</c> if the node has just been created<br/>and is not yet attached to the tree. <see cref="Node.ParentElement"/> on the other hand only returns <c>Element</c> nodes.</para>
-<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Node.LastChild"/><br/>-<see cref="Node.ChildNodes"/><br/>-<see cref="Node.NextSibling"/><br/>-<see cref="Node.ParentElement"/><br/>-<see cref="Node.PreviousSibling"/><br/>-<see cref="Node.RemoveChild"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/> that is the parent of the current node. The parent of an element is<br/>an <c>Element</c> node, a <c>Document</c> node, or a <c>DocumentFragment</c> node.</value>
-</NodeParentNode>
-<NodeRemoveChild>
-<summary>
-The <strong><c>removeChild()</c></strong> method of the <see cref="Node"/> interface<br/>removes a child node from the DOM and returns the removed node.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>As long as a reference is kept on the removed child,<br/>it still exists in memory, but is no longer part of the DOM.<br/>It can still be reused later in the code.</para><para>If the return value of <c>removeChild()</c> is not stored, and no other reference is kept,<br/>it will be <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management">automatically deleted</see> from memory after a short time.</para></blockquote><para>Unlike <see cref="Node.CloneNode"/> the return value preserves the <c>EventListener</c> objects associated with it.</para>
-<para>-<see cref="Node.ReplaceChild"/><br/>-<see cref="Node.ParentNode"/><br/>-<see cref="Element.Remove"/><br/>-<see cref="Node.CloneNode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>The removed <c>child</c> node.</returns>
-</NodeRemoveChild>
-<NodeIsConnected>
-<summary>
-The read-only <strong><c>isConnected</c></strong> property of the <see cref="Node"/> interface<br/>returns a boolean indicating whether the node is connected<br/>(directly or indirectly) to a <see cref="Document"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value that is <c>true</c> if the node is connected to its relevant context object,<br/>and <c>false</c> if not.</value>
-</NodeIsConnected>
-<NodeNodeName>
-<summary>
-The read-only <strong><c>nodeName</c></strong> property of <see cref="Node"/> returns the name of the current node as a string.
-</summary>
-<remarks>
-<para>-<see cref="Element.TagName"/><br/>-<see cref="Attr.Name"/><br/>-<see cref="DocumentType.Name"/><br/>-<see cref="ProcessingInstruction.Target"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. Values for the different types of nodes are:</value>
-</NodeNodeName>
-<NodeIsEqualNode>
-<summary>
-The <strong><c>isEqualNode()</c></strong> method of the <see cref="Node"/> interface tests whether two nodes are equal.<br/>Two nodes are equal when they have the same type, defining characteristics (for<br/>elements, this would be their ID, number of children, and so forth), its attributes<br/>match, and so on. The specific set of data points that must match varies depending on<br/>the types of the nodes.
-</summary>
-<remarks>
-<para>-<see cref="Node.IsSameNode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value that is <c>true</c> if the two nodes are equals, or <c>false</c> if not.<br/>If <c>otherNode</c> is <c>null</c>, <c>isEqualNode()</c> always return false.</returns>
-</NodeIsEqualNode>
-<NodeCompareDocumentPosition>
-<summary>
-The <strong><c>compareDocumentPosition()</c></strong> method of the <see cref="Node"/> interface<br/>reports the position of its argument node relative to the node on which it is called.
-</summary>
-<remarks>
-<para>-<see cref="Node.Contains"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An integer value representing <c>otherNode</c>&amp;apos;s position relative to <c>node</c><br/>as a <see href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</see> combining the<br/>following constant properties of <see cref="Node"/>:Zero or more bits can be set, depending on which scenarios apply. For example, if<br/><c>otherNode</c> is located earlier in the document <strong><strong>and</strong></strong><br/>contains the node on which <c>compareDocumentPosition()</c> was<br/>called, then both the <c>DOCUMENT_POSITION_CONTAINS</c> and<br/><c>DOCUMENT_POSITION_PRECEDING</c> bits would be set, producing a value of <c>10</c> (<c>0x0A</c>).</returns>
-</NodeCompareDocumentPosition>
 <NodeBaseURI>
 <summary>
 The read-only <strong><c>baseURI</c></strong> property of the <see cref="Node"/> interface<br/>returns the absolute base URL of the document containing the node.
@@ -305,6 +30,37 @@ The read-only <strong><c>baseURI</c></strong> property of the <see cref="Node"/>
 </remarks>
 <value>A string representing the base URL of the <see cref="Node"/>.</value>
 </NodeBaseURI>
+<NodeChildNodes>
+<summary>
+The read-only <strong><c>childNodes</c></strong> property of the <see cref="Node"/> interface returns a live<br/><see cref="NodeList"/> of child <see cref="Node"/> of the given element where<br/>the first child node is assigned index <c>0</c>. Child nodes include elements, text and<br/>comments.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <see cref="NodeList"/> being live means that its content is changed each time<br/>new children are added or removed.</para><para>Browsers insert text nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <c>Node.childNodes[0]</c><br/>may refer to a whitespace text node rather than the actual element the author intended to get.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see> for more information.</para></blockquote><para>The items in the collection of nodes are objects, not strings. To get data from node<br/>objects, use their properties. For example, to get the name of the first<br/>childNode, you can use <c>elementNodeReference.childNodes[0].nodeName</c>.</para><para>The <see cref="Document"/> object itself has two children: the Doctype declaration and the<br/>root element, typically referred to as <c>documentElement</c>. In HTML<br/>documents the latter is the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element.</para><para>It is important to keep in mind that <c>childNodes</c> includes <strong>all</strong> child nodes,<br/>including non-element nodes like text and comment.<br/>To get a collection containing only elements, use <see cref="Element.Children"/> instead.</para>
+<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Node.LastChild"/><br/>-<see cref="Node.NextSibling"/><br/>-<see cref="Node.PreviousSibling"/><br/>-<see cref="Element.Children"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="NodeList"/> containing the children of the node.<blockquote class="NOTE"><h5>NOTE</h5>Several calls to <c>childNodes</c> return the <strong>same</strong> <see cref="NodeList"/>.</blockquote></value>
+</NodeChildNodes>
+<NodeCloneNode>
+<summary>
+The <strong><c>cloneNode()</c></strong> method of the <see cref="Node"/> interface<br/>returns a duplicate of the node on which this method was called.<br/>Its parameter controls if the subtree contained in a node is also cloned or not.
+</summary>
+<remarks>
+<para>Cloning a node copies all of its attributes and their values,<br/>including intrinsic (inline) listeners. It does <strong>not</strong> copy event listeners added<br/>using <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><c>addEventListener()</c></see> or<br/>those assigned to element properties (e.g., <c>node.onclick = someFunction</c>).<br/>Additionally, for a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element, the painted image is not copied.</para><blockquote class="WARNING"><h5>WARNING</h5><para><c>cloneNode()</c> may lead to duplicate element IDs in a document!</para><para>If the original node has an <c>id</c> attribute, and the clone<br/>will be placed in the same document, then you should modify the clone&amp;apos;s ID to be<br/>unique.</para><para>Also, <c>name</c> attributes may need to be modified,<br/>depending on whether duplicate names are expected.</para></blockquote><para>To clone a node to insert into a <strong>different</strong> document, use<br/><see cref="Document.ImportNode"/> instead.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The new <see cref="Node"/> cloned.<br/>The cloned node has no parent and is not part of the document,<br/><strong>until</strong> it is added to another node that is part of the document,<br/>using <see cref="Node.AppendChild"/> or a similar method.</returns>
+</NodeCloneNode>
+<NodeCompareDocumentPosition>
+<summary>
+The <strong><c>compareDocumentPosition()</c></strong> method of the <see cref="Node"/> interface<br/>reports the position of its argument node relative to the node on which it is called.
+</summary>
+<remarks>
+<para>-<see cref="Node.Contains"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An integer value representing <c>otherNode</c>&amp;apos;s position relative to <c>node</c><br/>as a <see href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</see> combining the<br/>following constant properties of <see cref="Node"/>:Zero or more bits can be set, depending on which scenarios apply. For example, if<br/><c>otherNode</c> is located earlier in the document <strong><strong>and</strong></strong><br/>contains the node on which <c>compareDocumentPosition()</c> was<br/>called, then both the <c>DOCUMENT_POSITION_CONTAINS</c> and<br/><c>DOCUMENT_POSITION_PRECEDING</c> bits would be set, producing a value of <c>10</c> (<c>0x0A</c>).</returns>
+</NodeCompareDocumentPosition>
 <NodeContains>
 <summary>
 The <strong><c>contains()</c></strong> method of the <see cref="Node"/> interface<br/>returns a boolean value indicating<br/>whether a node is a descendant of a given node, that is the node itself,<br/>one of its direct children (<see cref="Node.ChildNodes"/>),<br/>one of the children&amp;apos;s direct children, and so on.
@@ -316,4 +72,248 @@ The <strong><c>contains()</c></strong> method of the <see cref="Node"/> interfac
 </remarks>
 <returns>A boolean value that is <c>true</c> if <c>otherNode</c> is contained in the node,<br/><c>false</c> if not.If the <c>otherNode</c> parameter is <c>null</c>,<br/><c>contains()</c> always returns <c>false</c>.</returns>
 </NodeContains>
+<NodeFirstChild>
+<summary>
+The read-only <strong><c>firstChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the node&amp;apos;s first child in the tree,<br/>or <c>null</c> if the node has no children.
+</summary>
+<remarks>
+<para>If the node is a <see cref="Document"/>,<br/>this property returns the first node in the list of its direct children.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property returns any type of node that is the first child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the first <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.FirstElementChild"/>.</para></blockquote>
+<para>-<see cref="Element.FirstElementChild"/><br/>-<see cref="Node.LastChild"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/>, or <c>null</c> if there are none.</value>
+</NodeFirstChild>
+<NodeGetRootNode>
+<summary>
+The <strong><c>getRootNode()</c></strong> method of the <see cref="Node"/> interface<br/>returns the context object&amp;apos;s root,<br/>which optionally includes the shadow root if it is available.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object inheriting from <see cref="'Node'"/>. This will differ in exact form depending<br/>on where you call <c>getRootNode()</c>; for example:</returns>
+</NodeGetRootNode>
+<NodeHasChildNodes>
+<summary>
+The <strong><c>hasChildNodes()</c></strong> method of the <see cref="Node"/> interface<br/>returns a boolean value indicating<br/>whether the given <see cref="Node"/> has <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes">child nodes</see> or not.
+</summary>
+<remarks>
+<para>-<see cref="Node.ChildNodes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value that is <c>true</c> if the node has child nodes, and<br/><c>false</c> otherwise.</returns>
+</NodeHasChildNodes>
+<NodeInsertBefore>
+<summary>
+The <strong><c>insertBefore()</c></strong> method of the <see cref="Node"/> interface<br/>inserts a node before a <strong>reference node</strong> as a child of a specified <strong>parent node</strong>.
+</summary>
+<remarks>
+<para>If the given node already exists in the document,<br/><c>insertBefore()</c> moves it from its current position to the new position.<br/>(That is, it will automatically be removed from its existing parent<br/>before appending it to the specified new parent.)</para><para>This means that a node cannot be in two locations of the document simultaneously.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <see cref="Node.CloneNode"/> can be used to make a copy<br/>of the node before appending it under the new parent. Note that the copies made with<br/><c>cloneNode()</c> will not be automatically kept in sync.</para></blockquote><para>If the given child is a <see cref="DocumentFragment"/>, the entire contents of the<br/><c>DocumentFragment</c> are moved into the child list of the specified parent<br/>node.</para>
+<para>-<see cref="Node.RemoveChild"/><br/>-<see cref="Node.ReplaceChild"/><br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Node.HasChildNodes"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/>-<see cref="Element.Prepend"/><br/>-<see cref="Element.Before"/><br/>-<see cref="Element.After"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the added child (unless <c>newNode</c> is a <see cref="DocumentFragment"/>,<br/>in which case the empty <see cref="DocumentFragment"/> is returned).</returns>
+</NodeInsertBefore>
+<NodeIsConnected>
+<summary>
+The read-only <strong><c>isConnected</c></strong> property of the <see cref="Node"/> interface<br/>returns a boolean indicating whether the node is connected<br/>(directly or indirectly) to a <see cref="Document"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the node is connected to its relevant context object,<br/>and <c>false</c> if not.</value>
+</NodeIsConnected>
+<NodeIsDefaultNamespace>
+<summary>
+The <strong><c>isDefaultNamespace()</c></strong> method of the <see cref="Node"/> interface accepts a namespace URI as an argument.<br/>It returns a boolean value that is <c>true</c> if the namespace is the default namespace on the given node and <c>false</c> if not.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The default namespace of an HTML element is always <c>&amp;quot;&amp;quot;</c>. For a SVG element, it is set by the <c>xmlns</c> attribute.</para></blockquote>
+<para>-<see cref="Node.LookupNamespaceURI"/><br/>-<see cref="Node.LookupPrefix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value that holds the return value <c>true</c> or <c>false</c>, indicating if the parameter is the default namespace, or not.</returns>
+</NodeIsDefaultNamespace>
+<NodeIsEqualNode>
+<summary>
+The <strong><c>isEqualNode()</c></strong> method of the <see cref="Node"/> interface tests whether two nodes are equal.<br/>Two nodes are equal when they have the same type, defining characteristics (for<br/>elements, this would be their ID, number of children, and so forth), its attributes<br/>match, and so on. The specific set of data points that must match varies depending on<br/>the types of the nodes.
+</summary>
+<remarks>
+<para>-<see cref="Node.IsSameNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value that is <c>true</c> if the two nodes are equals, or <c>false</c> if not.<br/>If <c>otherNode</c> is <c>null</c>, <c>isEqualNode()</c> always return false.</returns>
+</NodeIsEqualNode>
+<NodeIsSameNode>
+<summary>
+The <strong><c>isSameNode()</c></strong> method of the <see cref="Node"/> interface<br/>is a legacy alias the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">for the <c>===</c> strict equality operator</see>.<br/>That is, it tests whether two nodes are the same<br/>(in other words, whether they reference the same object).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>There is no need to use <c>isSameNode()</c>; instead use the <c>===</c> strict equality operator.</para></blockquote>
+<para>-<see cref="Node.IsEqualNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value that is <c>true</c> if both nodes are strictly equal, <c>false</c> if not.</returns>
+</NodeIsSameNode>
+<NodeLastChild>
+<summary>
+The read-only <strong><c>lastChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the last child of the node, or <c>null</c> if there are no child nodes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property returns any type of node that is the last child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the last <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.LastElementChild"/>.</para></blockquote>
+<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Element.LastElementChild"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> that is the last child of the node, or <c>null</c> if there are no child nodes.</value>
+</NodeLastChild>
+<NodeLookupNamespaceURI>
+<summary>
+The <strong><c>lookupNamespaceURI()</c></strong> method of the <see cref="Node"/> interface<br/>takes a prefix as parameter and returns the namespace URI associated with it on the given node if found (and<br/><c>null</c> if not). This method&amp;apos;s existence allows <c>Node</c> objects to be passed as a namespace resolver to <see cref="XPathEvaluator.CreateExpression"/> and <see cref="XPathEvaluator.Evaluate"/>.
+</summary>
+<remarks>
+<para>-<see cref="Node.LookupPrefix"/><br/>-<see cref="Node.IsDefaultNameSpace"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the namespace URI corresponding to the prefix.</returns>
+</NodeLookupNamespaceURI>
+<NodeLookupPrefix>
+<summary>
+The <strong><c>lookupPrefix()</c></strong> method of the <see cref="Node"/> interface<br/>returns a string containing the prefix for a given namespace URI, if present,<br/>and <c>null</c> if not.<br/>When multiple prefixes are possible, the first prefix is returned.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the corresponding prefix, or <c>null</c> if none has been found.<br/>If <c>namespace</c> is null, or the empty string, <c>lookupPrefix()</c> returns <c>null</c>.If the node is a <see cref="DocumentType"/> or a <see cref="DocumentFragment"/>,<br/><c>lookupPrefix()</c> always returns <c>null</c>.</returns>
+</NodeLookupPrefix>
+<NodeNextSibling>
+<summary>
+The read-only <strong><c>nextSibling</c></strong> property of the <see cref="Node"/> interface<br/>returns the node immediately following the specified one in their<br/>parent's <see cref="Node.ChildNodes"/>, or returns <c>null</c><br/>if the specified node is the last child in the parent element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Browsers insert <see cref="Text"/> nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><c>Node.firstChild</c></see><br/>or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><c>Node.previousSibling</c></see><br/>may refer to a whitespace text node rather than the actual element the author<br/>intended to get.</para><para>The section <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see><br/>contains more information about this behavior.</para><para>You can use <see cref="Element.NextElementSibling"/> to obtain the next element<br/>skipping any whitespace nodes, other between-element text, or comments.</para><para>To navigate the opposite way through the child nodes list use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling">Node.previousSibling</see>.</para></blockquote>
+<para>-<see cref="Element.NextElementSibling"/><br/>-<see cref="Node.PreviousSibling"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> representing the next sibling of the current node,<br/>or <c>null</c> if there are none.</value>
+</NodeNextSibling>
+<NodeNodeName>
+<summary>
+The read-only <strong><c>nodeName</c></strong> property of <see cref="Node"/> returns the name of the current node as a string.
+</summary>
+<remarks>
+<para>-<see cref="Element.TagName"/><br/>-<see cref="Attr.Name"/><br/>-<see cref="DocumentType.Name"/><br/>-<see cref="ProcessingInstruction.Target"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Values for the different types of nodes are:</value>
+</NodeNodeName>
+<NodeNodeType>
+<summary>
+The read-only <strong><c>nodeType</c></strong> property of a <see cref="Node"/> interface is an integer<br/>that identifies what the node is. It distinguishes different kind of nodes from each other,<br/>such as <see cref="Element"/>, <see cref="Text"/> and <see cref="Comment"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer which specifies the type of the node. Possible values are:The following constants have been deprecated and are not in use anymore: <c>Node.ENTITY_REFERENCE_NODE</c> (<c>5</c>),<br/><c>Node.ENTITY_NODE</c> (<c>6</c>), and <c>Node.NOTATION_NODE</c> (<c>12</c>).</value>
+</NodeNodeType>
+<NodeNodeValue>
+<summary>
+The <strong><c>nodeValue</c></strong> property of the <see cref="Node"/> interface returns or sets the value of the current node.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the value of the current node, if any.<br/>For the document itself, <c>nodeValue</c> returns <c>null</c>.<br/>For text, comment, and CDATA nodes, <c>nodeValue</c> returns the content of the node.<br/>For attribute nodes, the value of the attribute is returned.The following table shows the return values for different types of nodes.<table><tr><td>Node</td><td>Value of nodeValue</td></tr><tr><td><see cref="CDATASection"/></td><td>Content of the CDATA section</td></tr><tr><td><see cref="Comment"/></td><td>Content of the comment</td></tr><tr><td><see cref="Document"/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentFragment"/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentType"/></td><td><c>null</c></td></tr><tr><td><see cref="Element"/></td><td><c>null</c></td></tr><tr><td><see cref="NamedNodeMap"/></td><td><c>null</c></td></tr><tr><td><see cref="ProcessingInstruction"/></td><td>Entire content excluding the target</td></tr><tr><td><see cref="Text"/></td><td>Content of the text node</td></tr></table><blockquote class="NOTE"><h5>NOTE</h5>When <c>nodeValue</c> is defined to be <c>null</c>, setting it has no effect.</blockquote></value>
+</NodeNodeValue>
+<NodeNormalize>
+<summary>
+The <strong><c>normalize()</c></strong> method of the <see cref="Node"/> interface puts the specified node<br/>and all of its sub-tree into a <strong>normalized</strong> form.<br/>In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
+</summary>
+<remarks>
+<para>-<see cref="Text.SplitText"/>, its opposite.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</NodeNormalize>
+<NodeOwnerDocument>
+<summary>
+The read-only <strong><c>ownerDocument</c></strong> property of the <see cref="Node"/> interface<br/>returns the top-level document object of the node.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Document"/> that is the top-level object in which all the<br/>child nodes are created.If this property is used on a node that is itself a document, the value is <c>null</c>.</value>
+</NodeOwnerDocument>
+<NodeParentElement>
+<summary>
+The read-only <strong><c>parentElement</c></strong> property of <see cref="Node"/> interface<br/>returns the DOM node's parent <see cref="Element"/>, or <c>null</c> if the node either has no<br/>parent, or its parent isn't a DOM <see cref="Element"/>. <see cref="Node.ParentNode"/> on the other hand returns any kind of parent, regardless of its type.
+</summary>
+<remarks>
+<para>-<see cref="Node.ParentNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> that is the parent element of the current node,<br/>or <c>null</c> if there isn&amp;apos;t one.</value>
+</NodeParentElement>
+<NodeParentNode>
+<summary>
+The read-only <strong><c>parentNode</c></strong> property of the <see cref="Node"/> interface<br/>returns the parent of the specified node in the DOM tree.
+</summary>
+<remarks>
+<para><c>Document</c> and <c>DocumentFragment</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">nodes</see> can never have a parent, so<br/><c>parentNode</c> will always return <c>null</c>.<br/>It also returns <c>null</c> if the node has just been created<br/>and is not yet attached to the tree. <see cref="Node.ParentElement"/> on the other hand only returns <c>Element</c> nodes.</para>
+<para>-<see cref="Node.FirstChild"/><br/>-<see cref="Node.LastChild"/><br/>-<see cref="Node.ChildNodes"/><br/>-<see cref="Node.NextSibling"/><br/>-<see cref="Node.ParentElement"/><br/>-<see cref="Node.PreviousSibling"/><br/>-<see cref="Node.RemoveChild"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> that is the parent of the current node. The parent of an element is<br/>an <c>Element</c> node, a <c>Document</c> node, or a <c>DocumentFragment</c> node.</value>
+</NodeParentNode>
+<NodePreviousSibling>
+<summary>
+The read-only <strong><c>previousSibling</c></strong> property of the <see cref="Node"/> interface<br/>returns the node immediately preceding the specified one in its parent&amp;apos;s<br/><see cref="Node.ChildNodes"/> list,<br/>or <c>null</c> if the specified node is the first in that list.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Browsers insert text nodes into a document to represent whitespace in the source markup.<br/>Therefore a node obtained, for example, using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><c>Node.firstChild</c></see><br/>or <c>Node.previousSibling</c><br/>may refer to a whitespace text node rather than the actual element the author intended to get.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom">Working with whitespace in the DOM</see> for more information.</para><para>You can use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling"><c>previousElementSibling</c></see><br/>to get the previous element node (skipping text nodes and any other non-element nodes).</para><para>To navigate the opposite way through the child nodes list use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">Node.nextSibling</see>.</para></blockquote>
+<para>-<see cref="Node.NextSibling"/><br/>-<see cref="Element.PreviousElementSibling"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> representing the previous sibling of the current node,<br/>or <c>null</c> if there are none.</value>
+</NodePreviousSibling>
+<NodeRemoveChild>
+<summary>
+The <strong><c>removeChild()</c></strong> method of the <see cref="Node"/> interface<br/>removes a child node from the DOM and returns the removed node.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>As long as a reference is kept on the removed child,<br/>it still exists in memory, but is no longer part of the DOM.<br/>It can still be reused later in the code.</para><para>If the return value of <c>removeChild()</c> is not stored, and no other reference is kept,<br/>it will be <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management">automatically deleted</see> from memory after a short time.</para></blockquote><para>Unlike <see cref="Node.CloneNode"/> the return value preserves the <c>EventListener</c> objects associated with it.</para>
+<para>-<see cref="Node.ReplaceChild"/><br/>-<see cref="Node.ParentNode"/><br/>-<see cref="Element.Remove"/><br/>-<see cref="Node.CloneNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The removed <c>child</c> node.</returns>
+</NodeRemoveChild>
+<NodeReplaceChild>
+<summary>
+The <strong><c>replaceChild()</c></strong> method of the <see cref="Node"/> interface replaces a child node within the given (parent) node.
+</summary>
+<remarks>
+<para>-<see cref="Node.RemoveChild"/><br/>-<see cref="Element.ReplaceWith"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The replaced <see cref="Node"/>. This is the same node as <c>oldChild</c>.</returns>
+</NodeReplaceChild>
+<NodeSelectstart>
+<summary>
+The <strong><c>selectstart</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection API</see> is fired when a user starts a new selection.
+</summary>
+<remarks>
+<para>If the event is canceled, the selection is not changed.</para>
+<para>-<see cref="Documentselectionchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/selectstart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NodeSelectstart>
+<NodeTextContent>
+<summary>
+The <strong><c>textContent</c></strong> property of the <see cref="Node"/><br/>interface represents the text content of the node and its descendants.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>textContent</c> and <see cref="HTMLElement.InnerText"/> are easily confused,<br/>but the two properties are <see href="https://developer.mozilla.org#differences_from_innertext">different in important ways</see>.</para></blockquote>
+<para>-<see cref="HTMLElement.InnerText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>. Its value depends on the situation:<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>textContent</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
+</NodeTextContent>
 </docs>

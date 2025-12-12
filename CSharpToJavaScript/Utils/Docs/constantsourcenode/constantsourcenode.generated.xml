@@ -9,6 +9,14 @@ The <c>ConstantSourceNode</c> interface—part of the Web Audio API—represents
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ConstantSourceNode>
+<ConstantSourceNodeConstantSourceNode>
+<summary>
+The <strong><c>ConstantSourceNode()</c></strong> constructor creates a new<br/><see cref="ConstantSourceNode"/> object instance, representing an audio source which<br/>constantly outputs samples whose values are always the same.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ConstantSourceNodeConstantSourceNode>
 <ConstantSourceNodeOffset>
 <summary>
 The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns a <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
@@ -20,12 +28,4 @@ The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/
 </remarks>
 <value>An <see cref="AudioParam"/> object indicating the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value returned for every<br/>sample by this node. The default value is 1.0.To access the <c>offset</c> parameter&amp;apos;s current value, access the parameter&amp;apos;s<br/><c>value</c> property, as shown in the syntax box above.</value>
 </ConstantSourceNodeOffset>
-<ConstantSourceNodeConstantSourceNode>
-<summary>
-The <strong><c>ConstantSourceNode()</c></strong> constructor creates a new<br/><see cref="ConstantSourceNode"/> object instance, representing an audio source which<br/>constantly outputs samples whose values are always the same.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ConstantSourceNodeConstantSourceNode>
 </docs>

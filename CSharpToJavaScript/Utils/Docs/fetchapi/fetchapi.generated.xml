@@ -1,0 +1,21 @@
+<docs>
+<Fetch_API>
+<summary>
+The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for <see cref="XMLHttpRequest"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using Fetch</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Fetch_API>
+<Fetch_APIUsing_Fetch>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see> provides a JavaScript interface for making HTTP requests and processing the responses.
+</summary>
+<remarks>
+<para>Fetch is the modern replacement for <see cref="XMLHttpRequest"/>: unlike <c>XMLHttpRequest</c>, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">Cross-Origin Resource Sharing (CORS)</see>.</para><para>With the Fetch API, you make a request by calling <see cref="Windowfetch"/>, which is available as a global function in both <see cref="Window"/> and <see cref="WorkerGlobalScope"/> contexts. You pass it a <see cref="Request"/> object or a string containing the URL to fetch, along with an optional argument to configure the request.</para><para>The <c>fetch()</c> function returns a {{jsxref("Promise")}} which is fulfilled with a <see cref="Response"/> object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.</para><para>Here&amp;apos;s a minimal function that uses <c>fetch()</c> to retrieve some JSON data from a server:</para><para>We declare a string containing the URL and then call <c>fetch()</c>, passing the URL with no extra options.</para><para>The <c>fetch()</c> function will reject the promise on some errors, but not if the server responds with an error status like {{httpstatus("404")}}: so we also check the response status and throw if it is not OK.</para><para>Otherwise, we fetch the response body content as {{glossary("JSON")}} by calling the <see cref="Response.Json"/> method of <c>Response</c>, and log one of its values. Note that like <c>fetch()</c> itself, <c>json()</c> is asynchronous, as are all the other methods to access the response body content.</para><para>In the rest of this page we&amp;apos;ll look in more detail at the different stages of this process.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">CORS</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/fetch">Fetch examples on GitHub</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Fetch_APIUsing_Fetch>
+</docs>

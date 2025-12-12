@@ -19,18 +19,6 @@
 </remarks>
 <returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</returns>
 </KeyboardLayoutMapEntries>
-<KeyboardLayoutMapHas>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>has()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface returns a boolean indicating whether the<br/>object has an element with the specified key.
-</summary>
-<remarks>
-<para><blockquote class="TIP"><h5>TIP</h5> Partialy supported as <see cref="System.Collections.Generic.Dictionary<object, object>.ContainsKey" /></blockquote></para>
-<para>A list of valid keys is found in<br/>the <see href="https://w3c.github.io/uievents-code/">UI Events KeyboardEvent code Values</see> specification.</para><para>The method is otherwise the same as <see cref="MapPrototypeHas"/>.</para>
-<para>-<see cref="MapPrototypeHas"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="'Boolean'"/> indicating whether the specified key was found.</returns>
-</KeyboardLayoutMapHas>
 <KeyboardLayoutMapForEach>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>forEach()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface executes a provided function once for<br/>each element of the map.
@@ -42,17 +30,6 @@
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </KeyboardLayoutMapForEach>
-<KeyboardLayoutMapSize>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>size</c></strong> read-only property of<br/>the <see cref="KeyboardLayoutMap"/> interface returns the number of elements in the<br/>map.
-</summary>
-<remarks>
-<para>The property is otherwise the same as <see cref="MapPrototypeSize"/>.</para>
-<para>-<see cref="MapPrototypeSize"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</KeyboardLayoutMapSize>
 <KeyboardLayoutMapGet>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface returns the element with the given<br/>key.
@@ -64,6 +41,17 @@
 </remarks>
 <returns>The value of the specified key.</returns>
 </KeyboardLayoutMapGet>
+<KeyboardLayoutMapHas>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>has()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface returns a boolean indicating whether the<br/>object has an element with the specified key.
+</summary>
+<remarks>
+<para>A list of valid keys is found in<br/>the <see href="https://w3c.github.io/uievents-code/">UI Events KeyboardEvent code Values</see> specification.</para><para>The method is otherwise the same as <see cref="MapPrototypeHas"/>.</para>
+<para>-<see cref="MapPrototypeHas"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Boolean'"/> indicating whether the specified key was found.</returns>
+</KeyboardLayoutMapHas>
 <KeyboardLayoutMapKeys>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the keys for each index in the <c>KeyboardLayoutMap</c> object.
@@ -75,6 +63,17 @@
 </remarks>
 <returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</returns>
 </KeyboardLayoutMapKeys>
+<KeyboardLayoutMapSize>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>size</c></strong> read-only property of<br/>the <see cref="KeyboardLayoutMap"/> interface returns the number of elements in the<br/>map.
+</summary>
+<remarks>
+<para>The property is otherwise the same as <see cref="MapPrototypeSize"/>.</para>
+<para>-<see cref="MapPrototypeSize"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</KeyboardLayoutMapSize>
 <KeyboardLayoutMapValues>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>values()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the values for each index in the <c>KeyboardLayoutMap</c> object.

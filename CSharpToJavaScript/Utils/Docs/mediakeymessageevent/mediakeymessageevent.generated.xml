@@ -8,24 +8,6 @@ The <strong><c>MediaKeyMessageEvent</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaKeyMessageEvent>
-<MediaKeyMessageEventMessageType>
-<summary>
-The <strong><c>MediaKeyMessageEvent.messageType</c></strong> read-only property indicates the<br/>type of message. It may be one of <c>license-request</c>,<br/><c>license-renewal</c>, <c>license-release</c>, or<br/><c>individualization-request</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/messageType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:</value>
-</MediaKeyMessageEventMessageType>
-<MediaKeyMessageEventMessage>
-<summary>
-The <strong><c>MediaKeyMessageEvent.message</c></strong> read-only property<br/>returns an <see cref="ArrayBuffer"/> with a message from the content decryption module.<br/>Messages vary by key system.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/message"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="ArrayBuffer"/>.</value>
-</MediaKeyMessageEventMessage>
 <MediaKeyMessageEventMediaKeyMessageEvent>
 <summary>
 The <strong><c>MediaKeyMessageEvent</c></strong> constructor creates a new <see cref="MediaKeyMessageEvent"/> object.
@@ -35,4 +17,22 @@ The <strong><c>MediaKeyMessageEvent</c></strong> constructor creates a new <see 
 </remarks>
 <returns>A new <see cref="MediaKeyMessageEvent"/> object.</returns>
 </MediaKeyMessageEventMediaKeyMessageEvent>
+<MediaKeyMessageEventMessage>
+<summary>
+The <strong><c>MediaKeyMessageEvent.message</c></strong> read-only property<br/>returns an <see cref="ArrayBuffer"/> with a message from the content decryption module.<br/>Messages vary by key system.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/>.</value>
+</MediaKeyMessageEventMessage>
+<MediaKeyMessageEventMessageType>
+<summary>
+The <strong><c>MediaKeyMessageEvent.messageType</c></strong> read-only property indicates the<br/>type of message. It may be one of <c>license-request</c>,<br/><c>license-renewal</c>, <c>license-release</c>, or<br/><c>individualization-request</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/messageType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</MediaKeyMessageEventMessageType>
 </docs>

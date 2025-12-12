@@ -17,6 +17,15 @@ The <strong><c>changed</c></strong> read-only property of the <see cref="Extenda
 </remarks>
 <value>An array of objects containing the changed cookie(s). Each object contains the following properties:</value>
 </ExtendableCookieChangeEventChanged>
+<ExtendableCookieChangeEventDeleted>
+<summary>
+The <strong><c>deleted</c></strong> read-only property of the <see cref="ExtendableCookieChangeEvent"/> interface returns any cookies that have been deleted by the given <c>ExtendableCookieChangeEvent</c> instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent/deleted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of objects containing the deleted cookie(s). Each object contains the following properties:</value>
+</ExtendableCookieChangeEventDeleted>
 <ExtendableCookieChangeEventExtendableCookieChangeEvent>
 <summary>
 The <strong><c>ExtendableCookieChangeEvent()</c></strong> constructor creates a new <see cref="ExtendableCookieChangeEvent"/> object<br/>which is the event type passed to <see cref="ServiceWorkerGlobalScopecookiechange"/> event fired at the <see cref="ServiceWorkerGlobalScope"/> when any cookie changes occur which match the service worker's cookie change subscription list.<br/>This constructor is called by the browser when a change event occurs.
@@ -27,13 +36,4 @@ The <strong><c>ExtendableCookieChangeEvent()</c></strong> constructor creates a 
 </remarks>
 <returns>A new <see cref="ExtendableCookieChangeEvent"/> object.</returns>
 </ExtendableCookieChangeEventExtendableCookieChangeEvent>
-<ExtendableCookieChangeEventDeleted>
-<summary>
-The <strong><c>deleted</c></strong> read-only property of the <see cref="ExtendableCookieChangeEvent"/> interface returns any cookies that have been deleted by the given <c>ExtendableCookieChangeEvent</c> instance.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent/deleted"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of objects containing the deleted cookie(s). Each object contains the following properties:</value>
-</ExtendableCookieChangeEventDeleted>
 </docs>

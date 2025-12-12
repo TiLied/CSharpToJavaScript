@@ -8,16 +8,6 @@ The <strong><c>PaintSize</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaintSize>
-<PaintSizeWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="PaintSize"/> interface returns the width of the output bitmap that the author should draw.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintSize/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating point number.</value>
-</PaintSizeWidth>
 <PaintSizeHeight>
 <summary>
 The <strong><c>height</c></strong> read-only property of the <see cref="PaintSize"/> interface returns the height of the output bitmap that the author should draw.
@@ -28,4 +18,14 @@ The <strong><c>height</c></strong> read-only property of the <see cref="PaintSiz
 </remarks>
 <value>A floating point number.</value>
 </PaintSizeHeight>
+<PaintSizeWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="PaintSize"/> interface returns the width of the output bitmap that the author should draw.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintSize/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating point number.</value>
+</PaintSizeWidth>
 </docs>

@@ -9,6 +9,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackProcessor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStreamTrackProcessor>
+<MediaStreamTrackProcessorMediaStreamTrackProcessor>
+<summary>
+The <strong><c>MediaStreamTrackProcessor()</c></strong> constructor creates a new <see cref="MediaStreamTrackProcessor"/> object which consumes a video <see cref="MediaStreamTrack"/> object's source and generates a stream of <see cref="VideoFrame"/>s.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamTrackProcessorMediaStreamTrackProcessor>
 <MediaStreamTrackProcessorReadable>
 <summary>
 The <strong><c>readable</c></strong> property of the <see cref="MediaStreamTrackProcessor"/> interface returns a <see cref="ReadableStream"/> of <see cref="VideoFrame"/>s.
@@ -18,12 +26,4 @@ The <strong><c>readable</c></strong> property of the <see cref="MediaStreamTrack
 </remarks>
 <value>A <see cref="ReadableStream"/>.</value>
 </MediaStreamTrackProcessorReadable>
-<MediaStreamTrackProcessorMediaStreamTrackProcessor>
-<summary>
-The <strong><c>MediaStreamTrackProcessor()</c></strong> constructor creates a new <see cref="MediaStreamTrackProcessor"/> object which consumes a video <see cref="MediaStreamTrack"/> object's source and generates a stream of <see cref="VideoFrame"/>s.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MediaStreamTrackProcessorMediaStreamTrackProcessor>
 </docs>

@@ -9,86 +9,6 @@ The <strong><c>WorkerLocation</c></strong> interface defines the absolute locati
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WorkerLocation>
-<WorkerLocationSearch>
-<summary>
-The <strong><c>search</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Search"/> part of the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/search"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationSearch>
-<WorkerLocationPathname>
-<summary>
-The <strong><c>pathname</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Pathname"/> part of the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/pathname"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationPathname>
-<WorkerLocationOrigin>
-<summary>
-The <strong><c>origin</c></strong> property of a <see cref="WorkerLocation"/> object returns the worker's <see cref="URL.Origin"/>.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/origin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationOrigin>
-<WorkerLocationHost>
-<summary>
-The <strong><c>host</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Host"/> part of the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/host"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationHost>
-<WorkerLocationToString>
-<summary>
-The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} method of a <see cref="WorkerLocation"/> object returns a string containing the serialized <see cref="URL"/> for the worker's location. It is a synonym for <see cref="WorkerLocation.Href"/>.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/toString"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</WorkerLocationToString>
-<WorkerLocationProtocol>
-<summary>
-The <strong><c>protocol</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Protocol"/> part of the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/protocol"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationProtocol>
-<WorkerLocationHref>
-<summary>
-The <strong><c>href</c></strong> property of a <see cref="WorkerLocation"/> object returns a string containing the serialized <see cref="URL"/> for the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/href"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationHref>
-<WorkerLocationPort>
-<summary>
-The <strong><c>port</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Port"/> part of the worker's location.
-</summary>
-<remarks>
-<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/port"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</WorkerLocationPort>
 <WorkerLocationHash>
 <summary>
 The <strong><c>hash</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Hash"/> part of the worker's location.
@@ -99,6 +19,16 @@ The <strong><c>hash</c></strong> property of a <see cref="WorkerLocation"/> obje
 </remarks>
 <value>A string.</value>
 </WorkerLocationHash>
+<WorkerLocationHost>
+<summary>
+The <strong><c>host</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Host"/> part of the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationHost>
 <WorkerLocationHostname>
 <summary>
 The <strong><c>hostname</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Hostname"/> part of the worker's location.
@@ -109,4 +39,74 @@ The <strong><c>hostname</c></strong> property of a <see cref="WorkerLocation"/> 
 </remarks>
 <value>A string.</value>
 </WorkerLocationHostname>
+<WorkerLocationHref>
+<summary>
+The <strong><c>href</c></strong> property of a <see cref="WorkerLocation"/> object returns a string containing the serialized <see cref="URL"/> for the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationHref>
+<WorkerLocationOrigin>
+<summary>
+The <strong><c>origin</c></strong> property of a <see cref="WorkerLocation"/> object returns the worker's <see cref="URL.Origin"/>.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationOrigin>
+<WorkerLocationPathname>
+<summary>
+The <strong><c>pathname</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Pathname"/> part of the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/pathname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationPathname>
+<WorkerLocationPort>
+<summary>
+The <strong><c>port</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Port"/> part of the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationPort>
+<WorkerLocationProtocol>
+<summary>
+The <strong><c>protocol</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Protocol"/> part of the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationProtocol>
+<WorkerLocationSearch>
+<summary>
+The <strong><c>search</c></strong> property of a <see cref="WorkerLocation"/> object returns the <see cref="URL.Search"/> part of the worker's location.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/search"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerLocationSearch>
+<WorkerLocationToString>
+<summary>
+The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} method of a <see cref="WorkerLocation"/> object returns a string containing the serialized <see cref="URL"/> for the worker's location. It is a synonym for <see cref="WorkerLocation.Href"/>.
+</summary>
+<remarks>
+<para>-The <see cref="WorkerLocation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerLocationToString>
 </docs>

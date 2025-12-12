@@ -9,83 +9,6 @@ The <strong><c>GPURenderBundleEncoder</c></strong> interface of the {{domxref(&a
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPURenderBundleEncoder>
-<GPURenderBundleEncoderPopDebugGroup>
-<summary>
-The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface ends a render bundle debug group, which is begun with a <see cref="GPURenderBundleEncoder.PushDebugGroup"/> call.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.PopDebugGroup"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderPopDebugGroup>
-<GPURenderBundleEncoderDrawIndexedIndirect>
-<summary>
-The <strong><c>drawIndexedIndirect()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws indexed primitives using parameters read from a <see cref="GPUBuffer"/>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.DrawIndexedIndirect"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/drawIndexedIndirect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderDrawIndexedIndirect>
-<GPURenderBundleEncoderSetBindGroup>
-<summary>
-The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent render bundle commands, for a given index.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetBindGroup"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderSetBindGroup>
-<GPURenderBundleEncoderLabel>
-<summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPURenderBundleEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
-</summary>
-<remarks>
-<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateRenderBundleEncoder"/> call, or you can get and set it directly on the <c>GPURenderBundleEncoder</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.Label"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPURenderBundleEncoderLabel>
-<GPURenderBundleEncoderDrawIndexed>
-<summary>
-The <strong><c>drawIndexed()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws indexed primitives based on the vertex and index buffers provided by <see cref="GPURenderBundleEncoder.SetVertexBuffer"/> and <see cref="GPURenderBundleEncoder.SetIndexBuffer"/>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.DrawIndexed"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/drawIndexed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderDrawIndexed>
-<GPURenderBundleEncoderInsertDebugMarker>
-<summary>
-The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface marks a specific point in a series of encoded render bundle pass commands with a label.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.InsertDebugMarker"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/insertDebugMarker"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderInsertDebugMarker>
-<GPURenderBundleEncoderSetIndexBuffer>
-<summary>
-The <strong><c>setIndexBuffer()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the current <see cref="GPUBuffer"/> that will provide index data for subsequent drawing commands.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetIndexBuffer"/>.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setIndexBuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderSetIndexBuffer>
 <GPURenderBundleEncoderDraw>
 <summary>
 The <strong><c>draw()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws primitives based on the vertex buffers provided by <see cref="GPURenderBundleEncoder.SetVertexBuffer"/>.
@@ -97,17 +20,28 @@ The <strong><c>draw()</c></strong> method of the<br/><see cref="GPURenderBundleE
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderBundleEncoderDraw>
-<GPURenderBundleEncoderSetPipeline>
+<GPURenderBundleEncoderDrawIndexed>
 <summary>
-The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the <see cref="GPURenderPipeline"/> to use for subsequent render bundle commands.
+The <strong><c>drawIndexed()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws indexed primitives based on the vertex and index buffers provided by <see cref="GPURenderBundleEncoder.SetVertexBuffer"/> and <see cref="GPURenderBundleEncoder.SetIndexBuffer"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetPipeline"/>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.DrawIndexed"/>.</para></blockquote>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/drawIndexed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderBundleEncoderSetPipeline>
+</GPURenderBundleEncoderDrawIndexed>
+<GPURenderBundleEncoderDrawIndexedIndirect>
+<summary>
+The <strong><c>drawIndexedIndirect()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws indexed primitives using parameters read from a <see cref="GPUBuffer"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.DrawIndexedIndirect"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/drawIndexedIndirect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderDrawIndexedIndirect>
 <GPURenderBundleEncoderDrawIndirect>
 <summary>
 The <strong><c>drawIndirect()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface draws primitives using parameters read from a <see cref="GPUBuffer"/>.
@@ -119,6 +53,49 @@ The <strong><c>drawIndirect()</c></strong> method of the<br/><see cref="GPURende
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderBundleEncoderDrawIndirect>
+<GPURenderBundleEncoderFinish>
+<summary>
+The <strong><c>finish()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface completes recording of the current render bundle command sequence, returning a <see cref="GPURenderBundle"/> object that can be passed into a <see cref="GPURenderPassEncoder.ExecuteBundles"/> call to execute those commands in a specific render pass.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPURenderBundle"/> object instance.</returns>
+</GPURenderBundleEncoderFinish>
+<GPURenderBundleEncoderInsertDebugMarker>
+<summary>
+The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface marks a specific point in a series of encoded render bundle pass commands with a label.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.InsertDebugMarker"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/insertDebugMarker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderInsertDebugMarker>
+<GPURenderBundleEncoderLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPURenderBundleEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateRenderBundleEncoder"/> call, or you can get and set it directly on the <c>GPURenderBundleEncoder</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.Label"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPURenderBundleEncoderLabel>
+<GPURenderBundleEncoderPopDebugGroup>
+<summary>
+The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface ends a render bundle debug group, which is begun with a <see cref="GPURenderBundleEncoder.PushDebugGroup"/> call.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.PopDebugGroup"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderPopDebugGroup>
 <GPURenderBundleEncoderPushDebugGroup>
 <summary>
 The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface begins a render bundle debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPURenderBundleEncoder.PopDebugGroup"/> method is invoked.
@@ -130,6 +107,39 @@ The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPURen
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderBundleEncoderPushDebugGroup>
+<GPURenderBundleEncoderSetBindGroup>
+<summary>
+The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent render bundle commands, for a given index.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetBindGroup"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderSetBindGroup>
+<GPURenderBundleEncoderSetIndexBuffer>
+<summary>
+The <strong><c>setIndexBuffer()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the current <see cref="GPUBuffer"/> that will provide index data for subsequent drawing commands.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetIndexBuffer"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setIndexBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderSetIndexBuffer>
+<GPURenderBundleEncoderSetPipeline>
+<summary>
+The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets the <see cref="GPURenderPipeline"/> to use for subsequent render bundle commands.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is functionally identical to its equivalent on <see cref="GPURenderPassEncoder"/> — <see cref="GPURenderPassEncoder.SetPipeline"/>.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderBundleEncoderSetPipeline>
 <GPURenderBundleEncoderSetVertexBuffer>
 <summary>
 The <strong><c>setVertexBuffer()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface sets or unsets the current <see cref="GPUBuffer"/> for the given slot that will provide vertex data for subsequent drawing commands.
@@ -141,14 +151,4 @@ The <strong><c>setVertexBuffer()</c></strong> method of the<br/><see cref="GPURe
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderBundleEncoderSetVertexBuffer>
-<GPURenderBundleEncoderFinish>
-<summary>
-The <strong><c>finish()</c></strong> method of the<br/><see cref="GPURenderBundleEncoder"/> interface completes recording of the current render bundle command sequence, returning a <see cref="GPURenderBundle"/> object that can be passed into a <see cref="GPURenderPassEncoder.ExecuteBundles"/> call to execute those commands in a specific render pass.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundleEncoder/finish"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPURenderBundle"/> object instance.</returns>
-</GPURenderBundleEncoderFinish>
 </docs>

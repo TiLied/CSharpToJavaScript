@@ -1,0 +1,39 @@
+<docs>
+<IndexedDB_API>
+<summary>
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. While <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage</see> is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution. This is the main landing page for MDN&amp;apos;s IndexedDB coverage — here we provide links to the full API reference and usage guides, browser support details, and some explanation of key concepts.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Window: localStorage property</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Window: sessionStorage property</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent">StorageEvent</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IndexedDB_API>
+<IndexedDB_APIBasic_Terminology>
+<summary>
+This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.
+</summary>
+<remarks>
+<para>You&amp;apos;ll also find the following articles useful:</para>
+<para>-<see href="https://w3c.github.io/IndexedDB/">Indexed Database API Specification</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API Reference</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-<see href="https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)">IndexedDB — The Store in Your Browser</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IndexedDB_APIBasic_Terminology>
+<IndexedDB_APIChecking_when_a_deadline_is_due>
+<summary>
+In this article we look at a complex example involving checking the current time and date against a deadline stored via IndexedDB. The main complication here is checking the stored deadline info (month, hour, day, etc.) against the current time and date taken from a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</see> object.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.orgto-do-app.png">A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks</see></para><para>The main example application we will be referring to in this article is <strong>To-do list notifications</strong>, a simple to-do list application that stores task titles and deadline times and dates via <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</see>, and then provides users with notifications when deadline dates are reached, via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Notification">Notification</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API">Vibration</see> APIs. You can <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">download the To-do list notifications app from GitHub</see> and play around with the source code, or <see href="https://mdn.github.io/dom-examples/to-do-notifications/">view the app running live</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IndexedDB_APIChecking_when_a_deadline_is_due>
+<IndexedDB_APIUsing_IndexedDB>
+<summary>
+IndexedDB is a way for you to persistently store data inside a user&amp;apos;s browser. Because it lets you create web applications with rich query abilities regardless of network availability, your applications can work both online and offline.
+</summary>
+<remarks>
+<para>Further reading for you to find out more information if desired.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IndexedDB_APIUsing_IndexedDB>
+</docs>

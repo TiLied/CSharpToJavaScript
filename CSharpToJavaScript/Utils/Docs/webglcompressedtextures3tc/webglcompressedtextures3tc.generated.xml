@@ -1,0 +1,12 @@
+<docs>
+<WEBGL_compressed_texture_s3tc>
+<summary>
+The <strong><c>WEBGL_compressed_texture_s3tc</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes four <see href="https://en.wikipedia.org/wiki/S3_Texture_Compression">S3TC compressed texture formats</see>.
+</summary>
+<remarks>
+<para>Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see href="https://www.khronos.org/opengl/wiki/S3_Texture_Compression">S3 Texture Compression – OpenGL wiki</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_s3tc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_compressed_texture_s3tc>
+</docs>

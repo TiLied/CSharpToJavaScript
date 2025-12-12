@@ -8,70 +8,6 @@ The <strong><c>DocumentFragment</c></strong> interface represents a minimal docu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DocumentFragment>
-<DocumentFragmentReplaceChildren>
-<summary>
-The <strong><c>DocumentFragment.replaceChildren()</c></strong> method replaces the<br/>existing children of a <c>DocumentFragment</c> with a specified new set of children. These<br/>can be string or <see cref="Node"/> objects.
-</summary>
-<remarks>
-<para>-<see cref="DocumentFragment.Prepend"/><br/>-<see cref="DocumentFragment.Append"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/replaceChildren"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</DocumentFragmentReplaceChildren>
-<DocumentFragmentQuerySelector>
-<summary>
-The <strong><c>DocumentFragment.querySelector()</c></strong> method returns the<br/>first element, or <c>null</c> if no matches are found, within the<br/><see cref="DocumentFragment"/> (using depth-first pre-order traversal of the<br/>document&amp;apos;s nodes) that matches the specified group of selectors.
-</summary>
-<remarks>
-<para>If the selector matches an ID and this ID is erroneously used several times in the<br/>document, it returns the first matching element.</para><para>If the selectors specified in parameter are invalid a <see cref="DOMException"/> with<br/>a <c>SYNTAX_ERR</c> value is raised.</para>
-<para>-The <see cref="DocumentFragment"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.</returns>
-</DocumentFragmentQuerySelector>
-<DocumentFragmentChildElementCount>
-<summary>
-The <strong><c>DocumentFragment.childElementCount</c></strong> read-only property<br/>returns the number of child elements of a <c>DocumentFragment</c>.
-</summary>
-<remarks>
-<para>To get the number of children of a specific element, see <see cref="Element.ChildElementCount"/>.</para>
-<para>-<see cref="Element.ChildElementCount"/><br/>-<see cref="Document.ChildElementCount"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/childElementCount"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number representing the number of children of the document fragment.</value>
-</DocumentFragmentChildElementCount>
-<DocumentFragmentPrepend>
-<summary>
-The <strong><c>DocumentFragment.prepend()</c></strong> method<br/>inserts a set of <see cref="Node"/> objects or strings before<br/>the first child of the document fragment. Strings<br/>are inserted as equivalent <see cref="Text"/> nodes.
-</summary>
-<remarks>
-<para>This method prepends a child to a <c>DocumentFragment</c>. To prepend to an arbitrary element in the tree, see <see cref="Element.Prepend"/>.</para>
-<para>-<see cref="DocumentFragment.Append"/><br/>-<see cref="Element.Prepend"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/prepend"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</DocumentFragmentPrepend>
-<DocumentFragmentGetElementById>
-<summary>
-The <strong><c>getElementById()</c></strong> method of the <see cref="DocumentFragment"/> returns an <see cref="Element"/> object representing the element whose <see cref="Element.Id"/> property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
-</summary>
-<remarks>
-<para>If you need to get access to an element which doesn't have an ID, you can use <see cref="Document.QuerySelector"/> to find the element using any {{Glossary("CSS selector", "selector")}}.</para><blockquote class="NOTE"><h5>NOTE</h5><para>IDs should be unique inside a document fragment. If two or more elements in a document fragment have the same ID, this method returns the first element found.</para></blockquote>
-<para>-<see cref="Document.GetElementById"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/getElementById"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="Element"/> object describing the DOM element object matching the specified ID, or <c>null</c> if no matching element was found in the document fragment.</returns>
-</DocumentFragmentGetElementById>
-<DocumentFragmentFirstElementChild>
-<summary>
-The <strong><c>DocumentFragment.firstElementChild</c></strong> read-only property<br/>returns the document fragment's first child <see cref="Element"/>, or <c>null</c> if there<br/>are no child elements.
-</summary>
-<remarks>
-<para>-<see cref="Element.FirstElementChild"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/firstElementChild"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="Element"/> that is the first child <c>Element</c> of the object, or <c>null</c> if there are none.</value>
-</DocumentFragmentFirstElementChild>
 <DocumentFragmentAppend>
 <summary>
 The <strong><c>DocumentFragment.append()</c></strong> method<br/>inserts a set of <see cref="Node"/> objects or strings after<br/>the last child of the document fragment. Strings<br/>are inserted as equivalent <see cref="Text"/> nodes.
@@ -83,6 +19,57 @@ The <strong><c>DocumentFragment.append()</c></strong> method<br/>inserts a set o
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </DocumentFragmentAppend>
+<DocumentFragmentChildElementCount>
+<summary>
+The <strong><c>DocumentFragment.childElementCount</c></strong> read-only property<br/>returns the number of child elements of a <c>DocumentFragment</c>.
+</summary>
+<remarks>
+<para>To get the number of children of a specific element, see <see cref="Element.ChildElementCount"/>.</para>
+<para>-<see cref="Element.ChildElementCount"/><br/>-<see cref="Document.ChildElementCount"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/childElementCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the number of children of the document fragment.</value>
+</DocumentFragmentChildElementCount>
+<DocumentFragmentChildren>
+<summary>
+The read-only <strong><c>children</c></strong> property returns a live <see cref="HTMLCollection"/><br/>which contains all of the child <see cref="Element"/> of the document fragment upon which it was called.
+</summary>
+<remarks>
+<para>-<see cref="Node.ChildNodes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/children"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCollection"/> which is a live, ordered collection of the DOM<br/>elements which are children of the document fragment. You can access the<br/>individual child nodes in the collection by using either the<br/><see cref="HTMLCollection.Item"/> method on the collection, or by using<br/>JavaScript array-style notation.If the document fragment has no element children, then <c>children</c> is an empty list with a<br/><c>length</c> of <c>0</c>.</value>
+</DocumentFragmentChildren>
+<DocumentFragmentDocumentFragment>
+<summary>
+The <strong><c>DocumentFragment()</c></strong> constructor returns a new, empty<br/><see cref="DocumentFragment"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/DocumentFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DocumentFragment"/> object.</returns>
+</DocumentFragmentDocumentFragment>
+<DocumentFragmentFirstElementChild>
+<summary>
+The <strong><c>DocumentFragment.firstElementChild</c></strong> read-only property<br/>returns the document fragment's first child <see cref="Element"/>, or <c>null</c> if there<br/>are no child elements.
+</summary>
+<remarks>
+<para>-<see cref="Element.FirstElementChild"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/firstElementChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> that is the first child <c>Element</c> of the object, or <c>null</c> if there are none.</value>
+</DocumentFragmentFirstElementChild>
+<DocumentFragmentGetElementById>
+<summary>
+The <strong><c>getElementById()</c></strong> method of the <see cref="DocumentFragment"/> returns an <see cref="Element"/> object representing the element whose <see cref="Element.Id"/> property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
+</summary>
+<remarks>
+<para>If you need to get access to an element which doesn't have an ID, you can use <see cref="Document.QuerySelector"/> to find the element using any {{Glossary("CSS selector", "selector")}}.</para><blockquote class="NOTE"><h5>NOTE</h5><para>IDs should be unique inside a document fragment. If two or more elements in a document fragment have the same ID, this method returns the first element found.</para></blockquote>
+<para>-<see cref="Document.GetElementById"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/getElementById"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Element"/> object describing the DOM element object matching the specified ID, or <c>null</c> if no matching element was found in the document fragment.</returns>
+</DocumentFragmentGetElementById>
 <DocumentFragmentLastElementChild>
 <summary>
 The <strong><c>DocumentFragment.lastElementChild</c></strong> read-only property<br/>returns the document fragment's last child <see cref="Element"/>, or <c>null</c> if there<br/>are no child elements.
@@ -103,15 +90,28 @@ The <strong><c>DocumentFragment.lastElementChild</c></strong> read-only property
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </DocumentFragmentMoveBefore>
-<DocumentFragmentDocumentFragment>
+<DocumentFragmentPrepend>
 <summary>
-The <strong><c>DocumentFragment()</c></strong> constructor returns a new, empty<br/><see cref="DocumentFragment"/> object.
+The <strong><c>DocumentFragment.prepend()</c></strong> method<br/>inserts a set of <see cref="Node"/> objects or strings before<br/>the first child of the document fragment. Strings<br/>are inserted as equivalent <see cref="Text"/> nodes.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/DocumentFragment"> <em>See also on MDN</em> </seealso></para>
+<para>This method prepends a child to a <c>DocumentFragment</c>. To prepend to an arbitrary element in the tree, see <see cref="Element.Prepend"/>.</para>
+<para>-<see cref="DocumentFragment.Append"/><br/>-<see cref="Element.Prepend"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/prepend"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="DocumentFragment"/> object.</returns>
-</DocumentFragmentDocumentFragment>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentFragmentPrepend>
+<DocumentFragmentQuerySelector>
+<summary>
+The <strong><c>DocumentFragment.querySelector()</c></strong> method returns the<br/>first element, or <c>null</c> if no matches are found, within the<br/><see cref="DocumentFragment"/> (using depth-first pre-order traversal of the<br/>document&amp;apos;s nodes) that matches the specified group of selectors.
+</summary>
+<remarks>
+<para>If the selector matches an ID and this ID is erroneously used several times in the<br/>document, it returns the first matching element.</para><para>If the selectors specified in parameter are invalid a <see cref="DOMException"/> with<br/>a <c>SYNTAX_ERR</c> value is raised.</para>
+<para>-The <see cref="DocumentFragment"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.</returns>
+</DocumentFragmentQuerySelector>
 <DocumentFragmentQuerySelectorAll>
 <summary>
 The <strong><c>DocumentFragment.querySelectorAll()</c></strong> method returns a<br/><see cref="NodeList"/> of elements within the <see cref="DocumentFragment"/> (using<br/>depth-first pre-order traversal of the document&amp;apos;s nodes) that matches the specified<br/>group of selectors.
@@ -123,14 +123,14 @@ The <strong><c>DocumentFragment.querySelectorAll()</c></strong> method returns a
 </remarks>
 <returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each element that matches at least one of the specified selectors or an empty<br/><see cref="NodeList"/> in case of no matches.</returns>
 </DocumentFragmentQuerySelectorAll>
-<DocumentFragmentChildren>
+<DocumentFragmentReplaceChildren>
 <summary>
-The read-only <strong><c>children</c></strong> property returns a live <see cref="HTMLCollection"/><br/>which contains all of the child <see cref="Element"/> of the document fragment upon which it was called.
+The <strong><c>DocumentFragment.replaceChildren()</c></strong> method replaces the<br/>existing children of a <c>DocumentFragment</c> with a specified new set of children. These<br/>can be string or <see cref="Node"/> objects.
 </summary>
 <remarks>
-<para>-<see cref="Node.ChildNodes"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/children"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="DocumentFragment.Prepend"/><br/>-<see cref="DocumentFragment.Append"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/replaceChildren"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLCollection"/> which is a live, ordered collection of the DOM<br/>elements which are children of the document fragment. You can access the<br/>individual child nodes in the collection by using either the<br/><see cref="HTMLCollection.Item"/> method on the collection, or by using<br/>JavaScript array-style notation.If the document fragment has no element children, then <c>children</c> is an empty list with a<br/><c>length</c> of <c>0</c>.</value>
-</DocumentFragmentChildren>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentFragmentReplaceChildren>
 </docs>

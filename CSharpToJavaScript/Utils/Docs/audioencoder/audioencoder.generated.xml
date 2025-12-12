@@ -8,15 +8,6 @@ The <strong><c>AudioEncoder</c></strong> interface of the <see href="https://dev
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioEncoder>
-<AudioEncoderEncodeQueueSize>
-<summary>
-The <strong><c>encodeQueueSize</c></strong> read-only property of the <see cref="AudioEncoder"/> interface returns the number of pending encode requests in the queue.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/encodeQueueSize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer containing the number of requests.</value>
-</AudioEncoderEncodeQueueSize>
 <AudioEncoderAudioEncoder>
 <summary>
 The <strong><c>AudioEncoder()</c></strong> constructor creates a new <see cref="AudioEncoder"/> object with the provided <c>init.output</c> callback assigned as the output callback, the provided <c>init.error</c> callback as the error callback, and the <see cref="AudioEncoder.State"/> set to <c>&amp;quot;unconfigured&amp;quot;</c>.
@@ -25,60 +16,6 @@ The <strong><c>AudioEncoder()</c></strong> constructor creates a new <see cref="
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/AudioEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioEncoderAudioEncoder>
-<AudioEncoderIsConfigSupported>
-<summary>
-The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="AudioEncoder"/> interface checks if the given config is supported (that is, if <see cref="AudioEncoder"/> objects can be successfully configured with the given config).
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>
-</AudioEncoderIsConfigSupported>
-<AudioEncoderFlush>
-<summary>
-The <strong><c>flush()</c></strong> method of the <see cref="AudioEncoder"/> interface returns a Promise that resolves once all pending messages in the queue have been completed.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/flush"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with undefined.</returns>
-</AudioEncoderFlush>
-<AudioEncoderEncode>
-<summary>
-The <strong><c>encode()</c></strong> method of the <see cref="AudioEncoder"/> interface enqueues a control message to encode a given <see cref="AudioData"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/encode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</AudioEncoderEncode>
-<AudioEncoderConfigure>
-<summary>
-The <strong><c>configure()</c></strong> method of the <see cref="AudioEncoder"/> interface enqueues a control message to configure the audio encoder for encoding chunks.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/configure"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</AudioEncoderConfigure>
-<AudioEncoderState>
-<summary>
-The <strong><c>state</c></strong> read-only property of the <see cref="AudioEncoder"/> interface returns the current state of the underlying codec.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/state"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing one of the following values:</value>
-</AudioEncoderState>
-<AudioEncoderDequeue>
-<summary>
-The <strong><c>dequeue</c></strong> event of the <see cref="AudioEncoder"/> interface fires to signal a decrease in <see cref="AudioEncoder.EncodeQueueSize"/>.
-</summary>
-<remarks>
-<para>This eliminates the need for developers to use a <see cref="Window.SetTimeout"/> poll to determine when the queue has decreased, and more work should be queued up.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/dequeue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</AudioEncoderDequeue>
 <AudioEncoderClose>
 <summary>
 The <strong><c>close()</c></strong> method of the <see cref="AudioEncoder"/> interface ends all pending work and releases system resources.
@@ -88,6 +25,60 @@ The <strong><c>close()</c></strong> method of the <see cref="AudioEncoder"/> int
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </AudioEncoderClose>
+<AudioEncoderConfigure>
+<summary>
+The <strong><c>configure()</c></strong> method of the <see cref="AudioEncoder"/> interface enqueues a control message to configure the audio encoder for encoding chunks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/configure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioEncoderConfigure>
+<AudioEncoderDequeue>
+<summary>
+The <strong><c>dequeue</c></strong> event of the <see cref="AudioEncoder"/> interface fires to signal a decrease in <see cref="AudioEncoder.EncodeQueueSize"/>.
+</summary>
+<remarks>
+<para>This eliminates the need for developers to use a <see cref="Window.SetTimeout"/> poll to determine when the queue has decreased, and more work should be queued up.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/dequeue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioEncoderDequeue>
+<AudioEncoderEncode>
+<summary>
+The <strong><c>encode()</c></strong> method of the <see cref="AudioEncoder"/> interface enqueues a control message to encode a given <see cref="AudioData"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/encode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioEncoderEncode>
+<AudioEncoderEncodeQueueSize>
+<summary>
+The <strong><c>encodeQueueSize</c></strong> read-only property of the <see cref="AudioEncoder"/> interface returns the number of pending encode requests in the queue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/encodeQueueSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the number of requests.</value>
+</AudioEncoderEncodeQueueSize>
+<AudioEncoderFlush>
+<summary>
+The <strong><c>flush()</c></strong> method of the <see cref="AudioEncoder"/> interface returns a Promise that resolves once all pending messages in the queue have been completed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/flush"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with undefined.</returns>
+</AudioEncoderFlush>
+<AudioEncoderIsConfigSupported>
+<summary>
+The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="AudioEncoder"/> interface checks if the given config is supported (that is, if <see cref="AudioEncoder"/> objects can be successfully configured with the given config).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>
+</AudioEncoderIsConfigSupported>
 <AudioEncoderReset>
 <summary>
 The <strong><c>reset()</c></strong> method of the <see cref="AudioEncoder"/> interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
@@ -97,4 +88,13 @@ The <strong><c>reset()</c></strong> method of the <see cref="AudioEncoder"/> int
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </AudioEncoderReset>
+<AudioEncoderState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="AudioEncoder"/> interface returns the current state of the underlying codec.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</AudioEncoderState>
 </docs>

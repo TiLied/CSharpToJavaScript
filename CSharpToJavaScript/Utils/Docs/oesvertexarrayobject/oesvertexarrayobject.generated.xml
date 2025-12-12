@@ -1,0 +1,52 @@
+<docs>
+<OES_vertex_array_object>
+<summary>
+The <strong>OES_vertex_array_object</strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and provides vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and provide names for different sets of vertex data.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the <c>OES_</c> suffix.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/>-WebGL2 equivalent methods:-<see cref="WebGL2RenderingContext.CreateVertexArray"/><br/>-<see cref="WebGL2RenderingContext.DeleteVertexArray"/><br/>-<see cref="WebGL2RenderingContext.IsVertexArray"/><br/>-<see cref="WebGL2RenderingContext.BindVertexArray"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OES_vertex_array_object>
+<OES_vertex_array_objectBindVertexArrayOES>
+<summary>
+The <strong><c>OES_vertex_array_object.bindVertexArrayOES()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds a<br/>passed <see cref="WebGLVertexArrayObject"/> object to the buffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/>-WebGL2 equivalent: <see cref="WebGL2RenderingContext.BindVertexArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_vertex_array_objectBindVertexArrayOES>
+<OES_vertex_array_objectCreateVertexArrayOES>
+<summary>
+The <strong><c>OES_vertex_array_object.createVertexArrayOES()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLVertexArrayObject"/> object that represents a vertex array object (VAO)<br/>pointing to vertex array data and which provides names for different sets of vertex<br/>data.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/>-WebGL2 equivalent: <see cref="WebGL2RenderingContext.CreateVertexArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/createVertexArrayOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLVertexArrayObject"/> representing a vertex array object (VAO) which<br/>points to vertex array data.</returns>
+</OES_vertex_array_objectCreateVertexArrayOES>
+<OES_vertex_array_objectDeleteVertexArrayOES>
+<summary>
+The <strong><c>OES_vertex_array_object.deleteVertexArrayOES()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLVertexArrayObject"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/>-WebGL2 equivalent: <see cref="WebGL2RenderingContext.DeleteVertexArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/deleteVertexArrayOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_vertex_array_objectDeleteVertexArrayOES>
+<OES_vertex_array_objectIsVertexArrayOES>
+<summary>
+The <strong><c>OES_vertex_array_object.isVertexArrayOES()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if<br/>the passed object is a <see cref="WebGLVertexArrayObject"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/>-WebGL2 equivalent: <see cref="WebGL2RenderingContext.IsVertexArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/isVertexArrayOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_API.Types"/> indicating whether the given object is a<br/><see cref="WebGLVertexArrayObject"/> object (<c>true</c>) or not<br/>(<c>false</c>).</returns>
+</OES_vertex_array_objectIsVertexArrayOES>
+</docs>

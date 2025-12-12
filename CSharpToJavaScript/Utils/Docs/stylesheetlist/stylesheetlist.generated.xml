@@ -8,15 +8,6 @@ The <c>StyleSheetList</c> interface represents a list of <see cref="CSSStyleShee
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </StyleSheetList>
-<StyleSheetListLength>
-<summary>
-The <strong><c>length</c></strong> read-only property of the <see cref="StyleSheetList"/> interface returns the number of <see cref="CSSStyleSheet"/> objects in the collection.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer indicating the number of items in the collection.</value>
-</StyleSheetListLength>
 <StyleSheetListItem>
 <summary>
 The <strong><c>item()</c></strong> method of the <see cref="StyleSheetList"/> interface returns a single <see cref="CSSStyleSheet"/> object.
@@ -26,4 +17,13 @@ The <strong><c>item()</c></strong> method of the <see cref="StyleSheetList"/> in
 </remarks>
 <returns>A <see cref="CSSStyleSheet"/> object, or <c>null</c> if one does not exist for this index.</returns>
 </StyleSheetListItem>
+<StyleSheetListLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the <see cref="StyleSheetList"/> interface returns the number of <see cref="CSSStyleSheet"/> objects in the collection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer indicating the number of items in the collection.</value>
+</StyleSheetListLength>
 </docs>

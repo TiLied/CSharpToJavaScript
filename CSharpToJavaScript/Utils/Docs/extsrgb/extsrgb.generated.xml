@@ -1,0 +1,12 @@
+<docs>
+<EXT_sRGB>
+<summary>
+The <strong><c>EXT_sRGB</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and adds sRGB support to textures and framebuffer objects.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are: <c>gl.SRGB</c>, <c>gl.SRGB8</c>, <c>gl.SRGB8_ALPHA8</c> and <c>gl.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING</c>.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.RenderbufferStorage"/><br/>-<see cref="WebGLRenderingContext.GetFramebufferAttachmentParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_sRGB"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EXT_sRGB>
+</docs>

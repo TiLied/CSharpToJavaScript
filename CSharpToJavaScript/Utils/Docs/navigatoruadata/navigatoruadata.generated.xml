@@ -10,16 +10,16 @@
 </remarks>
 <returns>In the following value a number of hints are requested using the <see cref="NavigatorUAData.GetHighEntropyValues"/> method. When the promise resolves, this information is printed to the console.</returns>
 </NavigatorUAData>
-<NavigatorUADataMobile>
+<NavigatorUADataBrands>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>mobile</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns a value indicating whether the device is a mobile device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>brands</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns an array of brand information.
 </summary>
 <remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile">Sec-CH-UA-Mobile</see> header (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA">Sec-CH-UA</see> (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/brands"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Boolean"/>, <c>true</c> if this is a mobile device.</value>
-</NavigatorUADataMobile>
+<value>An array containing the following information for each brand:</value>
+</NavigatorUADataBrands>
 <NavigatorUADataGetHighEntropyValues>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getHighEntropyValues()</c></strong> method of the <see cref="NavigatorUAData"/> interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the <strong>high entropy</strong> values the user-agent returns.
@@ -31,16 +31,16 @@
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to an object containing some or all of the following values (based on the hints requested):</returns>
 </NavigatorUADataGetHighEntropyValues>
-<NavigatorUADataBrands>
+<NavigatorUADataMobile>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>brands</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns an array of brand information.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>mobile</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns a value indicating whether the device is a mobile device.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA">Sec-CH-UA</see> (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/brands"> <em>See also on MDN</em> </seealso></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile">Sec-CH-UA-Mobile</see> header (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array containing the following information for each brand:</value>
-</NavigatorUADataBrands>
+<value>A <see cref="Boolean"/>, <c>true</c> if this is a mobile device.</value>
+</NavigatorUADataMobile>
 <NavigatorUADataPlatform>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>platform</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns the platform brand information.

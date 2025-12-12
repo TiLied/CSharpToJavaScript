@@ -9,39 +9,6 @@ The <strong><c>WheelEvent</c></strong> interface represents events that occur du
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WheelEvent>
-<WheelEventWheelEvent>
-<summary>
-The <strong><c>WheelEvent()</c></strong> constructor returns a new <see cref="WheelEvent"/> object.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>WheelEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
-<para>-The <see cref="WheelEvent"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="WheelEvent"/> object.</returns>
-</WheelEventWheelEvent>
-<WheelEventDeltaX>
-<summary>
-The <strong><c>WheelEvent.deltaX</c></strong> read-only property is a<br/><c>double</c> representing the horizontal scroll amount in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
-</summary>
-<remarks>
-<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaX</c> value. Do not assume that the <c>deltaX</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaX</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
-<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</WheelEventDeltaX>
-<WheelEventDeltaZ>
-<summary>
-The <strong><c>WheelEvent.deltaZ</c></strong> read-only property is a<br/><c>double</c> representing the scroll amount along the z-axis, in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
-</summary>
-<remarks>
-<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaZ</c> value. Do not assume that the <c>deltaZ</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaZ</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
-<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</WheelEventDeltaZ>
 <WheelEventDeltaMode>
 <summary>
 The <strong><c>WheelEvent.deltaMode</c></strong> read-only property returns an<br/><c>unsigned long</c> representing the unit of the delta values scroll amount.<br/>Permitted values are:
@@ -53,6 +20,17 @@ The <strong><c>WheelEvent.deltaMode</c></strong> read-only property returns an<b
 </remarks>
 <value>An <c>unsigned long</c>.</value>
 </WheelEventDeltaMode>
+<WheelEventDeltaX>
+<summary>
+The <strong><c>WheelEvent.deltaX</c></strong> read-only property is a<br/><c>double</c> representing the horizontal scroll amount in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
+</summary>
+<remarks>
+<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaX</c> value. Do not assume that the <c>deltaX</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaX</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WheelEventDeltaX>
 <WheelEventDeltaY>
 <summary>
 The <strong><c>WheelEvent.deltaY</c></strong> read-only property is a<br/><c>double</c> representing the vertical scroll amount in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
@@ -64,4 +42,26 @@ The <strong><c>WheelEvent.deltaY</c></strong> read-only property is a<br/><c>dou
 </remarks>
 <value>A number.</value>
 </WheelEventDeltaY>
+<WheelEventDeltaZ>
+<summary>
+The <strong><c>WheelEvent.deltaZ</c></strong> read-only property is a<br/><c>double</c> representing the scroll amount along the z-axis, in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
+</summary>
+<remarks>
+<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaZ</c> value. Do not assume that the <c>deltaZ</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaZ</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WheelEventDeltaZ>
+<WheelEventWheelEvent>
+<summary>
+The <strong><c>WheelEvent()</c></strong> constructor returns a new <see cref="WheelEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>WheelEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
+<para>-The <see cref="WheelEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="WheelEvent"/> object.</returns>
+</WheelEventWheelEvent>
 </docs>

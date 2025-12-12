@@ -25,6 +25,15 @@ The <strong><c>x</c></strong> property of the<br/><see cref="CSSScale"/> interfa
 </remarks>
 <value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
 </CSSScaleX>
+<CSSScaleY>
+<summary>
+The <strong><c>y</c></strong> property of the<br/><see cref="CSSScale"/> interface gets and sets the ordinate or y-axis of the<br/>translating vector.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScale/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
+</CSSScaleY>
 <CSSScaleZ>
 <summary>
 The <strong><c>z</c></strong> property of the<br/><see cref="CSSScale"/> interface representing the z-component of the translating<br/>vector. A positive value moves the element towards the viewer, and a negative value<br/>farther away.
@@ -35,13 +44,4 @@ The <strong><c>z</c></strong> property of the<br/><see cref="CSSScale"/> interfa
 </remarks>
 <value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
 </CSSScaleZ>
-<CSSScaleY>
-<summary>
-The <strong><c>y</c></strong> property of the<br/><see cref="CSSScale"/> interface gets and sets the ordinate or y-axis of the<br/>translating vector.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScale/y"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
-</CSSScaleY>
 </docs>

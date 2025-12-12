@@ -1,4 +1,4 @@
-//25.09.2025 17:09:11
+//12.12.2025 21:28:31
 
 #nullable enable
 //Disable missing XML comments.
@@ -166,7 +166,7 @@ using FormDataEntryValue = Union237;
 
 
 ///<summary>
-///<see cref="RequestInfo"/> or <see cref="List{RequestInfo}"/>
+///<see cref="RequestInfo"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union0
 {
@@ -186,7 +186,7 @@ public struct Union1
 }
 
 ///<summary>
-///<see cref="AnimationEffect"/> or <see cref="List{AnimationEffect}"/>
+///<see cref="AnimationEffect"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union2
 {
@@ -949,7 +949,7 @@ public struct Union76
 }
 
 ///<summary>
-///<see cref="double"/> or <see cref="DOMPointInit"/> or <see cref="List{Union76}"/>
+///<see cref="double"/> or <see cref="DOMPointInit"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union75
 {
@@ -1218,7 +1218,7 @@ public struct Union101
 }
 
 ///<summary>
-///<see cref="List{Point2D}"/> or <see cref="ConstrainPoint2DParameters"/>
+///<see cref="List{T}"/> or <see cref="ConstrainPoint2DParameters"/>
 ///</summary>
 public struct Union102
 {
@@ -1239,7 +1239,7 @@ public struct Union103
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union104
 {
@@ -1249,7 +1249,7 @@ public struct Union104
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union105
 {
@@ -1259,7 +1259,7 @@ public struct Union105
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union106
 {
@@ -1299,7 +1299,7 @@ public struct Union109
 }
 
 ///<summary>
-///<see cref="Number"/> or <see cref="List{Number}"/>
+///<see cref="Number"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union110
 {
@@ -1329,7 +1329,7 @@ public struct Union112
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union113
 {
@@ -1339,7 +1339,7 @@ public struct Union113
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union114
 {
@@ -1379,7 +1379,7 @@ public struct Union117
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/> or <see cref="ConstrainDOMStringParameters"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/> or <see cref="ConstrainDOMStringParameters"/>
 ///</summary>
 public struct Union118
 {
@@ -1563,7 +1563,7 @@ public struct Union136
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{Union136}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union135
 {
@@ -1583,7 +1583,7 @@ public struct Union137
 }
 
 ///<summary>
-///<see cref="RouterRule"/> or <see cref="List{RouterRule}"/>
+///<see cref="RouterRule"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union138
 {
@@ -1706,7 +1706,7 @@ public struct Union149
 }
 
 ///<summary>
-///<see cref="GenerateBidOutput"/> or <see cref="List{GenerateBidOutput}"/>
+///<see cref="GenerateBidOutput"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union150
 {
@@ -1893,7 +1893,7 @@ public struct Union167
 }
 
 ///<summary>
-///<see cref="Number?"/> or <see cref="List{Number?}"/>
+///<see cref="Number"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union168
 {
@@ -1903,7 +1903,7 @@ public struct Union168
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union169
 {
@@ -1913,7 +1913,7 @@ public struct Union169
 }
 
 ///<summary>
-///<see cref="CompositeOperationOrAuto"/> or <see cref="List{CompositeOperationOrAuto}"/>
+///<see cref="CompositeOperationOrAuto"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union170
 {
@@ -1933,7 +1933,7 @@ public struct Union171
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{UUID}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union172
 {
@@ -2119,7 +2119,7 @@ public struct Union189
 }
 
 ///<summary>
-///<see cref="Float32Array"/> or <see cref="List{Number}"/>
+///<see cref="Float32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union190
 {
@@ -2129,7 +2129,7 @@ public struct Union190
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union191
 {
@@ -2149,7 +2149,7 @@ public struct Union192
 }
 
 ///<summary>
-///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union193
 {
@@ -2159,7 +2159,7 @@ public struct Union193
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union194
 {
@@ -2169,7 +2169,7 @@ public struct Union194
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union195
 {
@@ -2179,7 +2179,7 @@ public struct Union195
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union196
 {
@@ -2189,7 +2189,7 @@ public struct Union196
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union197
 {
@@ -2199,7 +2199,7 @@ public struct Union197
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union198
 {
@@ -2209,7 +2209,7 @@ public struct Union198
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union199
 {
@@ -2219,7 +2219,7 @@ public struct Union199
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union200
 {
@@ -2229,7 +2229,7 @@ public struct Union200
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union201
 {
@@ -2239,7 +2239,7 @@ public struct Union201
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union202
 {
@@ -2249,7 +2249,7 @@ public struct Union202
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union203
 {
@@ -2259,7 +2259,7 @@ public struct Union203
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union204
 {
@@ -2269,7 +2269,7 @@ public struct Union204
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union205
 {
@@ -2279,7 +2279,7 @@ public struct Union205
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union206
 {
@@ -2289,7 +2289,7 @@ public struct Union206
 }
 
 ///<summary>
-///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union207
 {
@@ -2299,7 +2299,7 @@ public struct Union207
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union208
 {
@@ -2309,7 +2309,7 @@ public struct Union208
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union209
 {
@@ -2319,7 +2319,7 @@ public struct Union209
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union210
 {
@@ -2329,7 +2329,7 @@ public struct Union210
 }
 
 ///<summary>
-///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union211
 {
@@ -2339,7 +2339,7 @@ public struct Union211
 }
 
 ///<summary>
-///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union212
 {
@@ -2416,7 +2416,7 @@ public struct Union218
 }
 
 ///<summary>
-///<see cref="List{Number}"/> or <see cref="GPUColorDict"/>
+///<see cref="List{T}"/> or <see cref="GPUColorDict"/>
 ///</summary>
 public struct Union219
 {
@@ -2426,7 +2426,7 @@ public struct Union219
 }
 
 ///<summary>
-///<see cref="List{GPUIntegerCoordinate}"/> or <see cref="GPUOrigin2DDict"/>
+///<see cref="List{T}"/> or <see cref="GPUOrigin2DDict"/>
 ///</summary>
 public struct Union220
 {
@@ -2436,7 +2436,7 @@ public struct Union220
 }
 
 ///<summary>
-///<see cref="List{GPUIntegerCoordinate}"/> or <see cref="GPUOrigin3DDict"/>
+///<see cref="List{T}"/> or <see cref="GPUOrigin3DDict"/>
 ///</summary>
 public struct Union221
 {
@@ -2446,7 +2446,7 @@ public struct Union221
 }
 
 ///<summary>
-///<see cref="List{GPUIntegerCoordinate}"/> or <see cref="GPUExtent3DDict"/>
+///<see cref="List{T}"/> or <see cref="GPUExtent3DDict"/>
 ///</summary>
 public struct Union222
 {
@@ -2538,7 +2538,7 @@ public struct Union229
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union230
 {
@@ -2558,7 +2558,7 @@ public struct Union231
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{DOMString}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union232
 {

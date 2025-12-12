@@ -9,6 +9,15 @@ The <strong><c>IDBVersionChangeEvent</c></strong> interface of the <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBVersionChangeEvent>
+<IDBVersionChangeEventIDBVersionChangeEvent>
+<summary>
+The <strong><c>IDBVersionChangeEvent()</c></strong> constructor<br/>creates a new <see cref="IDBVersionChangeEvent"/> object, which is used to represent<br/>when a version of the database has changed, as a result of the<br/><see cref="'IDBOpenDBRequest.Upgradeneeded'"/> event handler.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="IDBVersionChangeEvent"/> object.</returns>
+</IDBVersionChangeEventIDBVersionChangeEvent>
 <IDBVersionChangeEventNewVersion>
 <summary>
 The <strong><c>newVersion</c></strong> read-only property of the<br/><see cref="IDBVersionChangeEvent"/> interface returns the new version number of the<br/>database.
@@ -19,15 +28,6 @@ The <strong><c>newVersion</c></strong> read-only property of the<br/><see cref="
 </remarks>
 <value>A number that is a 64-bit integer or null if the database is being deleted.</value>
 </IDBVersionChangeEventNewVersion>
-<IDBVersionChangeEventIDBVersionChangeEvent>
-<summary>
-The <strong><c>IDBVersionChangeEvent()</c></strong> constructor<br/>creates a new <see cref="IDBVersionChangeEvent"/> object, which is used to represent<br/>when a version of the database has changed, as a result of the<br/><see cref="'IDBOpenDBRequest.Upgradeneeded'"/> event handler.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="IDBVersionChangeEvent"/> object.</returns>
-</IDBVersionChangeEventIDBVersionChangeEvent>
 <IDBVersionChangeEventOldVersion>
 <summary>
 The <strong><c>oldVersion</c></strong> read-only property of the<br/><see cref="IDBVersionChangeEvent"/> interface returns the old version number of the<br/>database.

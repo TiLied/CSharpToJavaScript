@@ -9,60 +9,6 @@ The <strong><c>GPUQueue</c></strong> interface of the {{domxref(&amp;quot;WebGPU
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUQueue>
-<GPUQueueLabel>
-<summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUQueue"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
-</summary>
-<remarks>
-<para>You can get and set it directly on the <c>GPUQueue</c> object.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPUQueueLabel>
-<GPUQueueSubmit>
-<summary>
-The <strong><c>submit()</c></strong> method of the<br/><see cref="GPUQueue"/> interface schedules the execution of command buffers represented by one or more <see cref="GPUCommandBuffer"/> objects by the GPU.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/submit"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUQueueSubmit>
-<GPUQueueOnSubmittedWorkDone>
-<summary>
-The <strong><c>onSubmittedWorkDone()</c></strong> method of the<br/><see cref="GPUQueue"/> interface returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this <c>GPUQueue</c> at the point the method is called has been processed.
-</summary>
-<remarks>
-<para>This includes the completion of any <see cref="GPUBuffer.MapAsync"/> calls made on <c>GPUBuffer</c>s used in commands submitted to the queue, before <c>onSubmittedWorkDone()</c> is called.</para><para>Note: In most cases, you do <strong>not</strong> need to call <c>onSubmittedWorkDone()</c>. You do <strong><strong>not</strong></strong> need to call it for mapping a buffer. <c>mapAsync</c> guarantees work submitted to the queue before calling <c>mapAsync</c> happens before the <c>mapAsync</c> returns (see <see href="https://gpuweb.github.io/gpuweb/#buffer-mapping">WebGPU spec</see>).</para><para>The two use cases for <c>onSubmittedWorkDone</c></para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/onSubmittedWorkDone"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
-</GPUQueueOnSubmittedWorkDone>
-<GPUQueueWriteTexture>
-<summary>
-The <strong><c>writeTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUTexture"/>.
-</summary>
-<remarks>
-<para>This is a convenience function, which provides an alternative to setting texture data via buffer mapping and buffer-to-texture copies. It lets the user agent determine the most efficient way to copy the data over.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/writeTexture"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUQueueWriteTexture>
-<GPUQueueWriteBuffer>
-<summary>
-The <strong><c>writeBuffer()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUBuffer"/>.
-</summary>
-<remarks>
-<para>This is a convenience function, which provides an alternative to setting buffer data via buffer mapping and buffer-to-buffer copies. It lets the user agent determine the most efficient way to copy the data over.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/writeBuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUQueueWriteBuffer>
 <GPUQueueCopyExternalImageToTexture>
 <summary>
 The <strong><c>copyExternalImageToTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface copies a snapshot taken from a source image, video, or canvas into a given <see cref="GPUTexture"/>.
@@ -74,4 +20,58 @@ The <strong><c>copyExternalImageToTexture()</c></strong> method of the<br/><see 
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPUQueueCopyExternalImageToTexture>
+<GPUQueueLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUQueue"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>You can get and set it directly on the <c>GPUQueue</c> object.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPUQueueLabel>
+<GPUQueueOnSubmittedWorkDone>
+<summary>
+The <strong><c>onSubmittedWorkDone()</c></strong> method of the<br/><see cref="GPUQueue"/> interface returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this <c>GPUQueue</c> at the point the method is called has been processed.
+</summary>
+<remarks>
+<para>This includes the completion of any <see cref="GPUBuffer.MapAsync"/> calls made on <c>GPUBuffer</c>s used in commands submitted to the queue, before <c>onSubmittedWorkDone()</c> is called.</para><para>Note: In most cases, you do <strong>not</strong> need to call <c>onSubmittedWorkDone()</c>. You do <strong><strong>not</strong></strong> need to call it for mapping a buffer. <c>mapAsync</c> guarantees work submitted to the queue before calling <c>mapAsync</c> happens before the <c>mapAsync</c> returns (see <see href="https://gpuweb.github.io/gpuweb/#buffer-mapping">WebGPU spec</see>).</para><para>The two use cases for <c>onSubmittedWorkDone</c></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/onSubmittedWorkDone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
+</GPUQueueOnSubmittedWorkDone>
+<GPUQueueSubmit>
+<summary>
+The <strong><c>submit()</c></strong> method of the<br/><see cref="GPUQueue"/> interface schedules the execution of command buffers represented by one or more <see cref="GPUCommandBuffer"/> objects by the GPU.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/submit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUQueueSubmit>
+<GPUQueueWriteBuffer>
+<summary>
+The <strong><c>writeBuffer()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUBuffer"/>.
+</summary>
+<remarks>
+<para>This is a convenience function, which provides an alternative to setting buffer data via buffer mapping and buffer-to-buffer copies. It lets the user agent determine the most efficient way to copy the data over.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/writeBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUQueueWriteBuffer>
+<GPUQueueWriteTexture>
+<summary>
+The <strong><c>writeTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUTexture"/>.
+</summary>
+<remarks>
+<para>This is a convenience function, which provides an alternative to setting texture data via buffer mapping and buffer-to-texture copies. It lets the user agent determine the most efficient way to copy the data over.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/writeTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUQueueWriteTexture>
 </docs>

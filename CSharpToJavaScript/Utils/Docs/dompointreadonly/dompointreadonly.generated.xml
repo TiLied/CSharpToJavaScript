@@ -9,6 +9,45 @@ The <strong><c>DOMPointReadOnly</c></strong> interface specifies the coordinate 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMPointReadOnly>
+<DOMPointReadOnlyDOMPointReadOnly>
+<summary>
+The <strong><c>DOMPointReadOnly()</c></strong><br/>constructor returns a new <see cref="DOMPointReadOnly"/> object representing a point<br/>in 2D or 3D space, optionally with perspective, whose values cannot be altered by<br/>script code.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DOMPointReadOnly"/> object representing the specified location in<br/>space.</returns>
+</DOMPointReadOnlyDOMPointReadOnly>
+<DOMPointReadOnlyFromPoint>
+<summary>
+The static <strong><see cref="DOMPointReadOnly"/></strong><br/>method <c>fromPoint()</c> creates and returns a new<br/><c>DOMPointReadOnly</c> object given a source point.
+</summary>
+<remarks>
+<para>You can also create a new <c>DOMPointReadOnly</c> object using the<br/><see cref="DOMPointReadOnly.DOMPointReadOnly"/> constructor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DOMPointReadOnly"/> object (which is identical to the source point).</returns>
+</DOMPointReadOnlyFromPoint>
+<DOMPointReadOnlyMatrixTransform>
+<summary>
+The <strong><c>matrixTransform()</c></strong> method of the <see cref="DOMPointReadOnly"/> interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creating and returning a new <c>DOMPointReadOnly</c> object. Neither the matrix nor the point are altered.
+</summary>
+<remarks>
+<para>If the matrix passed as a parameter is 2D (the <see cref="DOMMatrixReadonly.Is2D"/> is <c>true</c>) then this is a 2D transformation and the point&amp;apos;s <c>z</c> coordinate will be <c>0</c> and point&amp;apos;s <c>w</c> perspective will be <c>1</c>. Otherwise this is a 3D transformation.</para><para>You can also create a new <c>DOMPoint</c> with a point and matrix with the <see cref="DOMMatrixReadOnly.TransformPoint"/> method.</para>
+<para>-<see cref="DOMPoint"/><br/>-<see cref="DOMMatrix"/><br/>-<see cref="DOMMatrixReadOnly.TransformPoint"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/matrixTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DOMPoint"/> object.</returns>
+</DOMPointReadOnlyMatrixTransform>
+<DOMPointReadOnlyToJSON>
+<summary>
+The <see cref="DOMPointReadOnly"/> method<br/><c>toJSON()</c> returns an object giving the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/JSON">JSON</see> form of the point object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new object whose properties are set to the values in the<br/><c>DOMPoint</c> or <c>DOMPointReadOnly</c> on which the method was called.</returns>
+</DOMPointReadOnlyToJSON>
 <DOMPointReadOnlyW>
 <summary>
 The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>w</c></strong> property holds the point&amp;apos;s perspective value,<br/><c>w</c>, for a read-only point in space.
@@ -31,47 +70,6 @@ The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c
 </remarks>
 <value>A double-precision floating-point value indicating the x coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
 </DOMPointReadOnlyX>
-<DOMPointReadOnlyFromPoint>
-<summary>
-The static <strong><see cref="DOMPointReadOnly"/></strong><br/>method <c>fromPoint()</c> creates and returns a new<br/><c>DOMPointReadOnly</c> object given a source point.
-</summary>
-<remarks>
-<para>You can also create a new <c>DOMPointReadOnly</c> object using the<br/><see cref="DOMPointReadOnly.DOMPointReadOnly"/> constructor.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="DOMPointReadOnly"/> object (which is identical to the source point).</returns>
-</DOMPointReadOnlyFromPoint>
-<DOMPointReadOnlyDOMPointReadOnly>
-<summary>
-The <strong><c>DOMPointReadOnly()</c></strong><br/>constructor returns a new <see cref="DOMPointReadOnly"/> object representing a point<br/>in 2D or 3D space, optionally with perspective, whose values cannot be altered by<br/>script code.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="DOMPointReadOnly"/> object representing the specified location in<br/>space.</returns>
-</DOMPointReadOnlyDOMPointReadOnly>
-<DOMPointReadOnlyMatrixTransform>
-<summary>
-The <strong><c>matrixTransform()</c></strong> method of the <see cref="DOMPointReadOnly"/> interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creating and returning a new <c>DOMPointReadOnly</c> object. Neither the matrix nor the point are altered.
-</summary>
-<remarks>
-<para>If the matrix passed as a parameter is 2D (the <see cref="DOMMatrixReadonly.Is2D"/> is <c>true</c>) then this is a 2D transformation and the point&amp;apos;s <c>z</c> coordinate will be <c>0</c> and point&amp;apos;s <c>w</c> perspective will be <c>1</c>. Otherwise this is a 3D transformation.</para><para>You can also create a new <c>DOMPoint</c> with a point and matrix with the <see cref="DOMMatrixReadOnly.TransformPoint"/> method.</para>
-<para>-<see cref="DOMPoint"/><br/>-<see cref="DOMMatrix"/><br/>-<see cref="DOMMatrixReadOnly.TransformPoint"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/matrixTransform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="DOMPoint"/> object.</returns>
-</DOMPointReadOnlyMatrixTransform>
-<DOMPointReadOnlyZ>
-<summary>
-The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>z</c></strong> property holds the depth coordinate, z, for a<br/>read-only point in space.
-</summary>
-<remarks>
-<para>If your script needs to be able to change the value<br/>of this property, you should instead use the <see cref="DOMPoint"/> object.</para><para>In general, positive values of <c>z</c> mean toward the user (out from the<br/>screen), and negative values of <c>z</c> mean away from the user (into the<br/>screen), assuming no transforms have resulted in a reversal.</para>
-<para>-The other coordinate properties: <see cref="DOMPointReadOnly.X"/>,<br/><see cref="DOMPointReadOnly.Y"/>, and the perspective value,<br/><see cref="DOMPointReadOnly.W"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/z"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A double-precision floating-point value indicating the z coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
-</DOMPointReadOnlyZ>
 <DOMPointReadOnlyY>
 <summary>
 The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>y</c></strong> property holds the vertical coordinate, y, for a<br/>read-only point in space.
@@ -83,13 +81,15 @@ The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c
 </remarks>
 <value>A double-precision floating-point value indicating the y coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
 </DOMPointReadOnlyY>
-<DOMPointReadOnlyToJSON>
+<DOMPointReadOnlyZ>
 <summary>
-The <see cref="DOMPointReadOnly"/> method<br/><c>toJSON()</c> returns an object giving the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/JSON">JSON</see> form of the point object.
+The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>z</c></strong> property holds the depth coordinate, z, for a<br/>read-only point in space.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON"> <em>See also on MDN</em> </seealso></para>
+<para>If your script needs to be able to change the value<br/>of this property, you should instead use the <see cref="DOMPoint"/> object.</para><para>In general, positive values of <c>z</c> mean toward the user (out from the<br/>screen), and negative values of <c>z</c> mean away from the user (into the<br/>screen), assuming no transforms have resulted in a reversal.</para>
+<para>-The other coordinate properties: <see cref="DOMPointReadOnly.X"/>,<br/><see cref="DOMPointReadOnly.Y"/>, and the perspective value,<br/><see cref="DOMPointReadOnly.W"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/z"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new object whose properties are set to the values in the<br/><c>DOMPoint</c> or <c>DOMPointReadOnly</c> on which the method was called.</returns>
-</DOMPointReadOnlyToJSON>
+<value>A double-precision floating-point value indicating the z coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
+</DOMPointReadOnlyZ>
 </docs>

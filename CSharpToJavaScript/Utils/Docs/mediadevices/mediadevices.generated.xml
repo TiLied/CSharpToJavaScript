@@ -9,37 +9,15 @@ The <strong><c>MediaDevices</c></strong> interface of the {{domxref(&amp;quot;Me
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaDevices>
-<MediaDevicesGetSupportedConstraints>
+<MediaDevicesDevicechange>
 <summary>
-The <strong><c>getSupportedConstraints()</c></strong> method of the <see cref="MediaDevices"/> interface returns an object based on the <see cref="MediaTrackSupportedConstraints"/> dictionary, whose member fields each specify one of the constrainable properties the {{Glossary("user agent")}} understands.
+The <strong><c>devicechange</c></strong> event is sent to a <see cref="MediaDevices"/> instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints"> <em>See also on MDN</em> </seealso></para>
+<para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/devicechange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new object based on the <see cref="MediaTrackSupportedConstraints"/> dictionary listing the constraints supported by the user agent.<br/>Because only constraints supported by the user agent are included in the list, each of these Boolean properties has the value <c>true</c>.</returns>
-</MediaDevicesGetSupportedConstraints>
-<MediaDevicesSelectAudioOutput>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>selectAudioOutput()</c></strong> method of the <see cref="MediaDevices"/> interface prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
-</summary>
-<remarks>
-<para>Following selection, if the device is available it can be enumerated using <see cref="MediaDevices.EnumerateDevices"/> and set as the audio output sink using <see cref="HTMLMediaElement.SetSinkId"/>.</para><para>On success, the returned {{jsxref("Promise")}} is resolved with a <see cref="MediaDeviceInfo"/> describing the selected device.</para>
-<para>-<see cref="HTMLMediaElement.SetSinkId"/><br/>-<see cref="HTMLMediaElement.SinkId"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/selectAudioOutput"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{ jsxref("Promise") }} that is fulfilled with a <see cref="MediaDeviceInfo"/> object that describes the audio output device selected by the user.</returns>
-</MediaDevicesSelectAudioOutput>
-<MediaDevicesGetUserMedia>
-<summary>
-The <strong><c>getUserMedia()</c></strong> method of the <see cref="MediaDevices"/> interface prompts the user for permission to use a media input which produces a <see cref="MediaStream"/> with tracks containing the requested types of media.
-</summary>
-<remarks>
-<para>That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.</para><para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="MediaStream"/> object.<br/>If the user denies permission, or matching media is not available, then the promise is rejected with <c>NotAllowedError</c> or <c>NotFoundError</c> <see cref="DOMException"/> respectively.</para><blockquote class="NOTE"><h5>NOTE</h5><para>It&amp;apos;s possible for the returned promise to <strong>neither</strong> resolve nor reject, as the user is not required to make a choice at all and may ignore the request.</para></blockquote>
-<para>-The older <see cref="Navigator.GetUserMedia"/> legacy API<br/>-<see cref="MediaDevices.EnumerateDevices"/>: Listing available media devices<br/>-{{domxref(&amp;quot;WebRTC API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Media Capture and Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Screen Capture API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}}: Capturing screen contents as a <see cref="MediaStream"/><br/>-<see cref="MediaDevices.GetDisplayMedia"/>: Getting a stream containing screen contents<br/>-{{domxref(&amp;quot;Media Capture and Streams API/Taking Still Photos&amp;quot;, &amp;quot;Taking webcam photos&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}: A tutorial on using <c>getUserMedia()</c> to take still photos rather than video<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} whose fulfillment handler receives a <see cref="MediaStream"/><br/>object when the requested media has successfully been obtained.</returns>
-</MediaDevicesGetUserMedia>
+</MediaDevicesDevicechange>
 <MediaDevicesEnumerateDevices>
 <summary>
 The <strong><c>enumerateDevices()</c></strong> method of the <see cref="MediaDevices"/> interface requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.<br/>The returned {{jsxref("Promise")}} is resolved with an array of <see cref="MediaDeviceInfo"/> objects describing the devices.
@@ -62,13 +40,35 @@ The <strong><c>getDisplayMedia()</c></strong> method of the <see cref="MediaDevi
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves to a <see cref="MediaStream"/> containing a<br/>video track whose contents come from a user-selected screen area, as well as an optional<br/>audio track.<blockquote class="NOTE"><h5>NOTE</h5>Browser support for audio tracks varies, both in terms of whether or not they&amp;apos;re supported at all by the media recorder and in terms of the audio sources supported. Check the <see href="https://developer.mozilla.org#browser_compatibility">compatibility table</see> for details for each browser.</blockquote></returns>
 </MediaDevicesGetDisplayMedia>
-<MediaDevicesDevicechange>
+<MediaDevicesGetSupportedConstraints>
 <summary>
-The <strong><c>devicechange</c></strong> event is sent to a <see cref="MediaDevices"/> instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+The <strong><c>getSupportedConstraints()</c></strong> method of the <see cref="MediaDevices"/> interface returns an object based on the <see cref="MediaTrackSupportedConstraints"/> dictionary, whose member fields each specify one of the constrainable properties the {{Glossary("user agent")}} understands.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/devicechange"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</MediaDevicesDevicechange>
+<returns>A new object based on the <see cref="MediaTrackSupportedConstraints"/> dictionary listing the constraints supported by the user agent.<br/>Because only constraints supported by the user agent are included in the list, each of these Boolean properties has the value <c>true</c>.</returns>
+</MediaDevicesGetSupportedConstraints>
+<MediaDevicesGetUserMedia>
+<summary>
+The <strong><c>getUserMedia()</c></strong> method of the <see cref="MediaDevices"/> interface prompts the user for permission to use a media input which produces a <see cref="MediaStream"/> with tracks containing the requested types of media.
+</summary>
+<remarks>
+<para>That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.</para><para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="MediaStream"/> object.<br/>If the user denies permission, or matching media is not available, then the promise is rejected with <c>NotAllowedError</c> or <c>NotFoundError</c> <see cref="DOMException"/> respectively.</para><blockquote class="NOTE"><h5>NOTE</h5><para>It&amp;apos;s possible for the returned promise to <strong>neither</strong> resolve nor reject, as the user is not required to make a choice at all and may ignore the request.</para></blockquote>
+<para>-The older <see cref="Navigator.GetUserMedia"/> legacy API<br/>-<see cref="MediaDevices.EnumerateDevices"/>: Listing available media devices<br/>-{{domxref(&amp;quot;WebRTC API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Media Capture and Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Screen Capture API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}}: Capturing screen contents as a <see cref="MediaStream"/><br/>-<see cref="MediaDevices.GetDisplayMedia"/>: Getting a stream containing screen contents<br/>-{{domxref(&amp;quot;Media Capture and Streams API/Taking Still Photos&amp;quot;, &amp;quot;Taking webcam photos&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}: A tutorial on using <c>getUserMedia()</c> to take still photos rather than video<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} whose fulfillment handler receives a <see cref="MediaStream"/><br/>object when the requested media has successfully been obtained.</returns>
+</MediaDevicesGetUserMedia>
+<MediaDevicesSelectAudioOutput>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>selectAudioOutput()</c></strong> method of the <see cref="MediaDevices"/> interface prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
+</summary>
+<remarks>
+<para>Following selection, if the device is available it can be enumerated using <see cref="MediaDevices.EnumerateDevices"/> and set as the audio output sink using <see cref="HTMLMediaElement.SetSinkId"/>.</para><para>On success, the returned {{jsxref("Promise")}} is resolved with a <see cref="MediaDeviceInfo"/> describing the selected device.</para>
+<para>-<see cref="HTMLMediaElement.SetSinkId"/><br/>-<see cref="HTMLMediaElement.SinkId"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/selectAudioOutput"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{ jsxref("Promise") }} that is fulfilled with a <see cref="MediaDeviceInfo"/> object that describes the audio output device selected by the user.</returns>
+</MediaDevicesSelectAudioOutput>
 </docs>

@@ -8,6 +8,44 @@ The <strong><c>SVGTextContentElement</c></strong> interface is implemented by el
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGTextContentElement>
+<SVGTextContentElementGetCharNumAtPosition>
+<summary>
+The <c>getCharNumAtPosition()</c> method of the <see cref="SVGTextContentElement"/> interface represents the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
+</summary>
+<remarks>
+<para>If no character is found at the specified position, <c>-1</c> is returned.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getCharNumAtPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A long; the index of the character that corresponds to the position.</returns>
+</SVGTextContentElementGetCharNumAtPosition>
+<SVGTextContentElementGetComputedTextLength>
+<summary>
+The <c>getComputedTextLength()</c> method of the <see cref="SVGTextContentElement"/> interface represents the computed length for the text within the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getComputedTextLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A float.</returns>
+</SVGTextContentElementGetComputedTextLength>
+<SVGTextContentElementGetEndPositionOfChar>
+<summary>
+The <c>getEndPositionOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface returns the trailing position of a typographic character after text layout has been performed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getEndPositionOfChar"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMPoint"/> object; the position of the character in user coordinates.</returns>
+</SVGTextContentElementGetEndPositionOfChar>
+<SVGTextContentElementGetExtentOfChar>
+<summary>
+The <c>getExtentOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface the represents computed tight bounding box of the glyph cell that corresponds to a given typographic character.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getExtentOfChar"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object; the tight bounding box of the specified character.</returns>
+</SVGTextContentElementGetExtentOfChar>
 <SVGTextContentElementGetNumberOfChars>
 <summary>
 The <c>getNumberOfChars()</c> method of the <see cref="SVGTextContentElement"/> interface represents the total number of addressable characters available for rendering within the current element, regardless of whether they will be rendered.
@@ -27,25 +65,6 @@ The <c>getRotationOfChar()</c> method of the <see cref="SVGTextContentElement"/>
 </remarks>
 <returns>A float; the rotation angle of the character in degrees.</returns>
 </SVGTextContentElementGetRotationOfChar>
-<SVGTextContentElementGetComputedTextLength>
-<summary>
-The <c>getComputedTextLength()</c> method of the <see cref="SVGTextContentElement"/> interface represents the computed length for the text within the element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getComputedTextLength"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A float.</returns>
-</SVGTextContentElementGetComputedTextLength>
-<SVGTextContentElementGetCharNumAtPosition>
-<summary>
-The <c>getCharNumAtPosition()</c> method of the <see cref="SVGTextContentElement"/> interface represents the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
-</summary>
-<remarks>
-<para>If no character is found at the specified position, <c>-1</c> is returned.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getCharNumAtPosition"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A long; the index of the character that corresponds to the position.</returns>
-</SVGTextContentElementGetCharNumAtPosition>
 <SVGTextContentElementGetStartPositionOfChar>
 <summary>
 The <c>getStartPositionOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface returns the position of a typographic character after text layout has been performed.
@@ -55,26 +74,6 @@ The <c>getStartPositionOfChar()</c> method of the <see cref="SVGTextContentEleme
 </remarks>
 <returns>A <see cref="DOMPoint"/> object; the position of the character in user coordinates.</returns>
 </SVGTextContentElementGetStartPositionOfChar>
-<SVGTextContentElementTextLength>
-<summary>
-The <strong><c>textLength</c></strong> read-only property of the <see cref="SVGTextContentElement"/> interface reflects the {{SVGAttr("textLength")}} attribute of the given element.
-</summary>
-<remarks>
-<para>-textLength<br/>-<see cref="SVGAnimatedLength"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/textLength"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGTextContentElementTextLength>
-<SVGTextContentElementLengthAdjust>
-<summary>
-The <strong><c>lengthAdjust</c></strong> read-only property of the <see cref="SVGTextContentElement"/> interface reflects the {{SVGAttr("lengthAdjust")}} attribute of the given element. It takes one of the <c>LENGTHADJUST_*</c> constants defined on this interface.
-</summary>
-<remarks>
-<para>-lengthAdjust<br/>-<see cref="SVGAnimatedEnumeration"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/lengthAdjust"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
-</SVGTextContentElementLengthAdjust>
 <SVGTextContentElementGetSubStringLength>
 <summary>
 The <c>getSubStringLength()</c> method of the <see cref="SVGTextContentElement"/> interface represents the computed length of the formatted text advance distance for a substring of text within the element.
@@ -85,23 +84,24 @@ The <c>getSubStringLength()</c> method of the <see cref="SVGTextContentElement"/
 </remarks>
 <returns>A float.</returns>
 </SVGTextContentElementGetSubStringLength>
-<SVGTextContentElementGetExtentOfChar>
+<SVGTextContentElementLengthAdjust>
 <summary>
-The <c>getExtentOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface the represents computed tight bounding box of the glyph cell that corresponds to a given typographic character.
+The <strong><c>lengthAdjust</c></strong> read-only property of the <see cref="SVGTextContentElement"/> interface reflects the {{SVGAttr("lengthAdjust")}} attribute of the given element. It takes one of the <c>LENGTHADJUST_*</c> constants defined on this interface.
 </summary>
 <remarks>
-<para>-<see cref="DOMRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getExtentOfChar"> <em>See also on MDN</em> </seealso></para>
+<para>-lengthAdjust<br/>-<see cref="SVGAnimatedEnumeration"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/lengthAdjust"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="DOMRect"/> object; the tight bounding box of the specified character.</returns>
-</SVGTextContentElementGetExtentOfChar>
-<SVGTextContentElementGetEndPositionOfChar>
+<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
+</SVGTextContentElementLengthAdjust>
+<SVGTextContentElementTextLength>
 <summary>
-The <c>getEndPositionOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface returns the trailing position of a typographic character after text layout has been performed.
+The <strong><c>textLength</c></strong> read-only property of the <see cref="SVGTextContentElement"/> interface reflects the {{SVGAttr("textLength")}} attribute of the given element.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getEndPositionOfChar"> <em>See also on MDN</em> </seealso></para>
+<para>-textLength<br/>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/textLength"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="DOMPoint"/> object; the position of the character in user coordinates.</returns>
-</SVGTextContentElementGetEndPositionOfChar>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGTextContentElementTextLength>
 </docs>

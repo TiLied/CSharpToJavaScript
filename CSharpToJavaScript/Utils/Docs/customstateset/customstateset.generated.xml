@@ -9,24 +9,6 @@ The <strong><c>CustomStateSet</c></strong> interface of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CustomStateSet>
-<CustomStateSetEntries>
-<summary>
-The <strong><c>entries</c></strong> method of the <see cref="CustomStateSet"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> object, containing an array of <c>[value,value]</c> for each element in the <c>CustomStateSet</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/entries"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new iterator object that contains an array of <c>[value, value]</c> for each element in the <c>CustomStateSet</c>, in insertion order.</returns>
-</CustomStateSetEntries>
-<CustomStateSetHas>
-<summary>
-The <strong><c>has()</c></strong> method of the <see cref="CustomStateSet"/> interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Boolean"/>, <c>true</c> if <c>value</c> exists in the <c>CustomStateSet</c>.</returns>
-</CustomStateSetHas>
 <CustomStateSetAdd>
 <summary>
 The <strong><c>add</c></strong> method of the <see cref="CustomStateSet"/> interface adds value representing a custom state to the <c>CustomStateSet</c>.
@@ -37,15 +19,6 @@ The <strong><c>add</c></strong> method of the <see cref="CustomStateSet"/> inter
 </remarks>
 <returns>Undefined.</returns>
 </CustomStateSetAdd>
-<CustomStateSetForEach>
-<summary>
-The <strong><c>forEach()</c></strong> method of the <see cref="CustomStateSet"/> interface executes a provided function for each value in the <c>CustomStateSet</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/forEach"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Undefined.</returns>
-</CustomStateSetForEach>
 <CustomStateSetClear>
 <summary>
 The <strong><c>clear()</c></strong> method of the <see cref="CustomStateSet"/> interface removes all elements from the <c>CustomStateSet</c> object.
@@ -55,15 +28,6 @@ The <strong><c>clear()</c></strong> method of the <see cref="CustomStateSet"/> i
 </remarks>
 <returns>Undefined.</returns>
 </CustomStateSetClear>
-<CustomStateSetSize>
-<summary>
-The <strong><c>size</c></strong> property of the <see cref="CustomStateSet"/> interface returns the number of values in the <c>CustomStateSet</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer indicating how many properties the <c>CustomStateSet</c> has.</value>
-</CustomStateSetSize>
 <CustomStateSetDelete>
 <summary>
 The <strong><c>delete()</c></strong> method of the <see cref="CustomStateSet"/> interface deletes a single value from the <c>CustomStateSet</c>.
@@ -73,6 +37,33 @@ The <strong><c>delete()</c></strong> method of the <see cref="CustomStateSet"/> 
 </remarks>
 <returns>Returns <c>true</c> if <c>value</c> was in the <c>CustomStateSet</c>; otherwise <c>false</c>.</returns>
 </CustomStateSetDelete>
+<CustomStateSetEntries>
+<summary>
+The <strong><c>entries</c></strong> method of the <see cref="CustomStateSet"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> object, containing an array of <c>[value,value]</c> for each element in the <c>CustomStateSet</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator object that contains an array of <c>[value, value]</c> for each element in the <c>CustomStateSet</c>, in insertion order.</returns>
+</CustomStateSetEntries>
+<CustomStateSetForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the <see cref="CustomStateSet"/> interface executes a provided function for each value in the <c>CustomStateSet</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</CustomStateSetForEach>
+<CustomStateSetHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="CustomStateSet"/> interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Boolean"/>, <c>true</c> if <c>value</c> exists in the <c>CustomStateSet</c>.</returns>
+</CustomStateSetHas>
 <CustomStateSetKeys>
 <summary>
 The <strong><c>keys()</c></strong> method of the <see cref="CustomStateSet"/> interface is an alias for <see cref="CustomStateSet.Values"/>.
@@ -82,6 +73,15 @@ The <strong><c>keys()</c></strong> method of the <see cref="CustomStateSet"/> in
 </remarks>
 <returns>A new iterator object containing the values for each element in the given <c>CustomStateSet</c>, in insertion order.</returns>
 </CustomStateSetKeys>
+<CustomStateSetSize>
+<summary>
+The <strong><c>size</c></strong> property of the <see cref="CustomStateSet"/> interface returns the number of values in the <c>CustomStateSet</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer indicating how many properties the <c>CustomStateSet</c> has.</value>
+</CustomStateSetSize>
 <CustomStateSetValues>
 <summary>
 The <strong><c>values()</c></strong> method of the <see cref="CustomStateSet"/> interface returns a new iterator object that yields the values for each element in the <c>CustomStateSet</c> object in insertion order.

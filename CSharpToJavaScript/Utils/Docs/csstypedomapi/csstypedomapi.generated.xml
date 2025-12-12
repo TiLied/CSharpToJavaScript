@@ -1,0 +1,22 @@
+<docs>
+<CSS_Typed_OM_API>
+<summary>
+The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to <see cref="'HTMLElement.Style'"/>.
+</summary>
+<remarks>
+<para>Generally, CSS values can be read and written in JavaScript as strings, which can be slow and cumbersome. CSS Typed Object Model API provides interfaces to interact with underlying values, by representing them with specialized JS objects that can be manipulated and understood more easily and more reliably than string parsing and concatenation. This is easier for authors (for example, numeric values are reflected with actual JS numbers, and have unit-aware mathematical operations defined for them). It is also generally faster, as values can be directly manipulated and then cheaply translated back into underlying values without having to both build and parse strings of CSS.</para><para>CSS Typed OM both allows for the performant manipulation of values assigned to CSS properties while enabling maintainable code that is both more understandable and easier to write.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">CSS Houdini</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Typed_OM_API>
+<CSS_Typed_OM_APIGuide>
+<summary>
+The <strong><see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</see></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.
+</summary>
+<remarks>
+<para>Converting <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see> value strings into meaningfully-typed JavaScript representations and back (via <see cref="HTMLElement.Style"/>) can incur a significant performance overhead.</para><para>The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.</para><para>This article provides an introduction to all of its main features.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API/Guide"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Typed_OM_APIGuide>
+</docs>

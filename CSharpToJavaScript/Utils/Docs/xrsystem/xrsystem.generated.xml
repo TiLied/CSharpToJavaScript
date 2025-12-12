@@ -8,6 +8,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRSystem>
+<XRSystemDevicechange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <strong><c>devicechange</c></strong> event is fired on an <see cref="XRSystem"/> object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic <see cref="Event"/> with no added properties.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not to be confused with the <see cref="MediaDevices"/> <see cref="MediaDevices.Devicechange"/> event.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/devicechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSystemDevicechange>
 <XRSystemIsSessionSupported>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSystem"/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
@@ -28,13 +37,4 @@
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRSession"/> object if the<br/>device and user agent support the requested mode and features.</returns>
 </XRSystemRequestSession>
-<XRSystemDevicechange>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <strong><c>devicechange</c></strong> event is fired on an <see cref="XRSystem"/> object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic <see cref="Event"/> with no added properties.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Not to be confused with the <see cref="MediaDevices"/> <see cref="MediaDevices.Devicechange"/> event.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/devicechange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</XRSystemDevicechange>
 </docs>

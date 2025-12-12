@@ -8,6 +8,14 @@ The <strong><c>MIDIConnectionEvent</c></strong> interface of the <see href="http
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIConnectionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MIDIConnectionEvent>
+<MIDIConnectionEventMIDIConnectionEvent>
+<summary>
+The <strong><c>MIDIConnectionEvent()</c></strong> constructor creates a new <see cref="MIDIConnectionEvent"/> object. Typically this constructor is not used as events are created when a new port becomes available, and the object is passed to the <see cref="MIDIAccess.Statechange"/> event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIConnectionEvent/MIDIConnectionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MIDIConnectionEventMIDIConnectionEvent>
 <MIDIConnectionEventPort>
 <summary>
 The <strong><c>port</c></strong> read-only property of the <see cref="MIDIConnectionEvent"/> interface returns the port that has been disconnected or connected.
@@ -17,12 +25,4 @@ The <strong><c>port</c></strong> read-only property of the <see cref="MIDIConnec
 </remarks>
 <value>A <see cref="MIDIPort"/> object.</value>
 </MIDIConnectionEventPort>
-<MIDIConnectionEventMIDIConnectionEvent>
-<summary>
-The <strong><c>MIDIConnectionEvent()</c></strong> constructor creates a new <see cref="MIDIConnectionEvent"/> object. Typically this constructor is not used as events are created when a new port becomes available, and the object is passed to the <see cref="MIDIAccess.Statechange"/> event.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIConnectionEvent/MIDIConnectionEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MIDIConnectionEventMIDIConnectionEvent>
 </docs>

@@ -9,25 +9,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WebSocketStream>
-<WebSocketStreamUrl>
+<WebSocketStreamClose>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns the URL of the WebSocket server that the <c>WebSocketStream</c> instance was created with.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the<br/><see cref="WebSocketStream"/> interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/url"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</WebSocketStreamUrl>
-<WebSocketStreamWebSocketStream>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WebSocketStream()</c></strong> constructor creates a new<br/><see cref="WebSocketStream"/> object instance.
-</summary>
-<remarks>
-<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/WebSocketStream"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</WebSocketStreamWebSocketStream>
+<returns>None (<c>undefined</c>).</returns>
+</WebSocketStreamClose>
 <WebSocketStreamClosed>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>closed</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason.
@@ -48,14 +39,23 @@
 </remarks>
 <value>A promise, which fulfills with an object containing the following properties:The promise rejects if the WebSocket connection fails.</value>
 </WebSocketStreamOpened>
-<WebSocketStreamClose>
+<WebSocketStreamUrl>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the<br/><see cref="WebSocketStream"/> interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns the URL of the WebSocket server that the <c>WebSocketStream</c> instance was created with.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/close"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/url"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<c>undefined</c>).</returns>
-</WebSocketStreamClose>
+<value>A string.</value>
+</WebSocketStreamUrl>
+<WebSocketStreamWebSocketStream>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WebSocketStream()</c></strong> constructor creates a new<br/><see cref="WebSocketStream"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/WebSocketStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSocketStreamWebSocketStream>
 </docs>

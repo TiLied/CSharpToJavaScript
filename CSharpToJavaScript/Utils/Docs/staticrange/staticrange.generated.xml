@@ -9,33 +9,6 @@ The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </StaticRange>
-<StaticRangeEndContainer>
-<summary>
-The <strong><c>endContainer</c></strong> property of the <see cref="StaticRange"/> interface returns the end <see cref="Node"/> for the range.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endContainer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The DOM <see cref="Node"/> which contains the final character of the range.</value>
-</StaticRangeEndContainer>
-<StaticRangeStartContainer>
-<summary>
-The read-only <strong><c>startContainer</c></strong><br/>property of the <see cref="StaticRange"/> interface returns the start<br/><see cref="Node"/> for the range.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startContainer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The DOM <see cref="Node"/> inside which the start position of the range is found.</value>
-</StaticRangeStartContainer>
-<StaticRangeEndOffset>
-<summary>
-The <strong><c>endOffset</c></strong> property of the <see cref="StaticRange"/><br/>interface returns the offset into the end node of the range&amp;apos;s end position.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endOffset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value indicating the number of characters into the <see cref="Node"/><br/>indicated by <see cref="StaticRange.EndContainer"/> at which the final<br/>character of the range is located.</value>
-</StaticRangeEndOffset>
 <StaticRangeCollapsed>
 <summary>
 The <strong><c>collapsed</c></strong> read-only property<br/>of the <see cref="StaticRange"/> interface returns <c>true</c> if the range&amp;apos;s<br/>start position and end position are the same.
@@ -45,6 +18,42 @@ The <strong><c>collapsed</c></strong> read-only property<br/>of the <see cref="S
 </remarks>
 <value>A boolean value which is <c>true</c> if the range<br/>is <strong>collapsed</strong>. A collapsed range is one in which the start and end<br/>positions are the same, resulting in a zero-character-long range.</value>
 </StaticRangeCollapsed>
+<StaticRangeEndContainer>
+<summary>
+The <strong><c>endContainer</c></strong> property of the <see cref="StaticRange"/> interface returns the end <see cref="Node"/> for the range.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endContainer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The DOM <see cref="Node"/> which contains the final character of the range.</value>
+</StaticRangeEndContainer>
+<StaticRangeEndOffset>
+<summary>
+The <strong><c>endOffset</c></strong> property of the <see cref="StaticRange"/><br/>interface returns the offset into the end node of the range&amp;apos;s end position.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of characters into the <see cref="Node"/><br/>indicated by <see cref="StaticRange.EndContainer"/> at which the final<br/>character of the range is located.</value>
+</StaticRangeEndOffset>
+<StaticRangeStartContainer>
+<summary>
+The read-only <strong><c>startContainer</c></strong><br/>property of the <see cref="StaticRange"/> interface returns the start<br/><see cref="Node"/> for the range.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startContainer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The DOM <see cref="Node"/> inside which the start position of the range is found.</value>
+</StaticRangeStartContainer>
+<StaticRangeStartOffset>
+<summary>
+The read-only <strong><c>startOffset</c></strong><br/>property of the <see cref="StaticRange"/> interface returns the offset into the start<br/>node of the range&amp;apos;s start position.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of characters into the <see cref="Node"/><br/>indicated by <see cref="StaticRange.StartContainer"/> at which the<br/>first character of the range is located.</value>
+</StaticRangeStartOffset>
 <StaticRangeStaticRange>
 <summary>
 The <strong><c>StaticRange()</c></strong> constructor<br/>creates a new <see cref="StaticRange"/> object representing a span of content within<br/>the DOM.
@@ -55,13 +64,4 @@ The <strong><c>StaticRange()</c></strong> constructor<br/>creates a new <see cre
 </remarks>
 <returns>A new <c>StaticRange</c> object initialized with the values given in<br/>the <c>rangeSpec</c> object.</returns>
 </StaticRangeStaticRange>
-<StaticRangeStartOffset>
-<summary>
-The read-only <strong><c>startOffset</c></strong><br/>property of the <see cref="StaticRange"/> interface returns the offset into the start<br/>node of the range&amp;apos;s start position.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startOffset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value indicating the number of characters into the <see cref="Node"/><br/>indicated by <see cref="StaticRange.StartContainer"/> at which the<br/>first character of the range is located.</value>
-</StaticRangeStartOffset>
 </docs>

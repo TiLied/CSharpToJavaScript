@@ -8,17 +8,6 @@ The <strong><c>DOMImplementation</c></strong> interface represents an object pro
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMImplementation>
-<DOMImplementationHasFeature>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The<br/><strong><c>DOMImplementation.hasFeature()</c></strong> method returns a<br/>boolean flag indicating if a given feature is supported. It is<br/>deprecated and modern browsers return <c>true</c> in all cases.
-</summary>
-<remarks>
-<para>The different implementations fairly diverged in what kind of features were reported.<br/>The latest version of the spec settled to force this method to always return<br/><c>true</c>, where the functionality was accurate and in use.</para>
-<para>-The <see cref="DOMImplementation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/hasFeature"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value of <c>true</c>.</returns>
-</DOMImplementationHasFeature>
 <DOMImplementationCreateDocument>
 <summary>
 The <strong><c>DOMImplementation.createDocument()</c></strong> method creates and<br/>returns an <see cref="XMLDocument"/>.
@@ -49,4 +38,15 @@ The<br/><strong><c>DOMImplementation.createHTMLDocument()</c></strong> method cr
 </remarks>
 <returns>A new HTML <see cref="Document"/> object.</returns>
 </DOMImplementationCreateHTMLDocument>
+<DOMImplementationHasFeature>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The<br/><strong><c>DOMImplementation.hasFeature()</c></strong> method returns a<br/>boolean flag indicating if a given feature is supported. It is<br/>deprecated and modern browsers return <c>true</c> in all cases.
+</summary>
+<remarks>
+<para>The different implementations fairly diverged in what kind of features were reported.<br/>The latest version of the spec settled to force this method to always return<br/><c>true</c>, where the functionality was accurate and in use.</para>
+<para>-The <see cref="DOMImplementation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/hasFeature"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value of <c>true</c>.</returns>
+</DOMImplementationHasFeature>
 </docs>

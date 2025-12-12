@@ -9,17 +9,6 @@ The <strong><c>AudioBufferSourceNode</c></strong> interface is an <see cref="Aud
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioBufferSourceNode>
-<AudioBufferSourceNodeLoop>
-<summary>
-The <c>loop</c> property of the <see cref="AudioBufferSourceNode"/><br/>interface is a Boolean indicating if the audio asset must be replayed when the end of<br/>the <see cref="AudioBuffer"/> is reached.
-</summary>
-<remarks>
-<para>The <c>loop</c> property&amp;apos;s default value is <c>false</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioBufferSourceNode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loop"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean which is <c>true</c> if looping is enabled; otherwise, the value is<br/><c>false</c>.When looping is enabled, the sound begins playing at the time specified as the start<br/>point when <see cref="AudioBufferSourceNode.Start"/> is called. When the<br/>time specified by the <see cref="AudioBufferSourceNode.LoopEnd"/> property<br/>is reached, playback continues at the time specified by<br/><see cref="AudioBufferSourceNode.LoopStart"/></value>
-</AudioBufferSourceNodeLoop>
 <AudioBufferSourceNodeAudioBufferSourceNode>
 <summary>
 The <strong><c>AudioBufferSourceNode()</c></strong><br/>constructor creates a new <see cref="AudioBufferSourceNode"/> object instance.
@@ -29,59 +18,6 @@ The <strong><c>AudioBufferSourceNode()</c></strong><br/>constructor creates a ne
 </remarks>
 <returns>A new <see cref="AudioBufferSourceNode"/> object instance.</returns>
 </AudioBufferSourceNodeAudioBufferSourceNode>
-<AudioBufferSourceNodeLoopEnd>
-<summary>
-The <c>loopEnd</c> property of the <see cref="AudioBufferSourceNode"/><br/>interface specifies is a floating point number specifying, in seconds, at what offset<br/>into playing the <see cref="AudioBuffer"/> playback should loop back to the time<br/>indicated by the <see cref="AudioBufferSourceNode.LoopStart"/> property.<br/>This is only used if the <see cref="AudioBufferSourceNode.Loop"/> property is<br/><c>true</c>.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating-point number indicating the offset, in seconds, into the audio buffer at<br/>which each loop will loop return to the beginning of the loop (that is, the current play<br/>time gets reset to <see cref="AudioBufferSourceNode.LoopStart"/>). This property is<br/>only used if the <see cref="AudioBufferSourceNode.Loop"/> property is<br/><c>true</c>.The default value is 0.</value>
-</AudioBufferSourceNodeLoopEnd>
-<AudioBufferSourceNodeStart>
-<summary>
-The <c>start()</c> method of the <see cref="AudioBufferSourceNode"/><br/>Interface is used to schedule playback of the audio data contained in the buffer, or<br/>to begin playback immediately.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</AudioBufferSourceNodeStart>
-<AudioBufferSourceNodeDetune>
-<summary>
-The <strong><c>detune</c></strong> property of the<br/><see cref="AudioBufferSourceNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>representing detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
-</summary>
-<remarks>
-<para>For example, values of +100 and -100 detune the source up or down by one semitone,<br/>while +1200 and -1200 detune it up or down by one octave.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>whose value indicates the detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the<br/>value it represents is not.</blockquote></value>
-</AudioBufferSourceNodeDetune>
-<AudioBufferSourceNodePlaybackRate>
-<summary>
-The <strong><c>playbackRate</c></strong> property of<br/>the <see cref="AudioBufferSourceNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> that<br/>defines the speed at which the audio asset will be played.
-</summary>
-<remarks>
-<para>A value of 1.0 indicates it should play at the same speed as its sampling rate,<br/>values less than 1.0 cause the sound to play more slowly, while values greater than<br/>1.0 result in audio playing faster than normal. The default value is <c>1.0</c>.<br/>When set to another value, the <c>AudioBufferSourceNode</c> resamples the audio<br/>before sending it to the output.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/> whose <see cref="AudioParam.Value"/> is a<br/>floating-point value indicating the playback rate of the audio as a decimal proportion<br/>of the original sampling rate.Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per<br/>second). Let&amp;apos;s see what a few values of <c>playbackRate</c> do:</value>
-</AudioBufferSourceNodePlaybackRate>
-<AudioBufferSourceNodeLoopStart>
-<summary>
-The <strong><c>loopStart</c></strong> property of the <see cref="AudioBufferSourceNode"/> interface is a floating-point value indicating, in seconds, where in the <see cref="AudioBuffer"/> the restart of the play must happen.
-</summary>
-<remarks>
-<para>The <c>loopStart</c> property&amp;apos;s default value is <c>0</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating-point number indicating the offset, in seconds, into the audio buffer at<br/>which each loop should begin during playback. This value is only used when the<br/><see cref="AudioBufferSourceNode.Loop"/> parameter is <c>true</c>.</value>
-</AudioBufferSourceNodeLoopStart>
 <AudioBufferSourceNodeBuffer>
 <summary>
 The <strong><c>buffer</c></strong> property of the <see cref="AudioBufferSourceNode"/> interface provides the ability to play back audio using an <see cref="AudioBuffer"/> as the source of the sound data.
@@ -93,4 +29,68 @@ The <strong><c>buffer</c></strong> property of the <see cref="AudioBufferSourceN
 </remarks>
 <value>An <see cref="AudioBuffer"/> which contains the data representing the sound which the<br/>node will play.</value>
 </AudioBufferSourceNodeBuffer>
+<AudioBufferSourceNodeDetune>
+<summary>
+The <strong><c>detune</c></strong> property of the<br/><see cref="AudioBufferSourceNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>representing detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
+</summary>
+<remarks>
+<para>For example, values of +100 and -100 detune the source up or down by one semitone,<br/>while +1200 and -1200 detune it up or down by one octave.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>whose value indicates the detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the<br/>value it represents is not.</blockquote></value>
+</AudioBufferSourceNodeDetune>
+<AudioBufferSourceNodeLoop>
+<summary>
+The <c>loop</c> property of the <see cref="AudioBufferSourceNode"/><br/>interface is a Boolean indicating if the audio asset must be replayed when the end of<br/>the <see cref="AudioBuffer"/> is reached.
+</summary>
+<remarks>
+<para>The <c>loop</c> property&amp;apos;s default value is <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioBufferSourceNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean which is <c>true</c> if looping is enabled; otherwise, the value is<br/><c>false</c>.When looping is enabled, the sound begins playing at the time specified as the start<br/>point when <see cref="AudioBufferSourceNode.Start"/> is called. When the<br/>time specified by the <see cref="AudioBufferSourceNode.LoopEnd"/> property<br/>is reached, playback continues at the time specified by<br/><see cref="AudioBufferSourceNode.LoopStart"/></value>
+</AudioBufferSourceNodeLoop>
+<AudioBufferSourceNodeLoopEnd>
+<summary>
+The <c>loopEnd</c> property of the <see cref="AudioBufferSourceNode"/><br/>interface specifies is a floating point number specifying, in seconds, at what offset<br/>into playing the <see cref="AudioBuffer"/> playback should loop back to the time<br/>indicated by the <see cref="AudioBufferSourceNode.LoopStart"/> property.<br/>This is only used if the <see cref="AudioBufferSourceNode.Loop"/> property is<br/><c>true</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number indicating the offset, in seconds, into the audio buffer at<br/>which each loop will loop return to the beginning of the loop (that is, the current play<br/>time gets reset to <see cref="AudioBufferSourceNode.LoopStart"/>). This property is<br/>only used if the <see cref="AudioBufferSourceNode.Loop"/> property is<br/><c>true</c>.The default value is 0.</value>
+</AudioBufferSourceNodeLoopEnd>
+<AudioBufferSourceNodeLoopStart>
+<summary>
+The <strong><c>loopStart</c></strong> property of the <see cref="AudioBufferSourceNode"/> interface is a floating-point value indicating, in seconds, where in the <see cref="AudioBuffer"/> the restart of the play must happen.
+</summary>
+<remarks>
+<para>The <c>loopStart</c> property&amp;apos;s default value is <c>0</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number indicating the offset, in seconds, into the audio buffer at<br/>which each loop should begin during playback. This value is only used when the<br/><see cref="AudioBufferSourceNode.Loop"/> parameter is <c>true</c>.</value>
+</AudioBufferSourceNodeLoopStart>
+<AudioBufferSourceNodePlaybackRate>
+<summary>
+The <strong><c>playbackRate</c></strong> property of<br/>the <see cref="AudioBufferSourceNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> that<br/>defines the speed at which the audio asset will be played.
+</summary>
+<remarks>
+<para>A value of 1.0 indicates it should play at the same speed as its sampling rate,<br/>values less than 1.0 cause the sound to play more slowly, while values greater than<br/>1.0 result in audio playing faster than normal. The default value is <c>1.0</c>.<br/>When set to another value, the <c>AudioBufferSourceNode</c> resamples the audio<br/>before sending it to the output.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/> whose <see cref="AudioParam.Value"/> is a<br/>floating-point value indicating the playback rate of the audio as a decimal proportion<br/>of the original sampling rate.Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per<br/>second). Let&amp;apos;s see what a few values of <c>playbackRate</c> do:</value>
+</AudioBufferSourceNodePlaybackRate>
+<AudioBufferSourceNodeStart>
+<summary>
+The <c>start()</c> method of the <see cref="AudioBufferSourceNode"/><br/>Interface is used to schedule playback of the audio data contained in the buffer, or<br/>to begin playback immediately.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioBufferSourceNodeStart>
 </docs>

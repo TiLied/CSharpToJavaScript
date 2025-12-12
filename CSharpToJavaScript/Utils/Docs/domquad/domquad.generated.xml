@@ -7,25 +7,6 @@ A <c>DOMQuad</c> is a collection of four <c>DOMPoint</c>s defining the corners o
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMQuad>
-<DOMQuadGetBounds>
-<summary>
-The <see cref="DOMQuad"/> method<br/><c>getBounds()</c> returns a <see cref="DOMRect"/> object representing the smallest rectangle that fully contains the <c>DOMQuad</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/getBounds"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMRect"/> with the x, y, width, and height properties, defining the bounding box for the <c>DOMQuad</c> based on its corner coordinates.</returns>
-</DOMQuadGetBounds>
-<DOMQuadP4>
-<summary>
-The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p4</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x, y + height).
-</summary>
-<remarks>
-<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P2"/>, and <see cref="DOMQuad.P3"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p4"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
-</DOMQuadP4>
 <DOMQuadDOMQuad>
 <summary>
 The <strong><c>DOMQuad()</c></strong> constructor<br/>creates and returns a new <see cref="DOMQuad"/> object, given the values for some or<br/>all of its properties.
@@ -36,26 +17,15 @@ The <strong><c>DOMQuad()</c></strong> constructor<br/>creates and returns a new 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/DOMQuad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMQuadDOMQuad>
-<DOMQuadP3>
+<DOMQuadGetBounds>
 <summary>
-The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p3</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x + width, y + height).
+The <see cref="DOMQuad"/> method<br/><c>getBounds()</c> returns a <see cref="DOMRect"/> object representing the smallest rectangle that fully contains the <c>DOMQuad</c> object.
 </summary>
 <remarks>
-<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P2"/>, and <see cref="DOMQuad.P4"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p3"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/getBounds"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
-</DOMQuadP3>
-<DOMQuadP2>
-<summary>
-The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p2</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x + width, y).
-</summary>
-<remarks>
-<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P3"/>, and <see cref="DOMQuad.P4"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p2"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
-</DOMQuadP2>
+<returns>A <see cref="DOMRect"/> with the x, y, width, and height properties, defining the bounding box for the <c>DOMQuad</c> based on its corner coordinates.</returns>
+</DOMQuadGetBounds>
 <DOMQuadP1>
 <summary>
 The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p1</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x, y).
@@ -66,6 +36,36 @@ The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p1</c></stro
 </remarks>
 <value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
 </DOMQuadP1>
+<DOMQuadP2>
+<summary>
+The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p2</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x + width, y).
+</summary>
+<remarks>
+<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P3"/>, and <see cref="DOMQuad.P4"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p2"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
+</DOMQuadP2>
+<DOMQuadP3>
+<summary>
+The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p3</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x + width, y + height).
+</summary>
+<remarks>
+<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P2"/>, and <see cref="DOMQuad.P4"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p3"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
+</DOMQuadP3>
+<DOMQuadP4>
+<summary>
+The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p4</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x, y + height).
+</summary>
+<remarks>
+<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P2"/>, and <see cref="DOMQuad.P3"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p4"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
+</DOMQuadP4>
 <DOMQuadToJSON>
 <summary>
 The <see cref="DOMQuad"/> method<br/><c>toJSON()</c> returns a<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/JSON">JSON</see> representation of the <c>DOMQuad</c> object.

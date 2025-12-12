@@ -9,69 +9,6 @@ The <strong><c>HTMLFieldSetElement</c></strong> interface provides special prope
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLFieldSetElement>
-<HTMLFieldSetElementWillValidate>
-<summary>
-The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns <c>false</c>, because <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see> elements are not candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
-</summary>
-<remarks>
-<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/willValidate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The boolean value <c>false</c>.</value>
-</HTMLFieldSetElementWillValidate>
-<HTMLFieldSetElementValidity>
-<summary>
-The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in. Although {{HTMLElement("fieldset")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>, the validity state may still be invalid if a custom validity message has been set.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> CSS pseudo-classes are applied to <c>&amp;lt;fieldset&amp;gt;</c> elements based on the validity of its descendant form controls, not the fieldset itself.</para></blockquote>
-<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/validity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ValidityState"/> object.</value>
-</HTMLFieldSetElementValidity>
-<HTMLFieldSetElementSetCustomValidity>
-<summary>
-The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface sets the custom validity message for the {{htmlelement("fieldset")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
-</summary>
-<remarks>
-<para>The <c>&amp;lt;fieldset&amp;gt;</c> element is not a candidate for constraint validation. The <see cref="HTMLFieldSetElement.ReportValidity"/> method will not cause the custom error message to be displayed to the user, but does set the <see cref="ValidityState.CustomError"/> property of the element's <see cref="ValidityState"/> object to <c>true</c> and the <see cref="ValidityState.Valid"/> property to <c>false</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLFieldSetElementSetCustomValidity>
-<HTMLFieldSetElementForm>
-<summary>
-The <strong><c>form</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("fieldset")}}, or <c>null</c> if this fieldset is not owned by any form.
-</summary>
-<remarks>
-<para>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/form"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
-</HTMLFieldSetElementForm>
-<HTMLFieldSetElementDisabled>
-<summary>
-The <strong><c>disabled</c></strong> property of the <see cref="HTMLFieldSetElement"/> interface is a boolean value that reflects the {{htmlelement("fieldset")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset#disabled"><c>disabled</c></see> attribute, which indicates whether the control is disabled.
-</summary>
-<remarks>
-<para>When disabled, all the form control descendants of the <c>&amp;lt;fieldset&amp;gt;</c> element, excluding elements that are descendants of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend</see> child of the <c>&amp;lt;fieldset&amp;gt;</c>, if any, are disabled. A disabled element is unusable and un-clickable, and match the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> selector, even if their <c>disabled</c> property value is false.</para>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled"><c>disabled</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled">:enabled</see> pseudoclasses<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/disabled"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</HTMLFieldSetElementDisabled>
-<HTMLFieldSetElementType>
-<summary>
-The <strong><c>type</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns the string <c>&amp;quot;fieldset&amp;quot;</c>.
-</summary>
-<remarks>
-<para>-<see cref="HTMLFieldSetElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The string <c>&amp;quot;fieldset&amp;quot;</c>.</value>
-</HTMLFieldSetElementType>
 <HTMLFieldSetElementCheckValidity>
 <summary>
 The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface checks if the element is valid, but always returns true because {{HTMLElement("fieldset")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
@@ -83,36 +20,17 @@ The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLFieldSe
 </remarks>
 <returns>A boolean value, <c>true</c>.</returns>
 </HTMLFieldSetElementCheckValidity>
-<HTMLFieldSetElementReportValidity>
+<HTMLFieldSetElementDisabled>
 <summary>
-The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface performs the same validity checking steps as the <see cref="HTMLFieldSetElement.CheckValidity"/> method. It always returns true because {{HTMLElement("fieldset")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+The <strong><c>disabled</c></strong> property of the <see cref="HTMLFieldSetElement"/> interface is a boolean value that reflects the {{htmlelement("fieldset")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset#disabled"><c>disabled</c></see> attribute, which indicates whether the control is disabled.
 </summary>
 <remarks>
-<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
+<para>When disabled, all the form control descendants of the <c>&amp;lt;fieldset&amp;gt;</c> element, excluding elements that are descendants of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend</see> child of the <c>&amp;lt;fieldset&amp;gt;</c>, if any, are disabled. A disabled element is unusable and un-clickable, and match the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> selector, even if their <c>disabled</c> property value is false.</para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled"><c>disabled</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled">:enabled</see> pseudoclasses<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/disabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A boolean value, <c>true</c>.</returns>
-</HTMLFieldSetElementReportValidity>
-<HTMLFieldSetElementName>
-<summary>
-The <strong><c>name</c></strong> property of the <see cref="HTMLFieldSetElement"/> interface indicates the name of the {{HTMLElement("fieldset")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset#name"><c>name</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see cref="HTMLFieldSetElement.Elements"/><br/>-<see cref="HTMLFieldSetElement.Disabled"/><br/>-<see cref="HTMLLegendElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/name"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the element&amp;apos;s name.</value>
-</HTMLFieldSetElementName>
-<HTMLFieldSetElementValidationMessage>
-<summary>
-The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("fieldset")}} control does not satisfy (if any). This is the empty string as <c>&amp;lt;fieldset&amp;gt;</c> elements are not candidates for constraint validation (<see cref="HTMLFieldSetElement.WillValidate"/> is <c>false</c>).
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.WillValidate"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see cref="HTMLFieldSetElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The empty string, <c>&amp;quot;&amp;quot;</c>;</value>
-</HTMLFieldSetElementValidationMessage>
+<value>A boolean value.</value>
+</HTMLFieldSetElementDisabled>
 <HTMLFieldSetElementElements>
 <summary>
 The <strong><c>elements</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns an <see cref="HTMLCollection"/> object containing all form control elements ({{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}) that are descendants of this field set.
@@ -124,4 +42,86 @@ The <strong><c>elements</c></strong> read-only property of the <see cref="HTMLFi
 </remarks>
 <value>An <see cref="HTMLCollection"/>.</value>
 </HTMLFieldSetElementElements>
+<HTMLFieldSetElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("fieldset")}}, or <c>null</c> if this fieldset is not owned by any form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLFieldSetElementForm>
+<HTMLFieldSetElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLFieldSetElement"/> interface indicates the name of the {{HTMLElement("fieldset")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset#name"><c>name</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLFieldSetElement.Elements"/><br/>-<see cref="HTMLFieldSetElement.Disabled"/><br/>-<see cref="HTMLLegendElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s name.</value>
+</HTMLFieldSetElementName>
+<HTMLFieldSetElementReportValidity>
+<summary>
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface performs the same validity checking steps as the <see cref="HTMLFieldSetElement.CheckValidity"/> method. It always returns true because {{HTMLElement("fieldset")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value, <c>true</c>.</returns>
+</HTMLFieldSetElementReportValidity>
+<HTMLFieldSetElementSetCustomValidity>
+<summary>
+The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface sets the custom validity message for the {{htmlelement("fieldset")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
+</summary>
+<remarks>
+<para>The <c>&amp;lt;fieldset&amp;gt;</c> element is not a candidate for constraint validation. The <see cref="HTMLFieldSetElement.ReportValidity"/> method will not cause the custom error message to be displayed to the user, but does set the <see cref="ValidityState.CustomError"/> property of the element's <see cref="ValidityState"/> object to <c>true</c> and the <see cref="ValidityState.Valid"/> property to <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFieldSetElementSetCustomValidity>
+<HTMLFieldSetElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns the string <c>&amp;quot;fieldset&amp;quot;</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLFieldSetElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;fieldset&amp;quot;</c>.</value>
+</HTMLFieldSetElementType>
+<HTMLFieldSetElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("fieldset")}} control does not satisfy (if any). This is the empty string as <c>&amp;lt;fieldset&amp;gt;</c> elements are not candidates for constraint validation (<see cref="HTMLFieldSetElement.WillValidate"/> is <c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.WillValidate"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see cref="HTMLFieldSetElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The empty string, <c>&amp;quot;&amp;quot;</c>;</value>
+</HTMLFieldSetElementValidationMessage>
+<HTMLFieldSetElementValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in. Although {{HTMLElement("fieldset")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>, the validity state may still be invalid if a custom validity message has been set.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> CSS pseudo-classes are applied to <c>&amp;lt;fieldset&amp;gt;</c> elements based on the validity of its descendant form controls, not the fieldset itself.</para></blockquote>
+<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</HTMLFieldSetElementValidity>
+<HTMLFieldSetElementWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns <c>false</c>, because <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see> elements are not candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The boolean value <c>false</c>.</value>
+</HTMLFieldSetElementWillValidate>
 </docs>

@@ -9,6 +9,17 @@ The <strong><c>PointerEvent</c></strong> interface represents the state of a DOM
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PointerEvent>
+<PointerEventAltitudeAngle>
+<summary>
+The <strong><c>altitudeAngle</c></strong> read-only property of the <see cref="PointerEvent"/> interface represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.<br/>The altitude angle describes whether the transducer is perpendicular to the screen, parallel, or at some angle in between.
+</summary>
+<remarks>
+<para>Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either <see cref="PointerEvent.TiltX"/> and <see cref="PointerEvent.TiltY"/> or <c>altitudeAngle</c> and <see cref="PointerEvent.AzimuthAngle"/>.</para><para><see href="https://developer.mozilla.org./azimuth_altitude_angles.svg">The azimuth angle of a pointer compared to the altitude angle</see></para><para>For an additional illustration of this property, see <see href="https://w3c.github.io/pointerevents/#figure_altitudeAngle">Figure 4 in the specification</see>.</para>
+<para>-<see cref="PointerEvent.AzimuthAngle"/><br/>-<see cref="PointerEvent.TiltX"/><br/>-<see cref="PointerEvent.TiltY"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/altitudeAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An angle in radians between <c>0</c> and <c>π/2</c> where <c>0</c> is parallel to the device surface (X-Y plane), and <c>π/2</c> is perpendicular to the surface.<br/>Defaults to <c>π/2</c> (perpendicular to the surface) which differs from the <see href="https://w3c.github.io/touch-events/#dom-touch-altitudeangle"><c>altitudeAngle</c> in touch events</see> which defaults to <c>0</c> (parallel to the surface).<br/>For hardware and platforms that do not report tilt or angle, the value is <c>π/2</c>.</value>
+</PointerEventAltitudeAngle>
 <PointerEventAzimuthAngle>
 <summary>
 The <strong><c>azimuthAngle</c></strong> read-only property of the <see cref="PointerEvent"/> interface represents the angle between the Y-Z plane and the plane containing both the transducer (pointer or stylus) axis and the Y axis.
@@ -20,6 +31,36 @@ The <strong><c>azimuthAngle</c></strong> read-only property of the <see cref="Po
 </remarks>
 <value>An angle in radians between <c>0</c> and <c>2π</c> where <c>0</c> represents a transducer whose cap is pointing in the direction of increasing X values (point to &amp;quot;3 o&amp;apos;clock&amp;quot; if looking straight down) on the X-Y plane, and the values progressively increase when going clockwise (<c>π/2</c> at &amp;quot;6 o&amp;apos;clock&amp;quot;, <c>π</c> at &amp;quot;9 o&amp;apos;clock&amp;quot;, <c>3π/2</c> at &amp;quot;12 o&amp;apos;clock&amp;quot;).When the transducer is perpendicular to the surface (<see cref="PointerEvent.AltitudeAngle"/> of <c>π/2</c>), the value is 0.<br/>For hardware and platforms that do not report tilt or angle, the value is <c>0</c>.</value>
 </PointerEventAzimuthAngle>
+<PointerEventGetCoalescedEvents>
+<summary>
+The <strong><c>getCoalescedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that were coalesced (merged) into a single <see cref="'Elementpointermove'"/> or <see cref="'Elementpointerrawupdate'"/> event.<br/>Instead of a stream of many <see cref="'Elementpointermove'"/> events, user agents coalesce multiple updates into a single event.<br/>This helps with performance as the user agent has less event handling to perform, but there is a reduction in the granularity and accuracy when tracking, especially with fast and large movements.
+</summary>
+<remarks>
+<para>The <strong><c>getCoalescedEvents()</c></strong> method lets applications access all un-coalesced position changes for precise handling of pointer movement data where necessary.<br/>Un-coalesced position changes are desirable in drawing applications, for instance, where having access to all events helps to build smoother curves that better match the movement of a pointer.</para><para>For an illustration of coalesced events, see <see href="https://w3c.github.io/pointerevents/#figure_coalesced">Figure 7 in the specification</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
+</PointerEventGetCoalescedEvents>
+<PointerEventGetPredictedEvents>
+<summary>
+The <strong><c>getPredictedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that are estimated future pointer positions.<br/>How the predicted positions are calculated depends on the user agent, but they are based on past points, current velocity, and trajectory.
+</summary>
+<remarks>
+<para>Applications can use the predicted events to &amp;quot;draw ahead&amp;quot; to a predicted position which may reduce perceived latency depending on the application&amp;apos;s interpretation of the predicted events and the use case.</para><para>For an illustration of predicted events, see <see href="https://w3c.github.io/pointerevents/#figure_predicted">Figure 8 in the specification</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getPredictedEvents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
+</PointerEventGetPredictedEvents>
+<PointerEventHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the height of the pointer's contact<br/>geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer<br/>device (for example a finger), for a given pointer, each event may produce a different<br/>value.
+</summary>
+<remarks>
+<para>If the input hardware cannot report the contact geometry to the browser, the height<br/>defaults to <c>1</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The height of the event&amp;apos;s contact area (in CSS pixels).</value>
+</PointerEventHeight>
 <PointerEventIsPrimary>
 <summary>
 The <strong><c>isPrimary</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface indicates whether or not the pointer device that<br/>created the event is the <strong>primary</strong> pointer. It returns <c>true</c> if the<br/>pointer that caused the event to be fired is the primary one and returns<br/><c>false</c> otherwise.
@@ -30,16 +71,16 @@ The <strong><c>isPrimary</c></strong> read-only property of the<br/><see cref="P
 </remarks>
 <value>A boolean, <c>true</c> if the pointer for this event is the primary pointer and returns <c>false</c> otherwise.</value>
 </PointerEventIsPrimary>
-<PointerEventWidth>
+<PointerEventPersistentDeviceId>
 <summary>
-The <strong><c>width</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the width of the pointer's contact<br/>geometry along the x-axis, measured in CSS pixels. Depending on the source of the<br/>pointer device (such as a finger), for a given pointer, each event may produce a<br/>different value.
+The <strong><c>persistentDeviceId</c></strong> read-only property of the <see cref="PointerEvent"/> interface is a unique identifier for the pointing device generating the <c>PointerEvent</c>.<br/>This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
 </summary>
 <remarks>
-<para>If the input hardware cannot report the contact geometry to the browser, the width<br/>defaults to <c>1</c>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/width"> <em>See also on MDN</em> </seealso></para>
+<para>A <c>persistentDeviceId</c> persists for the lifetime of a browsing session.<br/>To avoid the risk of fingerprinting/tracking, pointing devices are assigned a new <c>persistentDeviceId</c> at the start of each session.</para><para>Pointer events whose generating device could not be identified are assigned a <c>persistentDeviceId</c> value of <c>0</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/persistentDeviceId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The width of the event&amp;apos;s contact area (in CSS pixels).</value>
-</PointerEventWidth>
+<value>An integer, or <c>0</c> if the device generating the <c>PointerEvent</c> could not be identified.<blockquote class="NOTE"><h5>NOTE</h5>Due to digitizer and pointing device hardware constraints, a <c>persistentDeviceId</c> may not be available for all pointer events, particularly with older hardware.<br/>For example, the pointing device might not report its hardware ID to the digitizer in time for <c>pointerdown</c> to receive a <c>persistentDeviceId</c>: it may initially be <c>0</c> and change to a valid value for later events in the stroke.</blockquote></value>
+</PointerEventPersistentDeviceId>
 <PointerEventPointerEvent>
 <summary>
 The <strong><c>PointerEvent()</c></strong> constructor creates a new synthetic<br/>and untrusted <see cref="PointerEvent"/> object instance.
@@ -49,6 +90,45 @@ The <strong><c>PointerEvent()</c></strong> constructor creates a new synthetic<b
 </remarks>
 <returns>A new <see cref="PointerEvent"/> object.</returns>
 </PointerEventPointerEvent>
+<PointerEventPointerId>
+<summary>
+The <strong><c>pointerId</c></strong> read-only property of the <see cref="PointerEvent"/> interface<br/>is an identifier assigned to the pointer that triggered the event. The identifier<br/>is unique, being different from the identifiers of all other active pointer events.
+</summary>
+<remarks>
+<para>A value <c>-1</c> indicates that the PointerEvent was not generated by a pointing device.<br/>(For example, a <see cref="Elementclick"/> event fired on a button<br/>activated via keyboard.) Otherwise, the value may be randomly generated and should<br/>not be relied on to convey any specific information about the device. The value is<br/>only guaranteed to be stable for the lifetime of the page or session.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>pointerId</c> property is implemented inconsistently across browsers and does not always persist for each ink stroke or interaction with the screen. For a reliable way of identifying multiple pointing devices on a screen simultaneously, see <see cref="PointerEvent.PersistentDeviceId"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</PointerEventPointerId>
+<PointerEventPointerType>
+<summary>
+The <strong><c>pointerType</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface indicates the device type (mouse, pen, or touch)<br/>that caused a given pointer event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The event&amp;apos;s pointer type. The supported values are the following strings:If the device type cannot be detected by the browser, the value can be an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). If the browser supports pointer device types other than those listed<br/>above, the value should be <strong>vendor-prefixed</strong> to avoid conflicting names for<br/>different types of devices.</value>
+</PointerEventPointerType>
+<PointerEventPressure>
+<summary>
+The <strong><c>pressure</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface indicates the normalized pressure of the pointer<br/>input.
+</summary>
+<remarks>
+<para>-<see cref="Touch.Force"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The normalized pressure of the pointer input in the range of <c>0</c> to <c>1</c>, inclusive, where <c>0</c> and <c>1</c> represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is <c>0.5</c> when the pointer is active buttons state and <c>0</c> otherwise.</value>
+</PointerEventPressure>
+<PointerEventTangentialPressure>
+<summary>
+The <strong><c>tangentialPressure</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the normalized tangential pressure of<br/>the pointer input (also known as barrel pressure or <see href="https://en.wikipedia.org/wiki/Cylinder_stress">cylinder stress</see>).
+</summary>
+<remarks>
+<para>-<see cref="Touch.Force"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>float</c> representing the normalized tangential pressure of the pointer<br/>input in the range <c>-1</c> to <c>1</c>, inclusive, where <c>0</c> is<br/>the neutral position of the control.Note that some hardware may only support positive values in the range <c>0</c> to<br/><c>1</c>. For hardware that does not support tangential pressure, the value will<br/>be <c>0</c>.</value>
+</PointerEventTangentialPressure>
 <PointerEventTiltX>
 <summary>
 The <strong><c>tiltX</c></strong> read-only property of the <see cref="PointerEvent"/> interface is the angle (in degrees) between the <strong>Y-Z plane</strong> of the pointer and the screen.<br/>This property is typically only useful for a pen/stylus pointer type.
@@ -71,56 +151,6 @@ The <strong><c>tiltY</c></strong> read-only property of the <see cref="PointerEv
 </remarks>
 <value>The angle in degrees between the X-Z plane of the pointer (stylus) and the screen.<br/>The range of values is <c>-90</c> to <c>90</c>, inclusive, where a positive value is a tilt towards the user.<br/>For devices that do not support this property, the value is <c>0</c>.</value>
 </PointerEventTiltY>
-<PointerEventPressure>
-<summary>
-The <strong><c>pressure</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface indicates the normalized pressure of the pointer<br/>input.
-</summary>
-<remarks>
-<para>-<see cref="Touch.Force"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The normalized pressure of the pointer input in the range of <c>0</c> to <c>1</c>, inclusive, where <c>0</c> and <c>1</c> represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is <c>0.5</c> when the pointer is active buttons state and <c>0</c> otherwise.</value>
-</PointerEventPressure>
-<PointerEventGetPredictedEvents>
-<summary>
-The <strong><c>getPredictedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that are estimated future pointer positions.<br/>How the predicted positions are calculated depends on the user agent, but they are based on past points, current velocity, and trajectory.
-</summary>
-<remarks>
-<para>Applications can use the predicted events to &amp;quot;draw ahead&amp;quot; to a predicted position which may reduce perceived latency depending on the application&amp;apos;s interpretation of the predicted events and the use case.</para><para>For an illustration of predicted events, see <see href="https://w3c.github.io/pointerevents/#figure_predicted">Figure 8 in the specification</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getPredictedEvents"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
-</PointerEventGetPredictedEvents>
-<PointerEventAltitudeAngle>
-<summary>
-The <strong><c>altitudeAngle</c></strong> read-only property of the <see cref="PointerEvent"/> interface represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.<br/>The altitude angle describes whether the transducer is perpendicular to the screen, parallel, or at some angle in between.
-</summary>
-<remarks>
-<para>Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either <see cref="PointerEvent.TiltX"/> and <see cref="PointerEvent.TiltY"/> or <c>altitudeAngle</c> and <see cref="PointerEvent.AzimuthAngle"/>.</para><para><see href="https://developer.mozilla.org./azimuth_altitude_angles.svg">The azimuth angle of a pointer compared to the altitude angle</see></para><para>For an additional illustration of this property, see <see href="https://w3c.github.io/pointerevents/#figure_altitudeAngle">Figure 4 in the specification</see>.</para>
-<para>-<see cref="PointerEvent.AzimuthAngle"/><br/>-<see cref="PointerEvent.TiltX"/><br/>-<see cref="PointerEvent.TiltY"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/altitudeAngle"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An angle in radians between <c>0</c> and <c>π/2</c> where <c>0</c> is parallel to the device surface (X-Y plane), and <c>π/2</c> is perpendicular to the surface.<br/>Defaults to <c>π/2</c> (perpendicular to the surface) which differs from the <see href="https://w3c.github.io/touch-events/#dom-touch-altitudeangle"><c>altitudeAngle</c> in touch events</see> which defaults to <c>0</c> (parallel to the surface).<br/>For hardware and platforms that do not report tilt or angle, the value is <c>π/2</c>.</value>
-</PointerEventAltitudeAngle>
-<PointerEventPointerType>
-<summary>
-The <strong><c>pointerType</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface indicates the device type (mouse, pen, or touch)<br/>that caused a given pointer event.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The event&amp;apos;s pointer type. The supported values are the following strings:If the device type cannot be detected by the browser, the value can be an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). If the browser supports pointer device types other than those listed<br/>above, the value should be <strong>vendor-prefixed</strong> to avoid conflicting names for<br/>different types of devices.</value>
-</PointerEventPointerType>
-<PointerEventHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the height of the pointer's contact<br/>geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer<br/>device (for example a finger), for a given pointer, each event may produce a different<br/>value.
-</summary>
-<remarks>
-<para>If the input hardware cannot report the contact geometry to the browser, the height<br/>defaults to <c>1</c>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The height of the event&amp;apos;s contact area (in CSS pixels).</value>
-</PointerEventHeight>
 <PointerEventTwist>
 <summary>
 The <strong><c>twist</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the clockwise rotation of the pointer<br/>(e.g., pen stylus) around its major axis, in degrees.
@@ -131,44 +161,14 @@ The <strong><c>twist</c></strong> read-only property of the<br/><see cref="Point
 </remarks>
 <value>A <c>long</c> value representing the amount of twist, in degrees, applied to the<br/>transducer (pointer). The value is in the range <c>0</c> to <c>359</c>,<br/>inclusive. For devices that do not report <c>twist</c>, the value is<br/><c>0</c>.</value>
 </PointerEventTwist>
-<PointerEventPersistentDeviceId>
+<PointerEventWidth>
 <summary>
-The <strong><c>persistentDeviceId</c></strong> read-only property of the <see cref="PointerEvent"/> interface is a unique identifier for the pointing device generating the <c>PointerEvent</c>.<br/>This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
+The <strong><c>width</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the width of the pointer's contact<br/>geometry along the x-axis, measured in CSS pixels. Depending on the source of the<br/>pointer device (such as a finger), for a given pointer, each event may produce a<br/>different value.
 </summary>
 <remarks>
-<para>A <c>persistentDeviceId</c> persists for the lifetime of a browsing session.<br/>To avoid the risk of fingerprinting/tracking, pointing devices are assigned a new <c>persistentDeviceId</c> at the start of each session.</para><para>Pointer events whose generating device could not be identified are assigned a <c>persistentDeviceId</c> value of <c>0</c>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/persistentDeviceId"> <em>See also on MDN</em> </seealso></para>
+<para>If the input hardware cannot report the contact geometry to the browser, the width<br/>defaults to <c>1</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/width"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer, or <c>0</c> if the device generating the <c>PointerEvent</c> could not be identified.<blockquote class="NOTE"><h5>NOTE</h5>Due to digitizer and pointing device hardware constraints, a <c>persistentDeviceId</c> may not be available for all pointer events, particularly with older hardware.<br/>For example, the pointing device might not report its hardware ID to the digitizer in time for <c>pointerdown</c> to receive a <c>persistentDeviceId</c>: it may initially be <c>0</c> and change to a valid value for later events in the stroke.</blockquote></value>
-</PointerEventPersistentDeviceId>
-<PointerEventGetCoalescedEvents>
-<summary>
-The <strong><c>getCoalescedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that were coalesced (merged) into a single <see cref="'Elementpointermove'"/> or <see cref="'Elementpointerrawupdate'"/> event.<br/>Instead of a stream of many <see cref="'Elementpointermove'"/> events, user agents coalesce multiple updates into a single event.<br/>This helps with performance as the user agent has less event handling to perform, but there is a reduction in the granularity and accuracy when tracking, especially with fast and large movements.
-</summary>
-<remarks>
-<para>The <strong><c>getCoalescedEvents()</c></strong> method lets applications access all un-coalesced position changes for precise handling of pointer movement data where necessary.<br/>Un-coalesced position changes are desirable in drawing applications, for instance, where having access to all events helps to build smoother curves that better match the movement of a pointer.</para><para>For an illustration of coalesced events, see <see href="https://w3c.github.io/pointerevents/#figure_coalesced">Figure 7 in the specification</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
-</PointerEventGetCoalescedEvents>
-<PointerEventPointerId>
-<summary>
-The <strong><c>pointerId</c></strong> read-only property of the <see cref="PointerEvent"/> interface<br/>is an identifier assigned to the pointer that triggered the event. The identifier<br/>is unique, being different from the identifiers of all other active pointer events.
-</summary>
-<remarks>
-<para>A value <c>-1</c> indicates that the PointerEvent was not generated by a pointing device.<br/>(For example, a <see cref="Elementclick"/> event fired on a button<br/>activated via keyboard.) Otherwise, the value may be randomly generated and should<br/>not be relied on to convey any specific information about the device. The value is<br/>only guaranteed to be stable for the lifetime of the page or session.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>pointerId</c> property is implemented inconsistently across browsers and does not always persist for each ink stroke or interaction with the screen. For a reliable way of identifying multiple pointing devices on a screen simultaneously, see <see cref="PointerEvent.PersistentDeviceId"/>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</PointerEventPointerId>
-<PointerEventTangentialPressure>
-<summary>
-The <strong><c>tangentialPressure</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the normalized tangential pressure of<br/>the pointer input (also known as barrel pressure or <see href="https://en.wikipedia.org/wiki/Cylinder_stress">cylinder stress</see>).
-</summary>
-<remarks>
-<para>-<see cref="Touch.Force"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>float</c> representing the normalized tangential pressure of the pointer<br/>input in the range <c>-1</c> to <c>1</c>, inclusive, where <c>0</c> is<br/>the neutral position of the control.Note that some hardware may only support positive values in the range <c>0</c> to<br/><c>1</c>. For hardware that does not support tangential pressure, the value will<br/>be <c>0</c>.</value>
-</PointerEventTangentialPressure>
+<value>The width of the event&amp;apos;s contact area (in CSS pixels).</value>
+</PointerEventWidth>
 </docs>

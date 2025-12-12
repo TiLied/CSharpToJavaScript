@@ -8,33 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BluetoothCharacteristicProperties>
-<BluetoothCharacteristicPropertiesWriteWithoutResponse>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writeWithoutResponse</c></strong> read-only<br/>property of the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the writing to the characteristic<br/>without response is permitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesWriteWithoutResponse>
-<BluetoothCharacteristicPropertiesWrite>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>write</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the writing to the characteristic with<br/>response is permitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/write"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesWrite>
-<BluetoothCharacteristicPropertiesBroadcast>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>broadcast</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the broadcast of the characteristic<br/>value is permitted using the Server Characteristic Configuration Descriptor.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/broadcast"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesBroadcast>
 <BluetoothCharacteristicPropertiesAuthenticatedSignedWrites>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>authenticatedSignedWrites</c></strong> read-only<br/>property of the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if signed writing to the characteristic<br/>value is permitted.
@@ -44,42 +17,15 @@
 </remarks>
 <value>A boolean value.</value>
 </BluetoothCharacteristicPropertiesAuthenticatedSignedWrites>
-<BluetoothCharacteristicPropertiesWritableAuxiliaries>
+<BluetoothCharacteristicPropertiesBroadcast>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writableAuxiliaries</c></strong> read-only<br/>property of the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if reliable writes to the characteristic<br/>descriptor is permitted.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>broadcast</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the broadcast of the characteristic<br/>value is permitted using the Server Characteristic Configuration Descriptor.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/broadcast"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesWritableAuxiliaries>
-<BluetoothCharacteristicPropertiesReliableWrite>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reliableWrite</c></strong> read-only property of<br/>the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if reliable writes to the characteristic<br/>is permitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/reliableWrite"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesReliableWrite>
-<BluetoothCharacteristicPropertiesRead>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>read</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the reading of the characteristic<br/>value is permitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/read"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesRead>
-<BluetoothCharacteristicPropertiesNotify>
-<summary>
-The <strong><c>notify</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if notifications of the characteristic<br/>value without acknowledgement is permitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/notify"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</BluetoothCharacteristicPropertiesNotify>
+</BluetoothCharacteristicPropertiesBroadcast>
 <BluetoothCharacteristicPropertiesIndicate>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>indicate</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if indications of the characteristic<br/>value with acknowledgement is permitted.
@@ -89,4 +35,58 @@ The <strong><c>notify</c></strong> read-only property of the<br/><see cref="Blue
 </remarks>
 <value>A boolean value.</value>
 </BluetoothCharacteristicPropertiesIndicate>
+<BluetoothCharacteristicPropertiesNotify>
+<summary>
+The <strong><c>notify</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if notifications of the characteristic<br/>value without acknowledgement is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/notify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesNotify>
+<BluetoothCharacteristicPropertiesRead>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>read</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the reading of the characteristic<br/>value is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/read"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesRead>
+<BluetoothCharacteristicPropertiesReliableWrite>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reliableWrite</c></strong> read-only property of<br/>the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if reliable writes to the characteristic<br/>is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/reliableWrite"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesReliableWrite>
+<BluetoothCharacteristicPropertiesWritableAuxiliaries>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writableAuxiliaries</c></strong> read-only<br/>property of the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if reliable writes to the characteristic<br/>descriptor is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesWritableAuxiliaries>
+<BluetoothCharacteristicPropertiesWrite>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>write</c></strong> read-only property of the<br/><see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the writing to the characteristic with<br/>response is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/write"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesWrite>
+<BluetoothCharacteristicPropertiesWriteWithoutResponse>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writeWithoutResponse</c></strong> read-only<br/>property of the <see cref="BluetoothCharacteristicProperties"/> interface returns a<br/><c>boolean</c> that is <c>true</c> if the writing to the characteristic<br/>without response is permitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</BluetoothCharacteristicPropertiesWriteWithoutResponse>
 </docs>

@@ -1,0 +1,33 @@
+<docs>
+<WEBGL_lose_context>
+<summary>
+The <strong>WEBGL_lose_context</strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes functions to simulate losing and restoring a <see cref="WebGLRenderingContext"/>.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-Events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event"><c>webglcontextlost</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event"><c>webglcontextrestored</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"><c>webglcontextcreationerror</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_lose_context>
+<WEBGL_lose_contextLoseContext>
+<summary>
+The <strong>WEBGL_lose_context.loseContext()</strong> method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows you to simulate losing<br/>the context of a <see cref="WebGLRenderingContext"/> context.
+</summary>
+<remarks>
+<para>It triggers the steps described in the WebGL specification for handling context lost.<br/>The context will remain lost until <see cref="WEBGL_lose_context.RestoreContext"/> is<br/>called.</para>
+<para>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-Events:<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event"><c>webglcontextlost</c></see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event"><c>webglcontextrestored</c></see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"><c>webglcontextcreationerror</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context/loseContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WEBGL_lose_contextLoseContext>
+<WEBGL_lose_contextRestoreContext>
+<summary>
+The <strong>WEBGL_lose_context.restoreContext()</strong> method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows you to simulate<br/>restoring the context of a <see cref="WebGLRenderingContext"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-Events:<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event"><c>webglcontextlost</c></see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event"><c>webglcontextrestored</c></see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"><c>webglcontextcreationerror</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context/restoreContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WEBGL_lose_contextRestoreContext>
+</docs>

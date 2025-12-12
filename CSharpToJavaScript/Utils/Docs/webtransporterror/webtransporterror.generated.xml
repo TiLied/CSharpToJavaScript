@@ -19,15 +19,6 @@ The <strong><c>source</c></strong> read-only property of the <see cref="WebTrans
 </remarks>
 <value>An enumerated value; can be either <c>stream</c> or <c>session</c>.</value>
 </WebTransportErrorSource>
-<WebTransportErrorWebTransportError>
-<summary>
-The <strong><c>WebTransportError()</c></strong> constructor creates a new <see cref="WebTransportError"/> object instance.
-</summary>
-<remarks>
-<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportError/WebTransportError"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</WebTransportErrorWebTransportError>
 <WebTransportErrorStreamErrorCode>
 <summary>
 The <strong><c>streamErrorCode</c></strong> read-only property of the <see cref="WebTransportError"/> interface returns a number in the range 0-255 indicating the application protocol error code for this error, or <c>null</c> if one is not available.
@@ -38,4 +29,13 @@ The <strong><c>streamErrorCode</c></strong> read-only property of the <see cref=
 </remarks>
 <value>A number, or <c>null</c>.</value>
 </WebTransportErrorStreamErrorCode>
+<WebTransportErrorWebTransportError>
+<summary>
+The <strong><c>WebTransportError()</c></strong> constructor creates a new <see cref="WebTransportError"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportError/WebTransportError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebTransportErrorWebTransportError>
 </docs>

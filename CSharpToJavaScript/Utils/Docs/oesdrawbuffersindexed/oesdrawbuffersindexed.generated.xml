@@ -1,0 +1,85 @@
+<docs>
+<OES_draw_buffers_indexed>
+<summary>
+The <strong><c>OES_draw_buffers_indexed</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and enables the use of different blend options when writing to multiple color buffers simultaneously.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OES_draw_buffers_indexed>
+<OES_draw_buffers_indexedBlendEquationiOES>
+<summary>
+The <c>blendEquationiOES()</c> method of the <c>OES_draw_buffers_indexed</c> WebGL extension sets both the RGB blend and alpha blend equations for a particular draw buffer.
+</summary>
+<remarks>
+<para>See <see cref="OES_draw_buffers_indexed.BlendEquationSeparateiOES"/> for setting RGB and alpha separately and <see cref="WebGLRenderingContext.BlendEquation"/> for the WebGL 1 version of this method.</para>
+<para>-<see cref="OES_draw_buffers_indexed.BlendEquationSeparateiOES"/><br/>-<see cref="WebGLRenderingContext.BlendEquation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/blendEquationiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedBlendEquationiOES>
+<OES_draw_buffers_indexedBlendEquationSeparateiOES>
+<summary>
+The <c>blendEquationSeparateiOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension sets the RGB and alpha blend equations separately for a particular draw buffer.
+</summary>
+<remarks>
+<para>See <see cref="OES_draw_buffers_indexed.BlendEquationiOES"/> for setting RGB and alpha together and <see cref="WebGLRenderingContext.BlendEquationSeparate"/> for the WebGL 1 version of this method.</para>
+<para>-<see cref="OES_draw_buffers_indexed.BlendEquationiOES"/><br/>-<see cref="WebGLRenderingContext.BlendEquationSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/blendEquationSeparateiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedBlendEquationSeparateiOES>
+<OES_draw_buffers_indexedBlendFunciOES>
+<summary>
+The <c>blendFunciOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension defines which function is used when blending pixels for a particular draw buffer.
+</summary>
+<remarks>
+<para>See <see cref="OES_draw_buffers_indexed.BlendFuncSeparateiOES"/> for setting RGB and alpha components separately and <see cref="WebGLRenderingContext.BlendFunc"/> for the WebGL 1 version of this method.</para>
+<para>-<see cref="OES_draw_buffers_indexed.BlendFuncSeparateiOES"/><br/>-<see cref="WebGLRenderingContext.BlendFunc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/blendFunciOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedBlendFunciOES>
+<OES_draw_buffers_indexedBlendFuncSeparateiOES>
+<summary>
+The <c>blendFuncSeparateiOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension defines which function is used when blending pixels for RGB and alpha components separately for a particular draw buffer.
+</summary>
+<remarks>
+<para>See <see cref="OES_draw_buffers_indexed.BlendFunciOES"/> for setting RGB and alpha together and <see cref="WebGLRenderingContext.BlendFuncSeparate"/> for the WebGL 1 version of this method.</para>
+<para>-<see cref="OES_draw_buffers_indexed.BlendFunciOES"/><br/>-<see cref="WebGLRenderingContext.BlendFuncSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/blendFuncSeparateiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedBlendFuncSeparateiOES>
+<OES_draw_buffers_indexedColorMaskiOES>
+<summary>
+The <c>colorMaskiOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension sets which color components to enable or to disable when drawing or rendering for a particular draw buffer. It's the indexed version of WebGL 1's <see cref="WebGLRenderingContext.ColorMask"/> method.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetIndexedParameter"/><br/>-<see cref="WebGLRenderingContext.ColorMask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/colorMaskiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedColorMaskiOES>
+<OES_draw_buffers_indexedDisableiOES>
+<summary>
+The <c>disableiOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension enables blending for a particular draw buffer.
+</summary>
+<remarks>
+<para>-<see cref="OES_draw_buffers_indexed.EnableiOES"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants#draw_buffers">WebGL draw buffer constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/disableiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedDisableiOES>
+<OES_draw_buffers_indexedEnableiOES>
+<summary>
+The <c>enableiOES()</c> method of the <see cref="OES_draw_buffers_indexed"/> WebGL extension enables blending for a particular draw buffer.
+</summary>
+<remarks>
+<para>-<see cref="OES_draw_buffers_indexed.DisableiOES"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants#draw_buffers">WebGL draw buffer constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_draw_buffers_indexed/enableiOES"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OES_draw_buffers_indexedEnableiOES>
+</docs>

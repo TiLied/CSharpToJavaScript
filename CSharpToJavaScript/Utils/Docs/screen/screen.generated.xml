@@ -8,44 +8,6 @@ The <c>Screen</c> interface represents a screen, usually the one on which the cu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Screen>
-<ScreenMozEnabled>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> This Boolean attribute controls the device&amp;apos;s screen. Setting it to <c>false</c><br/>will turn off the screen.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozEnabled"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean.</value>
-</ScreenMozEnabled>
-<ScreenWidth>
-<summary>
-The <strong><c>Screen.width</c></strong> read-only property returns the width of<br/>the screen in CSS pixels.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ScreenWidth>
-<ScreenOrientationchange>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>orientationchange</c> event fires when the device&amp;apos;s orientation has changed.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientationchange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ScreenOrientationchange>
-<ScreenIsExtended>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isExtended</c></strong> read-only property of the<br/><see cref="Screen"/> interface returns <c>true</c> if the user&amp;apos;s device has multiple screens, and <c>false</c> if not.
-</summary>
-<remarks>
-<para>This property is typically accessed via <c>window.screen.isExtended</c>, and can be used to test whether multiple screens are available before attempting to create a multi-window, multi-screen layout using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/isExtended"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value — <c>true</c> if the device has multiple screens, and <c>false</c> if not.<blockquote class="NOTE"><h5>NOTE</h5>If a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/window-management">Permissions-Policy/window-management</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions-Policy</see> is set that blocks use the Window Management API, <c>isExtended</c> will always return <c>false</c>.</blockquote></value>
-</ScreenIsExtended>
 <ScreenAvailHeight>
 <summary>
 The read-only <see cref="Screen"/> interface's<br/><strong><c>availHeight</c></strong> property returns the height, in CSS pixels, of<br/>the space available for Web content on the screen. Since <see cref="Screen"/> is<br/>exposed on the <see cref="Window"/> interface's <see cref="Window.Screen"/><br/>property, you access <c>availHeight</c> using <c>window.screen.availHeight</c>.
@@ -57,16 +19,6 @@ The read-only <see cref="Screen"/> interface's<br/><strong><c>availHeight</c></s
 </remarks>
 <value>A numeric value indicating the number of CSS pixels tall the screen&amp;apos;s available space<br/>is. This can be no larger than the value of <see cref="Screen.Height"/>,<br/>and will be less if the device or user agent reserves any<br/>vertical space for itself.For instance, on a Mac whose Dock is located at the bottom of screen (which is the default), the value of <c>availHeight</c> is approximately the value of <c>height</c> (the total height of the screen in CSS pixels) minus the heights of the Dock and menu bar, as seen in the diagram below. They only take up <c>availHeight</c> if they are always shown: if the page is fullscreened, or if the dock is configured to automatically hide and show, then they won&amp;apos;t be counted in <c>availHeight</c>.<see href="https://developer.mozilla.orgavailheight-diagram.svg">Diagram showing how Screen.availHeight relates to Screen.height and the screen&amp;apos;s contents</see></value>
 </ScreenAvailHeight>
-<ScreenOrientation>
-<summary>
-The <strong><c>orientation</c></strong> read-only property of the<br/><see cref="Screen"/> interface returns the current orientation of the screen.
-</summary>
-<remarks>
-<para>-<see cref="ScreenOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An instance of <see cref="ScreenOrientation"/> representing the orientation of the<br/>screen.Note that older, prefixed versions returned a string equivalent to<br/><see cref="ScreenOrientation.Type"/>.</value>
-</ScreenOrientation>
 <ScreenAvailWidth>
 <summary>
 The <strong><c>Screen.availWidth</c></strong> property returns the amount of<br/>horizontal space (in CSS pixels) available to the window.
@@ -76,57 +28,6 @@ The <strong><c>Screen.availWidth</c></strong> property returns the amount of<br/
 </remarks>
 <value>A number.</value>
 </ScreenAvailWidth>
-<ScreenUnlockOrientation>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Screen.unlockOrientation()</c></strong> method removes all the<br/>previous screen locks set by the page/app. The <see cref="ScreenOrientation.Unlock"/><br/>method should be used instead.
-</summary>
-<remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Unlock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
-<para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.LockOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/unlockOrientation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the orientation was successfully unlocked or<br/><c>false</c> if the orientation couldn&amp;apos;t be unlocked.</returns>
-</ScreenUnlockOrientation>
-<ScreenLockOrientation>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>lockOrientation()</c></strong> method of the <see cref="Screen"/><br/>interface locks the screen into a specified orientation.
-</summary>
-<remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Lock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
-<para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.UnlockOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the orientation was authorized to be locked or<br/><c>false</c> if the orientation locking was denied. Note that the return value<br/>doesn&amp;apos;t indicate that the screen orientation is indeed locked: there may be a delay.</returns>
-</ScreenLockOrientation>
-<ScreenPixelDepth>
-<summary>
-Returns the bit depth of the screen. Per the CSSOM, some implementations<br/>return <c>24</c> for compatibility reasons. See the <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> section for those that don&amp;apos;t.
-</summary>
-<remarks>
-<para>-<see cref="Screen.ColorDepth"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ScreenPixelDepth>
-<ScreenMozBrightness>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Indicates how bright the screen&amp;apos;s backlight is, on a scale from 0 (very dim) to 1 (full<br/>brightness); this value is a double-precision float.
-</summary>
-<remarks>
-<para>You can read and write this attribute even when the screen is disabled, but the<br/>backlight is off while the screen is disabled. If you write a value of X into this<br/>attribute, the attribute may not have the same value X when you later read it. Most<br/>screens don&amp;apos;t support as many different brightness levels as there are doubles between 0<br/>and 1. The value&amp;apos;s precision might be reduced before storing it.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozBrightness"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ScreenMozBrightness>
-<ScreenHeight>
-<summary>
-The <strong><c>Screen.height</c></strong> read-only property returns the height<br/>of the screen in CSS pixels.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ScreenHeight>
 <ScreenChange>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>change</c></strong> event of the <see cref="Screen"/> interface is fired on a specific screen when one or more of the following properties change on it:
@@ -146,4 +47,103 @@ The <strong><c>Screen.colorDepth</c></strong> read-only property returns the<br/
 </remarks>
 <value>A number.</value>
 </ScreenColorDepth>
+<ScreenHeight>
+<summary>
+The <strong><c>Screen.height</c></strong> read-only property returns the height<br/>of the screen in CSS pixels.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenHeight>
+<ScreenIsExtended>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isExtended</c></strong> read-only property of the<br/><see cref="Screen"/> interface returns <c>true</c> if the user&amp;apos;s device has multiple screens, and <c>false</c> if not.
+</summary>
+<remarks>
+<para>This property is typically accessed via <c>window.screen.isExtended</c>, and can be used to test whether multiple screens are available before attempting to create a multi-window, multi-screen layout using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/isExtended"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value — <c>true</c> if the device has multiple screens, and <c>false</c> if not.<blockquote class="NOTE"><h5>NOTE</h5>If a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/window-management">Permissions-Policy/window-management</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions-Policy</see> is set that blocks use the Window Management API, <c>isExtended</c> will always return <c>false</c>.</blockquote></value>
+</ScreenIsExtended>
+<ScreenLockOrientation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>lockOrientation()</c></strong> method of the <see cref="Screen"/><br/>interface locks the screen into a specified orientation.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Lock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
+<para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.UnlockOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the orientation was authorized to be locked or<br/><c>false</c> if the orientation locking was denied. Note that the return value<br/>doesn&amp;apos;t indicate that the screen orientation is indeed locked: there may be a delay.</returns>
+</ScreenLockOrientation>
+<ScreenMozBrightness>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Indicates how bright the screen&amp;apos;s backlight is, on a scale from 0 (very dim) to 1 (full<br/>brightness); this value is a double-precision float.
+</summary>
+<remarks>
+<para>You can read and write this attribute even when the screen is disabled, but the<br/>backlight is off while the screen is disabled. If you write a value of X into this<br/>attribute, the attribute may not have the same value X when you later read it. Most<br/>screens don&amp;apos;t support as many different brightness levels as there are doubles between 0<br/>and 1. The value&amp;apos;s precision might be reduced before storing it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozBrightness"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenMozBrightness>
+<ScreenMozEnabled>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> This Boolean attribute controls the device&amp;apos;s screen. Setting it to <c>false</c><br/>will turn off the screen.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</ScreenMozEnabled>
+<ScreenOrientation>
+<summary>
+The <strong><c>orientation</c></strong> read-only property of the<br/><see cref="Screen"/> interface returns the current orientation of the screen.
+</summary>
+<remarks>
+<para>-<see cref="ScreenOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance of <see cref="ScreenOrientation"/> representing the orientation of the<br/>screen.Note that older, prefixed versions returned a string equivalent to<br/><see cref="ScreenOrientation.Type"/>.</value>
+</ScreenOrientation>
+<ScreenOrientationchange>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>orientationchange</c> event fires when the device&amp;apos;s orientation has changed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientationchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScreenOrientationchange>
+<ScreenPixelDepth>
+<summary>
+Returns the bit depth of the screen. Per the CSSOM, some implementations<br/>return <c>24</c> for compatibility reasons. See the <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> section for those that don&amp;apos;t.
+</summary>
+<remarks>
+<para>-<see cref="Screen.ColorDepth"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenPixelDepth>
+<ScreenUnlockOrientation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Screen.unlockOrientation()</c></strong> method removes all the<br/>previous screen locks set by the page/app. The <see cref="ScreenOrientation.Unlock"/><br/>method should be used instead.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Unlock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
+<para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.LockOrientation"/><br/>-<see cref="Screen.Orientationchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/unlockOrientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the orientation was successfully unlocked or<br/><c>false</c> if the orientation couldn&amp;apos;t be unlocked.</returns>
+</ScreenUnlockOrientation>
+<ScreenWidth>
+<summary>
+The <strong><c>Screen.width</c></strong> read-only property returns the width of<br/>the screen in CSS pixels.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenWidth>
 </docs>

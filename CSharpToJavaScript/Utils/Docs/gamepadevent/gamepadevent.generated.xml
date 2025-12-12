@@ -9,15 +9,6 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GamepadEvent>
-<GamepadEventGamepadEvent>
-<summary>
-The <strong><c>GamepadEvent()</c></strong> constructor creates a new <see cref="GamepadEvent"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/GamepadEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="GamepadEvent"/> object.</returns>
-</GamepadEventGamepadEvent>
 <GamepadEventGamepad>
 <summary>
 The <strong><c>GamepadEvent.gamepad</c></strong> property of the<br/><strong><see cref="GamepadEvent"/> interface</strong> returns a <see cref="Gamepad"/><br/>object, providing access to the associated gamepad data for fired<br/><see cref="Window.Gamepadconnected"/> and <see cref="Window.Gamepaddisconnected"/> events.
@@ -28,4 +19,13 @@ The <strong><c>GamepadEvent.gamepad</c></strong> property of the<br/><strong><se
 </remarks>
 <value>A <see cref="Gamepad"/> object.</value>
 </GamepadEventGamepad>
+<GamepadEventGamepadEvent>
+<summary>
+The <strong><c>GamepadEvent()</c></strong> constructor creates a new <see cref="GamepadEvent"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/GamepadEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="GamepadEvent"/> object.</returns>
+</GamepadEventGamepadEvent>
 </docs>

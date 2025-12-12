@@ -1,0 +1,21 @@
+<docs>
+<URL_API>
+<summary>
+
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Fetch API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-CSS {{cssxref(&amp;quot;url_value&amp;quot;, &amp;quot;&amp;lt;url&amp;gt;&amp;quot;)}} type<br/>-<see cref="EncodeURI"/><br/>-<see cref="EncodeURIComponent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</URL_API>
+<URL_APIResolving_relative_references>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"><c>URL()</c> constructor</see> or the <see cref="URL.Parse"/> static method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_API">URL API</see> can be used to resolve a relative reference and a base URL to an absolute URL.
+</summary>
+<remarks>
+<para>Both methods take up to two string arguments and return a <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL"><c>URL()</c></see> object representing an absolute URL.<br/>The first argument represents either an absolute URL or a relative reference to a URL, while the second is a base URL that is used to resolve the relative reference if one is specified in the first argument.<br/>The methods resolve the relative reference in the same way, except that the <c>URL()</c> constructor throws if invalid URLs are passed, while <c>parse()</c> returns <c>null</c>.</para><para>The code below shows how the methods are used with the same <c>url</c> and <c>base</c> URL values.</para><para>You can see from the example that resolving the <c>URL</c> from a supplied base URL and relative reference is not simply a concatenation of the supplied parameters.</para><para>In this case a path relative to the current directory is passed (<c>articles</c>).<br/>The current directory of the <c>base</c> URL is the URL string up to the last forward slash.<br/>Here <c>https://developer.mozilla.org/some/path</c> has no trailing forward slash, so the current directory is <c>https://developer.mozilla.org/some/</c>, and hence resolves to a final URL of <c>https://developer.mozilla.org/some/articles</c>.</para><para>Relative references are resolved against the base URL using a path reference that is relative to: the current directory (<c>./</c>), the parent directory of the current directory (<c>../</c>), or the site root (<c>/</c>).<br/>The following sections show how resolution works for each type of relative path.</para>
+<para>-<see href="https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2">RFC 3986 - Relative Resolution</see>, the specification for resolving base and relative URLs<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL_API/Resolving_relative_references"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</URL_APIResolving_relative_references>
+</docs>

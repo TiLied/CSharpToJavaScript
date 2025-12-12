@@ -1,0 +1,12 @@
+<docs>
+<WEBGL_debug_renderer_info>
+<summary>
+The <strong><c>WEBGL_debug_renderer_info</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes two constants with information about the graphics driver for debugging purposes.
+</summary>
+<remarks>
+<para>Depending on the privacy settings of the browser, this extension might only be available to privileged contexts. Generally, the graphics driver information should only be used in edge cases to optimize your WebGL content or to debug GPU problems. The <see cref="WebGLRenderingContext.GetParameter"/> method can help you to detect which features are supported and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><c>failIfMajorPerformanceCaveat</c></see> context attribute lets you control if a context should be returned at all, if the performance would be dramatically slow.</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Depending on the privacy settings of the browser, this extension might only be available to privileged contexts or not work at all. In Firefox, if <c>privacy.resistFingerprinting</c> is set to <c>true</c>, this extensions is disabled.</para><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_debug_renderer_info>
+</docs>

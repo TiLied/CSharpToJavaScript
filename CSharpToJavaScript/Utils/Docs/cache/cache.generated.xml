@@ -9,17 +9,6 @@ The <strong><c>Cache</c></strong> interface provides a persistent storage mechan
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Cache>
-<CacheAddAll>
-<summary>
-The <strong><c>addAll()</c></strong> method of the <see cref="Cache"/> interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><c>addAll()</c> will overwrite any key/value pairs<br/>previously stored in the cache that match the request, but will fail if a<br/>resulting <c>put()</c> operation would overwrite a previous cache entry stored by the same <c>addAll()</c> method.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
-</CacheAddAll>
 <CacheAdd>
 <summary>
 The <strong><c>add()</c></strong> method of the <see cref="Cache"/> interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
@@ -31,16 +20,17 @@ The <strong><c>add()</c></strong> method of the <see cref="Cache"/> interface ta
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
 </CacheAdd>
-<CacheMatch>
+<CacheAddAll>
 <summary>
-The <strong><c>match()</c></strong> method of the <see cref="Cache"/> interface returns a {{jsxref("Promise")}} that resolves to the <see cref="Response"/> associated with the first matching request in the <see cref="Cache"/> object.<br/>If no match is found, the <see cref="Promise"/> resolves to <see cref="Undefined"/>.
+The <strong><c>addAll()</c></strong> method of the <see cref="Cache"/> interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations.
 </summary>
 <remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>addAll()</c> will overwrite any key/value pairs<br/>previously stored in the cache that match the request, but will fail if a<br/>resulting <c>put()</c> operation would overwrite a previous cache entry stored by the same <c>addAll()</c> method.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves to the first <see cref="Response"/> that matches<br/>the request or to <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><c>Cache.match()</c> is basically identical to<br/><see cref="Cache.MatchAll"/>, except that rather than resolving with an array of<br/>all matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
-</CacheMatch>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
+</CacheAddAll>
 <CacheDelete>
 <summary>
 The <strong><c>delete()</c></strong> method of the <see cref="Cache"/> interface finds the <see cref="Cache"/> entry whose key is the request, and if found, deletes the <see cref="Cache"/> entry and returns a {{jsxref("Promise")}} that resolves to <c>true</c>.<br/>If no <see cref="Cache"/> entry is found, it resolves to <c>false</c>.
@@ -62,6 +52,26 @@ The <strong><c>keys()</c></strong> method of the <see cref="Cache"/> interface r
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves to an array of <see cref="Request"/><br/>objects.</returns>
 </CacheKeys>
+<CacheMatch>
+<summary>
+The <strong><c>match()</c></strong> method of the <see cref="Cache"/> interface returns a {{jsxref("Promise")}} that resolves to the <see cref="Response"/> associated with the first matching request in the <see cref="Cache"/> object.<br/>If no match is found, the <see cref="Promise"/> resolves to <see cref="Undefined"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to the first <see cref="Response"/> that matches<br/>the request or to <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><c>Cache.match()</c> is basically identical to<br/><see cref="Cache.MatchAll"/>, except that rather than resolving with an array of<br/>all matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
+</CacheMatch>
+<CacheMatchAll>
+<summary>
+The <strong><c>matchAll()</c></strong> method of the <see cref="Cache"/><br/>interface returns a <see cref="Promise"/> that resolves to an array of all matching<br/>responses in the <see cref="Cache"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an array of all matching responses in the<br/><see cref="Cache"/> object.<blockquote class="NOTE"><h5>NOTE</h5><see cref="Cache.Match"/> is basically identical to<br/><c>Cache.matchAll()</c>, except that rather than resolving with an array of all<br/>matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
+</CacheMatchAll>
 <CachePut>
 <summary>
 The <strong><c>put()</c></strong> method of the<br/><see cref="Cache"/> interface allows key/value pairs to be added to the current<br/><see cref="Cache"/> object.
@@ -73,14 +83,4 @@ The <strong><c>put()</c></strong> method of the<br/><see cref="Cache"/> interfac
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
 </CachePut>
-<CacheMatchAll>
-<summary>
-The <strong><c>matchAll()</c></strong> method of the <see cref="Cache"/><br/>interface returns a <see cref="Promise"/> that resolves to an array of all matching<br/>responses in the <see cref="Cache"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to an array of all matching responses in the<br/><see cref="Cache"/> object.<blockquote class="NOTE"><h5>NOTE</h5><see cref="Cache.Match"/> is basically identical to<br/><c>Cache.matchAll()</c>, except that rather than resolving with an array of all<br/>matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
-</CacheMatchAll>
 </docs>

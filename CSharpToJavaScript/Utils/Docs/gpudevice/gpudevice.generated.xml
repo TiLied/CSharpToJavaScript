@@ -19,47 +19,6 @@ The <strong><c>adapterInfo</c></strong> read-only property of the<br/><see cref=
 </remarks>
 <value>A <see cref="GPUAdapterInfo"/> object instance.</value>
 </GPUDeviceAdapterInfo>
-<GPUDevicePopErrorScope>
-<summary>
-The <strong><c>popErrorScope()</c></strong> method of the<br/><see cref="GPUDevice"/> interface pops an existing GPU error scope from the error scope stack (originally pushed using <see cref="GPUDevice.PushErrorScope"/>) and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or <c>null</c> if no error occurred.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/popErrorScope"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>a <see cref="Promise"/> that resolves to an object describing the first error captured in the scope. This can be of type:If no error occurred, it resolves to <c>null</c>.</returns>
-</GPUDevicePopErrorScope>
-<GPUDeviceCreateCommandEncoder>
-<summary>
-The <strong><c>createCommandEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUCommandEncoder"/>, used to encode commands to be issued to the GPU.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createCommandEncoder"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPUCommandEncoder"/> object instance.</returns>
-</GPUDeviceCreateCommandEncoder>
-<GPUDeviceLabel>
-<summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPUDeviceLabel>
-<GPUDevicePushErrorScope>
-<summary>
-The <strong><c>pushErrorScope()</c></strong> method of the<br/><see cref="GPUDevice"/> interface pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.
-</summary>
-<remarks>
-<para>Once you are done capturing errors, you can end capture by invoking <see cref="GPUDevice.PopErrorScope"/>. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or <c>null</c> if no errors were captured.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/pushErrorScope"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUDevicePushErrorScope>
 <GPUDeviceCreateBindGroup>
 <summary>
 The <strong><c>createBindGroup()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUBindGroup"/> based on a <see cref="GPUBindGroupLayout"/> that defines a set of resources to be bound together in a group and how those resources are used in shader stages.
@@ -70,37 +29,16 @@ The <strong><c>createBindGroup()</c></strong> method of the<br/><see cref="GPUDe
 </remarks>
 <returns>A <see cref="GPUBindGroup"/> object instance.</returns>
 </GPUDeviceCreateBindGroup>
-<GPUDeviceFeatures>
+<GPUDeviceCreateBindGroupLayout>
 <summary>
-The <strong><c>features</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns a <see cref="GPUSupportedFeatures"/> object that describes additional functionality supported by the device. Only features requested during the creation of the device (i.e., when <see cref="GPUAdapter.RequestDevice"/> is called) are included.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Not all features will be available to WebGPU in all browsers that support it, even if the features are supported by the underlying hardware. See <see cref="GPUAdapter.Features"/> for more details.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/features"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="GPUSupportedFeatures"/> object instance. This is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">setlike</see> object.</value>
-</GPUDeviceFeatures>
-<GPUDeviceCreateRenderPipeline>
-<summary>
-The <strong><c>createRenderPipeline()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderPipeline"/> that can control the vertex and fragment shader stages and be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>.
+The <strong><c>createBindGroupLayout()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUBindGroupLayout"/> that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating <see cref="GPUBindGroup"/>s.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createRenderPipeline"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createBindGroupLayout"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="GPURenderPipeline"/> object instance.</returns>
-</GPUDeviceCreateRenderPipeline>
-<GPUDeviceCreateComputePipeline>
-<summary>
-The <strong><c>createComputePipeline()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUComputePipeline"/> that can control the compute shader stage and be used in a <see cref="GPUComputePassEncoder"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createComputePipeline"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPUComputePipeline"/> object instance.</returns>
-</GPUDeviceCreateComputePipeline>
+<returns>A <see cref="GPUBindGroupLayout"/> object instance.</returns>
+</GPUDeviceCreateBindGroupLayout>
 <GPUDeviceCreateBuffer>
 <summary>
 The <strong><c>createBuffer()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUBuffer"/> in which to store raw data to use in GPU operations.
@@ -111,16 +49,26 @@ The <strong><c>createBuffer()</c></strong> method of the<br/><see cref="GPUDevic
 </remarks>
 <returns>A <see cref="GPUBuffer"/> object instance.</returns>
 </GPUDeviceCreateBuffer>
-<GPUDeviceImportExternalTexture>
+<GPUDeviceCreateCommandEncoder>
 <summary>
-The <strong><c>importExternalTexture()</c></strong> method of the<br/><see cref="GPUDevice"/> interface takes an <see cref="HTMLVideoElement"/> or a <see cref="VideoFrame"/> object as an input and returns a <see cref="GPUExternalTexture"/> wrapper object containing a snapshot of the video that can be used as a frame in GPU rendering operations.
+The <strong><c>createCommandEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUCommandEncoder"/>, used to encode commands to be issued to the GPU.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/importExternalTexture"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createCommandEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="GPUExternalTexture"/> object instance.Note that the moment when the <see cref="GPUExternalTexture"/> object expires (is destroyed) depends on what its source is:</returns>
-</GPUDeviceImportExternalTexture>
+<returns>A <see cref="GPUCommandEncoder"/> object instance.</returns>
+</GPUDeviceCreateCommandEncoder>
+<GPUDeviceCreateComputePipeline>
+<summary>
+The <strong><c>createComputePipeline()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUComputePipeline"/> that can control the compute shader stage and be used in a <see cref="GPUComputePassEncoder"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createComputePipeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUComputePipeline"/> object instance.</returns>
+</GPUDeviceCreateComputePipeline>
 <GPUDeviceCreateComputePipelineAsync>
 <summary>
 The <strong><c>createComputePipelineAsync()</c></strong> method of the<br/><see cref="GPUDevice"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPUComputePipeline"/>, which can control the compute shader stage and be used in a <see cref="GPUComputePassEncoder"/>, once the pipeline can be used without any stalling.
@@ -132,39 +80,16 @@ The <strong><c>createComputePipelineAsync()</c></strong> method of the<br/><see 
 </remarks>
 <returns>A {{jsxref("Promise")}} that fulfills with a <see cref="GPUComputePipeline"/> object instance when the created pipeline is ready to be used without additional delay.</returns>
 </GPUDeviceCreateComputePipelineAsync>
-<GPUDeviceLimits>
+<GPUDeviceCreatePipelineLayout>
 <summary>
-The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns a <see cref="GPUSupportedLimits"/> object that describes the limits supported by the device. All limit values will be included, and the limits requested during the creation of the device (i.e., when <see cref="GPUAdapter.RequestDevice"/> is called) will be reflected in those values.
+The <strong><c>createPipelineLayout()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUPipelineLayout"/> that defines the <see cref="GPUBindGroupLayout"/>s used by a pipeline. <see cref="GPUBindGroup"/>s used with the pipeline during command encoding must have compatible <see cref="GPUBindGroupLayout"/>s.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Not all limits will be reported as expected, even if they are supported by the underlying hardware. See <see cref="GPUAdapter.Limits"/> for more details.</para></blockquote>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/limits"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createPipelineLayout"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="GPUSupportedLimits"/> object instance.</value>
-</GPUDeviceLimits>
-<GPUDeviceDestroy>
-<summary>
-The <strong><c>destroy()</c></strong> method of the<br/><see cref="GPUDevice"/> interface destroys the device, preventing further operations on it.
-</summary>
-<remarks>
-<para>Note that:</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/destroy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUDeviceDestroy>
-<GPUDeviceLost>
-<summary>
-The <strong><c>lost</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a <see cref="GPUDeviceLostInfo"/> object when the device is lost.
-</summary>
-<remarks>
-<para><see cref="GPUAdapter.RequestDevice"/> will never return <c>null</c>, and it will reject only if the request is invalid, i.e., it exceeds the capabilities of the <see cref="GPUAdapter"/>. If a valid device request can't be fulfilled for some reason however it may resolve to a device that has already been lost. Additionally, devices can be lost at any time after creation for a variety of reasons (such as browser resource management or driver updates), so it's a good idea to always handle lost devices gracefully.</para><para>Many causes for lost devices are transient, so you should try getting a new device once a previous one has been lost unless the loss was caused by the application intentionally destroying the device (i.e., with <see cref="GPUDevice.Destroy"/>). Note that any WebGPU resources created with a previous device (buffers, textures, etc.) will need to be re-created with the new one.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Also bear in mind that a <c>GPUAdapter</c> may become unavailable, e.g., if the physical GPU is unplugged from the system or disabled to save power. From then on, the adapter can no longer return valid devices, and will always return already-lost devices.</para></blockquote>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/lost"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A promise that resolves with a <see cref="GPUDeviceLostInfo"/> object when the device is lost.</value>
-</GPUDeviceLost>
+<returns>A <see cref="GPUPipelineLayout"/> object instance.</returns>
+</GPUDeviceCreatePipelineLayout>
 <GPUDeviceCreateQuerySet>
 <summary>
 The <strong><c>createQuerySet()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUQuerySet"/> that can be used to record the results of queries on passes, such as occlusion or timestamp queries.
@@ -175,26 +100,26 @@ The <strong><c>createQuerySet()</c></strong> method of the<br/><see cref="GPUDev
 </remarks>
 <returns>A <see cref="GPUQuerySet"/> object instance.</returns>
 </GPUDeviceCreateQuerySet>
-<GPUDeviceCreateTexture>
+<GPUDeviceCreateRenderBundleEncoder>
 <summary>
-The <strong><c>createTexture()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUTexture"/> in which to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
+The <strong><c>createRenderBundleEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderBundleEncoder"/> that can be used to pre-record bundles of commands. These can be reused in <see cref="GPURenderPassEncoder"/>s via the <see cref="GPURenderPassEncoder.ExecuteBundles"/> method, as many times as required.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createTexture"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createRenderBundleEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="GPUTexture"/> object instance.</returns>
-</GPUDeviceCreateTexture>
-<GPUDeviceCreateSampler>
+<returns>A <see cref="GPURenderBundleEncoder"/> object instance.</returns>
+</GPUDeviceCreateRenderBundleEncoder>
+<GPUDeviceCreateRenderPipeline>
 <summary>
-The <strong><c>createSampler()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUSampler"/>, which controls how shaders transform and filter texture resource data.
+The <strong><c>createRenderPipeline()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderPipeline"/> that can control the vertex and fragment shader stages and be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createSampler"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createRenderPipeline"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="GPUSampler"/> object instance.</returns>
-</GPUDeviceCreateSampler>
+<returns>A <see cref="GPURenderPipeline"/> object instance.</returns>
+</GPUDeviceCreateRenderPipeline>
 <GPUDeviceCreateRenderPipelineAsync>
 <summary>
 The <strong><c>createRenderPipelineAsync()</c></strong> method of the<br/><see cref="GPUDevice"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPURenderPipeline"/>, which can control the vertex and fragment shader stages and be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>, once the pipeline can be used without any stalling.
@@ -206,36 +131,16 @@ The <strong><c>createRenderPipelineAsync()</c></strong> method of the<br/><see c
 </remarks>
 <returns>A {{jsxref("Promise")}} that fulfills with a <see cref="GPURenderPipeline"/> object instance when the created pipeline is ready to be used without additional delay.</returns>
 </GPUDeviceCreateRenderPipelineAsync>
-<GPUDeviceQueue>
+<GPUDeviceCreateSampler>
 <summary>
-The <strong><c>queue</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns the primary <see cref="GPUQueue"/> for the device.
+The <strong><c>createSampler()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUSampler"/>, which controls how shaders transform and filter texture resource data.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/queue"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createSampler"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="GPUQueue"/> object instance.</value>
-</GPUDeviceQueue>
-<GPUDeviceCreateRenderBundleEncoder>
-<summary>
-The <strong><c>createRenderBundleEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderBundleEncoder"/> that can be used to pre-record bundles of commands. These can be reused in <see cref="GPURenderPassEncoder"/>s via the <see cref="GPURenderPassEncoder.ExecuteBundles"/> method, as many times as required.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createRenderBundleEncoder"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPURenderBundleEncoder"/> object instance.</returns>
-</GPUDeviceCreateRenderBundleEncoder>
-<GPUDeviceCreateBindGroupLayout>
-<summary>
-The <strong><c>createBindGroupLayout()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUBindGroupLayout"/> that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating <see cref="GPUBindGroup"/>s.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createBindGroupLayout"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPUBindGroupLayout"/> object instance.</returns>
-</GPUDeviceCreateBindGroupLayout>
+<returns>A <see cref="GPUSampler"/> object instance.</returns>
+</GPUDeviceCreateSampler>
 <GPUDeviceCreateShaderModule>
 <summary>
 The <strong><c>createShaderModule()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUShaderModule"/> from a string of <see href="https://gpuweb.github.io/gpuweb/wgsl/">WGSL</see> source code.
@@ -246,6 +151,111 @@ The <strong><c>createShaderModule()</c></strong> method of the<br/><see cref="GP
 </remarks>
 <returns>A <see cref="GPUShaderModule"/> object instance.</returns>
 </GPUDeviceCreateShaderModule>
+<GPUDeviceCreateTexture>
+<summary>
+The <strong><c>createTexture()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUTexture"/> in which to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUTexture"/> object instance.</returns>
+</GPUDeviceCreateTexture>
+<GPUDeviceDestroy>
+<summary>
+The <strong><c>destroy()</c></strong> method of the<br/><see cref="GPUDevice"/> interface destroys the device, preventing further operations on it.
+</summary>
+<remarks>
+<para>Note that:</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUDeviceDestroy>
+<GPUDeviceFeatures>
+<summary>
+The <strong><c>features</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns a <see cref="GPUSupportedFeatures"/> object that describes additional functionality supported by the device. Only features requested during the creation of the device (i.e., when <see cref="GPUAdapter.RequestDevice"/> is called) are included.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not all features will be available to WebGPU in all browsers that support it, even if the features are supported by the underlying hardware. See <see cref="GPUAdapter.Features"/> for more details.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/features"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPUSupportedFeatures"/> object instance. This is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">setlike</see> object.</value>
+</GPUDeviceFeatures>
+<GPUDeviceImportExternalTexture>
+<summary>
+The <strong><c>importExternalTexture()</c></strong> method of the<br/><see cref="GPUDevice"/> interface takes an <see cref="HTMLVideoElement"/> or a <see cref="VideoFrame"/> object as an input and returns a <see cref="GPUExternalTexture"/> wrapper object containing a snapshot of the video that can be used as a frame in GPU rendering operations.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/importExternalTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUExternalTexture"/> object instance.Note that the moment when the <see cref="GPUExternalTexture"/> object expires (is destroyed) depends on what its source is:</returns>
+</GPUDeviceImportExternalTexture>
+<GPUDeviceLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPUDeviceLabel>
+<GPUDeviceLimits>
+<summary>
+The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns a <see cref="GPUSupportedLimits"/> object that describes the limits supported by the device. All limit values will be included, and the limits requested during the creation of the device (i.e., when <see cref="GPUAdapter.RequestDevice"/> is called) will be reflected in those values.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not all limits will be reported as expected, even if they are supported by the underlying hardware. See <see cref="GPUAdapter.Limits"/> for more details.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/limits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPUSupportedLimits"/> object instance.</value>
+</GPUDeviceLimits>
+<GPUDeviceLost>
+<summary>
+The <strong><c>lost</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a <see cref="GPUDeviceLostInfo"/> object when the device is lost.
+</summary>
+<remarks>
+<para><see cref="GPUAdapter.RequestDevice"/> will never return <c>null</c>, and it will reject only if the request is invalid, i.e., it exceeds the capabilities of the <see cref="GPUAdapter"/>. If a valid device request can't be fulfilled for some reason however it may resolve to a device that has already been lost. Additionally, devices can be lost at any time after creation for a variety of reasons (such as browser resource management or driver updates), so it's a good idea to always handle lost devices gracefully.</para><para>Many causes for lost devices are transient, so you should try getting a new device once a previous one has been lost unless the loss was caused by the application intentionally destroying the device (i.e., with <see cref="GPUDevice.Destroy"/>). Note that any WebGPU resources created with a previous device (buffers, textures, etc.) will need to be re-created with the new one.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Also bear in mind that a <c>GPUAdapter</c> may become unavailable, e.g., if the physical GPU is unplugged from the system or disabled to save power. From then on, the adapter can no longer return valid devices, and will always return already-lost devices.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/lost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A promise that resolves with a <see cref="GPUDeviceLostInfo"/> object when the device is lost.</value>
+</GPUDeviceLost>
+<GPUDevicePopErrorScope>
+<summary>
+The <strong><c>popErrorScope()</c></strong> method of the<br/><see cref="GPUDevice"/> interface pops an existing GPU error scope from the error scope stack (originally pushed using <see cref="GPUDevice.PushErrorScope"/>) and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or <c>null</c> if no error occurred.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/popErrorScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a <see cref="Promise"/> that resolves to an object describing the first error captured in the scope. This can be of type:If no error occurred, it resolves to <c>null</c>.</returns>
+</GPUDevicePopErrorScope>
+<GPUDevicePushErrorScope>
+<summary>
+The <strong><c>pushErrorScope()</c></strong> method of the<br/><see cref="GPUDevice"/> interface pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.
+</summary>
+<remarks>
+<para>Once you are done capturing errors, you can end capture by invoking <see cref="GPUDevice.PopErrorScope"/>. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or <c>null</c> if no errors were captured.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/pushErrorScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUDevicePushErrorScope>
+<GPUDeviceQueue>
+<summary>
+The <strong><c>queue</c></strong> read-only property of the<br/><see cref="GPUDevice"/> interface returns the primary <see cref="GPUQueue"/> for the device.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/queue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPUQueue"/> object instance.</value>
+</GPUDeviceQueue>
 <GPUDeviceUncapturederror>
 <summary>
 The <strong><c>uncapturederror</c></strong> event of the <see cref="GPUDevice"/> interface is fired when an error is thrown that has not been observed by a GPU error scope, to provide a way to report unexpected errors.
@@ -256,14 +266,4 @@ The <strong><c>uncapturederror</c></strong> event of the <see cref="GPUDevice"/>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/uncapturederror"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUDeviceUncapturederror>
-<GPUDeviceCreatePipelineLayout>
-<summary>
-The <strong><c>createPipelineLayout()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPUPipelineLayout"/> that defines the <see cref="GPUBindGroupLayout"/>s used by a pipeline. <see cref="GPUBindGroup"/>s used with the pipeline during command encoding must have compatible <see cref="GPUBindGroupLayout"/>s.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createPipelineLayout"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPUPipelineLayout"/> object instance.</returns>
-</GPUDeviceCreatePipelineLayout>
 </docs>

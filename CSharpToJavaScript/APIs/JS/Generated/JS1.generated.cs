@@ -1,4 +1,4 @@
-//25.09.2025 17:09:11
+//12.12.2025 21:28:31
 
 #nullable enable
 //Disable missing XML comments.
@@ -719,6 +719,7 @@ public enum FenceReportingDestination
 	SharedStorageSelectUrl,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDestination/*'/>
 [To(ToAttribute.None)]
 public enum RequestDestination
 {
@@ -766,6 +767,7 @@ public enum RequestDestination
 	Xslt,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestMode/*'/>
 [To(ToAttribute.None)]
 public enum RequestMode
 {
@@ -779,6 +781,7 @@ public enum RequestMode
 	Cors,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCredentials/*'/>
 [To(ToAttribute.None)]
 public enum RequestCredentials
 {
@@ -790,6 +793,7 @@ public enum RequestCredentials
 	Include,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCache/*'/>
 [To(ToAttribute.None)]
 public enum RequestCache
 {
@@ -807,6 +811,7 @@ public enum RequestCache
 	OnlyIfCached,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestRedirect/*'/>
 [To(ToAttribute.None)]
 public enum RequestRedirect
 {
@@ -818,6 +823,7 @@ public enum RequestRedirect
 	Manual,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDuplex/*'/>
 [To(ToAttribute.None)]
 public enum RequestDuplex
 {
@@ -825,6 +831,7 @@ public enum RequestDuplex
 	Half,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestPriority/*'/>
 [To(ToAttribute.None)]
 public enum RequestPriority
 {

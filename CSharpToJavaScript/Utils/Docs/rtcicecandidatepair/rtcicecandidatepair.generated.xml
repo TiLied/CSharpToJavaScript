@@ -7,15 +7,6 @@ The <strong><c>RTCIceCandidatePair</c></strong> dictionary describes a pair of I
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceCandidatePair>
-<RTCIceCandidatePairRemote>
-<summary>
-The <strong><c>remote</c></strong> property of the<br/><strong><see cref="RTCIceCandidatePair"/></strong> dictionary specifies the<br/><see cref="RTCIceCandidate"/> describing the configuration of the remote end of a<br/>viable WebRTC connection.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="RTCIceCandidate"/> which describes the configuration of the remote end<br/>of a viable pair of ICE candidates. The <c>RTCIceCandidatePair</c> is returned by<br/>the <see cref="RTCIceTransport"/> method<br/><see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</value>
-</RTCIceCandidatePairRemote>
 <RTCIceCandidatePairLocal>
 <summary>
 The <strong><c>local</c></strong> property of the <strong><see cref="RTCIceCandidatePair"/></strong> dictionary specifies the <see cref="RTCIceCandidate"/> which describes the configuration of the local end of a viable WebRTC connection.
@@ -25,4 +16,13 @@ The <strong><c>local</c></strong> property of the <strong><see cref="RTCIceCandi
 </remarks>
 <value>An <see cref="RTCIceCandidate"/> which describes the configuration of the local end of a viable pair of ICE candidates.<br/>The <c>RTCIceCandidatePair</c> is returned by the <see cref="RTCIceTransport"/> method <see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</value>
 </RTCIceCandidatePairLocal>
+<RTCIceCandidatePairRemote>
+<summary>
+The <strong><c>remote</c></strong> property of the<br/><strong><see cref="RTCIceCandidatePair"/></strong> dictionary specifies the<br/><see cref="RTCIceCandidate"/> describing the configuration of the remote end of a<br/>viable WebRTC connection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="RTCIceCandidate"/> which describes the configuration of the remote end<br/>of a viable pair of ICE candidates. The <c>RTCIceCandidatePair</c> is returned by<br/>the <see cref="RTCIceTransport"/> method<br/><see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</value>
+</RTCIceCandidatePairRemote>
 </docs>

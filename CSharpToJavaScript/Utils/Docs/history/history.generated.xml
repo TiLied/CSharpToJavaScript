@@ -9,15 +9,28 @@ The <strong><c>History</c></strong> interface of the {{domxref(&amp;quot;History
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </History>
-<HistoryReplaceState>
+<HistoryBack>
 <summary>
-The <strong><c>replaceState()</c></strong> method of the <see cref="History"/> interface modifies the current<br/>history entry, replacing it with the state object and<br/>URL passed in the method parameters. This method is particularly useful<br/>when you want to update the state object or URL of the current history entry in response<br/>to some user action.
+The <strong><c>back()</c></strong> method of the <see cref="History"/> interface causes<br/>the browser to move back one page in the session history.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"> <em>See also on MDN</em> </seealso></para>
+<para>It has the same<br/>effect as calling <see cref="History.Go"/>. If there is no previous<br/>page, this method call does nothing.</para><para>This method is <see href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</see>. Add a listener for the<br/><see cref="Windowpopstate"/> event in order to determine when the navigation has completed.</para>
+<para>-<see cref="History"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</HistoryReplaceState>
+</HistoryBack>
+<HistoryForward>
+<summary>
+The <strong><c>forward()</c></strong> method of the <see cref="History"/> interface causes the browser to move<br/>forward one page in the session history. It has the same effect as calling<br/><see cref="History.Go"/>.
+</summary>
+<remarks>
+<para>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="Windowpopstate"/> event in order to determine when the navigation has completed.</para>
+<para>-<see cref="History"/><br/>-<see cref="Windowpopstate"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HistoryForward>
 <HistoryGo>
 <summary>
 The <strong><c>go()</c></strong> method of the <see cref="History"/> interface loads a specific page from the<br/>session history. You can use it to move forwards and backwards through the history<br/>depending on the value of a parameter.
@@ -50,6 +63,15 @@ The <strong><c>pushState()</c></strong> method of the <see cref="History"/> inte
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HistoryPushState>
+<HistoryReplaceState>
+<summary>
+The <strong><c>replaceState()</c></strong> method of the <see cref="History"/> interface modifies the current<br/>history entry, replacing it with the state object and<br/>URL passed in the method parameters. This method is particularly useful<br/>when you want to update the state object or URL of the current history entry in response<br/>to some user action.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HistoryReplaceState>
 <HistoryScrollRestoration>
 <summary>
 The <strong><c>scrollRestoration</c></strong> property of the <see cref="History"/><br/>interface allows web applications to explicitly set default scroll restoration behavior<br/>on history navigation.
@@ -69,26 +91,4 @@ The <strong><c>state</c></strong> read-only property of the <see cref="History"/
 </remarks>
 <value>The state at the top of the history stack. The value is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> until the<br/><see cref="History.PushState"/> or<br/><see cref="History.ReplaceState"/> method is used.</value>
 </HistoryState>
-<HistoryForward>
-<summary>
-The <strong><c>forward()</c></strong> method of the <see cref="History"/> interface causes the browser to move<br/>forward one page in the session history. It has the same effect as calling<br/><see cref="History.Go"/>.
-</summary>
-<remarks>
-<para>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="Windowpopstate"/> event in order to determine when the navigation has completed.</para>
-<para>-<see cref="History"/><br/>-<see cref="Windowpopstate"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HistoryForward>
-<HistoryBack>
-<summary>
-The <strong><c>back()</c></strong> method of the <see cref="History"/> interface causes<br/>the browser to move back one page in the session history.
-</summary>
-<remarks>
-<para>It has the same<br/>effect as calling <see cref="History.Go"/>. If there is no previous<br/>page, this method call does nothing.</para><para>This method is <see href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</see>. Add a listener for the<br/><see cref="Windowpopstate"/> event in order to determine when the navigation has completed.</para>
-<para>-<see cref="History"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HistoryBack>
 </docs>

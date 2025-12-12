@@ -1,0 +1,12 @@
+<docs>
+<OES_texture_float>
+<summary>
+The <strong><c>OES_texture_float</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes floating-point pixel types for textures.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="OES_texture_float_linear"/><br/>-<see cref="OES_texture_half_float"/><br/>-<see cref="OES_texture_half_float_linear"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_float"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OES_texture_float>
+</docs>

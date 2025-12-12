@@ -1,0 +1,12 @@
+<docs>
+<OES_standard_derivatives>
+<summary>
+The <strong><c>OES_standard_derivatives</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and adds the GLSL derivative functions <c>dFdx</c>, <c>dFdy</c>, and <c>fwidth</c>.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constant is available as <c>gl.FRAGMENT_SHADER_DERIVATIVE_HINT</c> and it requires GLSL <c>#version 300 es</c>.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="EXT_shader_texture_lod"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OES_standard_derivatives"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OES_standard_derivatives>
+</docs>

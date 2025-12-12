@@ -1,0 +1,31 @@
+<docs>
+<HTML_DOM_API>
+<summary>
+The <strong>HTML DOM API</strong> is made up of the interfaces that define the functionality of each of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/element">element</see> in <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see>, as well as any supporting types and interfaces they rely upon.
+</summary>
+<remarks>
+<para>The functional areas included in the HTML DOM API include:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTML_DOM_API>
+<HTML_DOM_APIMicrotask_guide>
+<summary>
+A <strong>microtask</strong> is a short function which is executed after the function or program which created it exits <strong>and</strong> only if the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts">JavaScript execution stack</see> is empty, but before returning control to the event loop being used by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> to drive the script's execution environment.
+</summary>
+<remarks>
+<para>This event loop may be either the browser&amp;apos;s main event loop or the event loop driving a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web worker</see>. This lets the given function run without the risk of interfering with another script&amp;apos;s execution, yet also ensures that the microtask runs before the user agent has the opportunity to react to actions taken by the microtask.</para><para>JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</see> and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">Mutation Observer API</see> both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up is helpful. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the <see cref="Window.QueueMicrotask"/> method is exposed on the <see cref="Window"/> and <see cref="WorkerGlobalScope"/> interfaces.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth">In depth: Microtasks and the JavaScript runtime environment</see><br/>-<see cref="Window.QueueMicrotask"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS">Asynchronous JavaScript</see>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing">Introducing asynchronous JavaScript</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises">Graceful asynchronous programming with Promises</see><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTML_DOM_APIMicrotask_guide>
+<HTML_DOM_APIMicrotask_guideIn_depth>
+<summary>
+When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
+</summary>
+<remarks>
+<para>JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.</para><para>As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.</para><para>Starting with the addition of timeouts and intervals as part of the Web API (<see cref="Window.SetTimeout"/> and <see cref="Window.SetInterval"/>), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where <see cref="Window.QueueMicrotask"/> comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask guide</see><br/>-<see cref="Window.QueueMicrotask"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model">The Event Loop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS">Asynchronous JavaScript</see>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing">Introducing asynchronous JavaScript</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises">Graceful asynchronous programming with Promises</see><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTML_DOM_APIMicrotask_guideIn_depth>
+</docs>

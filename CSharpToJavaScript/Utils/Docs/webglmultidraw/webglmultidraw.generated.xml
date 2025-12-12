@@ -1,0 +1,52 @@
+<docs>
+<WEBGL_multi_draw>
+<summary>
+The <strong><c>WEBGL_multi_draw</c></strong> extension is part of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows to render more<br/>than one primitive with a single function call. This can improve a WebGL application&amp;apos;s performance<br/>as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.
+</summary>
+<remarks>
+<para>When this extension is enabled:</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to both,<br/>{{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and<br/>{{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL 2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para><para>In shader code, the directive <c>#extension GL_ANGLE_multi_draw</c><br/>needs to be called to enable the extension.</para><para>This extension enables the <see cref="ANGLE_instanced_arrays"/> extension implicitly.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/> or<br/>in WebGL 2: <see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="ANGLE_instanced_arrays.DrawElementsInstancedANGLE"/> or<br/>in WebGL 2: <see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_multi_draw>
+<WEBGL_multi_drawMultiDrawArraysInstancedWEBGL>
+<summary>
+The <strong><c>WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()</c></strong><br/>method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders multiple primitives from<br/>array data. It is<br/>identical to multiple calls to the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><c>gl.drawArraysInstanced()</c></see><br/>method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><c>WebGLRenderingContext.drawArrays()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><c>WebGL2RenderingContext.drawArraysInstanced()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</WEBGL_multi_drawMultiDrawArraysInstancedWEBGL>
+<WEBGL_multi_drawMultiDrawArraysWEBGL>
+<summary>
+The <strong><c>WEBGL_multi_draw.multiDrawArraysWEBGL()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders multiple primitives from<br/>array data. It is<br/>identical to multiple calls to the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><c>gl.drawArrays()</c></see><br/>method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><c>WebGLRenderingContext.drawArrays()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><c>WebGL2RenderingContext.drawArraysInstanced()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</WEBGL_multi_drawMultiDrawArraysWEBGL>
+<WEBGL_multi_drawMultiDrawElementsInstancedWEBGL>
+<summary>
+The <strong><c>WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()</c></strong> method of<br/>the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders multiple primitives from<br/>array data. It is<br/>identical to multiple calls to the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><c>gl.drawElementsInstanced()</c></see><br/>method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><c>WebGLRenderingContext.drawElements()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><c>WebGL2RenderingContext.drawElementsInstanced()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</WEBGL_multi_drawMultiDrawElementsInstancedWEBGL>
+<WEBGL_multi_drawMultiDrawElementsWEBGL>
+<summary>
+The <strong><c>WEBGL_multi_draw.multiDrawElementsWEBGL()</c></strong> method of<br/>the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders multiple primitives from<br/>array data. It is<br/>identical to multiple calls to the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><c>gl.drawElements()</c></see><br/>method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><c>WebGLRenderingContext.drawElements()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><c>WebGL2RenderingContext.drawElementsInstanced()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</WEBGL_multi_drawMultiDrawElementsWEBGL>
+</docs>

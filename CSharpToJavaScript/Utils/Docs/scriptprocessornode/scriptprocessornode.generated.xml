@@ -9,6 +9,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ScriptProcessorNode>
+<ScriptProcessorNodeAudioprocess>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>audioprocess</c></strong> event of the <see cref="ScriptProcessorNode"/> interface is fired when an input buffer of a script processor is ready to be processed.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature was replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklets</see> and the <see cref="AudioWorkletNode"/> interface.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/audioprocess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScriptProcessorNodeAudioprocess>
 <ScriptProcessorNodeBufferSize>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>bufferSize</c> property of the <see cref="ScriptProcessorNode"/> interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range <c>256</c> – <c>16384</c>.
@@ -20,14 +30,4 @@
 </remarks>
 <value>An integer.</value>
 </ScriptProcessorNodeBufferSize>
-<ScriptProcessorNodeAudioprocess>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>audioprocess</c></strong> event of the <see cref="ScriptProcessorNode"/> interface is fired when an input buffer of a script processor is ready to be processed.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This feature was replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklets</see> and the <see cref="AudioWorkletNode"/> interface.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/audioprocess"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ScriptProcessorNodeAudioprocess>
 </docs>

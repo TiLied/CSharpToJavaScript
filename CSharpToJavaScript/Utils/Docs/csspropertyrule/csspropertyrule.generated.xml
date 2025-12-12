@@ -17,15 +17,6 @@ The read-only <strong><c>inherits</c></strong> property of the <see cref="CSSPro
 </remarks>
 <value>A boolean.</value>
 </CSSPropertyRuleInherits>
-<CSSPropertyRuleSyntax>
-<summary>
-The read-only <strong><c>syntax</c></strong> property of the <see cref="CSSPropertyRule"/> interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property's value is parsed at computed-value time.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPropertyRule/syntax"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</CSSPropertyRuleSyntax>
 <CSSPropertyRuleInitialValue>
 <summary>
 The read-only <strong><c>initialValue</c></strong> nullable property of the <see cref="CSSPropertyRule"/> interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property's initial value.
@@ -44,4 +35,13 @@ The read-only <strong><c>name</c></strong> property of the <see cref="CSSPropert
 </remarks>
 <value>A string.</value>
 </CSSPropertyRuleName>
+<CSSPropertyRuleSyntax>
+<summary>
+The read-only <strong><c>syntax</c></strong> property of the <see cref="CSSPropertyRule"/> interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property's value is parsed at computed-value time.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPropertyRule/syntax"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CSSPropertyRuleSyntax>
 </docs>

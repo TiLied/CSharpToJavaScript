@@ -1,0 +1,38 @@
+<docs>
+<Device_orientations>
+<summary>
+Device orientation events are events that allow you to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_orientation_events">detect a device&amp;apos;s physical orientation</see>, as well as allowing you to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events">detect the device&amp;apos;s motion</see>.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/device-orientation">Device Orientation &amp; Motion</see> at web.dev<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Device_orientations>
+<Device_orientationsDetecting_device_orientation>
+<summary>
+Increasingly, web-enabled devices are capable of determining their <strong>orientation</strong>; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.
+</summary>
+<remarks>
+<para>There are two JavaScript events that handle orientation information. The first one is the <see cref="DeviceOrientationEvent"/>, which is sent when the accelerometer detects a change to the orientation of the device. By receiving and processing the data reported by these orientation events, it's possible to interactively respond to rotation and elevation changes caused by the user moving the device.</para><para>The second event is the <see cref="DeviceMotionEvent"/>, which is sent when a change in acceleration was added. It is different from the <see cref="DeviceOrientationEvent"/> because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting <see cref="DeviceMotionEvent"/> include sensors in laptops to protect moving storage devices. <see cref="DeviceOrientationEvent"/> is more commonly found in mobile devices.</para>
+<para>-<see cref="DeviceOrientationEvent"/><br/>-<see cref="DeviceMotionEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained">Orientation and motion data explained</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb: 2D maze game with device orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientations/Detecting_device_orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Device_orientationsDetecting_device_orientation>
+<Device_orientationsOrientation_and_motion_data_explained>
+<summary>
+When using orientation and motion events, it&amp;apos;s important to understand what the values you&amp;apos;re given by the browser mean. This article provides details about the coordinate systems at play and how you use them.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientations/Orientation_and_motion_data_explained"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Device_orientationsOrientation_and_motion_data_explained>
+<Device_orientationsUsing_device_orientation_with_3D_transforms>
+<summary>
+This article provides tips on how to use device orientation information in tandem with CSS 3D transforms.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms">Using CSS transforms</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation">Detecting device orientation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientations/Using_device_orientation_with_3D_transforms"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Device_orientationsUsing_device_orientation_with_3D_transforms>
+</docs>

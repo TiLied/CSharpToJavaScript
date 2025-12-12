@@ -1,0 +1,45 @@
+<docs>
+<ANGLE_instanced_arrays>
+<summary>
+The <strong><c>ANGLE_instanced_arrays</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows to draw the same object, or groups of similar objects multiple times, if they share the same vertex data, primitive count and type.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the <c>ANGLE_</c> suffix.</para><para>Despite the name &amp;quot;ANGLE&amp;quot;, this extension works on any device if the hardware supports it and not just on Windows when using the ANGLE library. &amp;quot;ANGLE&amp;quot; just indicates that this extension has been written by the ANGLE library authors.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ANGLE_instanced_arrays>
+<ANGLE_instanced_arraysDrawArraysInstancedANGLE>
+<summary>
+The <strong><c>ANGLE_instanced_arrays.drawArraysInstancedANGLE()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders primitives from array data like the <see cref="WebGLRenderingContext.DrawArrays"/> method. In addition, it can execute multiple instances of the range of elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using <see cref="WebGL2RenderingContext"/>, this method is available as <see cref="WebGL2RenderingContext.DrawArraysInstanced"/> by default.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.DrawElementsInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawArraysInstancedWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ANGLE_instanced_arraysDrawArraysInstancedANGLE>
+<ANGLE_instanced_arraysDrawElementsInstancedANGLE>
+<summary>
+The <strong><c>ANGLE_instanced_arrays.drawElementsInstancedANGLE()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders primitives from array data like the <see cref="WebGLRenderingContext.DrawElements"/> method. In addition, it can execute multiple instances of a set of elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using <see cref="WebGL2RenderingContext"/>, this method is available as <see cref="WebGL2RenderingContext.DrawElementsInstanced"/> by default.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawElementsInstancedWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ANGLE_instanced_arraysDrawElementsInstancedANGLE>
+<ANGLE_instanced_arraysVertexAttribDivisorANGLE>
+<summary>
+The <strong>ANGLE_instanced_arrays.vertexAttribDivisorANGLE()</strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with <see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/> and <see cref="ANGLE_instanced_arrays.DrawElementsInstancedANGLE"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using <see cref="WebGL2RenderingContext"/>, this method is available as <see cref="WebGL2RenderingContext.VertexAttribDivisor"/> by default.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.DrawElementsInstancedANGLE"/><br/>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ANGLE_instanced_arraysVertexAttribDivisorANGLE>
+</docs>

@@ -8,17 +8,6 @@ The <strong><c>SpeechRecognitionAlternative</c></strong> interface of the <see h
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechRecognitionAlternative>
-<SpeechRecognitionAlternativeTranscript>
-<summary>
-The <strong><c>transcript</c></strong> read-only property of the<br/><see cref="SpeechRecognitionResult"/> interface returns a string containing the<br/>transcript of the recognized word(s).
-</summary>
-<remarks>
-<para>For continuous recognition, leading or trailing whitespace will be included where<br/>necessary so that concatenation of consecutive <see cref="SpeechRecognitionResult"/>s<br/>produces a proper transcript of the session.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</SpeechRecognitionAlternativeTranscript>
 <SpeechRecognitionAlternativeConfidence>
 <summary>
 The <strong><c>confidence</c></strong> read-only property of the<br/><see cref="SpeechRecognitionResult"/> interface returns a numeric estimate of how<br/>confident the speech recognition system is that the recognition is correct.
@@ -30,4 +19,15 @@ The <strong><c>confidence</c></strong> read-only property of the<br/><see cref="
 </remarks>
 <value>A number between 0 and 1.</value>
 </SpeechRecognitionAlternativeConfidence>
+<SpeechRecognitionAlternativeTranscript>
+<summary>
+The <strong><c>transcript</c></strong> read-only property of the<br/><see cref="SpeechRecognitionResult"/> interface returns a string containing the<br/>transcript of the recognized word(s).
+</summary>
+<remarks>
+<para>For continuous recognition, leading or trailing whitespace will be included where<br/>necessary so that concatenation of consecutive <see cref="SpeechRecognitionResult"/>s<br/>produces a proper transcript of the session.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SpeechRecognitionAlternativeTranscript>
 </docs>

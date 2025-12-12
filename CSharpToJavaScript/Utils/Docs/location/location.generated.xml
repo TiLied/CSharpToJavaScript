@@ -8,25 +8,66 @@ The <strong><c>Location</c></strong> interface represents the location (URL) of 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Location>
-<LocationSearch>
+<LocationAncestorOrigins>
 <summary>
-The <strong><c>search</c></strong> property of the <see cref="Location"/> interface is a search string, also called a <strong>query string</strong>, that is a string containing a <c>&amp;quot;?&amp;quot;</c> followed by the parameters of the location&amp;apos;s URL. If the URL does not have a search query, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+The <strong><c>ancestorOrigins</c></strong> read-only<br/>property of the <see cref="Location"/> interface is a static<br/><see cref="DOMStringList"/> containing, in reverse order, the origins of all ancestor<br/>browsing contexts of the document associated with the given <see cref="Location"/><br/>object.
 </summary>
 <remarks>
-<para>This property can be set to change the query string of the URL. When setting, a single <c>&amp;quot;?&amp;quot;</c> prefix is added to the provided value, if not already present. Setting it to <c>&amp;quot;&amp;quot;</c> removes the query string.</para><para>The query is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>Modern browsers provide<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get#examples"><c>URLSearchParams</c></see><br/>and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#examples"><c>URL.searchParams</c></see><br/>to make it easy to parse out the parameters from the querystring.</para><para>See <see cref="URL.Search"/> for more information.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/search"> <em>See also on MDN</em> </seealso></para>
+<para>You can use <c>location.ancestorOrigins</c> in the script for a document to<br/>determine, for example, whenever the document is being framed by a site which you don&amp;apos;t<br/>expect it to be framed by. You can also use it to vary the behavior of the document<br/>based on what site or list of sites is framing it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/ancestorOrigins"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</LocationSearch>
-<LocationPathname>
+<value>A <see cref="DOMStringList"/>.</value>
+</LocationAncestorOrigins>
+<LocationAssign>
 <summary>
-The <strong><c>pathname</c></strong> property of the <see cref="Location"/><br/>interface is a string containing the path of the URL for the location. If there is no path, <c>pathname</c> will be empty: otherwise, <c>pathname</c> contains an initial &amp;apos;/&amp;apos; followed by the path of the URL, not including the query string or fragment.
+The <strong><c>assign()</c></strong> method of the <see cref="Location"/><br/>interface causes the window to load<br/>and display the document at the URL specified. After the navigation occurs, the user can<br/>navigate back to the page that called <c>Location.assign()</c> by pressing the &amp;quot;back&amp;quot; button.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname"> <em>See also on MDN</em> </seealso></para>
+<para>-The <see cref="Location"/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Replace"/> and<br/><see cref="Location.Reload"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</LocationAssign>
+<LocationHash>
+<summary>
+The <strong><c>hash</c></strong> property of the <see cref="Location"/> interface is a string containing a <c>&amp;quot;#&amp;quot;</c> followed by the fragment identifier of the location URL. If the URL does not have a fragment identifier, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Hash"/> for more information.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hash"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</LocationPathname>
+</LocationHash>
+<LocationHost>
+<summary>
+The <strong><c>host</c></strong> property of the <see cref="Location"/> interface is a string containing the host, which is the <see cref="Location.Hostname"/>, and then, if the {{glossary("port")}} of the URL is nonempty, a <c>&amp;quot;:&amp;quot;</c>, followed by the <see cref="Location.Port"/> of the URL. If the URL does not have a <c>hostname</c>, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Host"/> for more information.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</LocationHost>
+<LocationHostname>
+<summary>
+The <strong><c>hostname</c></strong> property of the <see cref="Location"/> interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the location URL. If the URL does not have a hostname, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to <see href="https://en.wikipedia.org/wiki/Internationalized_domain_name">IDN</see>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Hostname"/> for more information.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</LocationHostname>
+<LocationHref>
+<summary>
+The <strong><c>href</c></strong> property of the <see cref="Location"/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string containing the whole<br/>URL, and allows the href to be updated.
+</summary>
+<remarks>
+<para>Setting the value of <c>href</c> <strong>navigates</strong> to the provided URL. If you<br/>want <strong>redirection</strong>, use <see cref="Locationreplace"/>. The difference from setting the <c>href</c> property value is that when using the <c>location.replace()</c> method, after navigating to the given URL, the current page will not be saved in session <see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">history</see> — meaning the user won&amp;apos;t be able to use the back button to navigate to it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</LocationHref>
 <LocationOrigin>
 <summary>
 The <strong><c>origin</c></strong> read-only property of the <see cref="Location"/> interface returns a string containing the Unicode serialization of the origin of the location's URL.
@@ -38,75 +79,15 @@ The <strong><c>origin</c></strong> read-only property of the <see cref="Location
 </remarks>
 <value>A string.</value>
 </LocationOrigin>
-<LocationHost>
+<LocationPathname>
 <summary>
-The <strong><c>host</c></strong> property of the <see cref="Location"/> interface is a string containing the host, which is the <see cref="Location.Hostname"/>, and then, if the {{glossary("port")}} of the URL is nonempty, a <c>&amp;quot;:&amp;quot;</c>, followed by the <see cref="Location.Port"/> of the URL. If the URL does not have a <c>hostname</c>, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+The <strong><c>pathname</c></strong> property of the <see cref="Location"/><br/>interface is a string containing the path of the URL for the location. If there is no path, <c>pathname</c> will be empty: otherwise, <c>pathname</c> contains an initial &amp;apos;/&amp;apos; followed by the path of the URL, not including the query string or fragment.
 </summary>
 <remarks>
-<para>See <see cref="URL.Host"/> for more information.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/host"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</LocationHost>
-<LocationToString>
-<summary>
-The <strong><c>toString()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> method of the<br/><see cref="Location"/> interface returns a string containing the<br/>whole URL. It is a read-only version of <see cref="Location.Href"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/toString"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string representing the object&amp;apos;s URL.</returns>
-</LocationToString>
-<LocationProtocol>
-<summary>
-The <strong><c>protocol</c></strong> property of the <see cref="Location"/> interface is a string containing the protocol or scheme of the location's URL, including the final <c>&amp;quot;:&amp;quot;</c>.
-</summary>
-<remarks>
-<para>This property can be set to change the protocol of the URL. A <c>&amp;quot;:&amp;quot;</c> is appended to the provided string if not provided. The provided scheme has to be compatible with the rest of the URL to be considered valid.</para><para>See <see cref="URL.Protocol"/> for more information.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/protocol"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</LocationProtocol>
-<LocationReplace>
-<summary>
-The <strong><c>replace()</c></strong> method of the <see cref="Location"/><br/>interface replaces the current resource with the one at the provided URL. The difference<br/>from the <see cref="Location.Assign"/> method is that after using<br/><c>replace()</c> the current page will not be saved in session <see cref="History"/>,<br/>meaning the user won&amp;apos;t be able to use the <strong>back</strong> button to navigate to it.<br/>Not to be confused with the <see cref="String"/> method <see cref="StringPrototypeReplace"/>.
-</summary>
-<remarks>
-<para>-The <see cref="Location"/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Assign"/> and<br/><see cref="Location.Reload"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</LocationReplace>
-<LocationHref>
-<summary>
-The <strong><c>href</c></strong> property of the <see cref="Location"/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string containing the whole<br/>URL, and allows the href to be updated.
-</summary>
-<remarks>
-<para>Setting the value of <c>href</c> <strong>navigates</strong> to the provided URL. If you<br/>want <strong>redirection</strong>, use <see cref="Locationreplace"/>. The difference from setting the <c>href</c> property value is that when using the <c>location.replace()</c> method, after navigating to the given URL, the current page will not be saved in session <see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">history</see> — meaning the user won&amp;apos;t be able to use the back button to navigate to it.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</LocationHref>
-<LocationAssign>
-<summary>
-The <strong><c>assign()</c></strong> method of the <see cref="Location"/><br/>interface causes the window to load<br/>and display the document at the URL specified. After the navigation occurs, the user can<br/>navigate back to the page that called <c>Location.assign()</c> by pressing the &amp;quot;back&amp;quot; button.
-</summary>
-<remarks>
-<para>-The <see cref="Location"/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Replace"/> and<br/><see cref="Location.Reload"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</LocationAssign>
-<LocationAncestorOrigins>
-<summary>
-The <strong><c>ancestorOrigins</c></strong> read-only<br/>property of the <see cref="Location"/> interface is a static<br/><see cref="DOMStringList"/> containing, in reverse order, the origins of all ancestor<br/>browsing contexts of the document associated with the given <see cref="Location"/><br/>object.
-</summary>
-<remarks>
-<para>You can use <c>location.ancestorOrigins</c> in the script for a document to<br/>determine, for example, whenever the document is being framed by a site which you don&amp;apos;t<br/>expect it to be framed by. You can also use it to vary the behavior of the document<br/>based on what site or list of sites is framing it.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/ancestorOrigins"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMStringList"/>.</value>
-</LocationAncestorOrigins>
+</LocationPathname>
 <LocationPort>
 <summary>
 The <strong><c>port</c></strong> property of the <see cref="Location"/> interface is a string containing the port number of the location's URL. If the port is the default for the protocol (<c>80</c> for <c>ws:</c> and <c>http:</c>, <c>443</c> for <c>wss:</c> and <c>https:</c>, and <c>21</c> for <c>ftp:</c>), this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
@@ -117,16 +98,16 @@ The <strong><c>port</c></strong> property of the <see cref="Location"/> interfac
 </remarks>
 <value>A string.</value>
 </LocationPort>
-<LocationHash>
+<LocationProtocol>
 <summary>
-The <strong><c>hash</c></strong> property of the <see cref="Location"/> interface is a string containing a <c>&amp;quot;#&amp;quot;</c> followed by the fragment identifier of the location URL. If the URL does not have a fragment identifier, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+The <strong><c>protocol</c></strong> property of the <see cref="Location"/> interface is a string containing the protocol or scheme of the location's URL, including the final <c>&amp;quot;:&amp;quot;</c>.
 </summary>
 <remarks>
-<para>See <see cref="URL.Hash"/> for more information.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hash"> <em>See also on MDN</em> </seealso></para>
+<para>This property can be set to change the protocol of the URL. A <c>&amp;quot;:&amp;quot;</c> is appended to the provided string if not provided. The provided scheme has to be compatible with the rest of the URL to be considered valid.</para><para>See <see cref="URL.Protocol"/> for more information.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/protocol"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</LocationHash>
+</LocationProtocol>
 <LocationReload>
 <summary>
 The <strong><c>reload()</c></strong> method of the <see cref="Location"/> interface reloads the current URL, like the Refresh button.
@@ -137,14 +118,33 @@ The <strong><c>reload()</c></strong> method of the <see cref="Location"/> interf
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </LocationReload>
-<LocationHostname>
+<LocationReplace>
 <summary>
-The <strong><c>hostname</c></strong> property of the <see cref="Location"/> interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the location URL. If the URL does not have a hostname, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to <see href="https://en.wikipedia.org/wiki/Internationalized_domain_name">IDN</see>.
+The <strong><c>replace()</c></strong> method of the <see cref="Location"/><br/>interface replaces the current resource with the one at the provided URL. The difference<br/>from the <see cref="Location.Assign"/> method is that after using<br/><c>replace()</c> the current page will not be saved in session <see cref="History"/>,<br/>meaning the user won&amp;apos;t be able to use the <strong>back</strong> button to navigate to it.<br/>Not to be confused with the <see cref="String"/> method <see cref="StringPrototypeReplace"/>.
 </summary>
 <remarks>
-<para>See <see cref="URL.Hostname"/> for more information.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname"> <em>See also on MDN</em> </seealso></para>
+<para>-The <see cref="Location"/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Assign"/> and<br/><see cref="Location.Reload"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</LocationReplace>
+<LocationSearch>
+<summary>
+The <strong><c>search</c></strong> property of the <see cref="Location"/> interface is a search string, also called a <strong>query string</strong>, that is a string containing a <c>&amp;quot;?&amp;quot;</c> followed by the parameters of the location&amp;apos;s URL. If the URL does not have a search query, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the query string of the URL. When setting, a single <c>&amp;quot;?&amp;quot;</c> prefix is added to the provided value, if not already present. Setting it to <c>&amp;quot;&amp;quot;</c> removes the query string.</para><para>The query is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>Modern browsers provide<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get#examples"><c>URLSearchParams</c></see><br/>and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#examples"><c>URL.searchParams</c></see><br/>to make it easy to parse out the parameters from the querystring.</para><para>See <see cref="URL.Search"/> for more information.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/search"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</LocationHostname>
+</LocationSearch>
+<LocationToString>
+<summary>
+The <strong><c>toString()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> method of the<br/><see cref="Location"/> interface returns a string containing the<br/>whole URL. It is a read-only version of <see cref="Location.Href"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the object&amp;apos;s URL.</returns>
+</LocationToString>
 </docs>

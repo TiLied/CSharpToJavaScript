@@ -1,0 +1,21 @@
+<docs>
+<Media_Capabilities_API>
+<summary>
+The <strong>Media Capabilities API</strong> allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</see>&amp;apos;s method <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType">canPlayType()</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource">MediaSource</see>&amp;apos;s method <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/isTypeSupported_static">isTypeSupported()</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Capabilities_API>
+<Media_Capabilities_APIUsing_the_Media_Capabilities_API>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see> provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
+</summary>
+<remarks>
+<para>These features include:</para><blockquote class="NOTE"><h5>NOTE</h5><para>The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.</para></blockquote>
+<para>-<see cref="Navigator.MediaCapabilities"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Capabilities_APIUsing_the_Media_Capabilities_API>
+</docs>

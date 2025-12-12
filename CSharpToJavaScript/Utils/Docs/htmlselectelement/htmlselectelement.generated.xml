@@ -9,36 +9,6 @@ The <strong><c>HTMLSelectElement</c></strong> interface represents a {{HTMLEleme
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLSelectElement>
-<HTMLSelectElementWillValidate>
-<summary>
-The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface indicates whether the {{htmlelement("select")}} element is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>. It is <c>false</c> if any conditions bar it from constraint validation, such as when its <see cref="HTMLSelectElement.Disabled"/> property is <c>true</c>.
-</summary>
-<remarks>
-<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/willValidate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</HTMLSelectElementWillValidate>
-<HTMLSelectElementValidity>
-<summary>
-The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in.
-</summary>
-<remarks>
-<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/validity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ValidityState"/> object.</value>
-</HTMLSelectElementValidity>
-<HTMLSelectElementSetCustomValidity>
-<summary>
-The <strong><c>HTMLSelectElement.setCustomValidity()</c></strong> method sets the<br/>custom validity message for the selection element to the specified message. Use the<br/>empty string to indicate that the element does <strong>not</strong> have a custom validity<br/>error.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLSelectElementSetCustomValidity>
 <HTMLSelectElementAdd>
 <summary>
 The <strong><c>HTMLSelectElement.add()</c></strong> method adds an element to the<br/>collection of <c>option</c> elements for this <c>select</c> element.
@@ -48,17 +18,66 @@ The <strong><c>HTMLSelectElement.add()</c></strong> method adds an element to th
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HTMLSelectElementAdd>
-<HTMLSelectElementSize>
+<HTMLSelectElementAutocomplete>
 <summary>
-The <strong><c>size</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies the number of options, or rows, that should be visible at one time. It reflects the {{htmlelement("select")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#size"><c>size</c></see> attribute. If omitted, the value is <c>0</c>.
+The <strong><c>autocomplete</c></strong> property of the <see cref="HTMLSelectElement"/> interface indicates whether the value of the control can be automatically completed by the browser. It reflects the <c>&amp;lt;select&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#autocomplete"><c>autocomplete</c></see> attribute.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>While by default a <c>&amp;lt;select&amp;gt;</c> displays a single row unless <see cref="HTMLSelectElement.Multiple"/> is true, in which case four rows are displayed, the default value for the <c>size</c> property is <c>0</c>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see cref="HTMLSelectElement.SelectedOptions"/><br/>-<see cref="HTMLSelectElement.Length"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/size"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute<br/>-ARIA <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion">Turning off autocompletion</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/autocomplete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number.</value>
-</HTMLSelectElementSize>
+<value>A string representing the value of the <c>autocomplete</c> attribute (<c>&amp;quot;on&amp;quot;</c>, <c>&amp;quot;off&amp;quot;</c>, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens"><c>&amp;lt;token-list&amp;gt;</c></see>) or the empty string (<c>&amp;quot;&amp;quot;</c>) if unspecified.</value>
+</HTMLSelectElementAutocomplete>
+<HTMLSelectElementCheckValidity>
+<summary>
+The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLSelectElement"/> interface returns a boolean value which indicates if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it. If false, the method also fires an <see cref="HTMLElementinvalid"/> event on the element. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>An HTML {{htmlelement("select")}} element with a non-null <see cref="HTMLSelectElement.ValidationMessage"/> is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause <c>checkValidity()</c> to return false. Use the <see cref="HTMLSelectElement.SetCustomValidity"/> method to set the <see cref="HTMLSelectElement.ValidationMessage"/> to the empty string to set the <see cref="HTMLSelectElement.Validity"/> state to be valid.</para></blockquote>
+<para>-<see cref="HTMLSelectElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLSelectElementCheckValidity>
+<HTMLSelectElementDisabled>
+<summary>
+The <strong><c>HTMLSelectElement.disabled</c></strong> property is a boolean value that reflects the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#disabled"><c>disabled</c></see><br/>HTML attribute, which indicates whether the control is disabled. If it is disabled, it<br/>does not accept clicks. A disabled element is unusable and un-clickable.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLSelectElementDisabled>
+<HTMLSelectElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("select")}}, or <c>null</c> if this select is not owned by any form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLSelectElementForm>
+<HTMLSelectElementItem>
+<summary>
+The <strong><c>HTMLSelectElement.item()</c></strong> method returns the<br/><see cref="Element"/> corresponding to the <see cref="HTMLOptionElement"/> whose<br/>position in the options list corresponds to the index given in the parameter, or<br/><c>null</c> if there are none.
+</summary>
+<remarks>
+<para>In JavaScript, using the array bracket syntax with an <c>unsigned long</c>, like<br/><c>selectElt[index]</c> is equivalent to<br/><c>selectElt.namedItem(index)</c>.</para>
+<para>-<see cref="HTMLSelectElement"/> that implements it.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="HTMLOptionElement"/> or <c>null</c>.</returns>
+</HTMLSelectElementItem>
+<HTMLSelectElementLabels>
+<summary>
+The <strong><c>HTMLSelectElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;select&amp;gt;</c> element.</value>
+</HTMLSelectElementLabels>
 <HTMLSelectElementLength>
 <summary>
 The <strong><c>length</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies the number of {{htmlelement("option")}} elements in the {{htmlelement("select")}} element. It represents the number of nodes in the <see cref="HTMLSelectElement.Options"/> collection. On setting, it acts as (<see cref="HTMLOptionsCollection.Length"/>).
@@ -69,16 +88,26 @@ The <strong><c>length</c></strong> property of the <see cref="HTMLSelectElement"
 </remarks>
 <value>A number.</value>
 </HTMLSelectElementLength>
-<HTMLSelectElementRemove>
+<HTMLSelectElementMultiple>
 <summary>
-The <strong><c>HTMLSelectElement.remove()</c></strong> method removes the element<br/>at the specified index from the options collection for this select element.
+The <strong><c>multiple</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies that the user may select more than one option from the list of options. It reflects the {{htmlelement("select")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#multiple"><c>multiple</c></see> attribute.
 </summary>
 <remarks>
-<para>-<see cref="Element.Remove"/>, the method that gets called when remove is called<br/>without arguments on a <see cref="HTMLSelectElement"/>.<br/>-<see cref="HTMLSelectElement"/> that implements it.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see cref="HTMLSelectElement.SelectedOptions"/><br/>-<see cref="HTMLSelectElement.Length"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/multiple"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLSelectElementRemove>
+<value>A boolean.</value>
+</HTMLSelectElementMultiple>
+<HTMLSelectElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLSelectElement"/> interface indicates the name of the {{HTMLElement("select")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#name"><c>name</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLSelectElement.Value"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/>-<see cref="HTMLSelectElement.Options"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s name.</value>
+</HTMLSelectElementName>
 <HTMLSelectElementNamedItem>
 <summary>
 The <strong><c>HTMLSelectElement.namedItem()</c></strong> method returns the<br/><see cref="HTMLOptionElement"/> corresponding to the <see cref="HTMLOptionElement"/><br/>whose <c>name</c> or <c>id</c> match the specified name, or<br/><c>null</c> if no option matches.
@@ -99,49 +128,26 @@ The <strong><c>HTMLSelectElement.options</c></strong> read-only property returns
 </remarks>
 <value>A <see cref="HTMLOptionsCollection"/> containing the <c>&amp;lt;option&amp;gt;</c><br/>elements contained by the <c>&amp;lt;select&amp;gt;</c> element.</value>
 </HTMLSelectElementOptions>
-<HTMLSelectElementValue>
+<HTMLSelectElementRemove>
 <summary>
-The <strong><c>HTMLSelectElement.value</c></strong> property contains the value of the first selected <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> element associated with this <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element.
+The <strong><c>HTMLSelectElement.remove()</c></strong> method removes the element<br/>at the specified index from the options collection for this select element.
 </summary>
 <remarks>
-<para>This property can also be set directly, for example to set a default value based on some condition.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> HTML element, implementing this interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/value"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the value of the first selected <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> element in this <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element, or the empty string if no options are selected.</value>
-</HTMLSelectElementValue>
-<HTMLSelectElementItem>
-<summary>
-The <strong><c>HTMLSelectElement.item()</c></strong> method returns the<br/><see cref="Element"/> corresponding to the <see cref="HTMLOptionElement"/> whose<br/>position in the options list corresponds to the index given in the parameter, or<br/><c>null</c> if there are none.
-</summary>
-<remarks>
-<para>In JavaScript, using the array bracket syntax with an <c>unsigned long</c>, like<br/><c>selectElt[index]</c> is equivalent to<br/><c>selectElt.namedItem(index)</c>.</para>
-<para>-<see cref="HTMLSelectElement"/> that implements it.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="HTMLOptionElement"/> or <c>null</c>.</returns>
-</HTMLSelectElementItem>
-<HTMLSelectElementShowPicker>
-<summary>
-The <strong><c>HTMLSelectElement.showPicker()</c></strong> method displays the browser picker for a <c>select</c> element.
-</summary>
-<remarks>
-<para>This is the same picker that would normally be displayed when the element is selected, but can be triggered from a button press or other user interaction.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLInputElement.ShowPicker"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/showPicker"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="Element.Remove"/>, the method that gets called when remove is called<br/>without arguments on a <see cref="HTMLSelectElement"/>.<br/>-<see cref="HTMLSelectElement"/> that implements it.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</HTMLSelectElementShowPicker>
-<HTMLSelectElementForm>
+</HTMLSelectElementRemove>
+<HTMLSelectElementReportValidity>
 <summary>
-The <strong><c>form</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("select")}}, or <c>null</c> if this select is not owned by any form.
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLSelectElement"/> interface performs the same validity checking steps as the <see cref="HTMLSelectElement.CheckValidity"/> method. In addition, if the <see cref="HTMLElementinvalid"/> event is not canceled, the browser displays the problem to the user.
 </summary>
 <remarks>
-<para>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/form"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
-</HTMLSelectElementForm>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLSelectElementReportValidity>
 <HTMLSelectElementRequired>
 <summary>
 The <strong><c>required</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies that the user must select an option with a non-empty string value before submitting a form. It reflects the {{htmlelement("select")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#required"><c>required</c></see> attribute.
@@ -162,76 +168,6 @@ The <strong><c>selectedIndex</c></strong> property of the <see cref="HTMLSelectE
 </remarks>
 <value>A number.</value>
 </HTMLSelectElementSelectedIndex>
-<HTMLSelectElementDisabled>
-<summary>
-The <strong><c>HTMLSelectElement.disabled</c></strong> property is a boolean value that reflects the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#disabled"><c>disabled</c></see><br/>HTML attribute, which indicates whether the control is disabled. If it is disabled, it<br/>does not accept clicks. A disabled element is unusable and un-clickable.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</HTMLSelectElementDisabled>
-<HTMLSelectElementAutocomplete>
-<summary>
-The <strong><c>autocomplete</c></strong> property of the <see cref="HTMLSelectElement"/> interface indicates whether the value of the control can be automatically completed by the browser. It reflects the <c>&amp;lt;select&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#autocomplete"><c>autocomplete</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute<br/>-ARIA <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion">Turning off autocompletion</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/autocomplete"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the value of the <c>autocomplete</c> attribute (<c>&amp;quot;on&amp;quot;</c>, <c>&amp;quot;off&amp;quot;</c>, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens"><c>&amp;lt;token-list&amp;gt;</c></see>) or the empty string (<c>&amp;quot;&amp;quot;</c>) if unspecified.</value>
-</HTMLSelectElementAutocomplete>
-<HTMLSelectElementType>
-<summary>
-The <strong><c>HTMLSelectElement.type</c></strong><br/>read-only property returns the form control&amp;apos;s <c>type</c>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> HTML element, implementing this interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:</value>
-</HTMLSelectElementType>
-<HTMLSelectElementCheckValidity>
-<summary>
-The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLSelectElement"/> interface returns a boolean value which indicates if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it. If false, the method also fires an <see cref="HTMLElementinvalid"/> event on the element. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>An HTML {{htmlelement("select")}} element with a non-null <see cref="HTMLSelectElement.ValidationMessage"/> is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause <c>checkValidity()</c> to return false. Use the <see cref="HTMLSelectElement.SetCustomValidity"/> method to set the <see cref="HTMLSelectElement.ValidationMessage"/> to the empty string to set the <see cref="HTMLSelectElement.Validity"/> state to be valid.</para></blockquote>
-<para>-<see cref="HTMLSelectElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
-</HTMLSelectElementCheckValidity>
-<HTMLSelectElementMultiple>
-<summary>
-The <strong><c>multiple</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies that the user may select more than one option from the list of options. It reflects the {{htmlelement("select")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#multiple"><c>multiple</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see cref="HTMLSelectElement.SelectedOptions"/><br/>-<see cref="HTMLSelectElement.Length"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/multiple"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean.</value>
-</HTMLSelectElementMultiple>
-<HTMLSelectElementReportValidity>
-<summary>
-The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLSelectElement"/> interface performs the same validity checking steps as the <see cref="HTMLSelectElement.CheckValidity"/> method. In addition, if the <see cref="HTMLElementinvalid"/> event is not canceled, the browser displays the problem to the user.
-</summary>
-<remarks>
-<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
-</HTMLSelectElementReportValidity>
-<HTMLSelectElementName>
-<summary>
-The <strong><c>name</c></strong> property of the <see cref="HTMLSelectElement"/> interface indicates the name of the {{HTMLElement("select")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#name"><c>name</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see cref="HTMLSelectElement.Value"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/>-<see cref="HTMLSelectElement.Options"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/name"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the element&amp;apos;s name.</value>
-</HTMLSelectElementName>
 <HTMLSelectElementSelectedOptions>
 <summary>
 The <strong>read-only</strong> <see cref="HTMLSelectElement"/> property<br/><strong><c>selectedOptions</c></strong> contains a list of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> elements contained within the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>element that are currently selected. The list of selected options is an<br/><see cref="HTMLCollection"/> object with one entry per currently selected option.
@@ -243,15 +179,48 @@ The <strong>read-only</strong> <see cref="HTMLSelectElement"/> property<br/><str
 </remarks>
 <value>An <see cref="HTMLCollection"/> which lists every currently selected<br/><see cref="HTMLOptionElement"/> which is either a child of the<br/><see cref="HTMLSelectElement"/> or of an <see cref="HTMLOptGroupElement"/> within the<br/><c>&amp;lt;select&amp;gt;</c> element.In other words, any option contained within the <c>&amp;lt;select&amp;gt;</c> element may<br/>be part of the results, but option groups are not included in the list.If no options are currently selected, the collection is empty and returns a<br/><see cref="HTMLCollection.Length"/> of 0.</value>
 </HTMLSelectElementSelectedOptions>
-<HTMLSelectElementLabels>
+<HTMLSelectElementSetCustomValidity>
 <summary>
-The <strong><c>HTMLSelectElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element.
+The <strong><c>HTMLSelectElement.setCustomValidity()</c></strong> method sets the<br/>custom validity message for the selection element to the specified message. Use the<br/>empty string to indicate that the element does <strong>not</strong> have a custom validity<br/>error.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/labels"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;select&amp;gt;</c> element.</value>
-</HTMLSelectElementLabels>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLSelectElementSetCustomValidity>
+<HTMLSelectElementShowPicker>
+<summary>
+The <strong><c>HTMLSelectElement.showPicker()</c></strong> method displays the browser picker for a <c>select</c> element.
+</summary>
+<remarks>
+<para>This is the same picker that would normally be displayed when the element is selected, but can be triggered from a button press or other user interaction.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLInputElement.ShowPicker"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/showPicker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLSelectElementShowPicker>
+<HTMLSelectElementSize>
+<summary>
+The <strong><c>size</c></strong> property of the <see cref="HTMLSelectElement"/> interface specifies the number of options, or rows, that should be visible at one time. It reflects the {{htmlelement("select")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#size"><c>size</c></see> attribute. If omitted, the value is <c>0</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>While by default a <c>&amp;lt;select&amp;gt;</c> displays a single row unless <see cref="HTMLSelectElement.Multiple"/> is true, in which case four rows are displayed, the default value for the <c>size</c> property is <c>0</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see cref="HTMLSelectElement.SelectedOptions"/><br/>-<see cref="HTMLSelectElement.Length"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLSelectElementSize>
+<HTMLSelectElementType>
+<summary>
+The <strong><c>HTMLSelectElement.type</c></strong><br/>read-only property returns the form control&amp;apos;s <c>type</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> HTML element, implementing this interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</HTMLSelectElementType>
 <HTMLSelectElementValidationMessage>
 <summary>
 The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("select")}} control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (<see cref="HTMLSelectElement.WillValidate"/> is <c>false</c>), or it satisfies its constraints.
@@ -263,4 +232,35 @@ The <strong><c>validationMessage</c></strong> read-only property of the <see cre
 </remarks>
 <value>A string.</value>
 </HTMLSelectElementValidationMessage>
+<HTMLSelectElementValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in.
+</summary>
+<remarks>
+<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</HTMLSelectElementValidity>
+<HTMLSelectElementValue>
+<summary>
+The <strong><c>HTMLSelectElement.value</c></strong> property contains the value of the first selected <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> element associated with this <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> HTML element, implementing this interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the value of the first selected <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> element in this <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> element, or the empty string if no options are selected.</value>
+</HTMLSelectElementValue>
+<HTMLSelectElementWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLSelectElement"/> interface indicates whether the {{htmlelement("select")}} element is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>. It is <c>false</c> if any conditions bar it from constraint validation, such as when its <see cref="HTMLSelectElement.Disabled"/> property is <c>true</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLSelectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLSelectElementWillValidate>
 </docs>

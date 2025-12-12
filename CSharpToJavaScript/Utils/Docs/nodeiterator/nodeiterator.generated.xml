@@ -9,59 +9,6 @@ The <strong><c>NodeIterator</c></strong> interface represents an iterator to tra
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NodeIterator>
-<NodeIteratorNextNode>
-<summary>
-The <strong><c>NodeIterator.nextNode()</c></strong> method returns the next node<br/>in the set represented by the <see cref="NodeIterator"/> and advances the position of<br/>the iterator within the set. The first call to <c>nextNode()</c> returns the<br/>first node in the set.
-</summary>
-<remarks>
-<para>This method returns <c>null</c> when there are no nodes left in the set.</para><para>In old browsers, as specified in old versions of the specifications, the method may<br/>throws the <c>INVALID_STATE_ERR</c> <see cref="DOMException"/> if this method<br/>is called after the <see cref="NodeIterator.Detach"/> method. Recent browsers never<br/>throw.</para>
-<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Node"/> representing the node after the current node in the set represented by this <c>NodeIterator</c>, or <c>null</c> if the current node is the last node in the set.</returns>
-</NodeIteratorNextNode>
-<NodeIteratorPreviousNode>
-<summary>
-The <strong><c>NodeIterator.previousNode()</c></strong> method returns the<br/>previous node in the set represented by the <see cref="NodeIterator"/> and moves the<br/>position of the iterator backwards within the set.
-</summary>
-<remarks>
-<para>This method returns <c>null</c> when the current node is the first node in the<br/>set.</para><para>In old browsers, as specified in old versions of the specifications, the method may<br/>throws the <c>INVALID_STATE_ERR</c> <see cref="DOMException"/> if this method<br/>is called after the <see cref="NodeIterator.Detach"/> method. Recent browsers never<br/>throw.</para>
-<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Node"/> representing the node before the current node in the set represented by this <c>NodeIterator</c>, or <c>null</c> if the current node is the first node in the set.</returns>
-</NodeIteratorPreviousNode>
-<NodeIteratorWhatToShow>
-<summary>
-The <strong><c>NodeIterator.whatToShow</c></strong> read-only property represents<br/>an <c>unsigned integer</c> representing a bitmask signifying what types of nodes<br/>should be returned by the <see cref="NodeIterator"/>.
-</summary>
-<remarks>
-<para>-The interface this property belongs to: <see cref="NodeIterator"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/whatToShow"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned integer</c>.The values that can be combined to form the bitmask are:</value>
-</NodeIteratorWhatToShow>
-<NodeIteratorReferenceNode>
-<summary>
-The <strong><c>NodeIterator.referenceNode</c></strong> read-only property returns the<br/><see cref="Node"/> to which the iterator is anchored; as new nodes are inserted, the<br/>iterator remains anchored to the reference node as specified by this property.
-</summary>
-<remarks>
-<para>-The interface it belongs to: <see cref="NodeIterator"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/referenceNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/>.</value>
-</NodeIteratorReferenceNode>
-<NodeIteratorFilter>
-<summary>
-The <strong><c>NodeIterator.filter</c></strong> read-only property returns a<br/><c>NodeFilter</c> object, that is an object which implements an<br/><c>acceptNode(node)</c> method, used to screen nodes.
-</summary>
-<remarks>
-<para>When creating the <see cref="NodeIterator"/>, the filter object is passed in as the<br/>third parameter, and the object method <c>acceptNode(node)</c> is<br/>called on every single node to determine whether or not to accept it. This function<br/>should return the constant <c>NodeFilter.FILTER_ACCEPT</c> for cases when the<br/>node should be accepted and <c>NodeFilter.FILTER_REJECT</c> for cases when the<br/>node should be rejected.</para>
-<para>-The interface this property belongs to: <see cref="NodeIterator"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/filter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>NodeFilter</c> object.</value>
-</NodeIteratorFilter>
 <NodeIteratorDetach>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>NodeIterator.detach()</c></strong> method is a no-op, kept for<br/>backward compatibility only.
@@ -73,16 +20,28 @@ The <strong><c>NodeIterator.filter</c></strong> read-only property returns a<br/
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </NodeIteratorDetach>
-<NodeIteratorRoot>
+<NodeIteratorFilter>
 <summary>
-The <strong><c>NodeIterator.root</c></strong> read-only property represents the<br/><see cref="Node"/> that is the root of what the <see cref="NodeIterator"/><br/>traverses.
+The <strong><c>NodeIterator.filter</c></strong> read-only property returns a<br/><c>NodeFilter</c> object, that is an object which implements an<br/><c>acceptNode(node)</c> method, used to screen nodes.
 </summary>
 <remarks>
-<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/root"> <em>See also on MDN</em> </seealso></para>
+<para>When creating the <see cref="NodeIterator"/>, the filter object is passed in as the<br/>third parameter, and the object method <c>acceptNode(node)</c> is<br/>called on every single node to determine whether or not to accept it. This function<br/>should return the constant <c>NodeFilter.FILTER_ACCEPT</c> for cases when the<br/>node should be accepted and <c>NodeFilter.FILTER_REJECT</c> for cases when the<br/>node should be rejected.</para>
+<para>-The interface this property belongs to: <see cref="NodeIterator"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/filter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Node"/>.</value>
-</NodeIteratorRoot>
+<value>A <c>NodeFilter</c> object.</value>
+</NodeIteratorFilter>
+<NodeIteratorNextNode>
+<summary>
+The <strong><c>NodeIterator.nextNode()</c></strong> method returns the next node<br/>in the set represented by the <see cref="NodeIterator"/> and advances the position of<br/>the iterator within the set. The first call to <c>nextNode()</c> returns the<br/>first node in the set.
+</summary>
+<remarks>
+<para>This method returns <c>null</c> when there are no nodes left in the set.</para><para>In old browsers, as specified in old versions of the specifications, the method may<br/>throws the <c>INVALID_STATE_ERR</c> <see cref="DOMException"/> if this method<br/>is called after the <see cref="NodeIterator.Detach"/> method. Recent browsers never<br/>throw.</para>
+<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Node"/> representing the node after the current node in the set represented by this <c>NodeIterator</c>, or <c>null</c> if the current node is the last node in the set.</returns>
+</NodeIteratorNextNode>
 <NodeIteratorPointerBeforeReferenceNode>
 <summary>
 The <strong><c>NodeIterator.pointerBeforeReferenceNode</c></strong> read-only<br/>property returns a boolean flag that indicates whether the<br/><c>NodeFilter</c> is anchored before (if this value is <c>true</c>) or<br/>after (if this value is <c>false</c>) the anchor node indicated by the<br/><see cref="NodeIterator.ReferenceNode"/> property.
@@ -93,4 +52,45 @@ The <strong><c>NodeIterator.pointerBeforeReferenceNode</c></strong> read-only<br
 </remarks>
 <value>A boolean.</value>
 </NodeIteratorPointerBeforeReferenceNode>
+<NodeIteratorPreviousNode>
+<summary>
+The <strong><c>NodeIterator.previousNode()</c></strong> method returns the<br/>previous node in the set represented by the <see cref="NodeIterator"/> and moves the<br/>position of the iterator backwards within the set.
+</summary>
+<remarks>
+<para>This method returns <c>null</c> when the current node is the first node in the<br/>set.</para><para>In old browsers, as specified in old versions of the specifications, the method may<br/>throws the <c>INVALID_STATE_ERR</c> <see cref="DOMException"/> if this method<br/>is called after the <see cref="NodeIterator.Detach"/> method. Recent browsers never<br/>throw.</para>
+<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Node"/> representing the node before the current node in the set represented by this <c>NodeIterator</c>, or <c>null</c> if the current node is the first node in the set.</returns>
+</NodeIteratorPreviousNode>
+<NodeIteratorReferenceNode>
+<summary>
+The <strong><c>NodeIterator.referenceNode</c></strong> read-only property returns the<br/><see cref="Node"/> to which the iterator is anchored; as new nodes are inserted, the<br/>iterator remains anchored to the reference node as specified by this property.
+</summary>
+<remarks>
+<para>-The interface it belongs to: <see cref="NodeIterator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/referenceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/>.</value>
+</NodeIteratorReferenceNode>
+<NodeIteratorRoot>
+<summary>
+The <strong><c>NodeIterator.root</c></strong> read-only property represents the<br/><see cref="Node"/> that is the root of what the <see cref="NodeIterator"/><br/>traverses.
+</summary>
+<remarks>
+<para>-The interface it belongs to: <see cref="NodeIterator"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/root"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/>.</value>
+</NodeIteratorRoot>
+<NodeIteratorWhatToShow>
+<summary>
+The <strong><c>NodeIterator.whatToShow</c></strong> read-only property represents<br/>an <c>unsigned integer</c> representing a bitmask signifying what types of nodes<br/>should be returned by the <see cref="NodeIterator"/>.
+</summary>
+<remarks>
+<para>-The interface this property belongs to: <see cref="NodeIterator"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/whatToShow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned integer</c>.The values that can be combined to form the bitmask are:</value>
+</NodeIteratorWhatToShow>
 </docs>

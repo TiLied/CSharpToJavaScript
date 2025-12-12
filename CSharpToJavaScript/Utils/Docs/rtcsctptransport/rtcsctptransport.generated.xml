@@ -9,26 +9,15 @@ The <strong><c>RTCSctpTransport</c></strong> interface provides information whic
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSctpTransport>
-<RTCSctpTransportState>
+<RTCSctpTransportMaxChannels>
 <summary>
-The <strong><c>state</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface provides information which describes a Stream Control Transmission Protocol ({{Glossary("SCTP")}}) transport state.
+The <strong><c>maxChannels</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously.
 </summary>
 <remarks>
-<para>-<see cref="RTCSctpTransport"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxChannels"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string whose value is one of the following:</value>
-</RTCSctpTransportState>
-<RTCSctpTransportTransport>
-<summary>
-The <strong><c>transport</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface returns a <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
-</summary>
-<remarks>
-<para>-<see cref="RTCSctpTransport"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/transport"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.</value>
-</RTCSctpTransportTransport>
+<value>An integer value indicating the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously, or <c>null</c> before the SCTP transport goes into the &amp;quot;connected&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state">state</see>.</value>
+</RTCSctpTransportMaxChannels>
 <RTCSctpTransportMaxMessageSize>
 <summary>
 The <strong><c>maxMessageSize</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum size of a message that can be sent using the <see cref="RTCDataChannel.Send"/> method.
@@ -39,6 +28,16 @@ The <strong><c>maxMessageSize</c></strong> read-only property of the <see cref="
 </remarks>
 <value>An integer value giving the maximum size, in bytes, of a message which can be sent using the <see cref="RTCDataChannel.Send"/> method.</value>
 </RTCSctpTransportMaxMessageSize>
+<RTCSctpTransportState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface provides information which describes a Stream Control Transmission Protocol ({{Glossary("SCTP")}}) transport state.
+</summary>
+<remarks>
+<para>-<see cref="RTCSctpTransport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value is one of the following:</value>
+</RTCSctpTransportState>
 <RTCSctpTransportStatechange>
 <summary>
 A <strong><c>statechange</c></strong> event is sent to an <see cref="RTCSctpTransport"/> to provide notification when the <see cref="RTCSctpTransport.State"/> property has changed.
@@ -48,13 +47,14 @@ A <strong><c>statechange</c></strong> event is sent to an <see cref="RTCSctpTran
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/statechange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSctpTransportStatechange>
-<RTCSctpTransportMaxChannels>
+<RTCSctpTransportTransport>
 <summary>
-The <strong><c>maxChannels</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously.
+The <strong><c>transport</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface returns a <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxChannels"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="RTCSctpTransport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/transport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously, or <c>null</c> before the SCTP transport goes into the &amp;quot;connected&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state">state</see>.</value>
-</RTCSctpTransportMaxChannels>
+<value>A <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.</value>
+</RTCSctpTransportTransport>
 </docs>

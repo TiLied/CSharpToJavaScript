@@ -7,16 +7,6 @@ The <strong><c>Permissions</c></strong> interface of the <see href="https://deve
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Permissions>
-<PermissionsRevoke>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>revoke()</c></strong> method of the <see cref="Permissions"/> interface reverts a currently set permission back to its default state, which is usually <c>prompt</c>.<br/>This method is called on the global <see cref="Permissions"/> object <see cref="Navigator.Permissions"/>.
-</summary>
-<remarks>
-<para>This method is removed from the main permissions API specification because its use case is unclear.<br/>Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it&amp;apos;s unlikely to reach the standards track.<br/>For more context, see the <see href="https://github.com/w3c/permissions/issues/46">original discussion to remove <c>permissions.revoke()</c></see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions/revoke"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that calls its fulfillment handler with a <see cref="PermissionStatus"/> object indicating the result of the request.</returns>
-</PermissionsRevoke>
 <PermissionsQuery>
 <summary>
 The <strong><c>query()</c></strong> method of the <see cref="Permissions"/> interface returns the state of a user permission on the global scope.
@@ -27,4 +17,14 @@ The <strong><c>query()</c></strong> method of the <see cref="Permissions"/> inte
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves to a <see cref="PermissionStatus"/> object.</returns>
 </PermissionsQuery>
+<PermissionsRevoke>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>revoke()</c></strong> method of the <see cref="Permissions"/> interface reverts a currently set permission back to its default state, which is usually <c>prompt</c>.<br/>This method is called on the global <see cref="Permissions"/> object <see cref="Navigator.Permissions"/>.
+</summary>
+<remarks>
+<para>This method is removed from the main permissions API specification because its use case is unclear.<br/>Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it&amp;apos;s unlikely to reach the standards track.<br/>For more context, see the <see href="https://github.com/w3c/permissions/issues/46">original discussion to remove <c>permissions.revoke()</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions/revoke"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that calls its fulfillment handler with a <see cref="PermissionStatus"/> object indicating the result of the request.</returns>
+</PermissionsRevoke>
 </docs>

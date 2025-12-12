@@ -8,15 +8,6 @@ The <strong><c>PerformanceEntry</c></strong> object encapsulates a single perfor
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceEntry>
-<PerformanceEntryStartTime>
-<summary>
-The read-only <strong><c>startTime</c></strong> property returns the first {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for this <see cref="PerformanceEntry"/>. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/startTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> representing the first timestamp when the<br/><see cref="PerformanceEntry"/> was created.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType"/>:</value>
-</PerformanceEntryStartTime>
 <PerformanceEntryDuration>
 <summary>
 The read-only <strong><c>duration</c></strong> property returns a {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}} that is the duration of the {{domxref(&amp;quot;PerformanceEntry&amp;quot;,&amp;quot;performance entry&amp;quot;, &amp;quot;&amp;quot;, "no-code")}}. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType"/>.
@@ -47,6 +38,15 @@ The read-only <strong><c>name</c></strong> property of the <see cref="Performanc
 </remarks>
 <value>A string. The value depends on the subclass of the <c>PerformanceEntry</c> object as shown by the table below.</value>
 </PerformanceEntryName>
+<PerformanceEntryStartTime>
+<summary>
+The read-only <strong><c>startTime</c></strong> property returns the first {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for this <see cref="PerformanceEntry"/>. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the first timestamp when the<br/><see cref="PerformanceEntry"/> was created.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType"/>:</value>
+</PerformanceEntryStartTime>
 <PerformanceEntryToJSON>
 <summary>
 The <strong><c>toJSON()</c></strong> method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceEntry"/> object.

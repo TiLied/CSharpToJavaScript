@@ -7,6 +7,15 @@ The WebXR Device API&amp;apos;s <strong><c>XRViewport</c></strong> interface pro
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRViewport>
+<XRViewportHeight>
+<summary>
+The read-only <see cref="XRViewport"/> property<br/><strong><c>height</c></strong> specifies the height, in pixels, of the viewport<br/>onto the drawing surface within which the WebXR view is to be rendered. Along<br/>with <see cref="XRViewport.Width"/> and the origin point given by<br/><see cref="XRViewport.X"/> and <see cref="XRViewport.Y"/>, this defines the<br/>area within which rendered content will be drawn.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The viewport&amp;apos;s height in pixels.</value>
+</XRViewportHeight>
 <XRViewportWidth>
 <summary>
 The read-only <see cref="XRViewport"/> property<br/><strong><c>width</c></strong> specifies the width of the viewport, in pixels,<br/>onto the drawing surface the 3D scene is to be rendered into. This is defined<br/>using this property along with the viewport's <see cref="XRViewport.Height"/><br/>and its origin given by its properties <see cref="XRViewport.X"/> and<br/><see cref="XRViewport.Y"/>.
@@ -25,15 +34,6 @@ The read-only <see cref="XRViewport"/> interface's<br/><strong><c>x</c></strong>
 </remarks>
 <value>The offset from the left edge of the rendering surface to the left edge of the<br/>viewport, in pixels.</value>
 </XRViewportX>
-<XRViewportHeight>
-<summary>
-The read-only <see cref="XRViewport"/> property<br/><strong><c>height</c></strong> specifies the height, in pixels, of the viewport<br/>onto the drawing surface within which the WebXR view is to be rendered. Along<br/>with <see cref="XRViewport.Width"/> and the origin point given by<br/><see cref="XRViewport.X"/> and <see cref="XRViewport.Y"/>, this defines the<br/>area within which rendered content will be drawn.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The viewport&amp;apos;s height in pixels.</value>
-</XRViewportHeight>
 <XRViewportY>
 <summary>
 The read-only <see cref="XRViewport"/> interface's<br/><strong><c>y</c></strong> property indicates the offset from the bottom edge of<br/>the destination surface (typically a <see cref="XRWebGLLayer"/>) to the bottom edge of<br/>the viewport within the surface into which WebXR content is to be rendered. The<br/>viewport's <see cref="XRViewport.X"/> property identifies the <c>x</c><br/>component of the origin, and its is given by the <see cref="XRViewPort.Width"/><br/>and <see cref="XRViewport.Height"/> properties.

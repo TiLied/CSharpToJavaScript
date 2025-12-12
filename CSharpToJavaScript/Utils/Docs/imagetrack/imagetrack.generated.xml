@@ -8,33 +8,6 @@ The <strong><c>ImageTrack</c></strong> interface of the <see cref="'WebCodecs AP
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ImageTrack>
-<ImageTrackFrameCount>
-<summary>
-The <strong><c>frameCount</c></strong> property of the <see cref="ImageTrack"/> interface returns the number of frames in the track.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/frameCount"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</ImageTrackFrameCount>
-<ImageTrackSelected>
-<summary>
-The <strong><c>selected</c></strong> property of the <see cref="ImageTrack"/> interface returns <c>true</c> if the track is selected for decoding.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/selected"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Boolean"/>, if <c>true</c> the track is selected for decoding.</value>
-</ImageTrackSelected>
-<ImageTrackRepetitionCount>
-<summary>
-The <strong><c>repetitionCount</c></strong> property of the <see cref="ImageTrack"/> interface returns the number of repetitions of this track.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/repetitionCount"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</ImageTrackRepetitionCount>
 <ImageTrackAnimated>
 <summary>
 The <strong><c>animated</c></strong> property of the <see cref="ImageTrack"/> interface returns <c>true</c> if the track is animated and therefore has multiple frames.
@@ -44,4 +17,31 @@ The <strong><c>animated</c></strong> property of the <see cref="ImageTrack"/> in
 </remarks>
 <value>A <see cref="Boolean"/>, if <c>true</c> this is an animated track.</value>
 </ImageTrackAnimated>
+<ImageTrackFrameCount>
+<summary>
+The <strong><c>frameCount</c></strong> property of the <see cref="ImageTrack"/> interface returns the number of frames in the track.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/frameCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ImageTrackFrameCount>
+<ImageTrackRepetitionCount>
+<summary>
+The <strong><c>repetitionCount</c></strong> property of the <see cref="ImageTrack"/> interface returns the number of repetitions of this track.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/repetitionCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ImageTrackRepetitionCount>
+<ImageTrackSelected>
+<summary>
+The <strong><c>selected</c></strong> property of the <see cref="ImageTrack"/> interface returns <c>true</c> if the track is selected for decoding.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack/selected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>, if <c>true</c> the track is selected for decoding.</value>
+</ImageTrackSelected>
 </docs>

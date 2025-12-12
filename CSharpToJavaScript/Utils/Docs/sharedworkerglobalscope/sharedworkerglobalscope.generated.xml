@@ -9,16 +9,6 @@ The <strong><c>SharedWorkerGlobalScope</c></strong> object (the <see cref="Share
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SharedWorkerGlobalScope>
-<SharedWorkerGlobalScopeName>
-<summary>
-The <strong><c>name</c></strong> read-only property of the<br/><see cref="SharedWorkerGlobalScope"/> interface returns the name that the<br/><see cref="SharedWorker"/> was (optionally) given when it was created. This is the name<br/>that the <see cref="SharedWorker.SharedWorker"/> constructor can pass<br/>to get a reference to the <see cref="SharedWorkerGlobalScope"/>.
-</summary>
-<remarks>
-<para>-<see cref="SharedWorkerGlobalScope"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/name"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</SharedWorkerGlobalScopeName>
 <SharedWorkerGlobalScopeClose>
 <summary>
 The <strong><c>close()</c></strong> method of the <see cref="SharedWorkerGlobalScope"/> interface discards any tasks queued in the <c>SharedWorkerGlobalScope</c>&amp;apos;s event loop, effectively closing this particular scope.
@@ -39,4 +29,14 @@ The <strong><c>connect</c></strong> event is fired in shared workers at their <s
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/connect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SharedWorkerGlobalScopeConnect>
+<SharedWorkerGlobalScopeName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the<br/><see cref="SharedWorkerGlobalScope"/> interface returns the name that the<br/><see cref="SharedWorker"/> was (optionally) given when it was created. This is the name<br/>that the <see cref="SharedWorker.SharedWorker"/> constructor can pass<br/>to get a reference to the <see cref="SharedWorkerGlobalScope"/>.
+</summary>
+<remarks>
+<para>-<see cref="SharedWorkerGlobalScope"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SharedWorkerGlobalScopeName>
 </docs>

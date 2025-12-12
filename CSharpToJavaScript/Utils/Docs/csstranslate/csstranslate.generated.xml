@@ -8,6 +8,14 @@ The <strong><c>CSSTranslate</c></strong> interface of the <see href="https://dev
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTranslate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSTranslate>
+<CSSTranslateCSSTranslate>
+<summary>
+The <strong><c>CSSTranslate()</c></strong> constructor creates a<br/>new <see cref="CSSTranslate"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate">translate()</see> value of the<br/>individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTranslate/CSSTranslate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTranslateCSSTranslate>
 <CSSTranslateX>
 <summary>
 The <strong><c>x</c></strong> property of the<br/><see cref="CSSTranslate"/> interface gets and sets the abscissa or x-axis of the<br/>translating vector.
@@ -17,14 +25,15 @@ The <strong><c>x</c></strong> property of the<br/><see cref="CSSTranslate"/> int
 </remarks>
 <value>A <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'length-percentage'">'length-percentage'</see></value>
 </CSSTranslateX>
-<CSSTranslateCSSTranslate>
+<CSSTranslateY>
 <summary>
-The <strong><c>CSSTranslate()</c></strong> constructor creates a<br/>new <see cref="CSSTranslate"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate">translate()</see> value of the<br/>individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
+The <strong><c>y</c></strong> property of the<br/><see cref="CSSTranslate"/> interface gets and sets the ordinate or y-axis of the<br/>translating vector.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTranslate/CSSTranslate"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTranslate/y"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</CSSTranslateCSSTranslate>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'length-percentage'">'length-percentage'</see></value>
+</CSSTranslateY>
 <CSSTranslateZ>
 <summary>
 The <strong><c>z</c></strong> property of the<br/><see cref="CSSTranslate"/> interface representing the z-component of the translating<br/>vector. A positive value moves the element towards the viewer, and a negative value<br/>farther away.
@@ -35,13 +44,4 @@ The <strong><c>z</c></strong> property of the<br/><see cref="CSSTranslate"/> int
 </remarks>
 <value>A <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'length'">'length'</see>.</value>
 </CSSTranslateZ>
-<CSSTranslateY>
-<summary>
-The <strong><c>y</c></strong> property of the<br/><see cref="CSSTranslate"/> interface gets and sets the ordinate or y-axis of the<br/>translating vector.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTranslate/y"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'length-percentage'">'length-percentage'</see></value>
-</CSSTranslateY>
 </docs>

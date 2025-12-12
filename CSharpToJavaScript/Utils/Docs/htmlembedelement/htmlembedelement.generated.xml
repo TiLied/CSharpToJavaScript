@@ -9,16 +9,6 @@ The <strong><c>HTMLEmbedElement</c></strong> interface provides special properti
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLEmbedElement>
-<HTMLEmbedElementWidth>
-<summary>
-The <strong><c>width</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> element, indicating the displayed width of the resource in CSS pixels.
-</summary>
-<remarks>
-<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string indicating the displayed width of the resource in CSS pixels.</value>
-</HTMLEmbedElementWidth>
 <HTMLEmbedElementGetSVGDocument>
 <summary>
 The <strong><c>getSVGDocument()</c></strong> method of the <see cref="HTMLEmbedElement"/> interface returns the <see cref="Document"/> object of the embedded SVG.
@@ -29,16 +19,6 @@ The <strong><c>getSVGDocument()</c></strong> method of the <see cref="HTMLEmbedE
 </remarks>
 <returns>A <see cref="Document"/>.</returns>
 </HTMLEmbedElementGetSVGDocument>
-<HTMLEmbedElementSrc>
-<summary>
-The <strong><c>src</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that indicates the URL of the resource being embedded.
-</summary>
-<remarks>
-<para>It reflects the <c>src</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> element.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement/src"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLEmbedElementSrc>
 <HTMLEmbedElementHeight>
 <summary>
 The <strong><c>height</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that reflects the <c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> element, indicating the displayed height of the resource in CSS pixels.
@@ -49,6 +29,16 @@ The <strong><c>height</c></strong> property of the <see cref="HTMLEmbedElement"/
 </remarks>
 <value>A string indicating the displayed height of the resource in CSS pixels.</value>
 </HTMLEmbedElementHeight>
+<HTMLEmbedElementSrc>
+<summary>
+The <strong><c>src</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that indicates the URL of the resource being embedded.
+</summary>
+<remarks>
+<para>It reflects the <c>src</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLEmbedElementSrc>
 <HTMLEmbedElementType>
 <summary>
 The <strong><c>type</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that reflects the <c>type</c> attribute of the {{HTMLElement("embed")}} element, indicating the <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> of the resource. It reflects the {{htmlelement("embed")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/embed#type"><c>type</c></see> attribute
@@ -59,4 +49,14 @@ The <strong><c>type</c></strong> property of the <see cref="HTMLEmbedElement"/> 
 </remarks>
 <value>A string; the MIME type of the resource.</value>
 </HTMLEmbedElementType>
+<HTMLEmbedElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the <see cref="HTMLEmbedElement"/> interface returns a string that reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> element, indicating the displayed width of the resource in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the displayed width of the resource in CSS pixels.</value>
+</HTMLEmbedElementWidth>
 </docs>

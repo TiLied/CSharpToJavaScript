@@ -9,6 +9,26 @@ The <strong><c>RTCRtpScriptTransformer</c></strong> interface of the <see href="
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCRtpScriptTransformer>
+<RTCRtpScriptTransformerGenerateKeyFrame>
+<summary>
+The <strong><c>generateKeyFrame()</c></strong> method of the <see cref="RTCRtpScriptTransformer"/> interface causes a video encoder to generate a key frame.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/generateKeyFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with the timestamp of the frame, or rejects with an exception value.</returns>
+</RTCRtpScriptTransformerGenerateKeyFrame>
+<RTCRtpScriptTransformerOptions>
+<summary>
+The <strong><c>options</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns the object that was (optionally) passed as the second argument <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform">during construction</see> of the corresponding <see cref="RTCRtpScriptTransform"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/options"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object.</value>
+</RTCRtpScriptTransformerOptions>
 <RTCRtpScriptTransformerReadable>
 <summary>
 The <strong><c>readable</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns a <see cref="ReadableStream"/> instance is a source for encoded media frames.
@@ -31,16 +51,6 @@ The <strong><c>sendKeyFrameRequest()</c></strong> method of the <see cref="RTCRt
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with <c>undefined</c> once the request is sent, or the user agent decides that it does not need to.</returns>
 </RTCRtpScriptTransformerSendKeyFrameRequest>
-<RTCRtpScriptTransformerOptions>
-<summary>
-The <strong><c>options</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns the object that was (optionally) passed as the second argument <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform">during construction</see> of the corresponding <see cref="RTCRtpScriptTransform"/>.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/options"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An object.</value>
-</RTCRtpScriptTransformerOptions>
 <RTCRtpScriptTransformerWritable>
 <summary>
 The <strong><c>writable</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns a <see cref="WritableStream"/> instance that can be used as a sink for encoded media frames enqueued on the corresponding <see cref="RTCRtpScriptTransformer.Readable"/>.
@@ -51,14 +61,4 @@ The <strong><c>writable</c></strong> read-only property of the <see cref="RTCRtp
 </remarks>
 <value>A <see cref="WritableStream"/>.</value>
 </RTCRtpScriptTransformerWritable>
-<RTCRtpScriptTransformerGenerateKeyFrame>
-<summary>
-The <strong><c>generateKeyFrame()</c></strong> method of the <see cref="RTCRtpScriptTransformer"/> interface causes a video encoder to generate a key frame.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/generateKeyFrame"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that fulfills with the timestamp of the frame, or rejects with an exception value.</returns>
-</RTCRtpScriptTransformerGenerateKeyFrame>
 </docs>

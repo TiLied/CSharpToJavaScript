@@ -9,16 +9,6 @@ The <strong><c>SVGClipPathElement</c></strong> interface provides access to the 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGClipPathElement>
-<SVGClipPathElementTransform>
-<summary>
-The read-only <strong><c>transform</c></strong> property of the <see cref="SVGClipPathElement"/> interface reflects the {{SVGAttr("transform")}} attribute of a {{SVGElement("clipPath")}} element, that is a list of transformations applied to the element.
-</summary>
-<remarks>
-<para>-clipPathUnits<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement/transform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGTransformList"/>.</value>
-</SVGClipPathElementTransform>
 <SVGClipPathElementClipPathUnits>
 <summary>
 The read-only <strong><c>clipPathUnits</c></strong> property of the <see cref="SVGClipPathElement"/> interface reflects the {{SVGAttr("clipPathUnits")}} attribute of a {{SVGElement("clipPath")}} element which defines the coordinate system to use for the content of the element.
@@ -30,4 +20,14 @@ The read-only <strong><c>clipPathUnits</c></strong> property of the <see cref="S
 </remarks>
 <value>An <see cref="SVGAnimatedEnumeration"/> representing the coordinate system. The possible values are defined in the <see cref="SVGUnitTypes"/> interface:</value>
 </SVGClipPathElementClipPathUnits>
+<SVGClipPathElementTransform>
+<summary>
+The read-only <strong><c>transform</c></strong> property of the <see cref="SVGClipPathElement"/> interface reflects the {{SVGAttr("transform")}} attribute of a {{SVGElement("clipPath")}} element, that is a list of transformations applied to the element.
+</summary>
+<remarks>
+<para>-clipPathUnits<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement/transform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGTransformList"/>.</value>
+</SVGClipPathElementTransform>
 </docs>

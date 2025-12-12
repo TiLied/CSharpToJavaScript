@@ -7,34 +7,6 @@ The <strong><c>WritableStreamDefaultWriter</c></strong> interface of the <see hr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WritableStreamDefaultWriter>
-<WritableStreamDefaultWriterWrite>
-<summary>
-The <strong><c>write()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface writes a passed chunk of data to a<br/><see cref="WritableStream"/> and its underlying sink, then returns a<br/><see cref="Promise"/> that resolves to indicate the success or failure of the write<br/>operation.
-</summary>
-<remarks>
-<para>Note that what &amp;quot;success&amp;quot; means is up to the underlying sink; it might indicate that the<br/>chunk has been accepted, and not necessarily that it is safely saved to its ultimate<br/>destination.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/write"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/>, which fulfills with the <c>undefined</c> upon a<br/>successful write, or rejects if the write fails or stream becomes errored before the<br/>writing process is initiated.</returns>
-</WritableStreamDefaultWriterWrite>
-<WritableStreamDefaultWriterReleaseLock>
-<summary>
-The <strong><c>releaseLock()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface releases the writer's lock on the<br/>corresponding stream. After the lock is released, the writer is no longer active. If the<br/>associated stream is errored when the lock is released, the writer will appear errored<br/>in the same way from now on; otherwise, the writer will appear closed.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/releaseLock"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</WritableStreamDefaultWriterReleaseLock>
-<WritableStreamDefaultWriterClosed>
-<summary>
-The <strong><c>closed</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns a<br/><see cref="Promise"/> that fulfills if the stream becomes closed, or rejects if<br/>the stream errors or the writer&amp;apos;s lock is released.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/closed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Promise"/>.</value>
-</WritableStreamDefaultWriterClosed>
 <WritableStreamDefaultWriterAbort>
 <summary>
 The <strong><c>abort()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface aborts the stream, signaling that<br/>the producer can no longer successfully write to the stream and it is to be immediately<br/>moved to an error state, with any queued writes discarded.
@@ -45,34 +17,6 @@ The <strong><c>abort()</c></strong> method of the<br/><see cref="WritableStreamD
 </remarks>
 <returns>A <see cref="Promise"/>, which fulfills to <c>undefined</c> when the stream is aborted, or<br/>rejects with an error if the writer was inactive or the receiver stream is invalid.</returns>
 </WritableStreamDefaultWriterAbort>
-<WritableStreamDefaultWriterDesiredSize>
-<summary>
-The <strong><c>desiredSize</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns the desired size required<br/>to fill the stream&amp;apos;s internal queue.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/desiredSize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream cannot be successfully written to<br/>(due to either being errored, or having an abort queued up), and zero if the stream is<br/>closed.</value>
-</WritableStreamDefaultWriterDesiredSize>
-<WritableStreamDefaultWriterWritableStreamDefaultWriter>
-<summary>
-The <strong><c>WritableStreamDefaultWriter()</c></strong><br/>constructor creates a new <see cref="WritableStreamDefaultWriter"/> object instance.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>You generally wouldn&amp;apos;t use this constructor manually; instead,<br/>you'd use the <see cref="WritableStream.GetWriter"/> method.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An instance of the <see cref="WritableStreamDefaultWriter"/> object.</returns>
-</WritableStreamDefaultWriterWritableStreamDefaultWriter>
-<WritableStreamDefaultWriterReady>
-<summary>
-The <strong><c>ready</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns a {{jsxref("Promise")}}<br/>that resolves when the desired size of the stream&amp;apos;s internal queue transitions from<br/>non-positive to positive, signaling that it is no longer applying backpressure.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/ready"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Promise"/>.</value>
-</WritableStreamDefaultWriterReady>
 <WritableStreamDefaultWriterClose>
 <summary>
 The <strong><c>close()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface closes the associated writable<br/>stream.
@@ -83,4 +27,60 @@ The <strong><c>close()</c></strong> method of the<br/><see cref="WritableStreamD
 </remarks>
 <returns>A <see cref="Promise"/>, which fulfills with the <c>undefined</c> if all<br/>remaining chunks were successfully written before the close, or rejects with an error if<br/>a problem was encountered during the process.</returns>
 </WritableStreamDefaultWriterClose>
+<WritableStreamDefaultWriterClosed>
+<summary>
+The <strong><c>closed</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns a<br/><see cref="Promise"/> that fulfills if the stream becomes closed, or rejects if<br/>the stream errors or the writer&amp;apos;s lock is released.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/closed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/>.</value>
+</WritableStreamDefaultWriterClosed>
+<WritableStreamDefaultWriterDesiredSize>
+<summary>
+The <strong><c>desiredSize</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns the desired size required<br/>to fill the stream&amp;apos;s internal queue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/desiredSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream cannot be successfully written to<br/>(due to either being errored, or having an abort queued up), and zero if the stream is<br/>closed.</value>
+</WritableStreamDefaultWriterDesiredSize>
+<WritableStreamDefaultWriterReady>
+<summary>
+The <strong><c>ready</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns a {{jsxref("Promise")}}<br/>that resolves when the desired size of the stream&amp;apos;s internal queue transitions from<br/>non-positive to positive, signaling that it is no longer applying backpressure.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/>.</value>
+</WritableStreamDefaultWriterReady>
+<WritableStreamDefaultWriterReleaseLock>
+<summary>
+The <strong><c>releaseLock()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface releases the writer's lock on the<br/>corresponding stream. After the lock is released, the writer is no longer active. If the<br/>associated stream is errored when the lock is released, the writer will appear errored<br/>in the same way from now on; otherwise, the writer will appear closed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/releaseLock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WritableStreamDefaultWriterReleaseLock>
+<WritableStreamDefaultWriterWritableStreamDefaultWriter>
+<summary>
+The <strong><c>WritableStreamDefaultWriter()</c></strong><br/>constructor creates a new <see cref="WritableStreamDefaultWriter"/> object instance.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You generally wouldn&amp;apos;t use this constructor manually; instead,<br/>you'd use the <see cref="WritableStream.GetWriter"/> method.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An instance of the <see cref="WritableStreamDefaultWriter"/> object.</returns>
+</WritableStreamDefaultWriterWritableStreamDefaultWriter>
+<WritableStreamDefaultWriterWrite>
+<summary>
+The <strong><c>write()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter"/> interface writes a passed chunk of data to a<br/><see cref="WritableStream"/> and its underlying sink, then returns a<br/><see cref="Promise"/> that resolves to indicate the success or failure of the write<br/>operation.
+</summary>
+<remarks>
+<para>Note that what &amp;quot;success&amp;quot; means is up to the underlying sink; it might indicate that the<br/>chunk has been accepted, and not necessarily that it is safely saved to its ultimate<br/>destination.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/write"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills with the <c>undefined</c> upon a<br/>successful write, or rejects if the write fails or stream becomes errored before the<br/>writing process is initiated.</returns>
+</WritableStreamDefaultWriterWrite>
 </docs>

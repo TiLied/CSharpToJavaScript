@@ -7,15 +7,6 @@ A <c>TimeRanges</c> object includes one or more ranges of time, each specified b
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TimeRanges>
-<TimeRangesLength>
-<summary>
-The <strong><c>TimeRanges.length</c></strong> read-only property returns the<br/>number of ranges in the object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</TimeRangesLength>
 <TimeRangesEnd>
 <summary>
 The <strong><c>end()</c></strong> method of the <see cref="TimeRanges"/> interface returns the time offset (in seconds) at which a specified time range ends.
@@ -25,6 +16,15 @@ The <strong><c>end()</c></strong> method of the <see cref="TimeRanges"/> interfa
 </remarks>
 <returns>A number.</returns>
 </TimeRangesEnd>
+<TimeRangesLength>
+<summary>
+The <strong><c>TimeRanges.length</c></strong> read-only property returns the<br/>number of ranges in the object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</TimeRangesLength>
 <TimeRangesStart>
 <summary>
 The <strong><c>start()</c></strong> method of the <see cref="TimeRanges"/> interface returns the time offset (in seconds) at which a specified time range begins.

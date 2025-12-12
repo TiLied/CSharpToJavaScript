@@ -9,36 +9,6 @@ The <strong><c>DocumentType</c></strong> interface represents a <see cref="Node"
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DocumentType>
-<DocumentTypeReplaceWith>
-<summary>
-The <strong><c>DocumentType.replaceWith()</c></strong> method replaces the document type with a set of given nodes.
-</summary>
-<remarks>
-<para>-<see cref="CharacterData.ReplaceWith"/><br/>-<see cref="Element.ReplaceWith"/><br/>-<see cref="CharacterData.ReplaceWith"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/replaceWith"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</DocumentTypeReplaceWith>
-<DocumentTypeBefore>
-<summary>
-The <strong><c>DocumentType.before()</c></strong> method inserts a set of<br/><see cref="Node"/> objects or strings in the children list of the<br/><c>DocumentType</c>&amp;apos;s parent, just before the <c>DocumentType</c>.<br/>Strings are inserted as equivalent <see cref="Text"/> nodes.
-</summary>
-<remarks>
-<para>-<see cref="DocumentType.After"/><br/>-<see cref="CharacterData.Before"/><br/>-<see cref="Element.Before"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/before"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</DocumentTypeBefore>
-<DocumentTypeRemove>
-<summary>
-The <strong><c>DocumentType.remove()</c></strong> method removes a document&amp;apos;s <c>doctype</c>.<br/>If it is already detached from the document, calling <c>remove()</c> does nothing.
-</summary>
-<remarks>
-<para>-<see cref="Document.Doctype"/><br/>-<see cref="CharacterData.Remove"/><br/>-<see cref="Element.Remove"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/remove"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</DocumentTypeRemove>
 <DocumentTypeAfter>
 <summary>
 The <strong><c>DocumentType.after()</c></strong> method inserts a set of<br/><see cref="Node"/> objects or strings in the children list of the<br/><c>DocumentType</c>&amp;apos;s parent, just after the <c>DocumentType</c>.<br/>Strings are inserted as equivalent <see cref="Text"/> nodes.
@@ -49,26 +19,16 @@ The <strong><c>DocumentType.after()</c></strong> method inserts a set of<br/><se
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </DocumentTypeAfter>
-<DocumentTypeSystemId>
+<DocumentTypeBefore>
 <summary>
-The read-only <strong><c>systemId</c></strong> property of the <see cref="DocumentType"/> returns the URL of the associated DTD.
+The <strong><c>DocumentType.before()</c></strong> method inserts a set of<br/><see cref="Node"/> objects or strings in the children list of the<br/><c>DocumentType</c>&amp;apos;s parent, just before the <c>DocumentType</c>.<br/>Strings are inserted as equivalent <see cref="Text"/> nodes.
 </summary>
 <remarks>
-<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/systemId"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="DocumentType.After"/><br/>-<see cref="CharacterData.Before"/><br/>-<see cref="Element.Before"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/before"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</DocumentTypeSystemId>
-<DocumentTypePublicId>
-<summary>
-The read-only <strong><c>publicId</c></strong> property of the <see cref="DocumentType"/> returns a formal identifier of the document.
-</summary>
-<remarks>
-<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/publicId"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</DocumentTypePublicId>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentTypeBefore>
 <DocumentTypeName>
 <summary>
 The read-only <strong><c>name</c></strong> property of the <see cref="DocumentType"/> returns the type of the document.
@@ -79,4 +39,44 @@ The read-only <strong><c>name</c></strong> property of the <see cref="DocumentTy
 </remarks>
 <value>A string.</value>
 </DocumentTypeName>
+<DocumentTypePublicId>
+<summary>
+The read-only <strong><c>publicId</c></strong> property of the <see cref="DocumentType"/> returns a formal identifier of the document.
+</summary>
+<remarks>
+<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/publicId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</DocumentTypePublicId>
+<DocumentTypeRemove>
+<summary>
+The <strong><c>DocumentType.remove()</c></strong> method removes a document&amp;apos;s <c>doctype</c>.<br/>If it is already detached from the document, calling <c>remove()</c> does nothing.
+</summary>
+<remarks>
+<para>-<see cref="Document.Doctype"/><br/>-<see cref="CharacterData.Remove"/><br/>-<see cref="Element.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentTypeRemove>
+<DocumentTypeReplaceWith>
+<summary>
+The <strong><c>DocumentType.replaceWith()</c></strong> method replaces the document type with a set of given nodes.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.ReplaceWith"/><br/>-<see cref="Element.ReplaceWith"/><br/>-<see cref="CharacterData.ReplaceWith"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/replaceWith"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentTypeReplaceWith>
+<DocumentTypeSystemId>
+<summary>
+The read-only <strong><c>systemId</c></strong> property of the <see cref="DocumentType"/> returns the URL of the associated DTD.
+</summary>
+<remarks>
+<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/systemId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</DocumentTypeSystemId>
 </docs>

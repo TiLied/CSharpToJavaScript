@@ -9,26 +9,27 @@ The <strong><c>IDBTransaction</c></strong> interface of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBTransaction>
-<IDBTransactionObjectStoreNames>
+<IDBTransactionAbort>
 <summary>
-The <strong><c>objectStoreNames</c></strong> read-only property of the<br/><see cref="IDBTransaction"/> interface returns a <see cref="DOMStringList"/> of names<br/>of <see cref="IDBObjectStore"/> objects.
+The <strong><c>abort()</c></strong> method of the <see cref="IDBTransaction"/><br/>interface rolls back all the changes to objects in the database associated with this<br/>transaction.
 </summary>
 <remarks>
+<para>All pending <see cref="IDBRequest"/> objects created during this transaction have<br/>their <see cref="IDBRequest.Error"/> attribute set to an <c>AbortError</c> <see cref="DOMException"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStoreNames"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMStringList"/> of names of <see cref="IDBObjectStore"/> objects.</value>
-</IDBTransactionObjectStoreNames>
-<IDBTransactionError>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBTransactionAbort>
+<IDBTransactionAbort>
 <summary>
-The <strong><c>IDBTransaction.error</c></strong> property of the <see cref="IDBTransaction"/> interface<br/>returns the type of error when there is an unsuccessful transaction.
+The <c>abort</c> event is fired when an <c>IndexedDB</c> transaction is aborted.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error"> <em>See also on MDN</em> </seealso></para>
+<para>This can happen for any of the following reasons:</para><para>This non-cancelable event <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling">bubbles</see> to the associated <see cref="IDBDatabase"/> object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMException"/> containing the relevant error, or <c>null</c> if there are none.It can be a reference to the same error as the request object that raised it, or a transaction<br/>failure (for example <c>QuotaExceededError</c>).This property is <c>null</c> if the transaction is not finished, or is finished and<br/>was successfully committed.</value>
-</IDBTransactionError>
+</IDBTransactionAbort>
 <IDBTransactionCommit>
 <summary>
 The <strong><c>commit()</c></strong> method of the <see cref="IDBTransaction"/> interface commits the transaction if it is called on an active transaction.
@@ -40,16 +41,45 @@ The <strong><c>commit()</c></strong> method of the <see cref="IDBTransaction"/> 
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </IDBTransactionCommit>
-<IDBTransactionAbort>
+<IDBTransactionComplete>
 <summary>
-The <c>abort</c> event is fired when an <c>IndexedDB</c> transaction is aborted.
+The <strong><c>complete</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</see> is fired when the transaction has successfully committed, which is either after you explicit call <see cref="IDBTransaction.Commit"/> or when all requests have been successfully completed, and after handling their results, no new requests have been placed. See <see cref="IDBTransaction"/> for more information.
 </summary>
 <remarks>
-<para>This can happen for any of the following reasons:</para><para>This non-cancelable event <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling">bubbles</see> to the associated <see cref="IDBDatabase"/> object.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</IDBTransactionAbort>
+</IDBTransactionComplete>
+<IDBTransactionDb>
+<summary>
+The <strong><c>db</c></strong> read-only property of the <see cref="IDBTransaction"/> interface returns the database connection<br/>with which this transaction is associated.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/db"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="IDBDatabase"/> object.</value>
+</IDBTransactionDb>
+<IDBTransactionDurability>
+<summary>
+The <strong><c>durability</c></strong> read-only property of the <see cref="IDBTransaction"/> interface returns the durability hint the transaction was created with.<br/>This is a hint to the user agent of whether to prioritize performance or durability when committing the transaction.
+</summary>
+<remarks>
+<para>The value of this property is defined in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction#options"><c>options.durability</c></see> parameter when creating a transaction using <see cref="IDBDatabase.Transaction"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/durability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Any of the following literal <see cref="'String'"/>:</value>
+</IDBTransactionDurability>
+<IDBTransactionError>
+<summary>
+The <strong><c>IDBTransaction.error</c></strong> property of the <see cref="IDBTransaction"/> interface<br/>returns the type of error when there is an unsuccessful transaction.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMException"/> containing the relevant error, or <c>null</c> if there are none.It can be a reference to the same error as the request object that raised it, or a transaction<br/>failure (for example <c>QuotaExceededError</c>).This property is <c>null</c> if the transaction is not finished, or is finished and<br/>was successfully committed.</value>
+</IDBTransactionError>
 <IDBTransactionError>
 <summary>
 The <c>error</c> event is fired on <c>IDBTransaction</c> when a request returns an error and the event bubbles up to the transaction object.
@@ -70,26 +100,6 @@ The <strong><c>mode</c></strong> read-only property of the<br/><see cref="IDBTra
 </remarks>
 <value>An object defining the mode for isolating access to<br/>data in the current object stores:<br/>A string defining the mode for isolating access to data in the current object stores.<br/>The following values are available:</value>
 </IDBTransactionMode>
-<IDBTransactionComplete>
-<summary>
-The <strong><c>complete</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</see> is fired when the transaction has successfully committed, which is either after you explicit call <see cref="IDBTransaction.Commit"/> or when all requests have been successfully completed, and after handling their results, no new requests have been placed. See <see cref="IDBTransaction"/> for more information.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</IDBTransactionComplete>
-<IDBTransactionAbort>
-<summary>
-The <strong><c>abort()</c></strong> method of the <see cref="IDBTransaction"/><br/>interface rolls back all the changes to objects in the database associated with this<br/>transaction.
-</summary>
-<remarks>
-<para>All pending <see cref="IDBRequest"/> objects created during this transaction have<br/>their <see cref="IDBRequest.Error"/> attribute set to an <c>AbortError</c> <see cref="DOMException"/>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</IDBTransactionAbort>
 <IDBTransactionObjectStore>
 <summary>
 The <strong><c>objectStore()</c></strong> method of the<br/><see cref="IDBTransaction"/> interface returns an object store that has already been<br/>added to the scope of this transaction.
@@ -101,24 +111,14 @@ The <strong><c>objectStore()</c></strong> method of the<br/><see cref="IDBTransa
 </remarks>
 <returns>An <see cref="IDBObjectStore"/> object for accessing an object store.</returns>
 </IDBTransactionObjectStore>
-<IDBTransactionDurability>
+<IDBTransactionObjectStoreNames>
 <summary>
-The <strong><c>durability</c></strong> read-only property of the <see cref="IDBTransaction"/> interface returns the durability hint the transaction was created with.<br/>This is a hint to the user agent of whether to prioritize performance or durability when committing the transaction.
-</summary>
-<remarks>
-<para>The value of this property is defined in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction#options"><c>options.durability</c></see> parameter when creating a transaction using <see cref="IDBDatabase.Transaction"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/durability"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Any of the following literal <see cref="'String'"/>:</value>
-</IDBTransactionDurability>
-<IDBTransactionDb>
-<summary>
-The <strong><c>db</c></strong> read-only property of the <see cref="IDBTransaction"/> interface returns the database connection<br/>with which this transaction is associated.
+The <strong><c>objectStoreNames</c></strong> read-only property of the<br/><see cref="IDBTransaction"/> interface returns a <see cref="DOMStringList"/> of names<br/>of <see cref="IDBObjectStore"/> objects.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/db"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStoreNames"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="IDBDatabase"/> object.</value>
-</IDBTransactionDb>
+<value>A <see cref="DOMStringList"/> of names of <see cref="IDBObjectStore"/> objects.</value>
+</IDBTransactionObjectStoreNames>
 </docs>

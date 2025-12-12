@@ -1,0 +1,154 @@
+<docs>
+<WebXR_Device_API>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> <strong>WebXR</strong> is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (<strong>virtual reality</strong>, or <strong>VR</strong>), or for adding graphical imagery to the real world, (<strong>augmented reality</strong>, or <strong>AR</strong>). The <strong>WebXR Device API</strong> implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
+</summary>
+<remarks>
+<para>WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real-world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.</para><para>To accomplish these things, the WebXR Device API provides the following key capabilities:</para><para>At the most basic level, a scene is presented in 3D by computing the perspective to apply to the scene in order to render it from the viewpoint of each of the user&amp;apos;s eyes by computing the position of each eye and rendering the scene from that position, looking in the direction the user is currently facing. Each of these two images is rendered into a single framebuffer, with the left eye&amp;apos;s rendered image on the left and the right eye&amp;apos;s viewpoint rendered into the right half of the buffer. Once both eyes&amp;apos; perspectives on the scene have been rendered, the resulting framebuffer is delivered to the WebXR device to be presented to the user through their headset or other appropriate display device.</para><para>While the older <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.</para><para>A typical XR device can have either 3 or 6 degrees of freedom and might or might not have an external positional sensor.</para><para>The equipment may also include an accelerometer, barometer, or other sensors which are used to sense when the user moves through space, rotates their head, or the like.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics">Drawing graphics</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>: Accelerated 2D and 3D graphics on the web<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>: 2D drawing for the web<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_API>
+<WebXR_Device_APIBounded_reference_spaces>
+<summary>
+Among the various reference spaces available in the WebXR set of APIs, the <strong><c>bounded-floor</c></strong><strong> reference space</strong> is somewhat unique. Not only is it represented by a unique subclass, <see cref="XRBoundedReferenceSpace"/>, but it's the only one which restricts movement based not upon virtual restrictions but upon limitations imposed by the real world. This article examines bounded reference spaces as represented by <c>XRBoundedReferenceSpace</c>, describing what they are and how they&amp;apos;re used.
+</summary>
+<remarks>
+<para>There are many uses for bounded reference spaces, including projects such as virtual paint studios or 3D construction, modeling, or sculpting systems; training simulations or lesson scenarios; dance or other performance-based games; or the preview of 3D objects in the real world using augmented reality.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Gamepads">Supporting gamepads in WebXR applications</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIBounded_reference_spaces>
+<WebXR_Device_APICameras>
+<summary>
+The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: <strong>WebXR does not have cameras</strong>. There&amp;apos;s no magic object provided by either the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> or the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> API that represents the viewer that you can rotate and move around to automatically change what&amp;apos;s seen on the screen. In this guide we show how use <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.
+</summary>
+<remarks>
+<para>Animating 3D graphics is an area of software development that brings together multiple disciplines in computer science, mathematics, art, graphic design, kinematics, anatomy, physiology, physics, and cinematography. Since we don&amp;apos;t have a real camera, we imagine one, reproducing the <strong>effect</strong> of having a camera, without actually having the ability to move the user around the scene.</para><para>There are a few articles about the fundamental math, geometry, and other concepts behind WebGL and WebXR which may be useful to read before or while reading this one, including:</para><para><strong>Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from </strong><strong><see href="https://web.archive.org/web/20170525025459/https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/">an article on the FilmmakerIQ website</see></strong><strong>; namely, from </strong><strong><see href="https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png">this image</see></strong><strong> which is found all over the web. We assume due to their frequent reuse that they&amp;apos;re available under a permissive license, ownership is not certain. We hope that it&amp;apos;s freely usable; if not, and you&amp;apos;re the owner, please let us know and we&amp;apos;ll find or produce new diagrams. Or, if you&amp;apos;re happy to let us continue to use the images, please let us know so we can credit you properly!</strong></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APICameras>
+<WebXR_Device_APIFundamentals>
+<summary>
+WebXR, with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as <strong>mixed reality (MR)</strong> or <strong>cross reality (XR)</strong>. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.
+</summary>
+<remarks>
+<para>This guide provides an overview of what WebXR is and how it works, as well as the preliminary foundation needed to start developing augmented and virtual reality experiences for the web.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIFundamentals>
+<WebXR_Device_APIGeometry>
+<summary>
+At a fundamental level, rendering of scenes for <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> presentation in either augmented reality or virtual reality contexts is performed using <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see>, so the two APIs share much of the same design language. However, in order to provide the ability to present scenes in true 3D using XR headsets and other such equipment, WebXR has additional concepts that must be understood.
+</summary>
+<remarks>
+<para>In this article, we introduce the ways in which WebXR expands upon the geometry of WebGL, and how the positions and orientations of objects—both physical and virtual—are described in relation to one another using spaces and, in particular, reference spaces.</para><para>The article <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see> builds upon the information provided here to cover how the physical position and orientation of the user&amp;apos;s head, as well as potentially other parts of their body such as the hands, are mapped into the digital world, as well as how the relative positions of both physical and virtual objects are tracked as they move around, so that the scene can be properly rendered and composited.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL: 2D and 3D rendering for the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIGeometry>
+<WebXR_Device_APIInputs>
+<summary>
+A full WebXR experience isn&amp;apos;t just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that&amp;apos;s fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
+</summary>
+<remarks>
+<para>In this guide, we&amp;apos;ll look at how to use WebXR&amp;apos;s input device management features to determine what input sources are available and how to then monitor those sources for inputs in order to handle user interactivity with your virtual or augmented environment.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIInputs>
+<WebXR_Device_APILifecycle>
+<summary>
+In this guide, we&amp;apos;ll get a birds-eye view of what&amp;apos;s involved in creating and driving a WebXR application, without diving down to the code level in detail. This serves as preparation for the next few articles in these WebXR guides, which cover <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">starting up and shutting down</see> a WebXR session, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">geometry</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">simulating cameras</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">spatial tracking</see>, and more.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Lifecycle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APILifecycle>
+<WebXR_Device_APILighting>
+<summary>
+Because the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> relies on other technologies—namely, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> and frameworks based upon it—to perform all rendering, texturing, and lighting of a scene, the same general lighting concepts apply to WebXR settings or scenes as to any other WebGL-generated display.
+</summary>
+<remarks>
+<para>However, there are issues and details to keep in mind while creating your lighting code, especially for augmented reality (AR) applications. This guide discusses these topics. And while this article provides brief reminders as to how lighting works in general, it is not by any means a tutorial in lighting or a guide to how to create a properly-lit 3D scene.</para>
+<para>-<see href="https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md">WebXR Lighting Estimation API explainer</see><br/>-<see href="https://github.com/immersive-web/lighting-estimation">WebXR Lighting Estimation API Level 1 specification</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL">Using shaders to apply color in WebGL</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">GLSL Shaders</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Lighting"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APILighting>
+<WebXR_Device_APIMovement_and_motion>
+<summary>
+In this article, we&amp;apos;ll make use of information introduced in the previous articles in our <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> tutorial series to construct an example which animates a rotating cube around which the user can move freely using a VR headset, keyboard, and/or mouse. This will help to solidify your understanding of how the geometry of 3D graphics and VR work, as well as to help ensure you understand the way the functions and data that are used during XR rendering work together.
+</summary>
+<remarks>
+<para><strong>Figure: Screenshot of this example in action</strong><br/><see href="https://developer.mozilla.orgxr-sample.png">Screenshot of example showing a textured cube the user can move around</see></para><para>The core of this example—the spinning, textured, lighted cube—is taken from our WebGL tutorial series; namely, the penultimate article in the series, covering <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">lighting in WebGL</see>.</para><para>While reading this article and the accompanying source code, it&amp;apos;s helpful to keep in mind that the display for a 3D headset is a single screen, divided in half. The left half of the screen is seen only by the left eye, while the right half is only seen by the right eye. Rendering the scene for immersive presentation requires multiple renders of the scene—once from the perspective of each eye.</para><para>When rendering the left eye, the <see cref="XRWebGLLayer"/> has its <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport">viewport</see> configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.</para><para>This example demonstrates this by showing the canvas on the screen, even when presenting a scene as an immersive display using an XR device.</para>
+<para>-<see href="https://learnwebgl.brown37.net/#">Learn WebGL</see> (includes some great visualizations of the camera and how it relates to the virtual world)<br/>-<see href="https://webglfundamentals.org/">WebGL Fundamentals</see><br/>-<see href="https://learnopengl.com/">Learn OpenGL</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIMovement_and_motion>
+<WebXR_Device_APIPerformance>
+<summary>
+WebXR applications involve multiple technologies which can be highly sensitive to performance constraints. As such, you may find yourself needing to make adjustments or compromises to optimize the performance of your WebXR application to be as usable as possible on the broadest assortment of target devices. In this guide, we&amp;apos;ll examine a variety of suggestions and recommendations that will help you make your WebXR app as performant as possible.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Performance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIPerformance>
+<WebXR_Device_APIPermissions_and_security>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> has several areas of security to contend with, from establishing <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> to ensuring the user intends to use the mixed reality presentation before activating it. Among other things, you need to confirm access to device features such as the microphone and/or camera, get permission to use immersive VR mode (if applicable), and so forth. The variety of hardware and software involved in XR brings multiple APIs and technologies into play. In this guide, we&amp;apos;ll cover how to ensure your app has the permissions it needs to provide a secure and private XR experience.
+</summary>
+<remarks>
+<para>The WebXR Device API is subject to a number of permission and security controls. While not onerous, they are worth being aware of. These mostly revolve around the fully-immersive <c>immersive-vr</c> session mode, but there are things to be aware of when setting up an AR session, as well.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIPermissions_and_security>
+<WebXR_Device_APIPerspective>
+<summary>
+Because <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> uses <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> to render the views that form the 3D environment displayed using the XR hardware, it&amp;apos;s easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn&amp;apos;t cause people to become ill from vertigo or other effects that can be caused when what&amp;apos;s being seen doesn&amp;apos;t match what the brain expects from reality.
+</summary>
+<remarks>
+<para>In this article, we examine scenarios in which the way your project calculates, applies, and thinks about perspective may differ from code written for non-XR applications.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Perspective"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIPerspective>
+<WebXR_Device_APIRendering>
+<summary>
+Once your WebXR environment has been set up and an <see cref="XRSession"/> created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the <see cref="XRSession"/> to obtain an <see cref="XRFrame"/> object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.
+</summary>
+<remarks>
+<para>Before you can render the virtual environment, you need to establish a WebXR session by creating an <see cref="XRSession"/> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession"><c>navigator.xr.requestSession()</c></see> method; you also need to associate the session with a framebuffer and perform other setup tasks. These setup tasks are described in the article <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Starting up and shutting down a WebXR session</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Rendering"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIRendering>
+<WebXR_Device_APISpatial_tracking>
+<summary>
+The WebXR APIs used for implementing augmented and virtual reality is designed specifically to provide the ability to insert a human into a virtual environment. To accomplish this, software needs the ability to not only track the locations, orientation, and movements of objects in the virtual world, but the user&amp;apos;s location, orientation, and movement as well. But WebXR goes beyond that by adding the ability to track the location, orientation, and motion of the input devices which generate data used to determine the position and movement of individual parts of the viewer&amp;apos;s body (with appropriate equipment).
+</summary>
+<remarks>
+<para>The location and movement of the user&amp;apos;s headset represent their head&amp;apos;s position and orientation in the virtual environment. Hand controllers represent their hands in the same manner. Other hardware elements can be used similarly to represent other parts of the body, providing additional data to use when simulating the user&amp;apos;s actions in their environment.</para><para>In this guide, we&amp;apos;ll explore how WebXR uses <strong>spaces</strong> and, more specifically, <strong>reference spaces</strong>, to track the positions, orientations, and movements of objects and of the user&amp;apos;s body in the virtual world.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This article presumes that you are familiar with the concepts introduced in <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</see>: that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APISpatial_tracking>
+<WebXR_Device_APIStartup_and_shutdown>
+<summary>
+Assuming you&amp;apos;re already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">Fundamentals of WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APIStartup_and_shutdown>
+<WebXR_Device_APITargeting>
+<summary>
+
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection">3D collision detection</see><br/>-<see href="https://hacks.mozilla.org/2015/10/html-5-games-3d-collision-detection/">HTML5 games: 3D collision detection</see> (Hacks blog)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Targeting"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebXR_Device_APITargeting>
+</docs>

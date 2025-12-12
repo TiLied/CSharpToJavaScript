@@ -20,37 +20,6 @@ The read-only <strong><c>ImageData.colorSpace</c></strong> property is a string 
 </remarks>
 <value>This property can have the following values:</value>
 </ImageDataColorSpace>
-<ImageDataWidth>
-<summary>
-The readonly <strong><c>ImageData.width</c></strong> property returns the number<br/>of pixels per row in the <see cref="ImageData"/> object.
-</summary>
-<remarks>
-<para>-<see cref="ImageData.Height"/><br/>-<see cref="ImageData"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ImageDataWidth>
-<ImageDataPixelFormat>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>ImageData.pixelFormat</c></strong> property is a string indicating the pixel format of the image data.
-</summary>
-<remarks>
-<para>The pixel format can be set during <c>ImageData</c> initialization using either the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData"><c>ImageData()</c></see> constructor or the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData"><c>createImageData()</c></see> method.</para>
-<para>-<see cref="ImageData"/><br/>-<see cref="Float16Array"/><br/>-<see cref="CanvasRenderingContext2D.CreateImageData"/><br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/pixelFormat"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>This property can have the following values:</value>
-</ImageDataPixelFormat>
-<ImageDataHeight>
-<summary>
-The readonly <strong><c>ImageData.height</c></strong> property returns the number<br/>of rows in the <see cref="ImageData"/> object.
-</summary>
-<remarks>
-<para>-<see cref="ImageData.Width"/><br/>-<see cref="ImageData"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ImageDataHeight>
 <ImageDataData>
 <summary>
 The readonly <strong><c>ImageData.data</c></strong> property returns a<br/>{{jsxref("Uint8ClampedArray")}} or {{jsxref("Float16Array")}} that contains the <see cref="ImageData"/> object's<br/>pixel data. Data is stored as a one-dimensional array in the RGBA order.
@@ -61,6 +30,16 @@ The readonly <strong><c>ImageData.data</c></strong> property returns a<br/>{{jsx
 </remarks>
 <value>The type depends on the <see cref="ImageData.PixelFormat"/> used:</value>
 </ImageDataData>
+<ImageDataHeight>
+<summary>
+The readonly <strong><c>ImageData.height</c></strong> property returns the number<br/>of rows in the <see cref="ImageData"/> object.
+</summary>
+<remarks>
+<para>-<see cref="ImageData.Width"/><br/>-<see cref="ImageData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ImageDataHeight>
 <ImageDataImageData>
 <summary>
 The <strong><c>ImageData()</c></strong> constructor returns a newly instantiated<br/><see cref="'ImageData'"/> object built from the typed array given and having the<br/>specified width and height.
@@ -72,4 +51,25 @@ The <strong><c>ImageData()</c></strong> constructor returns a newly instantiated
 </remarks>
 <returns>A new <see cref="'ImageData'"/> object.</returns>
 </ImageDataImageData>
+<ImageDataPixelFormat>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>ImageData.pixelFormat</c></strong> property is a string indicating the pixel format of the image data.
+</summary>
+<remarks>
+<para>The pixel format can be set during <c>ImageData</c> initialization using either the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData"><c>ImageData()</c></see> constructor or the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData"><c>createImageData()</c></see> method.</para>
+<para>-<see cref="ImageData"/><br/>-<see cref="Float16Array"/><br/>-<see cref="CanvasRenderingContext2D.CreateImageData"/><br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/pixelFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:</value>
+</ImageDataPixelFormat>
+<ImageDataWidth>
+<summary>
+The readonly <strong><c>ImageData.width</c></strong> property returns the number<br/>of pixels per row in the <see cref="ImageData"/> object.
+</summary>
+<remarks>
+<para>-<see cref="ImageData.Height"/><br/>-<see cref="ImageData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ImageDataWidth>
 </docs>

@@ -18,15 +18,6 @@ The <strong><c>estimate()</c></strong> method of the <see cref="StorageManager"/
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves to an object with the following properties:<blockquote class="NOTE"><h5>NOTE</h5>The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <c>quota</c> varies from origin to origin. This variance is based on factors such as:</returns>
 </StorageManagerEstimate>
-<StorageManagerPersisted>
-<summary>
-The <strong><c>persisted()</c></strong> method of the <see cref="StorageManager"/> interface returns a {{jsxref('Promise')}} that resolves to <c>true</c> if your site&amp;apos;s storage bucket is persistent.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persisted"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="'Promise'"/> that resolves to a <see cref="'Boolean'"/>.</returns>
-</StorageManagerPersisted>
 <StorageManagerGetDirectory>
 <summary>
 The <strong><c>getDirectory()</c></strong> method of the <see cref="StorageManager"/> interface is used to obtain a reference to a <see cref="FileSystemDirectoryHandle"/> object allowing access to a directory and its contents, stored in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system">origin private file system</see> (OPFS).
@@ -47,4 +38,13 @@ The <strong><c>persist()</c></strong> method of the <see cref="StorageManager"/>
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves to a <see cref="'Boolean'"/>.</returns>
 </StorageManagerPersist>
+<StorageManagerPersisted>
+<summary>
+The <strong><c>persisted()</c></strong> method of the <see cref="StorageManager"/> interface returns a {{jsxref('Promise')}} that resolves to <c>true</c> if your site&amp;apos;s storage bucket is persistent.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persisted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves to a <see cref="'Boolean'"/>.</returns>
+</StorageManagerPersisted>
 </docs>

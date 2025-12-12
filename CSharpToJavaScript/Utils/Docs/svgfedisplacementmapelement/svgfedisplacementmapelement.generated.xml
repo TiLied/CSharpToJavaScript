@@ -9,58 +9,6 @@ The <strong><c>SVGFEDisplacementMapElement</c></strong> interface corresponds to
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEDisplacementMapElement>
-<SVGFEDisplacementMapElementWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDisplacementMap">feDisplacementMap</see> element's {{SVGAttr("width")}} filter primitive attribute. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFEDisplacementMapElement.Height"/><br/>-<see cref="SVGFEImageElement"/> API and {{SVGElement("feImage")}} element<br/>-<see cref="SVGFETurbulenceElement"/> API and {{SVGElement("feTurbulence")}} element<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEDisplacementMapElementWidth>
-<SVGFEDisplacementMapElementXChannelSelector>
-<summary>
-The <strong><c>xChannelSelector</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("xChannelSelector")}} attribute of the given {{SVGElement("feDisplacementMap")}} element. It takes one of the <c>SVG_CHANNEL_*</c> constants defined on this interface.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/xChannelSelector"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFEDisplacementMapElementXChannelSelector>
-<SVGFEDisplacementMapElementX>
-<summary>
-The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDisplacementMap">feDisplacementMap</see> element's {{SVGAttr("x")}} filter primitive attribute value. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFEDisplacementMapElement.Y"/><br/>-<see cref="SVGFEImageElement"/> API and {{SVGElement("feImage")}} element<br/>-<see cref="SVGFETurbulenceElement"/> API and {{SVGElement("feTurbulence")}} element<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEDisplacementMapElementX>
-<SVGFEDisplacementMapElementYChannelSelector>
-<summary>
-The <strong><c>yChannelSelector</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("yChannelSelector")}} attribute of the given {{SVGElement("feDisplacementMap")}} element. It takes one of the <c>SVG_CHANNEL_*</c> constants defined on this interface.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/yChannelSelector"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFEDisplacementMapElementYChannelSelector>
-<SVGFEDisplacementMapElementScale>
-<summary>
-The <strong><c>scale</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("scale")}} attribute of the given {{SVGElement("feDisplacementMap")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/scale"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFEDisplacementMapElementScale>
 <SVGFEDisplacementMapElementHeight>
 <summary>
 The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -72,6 +20,16 @@ The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEDis
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFEDisplacementMapElementHeight>
+<SVGFEDisplacementMapElementIn1>
+<summary>
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feDisplacementMap")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/in1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFEDisplacementMapElementIn1>
 <SVGFEDisplacementMapElementIn2>
 <summary>
 The <strong><c>in2</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("in2")}} attribute of the given {{SVGElement("feDisplacementMap")}} element.
@@ -93,16 +51,48 @@ The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEDis
 </remarks>
 <value>An <see cref="SVGAnimatedString"/>.</value>
 </SVGFEDisplacementMapElementResult>
-<SVGFEDisplacementMapElementIn1>
+<SVGFEDisplacementMapElementScale>
 <summary>
-The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feDisplacementMap")}} element.
+The <strong><c>scale</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("scale")}} attribute of the given {{SVGElement("feDisplacementMap")}} element.
 </summary>
 <remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/in1"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/scale"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFEDisplacementMapElementIn1>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEDisplacementMapElementScale>
+<SVGFEDisplacementMapElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDisplacementMap">feDisplacementMap</see> element's {{SVGAttr("width")}} filter primitive attribute. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEDisplacementMapElement.Height"/><br/>-<see cref="SVGFEImageElement"/> API and {{SVGElement("feImage")}} element<br/>-<see cref="SVGFETurbulenceElement"/> API and {{SVGElement("feTurbulence")}} element<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEDisplacementMapElementWidth>
+<SVGFEDisplacementMapElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDisplacementMap">feDisplacementMap</see> element's {{SVGAttr("x")}} filter primitive attribute value. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEDisplacementMapElement.Y"/><br/>-<see cref="SVGFEImageElement"/> API and {{SVGElement("feImage")}} element<br/>-<see cref="SVGFETurbulenceElement"/> API and {{SVGElement("feTurbulence")}} element<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEDisplacementMapElementX>
+<SVGFEDisplacementMapElementXChannelSelector>
+<summary>
+The <strong><c>xChannelSelector</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("xChannelSelector")}} attribute of the given {{SVGElement("feDisplacementMap")}} element. It takes one of the <c>SVG_CHANNEL_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/xChannelSelector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFEDisplacementMapElementXChannelSelector>
 <SVGFEDisplacementMapElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -114,4 +104,14 @@ The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEDisplace
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFEDisplacementMapElementY>
+<SVGFEDisplacementMapElementYChannelSelector>
+<summary>
+The <strong><c>yChannelSelector</c></strong> read-only property of the <see cref="SVGFEDisplacementMapElement"/> interface reflects the {{SVGAttr("yChannelSelector")}} attribute of the given {{SVGElement("feDisplacementMap")}} element. It takes one of the <c>SVG_CHANNEL_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement/yChannelSelector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFEDisplacementMapElementYChannelSelector>
 </docs>

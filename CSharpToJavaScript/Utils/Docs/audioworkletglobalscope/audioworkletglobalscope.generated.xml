@@ -9,16 +9,6 @@ The <strong><c>AudioWorkletGlobalScope</c></strong> interface of the <see href="
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioWorkletGlobalScope>
-<AudioWorkletGlobalScopeCurrentTime>
-<summary>
-The read-only <strong><c>currentTime</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns a double that represents the ever-increasing context time of the audio block being processed. It is equal to the <see cref="BaseAudioContext.CurrentTime"/> property of the <see cref="BaseAudioContext"/> the worklet belongs to.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/currentTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating-point number representing the time.</value>
-</AudioWorkletGlobalScopeCurrentTime>
 <AudioWorkletGlobalScopeCurrentFrame>
 <summary>
 The read-only <strong><c>currentFrame</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns an integer that represents the ever-increasing current sample-frame of the audio block being processed. It is incremented by 128 (the size of a render quantum) after the processing of each audio block.
@@ -29,6 +19,16 @@ The read-only <strong><c>currentFrame</c></strong> property of the <see cref="Au
 </remarks>
 <value>An integer number.</value>
 </AudioWorkletGlobalScopeCurrentFrame>
+<AudioWorkletGlobalScopeCurrentTime>
+<summary>
+The read-only <strong><c>currentTime</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns a double that represents the ever-increasing context time of the audio block being processed. It is equal to the <see cref="BaseAudioContext.CurrentTime"/> property of the <see cref="BaseAudioContext"/> the worklet belongs to.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/currentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number representing the time.</value>
+</AudioWorkletGlobalScopeCurrentTime>
 <AudioWorkletGlobalScopePort>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>port</c></strong> read-only property of the <see cref="AudioWorkletGlobalScope"/> interface returns a <see cref="MessagePort"/> object that can be used to send and receive messages between the main thread and the associated <see cref="AudioWorklet"/>.
@@ -40,16 +40,6 @@ The read-only <strong><c>currentFrame</c></strong> property of the <see cref="Au
 </remarks>
 <value>The <see cref="MessagePort"/> object that is connecting the <c>AudioWorklet</c> and its associated <c>AudioWorkletGlobalScope</c>.</value>
 </AudioWorkletGlobalScopePort>
-<AudioWorkletGlobalScopeSampleRate>
-<summary>
-The read-only <strong><c>sampleRate</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns a float that represents the sample rate of the associated <see cref="BaseAudioContext"/> the worklet belongs to.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/sampleRate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating-point number representing the associated sample rate.</value>
-</AudioWorkletGlobalScopeSampleRate>
 <AudioWorkletGlobalScopeRegisterProcessor>
 <summary>
 The <strong><c>registerProcessor</c></strong> method of the<br/><see cref="AudioWorkletGlobalScope"/> interface registers a class constructor derived<br/>from <see cref="AudioWorkletProcessor"/> interface under a specified <strong>name</strong>.
@@ -60,4 +50,14 @@ The <strong><c>registerProcessor</c></strong> method of the<br/><see cref="Audio
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </AudioWorkletGlobalScopeRegisterProcessor>
+<AudioWorkletGlobalScopeSampleRate>
+<summary>
+The read-only <strong><c>sampleRate</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns a float that represents the sample rate of the associated <see cref="BaseAudioContext"/> the worklet belongs to.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/sampleRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number representing the associated sample rate.</value>
+</AudioWorkletGlobalScopeSampleRate>
 </docs>

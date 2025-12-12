@@ -18,16 +18,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/BeforeInstallPromptEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BeforeInstallPromptEventBeforeInstallPromptEvent>
-<BeforeInstallPromptEventUserChoice>
+<BeforeInstallPromptEventPlatforms>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>userChoice</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface represents the installation choice that the user made, when they were prompted to install the app.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>platforms</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface lists the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/userChoice"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/platforms"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Promise"/> which resolves to an object containing two properties:</value>
-</BeforeInstallPromptEventUserChoice>
+<value>An array of strings, in which each string identifies a target platform for the installation.</value>
+</BeforeInstallPromptEventPlatforms>
 <BeforeInstallPromptEventPrompt>
 <summary>
 <div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent"/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
@@ -39,14 +39,14 @@
 </remarks>
 <returns>A <see cref="Promise"/> resolving to an object containing the following properties:</returns>
 </BeforeInstallPromptEventPrompt>
-<BeforeInstallPromptEventPlatforms>
+<BeforeInstallPromptEventUserChoice>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>platforms</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface lists the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>userChoice</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface represents the installation choice that the user made, when they were prompted to install the app.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/platforms"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/userChoice"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of strings, in which each string identifies a target platform for the installation.</value>
-</BeforeInstallPromptEventPlatforms>
+<value>A <see cref="Promise"/> which resolves to an object containing two properties:</value>
+</BeforeInstallPromptEventUserChoice>
 </docs>

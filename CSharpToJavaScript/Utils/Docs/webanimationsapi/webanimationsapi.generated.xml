@@ -1,0 +1,48 @@
+<docs>
+<Web_Animations_API>
+<summary>
+The <strong>Web Animations API</strong> allows for synchronizing and timing changes to the presentation of a Web page, i.e., animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
+</summary>
+<remarks>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">animation</see> shorthand property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Using the Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS animations</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Animations_API>
+<Web_Animations_APIKeyframe_Formats>
+<summary>
+<see cref="Element.Animate"/>, <see cref="KeyframeEffect.KeyframeEffect"/>, and <see cref="KeyframeEffect.SetKeyframes"/> all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Element.Animate"/><br/>-<see cref="KeyframeEffect.KeyframeEffect"/><br/>-<see cref="KeyframeEffect.SetKeyframes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Animations_APIKeyframe_Formats>
+<Web_Animations_APITips>
+<summary>
+CSS animations make it possible to do incredible things with the elements that make up your documents and apps. There are things you might want to do that aren&amp;apos;t obvious and many clever ways to do things that may not be immediately apparent. This article is a collection of tips and tricks we&amp;apos;ve found that will hopefully make your work easier, including how to re-run a completed animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation">Animation Interface</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS animations</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Tips"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Animations_APITips>
+<Web_Animations_APIUsing_the_Web_Animations_API>
+<summary>
+The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.
+</summary>
+<remarks>
+<para>-The <see href="https://codepen.io/collection/nqNJvD">full suite of Alice in Wonderland demos</see> on CodePen for you to play with, fork, and share.<br/>-<see href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don&amp;apos;t care with Element.animate</see> (2016) Explains the background of the Web Animations API and why it is more performant than other web animation methods.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Animations_APIUsing_the_Web_Animations_API>
+<Web_Animations_APIWeb_Animations_API_Concepts>
+<summary>
+The Web Animations API (WAAPI) provides JavaScript developers access to the browser&amp;apos;s animation engine and describes how animations should be implemented across browsers. This article will introduce you to the important concepts behind the WAAPI, providing you with a theoretical understanding of how it works so you can use it effectively. To learn how to put the API to use, check out its sister article, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Using the Web Animations API</see>.
+</summary>
+<remarks>
+<para>The Web Animations API fills the gap between declarative CSS animations and transitions, and dynamic JavaScript animations. This means we can use it to create and manipulate CSS-like animations that go from one pre-defined state to another, or we can use variables, loops, and callbacks to create interactive animations that adapt and react to changing inputs.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> — main page<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Using the Web Animations API</see> — guide<br/>-The <see href="https://codepen.io/collection/nqNJvD">full suite of Alice in Wonderland demos</see> on CodePen for you to play with, fork, and share<br/>-<see href="https://github.com/web-animations/web-animations-js">web-animations-js</see> — the Web Animations API polyfill<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Web_Animations_API_Concepts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Animations_APIWeb_Animations_API_Concepts>
+</docs>

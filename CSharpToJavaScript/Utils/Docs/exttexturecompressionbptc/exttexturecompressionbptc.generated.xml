@@ -1,0 +1,12 @@
+<docs>
+<EXT_texture_compression_bptc>
+<summary>
+The <c>EXT_texture_compression_bptc</c> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes 4 BPTC compressed texture formats. These compression formats are called <see href="https://learn.microsoft.com/en-us/windows/win32/direct3d11/bc7-format">BC7</see> and <see href="https://learn.microsoft.com/en-us/windows/win32/direct3d11/bc6h-format">BC6H</see> in <see href="https://learn.microsoft.com/en-us/windows/win32/direct3d11/texture-block-compression-in-direct3d-11">Microsoft&amp;apos;s DirectX API</see>.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Support depends on the system&amp;apos;s graphics driver. There is no support on Windows.</para><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_compression_bptc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EXT_texture_compression_bptc>
+</docs>

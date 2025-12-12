@@ -9,17 +9,6 @@ The <strong><c>ReadableStreamDefaultReader</c></strong> interface of the <see hr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ReadableStreamDefaultReader>
-<ReadableStreamDefaultReaderReleaseLock>
-<summary>
-The <strong><c>releaseLock()</c></strong> method of the <see cref="ReadableStreamDefaultReader"/> interface releases the reader's lock on the stream.
-</summary>
-<remarks>
-<para>If the associated stream is errored when the lock is released, the reader will appear errored in that same way subsequently; otherwise, the reader will appear closed.</para><para>If the reader's lock is released while it still has pending read requests then the promises returned by the reader's <see cref="ReadableStreamDefaultReader.Read"/> method are immediately rejected with a <c>TypeError</c>.<br/>Unread chunks remain in the stream&amp;apos;s internal queue and can be read later by acquiring a new reader.</para>
-<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/releaseLock"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ReadableStreamDefaultReaderReleaseLock>
 <ReadableStreamDefaultReaderCancel>
 <summary>
 The <strong><c>cancel()</c></strong> method of the<br/><see cref="ReadableStreamDefaultReader"/> interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
@@ -41,6 +30,16 @@ The <strong><c>closed</c></strong> read-only property of the<br/><see cref="Read
 </remarks>
 <value>A <see cref="Promise"/>.</value>
 </ReadableStreamDefaultReaderClosed>
+<ReadableStreamDefaultReaderRead>
+<summary>
+The <strong><c>read()</c></strong> method of the <see cref="ReadableStreamDefaultReader"/> interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
+</summary>
+<remarks>
+<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/read"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills/rejects with a result depending on the state of the stream.<br/>The different possibilities are as follows:</returns>
+</ReadableStreamDefaultReaderRead>
 <ReadableStreamDefaultReaderReadableStreamDefaultReader>
 <summary>
 The <strong><c>ReadableStreamDefaultReader()</c></strong><br/>constructor creates and returns a <c>ReadableStreamDefaultReader</c> object<br/>instance.
@@ -52,14 +51,15 @@ The <strong><c>ReadableStreamDefaultReader()</c></strong><br/>constructor create
 </remarks>
 <returns>An instance of the <see cref="ReadableStreamDefaultReader"/> object.</returns>
 </ReadableStreamDefaultReaderReadableStreamDefaultReader>
-<ReadableStreamDefaultReaderRead>
+<ReadableStreamDefaultReaderReleaseLock>
 <summary>
-The <strong><c>read()</c></strong> method of the <see cref="ReadableStreamDefaultReader"/> interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
+The <strong><c>releaseLock()</c></strong> method of the <see cref="ReadableStreamDefaultReader"/> interface releases the reader's lock on the stream.
 </summary>
 <remarks>
+<para>If the associated stream is errored when the lock is released, the reader will appear errored in that same way subsequently; otherwise, the reader will appear closed.</para><para>If the reader's lock is released while it still has pending read requests then the promises returned by the reader's <see cref="ReadableStreamDefaultReader.Read"/> method are immediately rejected with a <c>TypeError</c>.<br/>Unread chunks remain in the stream&amp;apos;s internal queue and can be read later by acquiring a new reader.</para>
 <para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/read"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/releaseLock"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/>, which fulfills/rejects with a result depending on the state of the stream.<br/>The different possibilities are as follows:</returns>
-</ReadableStreamDefaultReaderRead>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ReadableStreamDefaultReaderReleaseLock>
 </docs>

@@ -1,0 +1,12 @@
+<docs>
+<Media_Session_API>
+<summary>
+The <strong>Media Session API</strong> provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
+</summary>
+<remarks>
+<para>It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices. So you can seamlessly control web-provided media via your device, even when not looking at the web page.</para><para>The aim is to allow users to know what&amp;apos;s playing and to control it, without needing to open the specific page that launched it. To be able to support the Media Session API, a browser first needs a mechanism by which to access and be controlled by the OS-level media controls (such as Firefox&amp;apos;s <see href="https://bugzil.la/1648100">MediaControl</see>).</para>
+<para>-<see href="https://web.dev/articles/media-session">Customize media notifications and playback controls with the Media Session API</see> on web.dev (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Session_API>
+</docs>

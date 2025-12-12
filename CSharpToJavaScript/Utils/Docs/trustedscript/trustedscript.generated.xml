@@ -9,15 +9,6 @@ The <strong><c>TrustedScript</c></strong> interface of the {{domxref(&amp;quot;T
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedScript"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TrustedScript>
-<TrustedScriptToString>
-<summary>
-The <strong><c>toString()</c></strong> method of the <see cref="TrustedScript"/> interface returns a string which may be safely inserted into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sink</see>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedScript/toString"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string containing the sanitized script.</returns>
-</TrustedScriptToString>
 <TrustedScriptToJSON>
 <summary>
 The <strong><c>toJSON()</c></strong> method of the <see cref="TrustedScript"/> interface returns a JSON representation of the stored data.
@@ -27,4 +18,13 @@ The <strong><c>toJSON()</c></strong> method of the <see cref="TrustedScript"/> i
 </remarks>
 <returns>A string containing a JSON representation of the stored data.</returns>
 </TrustedScriptToJSON>
+<TrustedScriptToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the <see cref="TrustedScript"/> interface returns a string which may be safely inserted into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sink</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedScript/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the sanitized script.</returns>
+</TrustedScriptToString>
 </docs>

@@ -20,6 +20,26 @@ The <strong><c>attributeStyleMap</c></strong> read-only property of the <see cre
 </remarks>
 <value>A live <see cref="StylePropertyMap"/> object.</value>
 </MathMLElementAttributeStyleMap>
+<MathMLElementAutofocus>
+<summary>
+The <strong><c>autofocus</c></strong> property of the <see cref="MathMLElement"/> interface contains a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"><c>autofocus</c></see> HTML global attribute. It indicates whether the MathML element should be focused when the page loads or when the element becomes shown if the MathML element is inside a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover">popover</see>.
+</summary>
+<remarks>
+<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Autofocus"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</MathMLElementAutofocus>
+<MathMLElementBlur>
+<summary>
+The <strong><c>blur()</c></strong> method of the <see cref="MathMLElement"/> interface removes keyboard focus from the current MathML element.
+</summary>
+<remarks>
+<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Blur"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/blur"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MathMLElementBlur>
 <MathMLElementDataset>
 <summary>
 The <strong><c>dataset</c></strong> read-only property of the <see cref="MathMLElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/MathML/Reference/Global_attributes/data-*">custom data attributes</see> (<c>data-*</c>) on elements. It exposes a map of strings (<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
@@ -31,6 +51,17 @@ The <strong><c>dataset</c></strong> read-only property of the <see cref="MathMLE
 </remarks>
 <value>A <see cref="DOMStringMap"/>.</value>
 </MathMLElementDataset>
+<MathMLElementFocus>
+<summary>
+The <strong><c>focus()</c></strong> method of the <see cref="MathMLElement"/> interface sets focus on the specified MathML element, if it can be focused. The focused element is the element that will receive keyboard and similar events by default.
+</summary>
+<remarks>
+<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element). Parameter options are provided to disable the default scrolling and force visible indication on elements. If you call <c>focus()</c> from a <c>mousedown</c> event handler, you must call <c>event.preventDefault()</c> to keep the focus from leaving the <c>MathMLElement</c>.</para>
+<para>-<see cref="MathMLElement.Blur"/><br/>-<see cref="HTMLElement.Focus"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MathMLElementFocus>
 <MathMLElementStyle>
 <summary>
 The read-only <strong><c>style</c></strong> property of the <see cref="MathMLElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
@@ -53,35 +84,4 @@ The <strong><c>tabIndex</c></strong> property of the <see cref="MathMLElement"/>
 </remarks>
 <value>An integer.</value>
 </MathMLElementTabIndex>
-<MathMLElementBlur>
-<summary>
-The <strong><c>blur()</c></strong> method of the <see cref="MathMLElement"/> interface removes keyboard focus from the current MathML element.
-</summary>
-<remarks>
-<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Blur"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/blur"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</MathMLElementBlur>
-<MathMLElementAutofocus>
-<summary>
-The <strong><c>autofocus</c></strong> property of the <see cref="MathMLElement"/> interface contains a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"><c>autofocus</c></see> HTML global attribute. It indicates whether the MathML element should be focused when the page loads or when the element becomes shown if the MathML element is inside a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover">popover</see>.
-</summary>
-<remarks>
-<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Autofocus"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</MathMLElementAutofocus>
-<MathMLElementFocus>
-<summary>
-The <strong><c>focus()</c></strong> method of the <see cref="MathMLElement"/> interface sets focus on the specified MathML element, if it can be focused. The focused element is the element that will receive keyboard and similar events by default.
-</summary>
-<remarks>
-<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element). Parameter options are provided to disable the default scrolling and force visible indication on elements. If you call <c>focus()</c> from a <c>mousedown</c> event handler, you must call <c>event.preventDefault()</c> to keep the focus from leaving the <c>MathMLElement</c>.</para>
-<para>-<see cref="MathMLElement.Blur"/><br/>-<see cref="HTMLElement.Focus"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/focus"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</MathMLElementFocus>
 </docs>

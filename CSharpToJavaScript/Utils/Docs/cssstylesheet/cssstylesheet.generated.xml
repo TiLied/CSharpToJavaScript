@@ -9,36 +9,16 @@ The <strong><c>CSSStyleSheet</c></strong> interface represents a single <see hre
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSStyleSheet>
-<CSSStyleSheetOwnerRule>
+<CSSStyleSheetAddRule>
 <summary>
-The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>ownerRule</c></strong> returns the <see cref="CSSImportRule"/><br/>corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> at-rule which imported the stylesheet into<br/>the document. If the stylesheet wasn&amp;apos;t imported into the document using<br/><c>_import</c>, the returned value is <c>null</c>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="CSSStyleSheet"/> interface's<br/><strong><c>addRule()</c></strong> <strong>legacy method</strong> adds a new rule to the<br/>stylesheet. You should avoid using this method, and should instead use the more standard<br/><see cref="CSSStyleSheet.InsertRule"/> method.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/ownerRule"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/addRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSImportRule"/> corresponding to the {{cssxref("@import")}} rule which<br/>imported the stylesheet into the document. If the stylesheet wasn&amp;apos;t imported into the<br/>document using <c>_import</c>, the returned value is <c>null</c>.</value>
-</CSSStyleSheetOwnerRule>
-<CSSStyleSheetDeleteRule>
-<summary>
-The <see cref="CSSStyleSheet"/> method<br/><strong><c>deleteRule()</c></strong> removes a rule from the stylesheet<br/>object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="CSSStyleSheet.InsertRule"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/deleteRule"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CSSStyleSheetDeleteRule>
-<CSSStyleSheetCSSStyleSheet>
-<summary>
-The <strong><c>CSSStyleSheet()</c></strong> constructor creates a new <see cref="CSSStyleSheet"/> object which represents a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/Stylesheet">Stylesheet</see>.
-</summary>
-<remarks>
-<para>After constructing a stylesheet the <see cref="CSSStyleSheet.Replace"/>, <see cref="CSSStyleSheet.ReplaceSync"/>, <see cref="CSSStyleSheet.InsertRule"/>, and <see cref="CSSStyleSheet.DeleteRule"/> methods can be used to modify the rules of the new stylesheet.</para><para>A stylesheet created using this method is referred to as a &amp;quot;constructed stylesheet&amp;quot;.<br/>A constructed stylesheet can be shared between a document and its shadow DOM subtrees using <see cref="ShadowRoot.AdoptedStyleSheets"/> and <see cref="Document.AdoptedStyleSheets"/>.</para>
-<para>-<see cref="Document.AdoptedStyleSheets"/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/>-<see href="https://www.npmjs.com/package/construct-style-sheets-polyfill">construct-style-sheets-polyfill</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</CSSStyleSheetCSSStyleSheet>
+<returns>Always returns -1.Note that due to somewhat esoteric rules about where you can legally insert rules,<br/>it's possible that an exception may be thrown. See <see cref="CSSStyleSheet.InsertRule"/> for more information.</returns>
+</CSSStyleSheetAddRule>
 <CSSStyleSheetCssRules>
 <summary>
 The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>cssRules</c></strong> returns a live <see cref="CSSRuleList"/> which<br/>provides a real-time, up-to-date list of every CSS rule which comprises the<br/>stylesheet. Each item in the list is a <see cref="CSSRule"/> defining a single<br/>rule.
@@ -49,17 +29,47 @@ The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>cssRules</c></
 </remarks>
 <value>A live-updating <see cref="CSSRuleList"/> containing each of the CSS rules making up<br/>the stylesheet. Each entry in the rule list is a <see cref="CSSRule"/> object<br/>describing one rule making up the stylesheet.</value>
 </CSSStyleSheetCssRules>
-<CSSStyleSheetReplaceSync>
+<CSSStyleSheetCSSStyleSheet>
 <summary>
-The <strong><c>replaceSync()</c></strong> method of the <see cref="CSSStyleSheet"/> interface synchronously replaces the content of the stylesheet with the content passed into it.
+The <strong><c>CSSStyleSheet()</c></strong> constructor creates a new <see cref="CSSStyleSheet"/> object which represents a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/Stylesheet">Stylesheet</see>.
 </summary>
 <remarks>
-<para>The <c>replaceSync()</c> and <see cref="CSSStyleSheet.Replace"/> methods can only be used on a stylesheet created with the <see cref="CSSStyleSheet.CSSStyleSheet"/> constructor.</para>
-<para>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/replaceSync"> <em>See also on MDN</em> </seealso></para>
+<para>After constructing a stylesheet the <see cref="CSSStyleSheet.Replace"/>, <see cref="CSSStyleSheet.ReplaceSync"/>, <see cref="CSSStyleSheet.InsertRule"/>, and <see cref="CSSStyleSheet.DeleteRule"/> methods can be used to modify the rules of the new stylesheet.</para><para>A stylesheet created using this method is referred to as a &amp;quot;constructed stylesheet&amp;quot;.<br/>A constructed stylesheet can be shared between a document and its shadow DOM subtrees using <see cref="ShadowRoot.AdoptedStyleSheets"/> and <see cref="Document.AdoptedStyleSheets"/>.</para>
+<para>-<see cref="Document.AdoptedStyleSheets"/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/>-<see href="https://www.npmjs.com/package/construct-style-sheets-polyfill">construct-style-sheets-polyfill</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<c>undefined</c>).</returns>
-</CSSStyleSheetReplaceSync>
+</CSSStyleSheetCSSStyleSheet>
+<CSSStyleSheetDeleteRule>
+<summary>
+The <see cref="CSSStyleSheet"/> method<br/><strong><c>deleteRule()</c></strong> removes a rule from the stylesheet<br/>object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="CSSStyleSheet.InsertRule"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/deleteRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSStyleSheetDeleteRule>
+<CSSStyleSheetInsertRule>
+<summary>
+The <strong><c>CSSStyleSheet.insertRule()</c></strong><br/>method inserts a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">CSS rule</see> into the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">current style sheet</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Although <c>insertRule()</c> is exclusively a method of<br/><see cref="CSSStyleSheet"/>, it actually inserts the rule into<br/><c>{{domxref(&amp;quot;CSSStyleSheet&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}}.cssRules</c> — its internal<br/><see cref="CSSRuleList"/>.</para></blockquote>
+<para>-<see cref="CSSStyleSheet.DeleteRule"/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The newly inserted rule&amp;apos;s index within the stylesheet&amp;apos;s rule-list.</returns>
+</CSSStyleSheetInsertRule>
+<CSSStyleSheetOwnerRule>
+<summary>
+The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>ownerRule</c></strong> returns the <see cref="CSSImportRule"/><br/>corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> at-rule which imported the stylesheet into<br/>the document. If the stylesheet wasn&amp;apos;t imported into the document using<br/><c>_import</c>, the returned value is <c>null</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/ownerRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSImportRule"/> corresponding to the {{cssxref("@import")}} rule which<br/>imported the stylesheet into the document. If the stylesheet wasn&amp;apos;t imported into the<br/>document using <c>_import</c>, the returned value is <c>null</c>.</value>
+</CSSStyleSheetOwnerRule>
 <CSSStyleSheetRemoveRule>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="CSSStyleSheet"/> method<br/><strong><c>removeRule()</c></strong> removes a rule from the stylesheet<br/>object. It is functionally identical to the standard, preferred method<br/><see cref="CSSStyleSheet.DeleteRule"/>.
@@ -82,27 +92,17 @@ The <strong><c>replace()</c></strong> method of the <see cref="CSSStyleSheet"/> 
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves with the <see cref="CSSStyleSheet"/>.</returns>
 </CSSStyleSheetReplace>
-<CSSStyleSheetInsertRule>
+<CSSStyleSheetReplaceSync>
 <summary>
-The <strong><c>CSSStyleSheet.insertRule()</c></strong><br/>method inserts a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">CSS rule</see> into the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">current style sheet</see>.
+The <strong><c>replaceSync()</c></strong> method of the <see cref="CSSStyleSheet"/> interface synchronously replaces the content of the stylesheet with the content passed into it.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Although <c>insertRule()</c> is exclusively a method of<br/><see cref="CSSStyleSheet"/>, it actually inserts the rule into<br/><c>{{domxref(&amp;quot;CSSStyleSheet&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}}.cssRules</c> — its internal<br/><see cref="CSSRuleList"/>.</para></blockquote>
-<para>-<see cref="CSSStyleSheet.DeleteRule"/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule"> <em>See also on MDN</em> </seealso></para>
+<para>The <c>replaceSync()</c> and <see cref="CSSStyleSheet.Replace"/> methods can only be used on a stylesheet created with the <see cref="CSSStyleSheet.CSSStyleSheet"/> constructor.</para>
+<para>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/replaceSync"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The newly inserted rule&amp;apos;s index within the stylesheet&amp;apos;s rule-list.</returns>
-</CSSStyleSheetInsertRule>
-<CSSStyleSheetAddRule>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="CSSStyleSheet"/> interface's<br/><strong><c>addRule()</c></strong> <strong>legacy method</strong> adds a new rule to the<br/>stylesheet. You should avoid using this method, and should instead use the more standard<br/><see cref="CSSStyleSheet.InsertRule"/> method.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/addRule"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Always returns -1.Note that due to somewhat esoteric rules about where you can legally insert rules,<br/>it's possible that an exception may be thrown. See <see cref="CSSStyleSheet.InsertRule"/> for more information.</returns>
-</CSSStyleSheetAddRule>
+<returns>None (<c>undefined</c>).</returns>
+</CSSStyleSheetReplaceSync>
 <CSSStyleSheetRules>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>rules</c></strong> is a <strong>deprecated</strong><br/><strong>legacy property</strong> of the <see cref="CSSStyleSheet"/> interface. Functionally<br/>identical to the preferred <see cref="CSSStyleSheet.CssRules"/> property,<br/>it provides access to a live-updating list of the CSS rules comprising the<br/>stylesheet.

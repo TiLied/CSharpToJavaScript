@@ -9,27 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRWebGLLayer>
-<XRWebGLLayerFramebufferHeight>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebufferHeight</c></strong> indicates the height of the<br/>framebuffer, in pixels.
-</summary>
-<remarks>
-<para>You can get the width of the framebuffer using the<br/><see cref="XRWebGLLayer.FramebufferWidth"/> property.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferHeight"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The height in pixels of the XR device&amp;apos;s framebuffer. Each of the framebuffer&amp;apos;s<br/>attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many<br/>pixels tall.</value>
-</XRWebGLLayerFramebufferHeight>
-<XRWebGLLayerGetViewport>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRWebGLLayer"/> interface's<br/><strong><c>getViewport()</c></strong> method returns the<br/><see cref="XRViewport"/> that should be used to render the specified<br/><see cref="XRView"/> into the WebGL layer. For WebXR devices which use a<br/>single framebuffer for both the left and right eyes, the returned viewport represents<br/>the region of the framebuffer into which the scene should be rendered for the eye<br/>represented by the view.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="XRViewport"/> object representing the viewport which will restrict<br/>drawing to the portion of the layer corresponding to the specified <c>view</c>.</returns>
-</XRWebGLLayerGetViewport>
 <XRWebGLLayerAntialias>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>antialias</c></strong> is a Boolean value which is <c>true</c><br/>if the rendering layer&amp;apos;s frame buffer supports anti-aliasing. Otherwise, this<br/>property&amp;apos;s value is <c>false</c>. The specific anti-aliasing technique used is left<br/>to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> discretion and cannot be specified by<br/>the website or web app.
@@ -40,27 +19,6 @@
 </remarks>
 <value>A Boolean value which is <c>true</c> if the WebGL rendering layer&amp;apos;s frame buffer<br/>is configured to support anti-aliasing. Otherwise, this property is <c>false</c>.When the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">WebXR compositor</see> is enabled, this value corresponds to the value of the<br/><c>antialias</c> property on the object returned by the WebGL context&amp;apos;s<br/><see cref="WebGLRenderingContext.GetContextAttributes"/><br/>method.</value>
 </XRWebGLLayerAntialias>
-<XRWebGLLayerGetNativeFramebufferScaleFactor>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The static method<br/><strong><c>XRWebGLLayer.getNativeFramebufferScaleFactor()</c></strong> returns a<br/>floating-point scaling factor by which one can multiply the specified<br/><see cref="XRSession"/>'s resolution to get the native resolution of the WebXR<br/>device&amp;apos;s frame buffer.
-</summary>
-<remarks>
-<para>This information can be used when creating a new <c>XRWebGLLayer</c> to configure<br/>the <c>framebufferScaleFactor</c> in the <c>layerInit</c> configuration object<br/>specified when calling the <c>XRWebGLLayer()</c> constructor. See the<br/><see href="https://developer.mozilla.org#usage_notes">Usage notes</see> and <see href="https://developer.mozilla.org#examples">Examples</see> for details.</para><para>If the scaling factor is 1.0, then the frame buffer pixels and the native display<br/>pixels are the same size. If the scaling factor is greater than zero, then the frame<br/>buffer is smaller than the display&amp;apos;s native dimensions, resulting in the output being<br/>up-scaled for display to the screen after rendering into the frame buffer. If the<br/>scaling factor is less than zero, the frame buffer is <strong>larger</strong> than the native<br/>resolution of the display, resulting in the frame buffer&amp;apos;s contents being scaled down<br/>for display to the XR device. This can happen for display environments which use<br/>superscaling or anti-aliasing techniques to improve perceived image quality.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A floating-point value which, when multiplied by the <see cref="XRSession"/>'s<br/>recommended framebuffer dimensions, results in the XR device&amp;apos;s native frame buffer<br/>resolution. If the session has ended, this function returns 0.0.</returns>
-</XRWebGLLayerGetNativeFramebufferScaleFactor>
-<XRWebGLLayerFramebuffer>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebuffer</c></strong> is an opaque <see cref="WebGLFramebuffer"/><br/>which is used to buffer the rendered image if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is being used. Otherwise, this property&amp;apos;s value is<br/><c>null</c>. The opaque framebuffer is functionally nearly the same as a<br/>standard WebGL framebuffer, except for the differences covered in the section<br/><see href="https://developer.mozilla.org#how_opaque_framebuffers_are_special">How opaque framebuffers are special</see> below.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="WebGLFramebuffer"/> object representing the framebuffer into which the 3D<br/>scene is being rendered, or <c>null</c> if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is disabled for the session.</value>
-</XRWebGLLayerFramebuffer>
 <XRWebGLLayerFixedFoveation>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fixedFoveation</c></strong> property of the <see cref="XRWebGLLayer"/> interface is a number indicating the amount of foveation used by the XR compositor. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
@@ -72,6 +30,27 @@
 </remarks>
 <value>A number between 0 and 1.It's up to the user agent how to interpret the numbers in this range. When changing the foveation level, the effect will visible in the next <see cref="XRFrame"/>.Note that some user agents might implement certain levels of foveation, so you might need to adjust the foveation level in large increments to see an effect. Example levels:Some devices don&amp;apos;t support foveated rendering. In that case <c>fixedFoveation</c> is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> and setting it will not do anything.</value>
 </XRWebGLLayerFixedFoveation>
+<XRWebGLLayerFramebuffer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebuffer</c></strong> is an opaque <see cref="WebGLFramebuffer"/><br/>which is used to buffer the rendered image if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is being used. Otherwise, this property&amp;apos;s value is<br/><c>null</c>. The opaque framebuffer is functionally nearly the same as a<br/>standard WebGL framebuffer, except for the differences covered in the section<br/><see href="https://developer.mozilla.org#how_opaque_framebuffers_are_special">How opaque framebuffers are special</see> below.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WebGLFramebuffer"/> object representing the framebuffer into which the 3D<br/>scene is being rendered, or <c>null</c> if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is disabled for the session.</value>
+</XRWebGLLayerFramebuffer>
+<XRWebGLLayerFramebufferHeight>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebufferHeight</c></strong> indicates the height of the<br/>framebuffer, in pixels.
+</summary>
+<remarks>
+<para>You can get the width of the framebuffer using the<br/><see cref="XRWebGLLayer.FramebufferWidth"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The height in pixels of the XR device&amp;apos;s framebuffer. Each of the framebuffer&amp;apos;s<br/>attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many<br/>pixels tall.</value>
+</XRWebGLLayerFramebufferHeight>
 <XRWebGLLayerFramebufferWidth>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebufferWidth</c></strong> specifies the width of the framebuffer,<br/>in pixels.
@@ -83,6 +62,27 @@
 </remarks>
 <value>The width in pixels of the XR device&amp;apos;s framebuffer. Each of the framebuffer&amp;apos;s<br/>attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many<br/>pixels wide.</value>
 </XRWebGLLayerFramebufferWidth>
+<XRWebGLLayerGetNativeFramebufferScaleFactor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The static method<br/><strong><c>XRWebGLLayer.getNativeFramebufferScaleFactor()</c></strong> returns a<br/>floating-point scaling factor by which one can multiply the specified<br/><see cref="XRSession"/>'s resolution to get the native resolution of the WebXR<br/>device&amp;apos;s frame buffer.
+</summary>
+<remarks>
+<para>This information can be used when creating a new <c>XRWebGLLayer</c> to configure<br/>the <c>framebufferScaleFactor</c> in the <c>layerInit</c> configuration object<br/>specified when calling the <c>XRWebGLLayer()</c> constructor. See the<br/><see href="https://developer.mozilla.org#usage_notes">Usage notes</see> and <see href="https://developer.mozilla.org#examples">Examples</see> for details.</para><para>If the scaling factor is 1.0, then the frame buffer pixels and the native display<br/>pixels are the same size. If the scaling factor is greater than zero, then the frame<br/>buffer is smaller than the display&amp;apos;s native dimensions, resulting in the output being<br/>up-scaled for display to the screen after rendering into the frame buffer. If the<br/>scaling factor is less than zero, the frame buffer is <strong>larger</strong> than the native<br/>resolution of the display, resulting in the frame buffer&amp;apos;s contents being scaled down<br/>for display to the XR device. This can happen for display environments which use<br/>superscaling or anti-aliasing techniques to improve perceived image quality.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A floating-point value which, when multiplied by the <see cref="XRSession"/>'s<br/>recommended framebuffer dimensions, results in the XR device&amp;apos;s native frame buffer<br/>resolution. If the session has ended, this function returns 0.0.</returns>
+</XRWebGLLayerGetNativeFramebufferScaleFactor>
+<XRWebGLLayerGetViewport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRWebGLLayer"/> interface's<br/><strong><c>getViewport()</c></strong> method returns the<br/><see cref="XRViewport"/> that should be used to render the specified<br/><see cref="XRView"/> into the WebGL layer. For WebXR devices which use a<br/>single framebuffer for both the left and right eyes, the returned viewport represents<br/>the region of the framebuffer into which the scene should be rendered for the eye<br/>represented by the view.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XRViewport"/> object representing the viewport which will restrict<br/>drawing to the portion of the layer corresponding to the specified <c>view</c>.</returns>
+</XRWebGLLayerGetViewport>
 <XRWebGLLayerIgnoreDepthValues>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>ignoreDepthValues</c></strong> is a Boolean value which is<br/><c>true</c> if the session has been configured to ignore the values in the depth<br/>buffer while rendering the scene. If the depth buffer is being used to determine the<br/>position of vertices, this property is <c>false</c>.

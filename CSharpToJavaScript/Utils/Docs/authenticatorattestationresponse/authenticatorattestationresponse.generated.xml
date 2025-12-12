@@ -9,16 +9,6 @@ The <strong><c>AuthenticatorAttestationResponse</c></strong> interface of the <s
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AuthenticatorAttestationResponse>
-<AuthenticatorAttestationResponseGetTransports>
-<summary>
-The <strong><c>getTransports()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an array of strings describing the different transports which may be used by the authenticator.
-</summary>
-<remarks>
-<para>Such transports may be USB, NFC, BLE, internal (applicable when the authenticator is not removable from the device), or a hybrid approach. Sites should not interpret this array but instead store it along with the rest of the credential information. In a subsequent <see cref="CredentialsContainer.Get"/> call, the <c>transports</c> value(s) specified inside <c>publicKey.allowCredentials</c> should be set to the stored array value. This provides a hint to the browser as to which types of authenticators to try when making an assertion for this credential.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="Array"/> of strings representing the different transports supported by the authenticator, in lexicographical order.<br/>Values may include:</returns>
-</AuthenticatorAttestationResponseGetTransports>
 <AuthenticatorAttestationResponseAttestationObject>
 <summary>
 The <strong><c>attestationObject</c></strong> property of the<br/><see cref="AuthenticatorAttestationResponse"/> interface returns an<br/><see cref="ArrayBuffer"/> containing the new public key, as well as signature over the<br/>entire <c>attestationObject</c> with a private key that is stored in the<br/>authenticator when it is manufactured.
@@ -30,6 +20,16 @@ The <strong><c>attestationObject</c></strong> property of the<br/><see cref="Aut
 </remarks>
 <value>After decoding the <see href="https://datatracker.ietf.org/doc/html/rfc8949">CBOR</see> encoded<br/><c>ArrayBuffer</c>, the resulting JavaScript object will contain the following<br/>properties:</value>
 </AuthenticatorAttestationResponseAttestationObject>
+<AuthenticatorAttestationResponseGetAuthenticatorData>
+<summary>
+The <strong><c>getAuthenticatorData()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.
+</summary>
+<remarks>
+<para>This is a convenience function, created to allow easy access to the authenticator data without having to write extra parsing code to extract it from the <c>attestationObject</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ArrayBuffer"/> with a <see cref="ArrayBufferByteLength"/> of at least 37 bytes, which contains the data structure explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data">Authenticator data</see>.This will be equivalent to the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.</returns>
+</AuthenticatorAttestationResponseGetAuthenticatorData>
 <AuthenticatorAttestationResponseGetPublicKey>
 <summary>
 The <strong><c>getPublicKey()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an {{jsxref("ArrayBuffer")}} containing the DER <c>SubjectPublicKeyInfo</c> of the new credential (see <see href="https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7">Subject Public Key Info</see>), or <c>null</c> if this is not available.
@@ -50,14 +50,14 @@ The <strong><c>getPublicKeyAlgorithm()</c></strong> method of the <see cref="Aut
 </remarks>
 <returns>A number that is equal to a <see href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">COSE Algorithm Identifier</see>, representing the cryptographic algorithm used for the new credential.</returns>
 </AuthenticatorAttestationResponseGetPublicKeyAlgorithm>
-<AuthenticatorAttestationResponseGetAuthenticatorData>
+<AuthenticatorAttestationResponseGetTransports>
 <summary>
-The <strong><c>getAuthenticatorData()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.
+The <strong><c>getTransports()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an array of strings describing the different transports which may be used by the authenticator.
 </summary>
 <remarks>
-<para>This is a convenience function, created to allow easy access to the authenticator data without having to write extra parsing code to extract it from the <c>attestationObject</c>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData"> <em>See also on MDN</em> </seealso></para>
+<para>Such transports may be USB, NFC, BLE, internal (applicable when the authenticator is not removable from the device), or a hybrid approach. Sites should not interpret this array but instead store it along with the rest of the credential information. In a subsequent <see cref="CredentialsContainer.Get"/> call, the <c>transports</c> value(s) specified inside <c>publicKey.allowCredentials</c> should be set to the stored array value. This provides a hint to the browser as to which types of authenticators to try when making an assertion for this credential.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="ArrayBuffer"/> with a <see cref="ArrayBufferByteLength"/> of at least 37 bytes, which contains the data structure explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data">Authenticator data</see>.This will be equivalent to the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.</returns>
-</AuthenticatorAttestationResponseGetAuthenticatorData>
+<returns>An <see cref="Array"/> of strings representing the different transports supported by the authenticator, in lexicographical order.<br/>Values may include:</returns>
+</AuthenticatorAttestationResponseGetTransports>
 </docs>

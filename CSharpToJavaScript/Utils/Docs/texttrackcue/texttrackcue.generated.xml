@@ -17,32 +17,6 @@ The <strong><c>endTime</c></strong> property of the <see cref="TextTrackCue"/> i
 </remarks>
 <value>A number representing the end time, in seconds.</value>
 </TextTrackCueEndTime>
-<TextTrackCueStartTime>
-<summary>
-The <strong><c>startTime</c></strong> property of the <see cref="TextTrackCue"/> interface returns and sets the start time of the cue.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/startTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number representing the start time, in seconds.</value>
-</TextTrackCueStartTime>
-<TextTrackCueExit>
-<summary>
-The <strong><c>exit</c></strong> event fires when a cue stops being active.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/exit"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</TextTrackCueExit>
-<TextTrackCueTrack>
-<summary>
-The <strong><c>track</c></strong> read-only property of the <see cref="TextTrackCue"/> interface returns the <see cref="TextTrack"/> object that this cue belongs to.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/track"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="TextTrack"/> object.</value>
-</TextTrackCueTrack>
 <TextTrackCueEnter>
 <summary>
 The <strong><c>enter</c></strong> event fires when a cue becomes active. In the case of subtitles or a caption this is when it displays over the media.
@@ -51,6 +25,14 @@ The <strong><c>enter</c></strong> event fires when a cue becomes active. In the 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/enter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextTrackCueEnter>
+<TextTrackCueExit>
+<summary>
+The <strong><c>exit</c></strong> event fires when a cue stops being active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/exit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextTrackCueExit>
 <TextTrackCueId>
 <summary>
 The <strong><c>id</c></strong> property of the <see cref="TextTrackCue"/> interface returns and sets the identifier for this cue.
@@ -69,4 +51,22 @@ The <strong><c>pauseOnExit</c></strong> property of the <see cref="TextTrackCue"
 </remarks>
 <value>A <see cref="Boolean"/>, true if the media will pause.</value>
 </TextTrackCuePauseOnExit>
+<TextTrackCueStartTime>
+<summary>
+The <strong><c>startTime</c></strong> property of the <see cref="TextTrackCue"/> interface returns and sets the start time of the cue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the start time, in seconds.</value>
+</TextTrackCueStartTime>
+<TextTrackCueTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of the <see cref="TextTrackCue"/> interface returns the <see cref="TextTrack"/> object that this cue belongs to.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TextTrack"/> object.</value>
+</TextTrackCueTrack>
 </docs>

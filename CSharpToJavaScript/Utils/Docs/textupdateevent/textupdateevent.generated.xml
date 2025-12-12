@@ -8,6 +8,33 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextUpdateEvent>
+<TextUpdateEventSelectionEnd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.selectionEnd</c></strong> read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the <see cref="EditContext"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/selectionEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</TextUpdateEventSelectionEnd>
+<TextUpdateEventSelectionStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.selectionStart</c></strong> read-only property indicates the position of the start of the selection (or caret) within the text content of the editable region attached to the <see cref="EditContext"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/selectionStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</TextUpdateEventSelectionStart>
+<TextUpdateEventText>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.text</c></strong> read-only property contains the text that was inserted within the updated range of a <see cref="EditContext"/>'s <c>textupdate</c> event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A {{jsxref("String")}} that contains the text that replaces the text contained between the <see cref="TextUpdateEventupdateRangeStart"/> and <see cref="TextUpdateEventupdateRangeEnd"/> indexes.</value>
+</TextUpdateEventText>
 <TextUpdateEventTextUpdateEvent>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent()</c></strong> constructor returns a new <see cref="TextUpdateEvent"/> object.
@@ -35,31 +62,4 @@
 </remarks>
 <value>A <see cref="Number"/>.</value>
 </TextUpdateEventUpdateRangeStart>
-<TextUpdateEventSelectionStart>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.selectionStart</c></strong> read-only property indicates the position of the start of the selection (or caret) within the text content of the editable region attached to the <see cref="EditContext"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/selectionStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Number"/>.</value>
-</TextUpdateEventSelectionStart>
-<TextUpdateEventText>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.text</c></strong> read-only property contains the text that was inserted within the updated range of a <see cref="EditContext"/>'s <c>textupdate</c> event.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/text"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A {{jsxref("String")}} that contains the text that replaces the text contained between the <see cref="TextUpdateEventupdateRangeStart"/> and <see cref="TextUpdateEventupdateRangeEnd"/> indexes.</value>
-</TextUpdateEventText>
-<TextUpdateEventSelectionEnd>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextUpdateEvent.selectionEnd</c></strong> read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the <see cref="EditContext"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/selectionEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Number"/>.</value>
-</TextUpdateEventSelectionEnd>
 </docs>

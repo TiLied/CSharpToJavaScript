@@ -9,6 +9,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SharedStorage>
+<SharedStorageAppend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>append()</c></strong> method of the <see cref="SharedStorage"/> interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/append"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
+</SharedStorageAppend>
 <SharedStorageClear>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>clear()</c></strong> method of the <see cref="SharedStorage"/> interface clears the current origin's shared storage, removing all data from it.
@@ -39,14 +49,4 @@
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
 </SharedStorageSet>
-<SharedStorageAppend>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>append()</c></strong> method of the <see cref="SharedStorage"/> interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/append"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
-</SharedStorageAppend>
 </docs>

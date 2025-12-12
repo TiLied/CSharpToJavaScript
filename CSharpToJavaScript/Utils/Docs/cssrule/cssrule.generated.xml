@@ -27,6 +27,15 @@ The <strong><c>parentRule</c></strong> property of the <see cref="CSSRule"/><br/
 </remarks>
 <value>A <see cref="CSSRule"/> which is the type of the containing rules. If the current rule is inside a media query, this would return <see cref="CSSMediaRule"/>. Otherwise it returns null.</value>
 </CSSRuleParentRule>
+<CSSRuleParentStyleSheet>
+<summary>
+The <strong><c>parentStyleSheet</c></strong> property of the<br/><see cref="CSSRule"/> interface returns the <see cref="StyleSheet"/> object in which<br/>the current rule is defined.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/parentStyleSheet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="StyleSheet"/> object.</value>
+</CSSRuleParentStyleSheet>
 <CSSRuleType>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>type</c></strong> property of the<br/><see cref="CSSRule"/> interface is a deprecated property that returns an integer<br/>indicating which type of rule the <see cref="CSSRule"/> represents.
@@ -37,13 +46,4 @@ The <strong><c>parentRule</c></strong> property of the <see cref="CSSRule"/><br/
 </remarks>
 <value>The values <c>CSSRule.UNKNOWN_RULE</c> (<c>0</c>), <c>CSSRule.CHARSET_RULE</c> (<c>2</c>), <c>CSSRule.DOCUMENT_RULE</c> (<c>13</c>), <c>CSSRule.VIEWPORT_RULE</c> (<c>14</c>), and <c>CSSRule.REGION_STYLE_RULE</c> (<c>16</c>) cannot be obtained anymore.</value>
 </CSSRuleType>
-<CSSRuleParentStyleSheet>
-<summary>
-The <strong><c>parentStyleSheet</c></strong> property of the<br/><see cref="CSSRule"/> interface returns the <see cref="StyleSheet"/> object in which<br/>the current rule is defined.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/parentStyleSheet"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="StyleSheet"/> object.</value>
-</CSSRuleParentStyleSheet>
 </docs>

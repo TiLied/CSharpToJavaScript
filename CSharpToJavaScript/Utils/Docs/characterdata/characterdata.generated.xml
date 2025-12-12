@@ -9,47 +9,6 @@ The <strong><c>CharacterData</c></strong> abstract interface represents a <see c
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CharacterData>
-<CharacterDataReplaceWith>
-<summary>
-The <strong><c>replaceWith()</c></strong> method of the <see cref="CharacterData"/> interface<br/>replaces this node in the children list of its parent<br/>with a set of <see cref="Node"/> objects or string.
-</summary>
-<remarks>
-<para>Strings are inserted as <see cref="Text"/> nodes; the string is being passed as argument to the <see cref="TextText"/> constructor.</para>
-<para>-<see cref="CharacterData.ReplaceData"/><br/>-<see cref="DocumentType.ReplaceWith"/><br/>-<see cref="Element.ReplaceWith"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceWith"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CharacterDataReplaceWith>
-<CharacterDataBefore>
-<summary>
-The <strong><c>before()</c></strong> method of the <see cref="CharacterData"/> interface<br/>inserts a set of <see cref="Node"/> objects and strings<br/>in the children list of the <c>CharacterData</c>&amp;apos;s parent, just before the <c>CharacterData</c> node.
-</summary>
-<remarks>
-<para>Strings are inserted as <see cref="Text"/> nodes; the string is being passed as argument to the <see cref="TextText"/> constructor.</para>
-<para>-<see cref="CharacterData.AppendData"/><br/>-<see cref="CharacterData.After"/><br/>-<see cref="DocumentType.Before"/><br/>-<see cref="Element.Before"/><br/>-<see cref="Element.Append"/><br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/before"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CharacterDataBefore>
-<CharacterDataLength>
-<summary>
-The read-only <strong><c>CharacterData.length</c></strong> property<br/>returns the number of characters in the contained data, as a positive integer.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive integer with the length of the <see cref="CharacterData.Data"/> string.</value>
-</CharacterDataLength>
-<CharacterDataRemove>
-<summary>
-The <strong><c>remove()</c></strong> method of the <see cref="CharacterData"/> removes it from its parent node.<br/>If it has no parent node, calling <c>remove()</c> does nothing.
-</summary>
-<remarks>
-<para>-<see cref="CharacterData.DeleteData"/><br/>-<see cref="DocumentType.Remove"/><br/>-<see cref="Element.Remove"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/remove"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CharacterDataRemove>
 <CharacterDataAfter>
 <summary>
 The <strong><c>after()</c></strong> method of the <see cref="CharacterData"/> interface<br/>inserts a set of <see cref="Node"/> objects or strings in the children list of the<br/>object&amp;apos;s parent, just after the object itself.
@@ -61,35 +20,6 @@ The <strong><c>after()</c></strong> method of the <see cref="CharacterData"/> in
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </CharacterDataAfter>
-<CharacterDataPreviousElementSibling>
-<summary>
-The read-only <strong><c>previousElementSibling</c></strong> property of the <see cref="CharacterData"/> interface<br/>returns the first <see cref="Element"/> before the current node in its parent's children list,<br/>or <c>null</c> if there is none.
-</summary>
-<remarks>
-<para>-<see cref="CharacterData.NextElementSibling"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/previousElementSibling"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Element"/> object, or <c>null</c> if no sibling has been found.</value>
-</CharacterDataPreviousElementSibling>
-<CharacterDataInsertData>
-<summary>
-The <strong><c>insertData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>inserts the provided data into this <c>CharacterData</c> node&amp;apos;s current data,<br/>at the provided offset from the start of the existing data.<br/>The provided data is spliced into the existing data.
-</summary>
-<remarks>
-<para>-<see cref="CharacterData.AppendData"/>, <see cref="CharacterData.DeleteData"/>, <see cref="CharacterData.ReplaceData"/><br/>-<see cref="CharacterData.Data"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/insertData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None.</returns>
-</CharacterDataInsertData>
-<CharacterDataSubstringData>
-<summary>
-The <strong><c>substringData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>returns a portion of the existing data,<br/>starting at the specified index<br/>and extending for a given number of characters afterwards.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/substringData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string with the substring.</returns>
-</CharacterDataSubstringData>
 <CharacterDataAppendData>
 <summary>
 The <strong><c>appendData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>adds the provided data to the end of the node&amp;apos;s current data.
@@ -100,16 +30,17 @@ The <strong><c>appendData()</c></strong> method of the <see cref="CharacterData"
 </remarks>
 <returns>None.</returns>
 </CharacterDataAppendData>
-<CharacterDataReplaceData>
+<CharacterDataBefore>
 <summary>
-The <strong><c>replaceData()</c></strong> method of the <see cref="CharacterData"/> interface removes a certain number of characters of the existing text in a given <c>CharacterData</c> node and replaces those characters with the text provided.
+The <strong><c>before()</c></strong> method of the <see cref="CharacterData"/> interface<br/>inserts a set of <see cref="Node"/> objects and strings<br/>in the children list of the <c>CharacterData</c>&amp;apos;s parent, just before the <c>CharacterData</c> node.
 </summary>
 <remarks>
-<para>-<see cref="CharacterData.AppendData"/><br/>-<see cref="CharacterData.DeleteData"/><br/>-<see cref="CharacterData.InsertData"/><br/>-<see cref="CharacterData.Data"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceData"> <em>See also on MDN</em> </seealso></para>
+<para>Strings are inserted as <see cref="Text"/> nodes; the string is being passed as argument to the <see cref="TextText"/> constructor.</para>
+<para>-<see cref="CharacterData.AppendData"/><br/>-<see cref="CharacterData.After"/><br/>-<see cref="DocumentType.Before"/><br/>-<see cref="Element.Before"/><br/>-<see cref="Element.Append"/><br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/before"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None.</returns>
-</CharacterDataReplaceData>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CharacterDataBefore>
 <CharacterDataData>
 <summary>
 The <strong><c>data</c></strong> property of the <see cref="CharacterData"/> interface represent the value of the current object's data.
@@ -120,16 +51,6 @@ The <strong><c>data</c></strong> property of the <see cref="CharacterData"/> int
 </remarks>
 <value>A string with the character information contained in the <see cref="CharacterData"/> node.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>cd.data = null</c> is equivalent to <c>cd.data = &amp;quot;&amp;quot;</c>.</value>
 </CharacterDataData>
-<CharacterDataNextElementSibling>
-<summary>
-The read-only <strong><c>nextElementSibling</c></strong> property of the <see cref="CharacterData"/> interface<br/>returns the first <see cref="Element"/> node following the specified one in its parent's<br/>children list, or <c>null</c> if the specified element is the last one in the list.
-</summary>
-<remarks>
-<para>-<see cref="CharacterData.PreviousElementSibling"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/nextElementSibling"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Element"/> object, or <c>null</c> if no sibling has been found.</value>
-</CharacterDataNextElementSibling>
 <CharacterDataDeleteData>
 <summary>
 The <strong><c>deleteData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>removes all or part of the data from this <c>CharacterData</c> node.
@@ -140,4 +61,83 @@ The <strong><c>deleteData()</c></strong> method of the <see cref="CharacterData"
 </remarks>
 <returns>None.</returns>
 </CharacterDataDeleteData>
+<CharacterDataInsertData>
+<summary>
+The <strong><c>insertData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>inserts the provided data into this <c>CharacterData</c> node&amp;apos;s current data,<br/>at the provided offset from the start of the existing data.<br/>The provided data is spliced into the existing data.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.AppendData"/>, <see cref="CharacterData.DeleteData"/>, <see cref="CharacterData.ReplaceData"/><br/>-<see cref="CharacterData.Data"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/insertData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</CharacterDataInsertData>
+<CharacterDataLength>
+<summary>
+The read-only <strong><c>CharacterData.length</c></strong> property<br/>returns the number of characters in the contained data, as a positive integer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer with the length of the <see cref="CharacterData.Data"/> string.</value>
+</CharacterDataLength>
+<CharacterDataNextElementSibling>
+<summary>
+The read-only <strong><c>nextElementSibling</c></strong> property of the <see cref="CharacterData"/> interface<br/>returns the first <see cref="Element"/> node following the specified one in its parent's<br/>children list, or <c>null</c> if the specified element is the last one in the list.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.PreviousElementSibling"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/nextElementSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Element"/> object, or <c>null</c> if no sibling has been found.</value>
+</CharacterDataNextElementSibling>
+<CharacterDataPreviousElementSibling>
+<summary>
+The read-only <strong><c>previousElementSibling</c></strong> property of the <see cref="CharacterData"/> interface<br/>returns the first <see cref="Element"/> before the current node in its parent's children list,<br/>or <c>null</c> if there is none.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.NextElementSibling"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/previousElementSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Element"/> object, or <c>null</c> if no sibling has been found.</value>
+</CharacterDataPreviousElementSibling>
+<CharacterDataRemove>
+<summary>
+The <strong><c>remove()</c></strong> method of the <see cref="CharacterData"/> removes it from its parent node.<br/>If it has no parent node, calling <c>remove()</c> does nothing.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.DeleteData"/><br/>-<see cref="DocumentType.Remove"/><br/>-<see cref="Element.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CharacterDataRemove>
+<CharacterDataReplaceData>
+<summary>
+The <strong><c>replaceData()</c></strong> method of the <see cref="CharacterData"/> interface removes a certain number of characters of the existing text in a given <c>CharacterData</c> node and replaces those characters with the text provided.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.AppendData"/><br/>-<see cref="CharacterData.DeleteData"/><br/>-<see cref="CharacterData.InsertData"/><br/>-<see cref="CharacterData.Data"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</CharacterDataReplaceData>
+<CharacterDataReplaceWith>
+<summary>
+The <strong><c>replaceWith()</c></strong> method of the <see cref="CharacterData"/> interface<br/>replaces this node in the children list of its parent<br/>with a set of <see cref="Node"/> objects or string.
+</summary>
+<remarks>
+<para>Strings are inserted as <see cref="Text"/> nodes; the string is being passed as argument to the <see cref="TextText"/> constructor.</para>
+<para>-<see cref="CharacterData.ReplaceData"/><br/>-<see cref="DocumentType.ReplaceWith"/><br/>-<see cref="Element.ReplaceWith"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceWith"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CharacterDataReplaceWith>
+<CharacterDataSubstringData>
+<summary>
+The <strong><c>substringData()</c></strong> method of the <see cref="CharacterData"/> interface<br/>returns a portion of the existing data,<br/>starting at the specified index<br/>and extending for a given number of characters afterwards.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/substringData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string with the substring.</returns>
+</CharacterDataSubstringData>
 </docs>

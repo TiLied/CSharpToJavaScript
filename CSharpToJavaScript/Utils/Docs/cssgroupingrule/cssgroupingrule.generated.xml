@@ -9,15 +9,6 @@ The <strong><c>CSSGroupingRule</c></strong> interface of the <see href="https://
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSGroupingRule>
-<CSSGroupingRuleDeleteRule>
-<summary>
-The <strong><c>deleteRule()</c></strong> method of the<br/><see cref="CSSGroupingRule"/> interface removes a CSS rule from a list of child CSS<br/>rules.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule/deleteRule"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CSSGroupingRuleDeleteRule>
 <CSSGroupingRuleCssRules>
 <summary>
 The <strong><c>cssRules</c></strong> property of the<br/><see cref="CSSGroupingRule"/> interface returns a <see cref="CSSRuleList"/> containing<br/>a collection of <see cref="CSSRule"/> objects.
@@ -27,6 +18,15 @@ The <strong><c>cssRules</c></strong> property of the<br/><see cref="CSSGroupingR
 </remarks>
 <value>a <see cref="CSSRuleList"/>.</value>
 </CSSGroupingRuleCssRules>
+<CSSGroupingRuleDeleteRule>
+<summary>
+The <strong><c>deleteRule()</c></strong> method of the<br/><see cref="CSSGroupingRule"/> interface removes a CSS rule from a list of child CSS<br/>rules.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule/deleteRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSGroupingRuleDeleteRule>
 <CSSGroupingRuleInsertRule>
 <summary>
 The <strong><c>insertRule()</c></strong> method of the<br/><see cref="CSSGroupingRule"/> interface adds a new CSS rule to a list of CSS rules.

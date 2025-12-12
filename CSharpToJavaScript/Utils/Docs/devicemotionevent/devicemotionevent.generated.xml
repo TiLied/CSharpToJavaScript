@@ -9,17 +9,17 @@ The <strong><c>DeviceMotionEvent</c></strong> interface of the {{domxref(&amp;qu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DeviceMotionEvent>
-<DeviceMotionEventRotationRate>
+<DeviceMotionEventAcceleration>
 <summary>
-The <strong><c>rotationRate</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the rate at which the device is rotating around each of its axes in degrees per<br/>second.
+The <strong><c>acceleration</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the acceleration recorded by<br/>the device, in <see href="https://en.wikipedia.org/wiki/Meter_per_second_squared">meters per second squared (m/s²)</see>.<br/>This value does not include the effect of<br/>the gravitational force, in contrast to <see cref="DeviceMotionEvent.AccelerationIncludingGravity"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>If the hardware isn&amp;apos;t capable of providing this<br/>information, this property returns <c>null</c>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the hardware does not know how to remove gravity from the<br/>acceleration data, this value may not be present in the<br/><see cref="DeviceMotionEvent"/>. In this situation, you'll need to use<br/><see cref="DeviceMotionEvent.AccelerationIncludingGravity"/> instead.</para></blockquote>
 <para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Windowdevicemotion"/> event<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/rotationRate"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/acceleration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <c>rotationRate</c> property is a read only object describing the rotation<br/>rates of the device around each of its axes:</value>
-</DeviceMotionEventRotationRate>
+<value>The <c>acceleration</c> property is an object providing information about<br/>acceleration on the three axes in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained#device_coordinate_frame">Device coordinate frame</see>. Each axis is represented with its own property:</value>
+</DeviceMotionEventAcceleration>
 <DeviceMotionEventAccelerationIncludingGravity>
 <summary>
 The <strong><c>accelerationIncludingGravity</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the<br/>amount of acceleration recorded by the device, in <see href="https://en.wikipedia.org/wiki/Meter_per_second_squared">meters per second squared (m/s²)</see>. Unlike <see cref="DeviceMotionEvent.Acceleration"/><br/>which compensates for the influence of gravity, its value is the sum of the acceleration<br/>of the device as induced by the user and an acceleration equal and opposite to that<br/>caused by gravity. In other words, it measures the<br/><see href="https://en.wikipedia.org/wiki/G-Force">g-force</see>. In practice, this value represents<br/>the raw data measured by an <see href="https://en.wikipedia.org/wiki/Accelerometer">accelerometer</see>.
@@ -40,17 +40,6 @@ The <strong><c>DeviceMotionEvent()</c></strong> constructor creates a new <see c
 </remarks>
 <returns>A new <see cref="DeviceMotionEvent"/> object.</returns>
 </DeviceMotionEventDeviceMotionEvent>
-<DeviceMotionEventAcceleration>
-<summary>
-The <strong><c>acceleration</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the acceleration recorded by<br/>the device, in <see href="https://en.wikipedia.org/wiki/Meter_per_second_squared">meters per second squared (m/s²)</see>.<br/>This value does not include the effect of<br/>the gravitational force, in contrast to <see cref="DeviceMotionEvent.AccelerationIncludingGravity"/>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>If the hardware does not know how to remove gravity from the<br/>acceleration data, this value may not be present in the<br/><see cref="DeviceMotionEvent"/>. In this situation, you'll need to use<br/><see cref="DeviceMotionEvent.AccelerationIncludingGravity"/> instead.</para></blockquote>
-<para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Windowdevicemotion"/> event<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/acceleration"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <c>acceleration</c> property is an object providing information about<br/>acceleration on the three axes in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained#device_coordinate_frame">Device coordinate frame</see>. Each axis is represented with its own property:</value>
-</DeviceMotionEventAcceleration>
 <DeviceMotionEventInterval>
 <summary>
 The <strong><c>interval</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the interval, in milliseconds, at which data is obtained from the underlying<br/>hardware. You can use this to determine the granularity of motion events.
@@ -61,4 +50,15 @@ The <strong><c>interval</c></strong> read-only property of the <see cref="Device
 </remarks>
 <value>A number representing the interval of time, in milliseconds.</value>
 </DeviceMotionEventInterval>
+<DeviceMotionEventRotationRate>
+<summary>
+The <strong><c>rotationRate</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the rate at which the device is rotating around each of its axes in degrees per<br/>second.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the hardware isn&amp;apos;t capable of providing this<br/>information, this property returns <c>null</c>.</para></blockquote>
+<para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Windowdevicemotion"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/rotationRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>rotationRate</c> property is a read only object describing the rotation<br/>rates of the device around each of its axes:</value>
+</DeviceMotionEventRotationRate>
 </docs>

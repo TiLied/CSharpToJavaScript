@@ -8,15 +8,6 @@ The <strong><c>CSSRotate</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSRotate>
-<CSSRotateX>
-<summary>
-The <strong><c>x</c></strong> property of the<br/><see cref="CSSRotate"/> interface gets and sets the abscissa or x-axis of the<br/>translating vector.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
-</CSSRotateX>
 <CSSRotateAngle>
 <summary>
 The <strong><c>angle</c></strong> property of the<br/><see cref="CSSRotate"/> interface gets and sets the angle of rotation. A positive angle<br/>denotes a clockwise rotation, a negative angle a counter-clockwise one.
@@ -26,15 +17,6 @@ The <strong><c>angle</c></strong> property of the<br/><see cref="CSSRotate"/> in
 </remarks>
 <value>A <see cref="CSSNumericValue"/></value>
 </CSSRotateAngle>
-<CSSRotateZ>
-<summary>
-The <strong><c>z</c></strong> property of the<br/><see cref="CSSRotate"/> interface representing the z-component of the translating<br/>vector. A positive value moves the element towards the viewer, and a negative value<br/>farther away.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate/z"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
-</CSSRotateZ>
 <CSSRotateCSSRotate>
 <summary>
 The <strong><c>CSSRotate()</c></strong> constructor creates a new<br/><see cref="CSSRotate"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">rotate()</see> value of the<br/>individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
@@ -43,6 +25,15 @@ The <strong><c>CSSRotate()</c></strong> constructor creates a new<br/><see cref=
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate/CSSRotate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSRotateCSSRotate>
+<CSSRotateX>
+<summary>
+The <strong><c>x</c></strong> property of the<br/><see cref="CSSRotate"/> interface gets and sets the abscissa or x-axis of the<br/>translating vector.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
+</CSSRotateX>
 <CSSRotateY>
 <summary>
 The <strong><c>y</c></strong> property of the<br/><see cref="CSSRotate"/> interface gets and sets the ordinate or y-axis of the<br/>translating vector.
@@ -52,4 +43,13 @@ The <strong><c>y</c></strong> property of the<br/><see cref="CSSRotate"/> interf
 </remarks>
 <value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
 </CSSRotateY>
+<CSSRotateZ>
+<summary>
+The <strong><c>z</c></strong> property of the<br/><see cref="CSSRotate"/> interface representing the z-component of the translating<br/>vector. A positive value moves the element towards the viewer, and a negative value<br/>farther away.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate/z"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>. Can be set to a number, which is wrapped in a <see cref="CSSUnitValue"/> of <c>unit: &amp;quot;number&amp;quot;</c>.</value>
+</CSSRotateZ>
 </docs>

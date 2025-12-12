@@ -8,17 +8,15 @@ The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRInputSource>
-<XRInputSourceProfiles>
+<XRInputSourceGamepad>
 <summary>
-The read-only <see cref="XRInputSource"/> property <strong><c>profiles</c></strong> returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.
+The read-only <see cref="XRInputSource"/> property <strong><c>gamepad</c></strong> returns a <see cref="Gamepad"/> object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is <c>null</c>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>profiles</c> list is always empty when the WebXR<br/>session is in inline mode.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles"> <em>See also on MDN</em> </seealso></para>
+<para>The <see cref="Gamepad"/> instance returned behaves as described by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>. However, there are a few things to note:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gamepad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of strings, each describing one configuration profile<br/>for the input device represented by the <c>XRInputSource</c> object. Each input<br/>profile specifies the preferred visual representation and behavior of the input source.</value>
-</XRInputSourceProfiles>
+</XRInputSourceGamepad>
 <XRInputSourceGripSpace>
 <summary>
 The read-only <see cref="XRInputSource"/> property <strong><c>gripSpace</c></strong> returns an <see cref="XRSpace"/> whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand. For example, if a user were holding a virtual straight rod, the native origin of this <c>XRSpace</c> would be located at the approximate center of mass of the user&amp;apos;s fist.
@@ -38,17 +36,6 @@ The read-only <strong><c>hand</c></strong> property of the <see cref="XRInputSou
 </remarks>
 <value>An <see cref="XRHand"/> object or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the <see cref="XRSession"/> has not been <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession">requested</see> with the <c>hand-tracking</c> feature descriptor.</value>
 </XRInputSourceHand>
-<XRInputSourceTargetRaySpace>
-<summary>
-The read-only <see cref="XRInputSource"/> property<br/><strong><c>targetRaySpace</c></strong> returns an <see cref="XRSpace"/><br/>(typically an <see cref="XRReferenceSpace"/>) representing the position and<br/>orientation of the target ray in the virtual space. Its native origin tracks<br/>the position of the origin point of the target ray, and its orientation indicates the<br/>orientation of the controller device itself. These values, interpreted in the context of<br/>the input source's <see cref="XRInputSource.TargetRayMode"/>, can be<br/>used both to fully interpret the device as an input source.
-</summary>
-<remarks>
-<para>To obtain an <c>XRSpace</c> representing the input controller&amp;apos;s position and<br/>orientation in virtual space, use the <see cref="XRInputSource.GripSpace"/> property.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Gamepads">Using gamepads in WebXR applications</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="XRSpace"/> object—typically an <see cref="XRReferenceSpace"/> or<br/><see cref="XRBoundedReferenceSpace"/>—which represents the position and orientation of<br/>the input controller&amp;apos;s target ray in virtual space.The native origin of the returned <c>XRSpace</c> is located at the point from<br/>which the target ray is emitted, and the orientation of the space indicates the<br/>direction in which the target ray is pointing.</value>
-</XRInputSourceTargetRaySpace>
 <XRInputSourceHandedness>
 <summary>
 The read-only <see cref="XRInputSource"/> property<br/><strong><c>handedness</c></strong> indicates which of the user&amp;apos;s hands the WebXR<br/>input source is associated with, or if it&amp;apos;s not associated with a hand at all.
@@ -59,15 +46,17 @@ The read-only <see cref="XRInputSource"/> property<br/><strong><c>handedness</c>
 </remarks>
 <value>A string indicating whether the input controller is held in one of<br/>the user&amp;apos;s hands, and if it is, which hand. The value is one of the following:</value>
 </XRInputSourceHandedness>
-<XRInputSourceGamepad>
+<XRInputSourceProfiles>
 <summary>
-The read-only <see cref="XRInputSource"/> property <strong><c>gamepad</c></strong> returns a <see cref="Gamepad"/> object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is <c>null</c>.
+The read-only <see cref="XRInputSource"/> property <strong><c>profiles</c></strong> returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.
 </summary>
 <remarks>
-<para>The <see cref="Gamepad"/> instance returned behaves as described by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>. However, there are a few things to note:</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gamepad"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>profiles</c> list is always empty when the WebXR<br/>session is in inline mode.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</XRInputSourceGamepad>
+<value>An array of strings, each describing one configuration profile<br/>for the input device represented by the <c>XRInputSource</c> object. Each input<br/>profile specifies the preferred visual representation and behavior of the input source.</value>
+</XRInputSourceProfiles>
 <XRInputSourceTargetRayMode>
 <summary>
 The read-only <see cref="XRInputSource"/><br/>property <strong><c>targetRayMode</c></strong> indicates the method by which the<br/>target ray for the input source should be generated and how it should be presented to<br/>the user.
@@ -79,4 +68,15 @@ The read-only <see cref="XRInputSource"/><br/>property <strong><c>targetRayMode<
 </remarks>
 <value>A string indicating which method to use when generating and presenting the target ray to<br/>the user. The possible values are:</value>
 </XRInputSourceTargetRayMode>
+<XRInputSourceTargetRaySpace>
+<summary>
+The read-only <see cref="XRInputSource"/> property<br/><strong><c>targetRaySpace</c></strong> returns an <see cref="XRSpace"/><br/>(typically an <see cref="XRReferenceSpace"/>) representing the position and<br/>orientation of the target ray in the virtual space. Its native origin tracks<br/>the position of the origin point of the target ray, and its orientation indicates the<br/>orientation of the controller device itself. These values, interpreted in the context of<br/>the input source's <see cref="XRInputSource.TargetRayMode"/>, can be<br/>used both to fully interpret the device as an input source.
+</summary>
+<remarks>
+<para>To obtain an <c>XRSpace</c> representing the input controller&amp;apos;s position and<br/>orientation in virtual space, use the <see cref="XRInputSource.GripSpace"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Gamepads">Using gamepads in WebXR applications</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace"/> object—typically an <see cref="XRReferenceSpace"/> or<br/><see cref="XRBoundedReferenceSpace"/>—which represents the position and orientation of<br/>the input controller&amp;apos;s target ray in virtual space.The native origin of the returned <c>XRSpace</c> is located at the point from<br/>which the target ray is emitted, and the orientation of the space indicates the<br/>direction in which the target ray is pointing.</value>
+</XRInputSourceTargetRaySpace>
 </docs>

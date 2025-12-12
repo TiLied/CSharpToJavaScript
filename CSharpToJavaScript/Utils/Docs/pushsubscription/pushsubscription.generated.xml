@@ -9,6 +9,25 @@ The <c>PushSubscription</c> interface of the <see href="https://developer.mozill
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PushSubscription>
+<PushSubscriptionEndpoint>
+<summary>
+The <strong><c>endpoint</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a string containing<br/>the endpoint associated with the push subscription.
+</summary>
+<remarks>
+<para>The endpoint takes the form of a custom URL pointing to a push server, which can be<br/>used to send a push message to the particular service worker instance that subscribed to<br/>the push service. For this reason, it is a good idea to keep your endpoint a secret, so<br/>others do not hijack it and abuse the push functionality.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PushSubscriptionEndpoint>
+<PushSubscriptionExpirationTime>
+<summary>
+The <strong><c>expirationTime</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a <see cref="DOMHighResTimeStamp"/><br/>of the subscription expiration time associated with the push subscription, if there is<br/>one, or <c>null</c> otherwise.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/expirationTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> or <c>null</c>.</value>
+</PushSubscriptionExpirationTime>
 <PushSubscriptionGetKey>
 <summary>
 The <c>getKey()</c> method of the <see cref="PushSubscription"/> interface<br/>returns an <see cref="ArrayBuffer"/> representing a client public key, which can then<br/>be sent to a server and used in encrypting push message data.
@@ -27,26 +46,6 @@ The <strong><c>options</c></strong> read-only property<br/>of the <see cref="Pus
 </remarks>
 <value>An read-only <see cref="PushSubscriptionOptions"/> object containing the following values:</value>
 </PushSubscriptionOptions>
-<PushSubscriptionEndpoint>
-<summary>
-The <strong><c>endpoint</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a string containing<br/>the endpoint associated with the push subscription.
-</summary>
-<remarks>
-<para>The endpoint takes the form of a custom URL pointing to a push server, which can be<br/>used to send a push message to the particular service worker instance that subscribed to<br/>the push service. For this reason, it is a good idea to keep your endpoint a secret, so<br/>others do not hijack it and abuse the push functionality.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</PushSubscriptionEndpoint>
-<PushSubscriptionUnsubscribe>
-<summary>
-The <c>unsubscribe()</c> method of the <see cref="PushSubscription"/> interface<br/>returns a <see cref="Promise"/> that resolves to a boolean value when the<br/>current subscription is successfully unsubscribed.
-</summary>
-<remarks>
-<para>-<see cref="PushManager.GetSubscription"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to a boolean value when the current<br/>subscription is successfully unsubscribed.</returns>
-</PushSubscriptionUnsubscribe>
 <PushSubscriptionSubscriptionId>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>subscriptionId</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a string containing<br/>the subscription ID associated with the push subscription.
@@ -57,15 +56,6 @@ The <c>unsubscribe()</c> method of the <see cref="PushSubscription"/> interface<
 </remarks>
 <value>A string.</value>
 </PushSubscriptionSubscriptionId>
-<PushSubscriptionExpirationTime>
-<summary>
-The <strong><c>expirationTime</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a <see cref="DOMHighResTimeStamp"/><br/>of the subscription expiration time associated with the push subscription, if there is<br/>one, or <c>null</c> otherwise.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/expirationTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> or <c>null</c>.</value>
-</PushSubscriptionExpirationTime>
 <PushSubscriptionToJSON>
 <summary>
 The <c>toJSON()</c> method of the <see cref="PushSubscription"/> interface is a<br/>standard serializer: it returns a JSON representation of the subscription properties,<br/>providing a useful shortcut.
@@ -75,4 +65,14 @@ The <c>toJSON()</c> method of the <see cref="PushSubscription"/> interface is a<
 </remarks>
 <returns>A JSON object. It contains the subscription endpoint, <c>expirationTime</c> and public keys, as an<br/><c>endpoint</c> member, an <c>expirationTime</c> member and a <c>keys</c> member.</returns>
 </PushSubscriptionToJSON>
+<PushSubscriptionUnsubscribe>
+<summary>
+The <c>unsubscribe()</c> method of the <see cref="PushSubscription"/> interface<br/>returns a <see cref="Promise"/> that resolves to a boolean value when the<br/>current subscription is successfully unsubscribed.
+</summary>
+<remarks>
+<para>-<see cref="PushManager.GetSubscription"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a boolean value when the current<br/>subscription is successfully unsubscribed.</returns>
+</PushSubscriptionUnsubscribe>
 </docs>

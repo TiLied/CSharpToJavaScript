@@ -9,6 +9,78 @@ The <strong><c>SVGFEDiffuseLightingElement</c></strong> interface corresponds to
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEDiffuseLightingElement>
+<SVGFEDiffuseLightingElementDiffuseConstant>
+<summary>
+The <strong><c>diffuseConstant</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("diffuseConstant")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/diffuseConstant"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEDiffuseLightingElementDiffuseConstant>
+<SVGFEDiffuseLightingElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDiffuseLighting">feDiffuseLighting</see> element's {{SVGAttr("height")}} filter primitive attribute. The filter lights an image using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEDiffuseLightingElement.Width"/><br/>-<see cref="SVGFESpecularLightingElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEDiffuseLightingElementHeight>
+<SVGFEDiffuseLightingElementIn1>
+<summary>
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/in1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFEDiffuseLightingElementIn1>
+<SVGFEDiffuseLightingElementKernelUnitLengthX>
+<summary>
+The <strong><c>kernelUnitLengthX</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the X component of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/kernelUnitLengthX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEDiffuseLightingElementKernelUnitLengthX>
+<SVGFEDiffuseLightingElementKernelUnitLengthY>
+<summary>
+The <strong><c>kernelUnitLengthY</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the Y component of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/kernelUnitLengthY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEDiffuseLightingElementKernelUnitLengthY>
+<SVGFEDiffuseLightingElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("feDiffuseLighting")}} element's {{SVGAttr("result")}} attribute. The filter lights an image using the alpha channel as a bump map. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feDiffuseLighting&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see cref="SVGFEDiffuseLightingElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see cref="SVGFESpecularLightingElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEDiffuseLightingElementResult>
+<SVGFEDiffuseLightingElementSurfaceScale>
+<summary>
+The <strong><c>surfaceScale</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("surfaceScale")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/surfaceScale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEDiffuseLightingElementSurfaceScale>
 <SVGFEDiffuseLightingElementWidth>
 <summary>
 The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -31,78 +103,6 @@ The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEDiffuseL
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFEDiffuseLightingElementX>
-<SVGFEDiffuseLightingElementDiffuseConstant>
-<summary>
-The <strong><c>diffuseConstant</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("diffuseConstant")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/diffuseConstant"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFEDiffuseLightingElementDiffuseConstant>
-<SVGFEDiffuseLightingElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeDiffuseLighting">feDiffuseLighting</see> element's {{SVGAttr("height")}} filter primitive attribute. The filter lights an image using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFEDiffuseLightingElement.Width"/><br/>-<see cref="SVGFESpecularLightingElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEDiffuseLightingElementHeight>
-<SVGFEDiffuseLightingElementKernelUnitLengthY>
-<summary>
-The <strong><c>kernelUnitLengthY</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the Y component of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/kernelUnitLengthY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFEDiffuseLightingElementKernelUnitLengthY>
-<SVGFEDiffuseLightingElementKernelUnitLengthX>
-<summary>
-The <strong><c>kernelUnitLengthX</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the X component of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/kernelUnitLengthX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFEDiffuseLightingElementKernelUnitLengthX>
-<SVGFEDiffuseLightingElementResult>
-<summary>
-The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGElement("feDiffuseLighting")}} element's {{SVGAttr("result")}} attribute. The filter lights an image using the alpha channel as a bump map. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feDiffuseLighting&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
-<para>-<see cref="SVGFEDiffuseLightingElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see cref="SVGFESpecularLightingElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/result"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/>.</value>
-</SVGFEDiffuseLightingElementResult>
-<SVGFEDiffuseLightingElementIn1>
-<summary>
-The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/in1"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFEDiffuseLightingElementIn1>
-<SVGFEDiffuseLightingElementSurfaceScale>
-<summary>
-The <strong><c>surfaceScale</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface reflects the {{SVGAttr("surfaceScale")}} attribute of the given {{SVGElement("feDiffuseLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/surfaceScale"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFEDiffuseLightingElementSurfaceScale>
 <SVGFEDiffuseLightingElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

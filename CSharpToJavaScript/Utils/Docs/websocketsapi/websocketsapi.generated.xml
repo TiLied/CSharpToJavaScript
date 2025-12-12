@@ -1,0 +1,67 @@
+<docs>
+<WebSockets_API>
+<summary>
+The <strong>WebSocket API</strong> makes it possible to open a two-way interactive communication session between the user&amp;apos;s browser and a server. With this API, you can send messages to a server and receive responses without having to poll the server for a reply.
+</summary>
+<remarks>
+<para>The WebSocket API provides two alternative mechanisms for creating and using web socket connections: the <see cref="WebSocket"/> interface and the <see cref="WebSocketStream"/> interface.</para><para>Additionally, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API">WebTransport API</see> is expected to replace the WebSocket API for many applications. WebTransport is a versatile, low-level API that provides backpressure and many other features not supported by either <c>WebSocket</c> or <c>WebSocketStream</c>, such as unidirectional streams, out-of-order delivery, and unreliable data transmission via datagrams. WebTransport is more complex to use than WebSockets and its cross-browser support is not as wide, but it enables the implementation of sophisticated solutions. If standard WebSocket connections are a good fit for your use case and you need wide browser compatibility, you should employ the WebSockets API to get up and running quickly. However, if your application requires a non-standard custom solution, then you should use the WebTransport API.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If a page has an open WebSocket connection, the browser may not add it to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/bfcache">bfcache</see>. It's therefore good practice to close the connection when the user has finished with the page. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#working_with_the_bfcache">working with the bfcache</see>.</para></blockquote>
+<para>-<see href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455 — The WebSocket Protocol</see><br/>-<see href="https://websockets.spec.whatwg.org/">WebSocket API Specification</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">Server-Sent Events</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_API>
+<WebSockets_APIUsing_WebSocketStream>
+<summary>
+The <see cref="WebSocketStream"/> API is a {{jsxref("Promise")}}-based alternative to <see cref="WebSocket"/> for creating and using client-side WebSocket connections. <c>WebSocketStream</c> uses the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> to handle receiving and sending messages, meaning that socket connections can take advantage of stream <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> automatically (no additional action required by the developer), regulating the speed of reading or writing to avoid bottlenecks in the application.
+</summary>
+<remarks>
+<para>This article explains how to use the <see cref="WebSocketStream"/> API to create a WebSocket client.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIUsing_WebSocketStream>
+<WebSockets_APIWriting_a_WebSocket_server_in_Java>
+<summary>
+This example shows you how to create a WebSocket API server using Oracle Java.
+</summary>
+<remarks>
+<para>Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.</para><para>This server conforms to <see href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</see>, so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIWriting_a_WebSocket_server_in_Java>
+<WebSockets_APIWriting_a_WebSocket_server_in_JavaScript_Deno>
+<summary>
+This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
+</summary>
+<remarks>
+<para>Deno is a JavaScript runtime which supports TypeScript compiling and caching on the fly. Deno has built-in formatter, linter, test runner and more, and also implements many web APIs. By being compliant with the web standards, all Deno-specific APIs are implemented under the <c>Deno</c> namespace.</para><para>The <see href="https://deno.com/">Deno website</see> provides instructions for installing Deno.</para><para>Deno version at the time of writing: <c>1.36</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">Writing WebSocket servers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIWriting_a_WebSocket_server_in_JavaScript_Deno>
+<WebSockets_APIWriting_WebSocket_client_applications>
+<summary>
+In this guide we&amp;apos;ll walk through the implementation of a WebSocket-based ping application. In this application, the client sends a &amp;quot;ping&amp;quot; message to the server every second, and the server responds with a &amp;quot;pong&amp;quot; message. The client listens for &amp;quot;pong&amp;quot; messages and logs them, keeping track of how many message exchanges there have been.
+</summary>
+<remarks>
+<para>Although this is a pretty minimal application, it covers the fundamental points involved in writing a WebSocket client.</para><para>You can find the complete example at <see href="https://github.com/mdn/dom-examples/tree/main/websockets">https://github.com/mdn/dom-examples/tree/main/websockets</see>. The server side is written in <see href="https://deno.com/">Deno</see>, so you&amp;apos;ll have to install that first if you want to run the example locally.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIWriting_WebSocket_client_applications>
+<WebSockets_APIWriting_WebSocket_server>
+<summary>
+If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft&amp;apos;s language.
+</summary>
+<remarks>
+<para>This server conforms to <see href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</see>, so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIWriting_WebSocket_server>
+<WebSockets_APIWriting_WebSocket_servers>
+<summary>
+A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. Creating a custom server can seem overwhelming if you have never done it before. It can actually be quite straightforward to implement a basic WebSocket server on your platform of choice, though.
+</summary>
+<remarks>
+<para>A WebSocket server can be written in any server-side programming language that is capable of <see href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</see>, such as C(++), Python, <see href="https://developer.mozilla.org/en-US/docs/Glossary/PHP">PHP</see>, or <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework">server-side JavaScript</see>. This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.</para><para>This article assumes you're already familiar with how <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Read the latest official WebSockets specification, <see href="https://datatracker.ietf.org/doc/rfc6455/?include_text=1">RFC 6455</see>. Sections 1 and 4-7 are especially interesting to server implementors. Section 10 discusses security and you should definitely peruse it before exposing your server.</para></blockquote><para>A WebSocket server is explained on a very low level here. WebSocket servers are often separate and specialized servers (for load-balancing or other practical reasons), so you will often use a <see href="https://en.wikipedia.org/wiki/Reverse_proxy">reverse proxy</see> (such as a regular HTTP server) to detect WebSocket handshakes, pre-process them, and send those clients to a real WebSocket server. This means that you don&amp;apos;t have to bloat your server code with cookie and authentication handlers (for example).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebSockets_APIWriting_WebSocket_servers>
+</docs>

@@ -7,6 +7,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NDEFMessage>
+<NDEFMessageNDEFMessage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFMessage()</c></strong> constructor creates a new <see cref="NDEFMessage"/> object, initialized with the given NDEF records.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage/NDEFMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NDEFMessageNDEFMessage>
 <NDEFMessageRecords>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>records</c> property of<br/><see cref="NDEFMessage"/> interface represents a list of <see cref="NDEFRecord"/>s<br/>present in the NDEF message.
@@ -16,12 +24,4 @@
 </remarks>
 <value>A list of <see cref="NDEFRecord"/> object that represent data recorded in the message.</value>
 </NDEFMessageRecords>
-<NDEFMessageNDEFMessage>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFMessage()</c></strong> constructor creates a new <see cref="NDEFMessage"/> object, initialized with the given NDEF records.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage/NDEFMessage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</NDEFMessageNDEFMessage>
 </docs>

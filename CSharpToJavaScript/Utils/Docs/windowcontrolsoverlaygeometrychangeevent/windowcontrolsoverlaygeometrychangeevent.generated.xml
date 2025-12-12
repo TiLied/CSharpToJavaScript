@@ -9,6 +9,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WindowControlsOverlayGeometryChangeEvent>
+<WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>titlebarAreaRect</c></strong> read-only property of the <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface is a <see cref="DOMRect"/> representing the position and size of the area occupied by the title bar in a desktop-installed Progressive Web App.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/titlebarAreaRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
 <WindowControlsOverlayGeometryChangeEventVisible>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>visible</c></strong> read-only property of the <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface is a boolean flag that indicates whether the window controls overlay is visible or not in a desktop-installed Progressive Web App.
@@ -27,12 +35,4 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WindowControlsOverlayGeometryChangeEventWindowControlsOverlayGeometryChangeEvent>
-<WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>titlebarAreaRect</c></strong> read-only property of the <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface is a <see cref="DOMRect"/> representing the position and size of the area occupied by the title bar in a desktop-installed Progressive Web App.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/titlebarAreaRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
 </docs>

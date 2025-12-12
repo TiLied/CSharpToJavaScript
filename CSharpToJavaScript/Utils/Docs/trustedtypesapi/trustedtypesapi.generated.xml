@@ -1,0 +1,11 @@
+<docs>
+<Trusted_Types_API>
+<summary>
+The <strong>Trusted Types API</strong> gives web developers a way to ensure that input has been passed through a user-specified transformation function before being passed to an API that might execute that input. This can help to protect against client-side <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks. Most commonly the transformation function <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS#sanitization">sanitizes</see> the input.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/trusted-types">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</see><br/>-<see href="https://github.com/w3c/trusted-types#polyfill">Trusted Types polyfill</see> (also available as an <see href="https://www.npmjs.com/package/trusted-types">npm package</see>)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Trusted_Types_API>
+</docs>

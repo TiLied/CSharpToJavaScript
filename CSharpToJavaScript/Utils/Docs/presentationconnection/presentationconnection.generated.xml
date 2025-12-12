@@ -17,32 +17,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/binaryType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PresentationConnectionBinaryType>
-<PresentationConnectionUrl>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the<br/><see cref="PresentationConnection"/> interface returns the URL used to create or<br/>reconnect to the presentation.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/url"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing a URL.</value>
-</PresentationConnectionUrl>
-<PresentationConnectionTerminate>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>terminate()</c> method is called on a <see cref="PresentationConnection"/>, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether <c>terminate()</c> is called in the controlling or the presenting context.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/terminate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</PresentationConnectionTerminate>
-<PresentationConnectionState>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>state</c></strong> attribute reflects the <see href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</see>&amp;apos;s current state. Depending on the current <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate"><c>PresentationConnectionState</c></see>, the <c>state</c> attribute can hold one of the following values.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/state"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</PresentationConnectionState>
 <PresentationConnectionClose>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>close()</c> method is called on a <see cref="PresentationConnection"/>, the {{Glossary("user agent")}} begins the process of closing the connection by sending an empty <c>closeMessage</c> with the <c>closeReason</c> set to <c>closed</c>.
@@ -69,4 +43,30 @@
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </PresentationConnectionSend>
+<PresentationConnectionState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>state</c></strong> attribute reflects the <see href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</see>&amp;apos;s current state. Depending on the current <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate"><c>PresentationConnectionState</c></see>, the <c>state</c> attribute can hold one of the following values.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationConnectionState>
+<PresentationConnectionTerminate>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>terminate()</c> method is called on a <see cref="PresentationConnection"/>, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether <c>terminate()</c> is called in the controlling or the presenting context.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/terminate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PresentationConnectionTerminate>
+<PresentationConnectionUrl>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the<br/><see cref="PresentationConnection"/> interface returns the URL used to create or<br/>reconnect to the presentation.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a URL.</value>
+</PresentationConnectionUrl>
 </docs>

@@ -9,6 +9,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceMark>
+<PerformanceMarkDetail>
+<summary>
+The read-only <strong><c>detail</c></strong> property returns arbitrary metadata that was included in the mark upon construction (either when using <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark/detail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns the value it is set to (from <c>markOptions</c> of <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).</value>
+</PerformanceMarkDetail>
 <PerformanceMarkPerformanceMark>
 <summary>
 The <strong><c>PerformanceMark()</c></strong> constructor creates a <see cref="DOMHighResTimeStamp"/> with the given name.
@@ -20,13 +29,4 @@ The <strong><c>PerformanceMark()</c></strong> constructor creates a <see cref="D
 </remarks>
 <returns>A <see cref="PerformanceMark"/> object.</returns>
 </PerformanceMarkPerformanceMark>
-<PerformanceMarkDetail>
-<summary>
-The read-only <strong><c>detail</c></strong> property returns arbitrary metadata that was included in the mark upon construction (either when using <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark/detail"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Returns the value it is set to (from <c>markOptions</c> of <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).</value>
-</PerformanceMarkDetail>
 </docs>

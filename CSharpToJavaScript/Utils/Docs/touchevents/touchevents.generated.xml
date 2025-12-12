@@ -1,0 +1,31 @@
+<docs>
+<Touchs>
+<summary>
+To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
+</summary>
+<remarks>
+<para>The touch events interfaces are relatively low-level APIs that can be used to support application-specific multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases.</para><para>Touch events are similar to mouse events except they support simultaneous touches and at different locations on the touch surface. The <see cref="TouchEvent"/> interface encapsulates all of the touchpoints that are currently active. The <see cref="Touch"/> interface, which represents a single touchpoint, includes information such as the position of the touch point relative to the browser viewport.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touchs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Touchs>
+<TouchsMulti-touch_interaction>
+<summary>
+The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as <see href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">mouse events</see>. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
+</summary>
+<remarks>
+<para>A <strong>live</strong> version of this application is available on <see href="https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html">GitHub</see>. The <see href="https://github.com/mdn/dom-examples/tree/main/touchevents">source code is available on GitHub</see> and pull requests and <see href="https://github.com/mdn/dom-examples/issues">bug reports</see> are welcome.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events">Pointer events</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touchs/Multi-touch_interaction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TouchsMulti-touch_interaction>
+<TouchsUsing_Touch_Events>
+<summary>
+Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using <see href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">touch events</see> or the application can use <strong>interpreted mouse events</strong> for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
+</summary>
+<remarks>
+<para>The touch events interfaces support application specific single and multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases. The application may apply its own semantics to the touch inputs.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events">Pointer events</see><br/>-<see href="https://web.dev/articles/add-touch-to-your-site">Add touch to your site</see> on web.dev<br/>-<see href="https://codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx">Add touch screen support to your website (The easy way)</see><br/>-<see href="https://rbyers.github.io/paint.html">Paint Program</see> by Rick Byers<br/>-<see href="https://patrickhlauke.github.io/touch/">Touch/pointer tests and demos</see> by Patrick H. Lauke<br/>-<see href="https://github.com/w3c/touch-events">Touch Events Community Group</see><br/>-<see href="https://lists.w3.org/Archives/Public/public-touchevents/">Mail list</see><br/>-<see href="https://developer.mozilla.orgirc://irc.w3.org:6667/">W3C #touchevents IRC channel</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touchs/Using_Touch_Events"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TouchsUsing_Touch_Events>
+</docs>

@@ -8,24 +8,14 @@ The <strong><c>CookieStore</c></strong> interface of the {{domxref(&amp;quot;Coo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CookieStore>
-<CookieStoreGetAll>
+<CookieStoreChange>
 <summary>
-The <strong><c>getAll()</c></strong> method of the <see cref="CookieStore"/> interface returns a {{jsxref("Promise")}} that resolves as an array of cookies that match the <c>name</c> or <c>options</c> passed to it.<br/>Passing no parameters will return all cookies for the current context.
+A <c>change</c> event is fired at a <see cref="CookieStore"/> object when a change is made to any cookie.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/getAll"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/change"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> that resolves with an array of objects representing cookies that match the given <c>name</c> or <c>options</c>.Each object contains the following properties:</returns>
-</CookieStoreGetAll>
-<CookieStoreGet>
-<summary>
-The <strong><c>get()</c></strong> method of the <see cref="CookieStore"/> interface returns a {{jsxref("Promise")}} that resolves to a single cookie matching the given <c>name</c> or <c>options</c> object. The method will return the first cookie that matches.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/get"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with an object representing the first cookie matching the submitted <c>name</c> or <c>options</c>, or <c>null</c> if there is no matching cookie.The object returned for a match contains the following properties:</returns>
-</CookieStoreGet>
+</CookieStoreChange>
 <CookieStoreDelete>
 <summary>
 The <strong><c>delete()</c></strong> method of the <see cref="CookieStore"/> interface deletes a cookie that matches the given <c>name</c> or <c>options</c> object.<br/>The method expires the cookie by changing its date to one in the past.
@@ -36,14 +26,24 @@ The <strong><c>delete()</c></strong> method of the <see cref="CookieStore"/> int
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/> when the deletion operation completes or no cookie is matched.</returns>
 </CookieStoreDelete>
-<CookieStoreChange>
+<CookieStoreGet>
 <summary>
-A <c>change</c> event is fired at a <see cref="CookieStore"/> object when a change is made to any cookie.
+The <strong><c>get()</c></strong> method of the <see cref="CookieStore"/> interface returns a {{jsxref("Promise")}} that resolves to a single cookie matching the given <c>name</c> or <c>options</c> object. The method will return the first cookie that matches.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/change"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/get"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</CookieStoreChange>
+<returns>A <see cref="Promise"/> that resolves with an object representing the first cookie matching the submitted <c>name</c> or <c>options</c>, or <c>null</c> if there is no matching cookie.The object returned for a match contains the following properties:</returns>
+</CookieStoreGet>
+<CookieStoreGetAll>
+<summary>
+The <strong><c>getAll()</c></strong> method of the <see cref="CookieStore"/> interface returns a {{jsxref("Promise")}} that resolves as an array of cookies that match the <c>name</c> or <c>options</c> passed to it.<br/>Passing no parameters will return all cookies for the current context.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an array of objects representing cookies that match the given <c>name</c> or <c>options</c>.Each object contains the following properties:</returns>
+</CookieStoreGetAll>
 <CookieStoreSet>
 <summary>
 The <strong><c>set()</c></strong> method of the <see cref="CookieStore"/> interface sets a cookie with the given <c>name</c> and <c>value</c> or <c>options</c> object.

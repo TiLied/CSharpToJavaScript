@@ -9,39 +9,14 @@ The <strong><c>DOMMatrixReadOnly</c></strong> interface represents a read-only 4
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMMatrixReadOnly>
-<DOMMatrixReadOnlyRotateAxisAngle>
+<DOMMatrixReadOnlyDOMMatrixReadOnly>
 <summary>
-The <c>rotateAxisAngle()</c> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new <see cref="DOMMatrix"/> created by rotating the source matrix by the given vector and angle. The original matrix is not altered.
+The <strong><c>DOMMatrixReadOnly</c></strong> constructor creates a new<br/><see cref="DOMMatrixReadOnly"/> object which represents 4x4 matrices, suitable for 2D<br/>and 3D operations.
 </summary>
 <remarks>
-<para>To mutate the matrix as you rotate it, see <see cref="DOMMatrix.RotateAxisAngleSelf"/>.</para>
-<para>-<see cref="DOMMatrix.RotateAxisAngleSelf"/><br/>-<see cref="DOMMatrixReadOnly.Rotate"/><br/>-<see cref="DOMMatrixReadOnly.RotateFromVector"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotateAxisAngle"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
-</DOMMatrixReadOnlyRotateAxisAngle>
-<DOMMatrixReadOnlyTransformPoint>
-<summary>
-The <strong><c>transformPoint</c></strong> method of the<br/><see cref="DOMMatrixReadOnly"/> interface creates a new <see cref="DOMPoint"/> object, transforming a specified point by the matrix. Neither the matrix nor the original point are altered.
-</summary>
-<remarks>
-<para>You can also create a new <c>DOMPoint</c> by applying a matrix to a point with the <see cref="DOMPointReadOnly.MatrixTransform"/> method.</para>
-<para>-<see cref="DOMPointReadOnly.MatrixTransform"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/transformPoint"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMPoint"/>.</returns>
-</DOMMatrixReadOnlyTransformPoint>
-<DOMMatrixReadOnlyRotate>
-<summary>
-The <c>rotate()</c> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new <see cref="DOMMatrix"/> created by rotating the source matrix around each of its axes by the specified number of degrees. The original matrix is not altered.
-</summary>
-<remarks>
-<para>To mutate the matrix as you rotate it, see <see cref="DOMMatrix.RotateSelf"/>.</para>
-<para>-<see cref="DOMMatrix.RotateSelf"/><br/>-<see cref="DOMMatrixReadOnly.RotateAxisAngle"/><br/>-<see cref="DOMMatrixReadOnly.RotateFromVector"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
-</DOMMatrixReadOnlyRotate>
+</DOMMatrixReadOnlyDOMMatrixReadOnly>
 <DOMMatrixReadOnlyFlipX>
 <summary>
 The <strong><c>flipX()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the original matrix flipped about the x-axis. This is equivalent to multiplying the matrix by <c>DOMMatrix(-1, 0, 0, 1, 0, 0)</c>. The original matrix is not modified.
@@ -62,67 +37,6 @@ The <strong><c>flipY()</c></strong> method of the <see cref="DOMMatrixReadOnly"/
 </remarks>
 <returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
 </DOMMatrixReadOnlyFlipY>
-<DOMMatrixReadOnlyIsIdentity>
-<summary>
-The readonly <strong><c>isIdentity</c></strong> property of the <see cref="DOMMatrixReadOnly"/> interface is a Boolean whose value is <c>true</c> if the matrix is the <see href="https://en.wikipedia.org/wiki/Identity_matrix">identity matrix</see>.
-</summary>
-<remarks>
-<para>The identity matrix is one in which every value is <c>0</c> <strong>except</strong> those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).</para>
-<para>-<see cref="DOMMatrix"/> interface<br/>-<see cref="CSSMatrixComponent"/> interface<br/>-<see cref="CanvasRenderingContext2D"/> interface<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix()">transform-function/matrix()</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/isIdentity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean value.</value>
-</DOMMatrixReadOnlyIsIdentity>
-<DOMMatrixReadOnlyToFloat64Array>
-<summary>
-The <strong><c>toFloat64Array()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new {{jsxref("Float64Array")}} containing all 16 elements (<c>m11</c>, <c>m12</c>, <c>m13</c>, <c>m14</c>, <c>m21</c>, <c>m22</c>, <c>m23</c>, <c>m24</c>, <c>m31</c>, <c>m32</c>, <c>m33</c>, <c>m34</c>, <c>m41</c>, <c>m42</c>, <c>m43</c>, <c>m44</c>) which comprise the matrix. The elements are stored into the array as double-precision floating-point numbers in column-major (colexographical access, or &amp;quot;colex&amp;quot;) order. (In other words, down the first column from top to bottom, then the second column, and so forth.)
-</summary>
-<remarks>
-<para>-<see cref="DOMMatrixReadOnly.ToFloat32Array"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toFloat64Array"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Float64Array"/>; an array of the matrix's 16 element values.</returns>
-</DOMMatrixReadOnlyToFloat64Array>
-<DOMMatrixReadOnlyScale3d>
-<summary>
-The <strong><c>scale3d()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix which is the result of a 3D scale transform being applied<br/>to the matrix. It returns a new <see cref="DOMMatrix"/> created by scaling the source 3d matrix by the given scale factor centered on the origin point specified by the origin parameters, with a default origin of <c>(0, 0, 0)</c>. The original matrix is not modified.
-</summary>
-<remarks>
-<para>To mutate the matrix as you 3D-scale it, see <see cref="DOMMatrix.Scale3dSelf"/></para>
-<para>-<see cref="DOMMatrix.Scale3dSelf"/><br/>-<see cref="DOMMatrixReadOnly.Scale"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d">transform-function/scale3d</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface's <see cref="CanvasRenderingContext2D.Transform"/> method<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale3d"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMMatrix"/>.</returns>
-</DOMMatrixReadOnlyScale3d>
-<DOMMatrixReadOnlyTranslate>
-<summary>
-The <c>translate()</c> method of the <see cref="DOMMatrixReadOnly"/> interface<br/>creates a new matrix being the result of the original matrix with a translation applied.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix being translated by the given<br/>vector. The original matrix is not modified.If a translation is applied about the z-axis, the resulting matrix will be a 4x4 3D<br/>matrix.</returns>
-</DOMMatrixReadOnlyTranslate>
-<DOMMatrixReadOnlyToString>
-<summary>
-The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} of the <see cref="DOMMatrixReadOnly"/> interface returns the value of the matrix as a string in the form of a <c>matrix()</c> or <c>matrix3d()</c> CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform function</see>; comma-separated lists of 6 or 16 coordinate values, prepended by <c>&amp;quot;matrix(</c> or <c>&amp;quot;matrix3d(</c> respectively, appended by <c>)&amp;quot;</c>.
-</summary>
-<remarks>
-<para>For a 2D matrix, the elements <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#a"><c>a</c> through <c>f</c></see> are listed, for a total of six values and the form <c>matrix(a, b, c, d, e, f)</c>. See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> CSS function for details on this syntax.</para><para>For a 3D matrix, the returned string contains all <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#m11">16 elements</see> and takes the form <c>matrix3d(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)</c>. See the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function for details on the 3D notation's syntax.</para>
-<para>-<see cref="DOMMatrixReadOnly.ToJSON"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toString"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string; the values of the list separated by commas, within <c>matrix()</c> or <c>matrix3d()</c> function syntax.</returns>
-</DOMMatrixReadOnlyToString>
-<DOMMatrixReadOnlyScale>
-<summary>
-The <strong><c>scale()</c></strong> method of the<br/><see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the<br/>original matrix with a scale transform applied.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix x and y dimensions being scaled<br/>by the given factor, centered on the origin given. The original matrix is not modified.If a scale is applied about the z-axis, the resulting matrix will be a 4✕4 3D matrix.</returns>
-</DOMMatrixReadOnlyScale>
 <DOMMatrixReadOnlyInverse>
 <summary>
 The <strong><c>inverse()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix which is the inverse of the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to <c>NaN</c> and its <see cref="DOMMatrixReadOnly.Is2D"/> property is set to <c>false</c>. The original matrix is not changed.
@@ -134,25 +48,27 @@ The <strong><c>inverse()</c></strong> method of the <see cref="DOMMatrixReadOnly
 </remarks>
 <returns>A <see cref="DOMMatrix"/>.</returns>
 </DOMMatrixReadOnlyInverse>
-<DOMMatrixReadOnlyDOMMatrixReadOnly>
+<DOMMatrixReadOnlyIs2D>
 <summary>
-The <strong><c>DOMMatrixReadOnly</c></strong> constructor creates a new<br/><see cref="DOMMatrixReadOnly"/> object which represents 4x4 matrices, suitable for 2D<br/>and 3D operations.
+The readonly <strong><c>is2D</c></strong> property of the <see cref="DOMMatrixReadOnly"/> interface is a Boolean flag that is <c>true</c> when the matrix is 2D. The value is <c>true</c> if the matrix was initialized as a 2D matrix and only 2D transformation operations were applied. Otherwise, the matrix is defined in 3D, and <c>is2D</c> is <c>false</c>.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="CSSTransformValue.Is2D"/><br/>-<see cref="CSSTransformComponent.Is2D"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/is2D"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</DOMMatrixReadOnlyDOMMatrixReadOnly>
-<DOMMatrixReadOnlyRotateFromVector>
+<value>A Boolean value.</value>
+</DOMMatrixReadOnlyIs2D>
+<DOMMatrixReadOnlyIsIdentity>
 <summary>
-The <c>rotateFromVector()</c> method of the <see cref="DOMMatrixReadOnly"/> interface is returns a new <see cref="DOMMatrix"/> created by rotating the source matrix by the angle between the specified vector and <c>(1, 0)</c>. The rotation angle is determined by the angle between the vector <c>(1,0)T</c> and <c>(x,y)T</c> in the clockwise direction, or <c>(+/-)arctan(y/x)</c>. If <c>x</c> and <c>y</c> are both <c>0</c>, the angle is specified as <c>0</c>. The original matrix is not altered.
+The readonly <strong><c>isIdentity</c></strong> property of the <see cref="DOMMatrixReadOnly"/> interface is a Boolean whose value is <c>true</c> if the matrix is the <see href="https://en.wikipedia.org/wiki/Identity_matrix">identity matrix</see>.
 </summary>
 <remarks>
-<para>To mutate the matrix as you rotate it by the angle between the specified vector and <c>(1, 0)</c>, see <see cref="DOMMatrix.RotateFromVectorSelf"/>.</para>
-<para>-<see cref="DOMMatrix.RotateFromVectorSelf"/><br/>-<see cref="DOMMatrixReadOnly.Rotate"/><br/>-<see cref="DOMMatrixReadOnly.RotateAxisAngle"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotateFromVector"> <em>See also on MDN</em> </seealso></para>
+<para>The identity matrix is one in which every value is <c>0</c> <strong>except</strong> those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).</para>
+<para>-<see cref="DOMMatrix"/> interface<br/>-<see cref="CSSMatrixComponent"/> interface<br/>-<see cref="CanvasRenderingContext2D"/> interface<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix()">transform-function/matrix()</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/isIdentity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
-</DOMMatrixReadOnlyRotateFromVector>
+<value>A Boolean value.</value>
+</DOMMatrixReadOnlyIsIdentity>
 <DOMMatrixReadOnlyMultiply>
 <summary>
 The <strong><c>multiply()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates and returns a new matrix which is the dot product of the matrix and the <c>otherMatrix</c> parameter. If <c>otherMatrix</c> is omitted, the matrix is multiplied by a matrix in which every element is <c>0</c> <strong>except</strong> the bottom-right corner and the element immediately above and to its left: <c>m33</c> and <c>m34</c>. These have the default value of <c>1</c>. The original matrix is not modified.
@@ -164,6 +80,59 @@ The <strong><c>multiply()</c></strong> method of the <see cref="DOMMatrixReadOnl
 </remarks>
 <returns>A <see cref="DOMMatrix"/>.</returns>
 </DOMMatrixReadOnlyMultiply>
+<DOMMatrixReadOnlyRotate>
+<summary>
+The <c>rotate()</c> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new <see cref="DOMMatrix"/> created by rotating the source matrix around each of its axes by the specified number of degrees. The original matrix is not altered.
+</summary>
+<remarks>
+<para>To mutate the matrix as you rotate it, see <see cref="DOMMatrix.RotateSelf"/>.</para>
+<para>-<see cref="DOMMatrix.RotateSelf"/><br/>-<see cref="DOMMatrixReadOnly.RotateAxisAngle"/><br/>-<see cref="DOMMatrixReadOnly.RotateFromVector"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
+</DOMMatrixReadOnlyRotate>
+<DOMMatrixReadOnlyRotateAxisAngle>
+<summary>
+The <c>rotateAxisAngle()</c> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new <see cref="DOMMatrix"/> created by rotating the source matrix by the given vector and angle. The original matrix is not altered.
+</summary>
+<remarks>
+<para>To mutate the matrix as you rotate it, see <see cref="DOMMatrix.RotateAxisAngleSelf"/>.</para>
+<para>-<see cref="DOMMatrix.RotateAxisAngleSelf"/><br/>-<see cref="DOMMatrixReadOnly.Rotate"/><br/>-<see cref="DOMMatrixReadOnly.RotateFromVector"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotateAxisAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
+</DOMMatrixReadOnlyRotateAxisAngle>
+<DOMMatrixReadOnlyRotateFromVector>
+<summary>
+The <c>rotateFromVector()</c> method of the <see cref="DOMMatrixReadOnly"/> interface is returns a new <see cref="DOMMatrix"/> created by rotating the source matrix by the angle between the specified vector and <c>(1, 0)</c>. The rotation angle is determined by the angle between the vector <c>(1,0)T</c> and <c>(x,y)T</c> in the clockwise direction, or <c>(+/-)arctan(y/x)</c>. If <c>x</c> and <c>y</c> are both <c>0</c>, the angle is specified as <c>0</c>. The original matrix is not altered.
+</summary>
+<remarks>
+<para>To mutate the matrix as you rotate it by the angle between the specified vector and <c>(1, 0)</c>, see <see cref="DOMMatrix.RotateFromVectorSelf"/>.</para>
+<para>-<see cref="DOMMatrix.RotateFromVectorSelf"/><br/>-<see cref="DOMMatrixReadOnly.Rotate"/><br/>-<see cref="DOMMatrixReadOnly.RotateAxisAngle"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/rotateFromVector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
+</DOMMatrixReadOnlyRotateFromVector>
+<DOMMatrixReadOnlyScale>
+<summary>
+The <strong><c>scale()</c></strong> method of the<br/><see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the<br/>original matrix with a scale transform applied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix x and y dimensions being scaled<br/>by the given factor, centered on the origin given. The original matrix is not modified.If a scale is applied about the z-axis, the resulting matrix will be a 4✕4 3D matrix.</returns>
+</DOMMatrixReadOnlyScale>
+<DOMMatrixReadOnlyScale3d>
+<summary>
+The <strong><c>scale3d()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix which is the result of a 3D scale transform being applied<br/>to the matrix. It returns a new <see cref="DOMMatrix"/> created by scaling the source 3d matrix by the given scale factor centered on the origin point specified by the origin parameters, with a default origin of <c>(0, 0, 0)</c>. The original matrix is not modified.
+</summary>
+<remarks>
+<para>To mutate the matrix as you 3D-scale it, see <see cref="DOMMatrix.Scale3dSelf"/></para>
+<para>-<see cref="DOMMatrix.Scale3dSelf"/><br/>-<see cref="DOMMatrixReadOnly.Scale"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d">transform-function/scale3d</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface's <see cref="CanvasRenderingContext2D.Transform"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale3d"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix"/>.</returns>
+</DOMMatrixReadOnlyScale3d>
 <DOMMatrixReadOnlySkewX>
 <summary>
 The <c>skewX()</c> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new <see cref="DOMMatrix"/> created by applying the specified skew transformation to the source matrix along its x-axis. The original matrix is not modified.
@@ -197,16 +166,16 @@ The <strong><c>toFloat32Array()</c></strong> method of the <see cref="DOMMatrixR
 </remarks>
 <returns>A <see cref="Float32Array"/>; an array of the matrix's 16 element values.</returns>
 </DOMMatrixReadOnlyToFloat32Array>
-<DOMMatrixReadOnlyIs2D>
+<DOMMatrixReadOnlyToFloat64Array>
 <summary>
-The readonly <strong><c>is2D</c></strong> property of the <see cref="DOMMatrixReadOnly"/> interface is a Boolean flag that is <c>true</c> when the matrix is 2D. The value is <c>true</c> if the matrix was initialized as a 2D matrix and only 2D transformation operations were applied. Otherwise, the matrix is defined in 3D, and <c>is2D</c> is <c>false</c>.
+The <strong><c>toFloat64Array()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new {{jsxref("Float64Array")}} containing all 16 elements (<c>m11</c>, <c>m12</c>, <c>m13</c>, <c>m14</c>, <c>m21</c>, <c>m22</c>, <c>m23</c>, <c>m24</c>, <c>m31</c>, <c>m32</c>, <c>m33</c>, <c>m34</c>, <c>m41</c>, <c>m42</c>, <c>m43</c>, <c>m44</c>) which comprise the matrix. The elements are stored into the array as double-precision floating-point numbers in column-major (colexographical access, or &amp;quot;colex&amp;quot;) order. (In other words, down the first column from top to bottom, then the second column, and so forth.)
 </summary>
 <remarks>
-<para>-<see cref="CSSTransformValue.Is2D"/><br/>-<see cref="CSSTransformComponent.Is2D"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/is2D"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="DOMMatrixReadOnly.ToFloat32Array"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toFloat64Array"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean value.</value>
-</DOMMatrixReadOnlyIs2D>
+<returns>A <see cref="Float64Array"/>; an array of the matrix's 16 element values.</returns>
+</DOMMatrixReadOnlyToFloat64Array>
 <DOMMatrixReadOnlyToJSON>
 <summary>
 The <strong><c>toJSON()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates and returns a {{jsxref("JSON")}} object. The JSON object includes the 2D matrix elements <c>a</c> through <c>f</c>, the 16 elements of the 4X4 3D matrix, <c>m[1-4][1-4]</c>, the boolean <see cref="DOMMatrixReadOnly.Is2D"/> property, and the boolean <see cref="DOMMatrixReadOnly.IsIdentity"/> property.
@@ -217,4 +186,35 @@ The <strong><c>toJSON()</c></strong> method of the <see cref="DOMMatrixReadOnly"
 </remarks>
 <returns>A <see cref="JSON"/> object; a JSON representation of the <c>DOMMatrixReadOnly</c> object.</returns>
 </DOMMatrixReadOnlyToJSON>
+<DOMMatrixReadOnlyToString>
+<summary>
+The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} of the <see cref="DOMMatrixReadOnly"/> interface returns the value of the matrix as a string in the form of a <c>matrix()</c> or <c>matrix3d()</c> CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform function</see>; comma-separated lists of 6 or 16 coordinate values, prepended by <c>&amp;quot;matrix(</c> or <c>&amp;quot;matrix3d(</c> respectively, appended by <c>)&amp;quot;</c>.
+</summary>
+<remarks>
+<para>For a 2D matrix, the elements <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#a"><c>a</c> through <c>f</c></see> are listed, for a total of six values and the form <c>matrix(a, b, c, d, e, f)</c>. See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> CSS function for details on this syntax.</para><para>For a 3D matrix, the returned string contains all <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#m11">16 elements</see> and takes the form <c>matrix3d(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)</c>. See the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function for details on the 3D notation's syntax.</para>
+<para>-<see cref="DOMMatrixReadOnly.ToJSON"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string; the values of the list separated by commas, within <c>matrix()</c> or <c>matrix3d()</c> function syntax.</returns>
+</DOMMatrixReadOnlyToString>
+<DOMMatrixReadOnlyTransformPoint>
+<summary>
+The <strong><c>transformPoint</c></strong> method of the<br/><see cref="DOMMatrixReadOnly"/> interface creates a new <see cref="DOMPoint"/> object, transforming a specified point by the matrix. Neither the matrix nor the original point are altered.
+</summary>
+<remarks>
+<para>You can also create a new <c>DOMPoint</c> by applying a matrix to a point with the <see cref="DOMPointReadOnly.MatrixTransform"/> method.</para>
+<para>-<see cref="DOMPointReadOnly.MatrixTransform"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/transformPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMPoint"/>.</returns>
+</DOMMatrixReadOnlyTransformPoint>
+<DOMMatrixReadOnlyTranslate>
+<summary>
+The <c>translate()</c> method of the <see cref="DOMMatrixReadOnly"/> interface<br/>creates a new matrix being the result of the original matrix with a translation applied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix being translated by the given<br/>vector. The original matrix is not modified.If a translation is applied about the z-axis, the resulting matrix will be a 4x4 3D<br/>matrix.</returns>
+</DOMMatrixReadOnlyTranslate>
 </docs>

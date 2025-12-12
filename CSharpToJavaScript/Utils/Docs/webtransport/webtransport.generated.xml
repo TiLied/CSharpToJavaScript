@@ -9,17 +9,37 @@ The <strong><c>WebTransport</c></strong> interface of the {{domxref(&amp;quot;We
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WebTransport>
-<WebTransportIncomingUnidirectionalStreams>
+<WebTransportClose>
 <summary>
-The <strong><c>incomingUnidirectionalStreams</c></strong> read-only property of the <see cref="WebTransport"/> interface represents one or more unidirectional streams opened by the server. Returns a <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects. Each one can be used to reliably read data from the server.
+The <strong><c>close()</c></strong> method of the <see cref="WebTransport"/> interface closes an ongoing WebTransport session.
 </summary>
 <remarks>
-<para>"Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than <see cref="WebTransport.Datagrams"/>, but is needed in situations where reliability and ordering are important, like chat applications.</para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/incomingUnidirectionalStreams"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects.</value>
-</WebTransportIncomingUnidirectionalStreams>
+<returns><c>undefined</c>.</returns>
+</WebTransportClose>
+<WebTransportClosed>
+<summary>
+The <strong><c>closed</c></strong> read-only property of the <see cref="WebTransport"/> interface returns a promise that resolves when the transport is closed.
+</summary>
+<remarks>
+<para>This promise is created when the <c>WebTransport</c> object is created and is resolved when the transport is closed in any way, such as by calling the <see cref="WebTransport.Close"/> method, when the connection failed, or when the connection is closed by the server. Accessing or awaiting this promise does not trigger any action; it only allows actions to be taken when the transport is closed, similar to listening to an event.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/closed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> that resolves to an object containing the following properties:Or, in the case of an unexpected closure, such as network failure, the promise rejects with an error.</value>
+</WebTransportClosed>
+<WebTransportCongestionControl>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>congestionControl</c></strong> read-only property of the <see cref="WebTransport"/> interface indicates the application's preference for either high throughput or low-latency when sending data.
+</summary>
+<remarks>
+<para>The value is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/WebTransport#congestioncontrol"><c>WebTransport()</c> constructor options</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/congestionControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</WebTransportCongestionControl>
 <WebTransportCreateBidirectionalStream>
 <summary>
 The <strong><c>createBidirectionalStream()</c></strong> method of the <see cref="WebTransport"/> interface asynchronously opens and returns a bidirectional stream.
@@ -42,36 +62,17 @@ The <strong><c>createUnidirectionalStream()</c></strong> method of the <see cref
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to a <c>WebTransportSendStream</c> object (this is a <see cref="WritableStream"/>).</returns>
 </WebTransportCreateUnidirectionalStream>
-<WebTransportReliability>
+<WebTransportDatagrams>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reliability</c></strong> read-only property of the <see cref="WebTransport"/> interface indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
+The <strong><c>datagrams</c></strong> read-only property of the <see cref="WebTransport"/> interface returns a <see cref="WebTransportDatagramDuplexStream"/> instance that can be used to send and receive datagrams — unreliable data transmission.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/reliability"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</WebTransportReliability>
-<WebTransportClosed>
-<summary>
-The <strong><c>closed</c></strong> read-only property of the <see cref="WebTransport"/> interface returns a promise that resolves when the transport is closed.
-</summary>
-<remarks>
-<para>This promise is created when the <c>WebTransport</c> object is created and is resolved when the transport is closed in any way, such as by calling the <see cref="WebTransport.Close"/> method, when the connection failed, or when the connection is closed by the server. Accessing or awaiting this promise does not trigger any action; it only allows actions to be taken when the transport is closed, similar to listening to an event.</para>
+<para>&amp;quot;Unreliable&amp;quot; means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.</para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/closed"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/datagrams"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Promise"/> that resolves to an object containing the following properties:Or, in the case of an unexpected closure, such as network failure, the promise rejects with an error.</value>
-</WebTransportClosed>
-<WebTransportCongestionControl>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>congestionControl</c></strong> read-only property of the <see cref="WebTransport"/> interface indicates the application's preference for either high throughput or low-latency when sending data.
-</summary>
-<remarks>
-<para>The value is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/WebTransport#congestioncontrol"><c>WebTransport()</c> constructor options</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/congestionControl"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</WebTransportCongestionControl>
+<value>A <see cref="WebTransportDatagramDuplexStream"/> object.</value>
+</WebTransportDatagrams>
 <WebTransportGetStats>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getStats()</c></strong> method of the <see cref="WebTransport"/> interface asynchronously returns an object containing HTTP/3 connection statistics.
@@ -92,15 +93,17 @@ The <strong><c>incomingBidirectionalStreams</c></strong> read-only property of t
 </remarks>
 <value>A <see cref="ReadableStream"/> of <see cref="WebTransportBidirectionalStream"/> objects.</value>
 </WebTransportIncomingBidirectionalStreams>
-<WebTransportWebTransport>
+<WebTransportIncomingUnidirectionalStreams>
 <summary>
-The <strong><c>WebTransport()</c></strong> constructor creates a new <see cref="WebTransport"/> object instance.
+The <strong><c>incomingUnidirectionalStreams</c></strong> read-only property of the <see cref="WebTransport"/> interface represents one or more unidirectional streams opened by the server. Returns a <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects. Each one can be used to reliably read data from the server.
 </summary>
 <remarks>
+<para>"Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than <see cref="WebTransport.Datagrams"/>, but is needed in situations where reliability and ordering are important, like chat applications.</para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/WebTransport"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/incomingUnidirectionalStreams"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</WebTransportWebTransport>
+<value>A <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects.</value>
+</WebTransportIncomingUnidirectionalStreams>
 <WebTransportReady>
 <summary>
 The <strong><c>ready</c></strong> read-only property of the <see cref="WebTransport"/> interface returns a promise that resolves when the transport is ready to use.
@@ -112,25 +115,22 @@ The <strong><c>ready</c></strong> read-only property of the <see cref="WebTransp
 </remarks>
 <value>A <see cref="Promise"/> that resolves to <c>undefined</c>.</value>
 </WebTransportReady>
-<WebTransportClose>
+<WebTransportReliability>
 <summary>
-The <strong><c>close()</c></strong> method of the <see cref="WebTransport"/> interface closes an ongoing WebTransport session.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reliability</c></strong> read-only property of the <see cref="WebTransport"/> interface indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/reliability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</WebTransportReliability>
+<WebTransportWebTransport>
+<summary>
+The <strong><c>WebTransport()</c></strong> constructor creates a new <see cref="WebTransport"/> object instance.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/close"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/WebTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><c>undefined</c>.</returns>
-</WebTransportClose>
-<WebTransportDatagrams>
-<summary>
-The <strong><c>datagrams</c></strong> read-only property of the <see cref="WebTransport"/> interface returns a <see cref="WebTransportDatagramDuplexStream"/> instance that can be used to send and receive datagrams — unreliable data transmission.
-</summary>
-<remarks>
-<para>&amp;quot;Unreliable&amp;quot; means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.</para>
-<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/datagrams"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="WebTransportDatagramDuplexStream"/> object.</value>
-</WebTransportDatagrams>
+</WebTransportWebTransport>
 </docs>

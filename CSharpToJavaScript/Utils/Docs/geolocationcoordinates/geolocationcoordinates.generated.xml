@@ -8,56 +8,6 @@ The <strong><c>GeolocationCoordinates</c></strong> interface represents the posi
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GeolocationCoordinates>
-<GeolocationCoordinatesAltitudeAccuracy>
-<summary>
-The <strong><c>altitudeAccuracy</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a strictly positive <c>double</c> representing the accuracy, with a 95% confidence level, of the <c>altitude</c> expressed in meters. This value is <c>null</c> if the implementation doesn&amp;apos;t support measuring altitude.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitudeAccuracy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive <c>double</c> representing the accuracy, with a 95% confidence level,<br/>of the <c>altitude</c> expressed in meters.</value>
-</GeolocationCoordinatesAltitudeAccuracy>
-<GeolocationCoordinatesLatitude>
-<summary>
-The <strong><c>latitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the latitude of the position in decimal degrees.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/latitude"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>double</c> representing the latitude of the position in decimal degrees.</value>
-</GeolocationCoordinatesLatitude>
-<GeolocationCoordinatesAltitude>
-<summary>
-The <strong><c>altitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see> ellipsoid (which defines the nominal sea level surface). This value is <c>null</c> if the implementation cannot provide this data.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The <see cref="GeolocationCoordinates"/> interface it belongs to.<br/>-<see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">National Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitude"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see><br/>ellipsoid.</value>
-</GeolocationCoordinatesAltitude>
-<GeolocationCoordinatesLongitude>
-<summary>
-The <strong><c>longitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a number which represents the longitude of a geographical position, specified in decimal degrees.<br/>Together with a timestamp, given as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix time">Unix time</see> in milliseconds, indicating a time of measurement, the <c>GeolocationCoordinates</c> object is part of the <see cref="GeolocationPosition"/> interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The <see cref="GeolocationCoordinates"/> interface it belongs to.<br/>-The <see cref="GeolocationPosition"/> interface, which is the top-level interface<br/>used to return geolocation data from the Geolocation API functions<br/><see cref="Geolocation.GetCurrentPosition"/> and<br/><see cref="Geolocation.WatchPosition"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The value in <c>longitude</c> is the geographical longitude of the location on<br/>Earth described by the <c>Coordinates</c> object, in decimal degrees. The value is<br/>defined by the World Geodetic System 1984 specification (WGS 84).<blockquote class="NOTE"><h5>NOTE</h5>The zero meridian (also known as the prime meridian or the<br/>reference meridian) is not precisely the same as the Greenwich meridian that most<br/>people think of. It is, instead, the <see href="https://en.wikipedia.org/wiki/IERS_Reference_Meridian">IERS Reference Meridian</see>, which is located 5.3 <see href="https://en.wikipedia.org/wiki/Arcseconds">arcseconds</see> (102<br/>meters / 335 feet) east of the <see href="https://en.wikipedia.org/wiki/Greenwich_meridian">Greenwich meridian</see>. This<br/>is the same standard used by the <see href="https://en.wikipedia.org/wiki/Global_Positioning_System">Global Positioning System</see> (GPS).</blockquote></value>
-</GeolocationCoordinatesLongitude>
-<GeolocationCoordinatesHeading>
-<summary>
-The <strong><c>heading</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. <c>0</c> degrees represents true north, and the direction is determined clockwise (which means that east is <c>90</c> degrees and west is <c>270</c> degrees). If <see cref="GeolocationCoordinates.Speed"/> is <c>0</c> or the device is not able to provide heading information, <c>heading</c> is <c>null</c>.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/heading"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>double</c> representing the direction in which the device is traveling.</value>
-</GeolocationCoordinatesHeading>
 <GeolocationCoordinatesAccuracy>
 <summary>
 The <strong><c>accuracy</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a strictly positive <c>double</c> representing the accuracy, with a 95% confidence level, of the <see cref="GeolocationCoordinates.Latitude"/> and <see cref="GeolocationCoordinates.Longitude"/> properties expressed in meters.
@@ -68,6 +18,56 @@ The <strong><c>accuracy</c></strong> read-only property of the <see cref="Geoloc
 </remarks>
 <value>A positive <c>double</c> representing the accuracy, with a 95% confidence level,<br/>of the <see cref="GeolocationCoordinates.Latitude"/> and<br/><see cref="GeolocationCoordinates.Longitude"/> properties expressed in meters.</value>
 </GeolocationCoordinatesAccuracy>
+<GeolocationCoordinatesAltitude>
+<summary>
+The <strong><c>altitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see> ellipsoid (which defines the nominal sea level surface). This value is <c>null</c> if the implementation cannot provide this data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The <see cref="GeolocationCoordinates"/> interface it belongs to.<br/>-<see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">National Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitude"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see><br/>ellipsoid.</value>
+</GeolocationCoordinatesAltitude>
+<GeolocationCoordinatesAltitudeAccuracy>
+<summary>
+The <strong><c>altitudeAccuracy</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a strictly positive <c>double</c> representing the accuracy, with a 95% confidence level, of the <c>altitude</c> expressed in meters. This value is <c>null</c> if the implementation doesn&amp;apos;t support measuring altitude.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitudeAccuracy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive <c>double</c> representing the accuracy, with a 95% confidence level,<br/>of the <c>altitude</c> expressed in meters.</value>
+</GeolocationCoordinatesAltitudeAccuracy>
+<GeolocationCoordinatesHeading>
+<summary>
+The <strong><c>heading</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. <c>0</c> degrees represents true north, and the direction is determined clockwise (which means that east is <c>90</c> degrees and west is <c>270</c> degrees). If <see cref="GeolocationCoordinates.Speed"/> is <c>0</c> or the device is not able to provide heading information, <c>heading</c> is <c>null</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/heading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> representing the direction in which the device is traveling.</value>
+</GeolocationCoordinatesHeading>
+<GeolocationCoordinatesLatitude>
+<summary>
+The <strong><c>latitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the latitude of the position in decimal degrees.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/latitude"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> representing the latitude of the position in decimal degrees.</value>
+</GeolocationCoordinatesLatitude>
+<GeolocationCoordinatesLongitude>
+<summary>
+The <strong><c>longitude</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a number which represents the longitude of a geographical position, specified in decimal degrees.<br/>Together with a timestamp, given as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix time">Unix time</see> in milliseconds, indicating a time of measurement, the <c>GeolocationCoordinates</c> object is part of the <see cref="GeolocationPosition"/> interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The <see cref="GeolocationCoordinates"/> interface it belongs to.<br/>-The <see cref="GeolocationPosition"/> interface, which is the top-level interface<br/>used to return geolocation data from the Geolocation API functions<br/><see cref="Geolocation.GetCurrentPosition"/> and<br/><see cref="Geolocation.WatchPosition"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value in <c>longitude</c> is the geographical longitude of the location on<br/>Earth described by the <c>Coordinates</c> object, in decimal degrees. The value is<br/>defined by the World Geodetic System 1984 specification (WGS 84).<blockquote class="NOTE"><h5>NOTE</h5>The zero meridian (also known as the prime meridian or the<br/>reference meridian) is not precisely the same as the Greenwich meridian that most<br/>people think of. It is, instead, the <see href="https://en.wikipedia.org/wiki/IERS_Reference_Meridian">IERS Reference Meridian</see>, which is located 5.3 <see href="https://en.wikipedia.org/wiki/Arcseconds">arcseconds</see> (102<br/>meters / 335 feet) east of the <see href="https://en.wikipedia.org/wiki/Greenwich_meridian">Greenwich meridian</see>. This<br/>is the same standard used by the <see href="https://en.wikipedia.org/wiki/Global_Positioning_System">Global Positioning System</see> (GPS).</blockquote></value>
+</GeolocationCoordinatesLongitude>
 <GeolocationCoordinatesSpeed>
 <summary>
 The <strong><c>speed</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a <c>double</c> representing the velocity of the device in meters per second. This value is <c>null</c> if the implementation is not able to measure it.

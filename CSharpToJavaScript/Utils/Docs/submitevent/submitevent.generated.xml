@@ -8,15 +8,6 @@ The <strong><c>SubmitEvent</c></strong> interface defines the object used to rep
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SubmitEvent>
-<SubmitEventSubmitter>
-<summary>
-The read-only <strong><c>submitter</c></strong> property found on<br/>the <see cref="SubmitEvent"/> interface specifies the submit button or other element<br/>that was invoked to cause the form to be submitted.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent/submitter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An element, indicating the element that sent<br/>the <see cref="HTMLFormElement.Submit"/> event to the form. While this<br/>is often an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element whose <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#type"><c>type</c></see> is <c>submit</c> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element whose <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#type"><c>type</c></see> is <c>submit</c>, it could be some other element which has initiated a<br/>submission process.If the submission was not triggered by a button of some kind, the value of <c>submitter</c> is <c>null</c>.</value>
-</SubmitEventSubmitter>
 <SubmitEventSubmitEvent>
 <summary>
 The <strong><c>SubmitEvent()</c></strong> constructor creates and returns a new <see cref="SubmitEvent"/> object,<br/>which is used to represent a <see cref="HTMLFormElement.Submit"/> event<br/>fired at an <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see> <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">form</see>.
@@ -26,4 +17,13 @@ The <strong><c>SubmitEvent()</c></strong> constructor creates and returns a new 
 </remarks>
 <returns>A <see cref="SubmitEvent"/> object configured using the given inputs.</returns>
 </SubmitEventSubmitEvent>
+<SubmitEventSubmitter>
+<summary>
+The read-only <strong><c>submitter</c></strong> property found on<br/>the <see cref="SubmitEvent"/> interface specifies the submit button or other element<br/>that was invoked to cause the form to be submitted.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent/submitter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An element, indicating the element that sent<br/>the <see cref="HTMLFormElement.Submit"/> event to the form. While this<br/>is often an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element whose <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#type"><c>type</c></see> is <c>submit</c> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element whose <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#type"><c>type</c></see> is <c>submit</c>, it could be some other element which has initiated a<br/>submission process.If the submission was not triggered by a button of some kind, the value of <c>submitter</c> is <c>null</c>.</value>
+</SubmitEventSubmitter>
 </docs>

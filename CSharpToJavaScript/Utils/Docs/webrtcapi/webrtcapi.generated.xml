@@ -1,0 +1,198 @@
+<docs>
+<WebRTC_API>
+<summary>
+<strong>WebRTC</strong> (Web Real-Time Communication) is a technology that enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that comprise WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.
+</summary>
+<remarks>
+<para>WebRTC consists of several interrelated APIs and protocols which work together to achieve this. The documentation you&amp;apos;ll find here will help you understand the fundamentals of WebRTC, how to set up and use both data and media connections, and more.</para>
+<para>-<see cref="MediaDevices"/><br/>-<see cref="MediaStreamEvent"/><br/>-<see cref="MediaStreamTrack"/><br/>-<see cref="MessageEvent"/><br/>-<see cref="MediaStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/">Firefox multistream and renegotiation for Jitsi Videobridge</see><br/>-<see href="https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/">Peering Through the WebRTC Fog with SocketPeer</see><br/>-<see href="https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/">Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_API>
+<WebRTC_APIBuild_a_phone_with_peerjs>
+<summary>
+One of WebRTC&amp;apos;s main issues is that it is pretty complicated to use and develop with — handling the signalling service and knowing when to call the right endpoint can get confusing. But there is some good news; <see href="https://peerjs.com/">PeerJS</see> is a WebRTC framework that abstracts away all of the ice and signalling logic so that you can focus on the functionality of your application. There are two parts to PeerJS, the client-side framework and the server.
+</summary>
+<remarks>
+<para>In this series of articles we will create a simple phone application using PeerJS. We&amp;apos;ll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjs>
+<WebRTC_APIBuild_a_phone_with_peerjsBuild_the_server>
+<summary>
+In this article we&amp;apos;ll set up the server for our phone app. The server file will look like a regular Express server file with one difference, the Peer server.
+</summary>
+<remarks>
+<para>If you want to learn more about Peer.js, check out the <see href="https://github.com/peers/peerjs-server">Peer.js Server repo on GitHub</see>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsBuild_the_server>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peers>
+<summary>
+In the last article we set up our server, but it doesn&amp;apos;t do anything yet because we are not serving anything. This is the part you&amp;apos;ve been waiting for — actually creating the client-side peer connection and call logic. This is going to be an involved process, but we&amp;apos;ve split it into numerous subsections so you can tackle the different parts in easy bite-sized chunks.
+</summary>
+<remarks>
+<para>This looks very similar to the peer server we created in the last step; this is the client-side portion. In order for the browser to connect to the running peer server, we need to tell it how; this is what the above line does.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peers>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersAnswer_a_call>
+<summary>
+Now our users can make a call, but they can&amp;apos;t answer one. Let&amp;apos;s add the next piece of the puzzle so that users can answer calls made to them.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersAnswer_a_call>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersCreate_a_peer_connection>
+<summary>
+Next, you want to ensure your users have a way of connecting with their peers. In order to connect two peers, you&amp;apos;ll need the peer ID for one of them.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersCreate_a_peer_connection>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersCreating_a_call>
+<summary>
+Exciting times — now you&amp;apos;re going to give your users the ability to create calls.
+</summary>
+<remarks>
+<para>This is all working so far, but we need to give the other browser the chance to answer or decline the call We&amp;apos;ll do that next.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersCreating_a_call>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersEnd_a_call>
+<summary>
+The last thing you want to do is ensure your callers have a way of ending a call.<br/>The most graceful way of doing this is to close the connection using the <c>close()</c> function, which you can do in an event listener for the hang up button.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>on(&amp;apos;close&amp;apos;)</c> event that is called on the <c>conn</c> variable isn&amp;apos;t available in Firefox yet; this just means that in Firefox each caller will have to hang up individually.</para></blockquote><blockquote class="WARNING"><h5>WARNING</h5><para>The way we&amp;apos;ve currently coded things means that when a connection is closed, both browsers will be updated <strong>only</strong> if the person who started the call presses &amp;quot;Hang up&amp;quot; first. If the person who answered the call clicks &amp;quot;Hang up&amp;quot; first, the other caller will also have to click &amp;quot;Hang up&amp;quot; to see the correct HTML.</para></blockquote><para>Now we&amp;apos;re finished with the project!<br/>Next, you could <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment">deploy it to a hosting provider that supports Node.js projects</see>.</para>
+<para>-<see href="https://peerjs.com/">PeerJS</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://github.com/peers/peerjs-server">PeerJS Server</see><br/>-<see href="https://www.youtube.com/watch?v=OOrBcpwelPY">A similar video tutorial with video</see><br/>-<see href="https://github.com/SamsungInternet/WebPhone/tree/master/tutorial">The code tutorial</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersEnd_a_call>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersGet_microphone_permission>
+<summary>
+After you&amp;apos;ve created the peer, you&amp;apos;ll want to get the browser&amp;apos;s permission to access the microphone. We&amp;apos;ll be using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"><c>getUserMedia()</c></see> method on the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices"><c>navigator.mediaDevices</c></see> object.<br/>The <c>getUserMedia()</c> endpoint takes a <c>constraints</c> object that specifies which permissions are needed. <c>getUserMedia()</c> is a promise which, when successfully resolved, returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream"><c>MediaStream</c></see> object. In our case this is going to contain the audio from our stream. If the promise isn&amp;apos;t successfully resolved, you&amp;apos;ll want to catch and display the error.
+</summary>
+<remarks>
+<para>This what it should all look like together:</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersGet_microphone_permission>
+<WebRTC_APIBuild_a_phone_with_peerjsConnect_peersShow_hide_html>
+<summary>
+Alright, so you&amp;apos;ve got the microphone permissions set up. The next step is to make sure each user knows what their peer ID is so that they can make connections. The peerJS framework gives us a bunch of event listeners we can call on the peer we created earlier on.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsConnect_peersShow_hide_html>
+<WebRTC_APIBuild_a_phone_with_peerjsSetup>
+<summary>
+So let&amp;apos;s get started by setting up the basis for our WebRTC-powered phone app.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIBuild_a_phone_with_peerjsSetup>
+<WebRTC_APIConnectivity>
+<summary>
+This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This page needs heavy rewriting for structural integrity and content completeness. Lots of info here is good but the organization is a mess since this is sort of a dumping ground right now.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIConnectivity>
+<WebRTC_APIIntro_to_RTP>
+<summary>
+The <strong>Real-time Transport Protocol</strong> (<strong>RTP</strong>), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>WebRTC actually uses <strong>SRTP</strong> (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.</para></blockquote><para>Keeping latency to a minimum is especially important for WebRTC, since face-to-face communication needs to be performed with as little <see href="https://developer.mozilla.org/en-US/docs/Glossary/latency">latency</see> as possible. The more time lag there is between one user saying something and another hearing it, the more likely there is to be episodes of cross-talking and other forms of confusion.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIIntro_to_RTP>
+<WebRTC_APIPerfect_negotiation>
+<summary>
+This article introduces WebRTC <strong>perfect negotiation</strong>, describing how it works and why it&amp;apos;s the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.
+</summary>
+<remarks>
+<para>Because <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> doesn&amp;apos;t mandate a specific transport mechanism for signaling during the negotiation of a new peer connection, it&amp;apos;s highly flexible. However, despite that flexibility in transport and communication of signaling messages, there&amp;apos;s still a recommended design pattern you should follow when possible, known as perfect negotiation.</para><para>After the first deployments of WebRTC-capable browsers, it was realized that parts of the negotiation process were more complicated than they needed to be for typical use cases. This was due to a small number of issues with the API and some potential race conditions that needed to be prevented. These issues have since been addressed, letting us simplify our WebRTC negotiation significantly. The perfect negotiation pattern is an example of the ways in which negotiation have improved since the early days of WebRTC.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIPerfect_negotiation>
+<WebRTC_APIProtocols>
+<summary>
+This article introduces the protocols on top of which the WebRTC API is built.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIProtocols>
+<WebRTC_APISession_lifetime>
+<summary>
+WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or video—or any combination thereof—into a browser application. In this article, we&amp;apos;ll look at the lifetime of a WebRTC session, from establishing the connection all the way through closing the connection when it&amp;apos;s no longer needed.
+</summary>
+<remarks>
+<para>This article doesn&amp;apos;t get into details of the actual APIs involved in establishing and handling a WebRTC connection; it reviews the process in general with some information about why each step is required. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see> for an actual example with a step-by-step explanation of what the code does.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This page is currently under construction, and some of the content will move to other pages as the WebRTC guide material is built out. Pardon our dust!</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APISession_lifetime>
+<WebRTC_APISignaling_and_video_calling>
+<summary>
+<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called <strong>signaling</strong>. This tutorial will guide you through building a two-way video-call.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection">as discussed elsewhere</see>, in order for two devices on different networks to locate one another. This process is called <strong>signaling</strong> and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.</para><para>In this article, we will further enhance the to support opening a two-way video call between users. You can <see href="https://webrtc-from-chat.onrender.com">try out this example on Render</see> to experiment with it as well.<br/>You can also <see href="https://github.com/bsmth/examples/tree/main/webrtc-from-chat">look at the full project</see> on GitHub.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation">Perfect Negotiation</see> pattern<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APISignaling_and_video_calling>
+<WebRTC_APISimple_RTCDataChannel_sample>
+<summary>
+The <see cref="RTCDataChannel"/> interface is a feature of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket API</see>, so that the same programming model can be used for each.
+</summary>
+<remarks>
+<para>In this example, we will open an <see cref="RTCDataChannel"/> connection linking two elements on the same page. While that's obviously a contrived scenario, it's useful for demonstrating the flow of connecting two peers. We'll cover the mechanics of accomplishing the connection and transmitting and receiving data, but we will save the bits about locating and linking to a remote computer for another example.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and Video Calling</see>.<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation">Perfect Negotiation</see> pattern.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APISimple_RTCDataChannel_sample>
+<WebRTC_APIUsing_data_channels>
+<summary>
+In this guide, we&amp;apos;ll examine how to add a data channel to a peer connection, which can then be used to securely exchange arbitrary data; that is, any kind of data we wish, in any format we choose.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Since all WebRTC components are required to use encryption, any data transmitted on an <c>RTCDataChannel</c> is automatically secured using Datagram Transport Layer Security (<strong>DTLS</strong>). See <see href="https://developer.mozilla.org#security">Security</see> below for more information.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIUsing_data_channels>
+<WebRTC_APIUsing_DTMF>
+<summary>
+In order to more fully support audio/video conferencing, <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> supports sending {{Glossary("DTMF")}} to the remote peer on an <see cref="RTCPeerConnection"/>. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an <c>RTCPeerConnection</c>. The DTMF system is often referred to as &amp;quot;touch tone,&amp;quot; after an old trade name for the system.
+</summary>
+<remarks>
+<para>WebRTC doesn&amp;apos;t send DTMF codes as audio data. Instead, they&amp;apos;re sent out-of-band, as RTP payloads. Note, however, that although it&amp;apos;s possible to <strong>send</strong> DTMF using WebRTC, there is currently no way to detect or receive <strong>incoming</strong> DTMF. WebRTC currently ignores these payloads; this is because WebRTC&amp;apos;s DTMF support is primarily intended for use with legacy telephone services that rely on DTMF tones to perform tasks such as:</para><blockquote class="NOTE"><h5>NOTE</h5><para>While the DTMF is not sent to the remote peer as audio, browsers may choose to play the corresponding tone to the local user as part of their user experience, since users are typically used to hearing their phone play the tones audibly.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see> (a tutorial and example which explains the signaling process in more detail)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIUsing_DTMF>
+<WebRTC_APIUsing_Encoded_Transforms>
+<summary>
+WebRTC Encoded Transforms provide a mechanism to inject a high performance <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Stream API</see> for modifying encoded video and audio frame into the incoming and outgoing WebRTC pipelines.<br/>This enables use cases such as end-to-end encryption of encoded frames by third-party code.
+</summary>
+<remarks>
+<para>The API defines both main thread and worker side objects.<br/>The main-thread interface is a <see cref="RTCRtpScriptTransform"/> instance, which on construction specifies the <see cref="Worker"/> that is to implement the transformer code.<br/>The transform running in the worker is inserted into the incoming or outgoing WebRTC pipeline by adding the <c>RTCRtpScriptTransform</c> to <see cref="RTCRtpReceiver.Transform"/> or <see cref="RTCRtpSender.Transform"/>, respectively.</para><para>A counterpart <see cref="RTCRtpScriptTransformer"/> object is created in the worker thread, which has a <see cref="ReadableStream"/> <c>readable</c> property, a <see cref="WritableStream"/> <c>writable</c> property, and an <c>options</c> object passed from the associated <see cref="RTCRtpScriptTransform"/> constructor.<br/>Encoded video frames (<see cref="RTCEncodedVideoFrame"/>) or audio frames (<see cref="RTCEncodedAudioFrame"/>) from the WebRTC pipeline are enqueued on <c>readable</c> for processing.</para><para>The <c>RTCRtpScriptTransformer</c> is made available to code as the <c>transformer</c> property of the <see cref="DedicatedWorkerGlobalScopertctransform"/> event, which is fired at the worker global scope whenever an encoded frame is enqueued for processing (and initially on construction of the corresponding <see cref="RTCRtpScriptTransform"/>).<br/>The worker code must implement a handler for the event that reads encoded frames from <c>transformer.readable</c>, modifies them as needed, and writes them to <c>transformer.writable</c> in the same order and without any duplication.</para><para>While the interface doesn&amp;apos;t place any other restrictions on the implementation, a natural way to transform the frames is to create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains">pipe chain</see> that sends frames enqueued on the <c>event.transformer.readable</c> stream through an <see cref="TransformStream"/> to the <c>event.transformer.writable</c> stream.<br/>We can use the <c>event.transformer.options</c> property to configure any transform code that depends on whether the transform is enqueuing incoming frames from the packetizer or outgoing frames from a codec.</para><para>The <see cref="RTCRtpScriptTransformer"/> interface also provides methods that can be used when sending encoded video to get the codec to generate a "key" frame, and when receiving video to request that a new key frame be sent.<br/>These may be useful to allow a recipient to start viewing the video more quickly, if (for example) they join a conference call when delta frames are being sent.</para><para>The following examples provide more specific examples of how to use the framework using a <see cref="TransformStream"/> based implementation.</para>
+<para>-<see cref="RTCRtpScriptTransform"/><br/>-<see cref="RTCRtpReceiver.Transform"/><br/>-<see cref="RTCRtpSender.Transform"/><br/>-<see cref="DedicatedWorkerGlobalScope.Rtctransform"/> event<br/>-<see cref="RTCTransformEvent"/><br/>-<see cref="RTCRtpScriptTransformer"/><br/>-<see cref="RTCEncodedVideoFrame"/><br/>-<see cref="RTCEncodedAudioFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebRTC_APIUsing_Encoded_Transforms>
+</docs>

@@ -8,6 +8,16 @@ An object implementing the <c>StyleSheet</c> interface represents a single style
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </StyleSheet>
+<StyleSheetDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the<br/><see cref="StyleSheet"/> interface determines whether the style sheet is prevented from<br/>applying to the document.
+</summary>
+<remarks>
+<para>A style sheet may be disabled by manually setting this property to <c>true</c> or<br/>if it&amp;apos;s an inactive <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet">alternative style sheet</see>. Note that <c>disabled === false</c> does not guarantee the style<br/>sheet is applied (it could be removed from the document, for instance).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</StyleSheetDisabled>
 <StyleSheetHref>
 <summary>
 The <strong><c>href</c></strong> property of the <see cref="StyleSheet"/><br/>interface returns the location of the style sheet.
@@ -37,16 +47,15 @@ The <strong><c>ownerNode</c></strong> property of the<br/><see cref="StyleSheet"
 </remarks>
 <value>A <see cref="Node"/> object.</value>
 </StyleSheetOwnerNode>
-<StyleSheetDisabled>
+<StyleSheetParentStyleSheet>
 <summary>
-The <strong><c>disabled</c></strong> property of the<br/><see cref="StyleSheet"/> interface determines whether the style sheet is prevented from<br/>applying to the document.
+The <strong><c>parentStyleSheet</c></strong> property of the<br/><see cref="StyleSheet"/> interface returns the style sheet, if any, that is including<br/>the given style sheet.
 </summary>
 <remarks>
-<para>A style sheet may be disabled by manually setting this property to <c>true</c> or<br/>if it&amp;apos;s an inactive <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet">alternative style sheet</see>. Note that <c>disabled === false</c> does not guarantee the style<br/>sheet is applied (it could be removed from the document, for instance).</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/parentStyleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean.</value>
-</StyleSheetDisabled>
+<value>A <see cref="StyleSheet"/> object.</value>
+</StyleSheetParentStyleSheet>
 <StyleSheetTitle>
 <summary>
 The <strong><c>title</c></strong> property of the <see cref="StyleSheet"/> interface returns the advisory title of the current style sheet.
@@ -65,13 +74,4 @@ The <strong><c>type</c></strong> property of the <see cref="StyleSheet"/><br/>in
 </remarks>
 <value>A string.</value>
 </StyleSheetType>
-<StyleSheetParentStyleSheet>
-<summary>
-The <strong><c>parentStyleSheet</c></strong> property of the<br/><see cref="StyleSheet"/> interface returns the style sheet, if any, that is including<br/>the given style sheet.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/parentStyleSheet"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="StyleSheet"/> object.</value>
-</StyleSheetParentStyleSheet>
 </docs>

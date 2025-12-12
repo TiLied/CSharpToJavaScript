@@ -9,15 +9,6 @@ The <strong><c>TrustedHTML</c></strong> interface of the {{domxref(&amp;quot;Tru
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TrustedHTML>
-<TrustedHTMLToString>
-<summary>
-The <strong><c>toString()</c></strong> method of the <see cref="TrustedHTML"/> interface returns a string which may safely inserted into an injection sink.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML/toString"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string containing the sanitized HTML.</returns>
-</TrustedHTMLToString>
 <TrustedHTMLToJSON>
 <summary>
 The <strong><c>toJSON()</c></strong> method of the <see cref="TrustedHTML"/> interface returns a JSON representation of the stored data.
@@ -27,4 +18,13 @@ The <strong><c>toJSON()</c></strong> method of the <see cref="TrustedHTML"/> int
 </remarks>
 <returns>A string containing a JSON representation of the stored data.</returns>
 </TrustedHTMLToJSON>
+<TrustedHTMLToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the <see cref="TrustedHTML"/> interface returns a string which may safely inserted into an injection sink.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the sanitized HTML.</returns>
+</TrustedHTMLToString>
 </docs>

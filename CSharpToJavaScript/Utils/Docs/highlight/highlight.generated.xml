@@ -9,39 +9,6 @@ The <strong><c>Highlight</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Highlight>
-<HighlightEntries>
-<summary>
-The <strong><c>entries()</c></strong> method of the <see cref="Highlight"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains an array of <c>[range, range]</c> for each <see cref="Range"/> object in the <c>Highlight</c> object, in insertion order.
-</summary>
-<remarks>
-<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetEntries"/>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/entries"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new iterator object that contains an array of <c>[range, range]</c> for each <c>Range</c> object in the given <c>Highlight</c>, in insertion order.</returns>
-</HighlightEntries>
-<HighlightHas>
-<summary>
-The <strong><c>has()</c></strong> method of the <see cref="Highlight"/> interface returns a boolean indicating whether a <see cref="Range"/> object exists in a <c>Highlight</c> object or not.
-</summary>
-<remarks>
-<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetHas"/>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the specified range exists in the <c>Highlight</c> object; otherwise <c>false</c>.</returns>
-</HighlightHas>
-<HighlightPriority>
-<summary>
-The <c>priority</c> property of the <see cref="Highlight"/> interface is a number used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher <c>priority</c> number have preference over those with a lower <c>priority</c>.
-</summary>
-<remarks>
-<para>It is possible to create <see cref="Range"/> objects that overlap in a document.</para><para>When overlapping ranges are used by multiple different <see cref="Highlight"/> objects, and when those highlights are styled using {{cssxref("::highlight&amp;quot;)}} pseudo-elements, this may lead to conflicting styles.</para><para>If two text ranges overlap and are both highlighted using the {{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}, and if they&amp;apos;re both styled using the <c>color</c> CSS property, the browser needs to decide which color should be used for styling the text in the overlapping part.</para><para>If no <c>priority</c> is set, all highlights have the same priority, and the browser chooses the most recently registered highlight to style the overlapping parts.</para><para>Note that all the styles of a highlight are applied and the browser only needs to resolve conflicts when the same CSS properties are used by multiple overlapping highlights. The highlight style conflict resolution also does not depend on the order in which the {{cssxref(&amp;quot;::highlight&amp;quot;)}} pseudo-elements rules appear in the source, or whether or not CSS properties are marked as <c>!important</c>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/priority"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</HighlightPriority>
 <HighlightAdd>
 <summary>
 The <strong><c>add()</c></strong> method of the <see cref="Highlight"/> interface adds a new <see cref="Range"/> object to a highlight, to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
@@ -53,17 +20,6 @@ The <strong><c>add()</c></strong> method of the <see cref="Highlight"/> interfac
 </remarks>
 <returns>The <c>Highlight</c> object, with the added range.</returns>
 </HighlightAdd>
-<HighlightForEach>
-<summary>
-The <strong><c>forEach()</c></strong> method of the <see cref="Highlight"/> interface executes a provided function once for each <see cref="Range"/> object in the <c>Highlight</c> object, in insertion order.
-</summary>
-<remarks>
-<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetForEach"/>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/forEach"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HighlightForEach>
 <HighlightClear>
 <summary>
 The <strong><c>clear()</c></strong> method of the <see cref="Highlight"/> interface removes all the <see cref="Range"/> objects from a <c>Highlight</c> object.
@@ -75,16 +31,6 @@ The <strong><c>clear()</c></strong> method of the <see cref="Highlight"/> interf
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HighlightClear>
-<HighlightSize>
-<summary>
-The <strong><c>size</c></strong> property returns the number of <see cref="Range"/> objects in a<br/><see cref="Highlight"/> object.
-</summary>
-<remarks>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The value of <c>size</c> is a read-only integer representing how many entries the highlight object has.</value>
-</HighlightSize>
 <HighlightDelete>
 <summary>
 The <strong><c>delete()</c></strong> method of the <see cref="Highlight"/> interface removes a specified <see cref="Range"/> object from a <c>Highlight</c> object.
@@ -96,17 +42,49 @@ The <strong><c>delete()</c></strong> method of the <see cref="Highlight"/> inter
 </remarks>
 <returns>Returns <c>true</c> if <c>range</c> was already in <c>Highlight</c>; otherwise <c>false</c>.</returns>
 </HighlightDelete>
-<HighlightType>
+<HighlightEntries>
 <summary>
-The <c>type</c> property of the <see cref="Highlight"/> interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
+The <strong><c>entries()</c></strong> method of the <see cref="Highlight"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains an array of <c>[range, range]</c> for each <see cref="Range"/> object in the <c>Highlight</c> object, in insertion order.
 </summary>
 <remarks>
-<para>By default, a highlight object will have its type set to <c>highlight</c>, but you can change it to <c>spelling-error</c> or <c>grammar-error</c>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/type"> <em>See also on MDN</em> </seealso></para>
+<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetEntries"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/entries"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The possible values of the <c>type</c> enumerated value are:</value>
-</HighlightType>
+<returns>A new iterator object that contains an array of <c>[range, range]</c> for each <c>Range</c> object in the given <c>Highlight</c>, in insertion order.</returns>
+</HighlightEntries>
+<HighlightForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the <see cref="Highlight"/> interface executes a provided function once for each <see cref="Range"/> object in the <c>Highlight</c> object, in insertion order.
+</summary>
+<remarks>
+<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetForEach"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HighlightForEach>
+<HighlightHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="Highlight"/> interface returns a boolean indicating whether a <see cref="Range"/> object exists in a <c>Highlight</c> object or not.
+</summary>
+<remarks>
+<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetHas"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the specified range exists in the <c>Highlight</c> object; otherwise <c>false</c>.</returns>
+</HighlightHas>
+<HighlightHighlight>
+<summary>
+The <strong><c>Highlight()</c></strong> constructor returns a newly created<br/><see cref="Highlight"/> object which can hold a collection of <see cref="Range"/> objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/Highlight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <c>Highlight</c> object.</returns>
+</HighlightHighlight>
 <HighlightKeys>
 <summary>
 The <strong><c>keys()</c></strong> method of the <see cref="Highlight"/> interface is an alias for the <see cref="Highlight.Values"/> method.
@@ -118,6 +96,38 @@ The <strong><c>keys()</c></strong> method of the <see cref="Highlight"/> interfa
 </remarks>
 <returns>A new iterator object containing each <c>Range</c> object in the given <c>Highlight</c>, in insertion order.</returns>
 </HighlightKeys>
+<HighlightPriority>
+<summary>
+The <c>priority</c> property of the <see cref="Highlight"/> interface is a number used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher <c>priority</c> number have preference over those with a lower <c>priority</c>.
+</summary>
+<remarks>
+<para>It is possible to create <see cref="Range"/> objects that overlap in a document.</para><para>When overlapping ranges are used by multiple different <see cref="Highlight"/> objects, and when those highlights are styled using {{cssxref("::highlight&amp;quot;)}} pseudo-elements, this may lead to conflicting styles.</para><para>If two text ranges overlap and are both highlighted using the {{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}, and if they&amp;apos;re both styled using the <c>color</c> CSS property, the browser needs to decide which color should be used for styling the text in the overlapping part.</para><para>If no <c>priority</c> is set, all highlights have the same priority, and the browser chooses the most recently registered highlight to style the overlapping parts.</para><para>Note that all the styles of a highlight are applied and the browser only needs to resolve conflicts when the same CSS properties are used by multiple overlapping highlights. The highlight style conflict resolution also does not depend on the order in which the {{cssxref(&amp;quot;::highlight&amp;quot;)}} pseudo-elements rules appear in the source, or whether or not CSS properties are marked as <c>!important</c>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HighlightPriority>
+<HighlightSize>
+<summary>
+The <strong><c>size</c></strong> property returns the number of <see cref="Range"/> objects in a<br/><see cref="Highlight"/> object.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of <c>size</c> is a read-only integer representing how many entries the highlight object has.</value>
+</HighlightSize>
+<HighlightType>
+<summary>
+The <c>type</c> property of the <see cref="Highlight"/> interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
+</summary>
+<remarks>
+<para>By default, a highlight object will have its type set to <c>highlight</c>, but you can change it to <c>spelling-error</c> or <c>grammar-error</c>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values of the <c>type</c> enumerated value are:</value>
+</HighlightType>
 <HighlightValues>
 <summary>
 The <strong><c>values()</c></strong> method of the <see cref="Highlight"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the values for each <c>Range</c> object in the <c>Highlight</c> object in insertion order.
@@ -129,14 +139,4 @@ The <strong><c>values()</c></strong> method of the <see cref="Highlight"/> inter
 </remarks>
 <returns>A new iterator object containing each <c>Range</c> object in the given <c>Highlight</c>, in insertion order.</returns>
 </HighlightValues>
-<HighlightHighlight>
-<summary>
-The <strong><c>Highlight()</c></strong> constructor returns a newly created<br/><see cref="Highlight"/> object which can hold a collection of <see cref="Range"/> objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
-</summary>
-<remarks>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/Highlight"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <c>Highlight</c> object.</returns>
-</HighlightHighlight>
 </docs>

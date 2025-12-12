@@ -18,15 +18,6 @@ The <strong><c>encoding</c></strong> read-only property of the <see cref="TextDe
 </remarks>
 <value>A string containing the lower-cased ASCII name of the encoding format.The allowed values are the same as those listed in <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/encoding"><c>TextDecoder.encoding</c></see> (the labels in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API/Encodings">Encoding API Encodings</see>).</value>
 </TextDecoderStreamEncoding>
-<TextDecoderStreamReadable>
-<summary>
-The <strong><c>readable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="ReadableStream"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/readable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ReadableStream"/>.</value>
-</TextDecoderStreamReadable>
 <TextDecoderStreamFatal>
 <summary>
 The <strong><c>fatal</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface is a {{jsxref("boolean")}} indicating if the error mode of the <c>TextDecoderStream</c> object is set to <c>fatal</c>.
@@ -46,6 +37,23 @@ The <strong><c>ignoreBOM</c></strong> read-only property of the <see cref="TextD
 </remarks>
 <value><c>true</c> if the <see href="https://www.w3.org/International/questions/qa-byte-order-mark">byte order mark</see> will be included in the decoded text; <c>false</c> if it will be skipped over when decoding and omitted.</value>
 </TextDecoderStreamIgnoreBOM>
+<TextDecoderStreamReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="ReadableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/>.</value>
+</TextDecoderStreamReadable>
+<TextDecoderStreamTextDecoderStream>
+<summary>
+The <strong><c>TextDecoderStream()</c></strong> constructor creates a new <see cref="TextDecoderStream"/> object which is used to convert a stream of text in a binary encoding into strings.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/TextDecoderStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextDecoderStreamTextDecoderStream>
 <TextDecoderStreamWritable>
 <summary>
 The <strong><c>writable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="WritableStream"/>.
@@ -55,12 +63,4 @@ The <strong><c>writable</c></strong> read-only property of the <see cref="TextDe
 </remarks>
 <value>A <see cref="WritableStream"/>.</value>
 </TextDecoderStreamWritable>
-<TextDecoderStreamTextDecoderStream>
-<summary>
-The <strong><c>TextDecoderStream()</c></strong> constructor creates a new <see cref="TextDecoderStream"/> object which is used to convert a stream of text in a binary encoding into strings.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/TextDecoderStream"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</TextDecoderStreamTextDecoderStream>
 </docs>

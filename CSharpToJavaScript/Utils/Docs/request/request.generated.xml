@@ -19,159 +19,26 @@ The <strong><c>arrayBuffer()</c></strong> method of the <see cref="Request"/> in
 </remarks>
 <returns>A promise that resolves with an <see cref="ArrayBuffer"/>.</returns>
 </RequestArrayBuffer>
-<RequestUrl>
+<RequestBlob>
 <summary>
-The <strong><c>url</c></strong> read-only property of the <see cref="Request"/><br/>interface contains the URL of the request.
+The <strong><c>blob()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="Blob"/>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/url"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="Response.Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/blob"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string indicating the URL of the request.</value>
-</RequestUrl>
-<RequestIsHistoryNavigation>
+<returns>A promise that resolves with a <see cref="Blob"/>.</returns>
+</RequestBlob>
+<RequestBody>
 <summary>
-The <strong><c>isHistoryNavigation</c></strong> read-only property of the <see cref="Request"/> interface is a boolean indicating whether the request is a history navigation.
+The <strong><c>body</c></strong> read-only property of the <see cref="Request"/><br/>interface contains a <see cref="ReadableStream"/> with the body contents<br/>that have been added to the request. Note that a request using the<br/><c>GET</c> or <c>HEAD</c> method cannot have a body<br/>and <c>null</c> is returned in these cases.
 </summary>
 <remarks>
-<para>A history navigation is a navigation within the browser's history, made by calling <see cref="History.Go"/>, <see cref="History.Back"/>, <see cref="History.Forward"/>, <see cref="Navigation.TraverseTo"/>, <see cref="Navigation.Back"/>, <see cref="Navigation.Forward"/>, or directly by clicking the browser's back or forward navigation button.</para>
-<para>-{{domxref(&amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/isHistoryNavigation"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="Request.BodyUsed"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/body"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value.</value>
-</RequestIsHistoryNavigation>
-<RequestReferrer>
-<summary>
-The <strong><c>referrer</c></strong> read-only property of the<br/><see cref="Request"/> interface is set by the user agent to be the referrer of the<br/>Request. (e.g., <c>client</c>, <c>no-referrer</c>, or a URL.)
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>If <c>referrer</c>&amp;apos;s value is <c>no-referrer</c>,<br/>it returns an empty string.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the request&amp;apos;s referrer.</value>
-</RequestReferrer>
-<RequestMethod>
-<summary>
-The <strong><c>method</c></strong> read-only property of the<br/><see cref="Request"/> interface contains the request's method (<c>GET</c>,<br/><c>POST</c>, etc.)
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/method"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="String"/> indicating the method of the request.</value>
-</RequestMethod>
-<RequestSignal>
-<summary>
-The read-only <strong><c>signal</c></strong> property of the <see cref="Request"/> interface returns the <see cref="AbortSignal"/> associated with the request.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/signal"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AbortSignal"/> object.</value>
-</RequestSignal>
-<RequestDuplex>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>duplex</c></strong> read-only property of the <see cref="Request"/> interface returns the duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see cref="Request.Request"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#duplex"><c>RequestInit.duplex</c></see> in request options<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream">Consuming a fetch as a stream</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/duplex"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with the following possible value:</value>
-</RequestDuplex>
-<RequestReferrerPolicy>
-<summary>
-The <strong><c>referrerPolicy</c></strong> read-only property of the<br/><see cref="Request"/> interface returns the referrer policy, which governs what<br/>referrer information, sent in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">Referer</see> header, should be included<br/>with the request.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the request&amp;apos;s <c>referrerPolicy</c>. For<br/>more information and possible values, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> HTTP<br/>header page.</value>
-</RequestReferrerPolicy>
-<RequestIntegrity>
-<summary>
-The <strong><c>integrity</c></strong> read-only property of the <see cref="Request"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</see> value of the request.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The value that was passed as the <c>options.integrity</c> argument when constructing the <c>Request</c>.If an integrity has not been specified, the property returns <c>&amp;apos;&amp;apos;</c>.</value>
-</RequestIntegrity>
-<RequestMode>
-<summary>
-The <strong><c>mode</c></strong> read-only property of the <see cref="Request"/><br/>interface contains the mode of the request (e.g., <c>cors</c>,<br/><c>no-cors</c>, <c>same-origin</c>, or <c>navigate</c>.) This is used<br/>to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.
-</summary>
-<remarks>
-<para>To construct a request with a specific mode, pass the desired value as the {{domxref(&amp;quot;RequestInit&amp;quot;, &amp;quot;&amp;quot;, "mode")}} option to the <see cref="Request.Request"/> constructor.</para><para>Note that setting particular modes, especially <c>no-cors</c>, places restrictions on the request methods and headers that may be used, and prevents JavaScript from accessing the response headers or body. See the documentation for {{domxref(&amp;quot;RequestInit&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;mode&amp;quot;)}} for more details.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following values:</value>
-</RequestMode>
-<RequestKeepalive>
-<summary>
-The <strong><c>keepalive</c></strong> read-only property of the <see cref="Request"/> interface contains the request's <c>keepalive</c> setting (<c>true</c> or <c>false</c>), which indicates whether the browser will keep the associated request alive if the page that initiated it is unloaded before the request is complete.
-</summary>
-<remarks>
-<para>This enables a <see cref="'Window.Fetch'"/> request to, for example, send analytics at the end of a session even if the user navigates away from or closes the page.<br/>This has some advantages over using <see cref="Navigator.SendBeacon"/> for the same purpose, including allowing you to use HTTP methods other than <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST"><c>POST</c></see>, customize request properties, and access the server response via the fetch <see cref="Promise"/> fulfillment.<br/>It is also available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/keepalive"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value indicating the <c>keepalive</c> status of the request.</value>
-</RequestKeepalive>
-<RequestFormData>
-<summary>
-The <strong><c>formData()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="FormData"/> object.
-</summary>
-<remarks>
-<para>-<see cref="Response.FormData"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/formData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a <see cref="FormData"/> object.</returns>
-</RequestFormData>
-<RequestCredentials>
-<summary>
-The <strong><c>credentials</c></strong> read-only property of the <see cref="Request"/> interface reflects the value given to the <see cref="Request.Request"/> constructor in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#credentials"><c>credentials</c></see> option. It determines whether or not the browser sends credentials with the request, as well as whether any <strong><c>Set-Cookie</c></strong> response headers are respected.
-</summary>
-<remarks>
-<para>Credentials are cookies, <see href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS</see> client certificates, or authentication headers containing a username and password.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials">Including credentials</see> for more details.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/credentials"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</RequestCredentials>
-<RequestCache>
-<summary>
-The <strong><c>cache</c></strong> read-only property of the <see cref="Request"/> interface contains the cache mode of the request. It controls how the request will interact with the browser's <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching">HTTP cache</see>.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/cache"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>RequestCache</c> value. The available values are:</value>
-</RequestCache>
-<RequestText>
-<summary>
-The <strong><c>text()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="String"/>.<br/>The response is <strong>always</strong> decoded using UTF-8.
-</summary>
-<remarks>
-<para>-<see cref="Response.Text"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/text"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A Promise that resolves with a <see cref="String"/>.</returns>
-</RequestText>
-<RequestRequest>
-<summary>
-The <strong><c>Request()</c></strong> constructor creates a new<br/><see cref="Request"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</RequestRequest>
+<value>A <see cref="ReadableStream"/> or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</value>
+</RequestBody>
 <RequestBodyUsed>
 <summary>
 The <strong><c>bodyUsed</c></strong> read-only property of the<br/><see cref="Request"/> interface is a boolean value that indicates<br/>whether the request body has been read yet.
@@ -182,6 +49,26 @@ The <strong><c>bodyUsed</c></strong> read-only property of the<br/><see cref="Re
 </remarks>
 <value>A boolean value.</value>
 </RequestBodyUsed>
+<RequestBytes>
+<summary>
+The <strong><c>bytes()</c></strong> method of the <see cref="Request"/> interface reads the request body and returns it as a promise that resolves with an {{jsxref("Uint8Array")}}.
+</summary>
+<remarks>
+<para>-<see cref="Response.ArrayBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/bytes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with an <see cref="Uint8Array"/>.</returns>
+</RequestBytes>
+<RequestCache>
+<summary>
+The <strong><c>cache</c></strong> read-only property of the <see cref="Request"/> interface contains the cache mode of the request. It controls how the request will interact with the browser's <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching">HTTP cache</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/cache"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>RequestCache</c> value. The available values are:</value>
+</RequestCache>
 <RequestClone>
 <summary>
 The <strong><c>clone()</c></strong> method of the <see cref="Request"/> interface creates a copy of the current <c>Request</c> object.
@@ -193,57 +80,17 @@ The <strong><c>clone()</c></strong> method of the <see cref="Request"/> interfac
 </remarks>
 <returns>A <see cref="Request"/> object, which is an exact copy of the <c>Request</c> that <c>clone()</c> was called on.</returns>
 </RequestClone>
-<RequestJson>
+<RequestCredentials>
 <summary>
-The <strong><c>json()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with the result of parsing the body text as <see cref="JSON"/>.
+The <strong><c>credentials</c></strong> read-only property of the <see cref="Request"/> interface reflects the value given to the <see cref="Request.Request"/> constructor in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#credentials"><c>credentials</c></see> option. It determines whether or not the browser sends credentials with the request, as well as whether any <strong><c>Set-Cookie</c></strong> response headers are respected.
 </summary>
 <remarks>
-<para>Note that despite the method being named <c>json()</c>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</para>
-<para>-<see cref="Response.Json"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/json"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to a JavaScript object. This object could be<br/>anything that can be represented by JSON — an object, an array, a string, a number…</returns>
-</RequestJson>
-<RequestBlob>
-<summary>
-The <strong><c>blob()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="Blob"/>.
-</summary>
-<remarks>
-<para>-<see cref="Response.Blob"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/blob"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A promise that resolves with a <see cref="Blob"/>.</returns>
-</RequestBlob>
-<RequestHeaders>
-<summary>
-The <strong><c>headers</c></strong> read-only property of the<br/><see cref="Request"/> interface contains the <see cref="Headers"/> object associated<br/>with the request.
-</summary>
-<remarks>
+<para>Credentials are cookies, <see href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS</see> client certificates, or authentication headers containing a username and password.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials">Including credentials</see> for more details.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/headers"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/credentials"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Headers"/> object.</value>
-</RequestHeaders>
-<RequestBytes>
-<summary>
-The <strong><c>bytes()</c></strong> method of the <see cref="Request"/> interface reads the request body and returns it as a promise that resolves with an {{jsxref("Uint8Array")}}.
-</summary>
-<remarks>
-<para>-<see cref="Response.ArrayBuffer"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/bytes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A promise that resolves with an <see cref="Uint8Array"/>.</returns>
-</RequestBytes>
-<RequestRedirect>
-<summary>
-The <strong><c>redirect</c></strong> read-only property of the <see cref="Request"/> interface contains the mode for how redirects are handled.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/redirect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>RequestRedirect</c> enum value, which can be one the following strings:If not specified when the request is created, it takes the default value of <c>follow</c>.</value>
-</RequestRedirect>
+<value>A string with one of the following values:</value>
+</RequestCredentials>
 <RequestDestination>
 <summary>
 The <strong><c>destination</c></strong> read-only property of the <strong><see cref="Request"/></strong> interface returns a string describing the type of content being requested.
@@ -255,14 +102,167 @@ The <strong><c>destination</c></strong> read-only property of the <strong><see c
 </remarks>
 <value>A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as <c>&amp;quot;document&amp;quot;</c> or <c>&amp;quot;manifest&amp;quot;</c>), and may include contextual cues such as <c>&amp;quot;image&amp;quot;</c> or <c>&amp;quot;worker&amp;quot;</c> or <c>&amp;quot;audioworklet&amp;quot;</c>.Possible values are:</value>
 </RequestDestination>
-<RequestBody>
+<RequestDuplex>
 <summary>
-The <strong><c>body</c></strong> read-only property of the <see cref="Request"/><br/>interface contains a <see cref="ReadableStream"/> with the body contents<br/>that have been added to the request. Note that a request using the<br/><c>GET</c> or <c>HEAD</c> method cannot have a body<br/>and <c>null</c> is returned in these cases.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>duplex</c></strong> read-only property of the <see cref="Request"/> interface returns the duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
 </summary>
 <remarks>
-<para>-<see cref="Request.BodyUsed"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/body"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see cref="Request.Request"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#duplex"><c>RequestInit.duplex</c></see> in request options<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream">Consuming a fetch as a stream</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/duplex"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="ReadableStream"/> or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</value>
-</RequestBody>
+<value>A string with the following possible value:</value>
+</RequestDuplex>
+<RequestFormData>
+<summary>
+The <strong><c>formData()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="FormData"/> object.
+</summary>
+<remarks>
+<para>-<see cref="Response.FormData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/formData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="FormData"/> object.</returns>
+</RequestFormData>
+<RequestHeaders>
+<summary>
+The <strong><c>headers</c></strong> read-only property of the<br/><see cref="Request"/> interface contains the <see cref="Headers"/> object associated<br/>with the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/headers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Headers"/> object.</value>
+</RequestHeaders>
+<RequestIntegrity>
+<summary>
+The <strong><c>integrity</c></strong> read-only property of the <see cref="Request"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</see> value of the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value that was passed as the <c>options.integrity</c> argument when constructing the <c>Request</c>.If an integrity has not been specified, the property returns <c>&amp;apos;&amp;apos;</c>.</value>
+</RequestIntegrity>
+<RequestIsHistoryNavigation>
+<summary>
+The <strong><c>isHistoryNavigation</c></strong> read-only property of the <see cref="Request"/> interface is a boolean indicating whether the request is a history navigation.
+</summary>
+<remarks>
+<para>A history navigation is a navigation within the browser's history, made by calling <see cref="History.Go"/>, <see cref="History.Back"/>, <see cref="History.Forward"/>, <see cref="Navigation.TraverseTo"/>, <see cref="Navigation.Back"/>, <see cref="Navigation.Forward"/>, or directly by clicking the browser's back or forward navigation button.</para>
+<para>-{{domxref(&amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/isHistoryNavigation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</RequestIsHistoryNavigation>
+<RequestJson>
+<summary>
+The <strong><c>json()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with the result of parsing the body text as <see cref="JSON"/>.
+</summary>
+<remarks>
+<para>Note that despite the method being named <c>json()</c>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</para>
+<para>-<see cref="Response.Json"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/json"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a JavaScript object. This object could be<br/>anything that can be represented by JSON — an object, an array, a string, a number…</returns>
+</RequestJson>
+<RequestKeepalive>
+<summary>
+The <strong><c>keepalive</c></strong> read-only property of the <see cref="Request"/> interface contains the request's <c>keepalive</c> setting (<c>true</c> or <c>false</c>), which indicates whether the browser will keep the associated request alive if the page that initiated it is unloaded before the request is complete.
+</summary>
+<remarks>
+<para>This enables a <see cref="'Window.Fetch'"/> request to, for example, send analytics at the end of a session even if the user navigates away from or closes the page.<br/>This has some advantages over using <see cref="Navigator.SendBeacon"/> for the same purpose, including allowing you to use HTTP methods other than <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST"><c>POST</c></see>, customize request properties, and access the server response via the fetch <see cref="Promise"/> fulfillment.<br/>It is also available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/keepalive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value indicating the <c>keepalive</c> status of the request.</value>
+</RequestKeepalive>
+<RequestMethod>
+<summary>
+The <strong><c>method</c></strong> read-only property of the<br/><see cref="Request"/> interface contains the request's method (<c>GET</c>,<br/><c>POST</c>, etc.)
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/method"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> indicating the method of the request.</value>
+</RequestMethod>
+<RequestMode>
+<summary>
+The <strong><c>mode</c></strong> read-only property of the <see cref="Request"/><br/>interface contains the mode of the request (e.g., <c>cors</c>,<br/><c>no-cors</c>, <c>same-origin</c>, or <c>navigate</c>.) This is used<br/>to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.
+</summary>
+<remarks>
+<para>To construct a request with a specific mode, pass the desired value as the {{domxref(&amp;quot;RequestInit&amp;quot;, &amp;quot;&amp;quot;, "mode")}} option to the <see cref="Request.Request"/> constructor.</para><para>Note that setting particular modes, especially <c>no-cors</c>, places restrictions on the request methods and headers that may be used, and prevents JavaScript from accessing the response headers or body. See the documentation for {{domxref(&amp;quot;RequestInit&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;mode&amp;quot;)}} for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following values:</value>
+</RequestMode>
+<RequestRedirect>
+<summary>
+The <strong><c>redirect</c></strong> read-only property of the <see cref="Request"/> interface contains the mode for how redirects are handled.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/redirect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>RequestRedirect</c> enum value, which can be one the following strings:If not specified when the request is created, it takes the default value of <c>follow</c>.</value>
+</RequestRedirect>
+<RequestReferrer>
+<summary>
+The <strong><c>referrer</c></strong> read-only property of the<br/><see cref="Request"/> interface is set by the user agent to be the referrer of the<br/>Request. (e.g., <c>client</c>, <c>no-referrer</c>, or a URL.)
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If <c>referrer</c>&amp;apos;s value is <c>no-referrer</c>,<br/>it returns an empty string.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the request&amp;apos;s referrer.</value>
+</RequestReferrer>
+<RequestReferrerPolicy>
+<summary>
+The <strong><c>referrerPolicy</c></strong> read-only property of the<br/><see cref="Request"/> interface returns the referrer policy, which governs what<br/>referrer information, sent in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">Referer</see> header, should be included<br/>with the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the request&amp;apos;s <c>referrerPolicy</c>. For<br/>more information and possible values, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> HTTP<br/>header page.</value>
+</RequestReferrerPolicy>
+<RequestRequest>
+<summary>
+The <strong><c>Request()</c></strong> constructor creates a new<br/><see cref="Request"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RequestRequest>
+<RequestSignal>
+<summary>
+The read-only <strong><c>signal</c></strong> property of the <see cref="Request"/> interface returns the <see cref="AbortSignal"/> associated with the request.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/signal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AbortSignal"/> object.</value>
+</RequestSignal>
+<RequestText>
+<summary>
+The <strong><c>text()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with a <see cref="String"/>.<br/>The response is <strong>always</strong> decoded using UTF-8.
+</summary>
+<remarks>
+<para>-<see cref="Response.Text"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A Promise that resolves with a <see cref="String"/>.</returns>
+</RequestText>
+<RequestUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the <see cref="Request"/><br/>interface contains the URL of the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the URL of the request.</value>
+</RequestUrl>
 </docs>

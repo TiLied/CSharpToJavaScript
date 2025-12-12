@@ -17,34 +17,6 @@
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </PressureObserverDisconnect>
-<PressureObserverUnobserve>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>unobserve()</c></strong> method of the <see cref="'PressureObserver'"/> interface stops the pressure observer callback from receiving pressure records from the specified source.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/unobserve"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</PressureObserverUnobserve>
-<PressureObserverPressureObserver>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PressureObserver()</c></strong> constructor creates a new <see cref="PressureObserver"/> object to watch for changes to pressure changes of system resources such as the CPU.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/PressureObserver"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="PressureObserver"/> object with the specified <c>callback</c> function that will be invoked when <see cref="PressureObserver.Observe"/> was called to watch pressure changes.</returns>
-</PressureObserverPressureObserver>
-<PressureObserverTakeRecords>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>takeRecords()</c></strong> method of the <see cref="'PressureObserver'"/> interface returns the current list of pressure records stored in the pressure observer, emptying it out.
-</summary>
-<remarks>
-<para>It is useful when you want to a stop observing a source but would like to be sure to get any records that have not yet been passed into the observer callback.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An {{jsxref("Array")}} of <see cref="PressureRecord"/> objects.</returns>
-</PressureObserverTakeRecords>
 <PressureObserverKnownSources>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The static <strong><c>knownSources</c></strong> read-only property of the <see cref="PressureObserver"/> interface returns an array of the <see cref="PressureRecord.Source"/> values supported by the user agent in alphabetical order.
@@ -65,4 +37,32 @@
 </remarks>
 <returns>A <see cref="Promise"/> that fulfils with <see cref="Undefined"/>.</returns>
 </PressureObserverObserve>
+<PressureObserverPressureObserver>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PressureObserver()</c></strong> constructor creates a new <see cref="PressureObserver"/> object to watch for changes to pressure changes of system resources such as the CPU.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/PressureObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PressureObserver"/> object with the specified <c>callback</c> function that will be invoked when <see cref="PressureObserver.Observe"/> was called to watch pressure changes.</returns>
+</PressureObserverPressureObserver>
+<PressureObserverTakeRecords>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>takeRecords()</c></strong> method of the <see cref="'PressureObserver'"/> interface returns the current list of pressure records stored in the pressure observer, emptying it out.
+</summary>
+<remarks>
+<para>It is useful when you want to a stop observing a source but would like to be sure to get any records that have not yet been passed into the observer callback.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} of <see cref="PressureRecord"/> objects.</returns>
+</PressureObserverTakeRecords>
+<PressureObserverUnobserve>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>unobserve()</c></strong> method of the <see cref="'PressureObserver'"/> interface stops the pressure observer callback from receiving pressure records from the specified source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureObserver/unobserve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PressureObserverUnobserve>
 </docs>

@@ -8,6 +8,55 @@ The <strong><c>RTCIceTransport</c></strong> interface provides access to informa
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceTransport>
+<RTCIceTransportComponent>
+<summary>
+The <strong><c>component</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface specifies whether the object is serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which is one of the following:</value>
+</RTCIceTransportComponent>
+<RTCIceTransportGatheringState>
+<summary>
+The <strong><c>gatheringState</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface returns a string that indicates the current gathering state of the ICE agent for this transport: <c>&amp;quot;new&amp;quot;</c>, <c>&amp;quot;gathering&amp;quot;</c>, or <c>&amp;quot;complete&amp;quot;</c>.
+</summary>
+<remarks>
+<para>You can detect when the value of this property changes by watching for an event of type <see cref="RTCIceTransportgatheringstatechange"/>.</para><para>Note that <strong><c>gatheringState</c></strong> represents the gathering state of just this transport, while <see cref="RTCPeerConnection.IceGatheringState"/> represents the overall gathering state of the whole connection, including every <see cref="RTCIceTransport"/> used by every <see cref="RTCRtpSender"/> and every <see cref="RTCRtpReceiver"/> on the entire connection.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that indicates the current state of the ICE agent&amp;apos;s candidate gathering process:</value>
+</RTCIceTransportGatheringState>
+<RTCIceTransportGatheringstatechange>
+<summary>
+A <strong><c>gatheringstatechange</c></strong> event is sent to an <see cref="RTCIceTransport"/> when its {{Glossary("ICE")}} candidate gathering state changes.
+</summary>
+<remarks>
+<para>The gathering state, whose actual status can be found in the transport object's <see cref="RTCIceTransport.GatheringState"/> property, indicates whether or not the ICE agent has begun gathering candidates on this transport, and if so, if it has finished doing so.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCIceTransportGatheringstatechange>
+<RTCIceTransportGetLocalCandidates>
+<summary>
+The <strong><c>getLocalCandidates()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an array of <see cref="RTCIceCandidate"/> objects, one for each of the candidates that have been gathered by the local device during the current {{Glossary("ICE")}} agent session.
+</summary>
+<remarks>
+<para>The local candidates are placed in this list by the ICE agent prior to being delivered to the local client's code in an <see cref="RTCPeerConnection.Icecandidate"/> event so that the client can forward the candidates to the remote peer.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JavaScript {{jsxref("Array")}} containing one <see cref="RTCIceCandidate"/> object for each candidate that has been identified so far during the ICE candidate gathering session.You can&amp;apos;t correlate these local candidates with matching remote candidates.<br/>To find the best match found so far, call <see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</returns>
+</RTCIceTransportGetLocalCandidates>
+<RTCIceTransportGetLocalParameters>
+<summary>
+The <strong><c>getLocalParameters()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an <see cref="RTCIceParameters"/> object that provides information uniquely identifying the local peer for the duration of the ICE session.
+</summary>
+<remarks>
+<para>The local peer's parameters are obtained during ICE signaling and delivered to the transport when the client calls <see cref="RTCPeerConnection.SetLocalDescription"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="RTCIceParameters"/> object indicating the <see cref="RTCIceParameters.UsernameFragment"/> and <see cref="RTCIceParameters.Password"/> which uniquely identify the local peer for the duration of the ICE session.Returns <c>null</c> if the parameters have not yet been received.</returns>
+</RTCIceTransportGetLocalParameters>
 <RTCIceTransportGetRemoteCandidates>
 <summary>
 The <strong><c>getRemoteCandidates()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an array that contains one <see cref="RTCIceCandidate"/> for each of the candidates that have been received from the remote peer so far during the current {{Glossary("ICE")}} gathering session.
@@ -28,35 +77,15 @@ The <strong><c>getRemoteParameters()</c></strong> method of the <see cref="RTCIc
 </remarks>
 <returns>An <see cref="RTCIceParameters"/> object indicating the <see cref="RTCIceParameters.UsernameFragment"/> and <see cref="RTCIceParameters.Password"/> which uniquely identify the remote peer for the duration of the ICE session.Returns <c>null</c> if the parameters haven&amp;apos;t been received yet.</returns>
 </RTCIceTransportGetRemoteParameters>
-<RTCIceTransportGatheringstatechange>
+<RTCIceTransportGetSelectedCandidatePair>
 <summary>
-A <strong><c>gatheringstatechange</c></strong> event is sent to an <see cref="RTCIceTransport"/> when its {{Glossary("ICE")}} candidate gathering state changes.
+The <strong><c>getSelectedCandidatePair()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an <see cref="RTCIceCandidatePair"/> object containing the current best-choice pair of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.
 </summary>
 <remarks>
-<para>The gathering state, whose actual status can be found in the transport object's <see cref="RTCIceTransport.GatheringState"/> property, indicates whether or not the ICE agent has begun gathering candidates on this transport, and if so, if it has finished doing so.</para><para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</RTCIceTransportGatheringstatechange>
-<RTCIceTransportComponent>
-<summary>
-The <strong><c>component</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface specifies whether the object is serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which is one of the following:</value>
-</RTCIceTransportComponent>
-<RTCIceTransportSelectedcandidatepairchange>
-<summary>
-A <strong><c>selectedcandidatepairchange</c></strong> event is sent to an <see cref="RTCIceTransport"/> when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.
-</summary>
-<remarks>
-<para>The pair of candidates is in turn described by an <see cref="RTCIceCandidatePair"/> object which contains one <see cref="RTCIceCandidate"/> representing the local end of the connection, and another representing the remote end of the connection.</para><para>Together, the candidates can be used to establish a connection to be used by the <see cref="RTCIceTransport"/>, and, by extension, by an <see cref="RTCPeerConnection"/>.</para><para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</RTCIceTransportSelectedcandidatepairchange>
+<returns>A <see cref="RTCIceCandidatePair"/> object describing the configurations of the currently-selected candidate pair's two endpoints.<br/><see cref="RTCIceCandidatePair.Local"/> describes the configuration of the local end of the connection, while <see cref="RTCIceCandidatePair.Remote"/> describes the remote peer's configuration.The return value is <c>null</c> if no pair of candidates has been selected yet.</returns>
+</RTCIceTransportGetSelectedCandidatePair>
 <RTCIceTransportRole>
 <summary>
 The <strong><c>role</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface indicates which {{Glossary("ICE")}} role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.
@@ -67,26 +96,16 @@ The <strong><c>role</c></strong> read-only property of the <see cref="RTCIceTran
 </remarks>
 <value>A string specifying whether the <see cref="RTCIceTransport"/> represents the controlling agent or the controlled agent.The value must be one of the following:</value>
 </RTCIceTransportRole>
-<RTCIceTransportGatheringState>
+<RTCIceTransportSelectedcandidatepairchange>
 <summary>
-The <strong><c>gatheringState</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface returns a string that indicates the current gathering state of the ICE agent for this transport: <c>&amp;quot;new&amp;quot;</c>, <c>&amp;quot;gathering&amp;quot;</c>, or <c>&amp;quot;complete&amp;quot;</c>.
+A <strong><c>selectedcandidatepairchange</c></strong> event is sent to an <see cref="RTCIceTransport"/> when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.
 </summary>
 <remarks>
-<para>You can detect when the value of this property changes by watching for an event of type <see cref="RTCIceTransportgatheringstatechange"/>.</para><para>Note that <strong><c>gatheringState</c></strong> represents the gathering state of just this transport, while <see cref="RTCPeerConnection.IceGatheringState"/> represents the overall gathering state of the whole connection, including every <see cref="RTCIceTransport"/> used by every <see cref="RTCRtpSender"/> and every <see cref="RTCRtpReceiver"/> on the entire connection.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState"> <em>See also on MDN</em> </seealso></para>
+<para>The pair of candidates is in turn described by an <see cref="RTCIceCandidatePair"/> object which contains one <see cref="RTCIceCandidate"/> representing the local end of the connection, and another representing the remote end of the connection.</para><para>Together, the candidates can be used to establish a connection to be used by the <see cref="RTCIceTransport"/>, and, by extension, by an <see cref="RTCPeerConnection"/>.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string that indicates the current state of the ICE agent&amp;apos;s candidate gathering process:</value>
-</RTCIceTransportGatheringState>
-<RTCIceTransportGetLocalParameters>
-<summary>
-The <strong><c>getLocalParameters()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an <see cref="RTCIceParameters"/> object that provides information uniquely identifying the local peer for the duration of the ICE session.
-</summary>
-<remarks>
-<para>The local peer's parameters are obtained during ICE signaling and delivered to the transport when the client calls <see cref="RTCPeerConnection.SetLocalDescription"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="RTCIceParameters"/> object indicating the <see cref="RTCIceParameters.UsernameFragment"/> and <see cref="RTCIceParameters.Password"/> which uniquely identify the local peer for the duration of the ICE session.Returns <c>null</c> if the parameters have not yet been received.</returns>
-</RTCIceTransportGetLocalParameters>
+</RTCIceTransportSelectedcandidatepairchange>
 <RTCIceTransportState>
 <summary>
 The <strong><c>state</c></strong> read-only property of the <see cref="RTCIceTransport"/> interface returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.
@@ -97,25 +116,6 @@ The <strong><c>state</c></strong> read-only property of the <see cref="RTCIceTra
 </remarks>
 <value>A string whose value is one of the following:</value>
 </RTCIceTransportState>
-<RTCIceTransportGetSelectedCandidatePair>
-<summary>
-The <strong><c>getSelectedCandidatePair()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an <see cref="RTCIceCandidatePair"/> object containing the current best-choice pair of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="RTCIceCandidatePair"/> object describing the configurations of the currently-selected candidate pair's two endpoints.<br/><see cref="RTCIceCandidatePair.Local"/> describes the configuration of the local end of the connection, while <see cref="RTCIceCandidatePair.Remote"/> describes the remote peer's configuration.The return value is <c>null</c> if no pair of candidates has been selected yet.</returns>
-</RTCIceTransportGetSelectedCandidatePair>
-<RTCIceTransportGetLocalCandidates>
-<summary>
-The <strong><c>getLocalCandidates()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an array of <see cref="RTCIceCandidate"/> objects, one for each of the candidates that have been gathered by the local device during the current {{Glossary("ICE")}} agent session.
-</summary>
-<remarks>
-<para>The local candidates are placed in this list by the ICE agent prior to being delivered to the local client's code in an <see cref="RTCPeerConnection.Icecandidate"/> event so that the client can forward the candidates to the remote peer.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A JavaScript {{jsxref("Array")}} containing one <see cref="RTCIceCandidate"/> object for each candidate that has been identified so far during the ICE candidate gathering session.You can&amp;apos;t correlate these local candidates with matching remote candidates.<br/>To find the best match found so far, call <see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</returns>
-</RTCIceTransportGetLocalCandidates>
 <RTCIceTransportStatechange>
 <summary>
 A <strong><c>statechange</c></strong> event occurs when the <see cref="RTCIceTransport"/> changes state. The <see cref="RTCIceTransport.State"/> can be used to determine how far through the process of examining, verifying, and selecting a valid candidate pair is prior to successfully connecting the two peers for WebRTC communications.

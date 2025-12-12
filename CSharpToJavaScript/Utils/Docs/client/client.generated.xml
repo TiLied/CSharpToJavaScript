@@ -8,15 +8,6 @@ The <c>Client</c> interface represents an executable context such as a <see cref
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Client>
-<ClientUrl>
-<summary>
-The <strong><c>url</c></strong> read-only property of the <see cref="Client"/><br/>interface returns the URL of the current service worker client.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/url"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ClientUrl>
 <ClientFrameType>
 <summary>
 The <strong><c>frameType</c></strong> read-only property of the <see cref="Client"/> interface indicates the type of browsing context of the current <see cref="Client"/>. This value can be one of <c>&amp;quot;auxiliary&amp;quot;</c>, <c>&amp;quot;top-level&amp;quot;</c>, <c>&amp;quot;nested&amp;quot;</c>, or <c>&amp;quot;none&amp;quot;</c>.
@@ -26,24 +17,6 @@ The <strong><c>frameType</c></strong> read-only property of the <see cref="Clien
 </remarks>
 <value>One of these four strings: <c>&amp;quot;auxiliary&amp;quot;</c>, <c>&amp;quot;top-level&amp;quot;</c>, <c>&amp;quot;nested&amp;quot;</c>, or <c>&amp;quot;none&amp;quot;</c>.</value>
 </ClientFrameType>
-<ClientType>
-<summary>
-The <strong><c>type</c></strong> read-only property of the <see cref="Client"/><br/>interface indicates the type of client the service worker is controlling.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string, representing the client type. The value can be one of</value>
-</ClientType>
-<ClientPostMessage>
-<summary>
-The <strong><c>postMessage()</c></strong> method of the<br/><see cref="Client"/> interface allows a service worker to send a message to a client<br/>(a <see cref="Window"/>, <see cref="Worker"/>, or <see cref="SharedWorker"/>). The<br/>message is received in the <c>message</c> event on<br/><see cref="ServiceWorkerContainer"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ClientPostMessage>
 <ClientId>
 <summary>
 The <strong><c>id</c></strong> read-only property of the <see cref="Client"/> interface returns the universally unique identifier of the <see cref="Client"/> object.
@@ -53,4 +26,31 @@ The <strong><c>id</c></strong> read-only property of the <see cref="Client"/> in
 </remarks>
 <value>A string uniquely identifying the object.</value>
 </ClientId>
+<ClientPostMessage>
+<summary>
+The <strong><c>postMessage()</c></strong> method of the<br/><see cref="Client"/> interface allows a service worker to send a message to a client<br/>(a <see cref="Window"/>, <see cref="Worker"/>, or <see cref="SharedWorker"/>). The<br/>message is received in the <c>message</c> event on<br/><see cref="ServiceWorkerContainer"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ClientPostMessage>
+<ClientType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="Client"/><br/>interface indicates the type of client the service worker is controlling.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, representing the client type. The value can be one of</value>
+</ClientType>
+<ClientUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the <see cref="Client"/><br/>interface returns the URL of the current service worker client.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ClientUrl>
 </docs>

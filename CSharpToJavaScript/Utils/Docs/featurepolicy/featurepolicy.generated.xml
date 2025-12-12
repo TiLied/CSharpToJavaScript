@@ -8,24 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FeaturePolicy>
-<FeaturePolicyGetAllowlistForFeature>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAllowlistForFeature()</c></strong><br/>method of the <see cref="FeaturePolicy"/> interface enables querying of the allowlist for a specific feature for the current Permissions Policy.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy/getAllowlistForFeature"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (<c>*</c>) is used, the array will contain <c>*</c>.</returns>
-</FeaturePolicyGetAllowlistForFeature>
-<FeaturePolicyFeatures>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>features()</c></strong> method of the<br/><see cref="FeaturePolicy"/> interface returns a list of names of all features<br/>supported by the User Agent. Feature whose name appears on the list might not be<br/>allowed by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> of the current execution context and/or might not be<br/>accessible because of user&amp;apos;s permissions.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy/features"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A list of strings that represent names of all Permissions Policy directives supported by<br/>the user agent.</returns>
-</FeaturePolicyFeatures>
 <FeaturePolicyAllowedFeatures>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>allowedFeatures()</c></strong> method of<br/>the <see cref="FeaturePolicy"/> interface returns a list of directive names of all<br/>features allowed by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see>. This enables introspection of individual directives<br/>of the Permissions Policy it is run on. As such, <c>allowedFeatures()</c> method<br/>returns a subset of directives returned by <see cref="FeaturePolicy.Features"/>.
@@ -44,4 +26,22 @@
 </remarks>
 <returns>A <see cref="Boolean"/> that is <c>true</c> if and only if the feature is<br/>allowed.</returns>
 </FeaturePolicyAllowsFeature>
+<FeaturePolicyFeatures>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>features()</c></strong> method of the<br/><see cref="FeaturePolicy"/> interface returns a list of names of all features<br/>supported by the User Agent. Feature whose name appears on the list might not be<br/>allowed by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> of the current execution context and/or might not be<br/>accessible because of user&amp;apos;s permissions.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy/features"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A list of strings that represent names of all Permissions Policy directives supported by<br/>the user agent.</returns>
+</FeaturePolicyFeatures>
+<FeaturePolicyGetAllowlistForFeature>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAllowlistForFeature()</c></strong><br/>method of the <see cref="FeaturePolicy"/> interface enables querying of the allowlist for a specific feature for the current Permissions Policy.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy/getAllowlistForFeature"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (<c>*</c>) is used, the array will contain <c>*</c>.</returns>
+</FeaturePolicyGetAllowlistForFeature>
 </docs>

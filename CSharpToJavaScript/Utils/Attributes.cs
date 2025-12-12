@@ -35,7 +35,7 @@ public class ToAttribute : Attribute
 	public const string ToLower = "ToLower";
 	public const string FirstCharToLowerCase = "FirstCharToLowerCase";
 
-	public string To { get; set; } = string.Empty;
+	public string To { get; init; } = string.Empty;
 	public ToAttribute(string to)
 	{
 		To = to;

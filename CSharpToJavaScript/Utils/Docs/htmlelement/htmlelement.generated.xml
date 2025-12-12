@@ -9,67 +9,45 @@ The <strong><c>HTMLElement</c></strong> interface represents any <see href="http
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLElement>
-<HTMLElementOffsetTop>
+<HTMLElementAccessKey>
 <summary>
-The <strong><c>offsetTop</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the distance from the outer border of the current element (including its margin) to the top padding edge of the <see cref="HTMLelement.OffsetParent"/>, the <strong>closest positioned</strong> ancestor element.
+The <strong><c>HTMLElement.accessKey</c></strong> property sets the keystroke which a user can press to jump to a given element.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientTop"/><br/>-<see cref="Element.ScrollTop"/><br/>-<see cref="HTMLElement.OffsetHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetLeft"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>HTMLElement.accessKey</c> property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other &amp;quot;qualifying&amp;quot; keys (such as &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt; + accesskey).</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey">HTML global attribute: accesskey</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number.</value>
-</HTMLElementOffsetTop>
-<HTMLElementToggle>
+</HTMLElementAccessKey>
+<HTMLElementAccessKeyLabel>
 <summary>
-The <strong><c>toggle</c></strong> event of the <see cref="HTMLElement"/> interface fires on a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, "nocode")}} element, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> element just after it is shown or hidden.
+The <strong><c>HTMLElement.accessKeyLabel</c></strong><br/>read-only property returns a string containing the element&amp;apos;s<br/>browser-assigned access key (if any); otherwise it returns an empty string.
 </summary>
 <remarks>
-<para>This event is not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelable">cancelable</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-Related event: <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforetoggle_event"><c>beforetoggle</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/toggle"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLElement.AccessKey"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey">accesskey</see> global<br/>attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementToggle>
-<HTMLElementEditContext>
+</HTMLElementAccessKeyLabel>
+<HTMLElementAnchorElement>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>editContext</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets an element's associated <see cref="EditContext"/> object.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>anchorElement</c></strong> property of the <see cref="HTMLElement"/> interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> HTML attribute, not elements associated with their anchors via the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties.
 </summary>
 <remarks>
-<para>The {{domxref(&amp;quot;EditContext API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Input Method Editor">Input Method Editor</see> (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.</para>
-<para>-The <see cref="EditContext"/> interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/editContext"> <em>See also on MDN</em> </seealso></para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning">CSS anchor positioning</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/anchorElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="EditContext"/> object or <c>null</c>.</value>
-</HTMLElementEditContext>
-<HTMLElementDragstart>
+<value>An <see cref="HTMLElement"/> instance representing the element's anchor element, or <c>null</c> if it doesn&amp;apos;t have one.</value>
+</HTMLElementAnchorElement>
+<HTMLElementAttachInternals>
 <summary>
-The <c>dragstart</c> event is fired when the user starts dragging an element or text selection.
+The <strong><c>HTMLElement.attachInternals()</c></strong> method returns an <see cref="ElementInternals"/> object.<br/>This method allows a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">custom element</see> to participate in HTML forms. The <c>ElementInternals</c> interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <see href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</see> to the element.
 </summary>
 <remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragstart"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://web.dev/articles/more-capable-form-controls">More capable form controls</see><br/>-<see href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/attachInternals"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementDragstart>
-<HTMLElementOffsetParent>
-<summary>
-The <strong><c>HTMLElement.offsetParent</c></strong> read-only property returns a<br/>reference to the element which is the closest (nearest in the containment hierarchy)<br/>positioned ancestor element.
-</summary>
-<remarks>
-<para>A positioned ancestor might be:</para><para>If there is no positioned ancestor element, the <c>body</c> is returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>offsetParent</c> returns <c>null</c> in the following<br/>situations:</para></blockquote><para><c>offsetParent</c> is useful because<br/><see cref="HTMLElement.OffsetTop"/> and<br/><see cref="HTMLElement.OffsetLeft"/> are relative to its padding edge.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An object reference to the element in which the current element is offset.</value>
-</HTMLElementOffsetParent>
-<HTMLElementEnterKeyHint>
-<summary>
-The <strong><c>enterKeyHint</c></strong> property is an enumerated property defining<br/>what action label (or icon) to present for the enter key on virtual keyboards.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><c>enterkeyhint</c></see><br/>HTML global attribute and is an enumerated property, only accepting the following values<br/>as a string:
-</summary>
-<remarks>
-<para>If no <c>enterKeyHint</c> value has been specified or if it was set to a different value than the allowed ones, it will return an empty string.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><c>enterkeyhint</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/enterKeyHint"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementEnterKeyHint>
+<returns>An <see cref="ElementInternals"/> object.</returns>
+</HTMLElementAttachInternals>
 <HTMLElementAttributeStyleMap>
 <summary>
 The <strong><c>attributeStyleMap</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns a live <see cref="StylePropertyMap"/> object that contains a list of style properties of the element that are defined in the element's inline <c>style</c> attribute, or assigned using the <see cref="HTMLElement.Style"/> property of the <see cref="HTMLElement"/> interface via script.
@@ -81,186 +59,6 @@ The <strong><c>attributeStyleMap</c></strong> read-only property of the <see cre
 </remarks>
 <value>A live <see cref="StylePropertyMap"/> object.</value>
 </HTMLElementAttributeStyleMap>
-<HTMLElementDrop>
-<summary>
-The <strong><c>drop</c></strong> event is fired when an element or text selection is dropped on a valid drop target. To ensure that the <c>drop</c> event always fires as expected, you should always include a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><c>preventDefault()</c></see> call in the part of your code which handles the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragover_event"><c>dragover</c></see> event.
-</summary>
-<remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drop"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementDrop>
-<HTMLElementDataset>
-<summary>
-The <strong><c>dataset</c></strong> read-only property<br/>of the <see cref="HTMLElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">custom data attributes</see><br/>(<c>data-*</c>) on elements. It exposes a map of strings<br/>(<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>dataset</c> property itself can be read, but not directly written.<br/>Instead, all writes must be to the individual properties within the<br/><c>dataset</c>, which in turn represent the data attributes.</para></blockquote><para>An HTML <c>data-*</c> attribute and its corresponding DOM<br/><c>dataset.property</c> modify their shared name according to where<br/>they are read or written:</para><para>Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.</para><para>In addition to the information below, you&amp;apos;ll find a how-to guide for using HTML data<br/>attributes in our article <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes"><strong>Using data attributes</strong></see>.</para>
-<para>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*"><c>data-*</c></see> class<br/>of global attributes<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using data attributes</see><br/>-<see cref="Element.GetAttribute"/> and <see cref="Element.SetAttribute"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMStringMap"/>.</value>
-</HTMLElementDataset>
-<HTMLElementClick>
-<summary>
-The <strong><c>HTMLElement.click()</c></strong> method simulates a mouse click on an element. When called on an element, the element's <see cref="Elementclick"/> event is fired (unless its <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled"><c>disabled</c></see> attribute is set).
-</summary>
-<remarks>
-<para>-Related event handlers-<see cref="Element.Click"/><br/>-<see cref="Element.Dblclick"/><br/>-<see cref="Element.Auxclick"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLElementClick>
-<HTMLElementOffsetHeight>
-<summary>
-The <strong><c>offsetHeight</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the height of an element, including vertical padding and borders, as an integer.
-</summary>
-<remarks>
-<para>Typically, <c>offsetHeight</c> is a measurement in pixels of the element&amp;apos;s CSS height, including any borders, padding, and horizontal scrollbars (if rendered). It does not include the height of pseudo-elements such as <c>::before</c> or <c>::after</c>. For the document body object, the measurement includes total linear content height instead of the element&amp;apos;s CSS height. Floated elements extending below other linear content are ignored.</para><para>If the element is hidden (for example, by setting <c>style.display</c> on the element or one of its ancestors to <c>&amp;quot;none&amp;quot;</c>), then <c>0</c> is returned.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientHeight"/><br/>-<see cref="Element.ScrollHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetLeft"/><br/>-<see cref="HTMLElement.OffsetTop"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</HTMLElementOffsetHeight>
-<HTMLElementAttachInternals>
-<summary>
-The <strong><c>HTMLElement.attachInternals()</c></strong> method returns an <see cref="ElementInternals"/> object.<br/>This method allows a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">custom element</see> to participate in HTML forms. The <c>ElementInternals</c> interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <see href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</see> to the element.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/more-capable-form-controls">More capable form controls</see><br/>-<see href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/attachInternals"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="ElementInternals"/> object.</returns>
-</HTMLElementAttachInternals>
-<HTMLElementAccessKey>
-<summary>
-The <strong><c>HTMLElement.accessKey</c></strong> property sets the keystroke which a user can press to jump to a given element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>HTMLElement.accessKey</c> property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other &amp;quot;qualifying&amp;quot; keys (such as &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt; + accesskey).</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey">HTML global attribute: accesskey</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKey"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementAccessKey>
-<HTMLElementError>
-<summary>
-The <c>error</c> event is fired on an element when a resource failed to load, or can&amp;apos;t be used. For example, if a script has an execution error or an image can&amp;apos;t be found or is invalid.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-Related events-Window: <see cref="Windowerror"/> event<br/>-HTMLElement: <see cref="HTMLElementload"/> event<br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/error"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementError>
-<HTMLElementDir>
-<summary>
-The <strong><c>HTMLElement.dir</c></strong> property indicates the text writing directionality of the content of the current element. It reflects the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"><c>dir</c></see> attribute.
-</summary>
-<remarks>
-<para>Note that if the <c>dir</c> attribute is unspecified, the element itself may still inherit directionality from its parent. However, that inherited directionality is not reflected by this property&amp;apos;s value.</para><para>The text writing directionality of an element is which direction that text goes (for support of different language systems). Arabic languages and Hebrew are typical languages using the RTL directionality.</para>
-<para>-<see cref="Document.Dir"/><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"><c>dir</c></see><br/>global attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:dir">:dir</see> pseudo-class<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:</value>
-</HTMLElementDir>
-<HTMLElementInputMode>
-<summary>
-The <see cref="HTMLElement"/> property <strong><c>inputMode</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><c>inputmode</c></see> attribute.
-</summary>
-<remarks>
-<para>It provides a hint about the type of data that might be entered by the user while editing the element or its contents. This allows the browser to display an appropriate virtual keyboard.</para><para>It is used primarily on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> elements, but is usable on any element in <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> mode.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode">inputmode</see> attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inputMode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>This attribute may have one of the following values:For details on the usage of this attribute, see the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><c>inputmode</c></see> HTML attribute that this property reflects.</value>
-</HTMLElementInputMode>
-<HTMLElementDragenter>
-<summary>
-The <c>dragenter</c> event is fired when a dragged element or text selection enters a valid drop target. The target object is the <strong>immediate user selection</strong> (the element directly indicated by the user as the drop target), or the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see> element.
-</summary>
-<remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragenter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementDragenter>
-<HTMLElementTogglePopover>
-<summary>
-The <strong><c>togglePopover()</c></strong> method of the <see cref="HTMLElement"/> interface toggles a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) between the hidden and showing states.
-</summary>
-<remarks>
-<para>When <c>togglePopover()</c> is called on an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute:</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/togglePopover"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><c>true</c> if the popup is open after the call, and <c>false</c> otherwise.None (<see cref="Undefined"/>) may be returned in older browser versions (see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see>).</returns>
-</HTMLElementTogglePopover>
-<HTMLElementStyle>
-<summary>
-The read-only <strong><c>style</c></strong> property of the <see cref="HTMLElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
-</summary>
-<remarks>
-<para>Shorthand properties are expanded. If you set <c>style=&amp;quot;border-top: 1px solid black&amp;quot;</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>This property is read-only, meaning it is not possible to assign a <see cref="CSSStyleDeclaration"/> object to it. Nevertheless, it is possible to set an inline style by assigning a <strong>string</strong> directly to the <c>style</c> property. In this case the string is forwarded to <see cref="CSSStyleDeclaration.CssText"/>. Using <c>style</c> in this manner will completely overwrite all inline styles on the element.</para><para>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the <see cref="CSSStyleDeclaration"/> object. For example, you can write <c>element.style.backgroundColor = &amp;quot;red&amp;quot;</c>.</para><para>A style declaration is reset by setting it to <c>null</c> or an empty string, e.g., <c>elt.style.color = null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSS property names are converted to JavaScript identifier with these rules:</para><para>The <c>style</c> property has the same priority in the CSS cascade as an inline style declaration set via the <c>style</c> attribute.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="SVGElement.Style"/><br/>-<see cref="MathMLElement.Style"/><br/>-<see cref="HTMLElement.AttributeStyleMap"/><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A live <see cref="CSSStyleDeclaration"/> object.</value>
-</HTMLElementStyle>
-<HTMLElementHidePopover>
-<summary>
-The <strong><c>hidePopover()</c></strong> method of the <see cref="HTMLElement"/> interface hides a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">popover</see> element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) by removing it from the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see> and styling it with <c>display: none</c>.
-</summary>
-<remarks>
-<para>When <c>hidePopover()</c> is called on a showing element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute, a <see cref="HTMLElementbeforetoggle"/> event will be fired, followed by the popover being hidden, and then the <see cref="HTMLElementtoggle"/> event firing. If the element is already hidden, an error is thrown.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidePopover"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLElementHidePopover>
-<HTMLElementDragend>
-<summary>
-The <c>dragend</c> event is fired when a drag operation ends (by releasing a mouse button or hitting the escape key).
-</summary>
-<remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragend"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementDragend>
-<HTMLElementContentEditable>
-<summary>
-The <strong><c>contentEditable</c></strong> property of<br/>the <see cref="HTMLElement"/> interface specifies whether or not the element is<br/>editable.
-</summary>
-<remarks>
-<para>This enumerated attribute can have the following values:</para><para>You can use the <see cref="HTMLElement.IsContentEditable"/> property to test the<br/>computed boolean value of this property.</para><para>If the attribute is missing or its value is invalid, its value is inherited from its parent element: so the element<br/>is editable (or not) based on the parent element.</para>
-<para>-<see cref="HTMLElement.IsContentEditable"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> global attribute.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLElementContentEditable>
-<HTMLElementTranslate>
-<summary>
-The <strong><c>translate</c></strong> property of the <see cref="HTMLElement"/> interface indicates whether an element's attribute values and the values of its <see cref="Text"/> node children are to be translated when the page is localized, or whether to leave them unchanged.
-</summary>
-<remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/translate"><c>translate</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/translate"><c>translate</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/translate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value that is <c>true</c> if an element's attribute values and the values of its <see cref="Text"/> node children are to be translated when the page is localized, <c>false</c> otherwise.</value>
-</HTMLElementTranslate>
-<HTMLElementOffsetLeft>
-<summary>
-The <strong><c>offsetLeft</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the number of pixels that the <strong>upper left corner</strong> of the current element is offset to the left within the <see cref="HTMLElement.OffsetParent"/> node.
-</summary>
-<remarks>
-<para>For block-level elements, <c>offsetTop</c>, <c>offsetLeft</c>, <c>offsetWidth</c>, and <c>offsetHeight</c> describe the border box of an element relative to the <c>offsetParent</c>.</para><para>However, for inline-level elements (such as <c>&amp;lt;span&amp;gt;</c>) that can wrap from one line to the next, <c>offsetTop</c> and <c>offsetLeft</c> describe the positions of the <strong>first</strong> border box (use <see cref="Element.GetClientRects"/> to get its width and height), while <c>offsetWidth</c> and <c>offsetHeight</c> describe the dimensions of the <strong>bounding</strong> border box (use <see cref="Element.GetBoundingClientRect"/> to get its position). Therefore, a box with the left, top, width and height of <c>offsetLeft</c>, <c>offsetTop</c>, <c>offsetWidth</c> and <c>offsetHeight</c> will not be a bounding box for a span with wrapped text.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientLeft"/><br/>-<see cref="Element.ScrollLeft"/><br/>-<see cref="HTMLElement.OffsetHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetTop"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</HTMLElementOffsetLeft>
 <HTMLElementAutocapitalize>
 <summary>
 The <strong><c>autocapitalize</c></strong> property of the <see cref="HTMLElement"/> interface represents the element's capitalization behavior for user input. It is available on all HTML elements, though it doesn't affect all of them, including:
@@ -272,59 +70,27 @@ The <strong><c>autocapitalize</c></strong> property of the <see cref="HTMLElemen
 </remarks>
 <value>A string that represents the element&amp;apos;s capitalization behavior for user input. Valid values are as follows:</value>
 </HTMLElementAutocapitalize>
-<HTMLElementAnchorElement>
+<HTMLElementAutocorrect>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>anchorElement</c></strong> property of the <see cref="HTMLElement"/> interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> HTML attribute, not elements associated with their anchors via the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties.
+The <strong><c>autocorrect</c></strong> property of the <see cref="HTMLElement"/> interface controls whether or not autocorrection of editable text is enabled for spelling and/or punctuation errors.
 </summary>
 <remarks>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning">CSS anchor positioning</see> module<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/anchorElement"> <em>See also on MDN</em> </seealso></para>
+<para>The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.<br/>For example, on macOS a user agent might rely on <see href="https://support.apple.com/en-vn/guide/mac-help/mh35735/mac">registered replacement text and punctuation</see>.<br/>Other devices and browsers may use a different approach.</para><para>The property reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect"><c>autocorrect</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize"><c>autocapitalize</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/autocorrect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLElement"/> instance representing the element's anchor element, or <c>null</c> if it doesn&amp;apos;t have one.</value>
-</HTMLElementAnchorElement>
-<HTMLElementWritingSuggestions>
+<value><c>true</c> if auto-correction is enabled for the element, and <c>false</c> otherwise.</value>
+</HTMLElementAutocorrect>
+<HTMLElementAutofocus>
 <summary>
-The <strong><c>writingSuggestions</c></strong> property of the <see cref="HTMLElement"/> interface is a string indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
+The <strong><c>autofocus</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#autofocus"><c>autofocus</c></see> HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> elements or elements whose popover attribute is set.
 </summary>
 <remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions"><c>writingsuggestions</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions"><c>writingsuggestions</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/writingSuggestions"> <em>See also on MDN</em> </seealso></para>
+<para>Only one form-associated element inside a document, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element, or an element whose <c>popover</c> attribute is set, can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, gets the initial focus.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Setting this property doesn&amp;apos;t set the focus to the associated element: it merely tells the browser to focus to it when <strong>the element is inserted</strong> in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An enumerated value; possible values are:</value>
-</HTMLElementWritingSuggestions>
-<HTMLElementPopover>
-<summary>
-The <strong><c>popover</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets an element's popover state via JavaScript (<c>&amp;quot;auto&amp;quot;</c>, <c>&amp;quot;hint&amp;quot;</c>, or <c>&amp;quot;manual&amp;quot;</c>), and can be used for feature detection.
-</summary>
-<remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> global HTML attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/popover"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An enumerated value; possible values are:</value>
-</HTMLElementPopover>
-<HTMLElementHidden>
-<summary>
-The <see cref="HTMLElement"/> property <strong><c>hidden</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"><c>hidden</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden">hidden</see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>This attribute may have one of three values:For details on the usage of this attribute, see the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"><c>hidden</c></see> HTML attribute that this property reflects.</value>
-</HTMLElementHidden>
-<HTMLElementTabIndex>
-<summary>
-The <strong><c>tabIndex</c></strong> property of the<br/><see cref="HTMLElement"/> interface represents the tab order of the current element.
-</summary>
-<remarks>
-<para>Tab order is as follows:</para><para>Elements that are disabled do not participate in the tabbing order.</para><para>Values don&amp;apos;t need to be sequential, nor must they begin with any particular value. They<br/>may even be negative, though each browser trims very large values.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets">Accessibility of keyboard-navigable JavaScript widgets</see><br/>-The HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex"><c>tabindex</c></see><br/>global attribute.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</HTMLElementTabIndex>
+<value>A boolean value.</value>
+</HTMLElementAutofocus>
 <HTMLElementBeforetoggle>
 <summary>
 The <strong><c>beforetoggle</c></strong> event of the <see cref="HTMLElement"/> interface fires on a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, "nocode")}} or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element just before it is shown or hidden.
@@ -335,26 +101,254 @@ The <strong><c>beforetoggle</c></strong> event of the <see cref="HTMLElement"/> 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforetoggle"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLElementBeforetoggle>
-<HTMLElementLoad>
+<HTMLElementBlur>
 <summary>
-The <strong><c>load</c></strong> event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see>.
+The <strong><c>HTMLElement.blur()</c></strong> method removes keyboard focus from the current element.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>load</c> event on <see cref="HTMLBodyElement#event_handlers"/> is actually an alias for the <see cref="Windowload"/> event. Therefore, the <c>load</c> event will only fire on the <c>&amp;lt;body&amp;gt;</c> element once all of the document&amp;apos;s resources have loaded or errored. However, for the sake of clarity, it is recommended that the event handler is attached to the <c>window</c> object directly rather than on <c>HTMLBodyElement</c>.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
-<para>-Related events-Window: <see cref="Windowload"/> event<br/>-Window: <see cref="Windowerror"/> event<br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/load"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLElement.Focus"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementLoad>
-<HTMLElementNonce>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementBlur>
+<HTMLElementChange>
 <summary>
-The <strong><c>nonce</c></strong> property of the <see cref="HTMLElement"/> interface returns the cryptographic number used once that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
+The <c>change</c> event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when the user modifies the element's value. Unlike the <see cref="Elementinput"/> event, the <c>change</c> event is not necessarily fired for each alteration to an element&amp;apos;s <c>value</c>.
 </summary>
 <remarks>
-<para>In later implementations, elements only expose their <c>nonce</c> attribute to scripts (and not to side-channels like CSS attribute selectors).</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce"><c>nonce</c> global attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see><br/>-CSP: {{CSP("script-src")}}<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/nonce"> <em>See also on MDN</em> </seealso></para>
+<para>Depending on the kind of element being changed and the way the user interacts with the element, the <c>change</c> event fires at a different moment:</para><para>The HTML specification lists <see href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">the <c>&amp;lt;input&amp;gt;</c> types that should fire the <c>change</c> event</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementNonce>
+</HTMLElementChange>
+<HTMLElementClick>
+<summary>
+The <strong><c>HTMLElement.click()</c></strong> method simulates a mouse click on an element. When called on an element, the element's <see cref="Elementclick"/> event is fired (unless its <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled"><c>disabled</c></see> attribute is set).
+</summary>
+<remarks>
+<para>-Related event handlers-<see cref="Element.Click"/><br/>-<see cref="Element.Dblclick"/><br/>-<see cref="Element.Auxclick"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementClick>
+<HTMLElementCommand>
+<summary>
+The <strong><c>command</c></strong> event of the <see cref="HTMLElement"/> interface fires on an element that is controlled via a <see cref="HTMLButtonElement"/> with valid <see cref="HTMLButtonElement.CommandForElement"/> and <see cref="HTMLButtonElement.Command"/> values, whenever the button is interacted with (e.g., it is clicked).
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/command"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementCommand>
+<HTMLElementContentEditable>
+<summary>
+The <strong><c>contentEditable</c></strong> property of<br/>the <see cref="HTMLElement"/> interface specifies whether or not the element is<br/>editable.
+</summary>
+<remarks>
+<para>This enumerated attribute can have the following values:</para><para>You can use the <see cref="HTMLElement.IsContentEditable"/> property to test the<br/>computed boolean value of this property.</para><para>If the attribute is missing or its value is invalid, its value is inherited from its parent element: so the element<br/>is editable (or not) based on the parent element.</para>
+<para>-<see cref="HTMLElement.IsContentEditable"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> global attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLElementContentEditable>
+<HTMLElementDataset>
+<summary>
+The <strong><c>dataset</c></strong> read-only property<br/>of the <see cref="HTMLElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">custom data attributes</see><br/>(<c>data-*</c>) on elements. It exposes a map of strings<br/>(<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>dataset</c> property itself can be read, but not directly written.<br/>Instead, all writes must be to the individual properties within the<br/><c>dataset</c>, which in turn represent the data attributes.</para></blockquote><para>An HTML <c>data-*</c> attribute and its corresponding DOM<br/><c>dataset.property</c> modify their shared name according to where<br/>they are read or written:</para><para>Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.</para><para>In addition to the information below, you&amp;apos;ll find a how-to guide for using HTML data<br/>attributes in our article <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes"><strong>Using data attributes</strong></see>.</para>
+<para>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*"><c>data-*</c></see> class<br/>of global attributes<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using data attributes</see><br/>-<see cref="Element.GetAttribute"/> and <see cref="Element.SetAttribute"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMStringMap"/>.</value>
+</HTMLElementDataset>
+<HTMLElementDir>
+<summary>
+The <strong><c>HTMLElement.dir</c></strong> property indicates the text writing directionality of the content of the current element. It reflects the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"><c>dir</c></see> attribute.
+</summary>
+<remarks>
+<para>Note that if the <c>dir</c> attribute is unspecified, the element itself may still inherit directionality from its parent. However, that inherited directionality is not reflected by this property&amp;apos;s value.</para><para>The text writing directionality of an element is which direction that text goes (for support of different language systems). Arabic languages and Hebrew are typical languages using the RTL directionality.</para>
+<para>-<see cref="Document.Dir"/><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"><c>dir</c></see><br/>global attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:dir">:dir</see> pseudo-class<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</HTMLElementDir>
+<HTMLElementDragend>
+<summary>
+The <c>dragend</c> event is fired when a drag operation ends (by releasing a mouse button or hitting the escape key).
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDragend>
+<HTMLElementDragenter>
+<summary>
+The <c>dragenter</c> event is fired when a dragged element or text selection enters a valid drop target. The target object is the <strong>immediate user selection</strong> (the element directly indicated by the user as the drop target), or the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see> element.
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragenter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDragenter>
+<HTMLElementDraggable>
+<summary>
+The <strong><c>draggable</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets a {{jsxref("Boolean")}} primitive indicating if the element is draggable.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/draggable"><c>draggable</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/draggable"><c>draggable</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see> overview<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/draggable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/> primitive that is <c>true</c> if the element is draggable, <c>false</c> otherwise.</value>
+</HTMLElementDraggable>
+<HTMLElementDragleave>
+<summary>
+The <c>dragleave</c> event is fired when a dragged element or text selection leaves a valid drop target.
+</summary>
+<remarks>
+<para>This event is not cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragleave"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDragleave>
+<HTMLElementDragover>
+<summary>
+The <c>dragover</c> event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDragover>
+<HTMLElementDragstart>
+<summary>
+The <c>dragstart</c> event is fired when the user starts dragging an element or text selection.
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragstart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDragstart>
+<HTMLElementDrag>
+<summary>
+The <c>drag</c> event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDrag>
+<HTMLElementDrop>
+<summary>
+The <strong><c>drop</c></strong> event is fired when an element or text selection is dropped on a valid drop target. To ensure that the <c>drop</c> event always fires as expected, you should always include a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><c>preventDefault()</c></see> call in the part of your code which handles the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragover_event"><c>dragover</c></see> event.
+</summary>
+<remarks>
+<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
+<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementDrop>
+<HTMLElementEditContext>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>editContext</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets an element's associated <see cref="EditContext"/> object.
+</summary>
+<remarks>
+<para>The {{domxref(&amp;quot;EditContext API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Input Method Editor">Input Method Editor</see> (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.</para>
+<para>-The <see cref="EditContext"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/editContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="EditContext"/> object or <c>null</c>.</value>
+</HTMLElementEditContext>
+<HTMLElementEnterKeyHint>
+<summary>
+The <strong><c>enterKeyHint</c></strong> property is an enumerated property defining<br/>what action label (or icon) to present for the enter key on virtual keyboards.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><c>enterkeyhint</c></see><br/>HTML global attribute and is an enumerated property, only accepting the following values<br/>as a string:
+</summary>
+<remarks>
+<para>If no <c>enterKeyHint</c> value has been specified or if it was set to a different value than the allowed ones, it will return an empty string.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><c>enterkeyhint</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/enterKeyHint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementEnterKeyHint>
+<HTMLElementError>
+<summary>
+The <c>error</c> event is fired on an element when a resource failed to load, or can&amp;apos;t be used. For example, if a script has an execution error or an image can&amp;apos;t be found or is invalid.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-Related events-Window: <see cref="Windowerror"/> event<br/>-HTMLElement: <see cref="HTMLElementload"/> event<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementError>
+<HTMLElementFocus>
+<summary>
+The <strong><c>HTMLElement.focus()</c></strong> method sets focus on the specified element, if it can be focused.<br/>The focused element is the element that will receive keyboard and similar events by default.
+</summary>
+<remarks>
+<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element).<br/>Parameter options are provided to disable the default scrolling and force visible indication on elements.</para>
+<para>-<see cref="HTMLElement.Blur"/> to remove the focus from an element.<br/>-<see cref="Document.ActiveElement"/> to know which is the currently focused element.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementFocus>
+<HTMLElementHidden>
+<summary>
+The <see cref="HTMLElement"/> property <strong><c>hidden</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"><c>hidden</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden">hidden</see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This attribute may have one of three values:For details on the usage of this attribute, see the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"><c>hidden</c></see> HTML attribute that this property reflects.</value>
+</HTMLElementHidden>
+<HTMLElementHidePopover>
+<summary>
+The <strong><c>hidePopover()</c></strong> method of the <see cref="HTMLElement"/> interface hides a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">popover</see> element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) by removing it from the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see> and styling it with <c>display: none</c>.
+</summary>
+<remarks>
+<para>When <c>hidePopover()</c> is called on a showing element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute, a <see cref="HTMLElementbeforetoggle"/> event will be fired, followed by the popover being hidden, and then the <see cref="HTMLElementtoggle"/> event firing. If the element is already hidden, an error is thrown.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidePopover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementHidePopover>
+<HTMLElementInert>
+<summary>
+The <see cref="HTMLElement"/> property <strong><c>inert</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"><c>inert</c></see> attribute. It is a boolean value that, when present, makes the browser &amp;quot;ignore&amp;quot; user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to &amp;quot;trap&amp;quot; the focus inside the modal when it&amp;apos;s visible.
+</summary>
+<remarks>
+<para>Note that if the <c>inert</c> attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property&amp;apos;s value.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert">Global attribute: <c>inert</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/>-<see href="https://github.com/WICG/inert">Inert Polyfill</see><br/>-<see cref="HTMLInputElement.Disabled"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean which is <c>true</c> if the element is inert; otherwise, the value is <c>false</c>.</value>
+</HTMLElementInert>
+<HTMLElementInnerText>
+<summary>
+The <strong><c>innerText</c></strong> property of the <see cref="HTMLElement"/> interface represents the rendered text content of a node and its descendants.
+</summary>
+<remarks>
+<para>As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.<br/>As a setter this will replace the element's children with the given value, converting any line breaks into <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">br</see> elements.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>innerText</c> is easily confused with <see cref="Node.TextContent"/>, but there are important differences between the two.<br/>Basically, <c>innerText</c> is aware of the rendered appearance of text, while <c>textContent</c> is not.</para></blockquote>
+<para>-<see cref="HTMLElement.OuterText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the rendered text content of an element.If the element itself is not <see href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being rendered</see> (for example, is detached from the document or is hidden from view), the returned value is the same as the <see cref="Node.TextContent"/> property.<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>innerText</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
+</HTMLElementInnerText>
+<HTMLElementInputMode>
+<summary>
+The <see cref="HTMLElement"/> property <strong><c>inputMode</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><c>inputmode</c></see> attribute.
+</summary>
+<remarks>
+<para>It provides a hint about the type of data that might be entered by the user while editing the element or its contents. This allows the browser to display an appropriate virtual keyboard.</para><para>It is used primarily on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> elements, but is usable on any element in <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> mode.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode">inputmode</see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inputMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This attribute may have one of the following values:For details on the usage of this attribute, see the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><c>inputmode</c></see> HTML attribute that this property reflects.</value>
+</HTMLElementInputMode>
 <HTMLElementIsContentEditable>
 <summary>
 The <strong><c>HTMLElement.isContentEditable</c></strong> read-only property<br/>returns a boolean value that is <c>true</c> if the contents of the element<br/>are editable; otherwise it returns <c>false</c>.
@@ -375,109 +369,68 @@ The <strong><c>lang</c></strong> property of the <see cref="HTMLElement"/> inter
 </remarks>
 <value>A string. Common examples include &amp;quot;en&amp;quot; for English, &amp;quot;ja&amp;quot; for Japanese, &amp;quot;es&amp;quot; for Spanish and so on. If unspecified, the value is an empty string.</value>
 </HTMLElementLang>
-<HTMLElementDragover>
+<HTMLElementLoad>
 <summary>
-The <c>dragover</c> event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
+The <strong><c>load</c></strong> event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see>.
 </summary>
 <remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragover"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>load</c> event on <see cref="HTMLBodyElement#event_handlers"/> is actually an alias for the <see cref="Windowload"/> event. Therefore, the <c>load</c> event will only fire on the <c>&amp;lt;body&amp;gt;</c> element once all of the document&amp;apos;s resources have loaded or errored. However, for the sake of clarity, it is recommended that the event handler is attached to the <c>window</c> object directly rather than on <c>HTMLBodyElement</c>.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-Related events-Window: <see cref="Windowload"/> event<br/>-Window: <see cref="Windowerror"/> event<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/load"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementDragover>
-<HTMLElementChange>
+</HTMLElementLoad>
+<HTMLElementNonce>
 <summary>
-The <c>change</c> event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when the user modifies the element's value. Unlike the <see cref="Elementinput"/> event, the <c>change</c> event is not necessarily fired for each alteration to an element&amp;apos;s <c>value</c>.
+The <strong><c>nonce</c></strong> property of the <see cref="HTMLElement"/> interface returns the cryptographic number used once that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
 </summary>
 <remarks>
-<para>Depending on the kind of element being changed and the way the user interacts with the element, the <c>change</c> event fires at a different moment:</para><para>The HTML specification lists <see href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">the <c>&amp;lt;input&amp;gt;</c> types that should fire the <c>change</c> event</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change"> <em>See also on MDN</em> </seealso></para>
+<para>In later implementations, elements only expose their <c>nonce</c> attribute to scripts (and not to side-channels like CSS attribute selectors).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce"><c>nonce</c> global attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see><br/>-CSP: {{CSP("script-src")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/nonce"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLElementChange>
-<HTMLElementBlur>
+</HTMLElementNonce>
+<HTMLElementOffsetHeight>
 <summary>
-The <strong><c>HTMLElement.blur()</c></strong> method removes keyboard focus from the current element.
+The <strong><c>offsetHeight</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the height of an element, including vertical padding and borders, as an integer.
 </summary>
 <remarks>
-<para>-<see cref="HTMLElement.Focus"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur"> <em>See also on MDN</em> </seealso></para>
+<para>Typically, <c>offsetHeight</c> is a measurement in pixels of the element&amp;apos;s CSS height, including any borders, padding, and horizontal scrollbars (if rendered). It does not include the height of pseudo-elements such as <c>::before</c> or <c>::after</c>. For the document body object, the measurement includes total linear content height instead of the element&amp;apos;s CSS height. Floated elements extending below other linear content are ignored.</para><para>If the element is hidden (for example, by setting <c>style.display</c> on the element or one of its ancestors to <c>&amp;quot;none&amp;quot;</c>), then <c>0</c> is returned.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientHeight"/><br/>-<see cref="Element.ScrollHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetLeft"/><br/>-<see cref="HTMLElement.OffsetTop"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLElementBlur>
-<HTMLElementAutofocus>
+<value>An integer.</value>
+</HTMLElementOffsetHeight>
+<HTMLElementOffsetLeft>
 <summary>
-The <strong><c>autofocus</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#autofocus"><c>autofocus</c></see> HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> elements or elements whose popover attribute is set.
+The <strong><c>offsetLeft</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the number of pixels that the <strong>upper left corner</strong> of the current element is offset to the left within the <see cref="HTMLElement.OffsetParent"/> node.
 </summary>
 <remarks>
-<para>Only one form-associated element inside a document, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element, or an element whose <c>popover</c> attribute is set, can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, gets the initial focus.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Setting this property doesn&amp;apos;t set the focus to the associated element: it merely tells the browser to focus to it when <strong>the element is inserted</strong> in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
+<para>For block-level elements, <c>offsetTop</c>, <c>offsetLeft</c>, <c>offsetWidth</c>, and <c>offsetHeight</c> describe the border box of an element relative to the <c>offsetParent</c>.</para><para>However, for inline-level elements (such as <c>&amp;lt;span&amp;gt;</c>) that can wrap from one line to the next, <c>offsetTop</c> and <c>offsetLeft</c> describe the positions of the <strong>first</strong> border box (use <see cref="Element.GetClientRects"/> to get its width and height), while <c>offsetWidth</c> and <c>offsetHeight</c> describe the dimensions of the <strong>bounding</strong> border box (use <see cref="Element.GetBoundingClientRect"/> to get its position). Therefore, a box with the left, top, width and height of <c>offsetLeft</c>, <c>offsetTop</c>, <c>offsetWidth</c> and <c>offsetHeight</c> will not be a bounding box for a span with wrapped text.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientLeft"/><br/>-<see cref="Element.ScrollLeft"/><br/>-<see cref="HTMLElement.OffsetHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetTop"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value.</value>
-</HTMLElementAutofocus>
-<HTMLElementAutocorrect>
+<value>An integer.</value>
+</HTMLElementOffsetLeft>
+<HTMLElementOffsetParent>
 <summary>
-The <strong><c>autocorrect</c></strong> property of the <see cref="HTMLElement"/> interface controls whether or not autocorrection of editable text is enabled for spelling and/or punctuation errors.
+The <strong><c>HTMLElement.offsetParent</c></strong> read-only property returns a<br/>reference to the element which is the closest (nearest in the containment hierarchy)<br/>positioned ancestor element.
 </summary>
 <remarks>
-<para>The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.<br/>For example, on macOS a user agent might rely on <see href="https://support.apple.com/en-vn/guide/mac-help/mh35735/mac">registered replacement text and punctuation</see>.<br/>Other devices and browsers may use a different approach.</para><para>The property reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect"><c>autocorrect</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize"><c>autocapitalize</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/autocorrect"> <em>See also on MDN</em> </seealso></para>
+<para>A positioned ancestor might be:</para><para>If there is no positioned ancestor element, the <c>body</c> is returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>offsetParent</c> returns <c>null</c> in the following<br/>situations:</para></blockquote><para><c>offsetParent</c> is useful because<br/><see cref="HTMLElement.OffsetTop"/> and<br/><see cref="HTMLElement.OffsetLeft"/> are relative to its padding edge.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value><c>true</c> if auto-correction is enabled for the element, and <c>false</c> otherwise.</value>
-</HTMLElementAutocorrect>
-<HTMLElementTitle>
+<value>An object reference to the element in which the current element is offset.</value>
+</HTMLElementOffsetParent>
+<HTMLElementOffsetTop>
 <summary>
-The <strong><c>HTMLElement.title</c></strong> property<br/>represents the title of the element: the text usually displayed in a &amp;apos;tooltip&amp;apos; popup<br/>when the mouse is over the node.
+The <strong><c>offsetTop</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the distance from the outer border of the current element (including its margin) to the top padding edge of the <see cref="HTMLelement.OffsetParent"/>, the <strong>closest positioned</strong> ancestor element.
 </summary>
 <remarks>
-<para>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title"><strong>title</strong></see><br/>global attribute.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see cref="Element.ClientTop"/><br/>-<see cref="Element.ScrollTop"/><br/>-<see cref="HTMLElement.OffsetHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see cref="HTMLElement.OffsetLeft"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</HTMLElementTitle>
-<HTMLElementInnerText>
-<summary>
-The <strong><c>innerText</c></strong> property of the <see cref="HTMLElement"/> interface represents the rendered text content of a node and its descendants.
-</summary>
-<remarks>
-<para>As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.<br/>As a setter this will replace the element's children with the given value, converting any line breaks into <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">br</see> elements.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>innerText</c> is easily confused with <see cref="Node.TextContent"/>, but there are important differences between the two.<br/>Basically, <c>innerText</c> is aware of the rendered appearance of text, while <c>textContent</c> is not.</para></blockquote>
-<para>-<see cref="HTMLElement.OuterText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the rendered text content of an element.If the element itself is not <see href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being rendered</see> (for example, is detached from the document or is hidden from view), the returned value is the same as the <see cref="Node.TextContent"/> property.<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>innerText</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
-</HTMLElementInnerText>
-<HTMLElementInert>
-<summary>
-The <see cref="HTMLElement"/> property <strong><c>inert</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"><c>inert</c></see> attribute. It is a boolean value that, when present, makes the browser &amp;quot;ignore&amp;quot; user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to &amp;quot;trap&amp;quot; the focus inside the modal when it&amp;apos;s visible.
-</summary>
-<remarks>
-<para>Note that if the <c>inert</c> attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property&amp;apos;s value.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert">Global attribute: <c>inert</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/>-<see href="https://github.com/WICG/inert">Inert Polyfill</see><br/>-<see cref="HTMLInputElement.Disabled"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean which is <c>true</c> if the element is inert; otherwise, the value is <c>false</c>.</value>
-</HTMLElementInert>
-<HTMLElementSpellcheck>
-<summary>
-The <strong><c>spellcheck</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value that controls the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck">spell-checking</see> hint. It is available on all HTML elements, though it doesn&amp;apos;t affect all of them.
-</summary>
-<remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck"><c>spellcheck</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck"><c>spellcheck</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/spellcheck"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value that is <c>true</c> if the spelling and grammar of the text content in the element may be checked, <c>false</c> otherwise.</value>
-</HTMLElementSpellcheck>
-<HTMLElementDrag>
-<summary>
-The <c>drag</c> event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
-</summary>
-<remarks>
-<para>This event is cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdragleave"/><br/>-<see cref="HTMLElementdrop"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementDrag>
+<value>A number.</value>
+</HTMLElementOffsetTop>
 <HTMLElementOffsetWidth>
 <summary>
 The <strong><c>offsetWidth</c></strong> read-only property of the <see cref="HTMLElement"/> interface returns the layout width of an element as an integer.
@@ -489,78 +442,6 @@ The <strong><c>offsetWidth</c></strong> read-only property of the <see cref="HTM
 </remarks>
 <value>An integer.</value>
 </HTMLElementOffsetWidth>
-<HTMLElementAccessKeyLabel>
-<summary>
-The <strong><c>HTMLElement.accessKeyLabel</c></strong><br/>read-only property returns a string containing the element&amp;apos;s<br/>browser-assigned access key (if any); otherwise it returns an empty string.
-</summary>
-<remarks>
-<para>-<see cref="HTMLElement.AccessKey"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey">accesskey</see> global<br/>attribute.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementAccessKeyLabel>
-<HTMLElementDraggable>
-<summary>
-The <strong><c>draggable</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets a {{jsxref("Boolean")}} primitive indicating if the element is draggable.
-</summary>
-<remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/draggable"><c>draggable</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/draggable"><c>draggable</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see> overview<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/draggable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Boolean"/> primitive that is <c>true</c> if the element is draggable, <c>false</c> otherwise.</value>
-</HTMLElementDraggable>
-<HTMLElementVirtualKeyboardPolicy>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>virtualKeyboardPolicy</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets a string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> attribute set).
-</summary>
-<remarks>
-<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy"><c>virtualkeyboardpolicy</c></see> HTML global attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy"><c>virtualkeyboardpolicy</c></see> HTML global attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/virtualKeyboardPolicy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An enumerated value; possible values are:</value>
-</HTMLElementVirtualKeyboardPolicy>
-<HTMLElementDragleave>
-<summary>
-The <c>dragleave</c> event is fired when a dragged element or text selection leaves a valid drop target.
-</summary>
-<remarks>
-<para>This event is not cancelable and may bubble up to the <see cref="Document"/> and <see cref="Window"/> objects.</para>
-<para>-Other drag and drop events:-<see cref="HTMLElementdrag"/><br/>-<see cref="HTMLElementdragstart"/><br/>-<see cref="HTMLElementdragend"/><br/>-<see cref="HTMLElementdragover"/><br/>-<see cref="HTMLElementdragenter"/><br/>-<see cref="HTMLElementdrop"/><br/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dragleave"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementDragleave>
-<HTMLElementFocus>
-<summary>
-The <strong><c>HTMLElement.focus()</c></strong> method sets focus on the specified element, if it can be focused.<br/>The focused element is the element that will receive keyboard and similar events by default.
-</summary>
-<remarks>
-<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element).<br/>Parameter options are provided to disable the default scrolling and force visible indication on elements.</para>
-<para>-<see cref="HTMLElement.Blur"/> to remove the focus from an element.<br/>-<see cref="Document.ActiveElement"/> to know which is the currently focused element.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLElementFocus>
-<HTMLElementShowPopover>
-<summary>
-The <strong><c>showPopover()</c></strong> method of the <see cref="HTMLElement"/> interface shows a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) by adding it to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see>.
-</summary>
-<remarks>
-<para>When <c>showPopover()</c> is called on an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute that is currently hidden, a <see cref="HTMLElementbeforetoggle"/> event will be fired, followed by the popover showing, and then the <see cref="HTMLElementtoggle"/> event firing. If the element is already showing, an error will be thrown.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/showPopover"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLElementShowPopover>
-<HTMLElementCommand>
-<summary>
-The <strong><c>command</c></strong> event of the <see cref="HTMLElement"/> interface fires on an element that is controlled via a <see cref="HTMLButtonElement"/> with valid <see cref="HTMLButtonElement.CommandForElement"/> and <see cref="HTMLButtonElement.Command"/> values, whenever the button is interacted with (e.g., it is clicked).
-</summary>
-<remarks>
-<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/command"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLElementCommand>
 <HTMLElementOuterText>
 <summary>
 The <strong><c>outerText</c></strong> property of the <see cref="HTMLElement"/> interface returns the same value as <see cref="HTMLElement.InnerText"/>.<br/>When used as a setter it replaces the whole current node with the given text (this differs from <c>innerText</c>, which replaces the content <strong>inside</strong> the current node).
@@ -572,4 +453,123 @@ The <strong><c>outerText</c></strong> property of the <see cref="HTMLElement"/> 
 </remarks>
 <value>A string representing the rendered text content of an element and its descendants.If the element itself is not <see href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being rendered</see> (for example, is detached from the document or is hidden from view), the returned value is the same as the <see cref="Node.TextContent"/> property.When used as a setter it replaces the current node with the given text, converting any line breaks into <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">br</see> elements.</value>
 </HTMLElementOuterText>
+<HTMLElementPopover>
+<summary>
+The <strong><c>popover</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets an element's popover state via JavaScript (<c>&amp;quot;auto&amp;quot;</c>, <c>&amp;quot;hint&amp;quot;</c>, or <c>&amp;quot;manual&amp;quot;</c>), and can be used for feature detection.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> global HTML attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/popover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value; possible values are:</value>
+</HTMLElementPopover>
+<HTMLElementShowPopover>
+<summary>
+The <strong><c>showPopover()</c></strong> method of the <see cref="HTMLElement"/> interface shows a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) by adding it to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see>.
+</summary>
+<remarks>
+<para>When <c>showPopover()</c> is called on an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute that is currently hidden, a <see cref="HTMLElementbeforetoggle"/> event will be fired, followed by the popover showing, and then the <see cref="HTMLElementtoggle"/> event firing. If the element is already showing, an error will be thrown.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/showPopover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementShowPopover>
+<HTMLElementSpellcheck>
+<summary>
+The <strong><c>spellcheck</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value that controls the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck">spell-checking</see> hint. It is available on all HTML elements, though it doesn&amp;apos;t affect all of them.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck"><c>spellcheck</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck"><c>spellcheck</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/spellcheck"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the spelling and grammar of the text content in the element may be checked, <c>false</c> otherwise.</value>
+</HTMLElementSpellcheck>
+<HTMLElementStyle>
+<summary>
+The read-only <strong><c>style</c></strong> property of the <see cref="HTMLElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
+</summary>
+<remarks>
+<para>Shorthand properties are expanded. If you set <c>style=&amp;quot;border-top: 1px solid black&amp;quot;</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>This property is read-only, meaning it is not possible to assign a <see cref="CSSStyleDeclaration"/> object to it. Nevertheless, it is possible to set an inline style by assigning a <strong>string</strong> directly to the <c>style</c> property. In this case the string is forwarded to <see cref="CSSStyleDeclaration.CssText"/>. Using <c>style</c> in this manner will completely overwrite all inline styles on the element.</para><para>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the <see cref="CSSStyleDeclaration"/> object. For example, you can write <c>element.style.backgroundColor = &amp;quot;red&amp;quot;</c>.</para><para>A style declaration is reset by setting it to <c>null</c> or an empty string, e.g., <c>elt.style.color = null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSS property names are converted to JavaScript identifier with these rules:</para><para>The <c>style</c> property has the same priority in the CSS cascade as an inline style declaration set via the <c>style</c> attribute.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="SVGElement.Style"/><br/>-<see cref="MathMLElement.Style"/><br/>-<see cref="HTMLElement.AttributeStyleMap"/><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="CSSStyleDeclaration"/> object.</value>
+</HTMLElementStyle>
+<HTMLElementTabIndex>
+<summary>
+The <strong><c>tabIndex</c></strong> property of the<br/><see cref="HTMLElement"/> interface represents the tab order of the current element.
+</summary>
+<remarks>
+<para>Tab order is as follows:</para><para>Elements that are disabled do not participate in the tabbing order.</para><para>Values don&amp;apos;t need to be sequential, nor must they begin with any particular value. They<br/>may even be negative, though each browser trims very large values.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets">Accessibility of keyboard-navigable JavaScript widgets</see><br/>-The HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex"><c>tabindex</c></see><br/>global attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HTMLElementTabIndex>
+<HTMLElementTitle>
+<summary>
+The <strong><c>HTMLElement.title</c></strong> property<br/>represents the title of the element: the text usually displayed in a &amp;apos;tooltip&amp;apos; popup<br/>when the mouse is over the node.
+</summary>
+<remarks>
+<para>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title"><strong>title</strong></see><br/>global attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLElementTitle>
+<HTMLElementTogglePopover>
+<summary>
+The <strong><c>togglePopover()</c></strong> method of the <see cref="HTMLElement"/> interface toggles a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} element (i.e., one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute) between the hidden and showing states.
+</summary>
+<remarks>
+<para>When <c>togglePopover()</c> is called on an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> attribute:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/togglePopover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the popup is open after the call, and <c>false</c> otherwise.None (<see cref="Undefined"/>) may be returned in older browser versions (see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see>).</returns>
+</HTMLElementTogglePopover>
+<HTMLElementToggle>
+<summary>
+The <strong><c>toggle</c></strong> event of the <see cref="HTMLElement"/> interface fires on a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, "nocode")}} element, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> element just after it is shown or hidden.
+</summary>
+<remarks>
+<para>This event is not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelable">cancelable</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-Related event: <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforetoggle_event"><c>beforetoggle</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/toggle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementToggle>
+<HTMLElementTranslate>
+<summary>
+The <strong><c>translate</c></strong> property of the <see cref="HTMLElement"/> interface indicates whether an element's attribute values and the values of its <see cref="Text"/> node children are to be translated when the page is localized, or whether to leave them unchanged.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/translate"><c>translate</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/translate"><c>translate</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/translate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if an element's attribute values and the values of its <see cref="Text"/> node children are to be translated when the page is localized, <c>false</c> otherwise.</value>
+</HTMLElementTranslate>
+<HTMLElementVirtualKeyboardPolicy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>virtualKeyboardPolicy</c></strong> property of the <see cref="HTMLElement"/> interface gets and sets a string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><c>contenteditable</c></see> attribute set).
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy"><c>virtualkeyboardpolicy</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy"><c>virtualkeyboardpolicy</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/virtualKeyboardPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value; possible values are:</value>
+</HTMLElementVirtualKeyboardPolicy>
+<HTMLElementWritingSuggestions>
+<summary>
+The <strong><c>writingSuggestions</c></strong> property of the <see cref="HTMLElement"/> interface is a string indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions"><c>writingsuggestions</c></see> HTML global attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions"><c>writingsuggestions</c></see> HTML global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/writingSuggestions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value; possible values are:</value>
+</HTMLElementWritingSuggestions>
 </docs>

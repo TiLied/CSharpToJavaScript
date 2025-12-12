@@ -8,26 +8,6 @@ The <strong><c>TextEncoder</c></strong> interface enables you to <see href="http
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextEncoder>
-<TextEncoderEncoding>
-<summary>
-The <strong><c>TextEncoder.encoding</c></strong> read-only property returns a string containing the name of the encoding algorithm used by the specific encoder.
-</summary>
-<remarks>
-<para>It always has the value <c>utf-8</c>.</para>
-<para>-The <see cref="TextEncoder"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encoding"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with the value <c>utf-8</c>.</value>
-</TextEncoderEncoding>
-<TextEncoderTextEncoder>
-<summary>
-The <strong><c>TextEncoder()</c></strong> constructor returns a newly created <see cref="TextEncoder"/> object.
-</summary>
-<remarks>
-<para>-The <see cref="TextEncoder"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</TextEncoderTextEncoder>
 <TextEncoderEncode>
 <summary>
 The <strong><c>TextEncoder.encode()</c></strong> method takes a string as input, and returns a <see cref="Global_Objects/Uint8Array"/> containing the string {{glossary("character encoding", "encoded")}} using {{glossary("UTF-8")}}.
@@ -48,4 +28,24 @@ The <strong><c>TextEncoder.encodeInto()</c></strong> method takes a string to en
 </remarks>
 <returns>An object, which contains two members:</returns>
 </TextEncoderEncodeInto>
+<TextEncoderEncoding>
+<summary>
+The <strong><c>TextEncoder.encoding</c></strong> read-only property returns a string containing the name of the encoding algorithm used by the specific encoder.
+</summary>
+<remarks>
+<para>It always has the value <c>utf-8</c>.</para>
+<para>-The <see cref="TextEncoder"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>utf-8</c>.</value>
+</TextEncoderEncoding>
+<TextEncoderTextEncoder>
+<summary>
+The <strong><c>TextEncoder()</c></strong> constructor returns a newly created <see cref="TextEncoder"/> object.
+</summary>
+<remarks>
+<para>-The <see cref="TextEncoder"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextEncoderTextEncoder>
 </docs>

@@ -1,0 +1,38 @@
+<docs>
+<Screen_Capture_API>
+<summary>
+The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture">Using the Element Capture and Region Capture APIs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control">Using the Captured Surface Control API</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Screen_Capture_API>
+<Screen_Capture_APICaptured_Surface_Control>
+<summary>
+This guide explains how to use the features provided by the Captured Surface Control API to control a display surface (browser tab, window, or screen) captured by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Screen_Capture_APICaptured_Surface_Control>
+<Screen_Capture_APIElement_Region_Capture>
+<summary>
+This guide provides a walkthrough of typical usage of the Element Capture and Region Capture APIs, showing how to use them and the problem they solve.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/element-capture">Capture a video stream from any element</see> on developer.chrome.com (2025)<br/>-<see href="https://developer.chrome.com/docs/web-platform/region-capture">Better tab sharing with Region Capture</see> on developer.chrome.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Screen_Capture_APIElement_Region_Capture>
+<Screen_Capture_APIUsing_Screen_Capture>
+<summary>
+In this article, we will examine how to use the Screen Capture API and its <see cref="MediaDevices.GetDisplayMedia"/> method to capture part or all of a screen for streaming, recording, or sharing during a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> conference session.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>It may be useful to note that recent versions of the <see href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js shim</see> include implementations of <c>getDisplayMedia()</c> to enable screen sharing on browsers that support it but do not implement the current standard API. This works with at least Chrome, Edge, and Firefox.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">Taking still photos with WebRTC</see><br/>-<see cref="HTMLCanvasElement.CaptureStream"/> to obtain a <see cref="MediaStream"/> with the live contents of a {{HTMLElement("canvas")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Screen_Capture_APIUsing_Screen_Capture>
+</docs>

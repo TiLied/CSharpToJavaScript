@@ -9,17 +9,48 @@ The <strong><c>CanvasRenderingContext2D</c></strong> interface, part of the <see
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CanvasRenderingContext2D>
-<CanvasRenderingContext2DWordSpacing>
+<CanvasRenderingContext2DArc>
 <summary>
-The <strong><c>CanvasRenderingContext2D.wordSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between words when drawing text.
+The<br/><strong><c>CanvasRenderingContext2D.arc()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">Canvas 2D API</see> adds a circular arc to the current sub-path.
 </summary>
 <remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><c>word-spacing</c></see> property.</para>
-<para>-<see cref="CanvasRenderingContext2D.LetterSpacing"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/wordSpacing"> <em>See also on MDN</em> </seealso></para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-Use <see cref="CanvasRenderingContext2D.Ellipse"/> to draw an elliptical arc.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The word spacing as a string in the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see> data format.<br/>The default is <c>0px</c>.The property can be used to get or set the spacing.<br/>The property value will remain unchanged if set to an invalid/unparsable value.</value>
-</CanvasRenderingContext2DWordSpacing>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DArc>
+<CanvasRenderingContext2DArcTo>
+<summary>
+The <strong><c>CanvasRenderingContext2D.arcTo()</c></strong> method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius.<br/>The arc is automatically connected to the path&amp;apos;s latest point with a straight line if necessary, for example if the starting point and control points are in a line.
+</summary>
+<remarks>
+<para>This method is commonly used for making rounded corners.</para><blockquote class="NOTE"><h5>NOTE</h5><para>You may get unexpected results when using a<br/>relatively large radius: the arc&amp;apos;s connecting line will go in whatever direction it<br/>must to meet the specified radius.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DArcTo>
+<CanvasRenderingContext2DBeginPath>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.beginPath()</c></strong><br/>method of the Canvas 2D API starts a new path by emptying the list of sub-paths. Call<br/>this method when you want to create a new path.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>To create a new sub-path, i.e., one matching the current<br/>canvas state, you can use <see cref="CanvasRenderingContext2D.MoveTo"/>.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ClosePath"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DBeginPath>
+<CanvasRenderingContext2DBezierCurveTo>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.bezierCurveTo()</c></strong><br/>method of the Canvas 2D API adds a cubic <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> to the current<br/>sub-path. It requires three points: the first two are control points and the third one<br/>is the end point. The starting point is the latest point in the current path, which can<br/>be changed using <see cref="CanvasRenderingContext2D.MoveTo"/> before<br/>creating the Bézier curve.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DBezierCurveTo>
 <CanvasRenderingContext2DCanvas>
 <summary>
 The <strong><c>CanvasRenderingContext2D.canvas</c></strong> property, part of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, is a read-only reference to the<br/><see cref="HTMLCanvasElement"/> object that is associated with a given context. It<br/>might be <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if there is no associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element.
@@ -30,174 +61,17 @@ The <strong><c>CanvasRenderingContext2D.canvas</c></strong> property, part of th
 </remarks>
 <value>A <see cref="HTMLCanvasElement"/> object.</value>
 </CanvasRenderingContext2DCanvas>
-<CanvasRenderingContext2DEllipse>
+<CanvasRenderingContext2DClearRect>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.ellipse()</c></strong><br/>method of the Canvas 2D API adds an elliptical arc to the current sub-path.
+The<br/><strong><c>CanvasRenderingContext2D.clearRect()</c></strong><br/>method of the Canvas 2D API erases the pixels in a rectangular area by setting them to<br/>transparent black.
 </summary>
 <remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-Use <see cref="CanvasRenderingContext2D.Arc"/> to draw a circular arc<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Be aware that <c>clearRect()</c> may cause unintended<br/>side effects if you&amp;apos;re not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths">using paths properly</see>. Make sure to call<br/><see cref="CanvasRenderingContext2D.BeginPath"/> before starting to<br/>draw new items after calling <c>clearRect()</c>.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DEllipse>
-<CanvasRenderingContext2DTransform>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.transform()</c></strong><br/>method of the Canvas 2D API multiplies the current transformation with the matrix<br/>described by the arguments of this method. This lets you scale, rotate, translate<br/>(move), and skew the context.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>See also the<br/><see cref="CanvasRenderingContext2D.SetTransform"/> method, which<br/>resets the current transform to the identity matrix and then invokes<br/><c>transform()</c>.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DTransform>
-<CanvasRenderingContext2DDrawFocusIfNeeded>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.drawFocusIfNeeded()</c></strong><br/>method of the Canvas 2D API draws a focus ring around the current or given path, if the<br/>specified element is focused.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DDrawFocusIfNeeded>
-<CanvasRenderingContext2DFontKerning>
-<summary>
-The <strong><c>CanvasRenderingContext2D.fontKerning</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how font kerning information is used.
-</summary>
-<remarks>
-<para>Kerning adjusts how adjacent letters are spaced in a proportional font, allowing them to edge into each other&amp;apos;s visual area if there is space available.<br/>For example, in well-kerned fonts, the characters <c>AV</c>, <c>Ta</c> and <c>We</c> nest together and make character spacing more uniform and pleasant to read than the equivalent text without kerning.</para><para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning"><c>font-kerning</c></see> CSS property.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The property can be used to get or set the value.Allowed values are:</value>
-</CanvasRenderingContext2DFontKerning>
-<CanvasRenderingContext2DShadowOffsetY>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.shadowOffsetY</c></strong><br/>property of the Canvas 2D API specifies the distance that shadows will be offset<br/>vertically.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <see cref="CanvasRenderingContext2D.ShadowBlur"/>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or <c>shadowOffsetY</c> properties must be non-zero, as<br/>well.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowOffsetX"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/>-<see cref="CanvasRenderingContext2D.ShadowBlur"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A float specifying the distance that shadows will be offset vertically. Positive values are down, and negative are up. The default value is <c>0</c> (no vertical offset). <see cref="Infinity"/> and <see cref="NaN"/> values are ignored.</value>
-</CanvasRenderingContext2DShadowOffsetY>
-<CanvasRenderingContext2DLetterSpacing>
-<summary>
-The <strong><c>CanvasRenderingContext2D.letterSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between letters when drawing text.
-</summary>
-<remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><c>letter-spacing</c></see> property.</para>
-<para>-<see cref="CanvasRenderingContext2D.WordSpacing"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The letter spacing as a string in the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see> data format.<br/>The default is <c>0px</c>.The property can be used to get or set the spacing.<br/>The property value will remain unchanged if set to an invalid/unparsable value.</value>
-</CanvasRenderingContext2DLetterSpacing>
-<CanvasRenderingContext2DRotate>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.rotate()</c></strong><br/>method of the Canvas 2D API adds a rotation to the transformation matrix.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DRotate>
-<CanvasRenderingContext2DDrawImage>
-<summary>
-The <strong><c>CanvasRenderingContext2D.drawImage()</c></strong> method of the<br/>Canvas 2D API provides different ways to draw an image onto the canvas.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DDrawImage>
-<CanvasRenderingContext2DSave>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.save()</c></strong><br/>method of the Canvas 2D API saves the entire state of the canvas by pushing the current<br/>state onto a stack.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Restore"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DSave>
-<CanvasRenderingContext2DFillText>
-<summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>fillText()</c></strong>, part of the Canvas 2D API, draws a text string<br/>at the specified coordinates, filling the string&amp;apos;s characters with the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>. An optional parameter<br/>allows specifying a maximum width for the rendered text, which the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will achieve by condensing the text or by using a lower font size.
-</summary>
-<remarks>
-<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para><para>The text is rendered using the font and text layout configuration as defined by the<br/><see cref="CanvasRenderingContext2D.Font"/>,<br/><see cref="CanvasRenderingContext2D.TextAlign"/>,<br/><see cref="CanvasRenderingContext2D.TextBaseline"/>, and<br/><see cref="CanvasRenderingContext2D.Direction"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>To draw the outlines of the characters in a string, call the context&amp;apos;s<br/><see cref="CanvasRenderingContext2D.StrokeText"/> method.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</see><br/>-<see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.StrokeText"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DFillText>
-<CanvasRenderingContext2DCreatePattern>
-<summary>
-The <strong><c>CanvasRenderingContext2D.createPattern()</c></strong> method of the Canvas 2D API creates a pattern using the specified image and repetition.<br/>This method returns a <see cref="CanvasPattern"/>.
-</summary>
-<remarks>
-<para>This method doesn&amp;apos;t draw anything to the canvas directly.<br/>The pattern it creates must be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties, after which it is applied to any subsequent drawing.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasPattern"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete"/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
-</CanvasRenderingContext2DCreatePattern>
-<CanvasRenderingContext2DRect>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.rect()</c></strong><br/>method of the Canvas 2D API adds a rectangle to the current path.
-</summary>
-<remarks>
-<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the rectangle onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para><blockquote class="NOTE"><h5>NOTE</h5><para>To both create and render a rectangle in one step, use the<br/><see cref="CanvasRenderingContext2D.FillRect"/> or<br/><see cref="CanvasRenderingContext2D.StrokeRect"/> methods.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DRect>
-<CanvasRenderingContext2DGetImageData>
-<summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>getImageData()</c></strong> of the Canvas 2D API returns an<br/><see cref="ImageData"/> object representing the underlying pixel data for a specified<br/>portion of the canvas.
-</summary>
-<remarks>
-<para>This method is not affected by the canvas&amp;apos;s transformation matrix. If the specified<br/>rectangle extends outside the bounds of the canvas, the pixels outside the canvas are<br/>transparent black in the returned <c>ImageData</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Image data can be painted onto a canvas using the<br/><see cref="CanvasRenderingContext2D.PutImageData"/> method.</para></blockquote><para>You can find more information about <c>getImageData()</c> and general<br/>manipulation of canvas contents in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="ImageData"/> object<br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="ImageData"/> object containing the image data for the rectangle of the<br/>canvas specified. The coordinates of the rectangle&amp;apos;s top-left corner are<br/><c>(sx, sy)</c>, while the coordinates of the bottom corner are<br/><c>(sx + sw - 1, sy + sh - 1)</c>.</returns>
-</CanvasRenderingContext2DGetImageData>
-<CanvasRenderingContext2DMeasureText>
-<summary>
-The<br/><c>CanvasRenderingContext2D.measureText()</c><br/>method returns a <see cref="TextMetrics"/> object that contains information about the<br/>measured text (such as its width, for example).
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="TextMetrics"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="TextMetrics"/> object.</returns>
-</CanvasRenderingContext2DMeasureText>
-<CanvasRenderingContext2DClosePath>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.closePath()</c></strong><br/>method of the Canvas 2D API attempts to add a straight line from the current point to<br/>the start of the current sub-path. If the shape has already been closed or has only one<br/>point, this function does nothing.
-</summary>
-<remarks>
-<para>This method doesn&amp;apos;t draw anything to the canvas directly. You can render the path using<br/>the <see cref="CanvasRenderingContext2D.Stroke"/> or<br/><see cref="CanvasRenderingContext2D.Fill"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.BeginPath"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DClosePath>
-<CanvasRenderingContext2DTranslate>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.translate()</c></strong><br/>method of the Canvas 2D API adds a translation transformation to the current matrix.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DTranslate>
+</CanvasRenderingContext2DClearRect>
 <CanvasRenderingContext2DClip>
 <summary>
 The<br/><strong><c>CanvasRenderingContext2D.clip()</c></strong><br/>method of the Canvas 2D API turns the current or given path into the current clipping<br/>region. The previous clipping region, if any, is intersected with the current or given<br/>path to create the new clipping region.
@@ -209,113 +83,27 @@ The<br/><strong><c>CanvasRenderingContext2D.clip()</c></strong><br/>method of th
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </CanvasRenderingContext2DClip>
-<CanvasRenderingContext2DPutImageData>
+<CanvasRenderingContext2DClosePath>
 <summary>
-The <strong><c>CanvasRenderingContext2D.putImageData()</c></strong><br/>method of the Canvas 2D API paints data from the given <see cref="ImageData"/> object<br/>onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle<br/>are painted. This method is not affected by the canvas transformation matrix.
+The<br/><strong><c>CanvasRenderingContext2D.closePath()</c></strong><br/>method of the Canvas 2D API attempts to add a straight line from the current point to<br/>the start of the current sub-path. If the shape has already been closed or has only one<br/>point, this function does nothing.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Image data can be retrieved from a canvas using the<br/><see cref="CanvasRenderingContext2D.GetImageData"/> method.</para></blockquote><para>You can find more information about <c>putImageData()</c> and general<br/>manipulation of canvas contents in the article <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="ImageData"/> object<br/>-<see cref="CanvasRenderingContext2D.GetImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData"> <em>See also on MDN</em> </seealso></para>
+<para>This method doesn&amp;apos;t draw anything to the canvas directly. You can render the path using<br/>the <see cref="CanvasRenderingContext2D.Stroke"/> or<br/><see cref="CanvasRenderingContext2D.Fill"/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.BeginPath"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DPutImageData>
-<CanvasRenderingContext2DTextRendering>
+</CanvasRenderingContext2DClosePath>
+<CanvasRenderingContext2DCreateConicGradient>
 <summary>
-The <strong><c>CanvasRenderingContext2D.textRendering</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> provides information to the rendering engine about what to optimize for when rendering text.
+The <strong><c>CanvasRenderingContext2D.createConicGradient()</c></strong> method of the Canvas 2D API creates a gradient around a point with given coordinates.
 </summary>
 <remarks>
-<para>The values correspond to the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/text-rendering"><c>text-rendering</c></see> attribute (and CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering"><c>text-rendering</c></see> property).</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textRendering"> <em>See also on MDN</em> </seealso></para>
+<para>This method returns a conic <see cref="CanvasGradient"/>. To be applied to a shape, the gradient must first be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape&amp;apos;s coordinates.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateLinearGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A text-rendering hint to the browser engine.<br/>This one of:The property can be used to get or set the value.</value>
-</CanvasRenderingContext2DTextRendering>
-<CanvasRenderingContext2DGetLineDash>
-<summary>
-The <strong><c>getLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D"/> interface gets the current line dash pattern.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="Array"/> of numbers that specify distances to alternately draw a line and<br/>a gap (in coordinate space units). If the number, when setting the elements, is odd, the<br/>elements of the array get copied and concatenated. For example, setting the line dash to<br/><c>[5, 15, 25]</c> will result in getting back<br/><c>[5, 15, 25, 5, 15, 25]</c>.</returns>
-</CanvasRenderingContext2DGetLineDash>
-<CanvasRenderingContext2DMiterLimit>
-<summary>
-The <strong><c>CanvasRenderingContext2D.miterLimit</c></strong> property of the<br/>Canvas 2D API sets the miter limit ratio.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>For more info about miters, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number specifying the miter limit ratio, in coordinate space units. Zero, negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored. The default value is <c>10.0</c>.</value>
-</CanvasRenderingContext2DMiterLimit>
-<CanvasRenderingContext2DSetLineDash>
-<summary>
-The <strong><c>setLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D"/> interface sets the line dash pattern used when<br/>stroking lines. It uses an array of values that specify alternating lengths of lines<br/>and gaps which describe the pattern.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>To return to using solid lines, set the line dash list to an<br/>empty array.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DSetLineDash>
-<CanvasRenderingContext2DScale>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.scale()</c></strong><br/>method of the Canvas 2D API adds a scaling transformation to the canvas units<br/>horizontally and/or vertically.
-</summary>
-<remarks>
-<para>By default, one unit on the canvas is exactly one pixel. A scaling transformation<br/>modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of<br/>0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor<br/>of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus<br/>drawn at twice the normal size.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scale"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DScale>
-<CanvasRenderingContext2DStrokeRect>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.strokeRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to<br/>the current <see cref="CanvasRenderingContext2D.StrokeStyle"/> and other<br/>context settings.
-</summary>
-<remarks>
-<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.StrokeStyle"/><br/>-<see cref="CanvasRenderingContext2D.ClearRect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DStrokeRect>
-<CanvasRenderingContext2DShadowOffsetX>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.shadowOffsetX</c></strong><br/>property of the Canvas 2D API specifies the distance that shadows will be offset<br/>horizontally.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <see cref="CanvasRenderingContext2D.ShadowBlur"/>, <c>shadowOffsetX</c>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowOffsetY"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/>-<see cref="CanvasRenderingContext2D.ShadowBlur"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A float specifying the distance that shadows will be offset horizontally. Positive values are to the right, and negative to the left. The default value is <c>0</c> (no horizontal offset). <see cref="Infinity"/> and <see cref="NaN"/> values are ignored.</value>
-</CanvasRenderingContext2DShadowOffsetX>
-<CanvasRenderingContext2DFillRect>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.fillRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is filled according to the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>.
-</summary>
-<remarks>
-<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillStyle"/><br/>-<see cref="CanvasRenderingContext2D.ClearRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DFillRect>
-<CanvasRenderingContext2DMoveTo>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.moveTo()</c></strong><br/>method of the Canvas 2D API begins a new sub-path at the point specified by the given<br/><c>(x, y)</c> coordinates.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineTo"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DMoveTo>
+</CanvasRenderingContext2DCreateConicGradient>
 <CanvasRenderingContext2DCreateImageData>
 <summary>
 The <strong><c>CanvasRenderingContext2D.createImageData()</c></strong> method of<br/>the Canvas 2D API creates a new, blank <see cref="ImageData"/> object with the<br/>specified dimensions. All of the pixels in the new object are transparent black.
@@ -326,6 +114,28 @@ The <strong><c>CanvasRenderingContext2D.createImageData()</c></strong> method of
 </remarks>
 <returns>A new <see cref="ImageData"/> object with the specified width and height. The new<br/>object is filled with transparent black pixels.</returns>
 </CanvasRenderingContext2DCreateImageData>
+<CanvasRenderingContext2DCreateLinearGradient>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.createLinearGradient()</c></strong><br/>method of the Canvas 2D API creates a gradient along the line connecting two given<br/>coordinates.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.orgmdn-canvas-lineargradient.png">The gradient transitions colors along the gradient line, starting at point x0, y0 and going to x1, y1, even if those points extend the gradient line beyond the edges of the element on which the gradient is drawn.</see></para><para>This method returns a linear <see cref="CanvasGradient"/>. To be applied to a shape,<br/>the gradient must first be assigned to the<br/><see cref="CanvasRenderingContext2D.FillStyle"/> or<br/><see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Gradient coordinates are global, i.e., relative to the current<br/>coordinate space. When applied to a shape, the coordinates are NOT relative to the<br/>shape&amp;apos;s coordinates.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateConicGradient"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A linear <see cref="CanvasGradient"/> initialized with the specified line.</returns>
+</CanvasRenderingContext2DCreateLinearGradient>
+<CanvasRenderingContext2DCreatePattern>
+<summary>
+The <strong><c>CanvasRenderingContext2D.createPattern()</c></strong> method of the Canvas 2D API creates a pattern using the specified image and repetition.<br/>This method returns a <see cref="CanvasPattern"/>.
+</summary>
+<remarks>
+<para>This method doesn&amp;apos;t draw anything to the canvas directly.<br/>The pattern it creates must be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties, after which it is applied to any subsequent drawing.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasPattern"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete"/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
+</CanvasRenderingContext2DCreatePattern>
 <CanvasRenderingContext2DCreateRadialGradient>
 <summary>
 The<br/><strong><c>CanvasRenderingContext2D.createRadialGradient()</c></strong><br/>method of the Canvas 2D API creates a radial gradient using the size and coordinates of<br/>two circles.
@@ -347,154 +157,36 @@ The<br/><strong><c>CanvasRenderingContext2D.direction</c></strong><br/>property 
 </remarks>
 <value>Possible values:The default value is <c>&amp;quot;inherit&amp;quot;</c>.</value>
 </CanvasRenderingContext2DDirection>
-<CanvasRenderingContext2DTextAlign>
+<CanvasRenderingContext2DDrawFocusIfNeeded>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.textAlign</c></strong><br/>property of the Canvas 2D API specifies the current text alignment used when drawing<br/>text.
-</summary>
-<remarks>
-<para>The alignment is relative to the <c>x</c> value of the<br/><see cref="CanvasRenderingContext2D.FillText"/> method. For example, if<br/><c>textAlign</c> is <c>&amp;quot;center&amp;quot;</c>, then the text&amp;apos;s left edge will be at<br/><c>x - (textWidth / 2)</c>.</para>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Possible values:The default value is <c>&amp;quot;start&amp;quot;</c>.</value>
-</CanvasRenderingContext2DTextAlign>
-<CanvasRenderingContext2DStrokeStyle>
-<summary>
-The <strong><c>CanvasRenderingContext2D.strokeStyle</c></strong> property of the<br/>Canvas 2D API specifies the color, gradient, or pattern to use for the strokes<br/>(outlines) around shapes. The default is <c>black</c>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>For more examples of stroke and fill styles, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasPattern"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:</value>
-</CanvasRenderingContext2DStrokeStyle>
-<CanvasRenderingContext2DShadowBlur>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.shadowBlur</c></strong><br/>property of the Canvas 2D API specifies the amount of blur applied to shadows. The<br/>default is <c>0</c> (no blur).
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <c>shadowBlur</c>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A non-negative float specifying the level of shadow blur, where <c>0</c> represents no blur and larger numbers represent increasingly more blur. This value doesn&amp;apos;t correspond to a number of pixels, and is not affected by the current transformation matrix. The default value is <c>0</c>. Negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored.</value>
-</CanvasRenderingContext2DShadowBlur>
-<CanvasRenderingContext2DBeginPath>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.beginPath()</c></strong><br/>method of the Canvas 2D API starts a new path by emptying the list of sub-paths. Call<br/>this method when you want to create a new path.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>To create a new sub-path, i.e., one matching the current<br/>canvas state, you can use <see cref="CanvasRenderingContext2D.MoveTo"/>.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ClosePath"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DBeginPath>
-<CanvasRenderingContext2DResetTransform>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.resetTransform()</c></strong><br/>method of the Canvas 2D API resets the current transform to the identity matrix.
+The<br/><strong><c>CanvasRenderingContext2D.drawFocusIfNeeded()</c></strong><br/>method of the Canvas 2D API draws a focus ring around the current or given path, if the<br/>specified element is focused.
 </summary>
 <remarks>
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DResetTransform>
-<CanvasRenderingContext2DTextBaseline>
+</CanvasRenderingContext2DDrawFocusIfNeeded>
+<CanvasRenderingContext2DDrawImage>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.textBaseline</c></strong><br/>property of the Canvas 2D API specifies the current text baseline used when drawing<br/>text.
+The <strong><c>CanvasRenderingContext2D.drawImage()</c></strong> method of the<br/>Canvas 2D API provides different ways to draw an image onto the canvas.
 </summary>
 <remarks>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Possible values:The default value is <c>&amp;quot;alphabetic&amp;quot;</c>.</value>
-</CanvasRenderingContext2DTextBaseline>
-<CanvasRenderingContext2DLineTo>
-<summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>lineTo()</c></strong>, part of the Canvas 2D API, adds a straight line<br/>to the current sub-path by connecting the sub-path&amp;apos;s last point to the specified<br/><c>(x, y)</c> coordinates.
-</summary>
-<remarks>
-<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the path onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.MoveTo"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo"> <em>See also on MDN</em> </seealso></para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DLineTo>
-<CanvasRenderingContext2DQuadraticCurveTo>
+</CanvasRenderingContext2DDrawImage>
+<CanvasRenderingContext2DEllipse>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.quadraticCurveTo()</c></strong><br/>method of the Canvas 2D API adds a quadratic <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> to the current<br/>sub-path. It requires two points: the first one is a control point and the second one is<br/>the end point. The starting point is the latest point in the current path, which can be<br/>changed using <see cref="CanvasRenderingContext2D.MoveTo"/> before creating<br/>the quadratic Bézier curve.
+The<br/><strong><c>CanvasRenderingContext2D.ellipse()</c></strong><br/>method of the Canvas 2D API adds an elliptical arc to the current sub-path.
 </summary>
 <remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo"> <em>See also on MDN</em> </seealso></para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-Use <see cref="CanvasRenderingContext2D.Arc"/> to draw a circular arc<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DQuadraticCurveTo>
-<CanvasRenderingContext2DLineJoin>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.lineJoin</c></strong><br/>property of the Canvas 2D API determines the shape used to join two line segments where<br/>they meet.
-</summary>
-<remarks>
-<para>This property has no effect wherever two connected segments have the same direction,<br/>because no joining area will be added in this case. Degenerate segments with a length of<br/>zero (i.e., with all endpoints and control points at the exact same position) are also<br/>ignored.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>,<br/><see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineWidth"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>There are three possible values for this property: <c>&amp;quot;round&amp;quot;</c>, <c>&amp;quot;bevel&amp;quot;</c>, and <c>&amp;quot;miter&amp;quot;</c>. The default is <c>&amp;quot;miter&amp;quot;</c>.<see href="https://developer.mozilla.orgcanvas_linejoin.png">Three horizontal zigzag lines with round, bevel, and miter values, shown from top to bottom respectively.</see></value>
-</CanvasRenderingContext2DLineJoin>
-<CanvasRenderingContext2DGlobalAlpha>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.globalAlpha</c></strong><br/>property of the Canvas 2D API specifies the alpha (transparency) value that is applied<br/>to shapes and images before they are drawn onto the canvas.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>See also the chapter <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</see>.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GlobalCompositeOperation"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalAlpha"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number between <c>0.0</c> (fully transparent) and <c>1.0</c> (fully opaque), inclusive. The default value is <c>1.0</c>. Values outside that range, including <see cref="Infinity"/> and <see cref="NaN"/>, will not be set, and <c>globalAlpha</c> will retain its previous value.</value>
-</CanvasRenderingContext2DGlobalAlpha>
-<CanvasRenderingContext2DFontStretch>
-<summary>
-The <strong><c>CanvasRenderingContext2D.fontStretch</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how the font may be expanded or condensed when drawing text.
-</summary>
-<remarks>
-<para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch"><c>font-stretch</c></see> CSS property when used with keywords (percentage values are not supported).</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontStretch"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The font stretch value as a string.<br/>This is one of: <c>ultra-condensed</c>, <c>extra-condensed</c>, <c>condensed</c>, <c>semi-condensed</c>, <c>normal</c> (default), <c>semi-expanded</c>, <c>expanded</c>, <c>extra-expanded</c>, <c>ultra-expanded</c>.The property can be used to get or set the font stretch value.</value>
-</CanvasRenderingContext2DFontStretch>
-<CanvasRenderingContext2DSetTransform>
-<summary>
-The <strong><c>CanvasRenderingContext2D.setTransform()</c></strong> method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>See also the <see cref="CanvasRenderingContext2D.Transform"/> method; instead of overriding the current transform matrix, it<br/>multiplies it with a given one.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DSetTransform>
-<CanvasRenderingContext2DBezierCurveTo>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.bezierCurveTo()</c></strong><br/>method of the Canvas 2D API adds a cubic <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> to the current<br/>sub-path. It requires three points: the first two are control points and the third one<br/>is the end point. The starting point is the latest point in the current path, which can<br/>be changed using <see cref="CanvasRenderingContext2D.MoveTo"/> before<br/>creating the Bézier curve.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DBezierCurveTo>
-<CanvasRenderingContext2DLang>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CanvasRenderingContext2D.lang</c></strong> property of the Canvas 2D API gets or sets the language of the canvas drawing context.
-</summary>
-<remarks>
-<para>-<see cref="CanvasRenderingContext2D"/><br/>-<see href="https://blogs.igalia.com/schenney/canvas-localization-support/">Canvas Localization Support</see> from Igalia (2025)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lang"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <c>lang</c> property can take one of the following string values:The default value is <c>inherit</c>.</value>
-</CanvasRenderingContext2DLang>
+</CanvasRenderingContext2DEllipse>
 <CanvasRenderingContext2DFill>
 <summary>
 The<br/><strong><c>CanvasRenderingContext2D.fill()</c></strong><br/>method of the Canvas 2D API fills the current or given path with the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>.
@@ -505,271 +197,17 @@ The<br/><strong><c>CanvasRenderingContext2D.fill()</c></strong><br/>method of th
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </CanvasRenderingContext2DFill>
-<CanvasRenderingContext2DLineWidth>
+<CanvasRenderingContext2DFillRect>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.lineWidth</c></strong><br/>property of the Canvas 2D API sets the thickness of lines.
+The<br/><strong><c>CanvasRenderingContext2D.fillRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is filled according to the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>,<br/><see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number specifying the line width, in coordinate space units. Zero, negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored. This value is <c>1.0</c> by default.</value>
-</CanvasRenderingContext2DLineWidth>
-<CanvasRenderingContext2DCreateLinearGradient>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.createLinearGradient()</c></strong><br/>method of the Canvas 2D API creates a gradient along the line connecting two given<br/>coordinates.
-</summary>
-<remarks>
-<para><see href="https://developer.mozilla.orgmdn-canvas-lineargradient.png">The gradient transitions colors along the gradient line, starting at point x0, y0 and going to x1, y1, even if those points extend the gradient line beyond the edges of the element on which the gradient is drawn.</see></para><para>This method returns a linear <see cref="CanvasGradient"/>. To be applied to a shape,<br/>the gradient must first be assigned to the<br/><see cref="CanvasRenderingContext2D.FillStyle"/> or<br/><see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Gradient coordinates are global, i.e., relative to the current<br/>coordinate space. When applied to a shape, the coordinates are NOT relative to the<br/>shape&amp;apos;s coordinates.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateConicGradient"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A linear <see cref="CanvasGradient"/> initialized with the specified line.</returns>
-</CanvasRenderingContext2DCreateLinearGradient>
-<CanvasRenderingContext2DArc>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.arc()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">Canvas 2D API</see> adds a circular arc to the current sub-path.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-Use <see cref="CanvasRenderingContext2D.Ellipse"/> to draw an elliptical arc.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc"> <em>See also on MDN</em> </seealso></para>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillStyle"/><br/>-<see cref="CanvasRenderingContext2D.ClearRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DArc>
-<CanvasRenderingContext2DShadowColor>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.shadowColor</c></strong><br/>property of the Canvas 2D API specifies the color of shadows.
-</summary>
-<remarks>
-<para>Be aware that the shadow&amp;apos;s rendered opacity will be affected by the opacity of the<br/><see cref="CanvasRenderingContext2D.FillStyle"/> color when filling, and<br/>of the <see cref="CanvasRenderingContext2D.StrokeStyle"/> color when<br/>stroking.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the <c>shadowColor</c><br/>property is set to a non-transparent value. One of the<br/><see cref="CanvasRenderingContext2D.ShadowBlur"/>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowColor"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string parsed as a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> {{cssxref(&amp;quot;&amp;lt;color&amp;gt;&amp;quot;)}} value. The default value is fully-transparent black.</value>
-</CanvasRenderingContext2DShadowColor>
-<CanvasRenderingContext2DLineCap>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.lineCap</c></strong><br/>property of the Canvas 2D API determines the shape used to draw the end points of lines.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>, <see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineWidth"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:</value>
-</CanvasRenderingContext2DLineCap>
-<CanvasRenderingContext2DClearRect>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.clearRect()</c></strong><br/>method of the Canvas 2D API erases the pixels in a rectangular area by setting them to<br/>transparent black.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Be aware that <c>clearRect()</c> may cause unintended<br/>side effects if you&amp;apos;re not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths">using paths properly</see>. Make sure to call<br/><see cref="CanvasRenderingContext2D.BeginPath"/> before starting to<br/>draw new items after calling <c>clearRect()</c>.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DClearRect>
-<CanvasRenderingContext2DStrokeText>
-<summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>strokeText()</c></strong>, part of the Canvas 2D API, strokes — that<br/>is, draws the outlines of — the characters of a text string at the specified<br/>coordinates. An optional parameter allows specifying a maximum width for the rendered<br/>text, which the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will achieve by condensing the text or by<br/>using a lower font size.
-</summary>
-<remarks>
-<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Use the <see cref="'CanvasRenderingContext2D.FillText'"/> method to<br/>fill the text characters rather than having just their outlines drawn.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</see><br/>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillText"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DStrokeText>
-<CanvasRenderingContext2DFilter>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.filter</c></strong><br/>property of the Canvas 2D API provides filter effects such as blurring and grayscaling.<br/>It is similar to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">filter</see> property and accepts the same values.
-</summary>
-<remarks>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">filter</see><br/>-CSS {{cssxref(&amp;quot;&amp;lt;filter-function&amp;gt;&amp;quot;)}}<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <c>filter</c> property accepts a value of <c>&amp;quot;none&amp;quot;</c> or one or more<br/>of the following filter functions in a string.</value>
-</CanvasRenderingContext2DFilter>
-<CanvasRenderingContext2DLineDashOffset>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.lineDashOffset</c></strong><br/>property of the Canvas 2D API sets the line dash offset, or &amp;quot;phase.&amp;quot;
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Lines are drawn by calling the<br/><see cref="CanvasRenderingContext2D.Stroke"/> method.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A float specifying the amount of the line dash offset. The default value is <c>0.0</c>.</value>
-</CanvasRenderingContext2DLineDashOffset>
-<CanvasRenderingContext2DArcTo>
-<summary>
-The <strong><c>CanvasRenderingContext2D.arcTo()</c></strong> method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius.<br/>The arc is automatically connected to the path&amp;apos;s latest point with a straight line if necessary, for example if the starting point and control points are in a line.
-</summary>
-<remarks>
-<para>This method is commonly used for making rounded corners.</para><blockquote class="NOTE"><h5>NOTE</h5><para>You may get unexpected results when using a<br/>relatively large radius: the arc&amp;apos;s connecting line will go in whatever direction it<br/>must to meet the specified radius.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DArcTo>
-<CanvasRenderingContext2DCreateConicGradient>
-<summary>
-The <strong><c>CanvasRenderingContext2D.createConicGradient()</c></strong> method of the Canvas 2D API creates a gradient around a point with given coordinates.
-</summary>
-<remarks>
-<para>This method returns a conic <see cref="CanvasGradient"/>. To be applied to a shape, the gradient must first be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape&amp;apos;s coordinates.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateLinearGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</CanvasRenderingContext2DCreateConicGradient>
-<CanvasRenderingContext2DStroke>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.stroke()</c></strong><br/>method of the Canvas 2D API strokes (outlines) the current or given path with the<br/>current stroke style.
-</summary>
-<remarks>
-<para>Strokes are aligned to the center of a path; in other words, half of the stroke is<br/>drawn on the inner side, and half on the outer side.</para><para>The stroke is drawn using the <see href="https://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</see>, which<br/>means that path intersections will still get filled.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DStroke>
-<CanvasRenderingContext2DIsPointInPath>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.isPointInPath()</c></strong><br/>method of the Canvas 2D API reports whether or not the specified point is contained in<br/>the current path.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</CanvasRenderingContext2DIsPointInPath>
-<CanvasRenderingContext2DGlobalCompositeOperation>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.globalCompositeOperation</c></strong><br/>property of the Canvas 2D API sets the type of compositing operation to apply when<br/>drawing new shapes.
-</summary>
-<remarks>
-<para>See also <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing and clipping</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</see>.</para>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GlobalAlpha"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string identifying which of the compositing or blending mode operations to use. This may be any of the following values:</value>
-</CanvasRenderingContext2DGlobalCompositeOperation>
-<CanvasRenderingContext2DFontVariantCaps>
-<summary>
-The <strong><c>CanvasRenderingContext2D.fontVariantCaps</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies an alternative capitalization of the rendered text.
-</summary>
-<remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps"><c>font-variant-caps</c></see> property.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The font alternative capitalization value, which is one of:The property can be used to get or set the font capitalization value.Note that there are accessibility concerns with some of these, which are outlined in the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps#accessibility"><c>font-variant-caps</c></see> topic.</value>
-</CanvasRenderingContext2DFontVariantCaps>
-<CanvasRenderingContext2DIsPointInStroke>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.isPointInStroke()</c></strong><br/>method of the Canvas 2D API reports whether or not the specified point is inside the<br/>area contained by the stroking of a path.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInStroke"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</CanvasRenderingContext2DIsPointInStroke>
-<CanvasRenderingContext2DIsContextLost>
-<summary>
-The <strong><c>CanvasRenderingContext2D.isContextLost()</c></strong> method of the Canvas 2D API returns <c>true</c> if the rendering context is lost (and has not yet been reset).<br/>This might occur due to driver crashes, running out of memory, and so on.
-</summary>
-<remarks>
-<para>If the user agent detects that the canvas backing storage is lost it will fire the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event"><c>contextlost</c> event</see> at the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement"><c>HTMLCanvasElement</c></see>.<br/>If this event is not cancelled it will attempt to reset the backing storage to the default state (this is equivalent to calling <see cref="CanvasRenderingContext2D.Reset"/>).<br/>On success it will fire the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>contextrestored</c> event</see>, indicating that the context is ready to reinitialize and redraw.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event"><c>HTMLCanvasElement: contextlost</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>HTMLCanvasElement: contextrestored</c> event</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><c>true</c> if the rendering context was lost; <c>false</c> otherwise.</returns>
-</CanvasRenderingContext2DIsContextLost>
-<CanvasRenderingContext2DImageSmoothingQuality>
-<summary>
-The <strong><c>imageSmoothingQuality</c></strong> property of the<br/><see cref="CanvasRenderingContext2D"/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, lets you set the quality of<br/>image smoothing.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>For this property to have an effect,<br/><see cref="CanvasRenderingContext2D.ImageSmoothingEnabled"/><br/>must be <c>true</c>.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingEnabled"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following:The default value is <c>&amp;quot;low&amp;quot;</c>.</value>
-</CanvasRenderingContext2DImageSmoothingQuality>
-<CanvasRenderingContext2DRoundRect>
-<summary>
-The <strong><c>CanvasRenderingContext2D.roundRect()</c></strong> method of the Canvas 2D API adds a rounded rectangle to the current path.
-</summary>
-<remarks>
-<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><c>border-radius</c></see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill"/> or <see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Rect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/roundRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DRoundRect>
-<CanvasRenderingContext2DGetContextAttributes>
-<summary>
-The <strong><c>CanvasRenderingContext2D.getContextAttributes()</c></strong> method returns an object that contains attributes used by the context.
-</summary>
-<remarks>
-<para>Note that context attributes may be requested when creating the context with <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><c>HTMLCanvasElement.getContext()</c></see>, but the attributes that are actually supported and used may differ.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><c>HTMLCanvasElement.getContext()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"><c>WebGLRenderingContext.getContextAttributes()</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getContextAttributes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <c>CanvasRenderingContext2DSettings</c> object that contains the actual context parameters.<br/>It has the following members:</returns>
-</CanvasRenderingContext2DGetContextAttributes>
-<CanvasRenderingContext2DReset>
-<summary>
-The <strong><c>CanvasRenderingContext2D.reset()</c></strong> method of the Canvas 2D API resets the rendering context to its default state, allowing it to be reused for drawing something else without having to explicitly reset all the properties.
-</summary>
-<remarks>
-<para>Resetting clears the backing buffer, drawing state stack, any defined paths, and styles.<br/>This includes the current <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#transformations">transformation</see> matrix, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#compositing">compositing</see> properties, clipping region, dash list, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#line_styles">line styles</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#text_styles">text styles</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#shadows">shadows</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#image_smoothing">image smoothing</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#filters">filters</see>, and so on.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/reset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DReset>
-<CanvasRenderingContext2DImageSmoothingEnabled>
-<summary>
-The <strong><c>imageSmoothingEnabled</c></strong> property of the<br/><see cref="CanvasRenderingContext2D"/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, determines whether scaled images<br/>are smoothed (<c>true</c>, default) or not (<c>false</c>). On getting the<br/><c>imageSmoothingEnabled</c> property, the last value it was set to is returned.
-</summary>
-<remarks>
-<para>This property is useful for games and other apps that use pixel art. When enlarging<br/>images, the default resizing algorithm will blur the pixels. Set this property to<br/><c>false</c> to retain the pixels&amp;apos; sharpness.</para><blockquote class="NOTE"><h5>NOTE</h5><para>You can adjust the smoothing quality with the<br/><see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>property.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value indicating whether to smooth scaled images or not. The default value is <c>true</c>.</value>
-</CanvasRenderingContext2DImageSmoothingEnabled>
-<CanvasRenderingContext2DGetTransform>
-<summary>
-The <strong><c>CanvasRenderingContext2D.getTransform()</c></strong> method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMMatrix"/> object.The transformation matrix is described by:<blockquote class="NOTE"><h5>NOTE</h5>The returned object is not live, so updating it will not<br/>affect the current transformation matrix, and updating the current transformation<br/>matrix will not affect an already returned <c>DOMMatrix</c>.</blockquote></returns>
-</CanvasRenderingContext2DGetTransform>
-<CanvasRenderingContext2DRestore>
-<summary>
-The<br/><strong><c>CanvasRenderingContext2D.restore()</c></strong><br/>method of the Canvas 2D API restores the most recently saved canvas state by popping the<br/>top entry in the drawing state stack. If there is no saved state, this method does<br/>nothing.
-</summary>
-<remarks>
-<para>For more information about the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save#the_drawing_state">drawing state</see>, see <see cref="CanvasRenderingContext2D.Save"/>.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Save"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/restore"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</CanvasRenderingContext2DRestore>
-<CanvasRenderingContext2DFont>
-<summary>
-The <strong><c>CanvasRenderingContext2D.font</c></strong> property of the Canvas 2D API specifies the current text style to use when drawing text.<br/>This string uses the same syntax as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">CSS font</see> specifier.
-</summary>
-<remarks>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string parsed as CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">font</see> value. The default font is 10px sans-serif.</value>
-</CanvasRenderingContext2DFont>
+</CanvasRenderingContext2DFillRect>
 <CanvasRenderingContext2DFillStyle>
 <summary>
 The<br/><strong><c>CanvasRenderingContext2D.fillStyle</c></strong><br/>property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas 2D API</see> specifies the<br/>color, gradient, or pattern to use inside shapes. The default style is <c>black</c>.
@@ -781,4 +219,566 @@ The<br/><strong><c>CanvasRenderingContext2D.fillStyle</c></strong><br/>property 
 </remarks>
 <value>One of the following:</value>
 </CanvasRenderingContext2DFillStyle>
+<CanvasRenderingContext2DFillText>
+<summary>
+The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>fillText()</c></strong>, part of the Canvas 2D API, draws a text string<br/>at the specified coordinates, filling the string&amp;apos;s characters with the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>. An optional parameter<br/>allows specifying a maximum width for the rendered text, which the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will achieve by condensing the text or by using a lower font size.
+</summary>
+<remarks>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para><para>The text is rendered using the font and text layout configuration as defined by the<br/><see cref="CanvasRenderingContext2D.Font"/>,<br/><see cref="CanvasRenderingContext2D.TextAlign"/>,<br/><see cref="CanvasRenderingContext2D.TextBaseline"/>, and<br/><see cref="CanvasRenderingContext2D.Direction"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>To draw the outlines of the characters in a string, call the context&amp;apos;s<br/><see cref="CanvasRenderingContext2D.StrokeText"/> method.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</see><br/>-<see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.StrokeText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DFillText>
+<CanvasRenderingContext2DFilter>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.filter</c></strong><br/>property of the Canvas 2D API provides filter effects such as blurring and grayscaling.<br/>It is similar to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">filter</see> property and accepts the same values.
+</summary>
+<remarks>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">filter</see><br/>-CSS {{cssxref(&amp;quot;&amp;lt;filter-function&amp;gt;&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>filter</c> property accepts a value of <c>&amp;quot;none&amp;quot;</c> or one or more<br/>of the following filter functions in a string.</value>
+</CanvasRenderingContext2DFilter>
+<CanvasRenderingContext2DFont>
+<summary>
+The <strong><c>CanvasRenderingContext2D.font</c></strong> property of the Canvas 2D API specifies the current text style to use when drawing text.<br/>This string uses the same syntax as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">CSS font</see> specifier.
+</summary>
+<remarks>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string parsed as CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">font</see> value. The default font is 10px sans-serif.</value>
+</CanvasRenderingContext2DFont>
+<CanvasRenderingContext2DFontKerning>
+<summary>
+The <strong><c>CanvasRenderingContext2D.fontKerning</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how font kerning information is used.
+</summary>
+<remarks>
+<para>Kerning adjusts how adjacent letters are spaced in a proportional font, allowing them to edge into each other&amp;apos;s visual area if there is space available.<br/>For example, in well-kerned fonts, the characters <c>AV</c>, <c>Ta</c> and <c>We</c> nest together and make character spacing more uniform and pleasant to read than the equivalent text without kerning.</para><para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning"><c>font-kerning</c></see> CSS property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The property can be used to get or set the value.Allowed values are:</value>
+</CanvasRenderingContext2DFontKerning>
+<CanvasRenderingContext2DFontStretch>
+<summary>
+The <strong><c>CanvasRenderingContext2D.fontStretch</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how the font may be expanded or condensed when drawing text.
+</summary>
+<remarks>
+<para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch"><c>font-stretch</c></see> CSS property when used with keywords (percentage values are not supported).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontStretch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The font stretch value as a string.<br/>This is one of: <c>ultra-condensed</c>, <c>extra-condensed</c>, <c>condensed</c>, <c>semi-condensed</c>, <c>normal</c> (default), <c>semi-expanded</c>, <c>expanded</c>, <c>extra-expanded</c>, <c>ultra-expanded</c>.The property can be used to get or set the font stretch value.</value>
+</CanvasRenderingContext2DFontStretch>
+<CanvasRenderingContext2DFontVariantCaps>
+<summary>
+The <strong><c>CanvasRenderingContext2D.fontVariantCaps</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies an alternative capitalization of the rendered text.
+</summary>
+<remarks>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps"><c>font-variant-caps</c></see> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The font alternative capitalization value, which is one of:The property can be used to get or set the font capitalization value.Note that there are accessibility concerns with some of these, which are outlined in the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps#accessibility"><c>font-variant-caps</c></see> topic.</value>
+</CanvasRenderingContext2DFontVariantCaps>
+<CanvasRenderingContext2DGetContextAttributes>
+<summary>
+The <strong><c>CanvasRenderingContext2D.getContextAttributes()</c></strong> method returns an object that contains attributes used by the context.
+</summary>
+<remarks>
+<para>Note that context attributes may be requested when creating the context with <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><c>HTMLCanvasElement.getContext()</c></see>, but the attributes that are actually supported and used may differ.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><c>HTMLCanvasElement.getContext()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"><c>WebGLRenderingContext.getContextAttributes()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getContextAttributes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>CanvasRenderingContext2DSettings</c> object that contains the actual context parameters.<br/>It has the following members:</returns>
+</CanvasRenderingContext2DGetContextAttributes>
+<CanvasRenderingContext2DGetImageData>
+<summary>
+The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>getImageData()</c></strong> of the Canvas 2D API returns an<br/><see cref="ImageData"/> object representing the underlying pixel data for a specified<br/>portion of the canvas.
+</summary>
+<remarks>
+<para>This method is not affected by the canvas&amp;apos;s transformation matrix. If the specified<br/>rectangle extends outside the bounds of the canvas, the pixels outside the canvas are<br/>transparent black in the returned <c>ImageData</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Image data can be painted onto a canvas using the<br/><see cref="CanvasRenderingContext2D.PutImageData"/> method.</para></blockquote><para>You can find more information about <c>getImageData()</c> and general<br/>manipulation of canvas contents in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="ImageData"/> object<br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ImageData"/> object containing the image data for the rectangle of the<br/>canvas specified. The coordinates of the rectangle&amp;apos;s top-left corner are<br/><c>(sx, sy)</c>, while the coordinates of the bottom corner are<br/><c>(sx + sw - 1, sy + sh - 1)</c>.</returns>
+</CanvasRenderingContext2DGetImageData>
+<CanvasRenderingContext2DGetLineDash>
+<summary>
+The <strong><c>getLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D"/> interface gets the current line dash pattern.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Array"/> of numbers that specify distances to alternately draw a line and<br/>a gap (in coordinate space units). If the number, when setting the elements, is odd, the<br/>elements of the array get copied and concatenated. For example, setting the line dash to<br/><c>[5, 15, 25]</c> will result in getting back<br/><c>[5, 15, 25, 5, 15, 25]</c>.</returns>
+</CanvasRenderingContext2DGetLineDash>
+<CanvasRenderingContext2DGetTransform>
+<summary>
+The <strong><c>CanvasRenderingContext2D.getTransform()</c></strong> method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix"/> object.The transformation matrix is described by:<blockquote class="NOTE"><h5>NOTE</h5>The returned object is not live, so updating it will not<br/>affect the current transformation matrix, and updating the current transformation<br/>matrix will not affect an already returned <c>DOMMatrix</c>.</blockquote></returns>
+</CanvasRenderingContext2DGetTransform>
+<CanvasRenderingContext2DGlobalAlpha>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.globalAlpha</c></strong><br/>property of the Canvas 2D API specifies the alpha (transparency) value that is applied<br/>to shapes and images before they are drawn onto the canvas.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>See also the chapter <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</see>.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GlobalCompositeOperation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalAlpha"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between <c>0.0</c> (fully transparent) and <c>1.0</c> (fully opaque), inclusive. The default value is <c>1.0</c>. Values outside that range, including <see cref="Infinity"/> and <see cref="NaN"/>, will not be set, and <c>globalAlpha</c> will retain its previous value.</value>
+</CanvasRenderingContext2DGlobalAlpha>
+<CanvasRenderingContext2DGlobalCompositeOperation>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.globalCompositeOperation</c></strong><br/>property of the Canvas 2D API sets the type of compositing operation to apply when<br/>drawing new shapes.
+</summary>
+<remarks>
+<para>See also <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing and clipping</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</see>.</para>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GlobalAlpha"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying which of the compositing or blending mode operations to use. This may be any of the following values:</value>
+</CanvasRenderingContext2DGlobalCompositeOperation>
+<CanvasRenderingContext2DImageSmoothingEnabled>
+<summary>
+The <strong><c>imageSmoothingEnabled</c></strong> property of the<br/><see cref="CanvasRenderingContext2D"/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, determines whether scaled images<br/>are smoothed (<c>true</c>, default) or not (<c>false</c>). On getting the<br/><c>imageSmoothingEnabled</c> property, the last value it was set to is returned.
+</summary>
+<remarks>
+<para>This property is useful for games and other apps that use pixel art. When enlarging<br/>images, the default resizing algorithm will blur the pixels. Set this property to<br/><c>false</c> to retain the pixels&amp;apos; sharpness.</para><blockquote class="NOTE"><h5>NOTE</h5><para>You can adjust the smoothing quality with the<br/><see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>property.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value indicating whether to smooth scaled images or not. The default value is <c>true</c>.</value>
+</CanvasRenderingContext2DImageSmoothingEnabled>
+<CanvasRenderingContext2DImageSmoothingQuality>
+<summary>
+The <strong><c>imageSmoothingQuality</c></strong> property of the<br/><see cref="CanvasRenderingContext2D"/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, lets you set the quality of<br/>image smoothing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For this property to have an effect,<br/><see cref="CanvasRenderingContext2D.ImageSmoothingEnabled"/><br/>must be <c>true</c>.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingEnabled"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:The default value is <c>&amp;quot;low&amp;quot;</c>.</value>
+</CanvasRenderingContext2DImageSmoothingQuality>
+<CanvasRenderingContext2DIsContextLost>
+<summary>
+The <strong><c>CanvasRenderingContext2D.isContextLost()</c></strong> method of the Canvas 2D API returns <c>true</c> if the rendering context is lost (and has not yet been reset).<br/>This might occur due to driver crashes, running out of memory, and so on.
+</summary>
+<remarks>
+<para>If the user agent detects that the canvas backing storage is lost it will fire the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event"><c>contextlost</c> event</see> at the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement"><c>HTMLCanvasElement</c></see>.<br/>If this event is not cancelled it will attempt to reset the backing storage to the default state (this is equivalent to calling <see cref="CanvasRenderingContext2D.Reset"/>).<br/>On success it will fire the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>contextrestored</c> event</see>, indicating that the context is ready to reinitialize and redraw.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event"><c>HTMLCanvasElement: contextlost</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>HTMLCanvasElement: contextrestored</c> event</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the rendering context was lost; <c>false</c> otherwise.</returns>
+</CanvasRenderingContext2DIsContextLost>
+<CanvasRenderingContext2DIsPointInPath>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.isPointInPath()</c></strong><br/>method of the Canvas 2D API reports whether or not the specified point is contained in<br/>the current path.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CanvasRenderingContext2DIsPointInPath>
+<CanvasRenderingContext2DIsPointInStroke>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.isPointInStroke()</c></strong><br/>method of the Canvas 2D API reports whether or not the specified point is inside the<br/>area contained by the stroking of a path.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInStroke"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CanvasRenderingContext2DIsPointInStroke>
+<CanvasRenderingContext2DLang>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CanvasRenderingContext2D.lang</c></strong> property of the Canvas 2D API gets or sets the language of the canvas drawing context.
+</summary>
+<remarks>
+<para>-<see cref="CanvasRenderingContext2D"/><br/>-<see href="https://blogs.igalia.com/schenney/canvas-localization-support/">Canvas Localization Support</see> from Igalia (2025)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>lang</c> property can take one of the following string values:The default value is <c>inherit</c>.</value>
+</CanvasRenderingContext2DLang>
+<CanvasRenderingContext2DLetterSpacing>
+<summary>
+The <strong><c>CanvasRenderingContext2D.letterSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between letters when drawing text.
+</summary>
+<remarks>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><c>letter-spacing</c></see> property.</para>
+<para>-<see cref="CanvasRenderingContext2D.WordSpacing"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The letter spacing as a string in the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see> data format.<br/>The default is <c>0px</c>.The property can be used to get or set the spacing.<br/>The property value will remain unchanged if set to an invalid/unparsable value.</value>
+</CanvasRenderingContext2DLetterSpacing>
+<CanvasRenderingContext2DLineCap>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.lineCap</c></strong><br/>property of the Canvas 2D API determines the shape used to draw the end points of lines.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>, <see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineWidth"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</CanvasRenderingContext2DLineCap>
+<CanvasRenderingContext2DLineDashOffset>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.lineDashOffset</c></strong><br/>property of the Canvas 2D API sets the line dash offset, or &amp;quot;phase.&amp;quot;
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Lines are drawn by calling the<br/><see cref="CanvasRenderingContext2D.Stroke"/> method.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float specifying the amount of the line dash offset. The default value is <c>0.0</c>.</value>
+</CanvasRenderingContext2DLineDashOffset>
+<CanvasRenderingContext2DLineJoin>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.lineJoin</c></strong><br/>property of the Canvas 2D API determines the shape used to join two line segments where<br/>they meet.
+</summary>
+<remarks>
+<para>This property has no effect wherever two connected segments have the same direction,<br/>because no joining area will be added in this case. Degenerate segments with a length of<br/>zero (i.e., with all endpoints and control points at the exact same position) are also<br/>ignored.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>,<br/><see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineWidth"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>There are three possible values for this property: <c>&amp;quot;round&amp;quot;</c>, <c>&amp;quot;bevel&amp;quot;</c>, and <c>&amp;quot;miter&amp;quot;</c>. The default is <c>&amp;quot;miter&amp;quot;</c>.<see href="https://developer.mozilla.orgcanvas_linejoin.png">Three horizontal zigzag lines with round, bevel, and miter values, shown from top to bottom respectively.</see></value>
+</CanvasRenderingContext2DLineJoin>
+<CanvasRenderingContext2DLineTo>
+<summary>
+The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>lineTo()</c></strong>, part of the Canvas 2D API, adds a straight line<br/>to the current sub-path by connecting the sub-path&amp;apos;s last point to the specified<br/><c>(x, y)</c> coordinates.
+</summary>
+<remarks>
+<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the path onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.MoveTo"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DLineTo>
+<CanvasRenderingContext2DLineWidth>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.lineWidth</c></strong><br/>property of the Canvas 2D API sets the thickness of lines.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Lines can be drawn with the<br/><see cref="CanvasRenderingContext2D.Stroke"/>,<br/><see cref="CanvasRenderingContext2D.StrokeRect"/>,<br/>and <see cref="CanvasRenderingContext2D.StrokeText"/> methods.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number specifying the line width, in coordinate space units. Zero, negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored. This value is <c>1.0</c> by default.</value>
+</CanvasRenderingContext2DLineWidth>
+<CanvasRenderingContext2DMeasureText>
+<summary>
+The<br/><c>CanvasRenderingContext2D.measureText()</c><br/>method returns a <see cref="TextMetrics"/> object that contains information about the<br/>measured text (such as its width, for example).
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="TextMetrics"/> object.</returns>
+</CanvasRenderingContext2DMeasureText>
+<CanvasRenderingContext2DMiterLimit>
+<summary>
+The <strong><c>CanvasRenderingContext2D.miterLimit</c></strong> property of the<br/>Canvas 2D API sets the miter limit ratio.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For more info about miters, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineCap"/><br/>-<see cref="CanvasRenderingContext2D.LineJoin"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number specifying the miter limit ratio, in coordinate space units. Zero, negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored. The default value is <c>10.0</c>.</value>
+</CanvasRenderingContext2DMiterLimit>
+<CanvasRenderingContext2DMoveTo>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.moveTo()</c></strong><br/>method of the Canvas 2D API begins a new sub-path at the point specified by the given<br/><c>(x, y)</c> coordinates.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.LineTo"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DMoveTo>
+<CanvasRenderingContext2DPutImageData>
+<summary>
+The <strong><c>CanvasRenderingContext2D.putImageData()</c></strong><br/>method of the Canvas 2D API paints data from the given <see cref="ImageData"/> object<br/>onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle<br/>are painted. This method is not affected by the canvas transformation matrix.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Image data can be retrieved from a canvas using the<br/><see cref="CanvasRenderingContext2D.GetImageData"/> method.</para></blockquote><para>You can find more information about <c>putImageData()</c> and general<br/>manipulation of canvas contents in the article <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="ImageData"/> object<br/>-<see cref="CanvasRenderingContext2D.GetImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DPutImageData>
+<CanvasRenderingContext2DQuadraticCurveTo>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.quadraticCurveTo()</c></strong><br/>method of the Canvas 2D API adds a quadratic <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> to the current<br/>sub-path. It requires two points: the first one is a control point and the second one is<br/>the end point. The starting point is the latest point in the current path, which can be<br/>changed using <see cref="CanvasRenderingContext2D.MoveTo"/> before creating<br/>the quadratic Bézier curve.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DQuadraticCurveTo>
+<CanvasRenderingContext2DRect>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.rect()</c></strong><br/>method of the Canvas 2D API adds a rectangle to the current path.
+</summary>
+<remarks>
+<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the rectangle onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para><blockquote class="NOTE"><h5>NOTE</h5><para>To both create and render a rectangle in one step, use the<br/><see cref="CanvasRenderingContext2D.FillRect"/> or<br/><see cref="CanvasRenderingContext2D.StrokeRect"/> methods.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DRect>
+<CanvasRenderingContext2DReset>
+<summary>
+The <strong><c>CanvasRenderingContext2D.reset()</c></strong> method of the Canvas 2D API resets the rendering context to its default state, allowing it to be reused for drawing something else without having to explicitly reset all the properties.
+</summary>
+<remarks>
+<para>Resetting clears the backing buffer, drawing state stack, any defined paths, and styles.<br/>This includes the current <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#transformations">transformation</see> matrix, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#compositing">compositing</see> properties, clipping region, dash list, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#line_styles">line styles</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#text_styles">text styles</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#shadows">shadows</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#image_smoothing">image smoothing</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#filters">filters</see>, and so on.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DReset>
+<CanvasRenderingContext2DResetTransform>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.resetTransform()</c></strong><br/>method of the Canvas 2D API resets the current transform to the identity matrix.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DResetTransform>
+<CanvasRenderingContext2DRestore>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.restore()</c></strong><br/>method of the Canvas 2D API restores the most recently saved canvas state by popping the<br/>top entry in the drawing state stack. If there is no saved state, this method does<br/>nothing.
+</summary>
+<remarks>
+<para>For more information about the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save#the_drawing_state">drawing state</see>, see <see cref="CanvasRenderingContext2D.Save"/>.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Save"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/restore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DRestore>
+<CanvasRenderingContext2DRotate>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.rotate()</c></strong><br/>method of the Canvas 2D API adds a rotation to the transformation matrix.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DRotate>
+<CanvasRenderingContext2DRoundRect>
+<summary>
+The <strong><c>CanvasRenderingContext2D.roundRect()</c></strong> method of the Canvas 2D API adds a rounded rectangle to the current path.
+</summary>
+<remarks>
+<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><c>border-radius</c></see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill"/> or <see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Rect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/roundRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DRoundRect>
+<CanvasRenderingContext2DSave>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.save()</c></strong><br/>method of the Canvas 2D API saves the entire state of the canvas by pushing the current<br/>state onto a stack.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Restore"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DSave>
+<CanvasRenderingContext2DScale>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.scale()</c></strong><br/>method of the Canvas 2D API adds a scaling transformation to the canvas units<br/>horizontally and/or vertically.
+</summary>
+<remarks>
+<para>By default, one unit on the canvas is exactly one pixel. A scaling transformation<br/>modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of<br/>0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor<br/>of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus<br/>drawn at twice the normal size.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DScale>
+<CanvasRenderingContext2DSetLineDash>
+<summary>
+The <strong><c>setLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D"/> interface sets the line dash pattern used when<br/>stroking lines. It uses an array of values that specify alternating lengths of lines<br/>and gaps which describe the pattern.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>To return to using solid lines, set the line dash list to an<br/>empty array.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DSetLineDash>
+<CanvasRenderingContext2DSetTransform>
+<summary>
+The <strong><c>CanvasRenderingContext2D.setTransform()</c></strong> method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>See also the <see cref="CanvasRenderingContext2D.Transform"/> method; instead of overriding the current transform matrix, it<br/>multiplies it with a given one.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DSetTransform>
+<CanvasRenderingContext2DShadowBlur>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.shadowBlur</c></strong><br/>property of the Canvas 2D API specifies the amount of blur applied to shadows. The<br/>default is <c>0</c> (no blur).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <c>shadowBlur</c>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative float specifying the level of shadow blur, where <c>0</c> represents no blur and larger numbers represent increasingly more blur. This value doesn&amp;apos;t correspond to a number of pixels, and is not affected by the current transformation matrix. The default value is <c>0</c>. Negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored.</value>
+</CanvasRenderingContext2DShadowBlur>
+<CanvasRenderingContext2DShadowColor>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.shadowColor</c></strong><br/>property of the Canvas 2D API specifies the color of shadows.
+</summary>
+<remarks>
+<para>Be aware that the shadow&amp;apos;s rendered opacity will be affected by the opacity of the<br/><see cref="CanvasRenderingContext2D.FillStyle"/> color when filling, and<br/>of the <see cref="CanvasRenderingContext2D.StrokeStyle"/> color when<br/>stroking.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the <c>shadowColor</c><br/>property is set to a non-transparent value. One of the<br/><see cref="CanvasRenderingContext2D.ShadowBlur"/>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string parsed as a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> {{cssxref(&amp;quot;&amp;lt;color&amp;gt;&amp;quot;)}} value. The default value is fully-transparent black.</value>
+</CanvasRenderingContext2DShadowColor>
+<CanvasRenderingContext2DShadowOffsetX>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.shadowOffsetX</c></strong><br/>property of the Canvas 2D API specifies the distance that shadows will be offset<br/>horizontally.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <see cref="CanvasRenderingContext2D.ShadowBlur"/>, <c>shadowOffsetX</c>, or<br/><see cref="CanvasRenderingContext2D.ShadowOffsetY"/> properties must<br/>be non-zero, as well.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowOffsetY"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/>-<see cref="CanvasRenderingContext2D.ShadowBlur"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float specifying the distance that shadows will be offset horizontally. Positive values are to the right, and negative to the left. The default value is <c>0</c> (no horizontal offset). <see cref="Infinity"/> and <see cref="NaN"/> values are ignored.</value>
+</CanvasRenderingContext2DShadowOffsetX>
+<CanvasRenderingContext2DShadowOffsetY>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.shadowOffsetY</c></strong><br/>property of the Canvas 2D API specifies the distance that shadows will be offset<br/>vertically.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Shadows are only drawn if the<br/><see cref="CanvasRenderingContext2D.ShadowColor"/> property is set to<br/>a non-transparent value. One of the <see cref="CanvasRenderingContext2D.ShadowBlur"/>,<br/><see cref="CanvasRenderingContext2D.ShadowOffsetX"/>, or <c>shadowOffsetY</c> properties must be non-zero, as<br/>well.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ShadowOffsetX"/><br/>-<see cref="CanvasRenderingContext2D.ShadowColor"/><br/>-<see cref="CanvasRenderingContext2D.ShadowBlur"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float specifying the distance that shadows will be offset vertically. Positive values are down, and negative are up. The default value is <c>0</c> (no vertical offset). <see cref="Infinity"/> and <see cref="NaN"/> values are ignored.</value>
+</CanvasRenderingContext2DShadowOffsetY>
+<CanvasRenderingContext2DStroke>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.stroke()</c></strong><br/>method of the Canvas 2D API strokes (outlines) the current or given path with the<br/>current stroke style.
+</summary>
+<remarks>
+<para>Strokes are aligned to the center of a path; in other words, half of the stroke is<br/>drawn on the inner side, and half on the outer side.</para><para>The stroke is drawn using the <see href="https://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</see>, which<br/>means that path intersections will still get filled.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DStroke>
+<CanvasRenderingContext2DStrokeRect>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.strokeRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to<br/>the current <see cref="CanvasRenderingContext2D.StrokeStyle"/> and other<br/>context settings.
+</summary>
+<remarks>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.StrokeStyle"/><br/>-<see cref="CanvasRenderingContext2D.ClearRect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DStrokeRect>
+<CanvasRenderingContext2DStrokeStyle>
+<summary>
+The <strong><c>CanvasRenderingContext2D.strokeStyle</c></strong> property of the<br/>Canvas 2D API specifies the color, gradient, or pattern to use for the strokes<br/>(outlines) around shapes. The default is <c>black</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For more examples of stroke and fill styles, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasPattern"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</CanvasRenderingContext2DStrokeStyle>
+<CanvasRenderingContext2DStrokeText>
+<summary>
+The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>strokeText()</c></strong>, part of the Canvas 2D API, strokes — that<br/>is, draws the outlines of — the characters of a text string at the specified<br/>coordinates. An optional parameter allows specifying a maximum width for the rendered<br/>text, which the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will achieve by condensing the text or by<br/>using a lower font size.
+</summary>
+<remarks>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Use the <see cref="'CanvasRenderingContext2D.FillText'"/> method to<br/>fill the text characters rather than having just their outlines drawn.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</see><br/>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DStrokeText>
+<CanvasRenderingContext2DTextAlign>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.textAlign</c></strong><br/>property of the Canvas 2D API specifies the current text alignment used when drawing<br/>text.
+</summary>
+<remarks>
+<para>The alignment is relative to the <c>x</c> value of the<br/><see cref="CanvasRenderingContext2D.FillText"/> method. For example, if<br/><c>textAlign</c> is <c>&amp;quot;center&amp;quot;</c>, then the text&amp;apos;s left edge will be at<br/><c>x - (textWidth / 2)</c>.</para>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Possible values:The default value is <c>&amp;quot;start&amp;quot;</c>.</value>
+</CanvasRenderingContext2DTextAlign>
+<CanvasRenderingContext2DTextBaseline>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.textBaseline</c></strong><br/>property of the Canvas 2D API specifies the current text baseline used when drawing<br/>text.
+</summary>
+<remarks>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Possible values:The default value is <c>&amp;quot;alphabetic&amp;quot;</c>.</value>
+</CanvasRenderingContext2DTextBaseline>
+<CanvasRenderingContext2DTextRendering>
+<summary>
+The <strong><c>CanvasRenderingContext2D.textRendering</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> provides information to the rendering engine about what to optimize for when rendering text.
+</summary>
+<remarks>
+<para>The values correspond to the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/text-rendering"><c>text-rendering</c></see> attribute (and CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering"><c>text-rendering</c></see> property).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textRendering"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A text-rendering hint to the browser engine.<br/>This one of:The property can be used to get or set the value.</value>
+</CanvasRenderingContext2DTextRendering>
+<CanvasRenderingContext2DTransform>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.transform()</c></strong><br/>method of the Canvas 2D API multiplies the current transformation with the matrix<br/>described by the arguments of this method. This lets you scale, rotate, translate<br/>(move), and skew the context.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>See also the<br/><see cref="CanvasRenderingContext2D.SetTransform"/> method, which<br/>resets the current transform to the identity matrix and then invokes<br/><c>transform()</c>.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DTransform>
+<CanvasRenderingContext2DTranslate>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.translate()</c></strong><br/>method of the Canvas 2D API adds a translation transformation to the current matrix.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DTranslate>
+<CanvasRenderingContext2DWordSpacing>
+<summary>
+The <strong><c>CanvasRenderingContext2D.wordSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between words when drawing text.
+</summary>
+<remarks>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><c>word-spacing</c></see> property.</para>
+<para>-<see cref="CanvasRenderingContext2D.LetterSpacing"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/wordSpacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The word spacing as a string in the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see> data format.<br/>The default is <c>0px</c>.The property can be used to get or set the spacing.<br/>The property value will remain unchanged if set to an invalid/unparsable value.</value>
+</CanvasRenderingContext2DWordSpacing>
 </docs>

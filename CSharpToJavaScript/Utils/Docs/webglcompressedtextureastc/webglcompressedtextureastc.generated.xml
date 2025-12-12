@@ -1,0 +1,22 @@
+<docs>
+<WEBGL_compressed_texture_astc>
+<summary>
+The <strong><c>WEBGL_compressed_texture_astc</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes <see href="https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression">Adaptive Scalable Texture Compression</see> (ASTC) compressed texture formats to WebGL.
+</summary>
+<remarks>
+<para>For more information, see the article <see href="https://developer.nvidia.com/astc-texture-compression-for-game-assets">Using ASTC Texture Compression for Game Assets</see> by NVIDIA.</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>ASTC compression is typically available on Mali ARM GPUs, Intel GPUs, and NVIDIA Tegra chips.</para><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see href="https://developer.nvidia.com/astc-texture-compression-for-game-assets">Using ASTC Texture Compression for Game Assets</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_compressed_texture_astc>
+<WEBGL_compressed_texture_astcGetSupportedProfiles>
+<summary>
+The <strong><c>WEBGL_compressed_texture_astc.getSupportedProfiles()</c></strong><br/>method returns an array of strings containing the names of the ASTC profiles supported<br/>by the implementation.
+</summary>
+<remarks>
+<para>-<see cref="WEBGL_compressed_texture_astc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Array"/> of string elements indicating which ASTC<br/>profiles are supported by the implementation. Currently, this can be:Dynamic range refers to ratio between the brightest and darkest parts of the scene. Low<br/>dynamic ranges are for example JPEG format images which won&amp;apos;t exceed 255:1, or CRT<br/>monitors which won&amp;apos;t exceed 100:1. An HDR image stores pixel values that span the whole<br/>tonal range of real-world scenes (100,000:1).</returns>
+</WEBGL_compressed_texture_astcGetSupportedProfiles>
+</docs>

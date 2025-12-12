@@ -19,16 +19,6 @@
 </remarks>
 <value>A <see cref="DOMPointReadOnly"/>.</value>
 </XRCubeLayerOrientation>
-<XRCubeLayerSpace>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>space</c></strong> property of the <see cref="XRCubeLayer"/> interface represents the layer's spatial relationship with the user's physical environment.
-</summary>
-<remarks>
-<para>-<see cref="XRSpace"/><br/>-<see cref="XRWebGLBinding.CreateCubeLayer"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer/space"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="XRSpace"/>.</value>
-</XRCubeLayerSpace>
 <XRCubeLayerRedraw>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>redraw</c> event is sent to the <c>XRCubeLayer</c> object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
@@ -39,4 +29,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer/redraw"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRCubeLayerRedraw>
+<XRCubeLayerSpace>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>space</c></strong> property of the <see cref="XRCubeLayer"/> interface represents the layer's spatial relationship with the user's physical environment.
+</summary>
+<remarks>
+<para>-<see cref="XRSpace"/><br/>-<see cref="XRWebGLBinding.CreateCubeLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer/space"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace"/>.</value>
+</XRCubeLayerSpace>
 </docs>

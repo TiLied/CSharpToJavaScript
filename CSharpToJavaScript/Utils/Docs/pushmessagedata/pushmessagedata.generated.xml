@@ -17,24 +17,6 @@ The <strong><c>arrayBuffer()</c></strong> method of the <see cref="PushMessageDa
 </remarks>
 <returns>An <see cref="ArrayBuffer"/>.</returns>
 </PushMessageDataArrayBuffer>
-<PushMessageDataText>
-<summary>
-The <strong><c>text()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as a plain text string.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/text"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A string.</returns>
-</PushMessageDataText>
-<PushMessageDataJson>
-<summary>
-The <strong><c>json()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data by parsing it as a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</see> string and returning the result.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/json"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number…</returns>
-</PushMessageDataJson>
 <PushMessageDataBlob>
 <summary>
 The <strong><c>blob()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as a <see cref="Blob"/> object.
@@ -53,4 +35,22 @@ The <strong><c>bytes()</c></strong> method of the <see cref="PushMessageData"/> 
 </remarks>
 <returns>An <see cref="Uint8Array"/>.</returns>
 </PushMessageDataBytes>
+<PushMessageDataJson>
+<summary>
+The <strong><c>json()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data by parsing it as a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</see> string and returning the result.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/json"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number…</returns>
+</PushMessageDataJson>
+<PushMessageDataText>
+<summary>
+The <strong><c>text()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as a plain text string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</PushMessageDataText>
 </docs>

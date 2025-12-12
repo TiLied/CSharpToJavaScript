@@ -9,6 +9,47 @@ The <strong><c>SVGFilterElement</c></strong> interface provides access to the pr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFilterElement>
+<SVGFilterElementFilterUnits>
+<summary>
+The <strong><c>filterUnits</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("filterUnits")}} attribute of the given {{SVGElement("filter")}} element. It takes one of the <c>SVG_UNIT_TYPE_*</c> constants defined in <see cref="SVGUnitTypes"/>.
+</summary>
+<remarks>
+<para>-<see cref="SVGFilterElement.PrimitiveUnits"/><br/>-<see cref="SVGUnitTypes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG filter primitive attributes</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/filterUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
+</SVGFilterElementFilterUnits>
+<SVGFilterElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFilterElementHeight>
+<SVGFilterElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("filter")}} element.
+</summary>
+<remarks>
+<para>-SVG href attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFilterElementHref>
+<SVGFilterElementPrimitiveUnits>
+<summary>
+The <strong><c>primitiveUnits</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("primitiveUnits")}} attribute of the given {{SVGElement("filter")}} element. It takes one of the <c>SVG_UNIT_TYPE_*</c> constants defined in <see cref="SVGUnitTypes"/>.
+</summary>
+<remarks>
+<para>-<see cref="SVGFilterElement.FilterUnits"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/primitiveUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFilterElementPrimitiveUnits>
 <SVGFilterElementWidth>
 <summary>
 The <strong><c>width</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -31,47 +72,6 @@ The <strong><c>x</c></strong> read-only property of the <see cref="SVGFilterElem
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFilterElementX>
-<SVGFilterElementFilterUnits>
-<summary>
-The <strong><c>filterUnits</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("filterUnits")}} attribute of the given {{SVGElement("filter")}} element. It takes one of the <c>SVG_UNIT_TYPE_*</c> constants defined in <see cref="SVGUnitTypes"/>.
-</summary>
-<remarks>
-<para>-<see cref="SVGFilterElement.PrimitiveUnits"/><br/>-<see cref="SVGUnitTypes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG filter primitive attributes</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/filterUnits"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
-</SVGFilterElementFilterUnits>
-<SVGFilterElementHref>
-<summary>
-The <strong><c>href</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("filter")}} element.
-</summary>
-<remarks>
-<para>-SVG href attribute<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/href"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/>.</value>
-</SVGFilterElementHref>
-<SVGFilterElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFilterElementHeight>
-<SVGFilterElementPrimitiveUnits>
-<summary>
-The <strong><c>primitiveUnits</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface reflects the {{SVGAttr("primitiveUnits")}} attribute of the given {{SVGElement("filter")}} element. It takes one of the <c>SVG_UNIT_TYPE_*</c> constants defined in <see cref="SVGUnitTypes"/>.
-</summary>
-<remarks>
-<para>-<see cref="SVGFilterElement.FilterUnits"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement/primitiveUnits"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFilterElementPrimitiveUnits>
 <SVGFilterElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFilterElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

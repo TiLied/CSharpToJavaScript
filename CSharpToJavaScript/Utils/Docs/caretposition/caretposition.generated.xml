@@ -8,6 +8,16 @@ The <c>CaretPosition</c> interface represents the caret position, an indicator f
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CaretPosition>
+<CaretPositionGetClientRect>
+<summary>
+The <c>getClientRect()</c> method of the <see cref="CaretPosition"/> interface returns the client rectangle for the caret range.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/>-<see cref="Document.CaretPositionFromPoint"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition/getClientRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object.</returns>
+</CaretPositionGetClientRect>
 <CaretPositionOffset>
 <summary>
 The <strong><c>offset</c></strong> property of the <see cref="CaretPosition"/> interface returns an integer representing the offset of the selection in the caret position node.
@@ -29,14 +39,4 @@ The <strong><c>offsetNode</c></strong> property of the <see cref="CaretPosition"
 </remarks>
 <value>A <see cref="Node"/>.</value>
 </CaretPositionOffsetNode>
-<CaretPositionGetClientRect>
-<summary>
-The <c>getClientRect()</c> method of the <see cref="CaretPosition"/> interface returns the client rectangle for the caret range.
-</summary>
-<remarks>
-<para>-<see cref="DOMRect"/><br/>-<see cref="Document.CaretPositionFromPoint"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition/getClientRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMRect"/> object.</returns>
-</CaretPositionGetClientRect>
 </docs>

@@ -1,0 +1,27 @@
+<docs>
+<Window_Management_API>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>Window Management API</strong> allows you to get detailed information on the displays connected to your device and more easily place windows on specific screens, paving the way towards more effective multi-screen applications.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Window_Management_API>
+<Window_Management_APIMulti-screen_origin>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see> introduces the concept of the <strong>multi-screen origin</strong> — this is the (0,0) coordinate of the host operating system (OS)&amp;apos;s virtual screen arrangement, around which all available screens and windows are positioned. The multi-screen origin is the top-left corner of the OS primary screen by convention, although the spec stipulates that it could be any arbitrary point within the virtual screen arrangement.
+</summary>
+<remarks>
+<para>The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Positive coordinate values are to the right and downwards on the screen arrangement, while negative ones are to the left and upwards.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Window_Management_APIMulti-screen_origin>
+<Window_Management_APIUsing>
+<summary>
+This guide explains how to use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see>. The example code seen below is taken from our <see href="https://mdn.github.io/dom-examples/window-management-api/">Multi-window learning environment</see> example (see the <see href="https://github.com/mdn/dom-examples/tree/main/window-management-api">source code</see>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Using"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Window_Management_APIUsing>
+</docs>

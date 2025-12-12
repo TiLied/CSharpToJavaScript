@@ -20,17 +20,6 @@
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
 </WindowSharedStorageRun>
-<WindowSharedStorageWorklet>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>worklet</c></strong> read-only property of the<br/><see cref="WindowSharedStorage"/> interface contains the <see cref="SharedStorageWorklet"/> instance representing the shared storage worklet for the current origin.
-</summary>
-<remarks>
-<para><c>SharedStorageWorklet</c> contains the <see cref="Worklet.AddModule"/> method, which is used to add a module to the shared storage worklet.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowSharedStorage/worklet"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="SharedStorageWorklet"/> object.</value>
-</WindowSharedStorageWorklet>
 <WindowSharedStorageSelectURL>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>selectURL()</c></strong> method of the<br/><see cref="WindowSharedStorage"/> interface executes a <see href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageSelectURLOperation">URL Selection operation</see> that is registered in a module added to the current origin's <see cref="SharedStorageWorklet"/>.
@@ -42,4 +31,15 @@
 </remarks>
 <returns>A {{jsxref("Promise")}} that fulfills with a <see cref="FencedFrameConfig"/> object or a string representing a URL, depending on the value of the <c>resolveToConfig</c> option.</returns>
 </WindowSharedStorageSelectURL>
+<WindowSharedStorageWorklet>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>worklet</c></strong> read-only property of the<br/><see cref="WindowSharedStorage"/> interface contains the <see cref="SharedStorageWorklet"/> instance representing the shared storage worklet for the current origin.
+</summary>
+<remarks>
+<para><c>SharedStorageWorklet</c> contains the <see cref="Worklet.AddModule"/> method, which is used to add a module to the shared storage worklet.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowSharedStorage/worklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SharedStorageWorklet"/> object.</value>
+</WindowSharedStorageWorklet>
 </docs>

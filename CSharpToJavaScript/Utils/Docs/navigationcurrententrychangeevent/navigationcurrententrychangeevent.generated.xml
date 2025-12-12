@@ -9,16 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NavigationCurrentEntryChangeEvent>
-<NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationCurrentEntryChangeEvent()</c></strong> constructor creates a new <see cref="NavigationCurrentEntryChangeEvent"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="NavigationCurrentEntryChangeEvent"/> object.</returns>
-</NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
 <NavigationCurrentEntryChangeEventFrom>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>from</c></strong> read-only property of the <see cref="NavigationCurrentEntryChangeEvent"/> interface returns the <see cref="NavigationHistoryEntry"/> that was navigated from.
@@ -29,6 +19,16 @@
 </remarks>
 <value>A <see cref="NavigationHistoryEntry"/> object.</value>
 </NavigationCurrentEntryChangeEventFrom>
+<NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationCurrentEntryChangeEvent()</c></strong> constructor creates a new <see cref="NavigationCurrentEntryChangeEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="NavigationCurrentEntryChangeEvent"/> object.</returns>
+</NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
 <NavigationCurrentEntryChangeEventNavigationType>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigationType</c></strong> read-only property of the <see cref="NavigationCurrentEntryChangeEvent"/> interface returns the type of the navigation that resulted in the change. The property may be <c>null</c> if the change occurs due to <see cref="Navigation.UpdateCurrentEntry"/>.

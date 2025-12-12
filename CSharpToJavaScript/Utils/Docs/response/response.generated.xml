@@ -19,89 +19,26 @@ The <strong><c>arrayBuffer()</c></strong> method of the <see cref="Response"/> i
 </remarks>
 <returns>A promise that resolves with an <see cref="ArrayBuffer"/>.</returns>
 </ResponseArrayBuffer>
-<ResponseStatus>
+<ResponseBlob>
 <summary>
-The <strong><c>status</c></strong> read-only property of the <see cref="Response"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP status codes</see> of the response.
-</summary>
-<remarks>
-<para>For example, <c>200</c> for success, <c>404</c> if the resource could not be found.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/status"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An unsigned short number.<br/>This is one of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</see>.A value is <c>0</c> is returned for a response whose <see cref="Response.Type"/> is <c>opaque</c>, <c>opaqueredirect</c>, or <c>error</c>.</value>
-</ResponseStatus>
-<ResponseUrl>
-<summary>
-The <strong><c>url</c></strong> read-only property of the <see cref="Response"/> interface contains the URL of the response.<br/>The value of the <c>url</c> property will be the final URL obtained after any redirects.
+The <strong><c>blob()</c></strong> method of the <see cref="Response"/> interface takes<br/>a <see cref="Response"/> stream and reads it to completion. It returns a promise that<br/>resolves with a <see cref="Blob"/>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/url"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/blob"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</ResponseUrl>
-<ResponseRedirected>
+<returns>A promise that resolves with a <see cref="Blob"/>.</returns>
+</ResponseBlob>
+<ResponseBody>
 <summary>
-The <strong><c>redirected</c></strong> read-only property of the <see cref="Response"/> interface indicates whether or not the response is the result of a request you made which was redirected.
+The <strong><c>body</c></strong> read-only property of the <see cref="Response"/> interface is a <see cref="ReadableStream"/> of the body contents.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Checking <c>redirected</c> to prevent redirects is not recommended, because by the time a response is received, the redirect has already happened, and you may have sent the request to an unintended destination, potentially sending sensitive information.<br/>Instead, you should do the filtering when you call <see cref="Windowfetch"/>.<br/>See the example <see href="https://developer.mozilla.org#disallowing_redirects">Disallowing redirects</see>, which shows this being done.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/body"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value which is <c>true</c> if the response indicates that your request was redirected.</value>
-</ResponseRedirected>
-<ResponseResponse>
-<summary>
-The <strong><c>Response()</c></strong> constructor creates a new <see cref="Response"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ResponseResponse>
-<ResponseStatusText>
-<summary>
-The <strong><c>statusText</c></strong> read-only property of the <see cref="Response"/> interface contains the status message corresponding to the HTTP status code in <see cref="Response.Status"/>.
-</summary>
-<remarks>
-<para>For example, this would be <c>OK</c> for a status code <c>200</c>, <c>Continue</c> for <c>100</c>, <c>Not Found</c> for <c>404</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="String"/> containing the HTTP status message associated with the response.<br/>The default value is &amp;quot;&amp;quot;.See <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</see> for a list of codes and their associated status messages.<br/>Note that HTTP/2 <see href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</see> status messages.</value>
-</ResponseStatusText>
-<ResponseFormData>
-<summary>
-The <strong><c>formData()</c></strong> method of the <see cref="Response"/> interface<br/>takes a <see cref="Response"/> stream and reads it to completion. It returns a promise<br/>that resolves with a <see cref="FormData"/> object.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This is mainly relevant to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>. If a user submits<br/>a form and a service worker intercepts the request, you could for example call<br/><c>formData()</c> on it to obtain a key-value map, modify some fields, then send<br/>the form onwards to the server (or use it locally).</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/formData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a <see cref="FormData"/> object.</returns>
-</ResponseFormData>
-<ResponseOk>
-<summary>
-The <strong><c>ok</c></strong> read-only property of the <see cref="Response"/> interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</ResponseOk>
-<ResponseText>
-<summary>
-The <strong><c>text()</c></strong> method of the <see cref="Response"/> interface takes a <see cref="Response"/> stream and reads it to completion.<br/>It returns a promise that resolves with a <see cref="String"/>.<br/>The response is <strong>always</strong> decoded using UTF-8.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/text"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A Promise that resolves with a <see cref="String"/>.</returns>
-</ResponseText>
+<value>A <see cref="ReadableStream"/>, or else <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> for any <c>Response</c> object <see href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">constructed</see> with a null <see href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response#body"><c>body</c></see> property, or for any actual <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages#http_responses">HTTP response</see> that has no <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages#response_body">body</see>.The stream is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">readable byte stream</see>, which supports zero-copy reading using a <see cref="ReadableStreamBYOBReader"/>.<blockquote class="NOTE"><h5>NOTE</h5>Current browsers don&amp;apos;t actually conform to the spec requirement to set the <c>body</c> property to <c>null</c> for responses with no body (for example, responses to <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD"><c>HEAD</c></see> requests, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/204"><c>204 No Content</c></see> responses).</blockquote></value>
+</ResponseBody>
 <ResponseBodyUsed>
 <summary>
 The <strong><c>bodyUsed</c></strong> read-only property of the <see cref="Response"/> interface is a boolean value that indicates whether the body has been read yet.
@@ -112,6 +49,16 @@ The <strong><c>bodyUsed</c></strong> read-only property of the <see cref="Respon
 </remarks>
 <value>A boolean value.</value>
 </ResponseBodyUsed>
+<ResponseBytes>
+<summary>
+The <strong><c>bytes()</c></strong> method of the <see cref="Response"/> interface takes a <see cref="Response"/> stream and reads it to completion.<br/>It returns a promise that resolves with a <see cref="Uint8Array"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/bytes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with an <see cref="Uint8Array"/>.</returns>
+</ResponseBytes>
 <ResponseClone>
 <summary>
 The <strong><c>clone()</c></strong> method of the <see cref="Response"/> interface creates a clone of a response object, identical in every way, but stored in a different variable.
@@ -123,69 +70,6 @@ The <strong><c>clone()</c></strong> method of the <see cref="Response"/> interfa
 </remarks>
 <returns>A <see cref="Response"/> object.</returns>
 </ResponseClone>
-<ResponseRedirect>
-<summary>
-The <strong><c>redirect()</c></strong> static method of the <see cref="Response"/> interface returns a <c>Response</c> resulting in a redirect to the specified URL.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This can be used alongside the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see>.<br/>A controlling service worker could intercept a page&amp;apos;s request and redirect it as desired.<br/>This will actually lead to a real redirect if a service worker sends it upstream.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Response"/> object.</returns>
-</ResponseRedirect>
-<ResponseJson>
-<summary>
-The <strong><c>json()</c></strong> static method of the <see cref="Response"/> interface returns a <c>Response</c> that contains the provided JSON data as body, and a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> header which is set to <c>application/json</c>.<br/>The response status, status message, and additional headers can also be set.
-</summary>
-<remarks>
-<para>The method makes it easy to create <c>Response</c> objects for returning JSON encoded data.<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service workers</see>, for example, intercept fetch requests made by a browser, and might use <c>json()</c> to construct a <c>Response</c> from cached JSON data to return to the main thread.<br/>The <c>json()</c> method can also be used in server code to return JSON data for <see href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">single page applications</see>, and any other applications where a JSON response is expected.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Response"/> object.</returns>
-</ResponseJson>
-<ResponseJson>
-<summary>
-The <strong><c>json()</c></strong> method of the <see cref="Response"/> interface takes<br/>a <see cref="Response"/> stream and reads it to completion. It returns a promise which<br/>resolves with the result of parsing the body text as <see cref="JSON"/>.
-</summary>
-<remarks>
-<para>Note that despite the method being named <c>json()</c>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">Cross-Origin Resource Sharing (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to a JavaScript object. This object could be<br/>anything that can be represented by JSON — an object, an array, a string, a number…</returns>
-</ResponseJson>
-<ResponseBlob>
-<summary>
-The <strong><c>blob()</c></strong> method of the <see cref="Response"/> interface takes<br/>a <see cref="Response"/> stream and reads it to completion. It returns a promise that<br/>resolves with a <see cref="Blob"/>.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/blob"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A promise that resolves with a <see cref="Blob"/>.</returns>
-</ResponseBlob>
-<ResponseType>
-<summary>
-The <strong><c>type</c></strong> read-only property of the <see cref="Response"/> interface contains the type of the response. The type determines whether scripts are able to access the response body and headers.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string, which may be any of the following values:</value>
-</ResponseType>
-<ResponseHeaders>
-<summary>
-The <strong><c>headers</c></strong> read-only property of the<br/><see cref="Response"/> interface contains the <see cref="Headers"/> object associated<br/>with the response.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Headers"/> object.</value>
-</ResponseHeaders>
 <ResponseError>
 <summary>
 The <strong><c>error()</c></strong> static method of the <see cref="Response"/> interface returns a new <c>Response</c> object associated with a network error.
@@ -197,24 +81,140 @@ The <strong><c>error()</c></strong> static method of the <see cref="Response"/> 
 </remarks>
 <returns>A <see cref="Response"/> object.Suppose a web app has a service worker, which contains the following <c>fetch</c> event handler:With this service worker, all fetch requests from the app will pass through the service worker to the network, except for requests to fetch &amp;quot;salamander.jpg&amp;quot;, which will reject. This means that the following main thread code would throw an error, and the <c>catch</c> handler will run.</returns>
 </ResponseError>
-<ResponseBytes>
+<ResponseFormData>
 <summary>
-The <strong><c>bytes()</c></strong> method of the <see cref="Response"/> interface takes a <see cref="Response"/> stream and reads it to completion.<br/>It returns a promise that resolves with a <see cref="Uint8Array"/>.
+The <strong><c>formData()</c></strong> method of the <see cref="Response"/> interface<br/>takes a <see cref="Response"/> stream and reads it to completion. It returns a promise<br/>that resolves with a <see cref="FormData"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This is mainly relevant to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>. If a user submits<br/>a form and a service worker intercepts the request, you could for example call<br/><c>formData()</c> on it to obtain a key-value map, modify some fields, then send<br/>the form onwards to the server (or use it locally).</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/formData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="FormData"/> object.</returns>
+</ResponseFormData>
+<ResponseHeaders>
+<summary>
+The <strong><c>headers</c></strong> read-only property of the<br/><see cref="Response"/> interface contains the <see cref="Headers"/> object associated<br/>with the response.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/bytes"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A promise that resolves with an <see cref="Uint8Array"/>.</returns>
-</ResponseBytes>
-<ResponseBody>
+<value>A <see cref="Headers"/> object.</value>
+</ResponseHeaders>
+<ResponseJson>
 <summary>
-The <strong><c>body</c></strong> read-only property of the <see cref="Response"/> interface is a <see cref="ReadableStream"/> of the body contents.
+The <strong><c>json()</c></strong> method of the <see cref="Response"/> interface takes<br/>a <see cref="Response"/> stream and reads it to completion. It returns a promise which<br/>resolves with the result of parsing the body text as <see cref="JSON"/>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/body"> <em>See also on MDN</em> </seealso></para>
+<para>Note that despite the method being named <c>json()</c>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">Cross-Origin Resource Sharing (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="ReadableStream"/>, or else <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> for any <c>Response</c> object <see href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">constructed</see> with a null <see href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response#body"><c>body</c></see> property, or for any actual <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages#http_responses">HTTP response</see> that has no <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages#response_body">body</see>.The stream is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">readable byte stream</see>, which supports zero-copy reading using a <see cref="ReadableStreamBYOBReader"/>.<blockquote class="NOTE"><h5>NOTE</h5>Current browsers don&amp;apos;t actually conform to the spec requirement to set the <c>body</c> property to <c>null</c> for responses with no body (for example, responses to <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD"><c>HEAD</c></see> requests, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/204"><c>204 No Content</c></see> responses).</blockquote></value>
-</ResponseBody>
+<returns>A <see cref="Promise"/> that resolves to a JavaScript object. This object could be<br/>anything that can be represented by JSON — an object, an array, a string, a number…</returns>
+</ResponseJson>
+<ResponseJson>
+<summary>
+The <strong><c>json()</c></strong> static method of the <see cref="Response"/> interface returns a <c>Response</c> that contains the provided JSON data as body, and a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> header which is set to <c>application/json</c>.<br/>The response status, status message, and additional headers can also be set.
+</summary>
+<remarks>
+<para>The method makes it easy to create <c>Response</c> objects for returning JSON encoded data.<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service workers</see>, for example, intercept fetch requests made by a browser, and might use <c>json()</c> to construct a <c>Response</c> from cached JSON data to return to the main thread.<br/>The <c>json()</c> method can also be used in server code to return JSON data for <see href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">single page applications</see>, and any other applications where a JSON response is expected.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Response"/> object.</returns>
+</ResponseJson>
+<ResponseOk>
+<summary>
+The <strong><c>ok</c></strong> read-only property of the <see cref="Response"/> interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</ResponseOk>
+<ResponseRedirected>
+<summary>
+The <strong><c>redirected</c></strong> read-only property of the <see cref="Response"/> interface indicates whether or not the response is the result of a request you made which was redirected.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Checking <c>redirected</c> to prevent redirects is not recommended, because by the time a response is received, the redirect has already happened, and you may have sent the request to an unintended destination, potentially sending sensitive information.<br/>Instead, you should do the filtering when you call <see cref="Windowfetch"/>.<br/>See the example <see href="https://developer.mozilla.org#disallowing_redirects">Disallowing redirects</see>, which shows this being done.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the response indicates that your request was redirected.</value>
+</ResponseRedirected>
+<ResponseRedirect>
+<summary>
+The <strong><c>redirect()</c></strong> static method of the <see cref="Response"/> interface returns a <c>Response</c> resulting in a redirect to the specified URL.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This can be used alongside the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see>.<br/>A controlling service worker could intercept a page&amp;apos;s request and redirect it as desired.<br/>This will actually lead to a real redirect if a service worker sends it upstream.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Response"/> object.</returns>
+</ResponseRedirect>
+<ResponseResponse>
+<summary>
+The <strong><c>Response()</c></strong> constructor creates a new <see cref="Response"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ResponseResponse>
+<ResponseStatus>
+<summary>
+The <strong><c>status</c></strong> read-only property of the <see cref="Response"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP status codes</see> of the response.
+</summary>
+<remarks>
+<para>For example, <c>200</c> for success, <c>404</c> if the resource could not be found.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/status"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned short number.<br/>This is one of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</see>.A value is <c>0</c> is returned for a response whose <see cref="Response.Type"/> is <c>opaque</c>, <c>opaqueredirect</c>, or <c>error</c>.</value>
+</ResponseStatus>
+<ResponseStatusText>
+<summary>
+The <strong><c>statusText</c></strong> read-only property of the <see cref="Response"/> interface contains the status message corresponding to the HTTP status code in <see cref="Response.Status"/>.
+</summary>
+<remarks>
+<para>For example, this would be <c>OK</c> for a status code <c>200</c>, <c>Continue</c> for <c>100</c>, <c>Not Found</c> for <c>404</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> containing the HTTP status message associated with the response.<br/>The default value is &amp;quot;&amp;quot;.See <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</see> for a list of codes and their associated status messages.<br/>Note that HTTP/2 <see href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</see> status messages.</value>
+</ResponseStatusText>
+<ResponseText>
+<summary>
+The <strong><c>text()</c></strong> method of the <see cref="Response"/> interface takes a <see cref="Response"/> stream and reads it to completion.<br/>It returns a promise that resolves with a <see cref="String"/>.<br/>The response is <strong>always</strong> decoded using UTF-8.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A Promise that resolves with a <see cref="String"/>.</returns>
+</ResponseText>
+<ResponseType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="Response"/> interface contains the type of the response. The type determines whether scripts are able to access the response body and headers.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, which may be any of the following values:</value>
+</ResponseType>
+<ResponseUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the <see cref="Response"/> interface contains the URL of the response.<br/>The value of the <c>url</c> property will be the final URL obtained after any redirects.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ResponseUrl>
 </docs>

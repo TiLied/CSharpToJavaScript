@@ -8,43 +8,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BackgroundFetchRegistration>
-<BackgroundFetchRegistrationProgress>
+<BackgroundFetchRegistrationAbort>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>progress</c></strong> event of the <see cref="BackgroundFetchRegistration"/> interface thrown when the associated background fetch progresses.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>abort()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface aborts an active background fetch.
 </summary>
 <remarks>
-<para>Practically, this event is fired when any of the following properties will return a new value:</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/abort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</BackgroundFetchRegistrationProgress>
-<BackgroundFetchRegistrationUploaded>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>uploaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes successfully sent, initially <c>0</c>.
-</summary>
-<remarks>
-<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/uploaded"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Number"/>.</value>
-</BackgroundFetchRegistrationUploaded>
-<BackgroundFetchRegistrationMatch>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>match()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface returns the first matching <see cref="BackgroundFetchRecord"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/match"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that resolves with the first <see cref="BackgroundFetchRecord"/> that matches<br/>the request or <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><c>BackgroundFetchRegistration.match()</c> is basically identical to<br/><see cref="BackgroundFetchRegistration.MatchAll"/>, except that rather than resolving with an array of<br/>all matching records, it resolves with the first matching record only.</blockquote></returns>
-</BackgroundFetchRegistrationMatch>
-<BackgroundFetchRegistrationRecordsAvailable>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>recordsAvailable</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns <c>true</c> if there are requests and responses to be accessed. If this returns <c>false</c>, then <see cref="BackgroundFetchRegistration.Match"/> and <see cref="BackgroundFetchRegistration.MatchAll"/> can't be used.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/recordsAvailable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Boolean"/>.</value>
-</BackgroundFetchRegistrationRecordsAvailable>
+<returns>A <see cref="Promise"/> that resolves with <c>true</c> if the fetch is successfully aborted.</returns>
+</BackgroundFetchRegistrationAbort>
 <BackgroundFetchRegistrationDownloaded>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>downloaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes that has been downloaded, initially <c>0</c>.
@@ -55,15 +27,6 @@
 </remarks>
 <value>A <see cref="Number"/>.</value>
 </BackgroundFetchRegistrationDownloaded>
-<BackgroundFetchRegistrationAbort>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>abort()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface aborts an active background fetch.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/abort"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with <c>true</c> if the fetch is successfully aborted.</returns>
-</BackgroundFetchRegistrationAbort>
 <BackgroundFetchRegistrationDownloadTotal>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>downloadTotal</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the total size in bytes of this download. This is set when the background fetch was registered, or <c>0</c> if not set.
@@ -73,25 +36,6 @@
 </remarks>
 <value>A <see cref="Number"/>.</value>
 </BackgroundFetchRegistrationDownloadTotal>
-<BackgroundFetchRegistrationUploadTotal>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>uploadTotal</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the total number of bytes to be sent to the server.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/uploadTotal"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Number"/>.</value>
-</BackgroundFetchRegistrationUploadTotal>
-<BackgroundFetchRegistrationResult>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>result</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns a string indicating whether the background fetch was successful or failed.
-</summary>
-<remarks>
-<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/result"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following strings:</value>
-</BackgroundFetchRegistrationResult>
 <BackgroundFetchRegistrationFailureReason>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>failureReason</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns a string with a value that indicates a reason for a background fetch failure.
@@ -111,6 +55,15 @@
 </remarks>
 <value>A string.</value>
 </BackgroundFetchRegistrationId>
+<BackgroundFetchRegistrationMatch>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>match()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface returns the first matching <see cref="BackgroundFetchRecord"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/match"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with the first <see cref="BackgroundFetchRecord"/> that matches<br/>the request or <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><c>BackgroundFetchRegistration.match()</c> is basically identical to<br/><see cref="BackgroundFetchRegistration.MatchAll"/>, except that rather than resolving with an array of<br/>all matching records, it resolves with the first matching record only.</blockquote></returns>
+</BackgroundFetchRegistrationMatch>
 <BackgroundFetchRegistrationMatchAll>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>matchAll()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface returns an array of matching <see cref="BackgroundFetchRecord"/> objects.
@@ -120,4 +73,51 @@
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves with an array of all matching <see cref="BackgroundFetchRecord"/> objects.</returns>
 </BackgroundFetchRegistrationMatchAll>
+<BackgroundFetchRegistrationProgress>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>progress</c></strong> event of the <see cref="BackgroundFetchRegistration"/> interface thrown when the associated background fetch progresses.
+</summary>
+<remarks>
+<para>Practically, this event is fired when any of the following properties will return a new value:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BackgroundFetchRegistrationProgress>
+<BackgroundFetchRegistrationRecordsAvailable>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>recordsAvailable</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns <c>true</c> if there are requests and responses to be accessed. If this returns <c>false</c>, then <see cref="BackgroundFetchRegistration.Match"/> and <see cref="BackgroundFetchRegistration.MatchAll"/> can't be used.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/recordsAvailable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>.</value>
+</BackgroundFetchRegistrationRecordsAvailable>
+<BackgroundFetchRegistrationResult>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>result</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns a string indicating whether the background fetch was successful or failed.
+</summary>
+<remarks>
+<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following strings:</value>
+</BackgroundFetchRegistrationResult>
+<BackgroundFetchRegistrationUploaded>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>uploaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes successfully sent, initially <c>0</c>.
+</summary>
+<remarks>
+<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/uploaded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</BackgroundFetchRegistrationUploaded>
+<BackgroundFetchRegistrationUploadTotal>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>uploadTotal</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the total number of bytes to be sent to the server.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/uploadTotal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</BackgroundFetchRegistrationUploadTotal>
 </docs>

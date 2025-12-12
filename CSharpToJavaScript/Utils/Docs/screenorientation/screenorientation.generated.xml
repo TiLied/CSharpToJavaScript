@@ -8,15 +8,6 @@ The <strong><c>ScreenOrientation</c></strong> interface of the <see href="https:
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ScreenOrientation>
-<ScreenOrientationUnlock>
-<summary>
-The <strong><c>unlock()</c></strong> method of the<br/><see cref="ScreenOrientation"/> interface unlocks the orientation of the containing<br/>document from its default orientation.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/unlock"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ScreenOrientationUnlock>
 <ScreenOrientationAngle>
 <summary>
 The <strong><c>angle</c></strong> read-only property of the<br/><see cref="ScreenOrientation"/> interface returns the document's current orientation<br/>angle.
@@ -34,15 +25,6 @@ The <strong><c>change</c></strong> event of the <see cref="ScreenOrientation"/> 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/change"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ScreenOrientationChange>
-<ScreenOrientationType>
-<summary>
-The <strong><c>type</c></strong> read-only property of the<br/><see cref="ScreenOrientation"/> interface returns the document's current orientation<br/>type, one of <c>portrait-primary</c>, <c>portrait-secondary</c>, <c>landscape-primary</c>, or<br/><c>landscape-secondary</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="String"/>.</value>
-</ScreenOrientationType>
 <ScreenOrientationLock>
 <summary>
 The <strong><c>lock()</c></strong> method of the <see cref="ScreenOrientation"/> interface locks the orientation of the containing document to the specified orientation.
@@ -53,4 +35,22 @@ The <strong><c>lock()</c></strong> method of the <see cref="ScreenOrientation"/>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves after locking succeeds.</returns>
 </ScreenOrientationLock>
+<ScreenOrientationType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the<br/><see cref="ScreenOrientation"/> interface returns the document's current orientation<br/>type, one of <c>portrait-primary</c>, <c>portrait-secondary</c>, <c>landscape-primary</c>, or<br/><c>landscape-secondary</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/>.</value>
+</ScreenOrientationType>
+<ScreenOrientationUnlock>
+<summary>
+The <strong><c>unlock()</c></strong> method of the<br/><see cref="ScreenOrientation"/> interface unlocks the orientation of the containing<br/>document from its default orientation.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/unlock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ScreenOrientationUnlock>
 </docs>

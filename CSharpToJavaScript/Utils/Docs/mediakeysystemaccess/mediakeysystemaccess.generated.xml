@@ -7,6 +7,15 @@ The <strong><c>MediaKeySystemAccess</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaKeySystemAccess>
+<MediaKeySystemAccessCreateMediaKeys>
+<summary>
+The <c>MediaKeySystemAccess.createMediaKeys()</c> method returns a<br/>{{jsxref('Promise')}} that resolves to a new <see cref="'MediaKeys'"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/>.</returns>
+</MediaKeySystemAccessCreateMediaKeys>
 <MediaKeySystemAccessGetConfiguration>
 <summary>
 The <strong><c>getConfiguration()</c></strong> method of the <see cref="MediaKeySystemAccess"/> interface returns an object with the supported combination of the following configuration options:
@@ -26,13 +35,4 @@ The <strong><c>keySystem</c></strong> read-only property of the <see cref="Media
 </remarks>
 <value>A string.</value>
 </MediaKeySystemAccessKeySystem>
-<MediaKeySystemAccessCreateMediaKeys>
-<summary>
-The <c>MediaKeySystemAccess.createMediaKeys()</c> method returns a<br/>{{jsxref('Promise')}} that resolves to a new <see cref="'MediaKeys'"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="'Promise'"/>.</returns>
-</MediaKeySystemAccessCreateMediaKeys>
 </docs>

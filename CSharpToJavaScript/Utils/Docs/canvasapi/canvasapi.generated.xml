@@ -1,0 +1,133 @@
+<docs>
+<Canvas_API>
+<summary>
+The <strong>Canvas API</strong> provides a means for drawing graphics via <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</see> and the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
+</summary>
+<remarks>
+<para>The Canvas API largely focuses on 2D graphics. The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>, which also uses the <c>&amp;lt;canvas&amp;gt;</c> element, draws hardware-accelerated 2D and 3D graphics.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_API>
+<Canvas_APIManipulating_video_using_canvas>
+<summary>
+By combining the capabilities of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video"><c>video</c></see> element with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas"><c>canvas</c></see>, you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the &amp;quot;green screen effect&amp;quot;) using JavaScript code.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio">Learning area: HTML video and audio</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APIManipulating_video_using_canvas>
+<Canvas_APITutorial>
+<summary>
+This tutorial describes how to use the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas"><strong><c>&amp;lt;canvas&amp;gt;</c></strong></see> element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
+</summary>
+<remarks>
+<para><c>&amp;lt;canvas&amp;gt;</c> is an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> element which can be used to draw graphics via scripting (usually <see href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript">JavaScript</see>). This can, for instance, be used to draw graphs, combine photos, or create simple animations.</para><para>First introduced in WebKit by Apple for the macOS Dashboard, <c>&amp;lt;canvas&amp;gt;</c> has since been implemented in browsers. Today, all major browsers support it.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas topic page</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorial>
+<Canvas_APITutorialAdvanced_animations>
+<summary>
+In the last chapter we made some <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">basic animations</see> and got to know ways to get things moving. In this part we will have a closer look at the motion itself and are going to add some physics to make our animations more advanced.
+</summary>
+<remarks>
+<para>-<see cref="Window.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialAdvanced_animations>
+<Canvas_APITutorialApplying_styles_and_colors>
+<summary>
+In the chapter about <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">drawing shapes</see>, we used only the default line and fill styles. Here we will explore the canvas options we have at our disposal to make our drawings a little more attractive. You will learn how to add different colors, line styles, gradients, patterns and shadows to your drawings.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Canvas content is not accessible to screen readers. If the canvas is purely decorative, include <c>role=&amp;quot;presentation&amp;quot;</c> on the <c>&amp;lt;canvas&amp;gt;</c> opening tag. Otherwise, include descriptive text as the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label"><c>aria-label</c></see> attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialApplying_styles_and_colors>
+<Canvas_APITutorialBasic_animations>
+<summary>
+Probably the biggest limitation is, that once a shape gets drawn, it stays that way. If we need to move it we have to redraw it and everything that was drawn before it. It takes a lot of time to redraw complex frames and the performance depends highly on the speed of the computer it&amp;apos;s running on.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialBasic_animations>
+<Canvas_APITutorialBasic_usage>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialBasic_usage>
+<Canvas_APITutorialCompositing>
+<summary>
+In all of our <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">previous examples</see>, shapes were always drawn one on top of the other. This is more than adequate for most situations, but it limits the order in which composite shapes are built. We can, however, change this behavior by setting the <c>globalCompositeOperation</c> property. In addition, the <c>clip</c> property allows us to hide unwanted parts of shapes.
+</summary>
+<remarks>
+<c>globalCompositeOperation</c><para>We can not only draw new shapes behind existing shapes but we can also use it to mask off certain areas, clear sections from the canvas (not limited to rectangles like the <see cref="CanvasRenderingContext2D.ClearRect"/> method does) and more.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialCompositing>
+<Canvas_APITutorialDrawing_shapes>
+<summary>
+Now that we have set up our <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">canvas environment</see>, we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialDrawing_shapes>
+<Canvas_APITutorialDrawing_text>
+<summary>
+After having seen how to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">apply styles and colors</see> in the previous chapter, we will now have a look at how to draw text onto the canvas.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialDrawing_text>
+<Canvas_APITutorialFinale>
+<summary>
+Congratulations! You finished the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>! This knowledge will help you to make great 2D graphics on the web.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Finale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialFinale>
+<Canvas_APITutorialOptimizing_canvas>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialOptimizing_canvas>
+<Canvas_APITutorialPixel_manipulation_with_canvas>
+<summary>
+Until now we haven&amp;apos;t looked at the actual pixels of our canvas. With the <c>ImageData</c> object you can directly read and write a data array to manipulate pixel data. We will also look into how image smoothing (anti-aliasing) can be controlled and how to save images from your canvas.
+</summary>
+<remarks>
+<para>-<see cref="ImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</see><br/>-<see href="https://www.digitalocean.com/community/tutorials/js-canvas-toblob">Download Canvas API-Generated Images Using toBlob</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialPixel_manipulation_with_canvas>
+<Canvas_APITutorialTransformations>
+<summary>
+Earlier in this tutorial we&amp;apos;ve learned about the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">canvas grid</see> and the <strong>coordinate space</strong>. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialTransformations>
+<Canvas_APITutorialUsing_images>
+<summary>
+Until now we have created our own <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">shapes</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">applied styles</see> to them. One of the more exciting features of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> is the ability to use images. These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
+</summary>
+<remarks>
+<para>Importing images into a canvas is basically a two step process:</para><para>Let&amp;apos;s take a look at how to do this.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Canvas_APITutorialUsing_images>
+</docs>

@@ -9,27 +9,6 @@ The <strong><c>HTMLTrackElement</c></strong> interface represents an <see href="
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLTrackElement>
-<HTMLTrackElementSrclang>
-<summary>
-The <strong><c>srclang</c></strong> property of the <see cref="HTMLTrackElement"/> interface reflects the value of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#srclang"><c>srclang</c></see> attribute or the empty string if not defined.
-</summary>
-<remarks>
-<para>The <c>srclang</c> attribute is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see> indicating the language of the text track's data.</para>
-<para>-<see cref="HTMLTrackElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/srclang"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLTrackElementSrclang>
-<HTMLTrackElementLabel>
-<summary>
-The <strong><c>label</c></strong> property of the <see cref="HTMLTrackElement"/> represents the user-readable title displayed when listing subtitle, caption, and audio descriptions for a track. It reflects the {{htmlelement("track")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#label"><c>label</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see cref="HTMLTrackElement.Track"/><br/>-<see cref="HTMLTrackElement.Kind"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLTrackElementLabel>
 <HTMLTrackElementCuechange>
 <summary>
 The <strong><c>cuechange</c></strong> event fires when a <see cref="TextTrack"/> has changed the currently displaying cues. The event is fired on both the <c>TextTrack</c> and the <see cref="HTMLTrackElement"/> in which it's being presented, if any.
@@ -39,6 +18,16 @@ The <strong><c>cuechange</c></strong> event fires when a <see cref="TextTrack"/>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/cuechange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLTrackElementCuechange>
+<HTMLTrackElementDefault>
+<summary>
+The <strong><c>default</c></strong> property of the <see cref="HTMLTrackElement"/> interface represents whether the track will be enabled if the user's preferences do not indicate that another track would be more appropriate. It reflects the {{htmlelement("track")}} element's boolean <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#default"><c>default</c></see> attribute, returning <c>true</c> if present and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTrackElement.Kind"/><br/>-<see cref="HTMLTrackElement.Label"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/default"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean.</value>
+</HTMLTrackElementDefault>
 <HTMLTrackElementKind>
 <summary>
 The <strong><c>kind</c></strong> property of the <see cref="HTMLTrackElement"/> interface represents the type of track, or how the text track is meant to be used. It reflects the {{htmlelement("track")}} element's enumerated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#kind"><c>kind</c></see> attribute.
@@ -50,26 +39,16 @@ The <strong><c>kind</c></strong> property of the <see cref="HTMLTrackElement"/> 
 </remarks>
 <value>A string; lowercase <c>captions</c>, <c>descriptions</c>, <c>chapters</c>, <c>subtitles</c> or <c>metadata</c>.</value>
 </HTMLTrackElementKind>
-<HTMLTrackElementTrack>
+<HTMLTrackElementLabel>
 <summary>
-The <strong><c>track</c></strong> read-only property of the <see cref="HTMLTrackElement"/> interface returns a <see cref="TextTrack"/> object corresponding to the text track of the {{HTMLElement("track")}} element.
+The <strong><c>label</c></strong> property of the <see cref="HTMLTrackElement"/> represents the user-readable title displayed when listing subtitle, caption, and audio descriptions for a track. It reflects the {{htmlelement("track")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#label"><c>label</c></see> attribute.
 </summary>
 <remarks>
-<para>-<see cref="HTMLTrackElement"/><br/>-<see cref="TextTrack"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/track"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLTrackElement.Track"/><br/>-<see cref="HTMLTrackElement.Kind"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/label"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="TextTrack"/> object.</value>
-</HTMLTrackElementTrack>
-<HTMLTrackElementSrc>
-<summary>
-The <strong><c>src</c></strong> property of the <see cref="HTMLTrackElement"/> interface reflects the value of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#src"><c>src</c></see> attribute, which<br/>indicates the URL of the text track&amp;apos;s data.
-</summary>
-<remarks>
-<para>-<see cref="HTMLTrackElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the URL of the text track data.</value>
-</HTMLTrackElementSrc>
+<value>A string.</value>
+</HTMLTrackElementLabel>
 <HTMLTrackElementReadyState>
 <summary>
 The <strong><c>readyState</c></strong> read-only property of the <see cref="HTMLTrackElement"/> interface returns a number representing the {{HTMLElement("track")}} element's text track readiness state:
@@ -80,14 +59,35 @@ The <strong><c>readyState</c></strong> read-only property of the <see cref="HTML
 </remarks>
 <value>A number; <c>0</c>, <c>1</c>, <c>2</c>, or <c>3</c>.</value>
 </HTMLTrackElementReadyState>
-<HTMLTrackElementDefault>
+<HTMLTrackElementSrc>
 <summary>
-The <strong><c>default</c></strong> property of the <see cref="HTMLTrackElement"/> interface represents whether the track will be enabled if the user's preferences do not indicate that another track would be more appropriate. It reflects the {{htmlelement("track")}} element's boolean <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#default"><c>default</c></see> attribute, returning <c>true</c> if present and <c>false</c> otherwise.
+The <strong><c>src</c></strong> property of the <see cref="HTMLTrackElement"/> interface reflects the value of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#src"><c>src</c></see> attribute, which<br/>indicates the URL of the text track&amp;apos;s data.
 </summary>
 <remarks>
-<para>-<see cref="HTMLTrackElement.Kind"/><br/>-<see cref="HTMLTrackElement.Label"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/default"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLTrackElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean.</value>
-</HTMLTrackElementDefault>
+<value>A string containing the URL of the text track data.</value>
+</HTMLTrackElementSrc>
+<HTMLTrackElementSrclang>
+<summary>
+The <strong><c>srclang</c></strong> property of the <see cref="HTMLTrackElement"/> interface reflects the value of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track#srclang"><c>srclang</c></see> attribute or the empty string if not defined.
+</summary>
+<remarks>
+<para>The <c>srclang</c> attribute is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see> indicating the language of the text track's data.</para>
+<para>-<see cref="HTMLTrackElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/srclang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTrackElementSrclang>
+<HTMLTrackElementTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of the <see cref="HTMLTrackElement"/> interface returns a <see cref="TextTrack"/> object corresponding to the text track of the {{HTMLElement("track")}} element.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTrackElement"/><br/>-<see cref="TextTrack"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TextTrack"/> object.</value>
+</HTMLTrackElementTrack>
 </docs>

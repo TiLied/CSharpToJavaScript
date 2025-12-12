@@ -9,35 +9,6 @@ The <strong><c>ToggleEvent</c></strong> interface represents an event notifying 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ToggleEvent>
-<ToggleEventToggleEvent>
-<summary>
-The <strong><c>ToggleEvent()</c></strong> constructor creates a new <see cref="ToggleEvent"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/ToggleEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ToggleEventToggleEvent>
-<ToggleEventSource>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>source</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is an <see cref="Element"/> object instance representing the HTML popover control element that initiated the toggle.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/source"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="Element"/> object instance, or <c>null</c> if the popover was not activated by a control element.</value>
-</ToggleEventSource>
-<ToggleEventOldState>
-<summary>
-The <strong><c>oldState</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is a string representing the state the element is transitioning from.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/oldState"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. Possible values are <c>&amp;quot;open&amp;quot;</c> (the popover is going from showing to hidden) or <c>&amp;quot;closed&amp;quot;</c> (the popover going from hidden to shown).</value>
-</ToggleEventOldState>
 <ToggleEventNewState>
 <summary>
 The <strong><c>newState</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is a string representing the state the element is transitioning to.
@@ -48,4 +19,33 @@ The <strong><c>newState</c></strong> read-only property of the <see cref="Toggle
 </remarks>
 <value>A string. Possible values are <c>&amp;quot;open&amp;quot;</c> (the popover is being shown) or <c>&amp;quot;closed&amp;quot;</c> (the popover is being hidden).</value>
 </ToggleEventNewState>
+<ToggleEventOldState>
+<summary>
+The <strong><c>oldState</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is a string representing the state the element is transitioning from.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/oldState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Possible values are <c>&amp;quot;open&amp;quot;</c> (the popover is going from showing to hidden) or <c>&amp;quot;closed&amp;quot;</c> (the popover going from hidden to shown).</value>
+</ToggleEventOldState>
+<ToggleEventSource>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>source</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is an <see cref="Element"/> object instance representing the HTML popover control element that initiated the toggle.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> object instance, or <c>null</c> if the popover was not activated by a control element.</value>
+</ToggleEventSource>
+<ToggleEventToggleEvent>
+<summary>
+The <strong><c>ToggleEvent()</c></strong> constructor creates a new <see cref="ToggleEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent/ToggleEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ToggleEventToggleEvent>
 </docs>

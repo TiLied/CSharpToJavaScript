@@ -1,0 +1,21 @@
+<docs>
+<File_System_API>
+<summary>
+The <strong>File System API</strong> — with extensions provided via the <see href="https://wicg.github.io/file-system-access/"><strong>File System Access API</strong></see> to access files on the device file system — allows read, write and file management capabilities.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API#relationship_to_other_file-related_apis">Relationship to other file-related APIs</see> for a comparison between this API, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see>, and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API">File API</see>.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/>-<see href="https://web.dev/articles/origin-private-file-system">The origin private file system</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</File_System_API>
+<File_System_APIOrigin_private_file_system>
+<summary>
+The <strong>origin private file system</strong> (OPFS) is a storage endpoint provided as part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see>, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/origin-private-file-system">The origin private file system</see> on web.dev<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</File_System_APIOrigin_private_file_system>
+</docs>

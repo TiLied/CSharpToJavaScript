@@ -8,15 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HIDInputReportEvent>
-<HIDInputReportEventReportId>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reportId</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns the one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/reportId"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A one-byte identification prefix.</value>
-</HIDInputReportEventReportId>
 <HIDInputReportEventData>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>data</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns a {{jsxref("DataView")}} containing the data from the input report, excluding the <c>reportId</c> if the HID interface uses report IDs.
@@ -35,4 +26,13 @@
 </remarks>
 <value>An <see cref="HIDDevice"/>.</value>
 </HIDInputReportEventDevice>
+<HIDInputReportEventReportId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reportId</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns the one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/reportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A one-byte identification prefix.</value>
+</HIDInputReportEventReportId>
 </docs>

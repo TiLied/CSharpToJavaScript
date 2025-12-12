@@ -28,16 +28,16 @@
 </remarks>
 <value>A <see cref="DOMHighResTimeStamp"/>.</value>
 </PerformanceLongAnimationFrameTimingFirstUIEventTimestamp>
-<PerformanceLongAnimationFrameTimingStyleAndLayoutStart>
+<PerformanceLongAnimationFrameTimingRenderStart>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>styleAndLayoutStart</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>renderStart</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the start time of the rendering cycle, which includes <see cref="Window.RequestAnimationFrame"/> callbacks, style and layout calculation, <see cref="ResizeObserver"/> callbacks, and <see cref="IntersectionObserver"/> callbacks.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceScriptTiming"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongAnimationFrameTiming/styleAndLayoutStart"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongAnimationFrameTiming/renderStart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="DOMHighResTimeStamp"/>.</value>
-</PerformanceLongAnimationFrameTimingStyleAndLayoutStart>
+</PerformanceLongAnimationFrameTimingRenderStart>
 <PerformanceLongAnimationFrameTimingScripts>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>scripts</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns an array of <see cref="PerformanceScriptTiming"/> objects.
@@ -49,16 +49,16 @@
 </remarks>
 <value>An array of <see cref="PerformanceScriptTiming"/> objects.</value>
 </PerformanceLongAnimationFrameTimingScripts>
-<PerformanceLongAnimationFrameTimingRenderStart>
+<PerformanceLongAnimationFrameTimingStyleAndLayoutStart>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>renderStart</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the start time of the rendering cycle, which includes <see cref="Window.RequestAnimationFrame"/> callbacks, style and layout calculation, <see cref="ResizeObserver"/> callbacks, and <see cref="IntersectionObserver"/> callbacks.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>styleAndLayoutStart</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceScriptTiming"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongAnimationFrameTiming/renderStart"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongAnimationFrameTiming/styleAndLayoutStart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="DOMHighResTimeStamp"/>.</value>
-</PerformanceLongAnimationFrameTimingRenderStart>
+</PerformanceLongAnimationFrameTimingStyleAndLayoutStart>
 <PerformanceLongAnimationFrameTimingToJSON>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceLongAnimationFrameTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <c>PerformanceLongAnimationFrameTiming</c> object.

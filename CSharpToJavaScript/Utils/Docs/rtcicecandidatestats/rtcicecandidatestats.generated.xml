@@ -8,82 +8,6 @@ The <strong><c>RTCIceCandidateStats</c></strong> dictionary of the <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceCandidateStats>
-<RTCIceCandidateStatsUrl>
-<summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>url</c></strong> property specifies the URL of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> server from which the described candidate was obtained. This<br/>property is <strong>only</strong> available for local candidates.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string specifying the URL of the ICE server from which the<br/>candidate described by the <c>RTCIceCandidateStats</c> was obtained. This is the<br/>same URL that would be received in the <see cref="RTCPeerConnection.Icecandidate"/> event's<br/><see cref="RTCPeerConnectionIceEvent.Url"/> property.<blockquote class="NOTE"><h5>NOTE</h5>This property does not exist for remote candidates.</blockquote></value>
-</RTCIceCandidateStatsUrl>
-<RTCIceCandidateStatsFoundation>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>foundation</c></strong> property of the <see cref="RTCIceCandidateStats"/> interface is a string that allows correlation of candidates from a common network path on multiple <see cref="RTCIceTransport"/> objects.
-</summary>
-<remarks>
-<para>It is the same for two candidates that are of the same type, are using the same transport protocol, originate from the same IP address, use ports that fall within the same range, and come from the same STUN server.</para><para>For more information see <see cref="RTCIceCandidate.Foundation"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/foundation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the <see cref="RTCIceCandidate.Foundation"/> of the corresponding <see cref="RTCIceCandidate"/>.</value>
-</RTCIceCandidateStatsFoundation>
-<RTCIceCandidateStatsPriority>
-<summary>
-The <strong><c>priority</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a positive integer value indicating the priority (or desirability) of the described candidate.
-</summary>
-<remarks>
-<para>-{{RFC(5245, &amp;quot;&amp;quot;, &amp;quot;4.1.2.1&amp;quot;)}}: Recommended Formula section in the ICE specification<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive integer indicating the priority of the <see cref="RTCIceCandidate"/> described by the <c>RTCIceCandidateStats</c> object.<br/>The value may be anywhere from 1 to 2,147,483,647.</value>
-</RTCIceCandidateStatsPriority>
-<RTCIceCandidateStatsTransportId>
-<summary>
-The <strong><c>transportId</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string that uniquely identifies the transport that produced the <see cref="RTCTransportStats"/> from which information about this candidate was taken.
-</summary>
-<remarks>
-<para>This can be used, for example, to compare candidates that use the same transport.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string whose value uniquely identifies the transport from which any transport-related information accumulated in the <see cref="RTCIceCandidateStats"/> was taken.</value>
-</RTCIceCandidateStatsTransportId>
-<RTCIceCandidateStatsRelayProtocol>
-<summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>relayProtocol</c></strong> property specifies the protocol being used<br/>by a local <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate to communicate with the <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see><br/>server.
-</summary>
-<remarks>
-<para>The ICE protocol being used by the candidate otherwise can be obtained from the<br/><see cref="RTCIceCandidateStats.Protocol"/> property.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string identifying the protocol being used by the endpoint to<br/>communicate with the TURN server. The possible values are:<blockquote class="NOTE"><h5>NOTE</h5>This property is only present on<br/><see cref="RTCIceCandidateStats"/> objects that represent local candidates.</blockquote></value>
-</RTCIceCandidateStatsRelayProtocol>
-<RTCIceCandidateStatsDeleted>
-<summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>deleted</c></strong> property indicates whether or not the candidate<br/>has been deleted or released.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean value indicating whether or not the candidate has been deleted or released.<br/>If this value is <c>true</c>, the candidate described by the<br/><see cref="RTCIceCandidateStats"/> object is no longer under consideration. The exact<br/>meaning varies depending on the type of candidate:The net result is the same; the candidate is no longer under consideration if this<br/>value is <c>true</c>.</value>
-</RTCIceCandidateStatsDeleted>
-<RTCIceCandidateStatsCandidateType>
-<summary>
-The <strong><c>candidateType</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string that indicates the type of {{Glossary("ICE")}} candidate the object represents.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string whose value is one of the strings found in <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type#value"><c>RTCIceCandidate.type</c></see>.</value>
-</RTCIceCandidateStatsCandidateType>
-<RTCIceCandidateStatsProtocol>
-<summary>
-The <strong><c>protocol</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary indicates the protocol the specified candidate would use for communication with the remote peer.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The value is one of the following strings:</value>
-</RTCIceCandidateStatsProtocol>
 <RTCIceCandidateStatsAddress>
 <summary>
 The <strong><c>address</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary indicates the address of the {{Glossary("ICE")}} candidate.<br/>While it&amp;apos;s preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well.
@@ -94,35 +18,34 @@ The <strong><c>address</c></strong> property of the <see cref="RTCIceCandidateSt
 </remarks>
 <value>Either an IPv4 or IPv6 address or a fully-qualified domain name, which corresponds to the candidate.</value>
 </RTCIceCandidateStatsAddress>
-<RTCIceCandidateStatsType>
+<RTCIceCandidateStatsCandidateType>
 <summary>
-The <strong><c>type</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string with the value <c>&amp;quot;local-candidate&amp;quot;</c>.
+The <strong><c>candidateType</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string that indicates the type of {{Glossary("ICE")}} candidate the object represents.
 </summary>
 <remarks>
-<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;local-candidate&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCIceCandidateStats"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/type"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string with the value <c>&amp;quot;local-candidate&amp;quot;</c>.</value>
-</RTCIceCandidateStatsType>
-<RTCIceCandidateStatsPort>
+<value>A string whose value is one of the strings found in <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type#value"><c>RTCIceCandidate.type</c></see>.</value>
+</RTCIceCandidateStatsCandidateType>
+<RTCIceCandidateStatsDeleted>
 <summary>
-The <strong><c>port</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary specifies the network port used by the candidate.
+The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>deleted</c></strong> property indicates whether or not the candidate<br/>has been deleted or released.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the network port used by the <see cref="RTCIceCandidate"/> described by this <c>RTCIceCandidateStats</c> object.<br/>Corresponds to <see cref="RTCIceCandidate.Port"/>.</value>
-</RTCIceCandidateStatsPort>
-<RTCIceCandidateStatsUsernameFragment>
+<value>A Boolean value indicating whether or not the candidate has been deleted or released.<br/>If this value is <c>true</c>, the candidate described by the<br/><see cref="RTCIceCandidateStats"/> object is no longer under consideration. The exact<br/>meaning varies depending on the type of candidate:The net result is the same; the candidate is no longer under consideration if this<br/>value is <c>true</c>.</value>
+</RTCIceCandidateStatsDeleted>
+<RTCIceCandidateStatsFoundation>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usernameFragment</c></strong> property of the <see cref="RTCIceCandidateStats"/> interface is a string that represents the {{Glossary("ICE")}} username fragment ("ice-ufrag").
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>foundation</c></strong> property of the <see cref="RTCIceCandidateStats"/> interface is a string that allows correlation of candidates from a common network path on multiple <see cref="RTCIceTransport"/> objects.
 </summary>
 <remarks>
-<para>The fragment uniquely identifies a single ICE interaction session, and can be used to identify communications that are part of the same session even across ICE restarts.</para><para>For more information see <see cref="RTCIceCandidate.UsernameFragment"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/usernameFragment"> <em>See also on MDN</em> </seealso></para>
+<para>It is the same for two candidates that are of the same type, are using the same transport protocol, originate from the same IP address, use ports that fall within the same range, and come from the same STUN server.</para><para>For more information see <see cref="RTCIceCandidate.Foundation"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/foundation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the <see cref="RTCIceCandidate.UsernameFragment"/> of the corresponding <see cref="RTCIceCandidate"/>.</value>
-</RTCIceCandidateStatsUsernameFragment>
+<value>A string representing the <see cref="RTCIceCandidate.Foundation"/> of the corresponding <see cref="RTCIceCandidate"/>.</value>
+</RTCIceCandidateStatsFoundation>
 <RTCIceCandidateStatsId>
 <summary>
 The <strong><c>id</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
@@ -133,6 +56,44 @@ The <strong><c>id</c></strong> property of the <see cref="RTCIceCandidateStats"/
 </remarks>
 <value>A string that uniquely identifies the object for which this <c>RTCIceCandidateStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
 </RTCIceCandidateStatsId>
+<RTCIceCandidateStatsPort>
+<summary>
+The <strong><c>port</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary specifies the network port used by the candidate.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the network port used by the <see cref="RTCIceCandidate"/> described by this <c>RTCIceCandidateStats</c> object.<br/>Corresponds to <see cref="RTCIceCandidate.Port"/>.</value>
+</RTCIceCandidateStatsPort>
+<RTCIceCandidateStatsPriority>
+<summary>
+The <strong><c>priority</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a positive integer value indicating the priority (or desirability) of the described candidate.
+</summary>
+<remarks>
+<para>-{{RFC(5245, &amp;quot;&amp;quot;, &amp;quot;4.1.2.1&amp;quot;)}}: Recommended Formula section in the ICE specification<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the priority of the <see cref="RTCIceCandidate"/> described by the <c>RTCIceCandidateStats</c> object.<br/>The value may be anywhere from 1 to 2,147,483,647.</value>
+</RTCIceCandidateStatsPriority>
+<RTCIceCandidateStatsProtocol>
+<summary>
+The <strong><c>protocol</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary indicates the protocol the specified candidate would use for communication with the remote peer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value is one of the following strings:</value>
+</RTCIceCandidateStatsProtocol>
+<RTCIceCandidateStatsRelayProtocol>
+<summary>
+The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>relayProtocol</c></strong> property specifies the protocol being used<br/>by a local <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate to communicate with the <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see><br/>server.
+</summary>
+<remarks>
+<para>The ICE protocol being used by the candidate otherwise can be obtained from the<br/><see cref="RTCIceCandidateStats.Protocol"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the protocol being used by the endpoint to<br/>communicate with the TURN server. The possible values are:<blockquote class="NOTE"><h5>NOTE</h5>This property is only present on<br/><see cref="RTCIceCandidateStats"/> objects that represent local candidates.</blockquote></value>
+</RTCIceCandidateStatsRelayProtocol>
 <RTCIceCandidateStatsTimestamp>
 <summary>
 The <strong><c>timestamp</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
@@ -142,4 +103,43 @@ The <strong><c>timestamp</c></strong> property of the <see cref="RTCIceCandidate
 </remarks>
 <value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
 </RTCIceCandidateStatsTimestamp>
+<RTCIceCandidateStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string that uniquely identifies the transport that produced the <see cref="RTCTransportStats"/> from which information about this candidate was taken.
+</summary>
+<remarks>
+<para>This can be used, for example, to compare candidates that use the same transport.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value uniquely identifies the transport from which any transport-related information accumulated in the <see cref="RTCIceCandidateStats"/> was taken.</value>
+</RTCIceCandidateStatsTransportId>
+<RTCIceCandidateStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCIceCandidateStats"/> dictionary is a string with the value <c>&amp;quot;local-candidate&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;local-candidate&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCIceCandidateStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>&amp;quot;local-candidate&amp;quot;</c>.</value>
+</RTCIceCandidateStatsType>
+<RTCIceCandidateStatsUrl>
+<summary>
+The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>url</c></strong> property specifies the URL of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> server from which the described candidate was obtained. This<br/>property is <strong>only</strong> available for local candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the URL of the ICE server from which the<br/>candidate described by the <c>RTCIceCandidateStats</c> was obtained. This is the<br/>same URL that would be received in the <see cref="RTCPeerConnection.Icecandidate"/> event's<br/><see cref="RTCPeerConnectionIceEvent.Url"/> property.<blockquote class="NOTE"><h5>NOTE</h5>This property does not exist for remote candidates.</blockquote></value>
+</RTCIceCandidateStatsUrl>
+<RTCIceCandidateStatsUsernameFragment>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usernameFragment</c></strong> property of the <see cref="RTCIceCandidateStats"/> interface is a string that represents the {{Glossary("ICE")}} username fragment ("ice-ufrag").
+</summary>
+<remarks>
+<para>The fragment uniquely identifies a single ICE interaction session, and can be used to identify communications that are part of the same session even across ICE restarts.</para><para>For more information see <see cref="RTCIceCandidate.UsernameFragment"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/usernameFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the <see cref="RTCIceCandidate.UsernameFragment"/> of the corresponding <see cref="RTCIceCandidate"/>.</value>
+</RTCIceCandidateStatsUsernameFragment>
 </docs>

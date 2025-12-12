@@ -9,61 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VREyeParameters>
-<VREyeParametersMaximumFieldOfView>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>maximumFieldOfView</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the maximum supported field of view for the current eye.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see cref="VRFieldOfView"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/maximumFieldOfView"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="VRFieldOfView"/> object.</value>
-</VREyeParametersMaximumFieldOfView>
-<VREyeParametersOffset>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>offset</c></strong> read-only property of the <see cref="VREyeParameters"/> interface represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This value should represent half the user&amp;apos;s interpupillary distance (IPD), but may also represent the distance from the center point of the headset to the center point of the lens for the given eye.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/offset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Float32Array"/> representing a vector describing the offset from the center point between the users eyes to the center of the eye in meters.<blockquote class="NOTE"><h5>NOTE</h5>Values for the left eye will be negative; values for the right eye will be positive.</blockquote></value>
-</VREyeParametersOffset>
-<VREyeParametersRenderWidth>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderWidth</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the recommended render target width of each eye viewport, in pixels.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This is already in device pixel units, so there&amp;apos;s no need to multiply by <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</see> before setting to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/width">HTMLCanvasElement.width.</see></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/renderWidth"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number, representing the width in pixels.</value>
-</VREyeParametersRenderWidth>
-<VREyeParametersRenderHeight>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderHeight</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the recommended render target height of each eye viewport, in pixels.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This is already in device pixel units, so there&amp;apos;s no need to multiply by <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</see> before setting to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/height">HTMLCanvasElement.height.</see></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/renderHeight"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number, representing the height in pixels.</value>
-</VREyeParametersRenderHeight>
-<VREyeParametersMinimumFieldOfView>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>minimumFieldOfView</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the minimum supported field of view for the current eye.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see cref="VRFieldOfView"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/minimumFieldOfView"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="VRFieldOfView"/> object.</value>
-</VREyeParametersMinimumFieldOfView>
 <VREyeParametersFieldOfView>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>fieldOfView</c></strong> read-only property of the <see cref="VREyeParameters"/> interface returns a <see cref="VRFieldOfView"/> object describing the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
@@ -75,4 +20,59 @@
 </remarks>
 <value>A <see cref="VRFieldOfView"/> object.</value>
 </VREyeParametersFieldOfView>
+<VREyeParametersMaximumFieldOfView>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>maximumFieldOfView</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the maximum supported field of view for the current eye.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see cref="VRFieldOfView"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/maximumFieldOfView"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VRFieldOfView"/> object.</value>
+</VREyeParametersMaximumFieldOfView>
+<VREyeParametersMinimumFieldOfView>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>minimumFieldOfView</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the minimum supported field of view for the current eye.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see cref="VRFieldOfView"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/minimumFieldOfView"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VRFieldOfView"/> object.</value>
+</VREyeParametersMinimumFieldOfView>
+<VREyeParametersOffset>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>offset</c></strong> read-only property of the <see cref="VREyeParameters"/> interface represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This value should represent half the user&amp;apos;s interpupillary distance (IPD), but may also represent the distance from the center point of the headset to the center point of the lens for the given eye.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/offset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/> representing a vector describing the offset from the center point between the users eyes to the center of the eye in meters.<blockquote class="NOTE"><h5>NOTE</h5>Values for the left eye will be negative; values for the right eye will be positive.</blockquote></value>
+</VREyeParametersOffset>
+<VREyeParametersRenderHeight>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderHeight</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the recommended render target height of each eye viewport, in pixels.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This is already in device pixel units, so there&amp;apos;s no need to multiply by <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</see> before setting to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/height">HTMLCanvasElement.height.</see></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/renderHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, representing the height in pixels.</value>
+</VREyeParametersRenderHeight>
+<VREyeParametersRenderWidth>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderWidth</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the recommended render target width of each eye viewport, in pixels.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This is already in device pixel units, so there&amp;apos;s no need to multiply by <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</see> before setting to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/width">HTMLCanvasElement.width.</see></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/renderWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, representing the width in pixels.</value>
+</VREyeParametersRenderWidth>
 </docs>

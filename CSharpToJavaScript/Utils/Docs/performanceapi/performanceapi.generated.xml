@@ -1,0 +1,86 @@
+<docs>
+<Performance_API>
+<summary>
+The Performance API is a group of standards used to measure the performance of web applications.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance">Web performance</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance">Learn: Web performance</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_API>
+<Performance_APIHigh_precision_timing>
+<summary>
+The Performance API allows high precision measurements that are based on time in potential sub-millisecond resolution and a stable monotonic clock that is not subject to system clock skew or adjustments.<br/>The high resolution timers are needed for accurate benchmarking instead of the less precise and non-monotonic <see cref="Date"/> timestamps.
+</summary>
+<remarks>
+<para>This page provides an overview about how high precision time works within the Performance API and how it compares to <see cref="Date"/> timestamps.</para><c>DOMHighResTimeStamp</c><para>High precision timing is achieved by using the <see cref="DOMHighResTimeStamp"/> type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds, the browser can represent the value as a time in milliseconds accurate to a millisecond. This might occur because of hardware/software constraints, or security and privacy reasons. For more information, see the section on <see href="https://developer.mozilla.org#reduced_precision">reduced precision</see> below.</para><para>All timestamps in the Performance API use the <see cref="DOMHighResTimeStamp"/> type. Previously, the Performance API (and other Web APIs) used the <c>EpochTimeStamp</c> type (previously known as <c>DOMTimeStamp</c>). These types are now discouraged.</para><c>Performance.now()</c>
+<para>-<see cref="DOMHighResTimeStamp"/><br/>-<see cref="Performance.TimeOrigin"/><br/>-<see cref="Performance.Now"/> / {{jsxref("Date.now()")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/High_precision_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIHigh_precision_timing>
+<Performance_APILong_animation_frame_timing>
+<summary>
+<strong>Long animation frames</strong> (LoAFs) can impact the user experience of a website. They can cause slow user interface (UI) updates, resulting in seemingly unresponsive controls and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Jank">janky</see> (or non-smooth) animated effects and scrolling, leading to user frustration. The <see href="https://w3c.github.io/long-animation-frames/">Long Animation Frames API</see> allows developers to get information about the long animation frames and better understand their root causes. This article shows how to use the Long Animation Frames API.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/optimize-long-tasks">Optimize long tasks</see> on web.dev (2024)<br/>-<see href="https://github.com/w3c/long-animation-frames#where-long-tasks-fall-short">Where long tasks fall short</see>, Long Animation Frames API explainer (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APILong_animation_frame_timing>
+<Performance_APIMonitoring_bfcache_blocking_reasons>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="PerformanceNavigationTiming.NotRestoredReasons"/> property reports information on why the current document was blocked from using the {{Glossary("bfcache")}} on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/WICG/bfcache-not-restored-reason/blob/main/NotRestoredReason.md"><c>notRestoredReasons</c> API Explainer</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/>-<see cref="NotRestoredReasons"/><br/><blockquote class="NOTE"><h5>NOTE</h5>This article is adapted from <see href="https://developer.chrome.com/docs/web-platform/bfcache-notrestoredreasons/">Back/forward cache notRestoredReasons API</see> by Chris Mills and Barry Pollard, originally published on <c>developer.chrome.com</c> in 2023 under the <see href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</see>.</blockquote></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIMonitoring_bfcache_blocking_reasons>
+<Performance_APINavigation_timing>
+<summary>
+Only the current document is included, so usually there is only one <see cref="PerformanceNavigationTiming"/> object to observe. It extends the <see cref="PerformanceEntry"/> interface with the <see cref="PerformanceEntry.EntryType"/> of <c>&amp;quot;navigation&amp;quot;</c> and also inherits from <see cref="PerformanceResourceTiming"/>, so all of the timestamps from the process of fetching the document are available as well.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="PerformanceNavigationTiming"/><br/>-<see cref="PerformanceResourceTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Navigation_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APINavigation_timing>
+<Performance_APIPerformance_data>
+<summary>
+The Performance API measures and exposes performance data that can be collected as performance metrics for your web application. It provides methods to observe aspects of application performance. It doesn&amp;apos;t provide performance data analysis, or visualizations. However, the Performance API is integrated well with developer tools in browsers and its data is often sent to analytics end points and libraries to record performance metrics which help you to evaluate the data to find performance bottlenecks affecting your users.
+</summary>
+<remarks>
+<para>This page provides an overview about what sorts of Performance API data exists, how it is collected, and how it can be accessed.</para>
+<para>-<see cref="PerformanceEntry"/><br/>-<see cref="PerformanceObserver.Observe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Performance_data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIPerformance_data>
+<Performance_APIResource_timing>
+<summary>
+Resource Timing is part of the Performance API and enables retrieving and analyzing detailed network timing data for the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource (such as an image or a script) either implicitly as part of page load or explicitly from JavaScript, for example using the <see cref="Windowfetch"/> API.
+</summary>
+<remarks>
+<para>Every resource on a document will be represented by a <see cref="PerformanceResourceTiming"/> entry (extending the <see cref="PerformanceEntry"/> interface) with the <see cref="PerformanceEntry.EntryType"/> of <c>&amp;quot;resource&amp;quot;</c>.</para><para>For each <c>PerformanceResourceTiming</c> entry, a <strong>resource loading timeline</strong> will be recorded, with {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;high-resolution timestamps&amp;quot;, &amp;quot;&amp;quot;, 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, and so on. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.</para>
+<para>-<see cref="PerformanceResourceTiming"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/>-<see cref="Performance.SetResourceTimingBufferSize"/><br/>-<see cref="Performance.ClearResourceTimings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Resource_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIResource_timing>
+<Performance_APIServer_timing>
+<summary>
+Server-Timing is a part of the Performance API and allows servers to communicate metrics about the request-response cycle to the user agent. You can collect this information and act on server-side metrics in the same way as all the other metrics processed with the Performance API.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Server_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIServer_timing>
+<Performance_APIUser_timing>
+<summary>
+User Timing is part of the Performance API and allows you to measure the performance of applications using <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp">high-precision timestamps</see> that are part of the browser&amp;apos;s performance timeline.<br/>There are two types of timing performance entries:
+</summary>
+<remarks>
+<para>-<see cref="Performance"/><br/>-<see cref="PerformanceMark"/><br/>-<see cref="PerformanceMeasure"/><br/>-<see cref="PerformanceEntry"/><br/>-<see cref="PerformanceObserver"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/User_timing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Performance_APIUser_timing>
+</docs>

@@ -1,0 +1,32 @@
+<docs>
+<Media_Capture_and_Streams_API>
+<summary>
+The <strong>Media Capture and Streams</strong> API, often called the <strong>Media Streams API</strong> or <strong>MediaStream API</strong>, is an API related to <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> which provides support for streaming audio and video data.
+</summary>
+<remarks>
+<para>It provides the interfaces and methods for working with the streams and their constituent tracks, the constraints associated with data formats, the success and error callbacks when using the data asynchronously, and the events that are fired during the process.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">Taking still photos with WebRTC</see>: a demonstration and tutorial about using <c>getUserMedia()</c>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Capture_and_Streams_API>
+<Media_Capture_and_Streams_APIConstraints>
+<summary>
+This article discusses the twin concepts of <strong>constraints</strong> and <strong>capabilities</strong>, as well as media settings, and includes an example we call the <see href="https://developer.mozilla.org#example_constraint_exerciser">Constraint Exerciser</see>. The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer&amp;apos;s A/V input devices (such as its webcam and microphone).
+</summary>
+<remarks>
+<para>Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement <see href="https://developer.mozilla.org/en-US/docs/Glossary/polyfill">polyfill</see> to patch the holes in the implementation on your behalf.</para><para>Capabilities and constraints let the browser and website or app exchange information about what <strong>constrainable properties</strong> the browser&amp;apos;s implementation supports and what values it supports for each.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaTrackConstraints"/><br/>-<see cref="MediaTrackSettings"/><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Capture_and_Streams_APIConstraints>
+<Media_Capture_and_Streams_APITaking_still_photos>
+<summary>
+This article shows how to use <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"><c>navigator.mediaDevices.getUserMedia()</c></see> to access the camera on a computer or mobile phone with <c>getUserMedia()</c> support and take a photo with it.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.orgweb-rtc-demo.png">getUserMedia-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo</see></para><para>You can also jump straight to the <see href="https://developer.mozilla.org#demo">Demo</see> if you like.</para>
+<para>-<see cref="MediaDevices.GetUserMedia"/><br/>-<see cref="CanvasRenderingContext2D.DrawImage"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video">Using frames from a video</see> in the Canvas tutorial<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Capture_and_Streams_APITaking_still_photos>
+</docs>

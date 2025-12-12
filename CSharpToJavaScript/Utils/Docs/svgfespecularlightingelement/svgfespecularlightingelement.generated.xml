@@ -9,38 +9,6 @@ The <strong><c>SVGFESpecularLightingElement</c></strong> interface corresponds t
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFESpecularLightingElement>
-<SVGFESpecularLightingElementWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see> element, which lights a source graphic using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFESpecularLightingElement.Height"/><br/>-<see cref="SVGFEDiffuseLightingElement"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/lighting-color">lighting-color</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFESpecularLightingElementWidth>
-<SVGFESpecularLightingElementSpecularConstant>
-<summary>
-The <strong><c>specularConstant</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the {{SVGAttr("specularConstant")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/specularConstant"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFESpecularLightingElementSpecularConstant>
-<SVGFESpecularLightingElementX>
-<summary>
-The <strong><c>x</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see> element, which lights a source graphic using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFESpecularLightingElement.Y"/><br/>-<see cref="SVGFEDiffuseLightingElement"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/lighting-color">lighting-color</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFESpecularLightingElementX>
 <SVGFESpecularLightingElementHeight>
 <summary>
 The <strong><c>height</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -52,17 +20,16 @@ The <strong><c>height</c></strong> read-only property of the <see cref="SVGFESpe
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFESpecularLightingElementHeight>
-<SVGFESpecularLightingElementKernelUnitLengthY>
+<SVGFESpecularLightingElementIn1>
 <summary>
-The <strong><c>kernelUnitLengthY</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the y value of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
 </summary>
 <remarks>
-<para>The <c>kernelUnitLength</c> attribute indicates the intended distance in current filter units, specified by the <c>primitiveUnits</c> attribute, for the x and y coordinates. It contains one or two values, with the y value defaulting to x if not present, and the <c>kernelUnitLengthY</c> property gets and sets the last value.</para>
-<para>-<see cref="SVGFeSpecularLightingElement.KernelUnitLengthX"/><br/>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/kernelUnitLengthY"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/in1"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object that corresponds to the Y-component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.</value>
-</SVGFESpecularLightingElementKernelUnitLengthY>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFESpecularLightingElementIn1>
 <SVGFESpecularLightingElementKernelUnitLengthX>
 <summary>
 The <strong><c>kernelUnitLengthX</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the x value of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
@@ -74,6 +41,17 @@ The <strong><c>kernelUnitLengthX</c></strong> read-only property of the <see cre
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/> object that corresponds to the X-component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.</value>
 </SVGFESpecularLightingElementKernelUnitLengthX>
+<SVGFESpecularLightingElementKernelUnitLengthY>
+<summary>
+The <strong><c>kernelUnitLengthY</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the y value of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
+</summary>
+<remarks>
+<para>The <c>kernelUnitLength</c> attribute indicates the intended distance in current filter units, specified by the <c>primitiveUnits</c> attribute, for the x and y coordinates. It contains one or two values, with the y value defaulting to x if not present, and the <c>kernelUnitLengthY</c> property gets and sets the last value.</para>
+<para>-<see cref="SVGFeSpecularLightingElement.KernelUnitLengthX"/><br/>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/kernelUnitLengthY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object that corresponds to the Y-component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.</value>
+</SVGFESpecularLightingElementKernelUnitLengthY>
 <SVGFESpecularLightingElementResult>
 <summary>
 The <strong><c>result</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
@@ -85,16 +63,16 @@ The <strong><c>result</c></strong> read-only property of the <see cref="SVGFESpe
 </remarks>
 <value>An <see cref="SVGAnimatedString"/>.</value>
 </SVGFESpecularLightingElementResult>
-<SVGFESpecularLightingElementIn1>
+<SVGFESpecularLightingElementSpecularConstant>
 <summary>
-The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
+The <strong><c>specularConstant</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the {{SVGAttr("specularConstant")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
 </summary>
 <remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/in1"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/specularConstant"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFESpecularLightingElementIn1>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpecularLightingElementSpecularConstant>
 <SVGFESpecularLightingElementSpecularExponent>
 <summary>
 The <strong><c>specularExponent</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface reflects the {{SVGAttr("specularExponent")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
@@ -115,6 +93,28 @@ The <strong><c>surfaceScale</c></strong> read-only property of the <see cref="SV
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/> object.</value>
 </SVGFESpecularLightingElementSurfaceScale>
+<SVGFESpecularLightingElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see> element, which lights a source graphic using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFESpecularLightingElement.Height"/><br/>-<see cref="SVGFEDiffuseLightingElement"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/lighting-color">lighting-color</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFESpecularLightingElementWidth>
+<SVGFESpecularLightingElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see> element, which lights a source graphic using the alpha channel as a bump map. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFESpecularLightingElement.Y"/><br/>-<see cref="SVGFEDiffuseLightingElement"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/lighting-color">lighting-color</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFESpecularLightingElementX>
 <SVGFESpecularLightingElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFESpecularLightingElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

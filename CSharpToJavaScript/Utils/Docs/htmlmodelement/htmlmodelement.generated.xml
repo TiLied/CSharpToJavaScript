@@ -9,16 +9,6 @@ The <strong><c>HTMLModElement</c></strong> interface provides special properties
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLModElement>
-<HTMLModElementDateTime>
-<summary>
-The <strong><c>dateTime</c></strong> property of the <see cref="HTMLModElement"/> interface is a string containing a machine-readable date with an optional time value. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time#datetime"><c>datetime</c></see> HTML attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">del</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">ins</see> elements.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">del</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">ins</see><br/>-<see cref="HTMLModElement"/><br/>-<see cref="HTMLModElement.Cite"/><br/>-<see cref="HTMLTimeElement.DateTime"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings">Date strings</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings">Local date and time strings</see><br/>-<see cref="Date"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement/dateTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. For valid string formats, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values"><c>datetime</c> valid values</see>.</value>
-</HTMLModElementDateTime>
 <HTMLModElementCite>
 <summary>
 The <strong><c>cite</c></strong> property of the <see cref="HTMLModElement"/> interface indicates the URL of the resource explaining the modification. It reflects the <c>cite</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">del</see> element and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">ins</see> elements.
@@ -29,4 +19,14 @@ The <strong><c>cite</c></strong> property of the <see cref="HTMLModElement"/> in
 </remarks>
 <value>A string representing a URL.</value>
 </HTMLModElementCite>
+<HTMLModElementDateTime>
+<summary>
+The <strong><c>dateTime</c></strong> property of the <see cref="HTMLModElement"/> interface is a string containing a machine-readable date with an optional time value. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time#datetime"><c>datetime</c></see> HTML attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">del</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">ins</see> elements.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">del</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">ins</see><br/>-<see cref="HTMLModElement"/><br/>-<see cref="HTMLModElement.Cite"/><br/>-<see cref="HTMLTimeElement.DateTime"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings">Date strings</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings">Local date and time strings</see><br/>-<see cref="Date"/><br/>-<see cref="Element.InsertAdjacentElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement/dateTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. For valid string formats, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values"><c>datetime</c> valid values</see>.</value>
+</HTMLModElementDateTime>
 </docs>

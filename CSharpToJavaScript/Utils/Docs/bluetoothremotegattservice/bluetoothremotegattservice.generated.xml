@@ -8,15 +8,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BluetoothRemoteGATTService>
-<BluetoothRemoteGATTServiceIsPrimary>
+<BluetoothRemoteGATTServiceDevice>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.isPrimary</c></strong> read-only property<br/>returns a boolean value that indicates whether this is a primary service. If it<br/>is not a primary service, it is a secondary service.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.device</c></strong> read-only property<br/>returns information about a Bluetooth device through an instance of<br/><see cref="BluetoothDevice"/>.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value.</value>
-</BluetoothRemoteGATTServiceIsPrimary>
+<value>An instance of <see cref="BluetoothDevice"/>.</value>
+</BluetoothRemoteGATTServiceDevice>
 <BluetoothRemoteGATTServiceGetCharacteristic>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.getCharacteristic()</c></strong> method<br/>returns a <see cref="Promise"/> to an instance of<br/><see cref="BluetoothRemoteGATTCharacteristic"/> for a given universally unique identifier<br/>(UUID).
@@ -35,15 +35,15 @@
 </remarks>
 <returns>A <see cref="Promise"/> to an<br/>{{jsxref("Array")}} of <see cref="BluetoothRemoteGATTCharacteristic"/> instances.</returns>
 </BluetoothRemoteGATTServiceGetCharacteristics>
-<BluetoothRemoteGATTServiceDevice>
+<BluetoothRemoteGATTServiceIsPrimary>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.device</c></strong> read-only property<br/>returns information about a Bluetooth device through an instance of<br/><see cref="BluetoothDevice"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.isPrimary</c></strong> read-only property<br/>returns a boolean value that indicates whether this is a primary service. If it<br/>is not a primary service, it is a secondary service.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An instance of <see cref="BluetoothDevice"/>.</value>
-</BluetoothRemoteGATTServiceDevice>
+<value>A boolean value.</value>
+</BluetoothRemoteGATTServiceIsPrimary>
 <BluetoothRemoteGATTServiceUuid>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothGATTService.uuid</c></strong> read-only property<br/>returns a string representing the UUID of this service.

@@ -8,24 +8,6 @@ The <strong><c>TrustedTypePolicy</c></strong> interface of the {{domxref(&amp;qu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TrustedTypePolicy>
-<TrustedTypePolicyCreateScriptURL>
-<summary>
-The <strong><c>createScriptURL()</c></strong> method of the <see cref="TrustedTypePolicy"/> interface creates a <see cref="TrustedScriptURL"/> object using a policy created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy/createScriptURL"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="TrustedScriptURL"/> object.</returns>
-</TrustedTypePolicyCreateScriptURL>
-<TrustedTypePolicyCreateScript>
-<summary>
-The <strong><c>createScript()</c></strong> method of the <see cref="TrustedTypePolicy"/> interface creates a <see cref="TrustedScript"/> object using a policy created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy/createScript"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="TrustedScript"/> object.</returns>
-</TrustedTypePolicyCreateScript>
 <TrustedTypePolicyCreateHTML>
 <summary>
 The <strong><c>createHTML()</c></strong> method of the <see cref="TrustedTypePolicy"/> interface creates a <see cref="TrustedHTML"/> object using a policy created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/>.
@@ -35,6 +17,24 @@ The <strong><c>createHTML()</c></strong> method of the <see cref="TrustedTypePol
 </remarks>
 <returns>A <see cref="TrustedHTML"/> object.</returns>
 </TrustedTypePolicyCreateHTML>
+<TrustedTypePolicyCreateScript>
+<summary>
+The <strong><c>createScript()</c></strong> method of the <see cref="TrustedTypePolicy"/> interface creates a <see cref="TrustedScript"/> object using a policy created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy/createScript"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="TrustedScript"/> object.</returns>
+</TrustedTypePolicyCreateScript>
+<TrustedTypePolicyCreateScriptURL>
+<summary>
+The <strong><c>createScriptURL()</c></strong> method of the <see cref="TrustedTypePolicy"/> interface creates a <see cref="TrustedScriptURL"/> object using a policy created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy/createScriptURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="TrustedScriptURL"/> object.</returns>
+</TrustedTypePolicyCreateScriptURL>
 <TrustedTypePolicyName>
 <summary>
 The <strong><c>name</c></strong> read-only property of the <see cref="TrustedTypePolicy"/> interface returns the name of the policy.

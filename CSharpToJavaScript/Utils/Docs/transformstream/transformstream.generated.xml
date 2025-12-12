@@ -18,6 +18,14 @@ The <strong><c>readable</c></strong> read-only property of the <see cref="Transf
 </remarks>
 <value>A <see cref="ReadableStream"/>.</value>
 </TransformStreamReadable>
+<TransformStreamTransformStream>
+<summary>
+The <strong><c>TransformStream()</c></strong> constructor creates a new <see cref="TransformStream"/> object which represents a pair of streams: a <see cref="WritableStream"/> representing the writable side, and a <see cref="ReadableStream"/> representing the readable side.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream/TransformStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TransformStreamTransformStream>
 <TransformStreamWritable>
 <summary>
 The <strong><c>writable</c></strong> read-only property of the <see cref="TransformStream"/> interface returns the <see cref="WritableStream"/> instance controlled by this <c>TransformStream</c>.
@@ -27,12 +35,4 @@ The <strong><c>writable</c></strong> read-only property of the <see cref="Transf
 </remarks>
 <value>A <see cref="WritableStream"/>.</value>
 </TransformStreamWritable>
-<TransformStreamTransformStream>
-<summary>
-The <strong><c>TransformStream()</c></strong> constructor creates a new <see cref="TransformStream"/> object which represents a pair of streams: a <see cref="WritableStream"/> representing the writable side, and a <see cref="ReadableStream"/> representing the readable side.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream/TransformStream"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</TransformStreamTransformStream>
 </docs>

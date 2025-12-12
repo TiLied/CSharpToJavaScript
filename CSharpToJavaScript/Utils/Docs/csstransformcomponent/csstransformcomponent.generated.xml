@@ -7,6 +7,15 @@ The <strong><c>CSSTransformComponent</c></strong> interface of the <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformComponent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSTransformComponent>
+<CSSTransformComponentIs2D>
+<summary>
+The <strong><c>is2D</c></strong> read-only property of the <see cref="CSSTransformComponent"/> interface indicates where the transform is 2D or 3D.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformComponent/is2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. True indicating the transform is a 2D transform, false if it is a 3D<br/>transform.</value>
+</CSSTransformComponentIs2D>
 <CSSTransformComponentToMatrix>
 <summary>
 The <strong><c>toMatrix()</c></strong> method of the<br/><see cref="CSSTransformComponent"/> interface returns a <see cref="'DOMMatrix'"/><br/>object.
@@ -26,13 +35,4 @@ The <strong><c>toString()</c></strong> method of the <see cref="CSSTransformComp
 </remarks>
 <returns>A string in the form of a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform function</see>.This will use the value of <c>is2D</c> to return either a 2D or 3D transform. For example if the component represents <see cref="CSSRotate"/> and <c>is2D</c> is false then the string returned will be in the form of the CSS transformation <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d"><c>rotate3D()</c></see> function. If true the string returned will be in the form of the 2-dimensional <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate"><c>rotate3D()</c></see> function.</returns>
 </CSSTransformComponentToString>
-<CSSTransformComponentIs2D>
-<summary>
-The <strong><c>is2D</c></strong> read-only property of the <see cref="CSSTransformComponent"/> interface indicates where the transform is 2D or 3D.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformComponent/is2D"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean. True indicating the transform is a 2D transform, false if it is a 3D<br/>transform.</value>
-</CSSTransformComponentIs2D>
 </docs>

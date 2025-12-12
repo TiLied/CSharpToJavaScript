@@ -1,0 +1,21 @@
+<docs>
+<Encoding_API>
+<summary>
+The <strong>Encoding API</strong> enables web developers to work with text that is represented in <see href="https://developer.mozilla.org/en-US/docs/Glossary/character encoding">character encoding</see> systems other than the encoding used internally by JavaScript strings. In particular, it enables developers to convert text between JavaScript strings and the <see href="https://developer.mozilla.org/en-US/docs/Glossary/UTF-8">UTF-8</see> encoding that is used for most documents on the web.
+</summary>
+<remarks>
+<para>It provides two mechanisms:</para><para>Note that these operations are asymmetrical: encoding only encodes to UTF-8, while decoding can decode UTF-8 but also <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API/Encodings">many legacy encoding systems</see>.</para><para>The API provides synchronous interfaces for encoding and decoding, and also <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">stream-based</see> encoders and decoders, which could be used to, for example, decode text as it arrives over a network connection.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API/Encodings">Encoding API Encodings</see> - Encodings that must be supported for decoding text.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Encoding_API>
+<Encoding_APIEncodings>
+<summary>
+The constructors for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API">Encoding API</see> interfaces <see cref="TextDecoder"/> and <see cref="TextDecoderStream"/> can be passed an optional <c>label</c> argument, which identifies the encoding to be used.
+</summary>
+<remarks>
+<para>The following table lists all encoding labels that user agents must support, along with the encoding that the label identifies. Note that most encodings have more than one label.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API/Encodings"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Encoding_APIEncodings>
+</docs>

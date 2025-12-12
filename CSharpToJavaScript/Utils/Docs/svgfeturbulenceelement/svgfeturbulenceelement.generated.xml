@@ -9,6 +9,15 @@ The <strong><c>SVGFETurbulenceElement</c></strong> interface corresponds to the 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFETurbulenceElement>
+<SVGFETurbulenceElementBaseFrequencyX>
+<summary>
+The <strong><c>baseFrequencyX</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the X component of the {{SVGAttr("baseFrequency")}} attribute of the given {{SVGElement("feTurbulence")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/baseFrequencyX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedInteger"/> object.</value>
+</SVGFETurbulenceElementBaseFrequencyX>
 <SVGFETurbulenceElementBaseFrequencyY>
 <summary>
 The <strong><c>baseFrequencyY</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the Y component of the {{SVGAttr("baseFrequency")}} attribute of the given {{SVGElement("feTurbulence")}} element.
@@ -18,47 +27,6 @@ The <strong><c>baseFrequencyY</c></strong> read-only property of the <see cref="
 </remarks>
 <value>An <see cref="SVGAnimatedInteger"/> object.</value>
 </SVGFETurbulenceElementBaseFrequencyY>
-<SVGFETurbulenceElementWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeTurbulence">feTurbulence</see> element, which allows the synthesis of artificial textures. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFETurbulenceElement.Height"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFETurbulenceElementWidth>
-<SVGFETurbulenceElementSeed>
-<summary>
-The <strong><c>seed</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("seed")}} attribute of the given {{SVGElement("feTurbulence")}} element.
-</summary>
-<remarks>
-<para>It sets a numeric seed for the random generation of the fractal noise or turbulence effect.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/seed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFETurbulenceElementSeed>
-<SVGFETurbulenceElementX>
-<summary>
-The <strong><c>x</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeTurbulence">feTurbulence</see> element, which allows the synthesis of artificial textures. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFETurbulenceElement.Y"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFETurbulenceElementX>
-<SVGFETurbulenceElementNumOctaves>
-<summary>
-The <strong><c>numOctaves</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("numOctaves")}} attribute of the given {{SVGElement("feTurbulence")}} element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/numOctaves"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedInteger"/> object.</value>
-</SVGFETurbulenceElementNumOctaves>
 <SVGFETurbulenceElementHeight>
 <summary>
 The <strong><c>height</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -70,24 +38,15 @@ The <strong><c>height</c></strong> read-only property of the <see cref="SVGFETur
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFETurbulenceElementHeight>
-<SVGFETurbulenceElementBaseFrequencyX>
+<SVGFETurbulenceElementNumOctaves>
 <summary>
-The <strong><c>baseFrequencyX</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the X component of the {{SVGAttr("baseFrequency")}} attribute of the given {{SVGElement("feTurbulence")}} element.
+The <strong><c>numOctaves</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("numOctaves")}} attribute of the given {{SVGElement("feTurbulence")}} element.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/baseFrequencyX"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/numOctaves"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="SVGAnimatedInteger"/> object.</value>
-</SVGFETurbulenceElementBaseFrequencyX>
-<SVGFETurbulenceElementStitchTiles>
-<summary>
-The <strong><c>stitchTiles</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("stitchTiles")}} attribute of the given {{SVGElement("feTurbulence")}} element. It takes one of the <c>SVG_STITCHTYPE_*</c> constants defined on this interface.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/stitchTiles"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFETurbulenceElementStitchTiles>
+</SVGFETurbulenceElementNumOctaves>
 <SVGFETurbulenceElementResult>
 <summary>
 The <strong><c>result</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
@@ -99,6 +58,25 @@ The <strong><c>result</c></strong> read-only property of the <see cref="SVGFETur
 </remarks>
 <value>An <see cref="SVGAnimatedString"/>.</value>
 </SVGFETurbulenceElementResult>
+<SVGFETurbulenceElementSeed>
+<summary>
+The <strong><c>seed</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("seed")}} attribute of the given {{SVGElement("feTurbulence")}} element.
+</summary>
+<remarks>
+<para>It sets a numeric seed for the random generation of the fractal noise or turbulence effect.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/seed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFETurbulenceElementSeed>
+<SVGFETurbulenceElementStitchTiles>
+<summary>
+The <strong><c>stitchTiles</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("stitchTiles")}} attribute of the given {{SVGElement("feTurbulence")}} element. It takes one of the <c>SVG_STITCHTYPE_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/stitchTiles"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFETurbulenceElementStitchTiles>
 <SVGFETurbulenceElementType>
 <summary>
 The <strong><c>type</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface reflects the {{SVGAttr("type")}} attribute of the given {{SVGElement("feTurbulence")}} element. It takes one of the <c>SVG_TURBULENCE_TYPE_*</c> constants defined on this interface.
@@ -108,6 +86,28 @@ The <strong><c>type</c></strong> read-only property of the <see cref="SVGFETurbu
 </remarks>
 <value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
 </SVGFETurbulenceElementType>
+<SVGFETurbulenceElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeTurbulence">feTurbulence</see> element, which allows the synthesis of artificial textures. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFETurbulenceElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFETurbulenceElementWidth>
+<SVGFETurbulenceElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeTurbulence">feTurbulence</see> element, which allows the synthesis of artificial textures. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFETurbulenceElement.Y"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFETurbulenceElementX>
 <SVGFETurbulenceElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFETurbulenceElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

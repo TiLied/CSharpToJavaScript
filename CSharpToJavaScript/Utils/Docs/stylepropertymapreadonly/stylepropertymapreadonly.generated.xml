@@ -16,24 +16,6 @@ The <strong><c>StylePropertyMapReadOnly.entries()</c></strong> method returns an
 </remarks>
 <returns>An array of the given <c>StylePropertyMapReadOnly</c> object&amp;apos;s own enumerable<br/>property <c>[key, value]</c> pairs.</returns>
 </StylePropertyMapReadOnlyEntries>
-<StylePropertyMapReadOnlyHas>
-<summary>
-The <strong><c>has()</c></strong> method of the<br/><see cref="StylePropertyMapReadOnly"/> interface indicates whether the specified<br/>property is in the <c>StylePropertyMapReadOnly</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value.</returns>
-</StylePropertyMapReadOnlyHas>
-<StylePropertyMapReadOnlyGetAll>
-<summary>
-The <strong><c>getAll()</c></strong> method of the<br/><see cref="StylePropertyMapReadOnly"/> interface returns an array of<br/><see cref="CSSStyleValue"/> objects containing the values for the provided property.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/getAll"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of <see cref="CSSStyleValue"/> objects.</returns>
-</StylePropertyMapReadOnlyGetAll>
 <StylePropertyMapReadOnlyForEach>
 <summary>
 The <strong><c>StylePropertyMapReadOnly.forEach()</c></strong> method executes a<br/>provided function once for each element of <see cref="'StylePropertyMapReadOnly'"/>.
@@ -43,15 +25,6 @@ The <strong><c>StylePropertyMapReadOnly.forEach()</c></strong> method executes a
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </StylePropertyMapReadOnlyForEach>
-<StylePropertyMapReadOnlySize>
-<summary>
-The <strong><c>size</c></strong> read-only property of the<br/><see cref="StylePropertyMapReadOnly"/> interface returns an unsigned long integer<br/>containing the size of the <c>StylePropertyMapReadOnly</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An unsigned long integer.</value>
-</StylePropertyMapReadOnlySize>
 <StylePropertyMapReadOnlyGet>
 <summary>
 The <strong><c>get()</c></strong> method of the<br/><see cref="StylePropertyMapReadOnly"/> interface returns a <see cref="CSSStyleValue"/><br/>object for the first value of the specified property.
@@ -62,6 +35,24 @@ The <strong><c>get()</c></strong> method of the<br/><see cref="StylePropertyMapR
 </remarks>
 <returns>A <see cref="CSSStyleValue"/> object.</returns>
 </StylePropertyMapReadOnlyGet>
+<StylePropertyMapReadOnlyGetAll>
+<summary>
+The <strong><c>getAll()</c></strong> method of the<br/><see cref="StylePropertyMapReadOnly"/> interface returns an array of<br/><see cref="CSSStyleValue"/> objects containing the values for the provided property.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="CSSStyleValue"/> objects.</returns>
+</StylePropertyMapReadOnlyGetAll>
+<StylePropertyMapReadOnlyHas>
+<summary>
+The <strong><c>has()</c></strong> method of the<br/><see cref="StylePropertyMapReadOnly"/> interface indicates whether the specified<br/>property is in the <c>StylePropertyMapReadOnly</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value.</returns>
+</StylePropertyMapReadOnlyHas>
 <StylePropertyMapReadOnlyKeys>
 <summary>
 The <strong><c>StylePropertyMapReadOnly.keys()</c></strong> method returns a new<br/><strong>array iterator</strong> containing the keys for each item<br/>in <c>StylePropertyMapReadOnly</c>
@@ -71,6 +62,15 @@ The <strong><c>StylePropertyMapReadOnly.keys()</c></strong> method returns a new
 </remarks>
 <returns>A new <see cref="Array"/>.</returns>
 </StylePropertyMapReadOnlyKeys>
+<StylePropertyMapReadOnlySize>
+<summary>
+The <strong><c>size</c></strong> read-only property of the<br/><see cref="StylePropertyMapReadOnly"/> interface returns an unsigned long integer<br/>containing the size of the <c>StylePropertyMapReadOnly</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned long integer.</value>
+</StylePropertyMapReadOnlySize>
 <StylePropertyMapReadOnlyValues>
 <summary>
 The <strong><c>StylePropertyMapReadOnly.values()</c></strong> method returns a<br/>new <strong>array iterator</strong> containing the values for each index in the<br/><c>StylePropertyMapReadOnly</c> object.

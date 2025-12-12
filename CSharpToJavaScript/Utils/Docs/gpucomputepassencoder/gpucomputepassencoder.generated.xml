@@ -9,38 +9,36 @@ The <strong><c>GPUComputePassEncoder</c></strong> interface of the {{domxref(&am
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUComputePassEncoder>
-<GPUComputePassEncoderPopDebugGroup>
+<GPUComputePassEncoderDispatchWorkgroups>
 <summary>
-The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface ends a compute pass debug group, which is begun with a <see cref="GPUComputePassEncoder.PushDebugGroup"/> call.
+The <strong><c>dispatchWorkgroups()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface dispatches a specific grid of workgroups to perform the work being done by the current <see cref="GPUComputePipeline"/> (i.e., set via <see cref="GPUComputePassEncoder.SetPipeline"/>).
 </summary>
 <remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroups"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderPopDebugGroup>
-<GPUComputePassEncoderSetBindGroup>
+</GPUComputePassEncoderDispatchWorkgroups>
+<GPUComputePassEncoderDispatchWorkgroupsIndirect>
 <summary>
-The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent compute commands, for a given index.
+The <strong><c>dispatchWorkgroupsIndirect()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface dispatches a grid of workgroups, defined by the parameters of a <see cref="GPUBuffer"/>, to perform the work being done by the current <see cref="GPUComputePipeline"/> (i.e., set via <see cref="GPUComputePassEncoder.SetPipeline"/>).
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderSetBindGroup>
-<GPUComputePassEncoderLabel>
+</GPUComputePassEncoderDispatchWorkgroupsIndirect>
+<GPUComputePassEncoderEnd>
 <summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUComputePassEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+The <strong><c>end()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface completes recording of the current compute pass command sequence.
 </summary>
 <remarks>
-<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUCommandEncoder.BeginComputePass"/> call, or you can get and set it directly on the <c>GPUComputePassEncoder</c> object.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/label"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/end"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPUComputePassEncoderLabel>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUComputePassEncoderEnd>
 <GPUComputePassEncoderInsertDebugMarker>
 <summary>
 The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface marks a specific point in a series of encoded compute pass commands with a label.
@@ -52,46 +50,28 @@ The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPU
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPUComputePassEncoderInsertDebugMarker>
-<GPUComputePassEncoderDispatchWorkgroups>
+<GPUComputePassEncoderLabel>
 <summary>
-The <strong><c>dispatchWorkgroups()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface dispatches a specific grid of workgroups to perform the work being done by the current <see cref="GPUComputePipeline"/> (i.e., set via <see cref="GPUComputePassEncoder.SetPipeline"/>).
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUComputePassEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
 </summary>
 <remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUCommandEncoder.BeginComputePass"/> call, or you can get and set it directly on the <c>GPUComputePassEncoder</c> object.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroups"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/label"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderDispatchWorkgroups>
-<GPUComputePassEncoderSetPipeline>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPUComputePassEncoderLabel>
+<GPUComputePassEncoderPopDebugGroup>
 <summary>
-The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface sets the <see cref="GPUComputePipeline"/> to use for this compute pass.
+The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface ends a compute pass debug group, which is begun with a <see cref="GPUComputePassEncoder.PushDebugGroup"/> call.
 </summary>
 <remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderSetPipeline>
-<GPUComputePassEncoderEnd>
-<summary>
-The <strong><c>end()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface completes recording of the current compute pass command sequence.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/end"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderEnd>
-<GPUComputePassEncoderDispatchWorkgroupsIndirect>
-<summary>
-The <strong><c>dispatchWorkgroupsIndirect()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface dispatches a grid of workgroups, defined by the parameters of a <see cref="GPUBuffer"/>, to perform the work being done by the current <see cref="GPUComputePipeline"/> (i.e., set via <see cref="GPUComputePassEncoder.SetPipeline"/>).
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUComputePassEncoderDispatchWorkgroupsIndirect>
+</GPUComputePassEncoderPopDebugGroup>
 <GPUComputePassEncoderPushDebugGroup>
 <summary>
 The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface begins a compute pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPUComputePassEncoder.PopDebugGroup"/> method is invoked.
@@ -103,4 +83,24 @@ The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPUCom
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPUComputePassEncoderPushDebugGroup>
+<GPUComputePassEncoderSetBindGroup>
+<summary>
+The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent compute commands, for a given index.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUComputePassEncoderSetBindGroup>
+<GPUComputePassEncoderSetPipeline>
+<summary>
+The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPUComputePassEncoder"/> interface sets the <see cref="GPUComputePipeline"/> to use for this compute pass.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUComputePassEncoderSetPipeline>
 </docs>

@@ -9,16 +9,16 @@ The <strong><c>SVGMaskElement</c></strong> interface provides access to the prop
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGMaskElement>
-<SVGMaskElementWidth>
+<SVGMaskElementHeight>
 <summary>
-The read-only <strong><c>width</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("width")}} attribute of the {{SVGElement("mask")}}.
+The read-only <strong><c>height</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("mask")}}.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/width"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/height"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>width</c> value.</value>
-</SVGMaskElementWidth>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>height</c> value.</value>
+</SVGMaskElementHeight>
 <SVGMaskElementMaskContentUnits>
 <summary>
 The read-only <strong><c>maskContentUnits</c></strong> property of the <see cref="SVGMaskElement"/> interface reflects the {{SVGAttr("maskContentUnits")}} attribute. It indicates which coordinate system to use for the contents of the {{SVGElement("mask")}} element.
@@ -30,26 +30,6 @@ The read-only <strong><c>maskContentUnits</c></strong> property of the <see cref
 </remarks>
 <value>An <see cref="SVGAnimatedEnumeration"/> representing the coordinate system. The possible values are defined in the <see cref="SVGUnitTypes"/> interface:</value>
 </SVGMaskElementMaskContentUnits>
-<SVGMaskElementX>
-<summary>
-The read-only <strong><c>x</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("x")}} attribute of the {{SVGElement("mask")}}. It represents the x-axis coordinate of the <strong>top-left</strong> corner of the masking area.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/> object in the coordinate system defined by <see cref="SVGMaskElement.MaskUnits"/>. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the initial <c>x</c> value.</value>
-</SVGMaskElementX>
-<SVGMaskElementHeight>
-<summary>
-The read-only <strong><c>height</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("mask")}}.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>height</c> value.</value>
-</SVGMaskElementHeight>
 <SVGMaskElementMaskUnits>
 <summary>
 The read-only <strong><c>maskUnits</c></strong> property of the <see cref="SVGMaskElement"/> interface reflects the {{SVGAttr("maskUnits")}} attribute of a {{SVGElement("mask")}} element which defines the coordinate system to use for the mask of the element.
@@ -61,6 +41,26 @@ The read-only <strong><c>maskUnits</c></strong> property of the <see cref="SVGMa
 </remarks>
 <value>An <see cref="SVGAnimatedEnumeration"/> representing the coordinate system. The possible values are defined in the <see cref="SVGUnitTypes"/> interface:</value>
 </SVGMaskElementMaskUnits>
+<SVGMaskElementWidth>
+<summary>
+The read-only <strong><c>width</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("width")}} attribute of the {{SVGElement("mask")}}.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>width</c> value.</value>
+</SVGMaskElementWidth>
+<SVGMaskElementX>
+<summary>
+The read-only <strong><c>x</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("x")}} attribute of the {{SVGElement("mask")}}. It represents the x-axis coordinate of the <strong>top-left</strong> corner of the masking area.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object in the coordinate system defined by <see cref="SVGMaskElement.MaskUnits"/>. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the initial <c>x</c> value.</value>
+</SVGMaskElementX>
 <SVGMaskElementY>
 <summary>
 The read-only <strong><c>y</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("y")}} attribute of the {{SVGElement("mask")}}. It represents the y-axis coordinate of the <strong>top-left</strong> corner of the masking area.

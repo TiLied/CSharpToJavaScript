@@ -9,6 +9,16 @@ The <strong><c>HTMLAllCollection</c></strong> interface represents a collection 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLAllCollection>
+<HTMLAllCollectionItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="HTMLAllCollection"/> interface returns the element located at the specified offset into the collection, or the element with the specified value for its <c>id</c> or <c>name</c> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCollection.Item"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If <c>nameOrIndex</c> represents an index, <c>item()</c> returns the <see cref="Element"/> at the specified index, or <c>null</c> if <c>nameOrIndex</c> is less than zero or greater than or equal to the length property. If <c>nameOrIndex</c> represents a name, <c>item()</c> returns the same value as <see cref="HTMLAllCollectionnamedItem"/>.</returns>
+</HTMLAllCollectionItem>
 <HTMLAllCollectionLength>
 <summary>
 The <strong><c>HTMLAllCollection.length</c></strong> property returns the number of items in this <see cref="HTMLAllCollection"/>.
@@ -28,14 +38,4 @@ The <strong><c>namedItem()</c></strong> method of the <see cref="HTMLAllCollecti
 </remarks>
 <returns>The first <see cref="Element"/> in the <see cref="HTMLAllCollection"/> matching the <c>name</c>, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>, if there are none.</returns>
 </HTMLAllCollectionNamedItem>
-<HTMLAllCollectionItem>
-<summary>
-The <strong><c>item()</c></strong> method of the <see cref="HTMLAllCollection"/> interface returns the element located at the specified offset into the collection, or the element with the specified value for its <c>id</c> or <c>name</c> attribute.
-</summary>
-<remarks>
-<para>-<see cref="HTMLCollection.Item"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection/item"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>If <c>nameOrIndex</c> represents an index, <c>item()</c> returns the <see cref="Element"/> at the specified index, or <c>null</c> if <c>nameOrIndex</c> is less than zero or greater than or equal to the length property. If <c>nameOrIndex</c> represents a name, <c>item()</c> returns the same value as <see cref="HTMLAllCollectionnamedItem"/>.</returns>
-</HTMLAllCollectionItem>
 </docs>

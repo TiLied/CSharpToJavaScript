@@ -19,6 +19,16 @@ The <strong><c>disconnect()</c></strong> method of the<br/><see cref="ReportingO
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ReportingObserverDisconnect>
+<ReportingObserverObserve>
+<summary>
+The <strong><c>observe()</c></strong> method of the<br/><see cref="ReportingObserver"/> interface instructs a reporting observer to start<br/>collecting reports in its report queue.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/observe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ReportingObserverObserve>
 <ReportingObserverReportingObserver>
 <summary>
 The <strong><c>ReportingObserver()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> creates a new<br/><see cref="ReportingObserver"/> object instance, which can be used to collect and<br/>access reports.
@@ -38,14 +48,4 @@ The <strong><c>takeRecords()</c></strong> method of the<br/><see cref="Reporting
 </remarks>
 <returns>An array of <see cref="Report"/> objects.</returns>
 </ReportingObserverTakeRecords>
-<ReportingObserverObserve>
-<summary>
-The <strong><c>observe()</c></strong> method of the<br/><see cref="ReportingObserver"/> interface instructs a reporting observer to start<br/>collecting reports in its report queue.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/observe"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ReportingObserverObserve>
 </docs>

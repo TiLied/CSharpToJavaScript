@@ -1,0 +1,12 @@
+<docs>
+<Clipboard_API>
+<summary>
+The <strong>Clipboard API</strong> provides the ability to respond to clipboard commands (cut, copy, and paste), as well as to asynchronously read from and write to the system clipboard.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Use this API in preference to the deprecated <see cref="Document.ExecCommand"/> method for accessing the clipboard.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This API is <strong>not available</strong> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see> (not exposed via <see cref="WorkerNavigator"/>).</para></blockquote>
+<para>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Clipboard_API>
+</docs>

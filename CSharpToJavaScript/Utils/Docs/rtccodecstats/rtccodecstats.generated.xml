@@ -9,27 +9,6 @@ The <strong><c>RTCCodecStats</c></strong> dictionary of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCCodecStats>
-<RTCCodecStatsMimeType>
-<summary>
-The <strong><c>mimeType</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string containing the codec's {{glossary("MIME type")}} and subtype.
-</summary>
-<remarks>
-<para>This is of the form <c>&amp;quot;type/subtype&amp;quot;</c>, such as &amp;quot;video/VP8&amp;quot; or &amp;quot;audio/opus&amp;quot;, as defined in the <see href="https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2">IANA registry of valid MIME types</see>.</para>
-<para>-<c>codecs.mimeType</c> option in parameter passed to <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#mimetype"><c>RTCRtpTransceiver.setCodecPreferences()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters#mimetype"><c>RTCRtpSender.setParameters()</c></see>.<br/>-<c>codecs.mimeType</c> in object returned by <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters#mimetype"><c>RTCRtpSender.getParameters()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters#mimetype"><c>RTCRtpReceiver.getParameters()</c></see>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/mimeType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string indicating the code MIME type/subtype.</value>
-</RTCCodecStatsMimeType>
-<RTCCodecStatsTransportId>
-<summary>
-The <strong><c>transportId</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string that contains the unique identifier of the corresponding transport on which this codec is being used.
-</summary>
-<remarks>
-<para>You can correlate the codec and associated transport statistics by matching the <c>RTCCodecStats.transportId</c> with an <see cref="RTCTransportStats.Id"/> value.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/transportId"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string that uniquely identifies a matching <see cref="RTCTransportStats"/> object using its <c>id</c>.</value>
-</RTCCodecStatsTransportId>
 <RTCCodecStatsChannels>
 <summary>
 The <strong><c>channels</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a positive number containing the number of channels supported by the codec.
@@ -51,6 +30,27 @@ The <strong><c>clockRate</c></strong> property of the <see cref="RTCCodecStats"/
 </remarks>
 <value>A positive number indicating the media sampling rate.</value>
 </RTCCodecStatsClockRate>
+<RTCCodecStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCCodecStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCCodecStatsId>
+<RTCCodecStatsMimeType>
+<summary>
+The <strong><c>mimeType</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string containing the codec's {{glossary("MIME type")}} and subtype.
+</summary>
+<remarks>
+<para>This is of the form <c>&amp;quot;type/subtype&amp;quot;</c>, such as &amp;quot;video/VP8&amp;quot; or &amp;quot;audio/opus&amp;quot;, as defined in the <see href="https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2">IANA registry of valid MIME types</see>.</para>
+<para>-<c>codecs.mimeType</c> option in parameter passed to <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#mimetype"><c>RTCRtpTransceiver.setCodecPreferences()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters#mimetype"><c>RTCRtpSender.setParameters()</c></see>.<br/>-<c>codecs.mimeType</c> in object returned by <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters#mimetype"><c>RTCRtpSender.getParameters()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters#mimetype"><c>RTCRtpReceiver.getParameters()</c></see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/mimeType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the code MIME type/subtype.</value>
+</RTCCodecStatsMimeType>
 <RTCCodecStatsPayloadType>
 <summary>
 The <strong><c>payloadType</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a positive integer in the range from 0 to 127 that describes the format of the {{glossary("RTP")}} payload used in RTP encoding or decoding.
@@ -72,6 +72,25 @@ The <strong><c>sdpFmtpLine</c></strong> property of the <see cref="RTCCodecStats
 </remarks>
 <value>A string containing the format-specific parameters of the codec.</value>
 </RTCCodecStatsSdpFmtpLine>
+<RTCCodecStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCCodecStatsTimestamp>
+<RTCCodecStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string that contains the unique identifier of the corresponding transport on which this codec is being used.
+</summary>
+<remarks>
+<para>You can correlate the codec and associated transport statistics by matching the <c>RTCCodecStats.transportId</c> with an <see cref="RTCTransportStats.Id"/> value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies a matching <see cref="RTCTransportStats"/> object using its <c>id</c>.</value>
+</RTCCodecStatsTransportId>
 <RTCCodecStatsType>
 <summary>
 The <strong><c>type</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string with the value <c>&amp;quot;codec&amp;quot;</c>.
@@ -82,23 +101,4 @@ The <strong><c>type</c></strong> property of the <see cref="RTCCodecStats"/> dic
 </remarks>
 <value>A string with the value <c>&amp;quot;codec&amp;quot;</c>.</value>
 </RTCCodecStatsType>
-<RTCCodecStatsId>
-<summary>
-The <strong><c>id</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
-</summary>
-<remarks>
-<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/id"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string that uniquely identifies the object for which this <c>RTCCodecStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
-</RTCCodecStatsId>
-<RTCCodecStatsTimestamp>
-<summary>
-The <strong><c>timestamp</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/timestamp"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
-</RTCCodecStatsTimestamp>
 </docs>

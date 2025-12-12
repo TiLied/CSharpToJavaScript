@@ -1,0 +1,37 @@
+<docs>
+<Web_components>
+<summary>
+Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_components>
+<Web_componentsUsing_custom_elements>
+<summary>
+One of the key features of web components is the ability to create <strong>custom elements</strong>: that is, HTML elements whose behavior is defined by the web developer, that extend the set of elements available in the browser.
+</summary>
+<remarks>
+<para>This article introduces custom elements, and walks through some examples.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_componentsUsing_custom_elements>
+<Web_componentsUsing_shadow_DOM>
+<summary>
+An important aspect of custom elements is encapsulation, because a custom element, by definition, is a piece of reusable functionality: it might be dropped into any web page and be expected to work. So it&amp;apos;s important that code running in the page should not be able to accidentally break a custom element by modifying its internal implementation. Shadow DOM enables you to attach a DOM tree to an element, and have the internals of this tree hidden from JavaScript and CSS running in the page.
+</summary>
+<remarks>
+<para>This article covers the basics of using the shadow DOM.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Using custom elements</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots">Using templates and slots</see><br/>-<see cref="Element.AttachShadow"/><br/>-<see cref="ShadowRoot.AdoptedStyleSheets"/><br/>-<see cref="CSSStyleSheet.Replace"/><br/>-<see cref="CSSStyleSheet.ReplaceSync"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">template</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scoping">CSS scoping</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host">:host</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host_function">:host_function</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context">:host-context</see><br/>-{{CSSXref(&amp;quot;::slotted&amp;quot;, &amp;quot;::slotted()&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_shadow_parts">CSS shadow parts</see> module<br/>-{{CSSXref(&amp;quot;::part&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_componentsUsing_shadow_DOM>
+<Web_componentsUsing_templates_and_slots>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_componentsUsing_templates_and_slots>
+</docs>

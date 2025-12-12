@@ -9,24 +9,15 @@ The <strong><c>CSSKeyframesRule</c></strong> interface describes an object repre
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSKeyframesRule>
-<CSSKeyframesRuleDeleteRule>
+<CSSKeyframesRuleAppendRule>
 <summary>
-The <strong><c>deleteRule()</c></strong> method of the <see cref="CSSKeyframeRule"/> interface deletes the <see cref="CSSKeyFrameRule"/> that matches the specified keyframe selector.
+The <strong><c>appendRule()</c></strong> method of the <see cref="CSSKeyframeRule"/> interface appends a <see cref="CSSKeyFrameRule"/> to the end of the rules.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/deleteRule"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/appendRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CSSKeyframesRuleDeleteRule>
-<CSSKeyframesRuleLength>
-<summary>
-The read-only <strong><c>length</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns the number of <see cref="CSSKeyframeRule"/> objects in its list. You can then access each keyframe rule by its index directly on the <c>CSSKeyframeRule</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A non-negative integer. It should have the same value as the <c>length</c> of the <see cref="CSSKeyframesRule.CssRules"/> property.</value>
-</CSSKeyframesRuleLength>
+</CSSKeyframesRuleAppendRule>
 <CSSKeyframesRuleCssRules>
 <summary>
 The read-only <strong><c>cssRules</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns a <see cref="CSSRuleList"/> containing the rules in the keyframes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
@@ -37,15 +28,15 @@ The read-only <strong><c>cssRules</c></strong> property of the <see cref="CSSKey
 </remarks>
 <value>A <see cref="'CSSRuleList'"/>.</value>
 </CSSKeyframesRuleCssRules>
-<CSSKeyframesRuleAppendRule>
+<CSSKeyframesRuleDeleteRule>
 <summary>
-The <strong><c>appendRule()</c></strong> method of the <see cref="CSSKeyframeRule"/> interface appends a <see cref="CSSKeyFrameRule"/> to the end of the rules.
+The <strong><c>deleteRule()</c></strong> method of the <see cref="CSSKeyframeRule"/> interface deletes the <see cref="CSSKeyFrameRule"/> that matches the specified keyframe selector.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/appendRule"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/deleteRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</CSSKeyframesRuleAppendRule>
+</CSSKeyframesRuleDeleteRule>
 <CSSKeyframesRuleFindRule>
 <summary>
 The <strong><c>findRule()</c></strong> method of the <see cref="CSSKeyframeRule"/> interface finds the <see cref="CSSKeyFrameRule"/> that matches the specified keyframe selector.
@@ -55,6 +46,15 @@ The <strong><c>findRule()</c></strong> method of the <see cref="CSSKeyframeRule"
 </remarks>
 <returns>A <see cref="CSSKeyframeRule"/> which is the last matching rule. If no rules are found, nothing is returned.</returns>
 </CSSKeyframesRuleFindRule>
+<CSSKeyframesRuleLength>
+<summary>
+The read-only <strong><c>length</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns the number of <see cref="CSSKeyframeRule"/> objects in its list. You can then access each keyframe rule by its index directly on the <c>CSSKeyframeRule</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative integer. It should have the same value as the <c>length</c> of the <see cref="CSSKeyframesRule.CssRules"/> property.</value>
+</CSSKeyframesRuleLength>
 <CSSKeyframesRuleName>
 <summary>
 The <strong><c>name</c></strong> property of the <see cref="CSSKeyframeRule"/> interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.

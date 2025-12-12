@@ -8,15 +8,15 @@ The <strong><c>MediaList</c></strong> interface represents the media queries of 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaList>
-<MediaListMediaText>
+<MediaListAppendMedium>
 <summary>
-The <strong><c>mediaText</c></strong> property of the <see cref="MediaList"/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string representing the<br/><c>MediaList</c> as text, and also allows you to set a new <c>MediaList</c>.
+The <c>appendMedium()</c> method of the <see cref="MediaList"/> interface adds a media query to the list. If the media query is already in the collection, this method does nothing.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/appendMedium"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the media queries of a stylesheet. Each one is<br/>separated by a comma, for example<br/><c>screen and (width &amp;gt;= 480px), print</c>.If you wish to set new media queries on the document, the string value must have the<br/>different queries separated by commas, e.g., <c>screen, print</c>. Note that the<br/><c>MediaList</c> is a live list; updating the list via<br/><c>mediaText</c> will immediately update the behavior of the<br/>document.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>ml.mediaText = null</c> is equivalent to <c>ml.mediaText = &amp;quot;&amp;quot;</c>.</value>
-</MediaListMediaText>
+<returns>None (<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</see>).</returns>
+</MediaListAppendMedium>
 <MediaListDeleteMedium>
 <summary>
 The <c>deleteMedium()</c> method of the <see cref="MediaList"/> interface removes from this <c>MediaList</c> the given media query.
@@ -26,6 +26,15 @@ The <c>deleteMedium()</c> method of the <see cref="MediaList"/> interface remove
 </remarks>
 <returns>None (<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</see>).</returns>
 </MediaListDeleteMedium>
+<MediaListItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="MediaList"/> interface returns the media query at the specified <c>index</c>, or <c>null</c> if the specified <c>index</c> doesn&amp;apos;t exist.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If the bracket (<c>[]</c>) syntax is used and there is no entry for the given index, <c>undefined</c> is returned.</returns>
+</MediaListItem>
 <MediaListLength>
 <summary>
 The read-only <strong><c>length</c></strong> property of the <see cref="MediaList"/> interface returns the number of media queries in the list.
@@ -35,6 +44,15 @@ The read-only <strong><c>length</c></strong> property of the <see cref="MediaLis
 </remarks>
 <value>A positive integer.</value>
 </MediaListLength>
+<MediaListMediaText>
+<summary>
+The <strong><c>mediaText</c></strong> property of the <see cref="MediaList"/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string representing the<br/><c>MediaList</c> as text, and also allows you to set a new <c>MediaList</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the media queries of a stylesheet. Each one is<br/>separated by a comma, for example<br/><c>screen and (width &amp;gt;= 480px), print</c>.If you wish to set new media queries on the document, the string value must have the<br/>different queries separated by commas, e.g., <c>screen, print</c>. Note that the<br/><c>MediaList</c> is a live list; updating the list via<br/><c>mediaText</c> will immediately update the behavior of the<br/>document.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>ml.mediaText = null</c> is equivalent to <c>ml.mediaText = &amp;quot;&amp;quot;</c>.</value>
+</MediaListMediaText>
 <MediaListToString>
 <summary>
 The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} method of the <see cref="MediaList"/> interface returns a string representing the object's values. The value is a comma-separated list of media values in the same format as the <see cref="MediaList.MediaText"/> property.
@@ -45,22 +63,4 @@ The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} method of the
 </remarks>
 <returns>A string.</returns>
 </MediaListToString>
-<MediaListItem>
-<summary>
-The <strong><c>item()</c></strong> method of the <see cref="MediaList"/> interface returns the media query at the specified <c>index</c>, or <c>null</c> if the specified <c>index</c> doesn&amp;apos;t exist.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/item"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>If the bracket (<c>[]</c>) syntax is used and there is no entry for the given index, <c>undefined</c> is returned.</returns>
-</MediaListItem>
-<MediaListAppendMedium>
-<summary>
-The <c>appendMedium()</c> method of the <see cref="MediaList"/> interface adds a media query to the list. If the media query is already in the collection, this method does nothing.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/appendMedium"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</see>).</returns>
-</MediaListAppendMedium>
 </docs>

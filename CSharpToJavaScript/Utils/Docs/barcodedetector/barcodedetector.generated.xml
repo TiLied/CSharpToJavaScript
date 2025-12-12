@@ -8,15 +8,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BarcodeDetector>
-<BarcodeDetectorGetSupportedFormats>
+<BarcodeDetectorBarcodeDetector>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getSupportedFormats()</c></strong> static method<br/>of the <see cref="BarcodeDetector"/> interface returns a {{jsxref('Promise')}} which<br/>fulfills with an <see cref="'Array'"/> of supported barcode format types.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BarcodeDetector()</c></strong> constructor creates<br/>a new <see cref="BarcodeDetector"/> object which detects linear and two-dimensional<br/>barcodes in images.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector/getSupportedFormats"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector/BarcodeDetector"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="'Promise'"/> which fulfills with an <see cref="'Array'"/> of<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats">supported barcode format types</see>.</returns>
-</BarcodeDetectorGetSupportedFormats>
+</BarcodeDetectorBarcodeDetector>
 <BarcodeDetectorDetect>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>detect()</c></strong> method of the<br/><see cref="BarcodeDetector"/> interface returns a {{jsxref('Promise')}} which fulfills<br/>with an <see cref="'Array'"/> of detected barcodes within an image.
@@ -26,12 +25,13 @@
 </remarks>
 <returns>Returns a <see cref="'Promise'"/> which fulfills with an array of<br/><c>DetectedBarcode</c> objects with the following properties:</returns>
 </BarcodeDetectorDetect>
-<BarcodeDetectorBarcodeDetector>
+<BarcodeDetectorGetSupportedFormats>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BarcodeDetector()</c></strong> constructor creates<br/>a new <see cref="BarcodeDetector"/> object which detects linear and two-dimensional<br/>barcodes in images.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getSupportedFormats()</c></strong> static method<br/>of the <see cref="BarcodeDetector"/> interface returns a {{jsxref('Promise')}} which<br/>fulfills with an <see cref="'Array'"/> of supported barcode format types.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector/BarcodeDetector"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector/getSupportedFormats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</BarcodeDetectorBarcodeDetector>
+<returns>A <see cref="'Promise'"/> which fulfills with an <see cref="'Array'"/> of<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats">supported barcode format types</see>.</returns>
+</BarcodeDetectorGetSupportedFormats>
 </docs>

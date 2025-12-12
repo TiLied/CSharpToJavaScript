@@ -9,38 +9,47 @@ The <strong><c>SVGFECompositeElement</c></strong> interface corresponds to the <
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFECompositeElement>
-<SVGFECompositeElementWidth>
+<SVGFECompositeElementHeight>
 <summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
 </summary>
 <remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("width")}} filter primitive attribute. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFECompositeElement.Height"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/width"> <em>See also on MDN</em> </seealso></para>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("height")}} filter primitive attribute. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFECompositeElement.Width"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/height"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFECompositeElementWidth>
-<SVGFECompositeElementOperator>
+</SVGFECompositeElementHeight>
+<SVGFECompositeElementIn1>
 <summary>
-The <strong><c>operator</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("operator")}} attribute of the given {{SVGElement("feComposite")}} element.
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feComposite")}} element.
 </summary>
 <remarks>
-<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/operator"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/in1"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFECompositeElementOperator>
-<SVGFECompositeElementX>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFECompositeElementIn1>
+<SVGFECompositeElementIn2>
 <summary>
-The <strong><c>x</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+The <strong><c>in2</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("in2")}} attribute of the given {{SVGElement("feComposite")}} element.
 </summary>
 <remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("x")}} filter primitive attribute value. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFECompositeElement.Y"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/x"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/in2"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFECompositeElementX>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFECompositeElementIn2>
+<SVGFECompositeElementK1>
+<summary>
+The <strong><c>k1</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("k1")}} attribute of the given {{SVGElement("feComposite")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/k1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFECompositeElementK1>
 <SVGFECompositeElementK2>
 <summary>
 The <strong><c>k2</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("k2")}} attribute of the given {{SVGElement("feComposite")}} element.
@@ -61,27 +70,6 @@ The <strong><c>k3</c></strong> read-only property of the <see cref="SVGFEComposi
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/> object.</value>
 </SVGFECompositeElementK3>
-<SVGFECompositeElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("height")}} filter primitive attribute. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFECompositeElement.Width"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFECompositeElementHeight>
-<SVGFECompositeElementIn2>
-<summary>
-The <strong><c>in2</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("in2")}} attribute of the given {{SVGElement("feComposite")}} element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/in2"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFECompositeElementIn2>
 <SVGFECompositeElementK4>
 <summary>
 The <strong><c>k4</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("k4")}} attribute of the given {{SVGElement("feComposite")}} element.
@@ -92,6 +80,16 @@ The <strong><c>k4</c></strong> read-only property of the <see cref="SVGFEComposi
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/> object.</value>
 </SVGFECompositeElementK4>
+<SVGFECompositeElementOperator>
+<summary>
+The <strong><c>operator</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("operator")}} attribute of the given {{SVGElement("feComposite")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedEnumeration"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/operator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFECompositeElementOperator>
 <SVGFECompositeElementResult>
 <summary>
 The <strong><c>result</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
@@ -103,26 +101,28 @@ The <strong><c>result</c></strong> read-only property of the <see cref="SVGFECom
 </remarks>
 <value>An <see cref="SVGAnimatedString"/>.</value>
 </SVGFECompositeElementResult>
-<SVGFECompositeElementIn1>
+<SVGFECompositeElementWidth>
 <summary>
-The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feComposite")}} element.
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
 </summary>
 <remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/in1"> <em>See also on MDN</em> </seealso></para>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("width")}} filter primitive attribute. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFECompositeElement.Height"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/width"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFECompositeElementIn1>
-<SVGFECompositeElementK1>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFECompositeElementWidth>
+<SVGFECompositeElementX>
 <summary>
-The <strong><c>k1</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface reflects the {{SVGAttr("k1")}} attribute of the given {{SVGElement("feComposite")}} element.
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
 </summary>
 <remarks>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/k1"> <em>See also on MDN</em> </seealso></para>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeComposite">feComposite</see> element's {{SVGAttr("x")}} filter primitive attribute value. The <c>&amp;lt;feComposite&amp;gt;</c> SVG filter primitive combines two input images using a Porter-Duff compositing operation. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFECompositeElement.Y"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement/x"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedNumber"/> object.</value>
-</SVGFECompositeElementK1>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFECompositeElementX>
 <SVGFECompositeElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFECompositeElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

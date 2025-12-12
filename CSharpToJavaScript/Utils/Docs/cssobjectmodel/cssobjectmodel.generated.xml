@@ -1,0 +1,58 @@
+<docs>
+<CSS_Object_Model>
+<summary>
+The <strong>CSS Object Model</strong> is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
+</summary>
+<remarks>
+<para>The values of CSS are represented untyped, that is using <see cref="String"/> objects.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_Model>
+<CSS_Object_ModelCSS_Declaration>
+<summary>
+A <strong>CSS declaration</strong> is an abstract concept not exposed as an object in the DOM. It represents a CSS property and value pairing.
+</summary>
+<remarks>
+<para>A CSS declaration has the following associated properties:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_ModelCSS_Declaration>
+<CSS_Object_ModelCSS_Declaration_Block>
+<summary>
+A <strong>CSS declaration block</strong> is an ordered collection of CSS properties and values. It is represented in the DOM as a <see cref="CSSStyleDeclaration"/>.
+</summary>
+<remarks>
+<para>Each property and value pairing is known as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration">CSS declaration</see>. The CSS declaration block has the following associated properties:</para><para>When a <see cref="CSSStyleDeclaration"/> is returned by a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</see> interface these properties are set to appropriate values as defined by the specification.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_ModelCSS_Declaration_Block>
+<CSS_Object_ModelDetermining_the_dimensions_of_elements>
+<summary>
+
+</summary>
+<remarks>
+<para>-<see href="https://drafts.csswg.org/cssom-view/">The CSSOM View Module</see> specification<br/>-<see href="https://learn.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_ModelDetermining_the_dimensions_of_elements>
+<CSS_Object_ModelManaging_screen_orientation>
+<summary>
+The term <strong>screen orientation</strong> refers to whether a browser <see href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">viewport</see> is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
+</summary>
+<remarks>
+<para>CSS provides the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation"><c>orientation</c></see> media feature to allow adjusting layout based on screen orientation.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Orientation_API">Screen Orientation API</see> provides a programmatic JavaScript API for working with screen orientation — including the ability to lock the viewport to a specific orientation.</para>
+<para>-<see cref="Screen.Orientation"/><br/>-<see cref="ScreenOrientation"/><br/>-<see cref="ScreenOrientation.Change"/> event of <see cref="ScreenOrientation"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation">The orientation media query</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_ModelManaging_screen_orientation>
+<CSS_Object_ModelUsing_dynamic_styling_information>
+<summary>
+The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the <strong>DOM Level 2 Style</strong> recommendation, these interfaces forms now a specification, <strong>CSS Object Model (CSSOM)</strong> which aims at superseding it.
+</summary>
+<remarks>
+<para>In many cases, and where possible, it is best practice to dynamically manipulate classes via the <see cref="Element.ClassName"/> property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.</para><para>The basic <c>style</c> object exposes the <see cref="Stylesheet"/> and the <see cref="CSSStylesheet"/> interfaces. Those interfaces contain members like <c>insertRule</c>, <c>selectorText</c>, and <c>parentStyleSheet</c> for accessing and manipulating the individual style rules that make up a CSS stylesheet.</para><para>To get to the <c>style</c> objects from the <c>document</c>, you can use the <see cref="Document.StyleSheets"/> property and access the individual objects by index (e.g., <c>document.styleSheets[0]</c> is the first stylesheet defined for the document, etc.).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_Object_ModelUsing_dynamic_styling_information>
+</docs>

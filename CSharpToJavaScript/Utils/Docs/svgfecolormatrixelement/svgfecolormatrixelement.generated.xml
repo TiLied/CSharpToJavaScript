@@ -9,6 +9,56 @@ The <strong><c>SVGFEColorMatrixElement</c></strong> interface corresponds to the
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEColorMatrixElement>
+<SVGFEColorMatrixElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeColorMatrix">feColorMatrix</see> element's {{SVGAttr("height")}} filter primitive attribute. The <c>&amp;lt;feColorMatrix&amp;gt;</c> filter applies a matrix transformation on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RGB">RGB</see> color and <see href="https://developer.mozilla.org/en-US/docs/Glossary/alpha">alpha</see> values.</para><para>The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEColorMatrixElement.Width"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see><br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element, SVG {{SVGAttr("filter")}} attribute in <see href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEColorMatrixElementHeight>
+<SVGFEColorMatrixElementIn1>
+<summary>
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/in1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFEColorMatrixElementIn1>
+<SVGFEColorMatrixElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeColorMatrix">feColorMatrix</see> element's {{SVGAttr("result")}} attribute. The <c>&amp;lt;feColorMatrix&amp;gt;</c> filter applies a matrix transformation on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RGB">RGB</see> color and <see href="https://developer.mozilla.org/en-US/docs/Glossary/alpha">alpha</see> values. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feColorMatrix&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see cref="SVGFEColorMatrixElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see><br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element, SVG {{SVGAttr("filter")}} attribute in <see href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEColorMatrixElementResult>
+<SVGFEColorMatrixElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("type")}} attribute of the given element. It takes one of the <c>SVG_FECOLORMATRIX_TYPE_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGFEColorMatrixElementType>
+<SVGFEColorMatrixElementValues>
+<summary>
+The <strong><c>values</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("values")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumberList"/> object.</value>
+</SVGFEColorMatrixElementValues>
 <SVGFEColorMatrixElementWidth>
 <summary>
 The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -31,56 +81,6 @@ The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEColorMat
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFEColorMatrixElementX>
-<SVGFEColorMatrixElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeColorMatrix">feColorMatrix</see> element's {{SVGAttr("height")}} filter primitive attribute. The <c>&amp;lt;feColorMatrix&amp;gt;</c> filter applies a matrix transformation on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RGB">RGB</see> color and <see href="https://developer.mozilla.org/en-US/docs/Glossary/alpha">alpha</see> values.</para><para>The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFEColorMatrixElement.Width"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see><br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element, SVG {{SVGAttr("filter")}} attribute in <see href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEColorMatrixElementHeight>
-<SVGFEColorMatrixElementResult>
-<summary>
-The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
-</summary>
-<remarks>
-<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeColorMatrix">feColorMatrix</see> element's {{SVGAttr("result")}} attribute. The <c>&amp;lt;feColorMatrix&amp;gt;</c> filter applies a matrix transformation on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RGB">RGB</see> color and <see href="https://developer.mozilla.org/en-US/docs/Glossary/alpha">alpha</see> values. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feColorMatrix&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
-<para>-<see cref="SVGFEColorMatrixElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see><br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element, SVG {{SVGAttr("filter")}} attribute in <see href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/result"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/>.</value>
-</SVGFEColorMatrixElementResult>
-<SVGFEColorMatrixElementIn1>
-<summary>
-The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given element.
-</summary>
-<remarks>
-<para>-<see cref="SVGAnimatedString"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/in1"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFEColorMatrixElementIn1>
-<SVGFEColorMatrixElementType>
-<summary>
-The <strong><c>type</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("type")}} attribute of the given element. It takes one of the <c>SVG_FECOLORMATRIX_TYPE_*</c> constants defined on this interface.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
-</SVGFEColorMatrixElementType>
-<SVGFEColorMatrixElementValues>
-<summary>
-The <strong><c>values</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface reflects the {{SVGAttr("values")}} attribute of the given element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement/values"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumberList"/> object.</value>
-</SVGFEColorMatrixElementValues>
 <SVGFEColorMatrixElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEColorMatrixElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

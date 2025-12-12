@@ -20,17 +20,6 @@
 </remarks>
 <value>A string.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.color = null</c> is equivalent to <c>elt.color = &amp;quot;&amp;quot;</c>.</value>
 </HTMLFontElementColor>
-<HTMLFontElementSize>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br/><strong><c>HTMLFontElement.size</c></strong> property is a<br/>string that reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/font#size"><c>size</c></see> HTML<br/>attribute. It contains either a font size ranging from 1 to 7 or a<br/>number relative to the default value 3, for example -2 or +1.
-</summary>
-<remarks>
-<para>The format of the string must follow one of the following HTML microsyntaxes:</para>
-<para>-The <see cref="HTMLFontElement"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLFontElementSize>
 <HTMLFontElementFace>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br/><strong><c>HTMLFontElement.face</c></strong><br/>property is a string that reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/font#face"><c>face</c></see> HTML attribute, containing a comma-separated list of one or more font<br/>names.
@@ -42,4 +31,15 @@
 </remarks>
 <value>A string.</value>
 </HTMLFontElementFace>
+<HTMLFontElementSize>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br/><strong><c>HTMLFontElement.size</c></strong> property is a<br/>string that reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/font#size"><c>size</c></see> HTML<br/>attribute. It contains either a font size ranging from 1 to 7 or a<br/>number relative to the default value 3, for example -2 or +1.
+</summary>
+<remarks>
+<para>The format of the string must follow one of the following HTML microsyntaxes:</para>
+<para>-The <see cref="HTMLFontElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLFontElementSize>
 </docs>

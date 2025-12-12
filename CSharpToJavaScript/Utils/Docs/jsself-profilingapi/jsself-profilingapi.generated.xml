@@ -1,0 +1,19 @@
+<docs>
+<JS_Self-Profiling_API>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The JS Self-Profiling API enables a website to run a sampling profiler, to understand where it is spending JavaScript execution time.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</JS_Self-Profiling_API>
+<JS_Self-Profiling_APIProfile_content_and_format>
+<summary>
+In this page we&amp;apos;ll describe how to interpret a profile captured using the Self-Profiling API.
+</summary>
+<remarks>
+<para>The format of the object returned by <see cref="Profiler.Stop"/> is designed to be space-efficient: for example, the format aims to avoid duplicating URL values for functions which are defined in the same script. This means that some interpretation is needed to understand how a sample in the profile object maps to a location in the program, and this guide page aims to explain how to perform this interpretation.</para><para>In the first section, we&amp;apos;ll describe the <see href="https://developer.mozilla.org#anatomy_of_a_profile">abstract structure of a profile</see>. In the next section we&amp;apos;ll describe <see href="https://developer.mozilla.org#profile_format">the format of the profile object</see> returned by <see cref="Profiler.Stop"/>. Finally we'll <see href="https://developer.mozilla.org#example">walk through an example</see> to show what a profile for a given program looks like and how it can be interpreted.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</JS_Self-Profiling_APIProfile_content_and_format>
+</docs>

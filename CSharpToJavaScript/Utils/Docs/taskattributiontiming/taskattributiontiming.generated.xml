@@ -18,24 +18,6 @@
 </remarks>
 <value>A string containing the container&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><c>id</c></see> HTML content attribute.</value>
 </TaskAttributionTimingContainerId>
-<TaskAttributionTimingContainerType>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>containerType</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the type of the container, one of <c>iframe</c>, <c>embed</c>, or <c>object</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming/containerType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the container&amp;apos;s type, one of <c>iframe</c>, <c>embed</c>, or <c>object</c>. If no type can be determined, <c>window</c> will be returned.</value>
-</TaskAttributionTimingContainerType>
-<TaskAttributionTimingContainerSrc>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>containerSrc</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the container's <c>src</c><br/>attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming/containerSrc"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the container&amp;apos;s <c>src</c> attribute (e.g., <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#src"><c>&amp;lt;iframe src=&amp;quot;url.html&amp;quot;&amp;gt;</c></see>).</value>
-</TaskAttributionTimingContainerSrc>
 <TaskAttributionTimingContainerName>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>containerName</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the container's <c>name</c><br/>attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
@@ -45,6 +27,24 @@
 </remarks>
 <value>A string containing the container&amp;apos;s <c>name</c> HTML content attribute (e.g., <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#name"><c>&amp;lt;iframe name=&amp;quot;myIframe&amp;quot;&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/object#name"><c>&amp;lt;object name=&amp;quot;myObject&amp;quot;&amp;gt;</c></see>).</value>
 </TaskAttributionTimingContainerName>
+<TaskAttributionTimingContainerSrc>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>containerSrc</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the container's <c>src</c><br/>attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming/containerSrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the container&amp;apos;s <c>src</c> attribute (e.g., <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#src"><c>&amp;lt;iframe src=&amp;quot;url.html&amp;quot;&amp;gt;</c></see>).</value>
+</TaskAttributionTimingContainerSrc>
+<TaskAttributionTimingContainerType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>containerType</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the type of the container, one of <c>iframe</c>, <c>embed</c>, or <c>object</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming/containerType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the container&amp;apos;s type, one of <c>iframe</c>, <c>embed</c>, or <c>object</c>. If no type can be determined, <c>window</c> will be returned.</value>
+</TaskAttributionTimingContainerType>
 <TaskAttributionTimingToJSON>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="TaskAttributionTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="TaskAttributionTiming"/> object.

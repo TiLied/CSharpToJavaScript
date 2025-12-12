@@ -1,0 +1,29 @@
+<docs>
+<Media_Source_Extensions_API>
+<summary>
+The <strong>Media Source API</strong>, formally known as <strong>Media Source Extensions</strong> (<strong>MSE</strong>), provides functionality enabling plugin-free web-based streaming media. Using MSE, media streams can be created via JavaScript, and played using <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> elements.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE">Transcoding assets for Media Source Extensions</see><br/>-Using MSE to create a basic streaming service (TBD)<br/>-Using MPEG DASH to create a streaming application (TBD)<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> elements.<br/>-<see cref="HTMLMediaElement"/>, <see cref="HTMLVideoElement"/>, <see cref="HTMLAudioElement"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Source_Extensions_API>
+<Media_Source_Extensions_APIDASH_Adaptive_Streaming>
+<summary>
+Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
+</summary>
+<remarks>
+<para>First you&amp;apos;ll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you&amp;apos;ll only need the FFmpeg program from <see href="https://www.ffmpeg.org/">ffmpeg.org</see>, with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested with 3.2.5).</para><para>First, use your existing WebM file to create one audio file and multiple video files. In the example below, the file <strong><strong>in.video</strong></strong> can be any container with at least one audio and one video stream that can be decoded by FFmpeg.</para><para>Create the audio using:</para><para>Create each video variant.</para><para>Or do it in all in one command.</para><para>Then, create the manifest file.</para><para>The <c>-map</c> arguments correspond to the input files in the sequence they are given; you should have one for each file. The <c>-adaptation_sets</c> argument assigns them into adaptation sets; for example, this creates one set (0) that contains the streams 0, 1, 2 and 3 (the videos), and another set (1) that contains only stream 4, the audio stream.</para><para>Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it&amp;apos;s set up to serve <c>.mpd</c> files with <c>Content-Type: application/dash+xml</c>, then you&amp;apos;re all set.</para><para>Then, in order to correctly connect this <c>.mpd</c> file to your <c>&amp;lt;video&amp;gt;</c> element, you need a JavaScript library like dash.js, because no browser has native support for DASH. Read <see href="https://dashif.org/dash.js/pages/quickstart/">dash.js quickstart</see> for how to set up your page to use it.</para>
+<para>-<see href="https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">WebM DASH Specification at The WebM Project</see><br/>-<see href="https://dashif.org/">DASH Industry Forum</see><br/>-<see href="https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash">WebM project description of how to create DASH files with FFMPEG</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Source_Extensions_APIDASH_Adaptive_Streaming>
+<Media_Source_Extensions_APITranscoding_assets_for_MSE>
+<summary>
+When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Media_Source_Extensions_APITranscoding_assets_for_MSE>
+</docs>

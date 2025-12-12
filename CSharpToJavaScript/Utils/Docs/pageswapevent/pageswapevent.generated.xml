@@ -9,6 +9,16 @@ The <strong><c>PageSwapEvent</c></strong> event object is made available inside 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PageSwapEvent>
+<PageSwapEventActivation>
+<summary>
+The <strong><c>activation</c></strong> read-only property of the <see cref="PageSwapEvent"/> interface contains a <see cref="NavigationActivation"/> object containing the navigation type and current and destination document history entries for a same-origin navigation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/activation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigationActivation"/> object, or <c>null</c> if the associated navigation has a cross-origin URL anywhere in the redirect chain.</value>
+</PageSwapEventActivation>
 <PageSwapEventPageSwapEvent>
 <summary>
 The <strong><c>PageSwapEvent()</c></strong> constructor creates a new<br/><see cref="PageSwapEvent"/> object instance.
@@ -28,14 +38,4 @@ The <strong><c>viewTransition</c></strong> read-only property of the <see cref="
 </remarks>
 <value>A <see cref="ViewTransition"/> object, or <c>null</c> if no view transition is active when the event is fired.</value>
 </PageSwapEventViewTransition>
-<PageSwapEventActivation>
-<summary>
-The <strong><c>activation</c></strong> read-only property of the <see cref="PageSwapEvent"/> interface contains a <see cref="NavigationActivation"/> object containing the navigation type and current and destination document history entries for a same-origin navigation.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/activation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="NavigationActivation"/> object, or <c>null</c> if the associated navigation has a cross-origin URL anywhere in the redirect chain.</value>
-</PageSwapEventActivation>
 </docs>

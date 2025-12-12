@@ -1,4 +1,4 @@
-//25.09.2025 17:09:11
+//12.12.2025 21:28:31
 
 #nullable enable
 //Disable missing XML comments.
@@ -315,10 +315,12 @@ public partial interface EventListener
 	public Undefined HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/document/document.generated.xml' path='docs/Document/*'/>
 [Value("NonElementParentNode")]
 public partial interface NonElementParentNode
 {
-	[Value("getElementById")]
+	///<include file='Utils/Docs/document/document.generated.xml' path='docs/DocumentGetElementById/*'/>
+[Value("getElementById")]
 	public Element? GetElementById(DOMString elementId) { throw new System.NotImplementedException(); }
 }
 
@@ -330,26 +332,36 @@ public partial interface DocumentOrShadowRoot
 
 
 
+///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ParentNode")]
 public partial interface ParentNode
 {
-	[Value("children")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildren/*'/>
+[Value("children")]
 	public HTMLCollection Children { get { throw new System.NotImplementedException(); } }
-	[Value("firstElementChild")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementFirstElementChild/*'/>
+[Value("firstElementChild")]
 	public Element? FirstElementChild { get { throw new System.NotImplementedException(); } }
-	[Value("lastElementChild")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementLastElementChild/*'/>
+[Value("lastElementChild")]
 	public Element? LastElementChild { get { throw new System.NotImplementedException(); } }
-	[Value("childElementCount")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildElementCount/*'/>
+[Value("childElementCount")]
 	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
-	[Value("prepend")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementPrepend/*'/>
+[Value("prepend")]
 	public Undefined Prepend(params Union28[] nodes) { throw new System.NotImplementedException(); }
-	[Value("append")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAppend/*'/>
+[Value("append")]
 	public Undefined Append(params Union29[] nodes) { throw new System.NotImplementedException(); }
-	[Value("replaceChildren")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceChildren/*'/>
+[Value("replaceChildren")]
 	public Undefined ReplaceChildren(params Union30[] nodes) { throw new System.NotImplementedException(); }
-	[Value("querySelector")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelector/*'/>
+[Value("querySelector")]
 	public Element? QuerySelector(DOMString selectors) { throw new System.NotImplementedException(); }
-	[Value("querySelectorAll")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
+[Value("querySelectorAll")]
 	public NodeList QuerySelectorAll(DOMString selectors) { throw new System.NotImplementedException(); }
 }
 
@@ -367,16 +379,21 @@ public partial interface NonDocumentTypeChildNode
 
 
 
+///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ChildNode")]
 public partial interface ChildNode
 {
-	[Value("before")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementBefore/*'/>
+[Value("before")]
 	public Undefined Before(params Union31[] nodes) { throw new System.NotImplementedException(); }
-	[Value("after")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAfter/*'/>
+[Value("after")]
 	public Undefined After(params Union32[] nodes) { throw new System.NotImplementedException(); }
-	[Value("replaceWith")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceWith/*'/>
+[Value("replaceWith")]
 	public Undefined ReplaceWith(params Union33[] nodes) { throw new System.NotImplementedException(); }
-	[Value("remove")]
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementRemove/*'/>
+[Value("remove")]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
 }
 

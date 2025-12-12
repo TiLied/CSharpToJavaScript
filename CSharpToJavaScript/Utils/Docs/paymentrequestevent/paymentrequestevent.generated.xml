@@ -9,66 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentRequestEvent>
-<PaymentRequestEventPaymentRequestOrigin>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>paymentRequestOrigin</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns the origin where the<br/><see cref="PaymentRequest"/> object was initialized.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/paymentRequestOrigin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</PaymentRequestEventPaymentRequestOrigin>
-<PaymentRequestEventModifiers>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>modifiers</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns an {{jsxref("Array")}} of <c>PaymentDetailsModifier</c> objects containing modifiers for payment details.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/modifiers"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of objects containing modifiers for payment details. These objects contain the following properties:</value>
-</PaymentRequestEventModifiers>
-<PaymentRequestEventPaymentRequestEvent>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PaymentRequestEvent</c></strong> constructor creates a new <see cref="PaymentRequestEvent"/> object instance.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/PaymentRequestEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="PaymentRequestEvent"/> object.</returns>
-</PaymentRequestEventPaymentRequestEvent>
-<PaymentRequestEventRespondWith>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>respondWith()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a payment handler response object yourself.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/respondWith"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</PaymentRequestEventRespondWith>
-<PaymentRequestEventMethodData>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>methodData</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns an array of<br/><c>PaymentMethodData</c> objects containing payment method identifiers for the<br/>payment methods that the website accepts and any associated payment method-specific<br/>data.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/methodData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of <c>PaymentMethodData</c> objects. Each object contains the following properties:</value>
-</PaymentRequestEventMethodData>
-<PaymentRequestEventTopOrigin>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>topOrigin</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns the top-level payee origin where<br/>the <see cref="PaymentRequest"/> object was initialized.
-</summary>
-<remarks>
-<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/topOrigin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</PaymentRequestEventTopOrigin>
 <PaymentRequestEventChangePaymentMethod>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>changePaymentMethod()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
@@ -80,6 +20,26 @@
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with a <c>PaymentRequestDetailsUpdate</c> object. This object contains the following properties:</returns>
 </PaymentRequestEventChangePaymentMethod>
+<PaymentRequestEventMethodData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>methodData</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns an array of<br/><c>PaymentMethodData</c> objects containing payment method identifiers for the<br/>payment methods that the website accepts and any associated payment method-specific<br/>data.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/methodData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <c>PaymentMethodData</c> objects. Each object contains the following properties:</value>
+</PaymentRequestEventMethodData>
+<PaymentRequestEventModifiers>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>modifiers</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns an {{jsxref("Array")}} of <c>PaymentDetailsModifier</c> objects containing modifiers for payment details.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/modifiers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of objects containing modifiers for payment details. These objects contain the following properties:</value>
+</PaymentRequestEventModifiers>
 <PaymentRequestEventOpenWindow>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>openWindow()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface opens the specified URL in a new window, only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a <see cref="WindowClient"/>.
@@ -90,6 +50,16 @@
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with a reference to a<br/><see cref="WindowClient"/>.</returns>
 </PaymentRequestEventOpenWindow>
+<PaymentRequestEventPaymentRequestEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PaymentRequestEvent</c></strong> constructor creates a new <see cref="PaymentRequestEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/PaymentRequestEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PaymentRequestEvent"/> object.</returns>
+</PaymentRequestEventPaymentRequestEvent>
 <PaymentRequestEventPaymentRequestId>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>paymentRequestId</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns the ID of the<br/><see cref="PaymentRequest"/> object.
@@ -100,6 +70,36 @@
 </remarks>
 <value>A string containing the ID.</value>
 </PaymentRequestEventPaymentRequestId>
+<PaymentRequestEventPaymentRequestOrigin>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>paymentRequestOrigin</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns the origin where the<br/><see cref="PaymentRequest"/> object was initialized.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/paymentRequestOrigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentRequestEventPaymentRequestOrigin>
+<PaymentRequestEventRespondWith>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>respondWith()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a payment handler response object yourself.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/respondWith"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PaymentRequestEventRespondWith>
+<PaymentRequestEventTopOrigin>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>topOrigin</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns the top-level payee origin where<br/>the <see cref="PaymentRequest"/> object was initialized.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/topOrigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentRequestEventTopOrigin>
 <PaymentRequestEventTotal>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>total</c></strong> read-only property of the <see cref="PaymentRequestEvent"/> interface returns a<br/><c>PaymentCurrencyAmount</c> object containing the total amount being requested for payment.

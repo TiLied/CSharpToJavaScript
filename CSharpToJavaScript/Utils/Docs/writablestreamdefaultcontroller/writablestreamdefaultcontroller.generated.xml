@@ -7,15 +7,6 @@ The <strong><c>WritableStreamDefaultController</c></strong> interface of the <se
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WritableStreamDefaultController>
-<WritableStreamDefaultControllerSignal>
-<summary>
-The read-only <strong><c>signal</c></strong> property of the <see cref="WritableStreamDefaultController"/> interface returns the <see cref="AbortSignal"/> associated with the controller.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController/signal"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AbortSignal"/> object.</value>
-</WritableStreamDefaultControllerSignal>
 <WritableStreamDefaultControllerError>
 <summary>
 The <strong><c>error()</c></strong> method of the<br/><see cref="WritableStreamDefaultController"/> interface causes any future interactions<br/>with the associated stream to error.
@@ -26,4 +17,13 @@ The <strong><c>error()</c></strong> method of the<br/><see cref="WritableStreamD
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </WritableStreamDefaultControllerError>
+<WritableStreamDefaultControllerSignal>
+<summary>
+The read-only <strong><c>signal</c></strong> property of the <see cref="WritableStreamDefaultController"/> interface returns the <see cref="AbortSignal"/> associated with the controller.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController/signal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AbortSignal"/> object.</value>
+</WritableStreamDefaultControllerSignal>
 </docs>

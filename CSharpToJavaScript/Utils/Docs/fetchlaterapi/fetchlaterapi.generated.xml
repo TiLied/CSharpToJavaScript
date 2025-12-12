@@ -1,0 +1,21 @@
+<docs>
+<FetchLater_API>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fetchLater()</c></strong><strong> API</strong> provides an interface to request a deferred fetch that can be sent after a specified period of time, or when the page is closed or navigated away from.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas"><c>fetchLater()</c> quotas</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FetchLater_API>
+<FetchLater_APIFetchLater_quotas>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> Deferred <see href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API"><c>fetchLater()</c> API</see> fetches are batched and sent once the tab is closed. At this point, there is no way for the user to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network the API sets quotas on how much data can be deferred to be sent later.
+</summary>
+<remarks>
+<para>These quotas can be managed through <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/deferred-fetch">Permissions-Policy/deferred-fetch</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/deferred-fetch-minimal">Permissions-Policy/deferred-fetch-minimal</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> directives.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API"><c>fetchLater()</c> API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FetchLater_APIFetchLater_quotas>
+</docs>

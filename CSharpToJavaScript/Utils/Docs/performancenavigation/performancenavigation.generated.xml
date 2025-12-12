@@ -20,17 +20,6 @@
 </remarks>
 <value>An <c>unsigned short</c>.</value>
 </PerformanceNavigationRedirectCount>
-<PerformanceNavigationType>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The legacy<br/><strong><c>PerformanceNavigation.type</c></strong><br/>read-only property returns an <c>unsigned short</c> containing a constant<br/>describing how the navigation to this page was done.
-</summary>
-<remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</para></blockquote>
-<para>-The <see cref="PerformanceNavigation"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned short</c>.Possible values are:<blockquote class="NOTE"><h5>NOTE</h5>Historically, developers tested for a <c>type</c> of <c>&amp;quot;TYPE_BACK_FORWARD&amp;quot;</c> to get an indication of back/forward cache ({{glossary("bfcache")}}) hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The <see cref="PerformanceNavigationTiming.NotRestoredReasons"/> property should be used to monitor the bfcache, going forward. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see> for more information.</blockquote></value>
-</PerformanceNavigationType>
 <PerformanceNavigationToJSON>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
@@ -42,4 +31,15 @@
 </remarks>
 <returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceNavigation"/> object.</returns>
 </PerformanceNavigationToJSON>
+<PerformanceNavigationType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The legacy<br/><strong><c>PerformanceNavigation.type</c></strong><br/>read-only property returns an <c>unsigned short</c> containing a constant<br/>describing how the navigation to this page was done.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</para></blockquote>
+<para>-The <see cref="PerformanceNavigation"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned short</c>.Possible values are:<blockquote class="NOTE"><h5>NOTE</h5>Historically, developers tested for a <c>type</c> of <c>&amp;quot;TYPE_BACK_FORWARD&amp;quot;</c> to get an indication of back/forward cache ({{glossary("bfcache")}}) hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The <see cref="PerformanceNavigationTiming.NotRestoredReasons"/> property should be used to monitor the bfcache, going forward. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see> for more information.</blockquote></value>
+</PerformanceNavigationType>
 </docs>

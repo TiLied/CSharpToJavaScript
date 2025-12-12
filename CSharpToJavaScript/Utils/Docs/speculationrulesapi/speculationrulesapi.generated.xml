@@ -1,0 +1,12 @@
+<docs>
+<Speculation_Rules_API>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong>Speculation Rules API</strong> is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
+</summary>
+<remarks>
+<para>The Speculation Rules API provides an alternative to the widely-available <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch"><c>&amp;lt;link rel=&amp;quot;prefetch&amp;quot;&amp;gt;</c></see> feature and is designed to supersede the Chrome-only deprecated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender"><c>&amp;lt;link rel=&amp;quot;prerender&amp;quot;&amp;gt;</c></see> feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The Speculation Rules API doesn&amp;apos;t handle subresource prefetches; for that you&amp;apos;ll need to use <c>&amp;lt;link rel=&amp;quot;prefetch&amp;quot;&amp;gt;</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading">Speculative loading</see> for a comparison of speculation rules and other similar performance improvement features.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Speculation_Rules_API>
+</docs>

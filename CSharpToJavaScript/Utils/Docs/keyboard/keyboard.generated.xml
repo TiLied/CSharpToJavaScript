@@ -8,15 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Keyboard"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Keyboard>
-<KeyboardUnlock>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>unlock()</c></strong> method of the<br/><see cref="Keyboard"/> interface unlocks all keys captured by the<br/><see cref="'Keyboard.Lock'"/> method and returns synchronously.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Keyboard/unlock"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</KeyboardUnlock>
 <KeyboardGetLayoutMap>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getLayoutMap()</c></strong> method of the<br/><see cref="Keyboard"/> interface returns a {{jsxref('Promise')}} that resolves with<br/>an instance of <see cref="'KeyboardLayoutMap'"/> which is a map-like object with<br/>functions for retrieving the strings associated with specific physical keys.
@@ -37,4 +28,13 @@
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves with <see cref="'undefined'"/> when the lock was successful.</returns>
 </KeyboardLock>
+<KeyboardUnlock>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>unlock()</c></strong> method of the<br/><see cref="Keyboard"/> interface unlocks all keys captured by the<br/><see cref="'Keyboard.Lock'"/> method and returns synchronously.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Keyboard/unlock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</KeyboardUnlock>
 </docs>

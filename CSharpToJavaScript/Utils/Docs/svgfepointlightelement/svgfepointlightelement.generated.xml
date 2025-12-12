@@ -20,17 +20,6 @@ The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEPointLig
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/>.</value>
 </SVGFEPointLightElementX>
-<SVGFEPointLightElementZ>
-<summary>
-The <strong><c>z</c></strong> read-only property of the <see cref="SVGFEPointLightElement"/> interface describes the z-axis value of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>. A positive Z-axis comes out towards the person viewing the content.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("z")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfePointLight">fePointLight</see> element, which can be used to define the light source in a point light effect. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFEPointLightElement.X"/><br/>-<see cref="SVGFEPointLightElement.Y"/><br/>-<see cref="SVGFEDistantLightElement"/><br/>-<see cref="SVGFESpotLightElement"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement/z"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedNumber"/>.</value>
-</SVGFEPointLightElementZ>
 <SVGFEPointLightElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEPointLightElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>.
@@ -42,4 +31,15 @@ The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEPointLig
 </remarks>
 <value>An <see cref="SVGAnimatedNumber"/>.</value>
 </SVGFEPointLightElementY>
+<SVGFEPointLightElementZ>
+<summary>
+The <strong><c>z</c></strong> read-only property of the <see cref="SVGFEPointLightElement"/> interface describes the z-axis value of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>. A positive Z-axis comes out towards the person viewing the content.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("z")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfePointLight">fePointLight</see> element, which can be used to define the light source in a point light effect. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEPointLightElement.X"/><br/>-<see cref="SVGFEPointLightElement.Y"/><br/>-<see cref="SVGFEDistantLightElement"/><br/>-<see cref="SVGFESpotLightElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement/z"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/>.</value>
+</SVGFEPointLightElementZ>
 </docs>

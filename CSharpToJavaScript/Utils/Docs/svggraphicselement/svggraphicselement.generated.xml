@@ -8,24 +8,6 @@ The <strong><c>SVGGraphicsElement</c></strong> interface represents SVG elements
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGGraphicsElement>
-<SVGGraphicsElementTransform>
-<summary>
-The <strong><c>transform</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the computed value of the transform property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/transform"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedTransformList"/> object.</value>
-</SVGGraphicsElementTransform>
-<SVGGraphicsElementSystemLanguage>
-<summary>
-The <strong><c>systemLanguage</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the {{SVGAttr("systemLanguage")}} attribute of the given element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/systemLanguage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGStringList"/> object.</value>
-</SVGGraphicsElementSystemLanguage>
 <SVGGraphicsElementGetBBox>
 <summary>
 The <strong><c>SVGGraphicsElement.getBBox()</c></strong> method allows us to determine<br/>the coordinates of the smallest rectangle in which the object fits. The coordinates<br/>returned are with respect to the current SVG space (after the application of all<br/>geometry attributes on all the elements contained in the target element).
@@ -37,24 +19,6 @@ The <strong><c>SVGGraphicsElement.getBBox()</c></strong> method allows us to det
 </remarks>
 <returns>The returned value is an <see cref="SVGRect"/> object, which defines the bounding box.<br/>This value is irrespective of any transformation attribute applied to it or the parent<br/>elements.</returns>
 </SVGGraphicsElementGetBBox>
-<SVGGraphicsElementRequiredExtensions>
-<summary>
-The <strong><c>requiredExtensions</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the {{SVGAttr("requiredExtensions")}} attribute of the given element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/requiredExtensions"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGStringList"/> object.</value>
-</SVGGraphicsElementRequiredExtensions>
-<SVGGraphicsElementGetScreenCTM>
-<summary>
-The <c>getScreenCTM()</c> method of the <see cref="SVGGraphicsElement"/> interface represents the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/getScreenCTM"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMMatrix"/> object.</returns>
-</SVGGraphicsElementGetScreenCTM>
 <SVGGraphicsElementGetCTM>
 <summary>
 The <c>getCTM()</c> method of the <see cref="SVGGraphicsElement"/> interface represents the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.
@@ -64,4 +28,40 @@ The <c>getCTM()</c> method of the <see cref="SVGGraphicsElement"/> interface rep
 </remarks>
 <returns>A <see cref="DOMMatrix"/> object.</returns>
 </SVGGraphicsElementGetCTM>
+<SVGGraphicsElementGetScreenCTM>
+<summary>
+The <c>getScreenCTM()</c> method of the <see cref="SVGGraphicsElement"/> interface represents the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/getScreenCTM"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix"/> object.</returns>
+</SVGGraphicsElementGetScreenCTM>
+<SVGGraphicsElementRequiredExtensions>
+<summary>
+The <strong><c>requiredExtensions</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the {{SVGAttr("requiredExtensions")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/requiredExtensions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGStringList"/> object.</value>
+</SVGGraphicsElementRequiredExtensions>
+<SVGGraphicsElementSystemLanguage>
+<summary>
+The <strong><c>systemLanguage</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the {{SVGAttr("systemLanguage")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/systemLanguage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGStringList"/> object.</value>
+</SVGGraphicsElementSystemLanguage>
+<SVGGraphicsElementTransform>
+<summary>
+The <strong><c>transform</c></strong> read-only property of the <see cref="SVGGraphicsElement"/> interface reflects the computed value of the transform property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/transform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedTransformList"/> object.</value>
+</SVGGraphicsElementTransform>
 </docs>

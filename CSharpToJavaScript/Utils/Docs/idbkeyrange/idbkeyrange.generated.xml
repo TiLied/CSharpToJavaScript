@@ -9,16 +9,6 @@ The <strong><c>IDBKeyRange</c></strong> interface of the <see href="https://deve
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBKeyRange>
-<IDBKeyRangeIncludes>
-<summary>
-The <c>includes()</c> method of the <see cref="IDBKeyRange"/><br/>interface returns a boolean indicating whether a specified key is inside the key<br/>range.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/includes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value.</returns>
-</IDBKeyRangeIncludes>
 <IDBKeyRangeBound>
 <summary>
 The <strong><c>bound()</c></strong> static method of the <see cref="IDBKeyRange"/><br/>interface creates a new key range with the specified upper and lower bounds. The<br/>bounds can be open (that is, the bounds exclude the endpoint values) or closed (that<br/>is, the bounds include the endpoint values). By default, the bounds are closed.
@@ -29,26 +19,16 @@ The <strong><c>bound()</c></strong> static method of the <see cref="IDBKeyRange"
 </remarks>
 <returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
 </IDBKeyRangeBound>
-<IDBKeyRangeUpper>
+<IDBKeyRangeIncludes>
 <summary>
-The <strong><c>upper</c></strong> read-only property of the<br/><see cref="IDBKeyRange"/> interface returns the upper bound of the key range.
+The <c>includes()</c> method of the <see cref="IDBKeyRange"/><br/>interface returns a boolean indicating whether a specified key is inside the key<br/>range.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upper"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/includes"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The upper bound of the key range (can be any type.)</value>
-</IDBKeyRangeUpper>
-<IDBKeyRangeUpperOpen>
-<summary>
-The <strong><c>upperOpen</c></strong> read-only property of the<br/><see cref="IDBKeyRange"/> interface returns a boolean indicating whether the<br/>upper-bound value is included in the key range.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperOpen"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value:<table><tr><td>Value</td><td>Indication</td></tr><tr><td><c>true</c></td><td>The upper-bound value is not included in the key range.</td></tr><tr><td><c>false</c></td><td>The upper-bound value is included in the key range.</td></tr></table></value>
-</IDBKeyRangeUpperOpen>
+<returns>A boolean value.</returns>
+</IDBKeyRangeIncludes>
 <IDBKeyRangeLower>
 <summary>
 The <strong><c>lower</c></strong> read-only property of the<br/><see cref="IDBKeyRange"/> interface returns the lower bound of the key range.
@@ -59,26 +39,6 @@ The <strong><c>lower</c></strong> read-only property of the<br/><see cref="IDBKe
 </remarks>
 <value>The lower bound of the key range (can be any<br/>type.)</value>
 </IDBKeyRangeLower>
-<IDBKeyRangeUpperBound>
-<summary>
-The <strong><c>upperBound()</c></strong> static method of the<br/><see cref="IDBKeyRange"/> interface creates a new upper-bound key range. By default,<br/>it includes the upper endpoint value and is closed.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
-</IDBKeyRangeUpperBound>
-<IDBKeyRangeOnly>
-<summary>
-The <strong><c>only()</c></strong> static method of the <see cref="IDBKeyRange"/><br/>interface creates a new key range containing a single value.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
-</IDBKeyRangeOnly>
 <IDBKeyRangeLowerBound>
 <summary>
 The <strong><c>lowerBound()</c></strong> static method of the<br/><see cref="IDBKeyRange"/> interface creates a new key range with only a lower bound.<br/>By default, it includes the lower endpoint value and is closed.
@@ -99,4 +59,44 @@ The <strong><c>lowerOpen</c></strong> read-only property of the<br/><see cref="I
 </remarks>
 <value>A boolean value:<table><tr><td>Value</td><td>Indication</td></tr><tr><td><c>true</c></td><td>The lower-bound value is not included in the key range.</td></tr><tr><td><c>false</c></td><td>The lower-bound value is included in the key range.</td></tr></table></value>
 </IDBKeyRangeLowerOpen>
+<IDBKeyRangeOnly>
+<summary>
+The <strong><c>only()</c></strong> static method of the <see cref="IDBKeyRange"/><br/>interface creates a new key range containing a single value.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
+</IDBKeyRangeOnly>
+<IDBKeyRangeUpper>
+<summary>
+The <strong><c>upper</c></strong> read-only property of the<br/><see cref="IDBKeyRange"/> interface returns the upper bound of the key range.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upper"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The upper bound of the key range (can be any type.)</value>
+</IDBKeyRangeUpper>
+<IDBKeyRangeUpperBound>
+<summary>
+The <strong><c>upperBound()</c></strong> static method of the<br/><see cref="IDBKeyRange"/> interface creates a new upper-bound key range. By default,<br/>it includes the upper endpoint value and is closed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
+</IDBKeyRangeUpperBound>
+<IDBKeyRangeUpperOpen>
+<summary>
+The <strong><c>upperOpen</c></strong> read-only property of the<br/><see cref="IDBKeyRange"/> interface returns a boolean indicating whether the<br/>upper-bound value is included in the key range.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperOpen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value:<table><tr><td>Value</td><td>Indication</td></tr><tr><td><c>true</c></td><td>The upper-bound value is not included in the key range.</td></tr><tr><td><c>false</c></td><td>The upper-bound value is included in the key range.</td></tr></table></value>
+</IDBKeyRangeUpperOpen>
 </docs>

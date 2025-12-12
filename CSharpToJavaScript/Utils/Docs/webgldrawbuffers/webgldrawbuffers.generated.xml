@@ -1,0 +1,23 @@
+<docs>
+<WEBGL_draw_buffers>
+<summary>
+The <strong><c>WEBGL_draw_buffers</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and enables a fragment shader to write to several textures, which is useful for <see href="https://hacks.mozilla.org/2014/01/webgl-deferred-shading/">deferred shading</see>, for example.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is only available to {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. In {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the &amp;quot;WEBGL&amp;quot; suffix and the new GLSL built-ins require GLSL <c>#version 300 es</c>.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGL2RenderingContext.DrawBuffers"/><br/>-<see href="https://hacks.mozilla.org/2014/01/webgl-deferred-shading/">WebGL deferred shading - Mozilla Hacks blog</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_draw_buffers>
+<WEBGL_draw_buffersDrawBuffersWEBGL>
+<summary>
+The <strong><c>WEBGL_draw_buffers.drawBuffersWEBGL()</c></strong> method is part<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows you to define<br/>the draw buffers to which all fragment colors are written.
+</summary>
+<remarks>
+<para>This method is part of the <see cref="WEBGL_draw_buffers"/> extension.</para><blockquote class="NOTE"><h5>NOTE</h5><para>When using <see cref="WebGL2RenderingContext"/>,<br/>this method is available as <see cref="WebGL2RenderingContext.DrawBuffers"/><br/>by default and the constants are named <c>gl.COLOR_ATTACHMENT1</c> etc. without the &amp;quot;WEBGL&amp;quot; suffix.</para></blockquote>
+<para>-<see cref="WEBGL_draw_buffers"/><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.FramebufferRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.FramebufferTexture2D"/><br/>-<see cref="WebGLRenderingContext.GetFramebufferAttachmentParameter"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/>-<see href="https://hacks.mozilla.org/2014/01/webgl-deferred-shading/">WebGL deferred shading - Mozilla Hacks blog</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers/drawBuffersWEBGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WEBGL_draw_buffersDrawBuffersWEBGL>
+</docs>

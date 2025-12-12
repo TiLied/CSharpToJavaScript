@@ -1,0 +1,21 @@
+<docs>
+<Intersection_Observer_API>
+<summary>
+
+</summary>
+<remarks>
+<para>-<see href="https://github.com/w3c/IntersectionObserver">Intersection Observer polyfill</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</see><br/>-<see cref="IntersectionObserver"/> and <see cref="IntersectionObserverEntry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Intersection_Observer_API>
+<Intersection_Observer_APITiming_element_visibility>
+<summary>
+In this article, we&amp;apos;ll build a mock blog which has a number of ads interspersed among the contents of the page, then use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see> to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.
+</summary>
+<remarks>
+<para>Although many aspects of this example will not match real-world usage (in particular, the articles all have the same text and aren&amp;apos;t loaded from a database, and there are just a handful of simple text-only ads that are selected from an array), this should provide enough understanding of the API to quickly learn how to apply the Intersection Observer API to your own site.</para><para>There&amp;apos;s a good reason why the notion of tracking visibility of ads is being used in this example. It turns out that one of the most common uses of Flash or other script in advertising on the Web is to record how long each ad is visible, for the purpose of billing and payment of revenues. Without the Intersection Observer API, this winds up being done using intervals and timeouts for each individual ad, or other techniques that tend to slow the page down. Using this API lets everything get streamlined by the browser to reduce the impact on performance substantially.</para><para>Let&amp;apos;s get started!</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Intersection_Observer_APITiming_element_visibility>
+</docs>

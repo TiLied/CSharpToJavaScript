@@ -9,16 +9,6 @@ The <strong><c>MediaCapabilities</c></strong> interface of the <see href="https:
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaCapabilities>
-<MediaCapabilitiesEncodingInfo>
-<summary>
-The <strong><c>encodingInfo()</c></strong> method of the <see cref="MediaCapabilities"/> interface returns a promise that fulfills with the tested media configuration's capabilities for encoding media.<br/>This contains the three boolean properties <c>supported</c>, <c>smooth</c>, and <c>powerefficient</c>, which describe how compatible the device is with the type of media.
-</summary>
-<remarks>
-<para>-<see cref="MediaCapabilities.DecodingInfo"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities/encodingInfo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="'Promise'"/> fulfilling with an object containing three Boolean attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs are reported to be power efficient.</returns>
-</MediaCapabilitiesEncodingInfo>
 <MediaCapabilitiesDecodingInfo>
 <summary>
 The <strong><c>decodingInfo()</c></strong> method of the <see cref="MediaCapabilities"/> interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
@@ -30,4 +20,14 @@ The <strong><c>decodingInfo()</c></strong> method of the <see cref="MediaCapabil
 </remarks>
 <returns>A <see cref="'Promise'"/> fulfilling with an object containing the following attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs report <c>powerEfficient</c> as true.</returns>
 </MediaCapabilitiesDecodingInfo>
+<MediaCapabilitiesEncodingInfo>
+<summary>
+The <strong><c>encodingInfo()</c></strong> method of the <see cref="MediaCapabilities"/> interface returns a promise that fulfills with the tested media configuration's capabilities for encoding media.<br/>This contains the three boolean properties <c>supported</c>, <c>smooth</c>, and <c>powerefficient</c>, which describe how compatible the device is with the type of media.
+</summary>
+<remarks>
+<para>-<see cref="MediaCapabilities.DecodingInfo"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities/encodingInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> fulfilling with an object containing three Boolean attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs are reported to be power efficient.</returns>
+</MediaCapabilitiesEncodingInfo>
 </docs>

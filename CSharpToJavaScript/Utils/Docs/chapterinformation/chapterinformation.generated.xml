@@ -9,16 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ChapterInformation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ChapterInformation>
-<ChapterInformationStartTime>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>startTime</c></strong> read-only property of the<br/><see cref="ChapterInformation"/> interface returns a number representing the start time of the chapter in seconds.
-</summary>
-<remarks>
-<para>-<see cref="ChapterInformation"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ChapterInformation/startTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</ChapterInformationStartTime>
 <ChapterInformationArtwork>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>artwork</c></strong> read-only property of the<br/><see cref="ChapterInformation"/> interface returns an {{jsxref("Array")}} of objects representing images associated with the chapter.
@@ -29,6 +19,16 @@
 </remarks>
 <value>An <see cref="Array"/> of objects. Each object contains the following properties:</value>
 </ChapterInformationArtwork>
+<ChapterInformationStartTime>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>startTime</c></strong> read-only property of the<br/><see cref="ChapterInformation"/> interface returns a number representing the start time of the chapter in seconds.
+</summary>
+<remarks>
+<para>-<see cref="ChapterInformation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ChapterInformation/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ChapterInformationStartTime>
 <ChapterInformationTitle>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>title</c></strong> read-only property of the<br/><see cref="ChapterInformation"/> interface returns a string representing the title of the chapter.

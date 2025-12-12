@@ -1,0 +1,40 @@
+<docs>
+<WebVR_API>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5>WebVR API is replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</blockquote>
+</summary>
+<remarks>
+<para>WebVR provides support for exposing virtual reality devices — for example, head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene. This has numerous, interesting applications, from virtual product tours and interactive training apps to immersive first-person games.</para>
+<para>-<see href="https://aframe.io/">A-Frame</see> — Open source web framework for building VR experiences.<br/>-<see href="https://webvr.info/">webvr.info</see> — Up-to-date information about WebVR, browser setup, and community.<br/>-<see href="https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</see> — A useful starter template for writing WebVR apps into.<br/>-<see href="https://github.com/immersive-web/webvr-polyfill">Web VR polyfill</see> — JavaScript implementation of WebVR.<br/>-<see href="https://webvr.directory/">WebVR Directory</see> — List of quality WebVR sites.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebVR_API>
+<WebVR_APIConcepts>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>WebVR API is replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</blockquote>
+</summary>
+<remarks>
+<para>This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Concepts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebVR_APIConcepts>
+<WebVR_APIUsing_the_WebVR_API>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>WebVR API is replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</blockquote>
+</summary>
+<remarks>
+<para>The WebVR API is a fantastic addition to the web developer&amp;apos;s toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebVR_APIUsing_the_WebVR_API>
+<WebVR_APIUsing_VR_controllers_with_WebVR>
+<summary>
+Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>, and specifically the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions">Gamepad Extensions API</see> that adds API features for accessing <see href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">controller pose</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</see>, and more. This article explains the basics.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>WebVR API is replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebVR_APIUsing_VR_controllers_with_WebVR>
+</docs>

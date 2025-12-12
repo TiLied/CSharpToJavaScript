@@ -9,26 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WorkletSharedStorage>
-<WorkletSharedStorageEntries>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>. The iterator provides an array of <c>[key, value]</c> pairs corresponding to the enumerable properties of a <c>WorkletSharedStorage</c> instance. The order of these pairs is similar to that in a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop, though a <c>for...in</c> loop also enumerates properties from the prototype chain.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/entries"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of the <c>WorkletSharedStorage</c>&amp;apos;s enumerable property key-value pairs.</returns>
-</WorkletSharedStorageEntries>
-<WorkletSharedStorageLength>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>length()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns the number of entries currently stored in shared storage for the current origin.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that fulfills with a number, which represents the total count of key-value pairs currently in the shared storage.</returns>
-</WorkletSharedStorageLength>
 <WorkletSharedStorageContext>
 <summary>
 <div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>context</c></strong> read-only property of the <see cref="WorkletSharedStorage"/> interface contains contextual data passed into the shared storage worklet from the associated browsing context via the <see cref="FencedFrameConfig.SetSharedStorageContext"/> method.
@@ -39,6 +19,16 @@
 </remarks>
 <value>A string representing the data. The value will match the latest value that was passed into the <see cref="FencedFrameConfig.SetSharedStorageContext"/> method prior to navigation to the <see cref="FencedFrameConfig"/>. If no value was set by <c>setSharedStorageContext()</c> prior to navigation, then <c>context</c> will return <c>undefined</c>.</value>
 </WorkletSharedStorageContext>
+<WorkletSharedStorageEntries>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>. The iterator provides an array of <c>[key, value]</c> pairs corresponding to the enumerable properties of a <c>WorkletSharedStorage</c> instance. The order of these pairs is similar to that in a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop, though a <c>for...in</c> loop also enumerates properties from the prototype chain.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of the <c>WorkletSharedStorage</c>&amp;apos;s enumerable property key-value pairs.</returns>
+</WorkletSharedStorageEntries>
 <WorkletSharedStorageGet>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface retrieves a value from shared storage.
@@ -49,6 +39,26 @@
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with either a string equal to the value of the retrieved key-value pair or <c>undefined</c> if the specified <c>key</c> is not found in the shared storage.</returns>
 </WorkletSharedStorageGet>
+<WorkletSharedStorageKeys>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>, which contains the keys for each item in a <c>WorkletSharedStorage</c> instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of the <c>WorkletSharedStorage</c>&amp;apos;s enumerable property keys.</returns>
+</WorkletSharedStorageKeys>
+<WorkletSharedStorageLength>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>length()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns the number of entries currently stored in shared storage for the current origin.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a number, which represents the total count of key-value pairs currently in the shared storage.</returns>
+</WorkletSharedStorageLength>
 <WorkletSharedStorageRemainingBudget>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>remainingBudget()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns the remaining navigation budget for the current origin.
@@ -60,14 +70,4 @@
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with a number representing the remaining navigation budget.</returns>
 </WorkletSharedStorageRemainingBudget>
-<WorkletSharedStorageKeys>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>, which contains the keys for each item in a <c>WorkletSharedStorage</c> instance.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/keys"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of the <c>WorkletSharedStorage</c>&amp;apos;s enumerable property keys.</returns>
-</WorkletSharedStorageKeys>
 </docs>

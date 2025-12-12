@@ -9,26 +9,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRCylinderLayer>
-<XRCylinderLayerTransform>
+<XRCylinderLayerAspectRatio>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transform</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the offset and orientation relative to the layer's <see cref="XRCylinderLayer.Space"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>aspectRatio</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the <see cref="XRCylinderLayer.Radius"/> with the <see cref="XRCylinderLayer.CentralAngle"/>.
 </summary>
 <remarks>
-<para>-<see cref="XRRigidTransform"/><br/>-<see cref="XRCylinderLayer.Space"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/transform"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="XRCylinderLayer.CentralAngle"/><br/>-<see cref="XRCylinderLayer.Radius"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/aspectRatio"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="XRRigidTransform"/>.</value>
-</XRCylinderLayerTransform>
-<XRCylinderLayerSpace>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>space</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the layer's spatial relationship with the user's physical environment.
-</summary>
-<remarks>
-<para>-<see cref="XRSpace"/><br/>-<see cref="XRWebGLBinding.CreateCylinderLayer"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/space"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="XRSpace"/>.</value>
-</XRCylinderLayerSpace>
+<value>A number representing the ratio of the visible cylinder section.</value>
+</XRCylinderLayerAspectRatio>
 <XRCylinderLayerCentralAngle>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>centralAngle</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the angle in radians of the visible section of the cylinder.
@@ -49,16 +39,6 @@
 </remarks>
 <value>A number representing the radius of the cylinder.</value>
 </XRCylinderLayerRadius>
-<XRCylinderLayerAspectRatio>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>aspectRatio</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the <see cref="XRCylinderLayer.Radius"/> with the <see cref="XRCylinderLayer.CentralAngle"/>.
-</summary>
-<remarks>
-<para>-<see cref="XRCylinderLayer.CentralAngle"/><br/>-<see cref="XRCylinderLayer.Radius"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/aspectRatio"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number representing the ratio of the visible cylinder section.</value>
-</XRCylinderLayerAspectRatio>
 <XRCylinderLayerRedraw>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>redraw</c> event is sent to the <c>XRCylinderLayer</c> object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
@@ -69,4 +49,24 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/redraw"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRCylinderLayerRedraw>
+<XRCylinderLayerSpace>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>space</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the layer's spatial relationship with the user's physical environment.
+</summary>
+<remarks>
+<para>-<see cref="XRSpace"/><br/>-<see cref="XRWebGLBinding.CreateCylinderLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/space"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace"/>.</value>
+</XRCylinderLayerSpace>
+<XRCylinderLayerTransform>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transform</c></strong> property of the <see cref="XRCylinderLayer"/> interface represents the offset and orientation relative to the layer's <see cref="XRCylinderLayer.Space"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRRigidTransform"/><br/>-<see cref="XRCylinderLayer.Space"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer/transform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRRigidTransform"/>.</value>
+</XRCylinderLayerTransform>
 </docs>

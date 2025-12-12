@@ -1,0 +1,12 @@
+<docs>
+<EXT_texture_filter_anisotropic>
+<summary>
+The <strong><c>EXT_texture_filter_anisotropic</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes two constants for <see href="https://en.wikipedia.org/wiki/Anisotropic_filtering">anisotropic filtering (AF)</see>.
+</summary>
+<remarks>
+<para>AF improves the quality of mipmapped texture access when viewing a textured primitive at an oblique angle. Using just mipmapping, these lookups have a tendency to average to grey.</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_filter_anisotropic"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EXT_texture_filter_anisotropic>
+</docs>

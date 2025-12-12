@@ -1,0 +1,19 @@
+<docs>
+<Translator_and_Language_Detector_APIs>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>Translator and Language Detector APIs</strong> provide functionality to detect the language that text is written in, and to translate text into different languages, via a browser&amp;apos;s own internal AI model (which may differ between browsers).
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/ai/language-detection">Language detection with built-in AI</see> on developer.chrome.com (2025)<br/>-<see href="https://developer.chrome.com/docs/ai/translator-api">Translation with built-in AI</see> on developer.chrome.com (2025)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Translator_and_Language_Detector_APIs>
+<Translator_and_Language_Detector_APIsUsing>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs">Translator and Language Detector APIs</see> provide asynchronous (<see cref="Promise"/>-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service.<br/>This article explains how to use these APIs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Translator_and_Language_Detector_APIsUsing>
+</docs>

@@ -7,6 +7,15 @@ The <strong><c>BluetoothUUID</c></strong> interface of the <see href="https://de
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothUUID"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BluetoothUUID>
+<BluetoothUUIDCanonicalUUID>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canonicalUUID()</c></strong> static method of the <see cref="BluetoothUUID"/> interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothUUID/canonicalUUID"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A 128-bit UUID.</returns>
+</BluetoothUUIDCanonicalUUID>
 <BluetoothUUIDGetCharacteristic>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getCharacteristic()</c></strong> static method of the <see cref="BluetoothUUID"/> interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
@@ -25,15 +34,6 @@ The <strong><c>BluetoothUUID</c></strong> interface of the <see href="https://de
 </remarks>
 <returns>A 128-bit UUID.</returns>
 </BluetoothUUIDGetDescriptor>
-<BluetoothUUIDCanonicalUUID>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canonicalUUID()</c></strong> static method of the <see cref="BluetoothUUID"/> interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothUUID/canonicalUUID"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A 128-bit UUID.</returns>
-</BluetoothUUIDCanonicalUUID>
 <BluetoothUUIDGetService>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getService()</c></strong> static method of the <see cref="BluetoothUUID"/> interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.

@@ -7,6 +7,15 @@ The <strong><c>LockManager</c></strong> interface of the <see href="https://deve
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LockManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </LockManager>
+<LockManagerQuery>
+<summary>
+The <strong><c>query()</c></strong> method of the <see cref="LockManager"/> interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LockManager/query"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref('Promise')}} that resolves with an object containing a snapshot of the <see cref="LockManager"/> state.<br/>The object has the following properties:The <c>LockInfo</c> object can have the following properties:</returns>
+</LockManagerQuery>
 <LockManagerRequest>
 <summary>
 The <strong><c>request()</c></strong> method of the <see cref="LockManager"/> interface requests a <see cref="'Lock'"/> object with parameters specifying its name and characteristics.<br/>The requested <c>Lock</c> is passed to a callback, while the function itself returns a <see cref="'Promise'"/> that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
@@ -17,13 +26,4 @@ The <strong><c>request()</c></strong> method of the <see cref="LockManager"/> in
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.</returns>
 </LockManagerRequest>
-<LockManagerQuery>
-<summary>
-The <strong><c>query()</c></strong> method of the <see cref="LockManager"/> interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LockManager/query"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref('Promise')}} that resolves with an object containing a snapshot of the <see cref="LockManager"/> state.<br/>The object has the following properties:The <c>LockInfo</c> object can have the following properties:</returns>
-</LockManagerQuery>
 </docs>

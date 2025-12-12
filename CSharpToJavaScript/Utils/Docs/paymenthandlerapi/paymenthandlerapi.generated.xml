@@ -1,0 +1,12 @@
+<docs>
+<Payment_Handler_API>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
+</summary>
+<remarks>
+<para>When a merchant website initiates payment via the {{domxref(&amp;quot;Payment Request API&amp;quot;, &amp;quot;Payment Request API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}, the Payment Handler API handles discovery of applicable payment apps, presenting them as choices to the user, opening a payment handler window once a choice has been made to allow the user to enter their payment details, and handling the payment transaction with the payment app.</para><para>Communication with payment apps (authorization, passing of payment credentials) is handled via Service Workers.</para>
+<para>-<see href="https://bobbucks.dev/">BobBucks sample payment app</see><br/>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Handler_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Payment_Handler_API>
+</docs>

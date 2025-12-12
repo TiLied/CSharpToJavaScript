@@ -9,28 +9,6 @@ The <strong><c>SVGEllipseElement</c></strong> interface provides access to the p
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGEllipseElement>
-<SVGEllipseElementRx>
-<summary>
-The <strong><c>rx</c></strong> read-only property of the <see cref="SVGEllipseElement"/> interface describes the x-axis radius of the ellipse as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("rx")}} attribute on the {{SVGElement("ellipse")}} element.
-</summary>
-<remarks>
-<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the radius of the ellipse along the x-axis in the user coordinate system.</para>
-<para>-<see cref="SVGEllipseElement.Ry"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement/rx"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGEllipseElementRx>
-<SVGEllipseElementRy>
-<summary>
-The <strong><c>ry</c></strong> read-only property of the <see cref="SVGEllipseElement"/> interface describes the y-axis radius of the ellipse as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("ry")}} attribute on the {{SVGElement("ellipse")}} element.
-</summary>
-<remarks>
-<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the radius of the ellipse along the y-axis in the user coordinate system.</para>
-<para>-<see cref="SVGEllipseElement.Rx"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement/ry"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGEllipseElementRy>
 <SVGEllipseElementCx>
 <summary>
 The <strong><c>cx</c></strong> read-only property of the <see cref="SVGEllipseElement"/> interface describes the x-axis coordinate of the center of the ellipse as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("cx")}} attribute on the {{SVGElement("ellipse")}} element.
@@ -53,4 +31,26 @@ The <strong><c>cy</c></strong> read-only property of the <see cref="SVGEllipseEl
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGEllipseElementCy>
+<SVGEllipseElementRx>
+<summary>
+The <strong><c>rx</c></strong> read-only property of the <see cref="SVGEllipseElement"/> interface describes the x-axis radius of the ellipse as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("rx")}} attribute on the {{SVGElement("ellipse")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the radius of the ellipse along the x-axis in the user coordinate system.</para>
+<para>-<see cref="SVGEllipseElement.Ry"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement/rx"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGEllipseElementRx>
+<SVGEllipseElementRy>
+<summary>
+The <strong><c>ry</c></strong> read-only property of the <see cref="SVGEllipseElement"/> interface describes the y-axis radius of the ellipse as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("ry")}} attribute on the {{SVGElement("ellipse")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the radius of the ellipse along the y-axis in the user coordinate system.</para>
+<para>-<see cref="SVGEllipseElement.Rx"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement/ry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGEllipseElementRy>
 </docs>

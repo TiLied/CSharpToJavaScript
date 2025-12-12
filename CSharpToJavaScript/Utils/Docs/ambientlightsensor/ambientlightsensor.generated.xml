@@ -8,15 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AmbientLightSensor>
-<AmbientLightSensorIlluminance>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>illuminance</c></strong> read-only property of the <see cref="AmbientLightSensor"/> interface returns the current light level in <see href="https://en.wikipedia.org/wiki/Lux">lux</see> of the ambient light level around the hosting device.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor/illuminance"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="'Number'"/> indicating the current light level in lux.</value>
-</AmbientLightSensorIlluminance>
 <AmbientLightSensorAmbientLightSensor>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>AmbientLightSensor()</c></strong> constructor creates a new <see cref="AmbientLightSensor"/> object, which returns the current light level or illuminance of the ambient light around the hosting device.
@@ -26,4 +17,13 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AmbientLightSensorAmbientLightSensor>
+<AmbientLightSensorIlluminance>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>illuminance</c></strong> read-only property of the <see cref="AmbientLightSensor"/> interface returns the current light level in <see href="https://en.wikipedia.org/wiki/Lux">lux</see> of the ambient light level around the hosting device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor/illuminance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'Number'"/> indicating the current light level in lux.</value>
+</AmbientLightSensorIlluminance>
 </docs>

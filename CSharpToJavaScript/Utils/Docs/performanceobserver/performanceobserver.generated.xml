@@ -17,6 +17,16 @@ The <strong><c>disconnect()</c></strong> method of the <see cref="'PerformanceOb
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </PerformanceObserverDisconnect>
+<PerformanceObserverObserve>
+<summary>
+The <strong><c>observe()</c></strong> method of the <strong><see cref="PerformanceObserver"/></strong> interface is used to specify the set of performance entry types to observe.
+</summary>
+<remarks>
+<para>See <see cref="PerformanceEntry.EntryType"/> for a list of entry types and <see cref="PerformanceObserver.SupportedEntryTypes"/> for a list of entry types the user agent supports.</para><para>When a matching performance entry is recorded, the performance observer's callback function—set when creating the <see cref="PerformanceObserver"/>—is invoked.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PerformanceObserverObserve>
 <PerformanceObserverPerformanceObserver>
 <summary>
 The <strong><c>PerformanceObserver()</c></strong> constructor creates a new <see cref="PerformanceObserver"/> object with the given observer <c>callback</c>. The observer callback is invoked when <see cref="PerformanceEntry"/> are recorded for the <see cref="PerformanceEntry.EntryType"/> that have been registered, via the <see cref="PerformanceObserver.Observe"/> method.
@@ -45,14 +55,4 @@ The <strong><c>takeRecords()</c></strong> method of the <see cref="'PerformanceO
 </remarks>
 <returns>A list of <see cref="PerformanceEntry"/> objects.</returns>
 </PerformanceObserverTakeRecords>
-<PerformanceObserverObserve>
-<summary>
-The <strong><c>observe()</c></strong> method of the <strong><see cref="PerformanceObserver"/></strong> interface is used to specify the set of performance entry types to observe.
-</summary>
-<remarks>
-<para>See <see cref="PerformanceEntry.EntryType"/> for a list of entry types and <see cref="PerformanceObserver.SupportedEntryTypes"/> for a list of entry types the user agent supports.</para><para>When a matching performance entry is recorded, the performance observer's callback function—set when creating the <see cref="PerformanceObserver"/>—is invoked.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</PerformanceObserverObserve>
 </docs>

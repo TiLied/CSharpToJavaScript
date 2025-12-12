@@ -9,14 +9,6 @@ The <strong><c>ResizeObserver</c></strong> interface reports changes to the dime
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ResizeObserver>
-<ResizeObserverResizeObserver>
-<summary>
-The <strong><c>ResizeObserver</c></strong> constructor creates a<br/>new <see cref="ResizeObserver"/> object, which can be used to report changes to the<br/>content or border box of an <see cref="'Element'"/> or the bounding box of an<br/><see cref="'SVGElement'"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver/ResizeObserver"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</ResizeObserverResizeObserver>
 <ResizeObserverDisconnect>
 <summary>
 The <strong><c>disconnect()</c></strong> method of the<br/><see cref="ResizeObserver"/> interface unobserves all observed <see cref="'Element'"/><br/>or <see cref="'SVGElement'"/> targets.
@@ -26,15 +18,6 @@ The <strong><c>disconnect()</c></strong> method of the<br/><see cref="ResizeObse
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ResizeObserverDisconnect>
-<ResizeObserverUnobserve>
-<summary>
-The <strong><c>unobserve()</c></strong> method of the<br/><see cref="ResizeObserver"/> interface ends the observing of a specified<br/><see cref="'Element'"/> or <see cref="'SVGElement'"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver/unobserve"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ResizeObserverUnobserve>
 <ResizeObserverObserve>
 <summary>
 The <strong><c>observe()</c></strong> method of the<br/><see cref="ResizeObserver"/> interface starts observing the specified<br/><see cref="'Element'"/> or <see cref="'SVGElement'"/>.
@@ -44,4 +27,21 @@ The <strong><c>observe()</c></strong> method of the<br/><see cref="ResizeObserve
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ResizeObserverObserve>
+<ResizeObserverResizeObserver>
+<summary>
+The <strong><c>ResizeObserver</c></strong> constructor creates a<br/>new <see cref="ResizeObserver"/> object, which can be used to report changes to the<br/>content or border box of an <see cref="'Element'"/> or the bounding box of an<br/><see cref="'SVGElement'"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver/ResizeObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ResizeObserverResizeObserver>
+<ResizeObserverUnobserve>
+<summary>
+The <strong><c>unobserve()</c></strong> method of the<br/><see cref="ResizeObserver"/> interface ends the observing of a specified<br/><see cref="'Element'"/> or <see cref="'SVGElement'"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver/unobserve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ResizeObserverUnobserve>
 </docs>

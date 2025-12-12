@@ -9,16 +9,6 @@ The <strong><c>ProgressEvent</c></strong> interface represents events that measu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ProgressEvent>
-<ProgressEventProgressEvent>
-<summary>
-The <strong><c>ProgressEvent()</c></strong> constructor returns a new <see cref="ProgressEvent"/> object, representing the current completion of a long process.
-</summary>
-<remarks>
-<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="ProgressEvent"/> object.</returns>
-</ProgressEventProgressEvent>
 <ProgressEventLengthComputable>
 <summary>
 The<br/><strong><c>ProgressEvent.lengthComputable</c></strong> read-only property is a<br/>boolean flag indicating if the resource concerned by the<br/><see cref="ProgressEvent"/> has a length that can be calculated. If not, the<br/><see cref="ProgressEvent.Total"/> property has no significant value.
@@ -40,6 +30,16 @@ The <strong><c>ProgressEvent.loaded</c></strong> read-only property is a number 
 </remarks>
 <value>A number.</value>
 </ProgressEventLoaded>
+<ProgressEventProgressEvent>
+<summary>
+The <strong><c>ProgressEvent()</c></strong> constructor returns a new <see cref="ProgressEvent"/> object, representing the current completion of a long process.
+</summary>
+<remarks>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ProgressEvent"/> object.</returns>
+</ProgressEventProgressEvent>
 <ProgressEventTotal>
 <summary>
 The <strong><c>ProgressEvent.total</c></strong> read-only property is a number indicating the total size of the data being transmitted or processed.

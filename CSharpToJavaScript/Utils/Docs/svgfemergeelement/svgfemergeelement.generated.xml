@@ -9,28 +9,6 @@ The <strong><c>SVGFEMergeElement</c></strong> interface corresponds to the <see 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEMergeElement>
-<SVGFEMergeElementWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeMerge">feMerge</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFEMergeElement.Height"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEMergeElementWidth>
-<SVGFEMergeElementX>
-<summary>
-The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeMerge">feMerge</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
-<para>-<see cref="SVGFEMergeElement.Y"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEMergeElementX>
 <SVGFEMergeElementHeight>
 <summary>
 The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -53,6 +31,28 @@ The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEMer
 </remarks>
 <value>An <see cref="SVGAnimatedString"/>.</value>
 </SVGFEMergeElementResult>
+<SVGFEMergeElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeMerge">feMerge</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEMergeElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEMergeElementWidth>
+<SVGFEMergeElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeMerge">feMerge</see> element. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEMergeElement.Y"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEMergeElementX>
 <SVGFEMergeElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEMergeElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

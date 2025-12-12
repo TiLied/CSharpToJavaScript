@@ -9,24 +9,6 @@ The <strong><c>HTMLProgressElement</c></strong> interface provides special prope
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLProgressElement>
-<HTMLProgressElementValue>
-<summary>
-The <strong><c>value</c></strong> property of the <see cref="HTMLProgressElement"/> interface represents the current progress of the {{HTMLElement("progress")}} element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/value"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A floating point number. If <see cref="HTMLProgressElement.Max"/> value is not set on the progress bar then value ranges between 0.0 and 1.0. If the <c>max</c> value is set then the <c>value</c> ranges between <c>0</c> and the <c>max</c> value.If the <c>value</c> property is not set on <see cref="HTMLProgressElement"/> object, then the progress bar remains indeterminate.</value>
-</HTMLProgressElementValue>
-<HTMLProgressElementPosition>
-<summary>
-The <strong><c>position</c></strong> read-only property of the <see cref="HTMLProgressElement"/> interface returns current progress of the {{HTMLElement("progress")}} element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/position"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>For determinate progress bar returns the result of current value divided by max value, i.e., a fraction between <c>0.0</c> and <c>1.0</c>.For indeterminate progress bar the value is always <c>-1</c>.</value>
-</HTMLProgressElementPosition>
 <HTMLProgressElementLabels>
 <summary>
 The <strong><c>HTMLProgressElement.labels</c></strong> read-only property returns<br/>a <see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">progress</see> element.
@@ -45,4 +27,22 @@ The <strong><c>max</c></strong> property of the <see cref="HTMLProgressElement"/
 </remarks>
 <value>A floating point number that is greater than zero. The default value is 1.0.</value>
 </HTMLProgressElementMax>
+<HTMLProgressElementPosition>
+<summary>
+The <strong><c>position</c></strong> read-only property of the <see cref="HTMLProgressElement"/> interface returns current progress of the {{HTMLElement("progress")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/position"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For determinate progress bar returns the result of current value divided by max value, i.e., a fraction between <c>0.0</c> and <c>1.0</c>.For indeterminate progress bar the value is always <c>-1</c>.</value>
+</HTMLProgressElementPosition>
+<HTMLProgressElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLProgressElement"/> interface represents the current progress of the {{HTMLElement("progress")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating point number. If <see cref="HTMLProgressElement.Max"/> value is not set on the progress bar then value ranges between 0.0 and 1.0. If the <c>max</c> value is set then the <c>value</c> ranges between <c>0</c> and the <c>max</c> value.If the <c>value</c> property is not set on <see cref="HTMLProgressElement"/> object, then the progress bar remains indeterminate.</value>
+</HTMLProgressElementValue>
 </docs>

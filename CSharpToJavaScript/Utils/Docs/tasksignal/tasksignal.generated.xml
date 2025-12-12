@@ -8,6 +8,17 @@ The <strong><c>TaskSignal</c></strong> interface of the <see href="https://devel
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TaskSignal>
+<TaskSignalAny>
+<summary>
+The <strong><c>TaskSignal.any()</c></strong> static method takes an iterable of <see cref="AbortSignal"/> objects and returns a <see cref="TaskSignal"/>. The returned task signal is aborted when any of the abort signals is aborted.
+</summary>
+<remarks>
+<para>When the task signal is aborted, its <see cref="AbortSignal.Reason"/> property will be set to the reason of the first signal that is aborted.</para>
+<para>-<see cref="AbortSignalany"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/any"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>TaskSignal</c> instance. It will be aborted when the first signal passed into <c>signals</c> is aborted. When this happens:</returns>
+</TaskSignalAny>
 <TaskSignalPriority>
 <summary>
 The read-only <strong><c>priority</c></strong> property of the <see cref="TaskSignal"/> interface indicates the signal <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see>.
@@ -26,15 +37,4 @@ The <strong><c>prioritychange</c></strong> event is sent to a <see cref="'TaskSi
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/prioritychange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TaskSignalPrioritychange>
-<TaskSignalAny>
-<summary>
-The <strong><c>TaskSignal.any()</c></strong> static method takes an iterable of <see cref="AbortSignal"/> objects and returns a <see cref="TaskSignal"/>. The returned task signal is aborted when any of the abort signals is aborted.
-</summary>
-<remarks>
-<para>When the task signal is aborted, its <see cref="AbortSignal.Reason"/> property will be set to the reason of the first signal that is aborted.</para>
-<para>-<see cref="AbortSignalany"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/any"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <c>TaskSignal</c> instance. It will be aborted when the first signal passed into <c>signals</c> is aborted. When this happens:</returns>
-</TaskSignalAny>
 </docs>

@@ -8,24 +8,6 @@ The WebXR Device API interface <strong><c>XRInputSourcesChangeEvent</c></strong>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRInputSourcesChangeEvent>
-<XRInputSourcesChangeEventXRInputSourcesChangeEvent>
-<summary>
-The <strong><c>XRInputSourcesChangeEvent()</c></strong><br/>constructor creates and returns a new <see cref="XRInputSourcesChangeEvent"/> object,<br/>representing an update to the list of available <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> input devices. You<br/>won&amp;apos;t typically call this constructor yourself, as these events are created and sent to<br/>you by the WebXR system.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="XRInputSourcesChangeEvent"/> object configured based upon<br/>the input parameters provided.</returns>
-</XRInputSourcesChangeEventXRInputSourcesChangeEvent>
-<XRInputSourcesChangeEventRemoved>
-<summary>
-The read-only <see cref="XRInputSourcesChangeEvent"/> property <c>removed</c> is an array of<br/>zero or more <see cref="XRInputSource"/> objects representing the input sources that have been removed from the <see cref="XRSession"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/removed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An {{jsxref("Array")}} of zero or more <see cref="XRInputSource"/> objects, each representing one input device removed from the XR system.</value>
-</XRInputSourcesChangeEventRemoved>
 <XRInputSourcesChangeEventAdded>
 <summary>
 The read-only <see cref="XRInputSourcesChangeEvent"/><br/>property <c>added</c> is a list of zero or<br/>more input sources, each identified using an <see cref="XRInputSource"/> object,<br/>which have been newly made available for use.
@@ -35,6 +17,15 @@ The read-only <see cref="XRInputSourcesChangeEvent"/><br/>property <c>added</c> 
 </remarks>
 <value>An {{jsxref("Array")}} of zero or more <see cref="XRInputSource"/> objects, each<br/>representing one input device added to the XR system.</value>
 </XRInputSourcesChangeEventAdded>
+<XRInputSourcesChangeEventRemoved>
+<summary>
+The read-only <see cref="XRInputSourcesChangeEvent"/> property <c>removed</c> is an array of<br/>zero or more <see cref="XRInputSource"/> objects representing the input sources that have been removed from the <see cref="XRSession"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/removed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An {{jsxref("Array")}} of zero or more <see cref="XRInputSource"/> objects, each representing one input device removed from the XR system.</value>
+</XRInputSourcesChangeEventRemoved>
 <XRInputSourcesChangeEventSession>
 <summary>
 The <see cref="XRInputSourcesChangeEvent"/> property<br/><c>session</c> specifies the<br/><see cref="XRSession"/> to which the input source list change event applies.
@@ -44,4 +35,13 @@ The <see cref="XRInputSourcesChangeEvent"/> property<br/><c>session</c> specifie
 </remarks>
 <value>An <see cref="XRSession"/> indicating the WebXR session to which the input source list<br/>change applies.</value>
 </XRInputSourcesChangeEventSession>
+<XRInputSourcesChangeEventXRInputSourcesChangeEvent>
+<summary>
+The <strong><c>XRInputSourcesChangeEvent()</c></strong><br/>constructor creates and returns a new <see cref="XRInputSourcesChangeEvent"/> object,<br/>representing an update to the list of available <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> input devices. You<br/>won&amp;apos;t typically call this constructor yourself, as these events are created and sent to<br/>you by the WebXR system.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="XRInputSourcesChangeEvent"/> object configured based upon<br/>the input parameters provided.</returns>
+</XRInputSourcesChangeEventXRInputSourcesChangeEvent>
 </docs>

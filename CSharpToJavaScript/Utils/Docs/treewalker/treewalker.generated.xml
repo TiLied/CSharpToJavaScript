@@ -9,16 +9,27 @@ The <strong><c>TreeWalker</c></strong> object represents the nodes of a document
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TreeWalker>
-<TreeWalkerPreviousSibling>
+<TreeWalkerCurrentNode>
 <summary>
-The <strong><c>TreeWalker.previousSibling()</c></strong> method moves the current<br/><see cref="Node"/> to its previous sibling, if any, and returns the found sibling. If<br/>there is no such node, it returns <c>null</c> and the current node is not changed.
+The <strong><c>TreeWalker.currentNode</c></strong> property represents the<br/><see cref="Node"/> which the <see cref="TreeWalker"/> is currently pointing at.
 </summary>
 <remarks>
-<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling"> <em>See also on MDN</em> </seealso></para>
+<para>-The <see cref="TreeWalker"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Node"/> object or <c>null</c>.</returns>
-</TreeWalkerPreviousSibling>
+<value>A <see cref="Node"/>.</value>
+</TreeWalkerCurrentNode>
+<TreeWalkerFilter>
+<summary>
+The <strong><c>TreeWalker.filter</c></strong> read-only property returns the <c>NodeFilter</c><br/>associated with the <see cref="TreeWalker"/>.
+</summary>
+<remarks>
+<para>When creating the <c>TreeWalker</c>, the filter object is passed in as the third<br/>parameter, and its method <c>acceptNode()</c> is called on every<br/>single node to determine whether or not to accept it.</para>
+<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>NodeFilter</c> object.</value>
+</TreeWalkerFilter>
 <TreeWalkerFirstChild>
 <summary>
 The <strong><c>TreeWalker.firstChild()</c></strong> method moves the current<br/><see cref="Node"/> to the first <strong>visible</strong> child of the current node, and returns<br/>the found child. If no such child exists, it returns <c>null</c> and the current node is not changed.
@@ -29,16 +40,6 @@ The <strong><c>TreeWalker.firstChild()</c></strong> method moves the current<br/
 </remarks>
 <returns>A <see cref="Node"/> object or <c>null</c>.</returns>
 </TreeWalkerFirstChild>
-<TreeWalkerNextNode>
-<summary>
-The <strong><c>TreeWalker.nextNode()</c></strong> method moves the current<br/><see cref="Node"/> to the next <strong>visible</strong> node in the document order, and returns<br/>the found node. If no such node exists, it returns <c>null</c> and the current node is not changed.
-</summary>
-<remarks>
-<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Node"/> object or <c>null</c>.</returns>
-</TreeWalkerNextNode>
 <TreeWalkerLastChild>
 <summary>
 The <strong><c>TreeWalker.lastChild()</c></strong> method moves the current<br/><see cref="Node"/> to the last <strong>visible</strong> child of the current node, and returns<br/>the found child. If no such child exists, it returns <c>null</c> and the current node is not changed.
@@ -49,6 +50,16 @@ The <strong><c>TreeWalker.lastChild()</c></strong> method moves the current<br/>
 </remarks>
 <returns>A <see cref="Node"/> object or <c>null</c>.</returns>
 </TreeWalkerLastChild>
+<TreeWalkerNextNode>
+<summary>
+The <strong><c>TreeWalker.nextNode()</c></strong> method moves the current<br/><see cref="Node"/> to the next <strong>visible</strong> node in the document order, and returns<br/>the found node. If no such node exists, it returns <c>null</c> and the current node is not changed.
+</summary>
+<remarks>
+<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Node"/> object or <c>null</c>.</returns>
+</TreeWalkerNextNode>
 <TreeWalkerNextSibling>
 <summary>
 The <strong><c>TreeWalker.nextSibling()</c></strong> method moves the current<br/><see cref="Node"/> to its next sibling, if any, and returns the found sibling. If there<br/>is no such node, it returns <c>null</c> and the current node is not changed.
@@ -79,37 +90,16 @@ The <strong><c>TreeWalker.previousNode()</c></strong> method moves the current<b
 </remarks>
 <returns>A <see cref="Node"/> object or <c>null</c>.</returns>
 </TreeWalkerPreviousNode>
-<TreeWalkerWhatToShow>
+<TreeWalkerPreviousSibling>
 <summary>
-The <strong><c>TreeWalker.whatToShow</c></strong> read-only property returns a<br/>bitmask that indicates the types of<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Node">nodes</see> to show. Non-matching nodes are skipped, but their<br/>children may be included, if relevant. The possible values are:
+The <strong><c>TreeWalker.previousSibling()</c></strong> method moves the current<br/><see cref="Node"/> to its previous sibling, if any, and returns the found sibling. If<br/>there is no such node, it returns <c>null</c> and the current node is not changed.
 </summary>
 <remarks>
-<para>-The <see cref="TreeWalker"/> interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/whatToShow"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A bitmask.</value>
-</TreeWalkerWhatToShow>
-<TreeWalkerFilter>
-<summary>
-The <strong><c>TreeWalker.filter</c></strong> read-only property returns the <c>NodeFilter</c><br/>associated with the <see cref="TreeWalker"/>.
-</summary>
-<remarks>
-<para>When creating the <c>TreeWalker</c>, the filter object is passed in as the third<br/>parameter, and its method <c>acceptNode()</c> is called on every<br/>single node to determine whether or not to accept it.</para>
 <para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <c>NodeFilter</c> object.</value>
-</TreeWalkerFilter>
-<TreeWalkerCurrentNode>
-<summary>
-The <strong><c>TreeWalker.currentNode</c></strong> property represents the<br/><see cref="Node"/> which the <see cref="TreeWalker"/> is currently pointing at.
-</summary>
-<remarks>
-<para>-The <see cref="TreeWalker"/> interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Node"/>.</value>
-</TreeWalkerCurrentNode>
+<returns>A <see cref="Node"/> object or <c>null</c>.</returns>
+</TreeWalkerPreviousSibling>
 <TreeWalkerRoot>
 <summary>
 The <strong><c>TreeWalker.root</c></strong> read-only property returns the root <see cref="Node"/> that the <see cref="TreeWalker"/> traverses.
@@ -120,4 +110,14 @@ The <strong><c>TreeWalker.root</c></strong> read-only property returns the root 
 </remarks>
 <value>A <see cref="Node"/> object.</value>
 </TreeWalkerRoot>
+<TreeWalkerWhatToShow>
+<summary>
+The <strong><c>TreeWalker.whatToShow</c></strong> read-only property returns a<br/>bitmask that indicates the types of<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Node">nodes</see> to show. Non-matching nodes are skipped, but their<br/>children may be included, if relevant. The possible values are:
+</summary>
+<remarks>
+<para>-The <see cref="TreeWalker"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/whatToShow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A bitmask.</value>
+</TreeWalkerWhatToShow>
 </docs>

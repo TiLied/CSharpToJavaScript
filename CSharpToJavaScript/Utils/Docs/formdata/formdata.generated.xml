@@ -9,6 +9,27 @@ The <strong><c>FormData</c></strong> interface provides a way to construct a set
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FormData>
+<FormDataAppend>
+<summary>
+The <strong><c>append()</c></strong> method of the <see cref="FormData"/> interface appends a new value onto an existing key inside a <c>FormData</c> object, or adds the key if it does not already exist.
+</summary>
+<remarks>
+<para>The difference between <see cref="FormData.Set"/> and <c>append()</c> is that if the specified key already exists, <c>set()</c> will overwrite all existing values with the new one, whereas <c>append()</c> will append the new value onto the end of the existing set of values.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/append"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FormDataAppend>
+<FormDataDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="FormData"/> interface deletes a key and its value(s) from a <c>FormData</c> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FormDataDelete>
 <FormDataEntries>
 <summary>
 The <strong><c>FormData.entries()</c></strong> method returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> which iterates through all key/value pairs contained in the <see cref="FormData"/>. The key of each pair is a string, and the value is either a string or a <see cref="Blob"/>.
@@ -19,26 +40,6 @@ The <strong><c>FormData.entries()</c></strong> method returns an <see href="http
 </remarks>
 <returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> of <see cref="FormData"/>'s key/value pairs.</returns>
 </FormDataEntries>
-<FormDataHas>
-<summary>
-The <strong><c>has()</c></strong> method of the <see cref="FormData"/> interface returns whether a <c>FormData</c> object contains a certain key.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><c>true</c> if a key of <c>FormData</c> matches the specified <c>name</c>. Otherwise, <c>false</c>.</returns>
-</FormDataHas>
-<FormDataGetAll>
-<summary>
-The <strong><c>getAll()</c></strong> method of the <see cref="FormData"/> interface returns all the values associated with a given key from within a <c>FormData</c> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/getAll"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of values whose key matches the specified <c>name</c>. Otherwise, an empty list.</returns>
-</FormDataGetAll>
 <FormDataFormData>
 <summary>
 The <strong><c>FormData()</c></strong> constructor creates a new <see cref="FormData"/> object.
@@ -58,16 +59,36 @@ The <strong><c>get()</c></strong> method of the <see cref="FormData"/> interface
 </remarks>
 <returns>A value whose key matches the specified <c>name</c>. Otherwise, <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</returns>
 </FormDataGet>
-<FormDataDelete>
+<FormDataGetAll>
 <summary>
-The <strong><c>delete()</c></strong> method of the <see cref="FormData"/> interface deletes a key and its value(s) from a <c>FormData</c> object.
+The <strong><c>getAll()</c></strong> method of the <see cref="FormData"/> interface returns all the values associated with a given key from within a <c>FormData</c> object.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/delete"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/getAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</FormDataDelete>
+<returns>An array of values whose key matches the specified <c>name</c>. Otherwise, an empty list.</returns>
+</FormDataGetAll>
+<FormDataHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="FormData"/> interface returns whether a <c>FormData</c> object contains a certain key.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if a key of <c>FormData</c> matches the specified <c>name</c>. Otherwise, <c>false</c>.</returns>
+</FormDataHas>
+<FormDataKeys>
+<summary>
+The <strong><c>FormData.keys()</c></strong> method returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> which iterates through all keys contained in the <see cref="FormData"/>. The keys are strings.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see> of <see cref="FormData"/>'s keys.</returns>
+</FormDataKeys>
 <FormDataSet>
 <summary>
 The <strong><c>set()</c></strong> method of the <see cref="FormData"/> interface sets a new value for an existing key inside a <c>FormData</c> object, or adds the key/value if it does not already exist.
@@ -79,27 +100,6 @@ The <strong><c>set()</c></strong> method of the <see cref="FormData"/> interface
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </FormDataSet>
-<FormDataAppend>
-<summary>
-The <strong><c>append()</c></strong> method of the <see cref="FormData"/> interface appends a new value onto an existing key inside a <c>FormData</c> object, or adds the key if it does not already exist.
-</summary>
-<remarks>
-<para>The difference between <see cref="FormData.Set"/> and <c>append()</c> is that if the specified key already exists, <c>set()</c> will overwrite all existing values with the new one, whereas <c>append()</c> will append the new value onto the end of the existing set of values.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/append"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</FormDataAppend>
-<FormDataKeys>
-<summary>
-The <strong><c>FormData.keys()</c></strong> method returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> which iterates through all keys contained in the <see cref="FormData"/>. The keys are strings.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/keys"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see> of <see cref="FormData"/>'s keys.</returns>
-</FormDataKeys>
 <FormDataValues>
 <summary>
 The <strong><c>FormData.values()</c></strong> method returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> which iterates through all values contained in the <see cref="FormData"/>. The values are strings or <see cref="Blob"/> objects.

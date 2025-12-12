@@ -9,16 +9,6 @@ The <strong><c>MediaStreamTrackEvent</c></strong> interface of the {{domxref(&am
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStreamTrackEvent>
-<MediaStreamTrackEventTrack>
-<summary>
-The <strong><c>track</c></strong> read-only property of the <see cref="MediaStreamTrackEvent"/> interface returns the <see cref="MediaStreamTrack"/> associated with this event.
-</summary>
-<remarks>
-<para>-<see cref="MediaStreamaddtrack"/> and <see cref="MediaStreamremovetrack"/> events<br/>-<see cref="MediaStreamTrack"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent/track"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="MediaStreamTrack"/> object.</value>
-</MediaStreamTrackEventTrack>
 <MediaStreamTrackEventMediaStreamTrackEvent>
 <summary>
 The <strong><c>MediaStreamTrackEvent()</c></strong> constructor returns a new <see cref="MediaStreamTrackEvent"/> object,<br/>which represents an event signaling that a <see cref="MediaStreamTrack"/> has been added to or removed from a <see cref="MediaStream"/>.
@@ -29,4 +19,14 @@ The <strong><c>MediaStreamTrackEvent()</c></strong> constructor returns a new <s
 </remarks>
 <returns>A new <see cref="MediaStreamTrackEvent"/> object, initialized based on the provided options.</returns>
 </MediaStreamTrackEventMediaStreamTrackEvent>
+<MediaStreamTrackEventTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of the <see cref="MediaStreamTrackEvent"/> interface returns the <see cref="MediaStreamTrack"/> associated with this event.
+</summary>
+<remarks>
+<para>-<see cref="MediaStreamaddtrack"/> and <see cref="MediaStreamremovetrack"/> events<br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStreamTrack"/> object.</value>
+</MediaStreamTrackEventTrack>
 </docs>

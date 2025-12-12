@@ -9,25 +9,25 @@ The <strong><c>MediaRecorder</c></strong> interface of the <see href="https://de
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaRecorder>
-<MediaRecorderStop>
+<MediaRecorderAudioBitrateMode>
 <summary>
-The <strong><c>stop</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Stop"/> is called, or when the media stream being<br/>captured ends. In each case, the <c>stop</c> event is preceded by a<br/><c>dataavailable</c> event, making the <see cref="Blob"/> captured up to that<br/>point available for you to use in your application.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>audioBitrateMode</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the bitrate mode used to encode audio tracks.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitrateMode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</MediaRecorderStop>
-<MediaRecorderMediaRecorder>
+<value>One of the following:</value>
+</MediaRecorderAudioBitrateMode>
+<MediaRecorderAudioBitsPerSecond>
 <summary>
-The <strong><c>MediaRecorder()</c></strong> constructor<br/>creates a new <see cref="MediaRecorder"/> object that will record a specified<br/><see cref="MediaStream"/>.
+The <strong><c>audioBitsPerSecond</c></strong> read-only<br/>property of the <see cref="MediaRecorder"/> interface returns the audio encoding bit<br/>rate in use.
 </summary>
 <remarks>
-<para>The object can optionally be configured to record<br/>using a specific media container (file type), and, further, can specify the exact codec<br/>and codec configuration(s) to use by specifying <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter">the <c>codecs</c> parameter</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="MediaDevices.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder"> <em>See also on MDN</em> </seealso></para>
+<para>This may differ from the bit rate specified in the constructor (if<br/>it was provided).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitsPerSecond"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</MediaRecorderMediaRecorder>
+<value>A <see cref="Number"/> (unsigned long).</value>
+</MediaRecorderAudioBitsPerSecond>
 <MediaRecorderDataavailable>
 <summary>
 The <strong><c>dataavailable</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when the MediaRecorder delivers media<br/>data to your application for its use. The data is provided in a <see cref="Blob"/><br/>object that contains the data. This occurs in four situations:
@@ -38,28 +38,36 @@ The <strong><c>dataavailable</c></strong> event of the <see cref="MediaRecorder"
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/dataavailable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaRecorderDataavailable>
-<MediaRecorderStop>
+<MediaRecorderError>
 <summary>
-The <strong><c>stop()</c></strong> method of the <see cref="MediaRecorder"/> interface is<br/>used to stop media capture.
+The <strong><c>error</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
 </summary>
 <remarks>
-<para>When the <c>stop()</c> method is invoked, the UA queues a task that runs the<br/>following steps:</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop"> <em>See also on MDN</em> </seealso></para>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</MediaRecorderStop>
-<MediaRecorderRequestData>
+</MediaRecorderError>
+<MediaRecorderIsTypeSupported>
 <summary>
-The <strong><c>requestData()</c></strong><br/>method of the <see cref="MediaRecorder"/> interface is used to raise a <see cref="MediaRecorder.Dataavailable"/> event containing a<br/><see cref="Blob"/> object of the captured media as it was when the method was<br/>called. This can then be grabbed and manipulated as you wish.
+The <strong><c>isTypeSupported()</c></strong> static method of the <see cref="MediaRecorder"/> interface returns a {{jsxref("Boolean")}} which is <c>true</c> if the MIME media type specified is one the user agent should be able to successfully record.
 </summary>
 <remarks>
-<para>When the <c>requestData()</c> method is invoked, the browser queues a task that<br/>runs the following steps:</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/requestData"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter">Codecs in common media types</see><br/>-<see cref="MediaStreamTrack"/><br/>-<see cref="MediaStream"/><br/>-<see cref="MediaCapabilities"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/isTypeSupported"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</MediaRecorderRequestData>
+<returns>A <see cref="Boolean"/>, <c>true</c> if the <see cref="MediaRecorder"/> implementation is capable of recording <see cref="Blob"/> objects for the specified MIME type.<br/>Recording may still fail if there are insufficient resources to support the recording and encoding process.<br/>If the value is <c>false</c>, the user agent is incapable of recording the specified format.</returns>
+</MediaRecorderIsTypeSupported>
+<MediaRecorderMediaRecorder>
+<summary>
+The <strong><c>MediaRecorder()</c></strong> constructor<br/>creates a new <see cref="MediaRecorder"/> object that will record a specified<br/><see cref="MediaStream"/>.
+</summary>
+<remarks>
+<para>The object can optionally be configured to record<br/>using a specific media container (file type), and, further, can specify the exact codec<br/>and codec configuration(s) to use by specifying <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter">the <c>codecs</c> parameter</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="MediaDevices.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaRecorderMediaRecorder>
 <MediaRecorderMimeType>
 <summary>
 The <strong><c>mimeType</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the {{Glossary("MIME")}} media type that was specified when creating the <see cref="MediaRecorder"/> object, or, if none was specified, which was chosen by the browser.<br/>This is the file format of the file that would result from writing all of the recorded data to disk.
@@ -71,47 +79,6 @@ The <strong><c>mimeType</c></strong> read-only property of the <see cref="MediaR
 </remarks>
 <value>The MIME media type which describes the format of the recorded media, as a string.<br/>This string <strong>may</strong> include the <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter"><c>codecs</c> parameter,</see> giving details about the codecs and the codec configurations used by the media recorder.The media type strings are standardized by the Internet Assigned Numbers Authority (IANA).<br/>For their official list of defined media type strings, see the article <see href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</see> on the IANA site.<br/>See also <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types">media types</see> to learn more about media types and how they&amp;apos;re used in web content and by web browsers.</value>
 </MediaRecorderMimeType>
-<MediaRecorderError>
-<summary>
-The <strong><c>error</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/error"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MediaRecorderError>
-<MediaRecorderResume>
-<summary>
-The <strong><c>resume()</c></strong> method of the <see cref="MediaRecorder"/> interface is used to resume media recording when it has been previously paused.
-</summary>
-<remarks>
-<para>If <see cref="MediaRecorder.State"/> is already "recording", calling <c>resume()</c> has no effect.</para><para>When the <c>resume()</c> method is invoked, the browser queues a task that runs<br/>the following steps:</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</MediaRecorderResume>
-<MediaRecorderStream>
-<summary>
-The <strong><c>stream</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the stream that was passed into the <see cref="MediaRecorder.MediaRecorder"/> constructor when the <c>MediaRecorder</c> was created.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stream"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <see cref="MediaStream"/> passed into the <c>MediaRecorder()</c> constructor when the <c>MediaRecorder</c> was originally created.</value>
-</MediaRecorderStream>
-<MediaRecorderIsTypeSupported>
-<summary>
-The <strong><c>isTypeSupported()</c></strong> static method of the <see cref="MediaRecorder"/> interface returns a {{jsxref("Boolean")}} which is <c>true</c> if the MIME media type specified is one the user agent should be able to successfully record.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter">Codecs in common media types</see><br/>-<see cref="MediaStreamTrack"/><br/>-<see cref="MediaStream"/><br/>-<see cref="MediaCapabilities"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/isTypeSupported"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Boolean"/>, <c>true</c> if the <see cref="MediaRecorder"/> implementation is capable of recording <see cref="Blob"/> objects for the specified MIME type.<br/>Recording may still fail if there are insufficient resources to support the recording and encoding process.<br/>If the value is <c>false</c>, the user agent is incapable of recording the specified format.</returns>
-</MediaRecorderIsTypeSupported>
 <MediaRecorderPause>
 <summary>
 The <strong><c>pause()</c></strong> method of the <see cref="MediaRecorder"/> interface is used<br/>to pause recording of media streams.
@@ -123,6 +90,46 @@ The <strong><c>pause()</c></strong> method of the <see cref="MediaRecorder"/> in
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </MediaRecorderPause>
+<MediaRecorderPause>
+<summary>
+The <strong><c>pause</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Pause"/> is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/pause"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaRecorderPause>
+<MediaRecorderRequestData>
+<summary>
+The <strong><c>requestData()</c></strong><br/>method of the <see cref="MediaRecorder"/> interface is used to raise a <see cref="MediaRecorder.Dataavailable"/> event containing a<br/><see cref="Blob"/> object of the captured media as it was when the method was<br/>called. This can then be grabbed and manipulated as you wish.
+</summary>
+<remarks>
+<para>When the <c>requestData()</c> method is invoked, the browser queues a task that<br/>runs the following steps:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/requestData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaRecorderRequestData>
+<MediaRecorderResume>
+<summary>
+The <strong><c>resume()</c></strong> method of the <see cref="MediaRecorder"/> interface is used to resume media recording when it has been previously paused.
+</summary>
+<remarks>
+<para>If <see cref="MediaRecorder.State"/> is already "recording", calling <c>resume()</c> has no effect.</para><para>When the <c>resume()</c> method is invoked, the browser queues a task that runs<br/>the following steps:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaRecorderResume>
+<MediaRecorderResume>
+<summary>
+The <strong><c>resume</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Resume"/> is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaRecorderResume>
 <MediaRecorderStart>
 <summary>
 The <strong><c>start()</c></strong> method of the <see cref="MediaRecorder"/> interface begins recording media into one or more <see cref="Blob"/> objects.
@@ -134,6 +141,15 @@ The <strong><c>start()</c></strong> method of the <see cref="MediaRecorder"/> in
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </MediaRecorderStart>
+<MediaRecorderStart>
+<summary>
+The <strong><c>start</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Start"/> is called. At this point, the data<br/>starts being gathered into a <see cref="Blob"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaRecorderStart>
 <MediaRecorderState>
 <summary>
 The <strong><c>state</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the current state of the current <c>MediaRecorder</c> object.
@@ -144,24 +160,36 @@ The <strong><c>state</c></strong> read-only property of the <see cref="MediaReco
 </remarks>
 <value>A string containing one of the following values:</value>
 </MediaRecorderState>
-<MediaRecorderAudioBitrateMode>
+<MediaRecorderStop>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>audioBitrateMode</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the bitrate mode used to encode audio tracks.
+The <strong><c>stop()</c></strong> method of the <see cref="MediaRecorder"/> interface is<br/>used to stop media capture.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitrateMode"> <em>See also on MDN</em> </seealso></para>
+<para>When the <c>stop()</c> method is invoked, the UA queues a task that runs the<br/>following steps:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>One of the following:</value>
-</MediaRecorderAudioBitrateMode>
-<MediaRecorderStart>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaRecorderStop>
+<MediaRecorderStop>
 <summary>
-The <strong><c>start</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Start"/> is called. At this point, the data<br/>starts being gathered into a <see cref="Blob"/>.
+The <strong><c>stop</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Stop"/> is called, or when the media stream being<br/>captured ends. In each case, the <c>stop</c> event is preceded by a<br/><c>dataavailable</c> event, making the <see cref="Blob"/> captured up to that<br/>point available for you to use in your application.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/start"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</MediaRecorderStart>
+</MediaRecorderStop>
+<MediaRecorderStream>
+<summary>
+The <strong><c>stream</c></strong> read-only property of the <see cref="MediaRecorder"/> interface returns the stream that was passed into the <see cref="MediaRecorder.MediaRecorder"/> constructor when the <c>MediaRecorder</c> was created.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="MediaStream"/> passed into the <c>MediaRecorder()</c> constructor when the <c>MediaRecorder</c> was originally created.</value>
+</MediaRecorderStream>
 <MediaRecorderVideoBitsPerSecond>
 <summary>
 The <strong><c>videoBitsPerSecond</c></strong> read-only<br/>property of the <see cref="MediaRecorder"/> interface returns the video encoding<br/>bit rate in use.
@@ -172,32 +200,4 @@ The <strong><c>videoBitsPerSecond</c></strong> read-only<br/>property of the <se
 </remarks>
 <value>A <see cref="Number"/> (unsigned long).</value>
 </MediaRecorderVideoBitsPerSecond>
-<MediaRecorderAudioBitsPerSecond>
-<summary>
-The <strong><c>audioBitsPerSecond</c></strong> read-only<br/>property of the <see cref="MediaRecorder"/> interface returns the audio encoding bit<br/>rate in use.
-</summary>
-<remarks>
-<para>This may differ from the bit rate specified in the constructor (if<br/>it was provided).</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitsPerSecond"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Number"/> (unsigned long).</value>
-</MediaRecorderAudioBitsPerSecond>
-<MediaRecorderResume>
-<summary>
-The <strong><c>resume</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Resume"/> is called.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MediaRecorderResume>
-<MediaRecorderPause>
-<summary>
-The <strong><c>pause</c></strong> event of the <see cref="MediaRecorder"/> interface is fired when<br/><see cref="MediaRecorder.Pause"/> is called.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://mdn.github.io/dom-examples/media/web-dictaphone/">Web Dictaphone</see>: MediaRecorder +<br/>getUserMedia + Web Audio API visualization demo, by <see href="https://github.com/chrisdavidmills">Chris Mills</see> (<see href="https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone">source on GitHub</see>.)<br/>-<see href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</see>, by <see href="https://github.com/samdutton">Sam Dutton</see>.<br/>-<see cref="Navigator.GetUserMedia"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/pause"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MediaRecorderPause>
 </docs>

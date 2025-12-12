@@ -8,6 +8,15 @@ The <strong><c>CSSTransformValue</c></strong> interface of the <see href="https:
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSTransformValue>
+<CSSTransformValueCSSTransformValue>
+<summary>
+The <strong><c>CSSTransformValue()</c></strong> constructor<br/>creates a new <see cref="CSSTransformValue"/> object which represents a list of<br/>individual transform objects.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/CSSTransformValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="CSSTransformValue"/>.</returns>
+</CSSTransformValueCSSTransformValue>
 <CSSTransformValueEntries>
 <summary>
 The <strong><c>CSSTransformValue.entries()</c></strong> method<br/>returns an array of a given object&amp;apos;s own enumerable<br/>property <c>[key, value]</c> pairs in the same order as that provided by a<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop (the difference being that a for-in loop enumerates<br/>properties in the prototype chain as well).
@@ -26,6 +35,25 @@ The <strong><c>CSSTransformValue.forEach()</c></strong> method executes a provid
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </CSSTransformValueForEach>
+<CSSTransformValueIs2D>
+<summary>
+The read-only <strong><c>is2D</c></strong> property of the<br/><see cref="CSSTransformValue"/> interface returns whether the transform is 2D or 3D.
+</summary>
+<remarks>
+<para>In the case of the <c>CSSTransformValue</c> this property returns<br/>true unless any of the individual functions return false for <c>Is2D</c>, in which<br/>case it returns false.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/is2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. True indicates that the transform is a 2D transform, false that it is a 3D<br/>transform.</value>
+</CSSTransformValueIs2D>
+<CSSTransformValueKeys>
+<summary>
+The <strong><c>CSSTransformValue.keys()</c></strong> method<br/>returns a new <strong>array iterator</strong> object that contains the keys<br/>for each index in the array.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="Array"/>.</returns>
+</CSSTransformValueKeys>
 <CSSTransformValueLength>
 <summary>
 The read-only <strong><c>length</c></strong> property of the<br/><see cref="CSSTransformValue"/> interface returns the number of transform components in<br/>the list.
@@ -44,24 +72,6 @@ The <strong><c>toMatrix()</c></strong> method of the<br/><see cref="CSSTransform
 </remarks>
 <returns>A <see cref="'DOMMatrix'"/> object.</returns>
 </CSSTransformValueToMatrix>
-<CSSTransformValueCSSTransformValue>
-<summary>
-The <strong><c>CSSTransformValue()</c></strong> constructor<br/>creates a new <see cref="CSSTransformValue"/> object which represents a list of<br/>individual transform objects.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/CSSTransformValue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="CSSTransformValue"/>.</returns>
-</CSSTransformValueCSSTransformValue>
-<CSSTransformValueKeys>
-<summary>
-The <strong><c>CSSTransformValue.keys()</c></strong> method<br/>returns a new <strong>array iterator</strong> object that contains the keys<br/>for each index in the array.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/keys"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="Array"/>.</returns>
-</CSSTransformValueKeys>
 <CSSTransformValueValues>
 <summary>
 The <strong><c>CSSTransformValue.values()</c></strong> returns a<br/>new <strong>array iterator</strong> object that contains the values for<br/>each index in the CSSTransformValue object.
@@ -71,14 +81,4 @@ The <strong><c>CSSTransformValue.values()</c></strong> returns a<br/>new <strong
 </remarks>
 <returns>A new <see cref="Array"/>.</returns>
 </CSSTransformValueValues>
-<CSSTransformValueIs2D>
-<summary>
-The read-only <strong><c>is2D</c></strong> property of the<br/><see cref="CSSTransformValue"/> interface returns whether the transform is 2D or 3D.
-</summary>
-<remarks>
-<para>In the case of the <c>CSSTransformValue</c> this property returns<br/>true unless any of the individual functions return false for <c>Is2D</c>, in which<br/>case it returns false.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformValue/is2D"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean. True indicates that the transform is a 2D transform, false that it is a 3D<br/>transform.</value>
-</CSSTransformValueIs2D>
 </docs>

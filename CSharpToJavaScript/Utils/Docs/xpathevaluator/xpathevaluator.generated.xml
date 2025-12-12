@@ -8,6 +8,16 @@ The <c>XPathEvaluator</c> interface allows to compile and evaluate <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XPathEvaluator>
+<XPathEvaluatorCreateExpression>
+<summary>
+This method compiles an <see cref="XPathExpression"/> which can then be used for<br/>(repeated) evaluations of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/XPath">XPath</see> expression.
+</summary>
+<remarks>
+<para>-<see cref="Document.CreateExpression"/><br/>-<see cref="XPathExpression"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createExpression"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XPathExpression"/> representing the compiled form of the XPath<br/>expression.</returns>
+</XPathEvaluatorCreateExpression>
 <XPathEvaluatorCreateNSResolver>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>createNSResolver()</c></strong> method of the <see cref="XPathEvaluator"/> interface used to create a custom <c>XPathNSResolver</c> object. It now returns the input as-is and is only kept for compatibility reasons.
@@ -27,16 +37,6 @@ The <c>evaluate()</c> method of the <see cref="XPathEvaluator"/> interface<br/>e
 </remarks>
 <returns>An <see cref="XPathResult"/> object representing the result of evaluating the XPath<br/>expression.</returns>
 </XPathEvaluatorEvaluate>
-<XPathEvaluatorCreateExpression>
-<summary>
-This method compiles an <see cref="XPathExpression"/> which can then be used for<br/>(repeated) evaluations of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/XPath">XPath</see> expression.
-</summary>
-<remarks>
-<para>-<see cref="Document.CreateExpression"/><br/>-<see cref="XPathExpression"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createExpression"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="XPathExpression"/> representing the compiled form of the XPath<br/>expression.</returns>
-</XPathEvaluatorCreateExpression>
 <XPathEvaluatorXPathEvaluator>
 <summary>
 The <strong><c>XPathEvaluator()</c></strong> constructor creates a new <see cref="XPathEvaluator"/>.

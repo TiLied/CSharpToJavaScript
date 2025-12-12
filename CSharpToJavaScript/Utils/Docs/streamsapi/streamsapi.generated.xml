@@ -1,0 +1,47 @@
+<docs>
+<Streams_API>
+<summary>
+The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Streams_API>
+<Streams_APIConcepts>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> adds a very useful set of tools to the web platform, providing objects that allow JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Streams_APIConcepts>
+<Streams_APIUsing_readable_byte_streams>
+<summary>
+Readable <strong>byte streams</strong> are <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">readable streams</see> that have an underlying byte source of <c>type: &amp;quot;bytes&amp;quot;</c>, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream&amp;apos;s internal queues).<br/>They are intended for use cases where data might be supplied or requested in arbitrary sized and potentially very large chunks, and hence where avoiding making copies is likely to improve efficiency.
+</summary>
+<remarks>
+<para>This article explains how readable byte streams compare to normal &amp;quot;default&amp;quot; streams, and how you create and consume them.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Readable byte streams are almost identical to &amp;quot;normal&amp;quot; readable streams and almost all of the concepts are the same.<br/>This article assumes that you already understand those concepts and will only be covering them superficially (if at all).<br/>If you&amp;apos;re not familiar with the relevant concepts, please first read: <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Streams_APIUsing_readable_byte_streams>
+<Streams_APIUsing_readable_streams>
+<summary>
+As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API&amp;apos;s readable stream functionality? This article explains the basics.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</see> and dedicated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</see> article, then come back.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>If you are looking for information on writable streams try <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</see> instead.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Streams_APIUsing_readable_streams>
+<Streams_APIUsing_writable_streams>
+<summary>
+As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see>&amp;apos;s writable stream functionality.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts.<br/>If not, we suggest that you first read the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</see> and dedicated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</see> article, then come back.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>If you are looking for information about readable streams, try <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see> instead.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Streams_APIUsing_writable_streams>
+</docs>

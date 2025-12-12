@@ -8,15 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Bluetooth>
-<BluetoothGetDevices>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getDevices()</c></strong> method of the <see cref="Bluetooth"/> interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="BluetoothDevice"/> objects.</returns>
-</BluetoothGetDevices>
 <BluetoothGetAvailability>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAvailability()</c></strong> method of the <see cref="Bluetooth"/> interface <strong>nominally</strong> returns <c>true</c> if the user agent can support Bluetooth (because the device has a Bluetooth adapter), and <c>false</c> otherwise.
@@ -27,6 +18,15 @@
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with a <see cref="Boolean"/>.The <see cref="Promise"/> will resolve with a value of <c>false</c> if access is disallowed by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/bluetooth"><c>Permissions-Policy: bluetooth</c></see>, if the user has configured the browser to always resolve with <c>false</c>, or if the device does not have a Bluetooth adapter.<br/>Otherwise it will resolve with <c>true</c>.</returns>
 </BluetoothGetAvailability>
+<BluetoothGetDevices>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getDevices()</c></strong> method of the <see cref="Bluetooth"/> interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="BluetoothDevice"/> objects.</returns>
+</BluetoothGetDevices>
 <BluetoothRequestDevice>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Bluetooth.requestDevice()</c></strong> method of the <see cref="Bluetooth"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="BluetoothDevice"/> object matching the specified options.<br/>If there is no chooser UI, this method returns the first device matching the criteria.

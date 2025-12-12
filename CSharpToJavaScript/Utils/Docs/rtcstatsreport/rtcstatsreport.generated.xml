@@ -20,17 +20,6 @@ The <strong><c>entries()</c></strong> method of the <see cref="RTCStatsReport"/>
 </remarks>
 <returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>
 </RTCStatsReportEntries>
-<RTCStatsReportHas>
-<summary>
-The <strong><c>has()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a boolean indicating whether a report contains a statistics dictionary with the specified id.
-</summary>
-<remarks>
-<para>The method is otherwise the same as <see cref="MapPrototypeHas"/>.</para>
-<para>-<see cref="Map"/><br/>-<see cref="MapPrototypeSet"/><br/>-<see cref="MapPrototypeGet"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><c>true</c> if an element with the specified <c>id</c> exists in the <c>RTCStatsReport</c> object; otherwise <c>false</c>.</returns>
-</RTCStatsReportHas>
 <RTCStatsReportForEach>
 <summary>
 The <strong><c>forEach()</c></strong> method of the <see cref="RTCStatsReport"/> interface executes a provided function once for each key/value pair in the <c>RTCStatsReport</c> object, in insertion order.
@@ -42,17 +31,6 @@ The <strong><c>forEach()</c></strong> method of the <see cref="RTCStatsReport"/>
 </remarks>
 <returns><see cref="Undefined"/>.</returns>
 </RTCStatsReportForEach>
-<RTCStatsReportSize>
-<summary>
-The <strong><c>size</c></strong> read-only property of the <see cref="RTCStatsReport"/> interface returns the number of items in the current report.
-</summary>
-<remarks>
-<para>Note that each item consists of a key-value pair, where the keys are unique <c>id</c> values for monitored statistics objects from which the statistics are derived, and the associated values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>This property is otherwise the same as <see cref="MapPrototypeSize"/>.</para>
-<para>-<see cref="Map"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/size"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer indicating the number of items in this report.<br/>The value is zero if the report is empty.</value>
-</RTCStatsReportSize>
 <RTCStatsReportGet>
 <summary>
 The <strong><c>get()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a specified element from an <c>RTCStatsReport</c>.
@@ -64,6 +42,17 @@ The <strong><c>get()</c></strong> method of the <see cref="RTCStatsReport"/> int
 </remarks>
 <returns>The element associated with the specified <c>id</c> key, or <see cref="Undefined"/> if the key can't be found in the <c>Map</c> object.</returns>
 </RTCStatsReportGet>
+<RTCStatsReportHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a boolean indicating whether a report contains a statistics dictionary with the specified id.
+</summary>
+<remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeHas"/>.</para>
+<para>-<see cref="Map"/><br/>-<see cref="MapPrototypeSet"/><br/>-<see cref="MapPrototypeGet"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if an element with the specified <c>id</c> exists in the <c>RTCStatsReport</c> object; otherwise <c>false</c>.</returns>
+</RTCStatsReportHas>
 <RTCStatsReportKeys>
 <summary>
 The <strong><c>keys()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the keys for each element in the <c>RTCStatsReport</c> object, in insertion order.
@@ -75,17 +64,17 @@ The <strong><c>keys()</c></strong> method of the <see cref="RTCStatsReport"/> in
 </remarks>
 <returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>
 </RTCStatsReportKeys>
-<RTCStatsReportValues>
+<RTCStatsReportSize>
 <summary>
-The <strong><c>values()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the values for each element in the <c>RTCStatsReport</c> object, in insertion order.
+The <strong><c>size</c></strong> read-only property of the <see cref="RTCStatsReport"/> interface returns the number of items in the current report.
 </summary>
 <remarks>
-<para>The values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>The method is otherwise the same as <see cref="MapPrototypeValues"/>.</para>
-<para>-<see cref="MapPrototypeValues"/><br/>-<see cref="RTCStatsReport.Keys"/><br/>-<see cref="RTCStatsReport.Entries"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/values"> <em>See also on MDN</em> </seealso></para>
+<para>Note that each item consists of a key-value pair, where the keys are unique <c>id</c> values for monitored statistics objects from which the statistics are derived, and the associated values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>This property is otherwise the same as <see cref="MapPrototypeSize"/>.</para>
+<para>-<see cref="Map"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/size"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>
-</RTCStatsReportValues>
+<value>An integer indicating the number of items in this report.<br/>The value is zero if the report is empty.</value>
+</RTCStatsReportSize>
 <RTCStatsReportSymbol.iterator>
 <summary>
 The <strong><c>[Symbol.iterator]()</c></strong> method of the <see cref="RTCStatsReport"/> interface implements the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable protocol</see> and allows statistics reports to be consumed by most syntaxes expecting iterables, such as the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</see> and <see cref="Statements/forOf"/> loops.<br/>It returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator object</see> that yields the key-value pairs of the report in insertion order.
@@ -97,4 +86,15 @@ The <strong><c>[Symbol.iterator]()</c></strong> method of the <see cref="RTCStat
 </remarks>
 <returns>The same return value as <see cref="RTCStatsReport.Entries"/>.<br/>This is a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see> that yields the key-value (<c>id</c>-&amp;quot;statistics dictionary&amp;quot;) pairs of the report.</returns>
 </RTCStatsReportSymbol.iterator>
+<RTCStatsReportValues>
+<summary>
+The <strong><c>values()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the values for each element in the <c>RTCStatsReport</c> object, in insertion order.
+</summary>
+<remarks>
+<para>The values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>The method is otherwise the same as <see cref="MapPrototypeValues"/>.</para>
+<para>-<see cref="MapPrototypeValues"/><br/>-<see cref="RTCStatsReport.Keys"/><br/>-<see cref="RTCStatsReport.Entries"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>
+</RTCStatsReportValues>
 </docs>

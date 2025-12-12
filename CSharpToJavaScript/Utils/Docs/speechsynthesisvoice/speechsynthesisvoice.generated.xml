@@ -8,6 +8,17 @@ The <strong><c>SpeechSynthesisVoice</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisVoice>
+<SpeechSynthesisVoiceDefault>
+<summary>
+The <strong><c>default</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns a boolean value<br/>indicating whether the voice is the default voice for the current app<br/>(<c>true</c>), or not (<c>false</c>.)
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For some devices, it might be the default voice for the<br/>voice&amp;apos;s language. The spec is not very clear on which it should be, so some<br/>implementations may differ.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SpeechSynthesisVoiceDefault>
 <SpeechSynthesisVoiceLang>
 <summary>
 The <strong><c>lang</c></strong> read-only property of the <see cref="SpeechSynthesisVoice"/> interface returns a BCP 47 language tag indicating the language of the voice.
@@ -29,16 +40,6 @@ The <strong><c>localService</c></strong> read-only property of the<br/><see cref
 </remarks>
 <value>A boolean value.</value>
 </SpeechSynthesisVoiceLocalService>
-<SpeechSynthesisVoiceVoiceURI>
-<summary>
-The <strong><c>voiceURI</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns the type of URI and location of<br/>the speech synthesis service for this voice.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the URI of the voice. This is a generic URI and<br/>can point to local or remote services, e.g., it could be a proprietary system URN or a URL to a remote service.</value>
-</SpeechSynthesisVoiceVoiceURI>
 <SpeechSynthesisVoiceName>
 <summary>
 The <strong><c>name</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns a human-readable name that<br/>represents the voice.
@@ -49,15 +50,14 @@ The <strong><c>name</c></strong> read-only property of the<br/><see cref="Speech
 </remarks>
 <value>A string representing the name of the voice.</value>
 </SpeechSynthesisVoiceName>
-<SpeechSynthesisVoiceDefault>
+<SpeechSynthesisVoiceVoiceURI>
 <summary>
-The <strong><c>default</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns a boolean value<br/>indicating whether the voice is the default voice for the current app<br/>(<c>true</c>), or not (<c>false</c>.)
+The <strong><c>voiceURI</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns the type of URI and location of<br/>the speech synthesis service for this voice.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>For some devices, it might be the default voice for the<br/>voice&amp;apos;s language. The spec is not very clear on which it should be, so some<br/>implementations may differ.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value.</value>
-</SpeechSynthesisVoiceDefault>
+<value>A string representing the URI of the voice. This is a generic URI and<br/>can point to local or remote services, e.g., it could be a proprietary system URN or a URL to a remote service.</value>
+</SpeechSynthesisVoiceVoiceURI>
 </docs>

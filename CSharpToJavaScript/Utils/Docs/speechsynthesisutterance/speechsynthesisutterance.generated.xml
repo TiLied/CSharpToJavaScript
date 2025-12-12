@@ -18,17 +18,15 @@ The <strong><c>boundary</c></strong> event of the <see href="https://developer.m
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisUtteranceBoundary>
-<SpeechSynthesisUtteranceRate>
+<SpeechSynthesisUtteranceEnd>
 <summary>
-The <strong><c>rate</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the speed at which the utterance will be spoken at.
+The <strong><c>end</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the utterance has finished being spoken.
 </summary>
 <remarks>
-<para>If unset, a default value of 1 will be used.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/end"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A float representing the rate value.<br/>It can range between 0.1 (lowest) and 10 (highest), with 1 being the default rate for the current platform or voice, which should correspond to a normal speaking rate.<br/>Other values act as a percentage relative to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.Some speech synthesis engines or voices may constrain the minimum and maximum rates further.<br/>If <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> is used, this value will be overridden by <see href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</see> in the markup.</value>
-</SpeechSynthesisUtteranceRate>
+</SpeechSynthesisUtteranceEnd>
 <SpeechSynthesisUtteranceError>
 <summary>
 The <strong><c>error</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when an error occurs that prevents the utterance from being successfully spoken.
@@ -38,66 +36,6 @@ The <strong><c>error</c></strong> event of the <see href="https://developer.mozi
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisUtteranceError>
-<SpeechSynthesisUtterancePitch>
-<summary>
-The <strong><c>pitch</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the pitch at which the utterance will be spoken at.
-</summary>
-<remarks>
-<para>If unset, a default value of 1 will be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A float representing the pitch value.<br/>It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further.<br/>If <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> is used, this value will be overridden by <see href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</see> in the markup.</value>
-</SpeechSynthesisUtterancePitch>
-<SpeechSynthesisUtteranceMark>
-<summary>
-The <strong><c>mark</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the spoken utterance reaches a named SSML "mark" tag.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/mark"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</SpeechSynthesisUtteranceMark>
-<SpeechSynthesisUtteranceSpeechSynthesisUtterance>
-<summary>
-The <c>SpeechSynthesisUtterance()</c> constructor of the <see cref="SpeechSynthesisUtterance"/> interface returns a new <c>SpeechSynthesisUtterance</c> object instance.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</SpeechSynthesisUtteranceSpeechSynthesisUtterance>
-<SpeechSynthesisUtteranceVoice>
-<summary>
-The <strong><c>voice</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the voice that will be used to speak the utterance.
-</summary>
-<remarks>
-<para>This should be set to one of the <see cref="SpeechSynthesisVoice"/> objects returned by <see cref="SpeechSynthesis.GetVoices"/>.<br/>If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's <see cref="SpeechSynthesisUtterance.Lang"/> setting.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="SpeechSynthesisVoice"/> object.</value>
-</SpeechSynthesisUtteranceVoice>
-<SpeechSynthesisUtteranceText>
-<summary>
-The <strong><c>text</c></strong> property of the<br/><see cref="SpeechSynthesisUtterance"/> interface gets and sets the text that will be synthesized when the utterance is spoken.
-</summary>
-<remarks>
-<para>The text may be provided as plain text, or a well-formed <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> document.<br/>The SSML tags will be stripped away by devices that don&amp;apos;t support SSML.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the text to the synthesized.<br/>The maximum length of the text that can be spoken in each utterance is 32,767 characters.</value>
-</SpeechSynthesisUtteranceText>
-<SpeechSynthesisUtteranceStart>
-<summary>
-The <strong><c>start</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the utterance has begun to be spoken.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</SpeechSynthesisUtteranceStart>
 <SpeechSynthesisUtteranceLang>
 <summary>
 The <strong><c>lang</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the language of the utterance.
@@ -109,15 +47,15 @@ The <strong><c>lang</c></strong> property of the <see cref="SpeechSynthesisUtter
 </remarks>
 <value>A string representing a BCP 47 language tag.</value>
 </SpeechSynthesisUtteranceLang>
-<SpeechSynthesisUtteranceResume>
+<SpeechSynthesisUtteranceMark>
 <summary>
-The <strong><c>resume</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when a paused utterance is resumed.
+The <strong><c>mark</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the spoken utterance reaches a named SSML "mark" tag.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/resume"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/mark"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</SpeechSynthesisUtteranceResume>
+</SpeechSynthesisUtteranceMark>
 <SpeechSynthesisUtterancePause>
 <summary>
 The <strong><c>pause</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the utterance is paused part way through.
@@ -127,15 +65,77 @@ The <strong><c>pause</c></strong> event of the <see href="https://developer.mozi
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pause"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisUtterancePause>
-<SpeechSynthesisUtteranceEnd>
+<SpeechSynthesisUtterancePitch>
 <summary>
-The <strong><c>end</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the utterance has finished being spoken.
+The <strong><c>pitch</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the pitch at which the utterance will be spoken at.
+</summary>
+<remarks>
+<para>If unset, a default value of 1 will be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float representing the pitch value.<br/>It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further.<br/>If <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> is used, this value will be overridden by <see href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</see> in the markup.</value>
+</SpeechSynthesisUtterancePitch>
+<SpeechSynthesisUtteranceRate>
+<summary>
+The <strong><c>rate</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the speed at which the utterance will be spoken at.
+</summary>
+<remarks>
+<para>If unset, a default value of 1 will be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float representing the rate value.<br/>It can range between 0.1 (lowest) and 10 (highest), with 1 being the default rate for the current platform or voice, which should correspond to a normal speaking rate.<br/>Other values act as a percentage relative to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.Some speech synthesis engines or voices may constrain the minimum and maximum rates further.<br/>If <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> is used, this value will be overridden by <see href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</see> in the markup.</value>
+</SpeechSynthesisUtteranceRate>
+<SpeechSynthesisUtteranceResume>
+<summary>
+The <strong><c>resume</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when a paused utterance is resumed.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/end"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/resume"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</SpeechSynthesisUtteranceEnd>
+</SpeechSynthesisUtteranceResume>
+<SpeechSynthesisUtteranceSpeechSynthesisUtterance>
+<summary>
+The <c>SpeechSynthesisUtterance()</c> constructor of the <see cref="SpeechSynthesisUtterance"/> interface returns a new <c>SpeechSynthesisUtterance</c> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechSynthesisUtteranceSpeechSynthesisUtterance>
+<SpeechSynthesisUtteranceStart>
+<summary>
+The <strong><c>start</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> <see cref="SpeechSynthesisUtterance"/> object is fired when the utterance has begun to be spoken.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechSynthesisUtteranceStart>
+<SpeechSynthesisUtteranceText>
+<summary>
+The <strong><c>text</c></strong> property of the<br/><see cref="SpeechSynthesisUtterance"/> interface gets and sets the text that will be synthesized when the utterance is spoken.
+</summary>
+<remarks>
+<para>The text may be provided as plain text, or a well-formed <see href="https://www.w3.org/TR/speech-synthesis/">SSML</see> document.<br/>The SSML tags will be stripped away by devices that don&amp;apos;t support SSML.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the text to the synthesized.<br/>The maximum length of the text that can be spoken in each utterance is 32,767 characters.</value>
+</SpeechSynthesisUtteranceText>
+<SpeechSynthesisUtteranceVoice>
+<summary>
+The <strong><c>voice</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the voice that will be used to speak the utterance.
+</summary>
+<remarks>
+<para>This should be set to one of the <see cref="SpeechSynthesisVoice"/> objects returned by <see cref="SpeechSynthesis.GetVoices"/>.<br/>If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's <see cref="SpeechSynthesisUtterance.Lang"/> setting.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SpeechSynthesisVoice"/> object.</value>
+</SpeechSynthesisUtteranceVoice>
 <SpeechSynthesisUtteranceVolume>
 <summary>
 The <strong><c>volume</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the volume that the utterance will be spoken at.

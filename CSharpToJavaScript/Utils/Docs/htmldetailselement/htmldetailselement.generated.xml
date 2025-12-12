@@ -9,16 +9,6 @@ The <strong><c>HTMLDetailsElement</c></strong> interface provides special proper
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLDetailsElement>
-<HTMLDetailsElementOpen>
-<summary>
-The <strong><c>open</c></strong> property of the<br/><see cref="HTMLDetailsElement"/> interface is a boolean value reflecting the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#open"><c>open</c></see> HTML attribute, indicating whether the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see>'s contents (not counting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</see>) is to be shown to the user.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</see> elements<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.The boolean value represents the state of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#open"><c>open</c></see> HTML attribute. The value of <c>true</c> means it is set with both the summary and the additional information shown to the user. The <c>false</c> value means it not set, with only the summary shown.</value>
-</HTMLDetailsElementOpen>
 <HTMLDetailsElementName>
 <summary>
 The <strong><c>name</c></strong> property of the <see cref="HTMLDetailsElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#name"><c>name</c></see> attribute of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> elements. It enables multiple <c>&amp;lt;details&amp;gt;</c> elements to be connected together, where only one for the <c>&amp;lt;details&amp;gt;</c> elements can be open at once. This allows developers to easily create UI features such as accordions without scripting.
@@ -30,4 +20,14 @@ The <strong><c>name</c></strong> property of the <see cref="HTMLDetailsElement"/
 </remarks>
 <value>A string. The empty string if the element is not part of any group.</value>
 </HTMLDetailsElementName>
+<HTMLDetailsElementOpen>
+<summary>
+The <strong><c>open</c></strong> property of the<br/><see cref="HTMLDetailsElement"/> interface is a boolean value reflecting the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#open"><c>open</c></see> HTML attribute, indicating whether the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see>'s contents (not counting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</see>) is to be shown to the user.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</see> elements<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.The boolean value represents the state of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#open"><c>open</c></see> HTML attribute. The value of <c>true</c> means it is set with both the summary and the additional information shown to the user. The <c>false</c> value means it not set, with only the summary shown.</value>
+</HTMLDetailsElementOpen>
 </docs>

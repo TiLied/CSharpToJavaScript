@@ -9,24 +9,24 @@ The <strong><c>TextTrack</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextTrack>
-<TextTrackCues>
+<TextTrackActiveCues>
 <summary>
-The <strong><c>cues</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a <see cref="TextTrackCueList"/> object containing all of the track's cues.
+The <strong><c>activeCues</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a <see cref="TextTrackCueList"/> object listing the currently active cues.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/cues"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/activeCues"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="TextTrackCueList"/> object.</value>
-</TextTrackCues>
-<TextTrackLabel>
+</TextTrackActiveCues>
+<TextTrackAddCue>
 <summary>
-The <strong><c>label</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a human-readable label for the text track, if it is available.
+The <strong><c>addCue()</c></strong> method of the <see cref="TextTrack"/> interface adds a new cue to the list of cues.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/label"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/addCue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string containing the <c>label</c>, or an empty string.</value>
-</TextTrackLabel>
+<returns>Undefined.</returns>
+</TextTrackAddCue>
 <TextTrackCuechange>
 <summary>
 The <strong><c>cuechange</c></strong> event fires when a <see cref="TextTrack"/> has changed the currently displaying cues. The event is fired on both the <c>TextTrack</c> and the <see cref="HTMLTrackElement"/> in which it's being presented, if any.
@@ -36,15 +36,62 @@ The <strong><c>cuechange</c></strong> event fires when a <see cref="TextTrack"/>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/cuechange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextTrackCuechange>
-<TextTrackRemoveCue>
+<TextTrackCues>
 <summary>
-The <strong><c>removeCue()</c></strong> method of the <see cref="TextTrack"/> interface removes a cue from the list of cues.
+The <strong><c>cues</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a <see cref="TextTrackCueList"/> object containing all of the track's cues.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/removeCue"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/cues"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>Undefined.</returns>
-</TextTrackRemoveCue>
+<value>A <see cref="TextTrackCueList"/> object.</value>
+</TextTrackCues>
+<TextTrackId>
+<summary>
+The <strong><c>id</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the ID of the track if it has one.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID, or an empty string.</value>
+</TextTrackId>
+<TextTrackInBandMetadataTrackDispatchType>
+<summary>
+The <strong><c>inBandMetadataTrackDispatchType</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the text track's in-band metadata dispatch type of the text track represented by the <see cref="TextTrack"/> object.
+</summary>
+<remarks>
+<para>An in-band metadata dispatch type is a string extracted from a media resource specifically for in-band metadata tracks. An example of a media resource that might have such tracks is a TV station streaming a broadcast on the web. Text Tracks may be used to include metadata for ad targeting, additional information such as recipe data during a cooking show, or trivia game data during a game show.</para><para>The value of this attribute could be used to attach these tracks to dedicated script modules as they are loaded.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/inBandMetadataTrackDispatchType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the <c>inBandMetadataTrackDispatchType</c>, or an empty string.</value>
+</TextTrackInBandMetadataTrackDispatchType>
+<TextTrackKind>
+<summary>
+The <strong><c>kind</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the kind of text track this object represents. This decides how the track will be handled by a user agent.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. One of:</value>
+</TextTrackKind>
+<TextTrackLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a human-readable label for the text track, if it is available.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the <c>label</c>, or an empty string.</value>
+</TextTrackLabel>
+<TextTrackLanguage>
+<summary>
+The <strong><c>language</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the language of the text track.
+</summary>
+<remarks>
+<para>This uses the same values as the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang"><c>lang</c></see> attribute. These values are documented in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a language identifier. For example, <c>&amp;quot;en-US&amp;quot;</c> for United States English or <c>&amp;quot;pt-BR&amp;quot;</c> for Brazilian Portuguese.</value>
+</TextTrackLanguage>
 <TextTrackMode>
 <summary>
 The <see cref="TextTrack"/> interface's<br/><strong><c>mode</c></strong> property is a string specifying and controlling the<br/>text track&amp;apos;s mode: <c>disabled</c>, <c>hidden</c>, or<br/><c>showing</c>. You can read this value to determine the current mode,<br/>and you can change this value to switch modes.
@@ -56,6 +103,15 @@ The <see cref="TextTrack"/> interface's<br/><strong><c>mode</c></strong> propert
 </remarks>
 <value>A string which indicates the track&amp;apos;s current mode. One of:</value>
 </TextTrackMode>
+<TextTrackRemoveCue>
+<summary>
+The <strong><c>removeCue()</c></strong> method of the <see cref="TextTrack"/> interface removes a cue from the list of cues.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/removeCue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</TextTrackRemoveCue>
 <TextTrackSourceBuffer>
 <summary>
 The read-only <strong><c>sourceBuffer</c></strong> property of the <see cref="TextTrack"/> interface returns the<br/><see cref="SourceBuffer"/> that created the track, or null if the track was not<br/>created by a <see cref="SourceBuffer"/> or the <see cref="SourceBuffer"/> has been<br/>removed from the <see cref="MediaSource.SourceBuffers"/> attribute of its parent<br/>media source.
@@ -65,60 +121,4 @@ The read-only <strong><c>sourceBuffer</c></strong> property of the <see cref="Te
 </remarks>
 <value>A <see cref="SourceBuffer"/> or null.</value>
 </TextTrackSourceBuffer>
-<TextTrackKind>
-<summary>
-The <strong><c>kind</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the kind of text track this object represents. This decides how the track will be handled by a user agent.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/kind"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. One of:</value>
-</TextTrackKind>
-<TextTrackAddCue>
-<summary>
-The <strong><c>addCue()</c></strong> method of the <see cref="TextTrack"/> interface adds a new cue to the list of cues.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/addCue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Undefined.</returns>
-</TextTrackAddCue>
-<TextTrackActiveCues>
-<summary>
-The <strong><c>activeCues</c></strong> read-only property of the <see cref="TextTrack"/> interface returns a <see cref="TextTrackCueList"/> object listing the currently active cues.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/activeCues"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="TextTrackCueList"/> object.</value>
-</TextTrackActiveCues>
-<TextTrackInBandMetadataTrackDispatchType>
-<summary>
-The <strong><c>inBandMetadataTrackDispatchType</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the text track's in-band metadata dispatch type of the text track represented by the <see cref="TextTrack"/> object.
-</summary>
-<remarks>
-<para>An in-band metadata dispatch type is a string extracted from a media resource specifically for in-band metadata tracks. An example of a media resource that might have such tracks is a TV station streaming a broadcast on the web. Text Tracks may be used to include metadata for ad targeting, additional information such as recipe data during a cooking show, or trivia game data during a game show.</para><para>The value of this attribute could be used to attach these tracks to dedicated script modules as they are loaded.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/inBandMetadataTrackDispatchType"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the <c>inBandMetadataTrackDispatchType</c>, or an empty string.</value>
-</TextTrackInBandMetadataTrackDispatchType>
-<TextTrackLanguage>
-<summary>
-The <strong><c>language</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the language of the text track.
-</summary>
-<remarks>
-<para>This uses the same values as the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang"><c>lang</c></see> attribute. These values are documented in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/language"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing a language identifier. For example, <c>&amp;quot;en-US&amp;quot;</c> for United States English or <c>&amp;quot;pt-BR&amp;quot;</c> for Brazilian Portuguese.</value>
-</TextTrackLanguage>
-<TextTrackId>
-<summary>
-The <strong><c>id</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the ID of the track if it has one.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/id"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the ID, or an empty string.</value>
-</TextTrackId>
 </docs>

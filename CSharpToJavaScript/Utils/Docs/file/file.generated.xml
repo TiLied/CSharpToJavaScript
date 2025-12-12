@@ -9,6 +9,15 @@ The <strong><c>File</c></strong> interface provides information about files and 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </File>
+<FileFile>
+<summary>
+The <strong><c>File()</c></strong> constructor creates a new <see cref="File"/><br/>object instance.
+</summary>
+<remarks>
+<para>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File/File"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FileFile>
 <FileLastModified>
 <summary>
 The <strong><c>lastModified</c></strong> read-only property of the <see cref="File"/> interface provides the<br/>last modified date of the file as the number of milliseconds since the Unix<br/>epoch (January 1, 1970 at midnight). Files without a known last modified date return the<br/>current date.
@@ -49,13 +58,4 @@ The <strong><c>webkitRelativePath</c></strong> read-only property of the <see cr
 </remarks>
 <value>A string containing the path of the file relative to the ancestor<br/>directory the user selected.</value>
 </FileWebkitRelativePath>
-<FileFile>
-<summary>
-The <strong><c>File()</c></strong> constructor creates a new <see cref="File"/><br/>object instance.
-</summary>
-<remarks>
-<para>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File/File"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</FileFile>
 </docs>

@@ -8,24 +8,6 @@ The <strong><c>TransformStreamDefaultController</c></strong> interface of the <s
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TransformStreamDefaultController>
-<TransformStreamDefaultControllerTerminate>
-<summary>
-The <strong><c>terminate()</c></strong> method of the <see cref="TransformStreamDefaultController"/> interface closes the readable side and errors the writable side of the stream.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController/terminate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</TransformStreamDefaultControllerTerminate>
-<TransformStreamDefaultControllerError>
-<summary>
-The <strong><c>error()</c></strong> method of the <see cref="TransformStreamDefaultController"/> interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController/error"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</TransformStreamDefaultControllerError>
 <TransformStreamDefaultControllerDesiredSize>
 <summary>
 The <strong><c>desiredSize</c></strong> read-only property of the <see cref="TransformStreamDefaultController"/> interface returns the desired size to fill the queue of the associated <see cref="ReadableStream"/>.
@@ -46,4 +28,22 @@ The <strong><c>enqueue()</c></strong> method of the <see cref="TransformStreamDe
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </TransformStreamDefaultControllerEnqueue>
+<TransformStreamDefaultControllerError>
+<summary>
+The <strong><c>error()</c></strong> method of the <see cref="TransformStreamDefaultController"/> interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</TransformStreamDefaultControllerError>
+<TransformStreamDefaultControllerTerminate>
+<summary>
+The <strong><c>terminate()</c></strong> method of the <see cref="TransformStreamDefaultController"/> interface closes the readable side and errors the writable side of the stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController/terminate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</TransformStreamDefaultControllerTerminate>
 </docs>

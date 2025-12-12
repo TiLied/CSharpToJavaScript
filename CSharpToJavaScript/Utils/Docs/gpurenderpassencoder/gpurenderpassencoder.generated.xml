@@ -9,139 +9,6 @@ The <strong><c>GPURenderPassEncoder</c></strong> interface of the {{domxref(&amp
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPURenderPassEncoder>
-<GPURenderPassEncoderSetScissorRect>
-<summary>
-The <strong><c>setScissorRect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setScissorRect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetScissorRect>
-<GPURenderPassEncoderPopDebugGroup>
-<summary>
-The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface ends a render pass debug group, which is begun with a <see cref="GPURenderPassEncoder.PushDebugGroup"/> call.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderPopDebugGroup>
-<GPURenderPassEncoderDrawIndexedIndirect>
-<summary>
-The <strong><c>drawIndexedIndirect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws indexed primitives using parameters read from a <see cref="GPUBuffer"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/drawIndexedIndirect"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderDrawIndexedIndirect>
-<GPURenderPassEncoderSetViewport>
-<summary>
-The <strong><c>setViewport()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setViewport"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetViewport>
-<GPURenderPassEncoderSetBindGroup>
-<summary>
-The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent render commands, for a given index.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetBindGroup>
-<GPURenderPassEncoderLabel>
-<summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPURenderPassEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
-</summary>
-<remarks>
-<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUCommandEncoder.BeginRenderPass"/> call, or you can get and set it directly on the <c>GPURenderPassEncoder</c> object.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPURenderPassEncoderLabel>
-<GPURenderPassEncoderSetBlendConstant>
-<summary>
-The <strong><c>setBlendConstant()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the constant blend color and alpha values used with <c>&amp;quot;constant&amp;quot;</c> and <c>&amp;quot;one-minus-constant&amp;quot;</c> blend factors (as set in the descriptor of the <see cref="GPUDevice.CreateRenderPipeline"/> method, in the <c>blend</c> property).
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setBlendConstant"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetBlendConstant>
-<GPURenderPassEncoderDrawIndexed>
-<summary>
-The <strong><c>drawIndexed()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws indexed primitives based on the vertex and index buffers provided by <see cref="GPURenderPassEncoder.SetVertexBuffer"/> and <see cref="GPURenderPassEncoder.SetIndexBuffer"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/drawIndexed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderDrawIndexed>
-<GPURenderPassEncoderInsertDebugMarker>
-<summary>
-The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface marks a specific point in a series of encoded render pass commands with a label.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/insertDebugMarker"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderInsertDebugMarker>
-<GPURenderPassEncoderSetIndexBuffer>
-<summary>
-The <strong><c>setIndexBuffer()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the current <see cref="GPUBuffer"/> that will provide index data for subsequent drawing commands.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setIndexBuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetIndexBuffer>
-<GPURenderPassEncoderDraw>
-<summary>
-The <strong><c>draw()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws primitives based on the vertex buffers provided by <see cref="GPURenderPassEncoder.SetVertexBuffer"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/draw"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderDraw>
-<GPURenderPassEncoderSetStencilReference>
-<summary>
-The <strong><c>setStencilReference()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the stencil reference value using during stencil tests with the <c>&amp;quot;replace&amp;quot;</c> stencil operation (as set in the descriptor of the <see cref="GPUDevice.CreateRenderPipeline"/> method, in the properties defining the various stencil operations).
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setStencilReference"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetStencilReference>
-<GPURenderPassEncoderSetPipeline>
-<summary>
-The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the <see cref="GPURenderPipeline"/> to use for subsequent render pass commands.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetPipeline>
 <GPURenderPassEncoderBeginOcclusionQuery>
 <summary>
 The <strong><c>beginOcclusionQuery()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface begins an occlusion query at the specified index of the relevant <see cref="GPUQuerySet"/> (provided as the value of the <c>occlusionQuerySet</c> descriptor property when invoking <see cref="GPUCommandEncoder.BeginRenderPass"/> to run the render pass).
@@ -152,16 +19,36 @@ The <strong><c>beginOcclusionQuery()</c></strong> method of the<br/><see cref="G
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderPassEncoderBeginOcclusionQuery>
-<GPURenderPassEncoderEnd>
+<GPURenderPassEncoderDraw>
 <summary>
-The <strong><c>end()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface completes recording of the current render pass command sequence.
+The <strong><c>draw()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws primitives based on the vertex buffers provided by <see cref="GPURenderPassEncoder.SetVertexBuffer"/>.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/end"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/draw"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderEnd>
+</GPURenderPassEncoderDraw>
+<GPURenderPassEncoderDrawIndexed>
+<summary>
+The <strong><c>drawIndexed()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws indexed primitives based on the vertex and index buffers provided by <see cref="GPURenderPassEncoder.SetVertexBuffer"/> and <see cref="GPURenderPassEncoder.SetIndexBuffer"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/drawIndexed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderDrawIndexed>
+<GPURenderPassEncoderDrawIndexedIndirect>
+<summary>
+The <strong><c>drawIndexedIndirect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws indexed primitives using parameters read from a <see cref="GPUBuffer"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/drawIndexedIndirect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderDrawIndexedIndirect>
 <GPURenderPassEncoderDrawIndirect>
 <summary>
 The <strong><c>drawIndirect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface draws primitives using parameters read from a <see cref="GPUBuffer"/>.
@@ -172,27 +59,16 @@ The <strong><c>drawIndirect()</c></strong> method of the<br/><see cref="GPURende
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderPassEncoderDrawIndirect>
-<GPURenderPassEncoderPushDebugGroup>
+<GPURenderPassEncoderEnd>
 <summary>
-The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface begins a render pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPURenderPassEncoder.PopDebugGroup"/> method is invoked.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/pushDebugGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderPushDebugGroup>
-<GPURenderPassEncoderSetVertexBuffer>
-<summary>
-The <strong><c>setVertexBuffer()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets or unsets the current <see cref="GPUBuffer"/> for the given slot that will provide vertex data for subsequent drawing commands.
+The <strong><c>end()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface completes recording of the current render pass command sequence.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setVertexBuffer"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/end"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPURenderPassEncoderSetVertexBuffer>
+</GPURenderPassEncoderEnd>
 <GPURenderPassEncoderEndOcclusionQuery>
 <summary>
 The <strong><c>endOcclusionQuery()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface ends an active occlusion query previously started with <see cref="GPURenderPassEncoder.BeginOcclusionQuery"/>.
@@ -214,4 +90,128 @@ The <strong><c>executeBundles()</c></strong> method of the<br/><see cref="GPURen
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPURenderPassEncoderExecuteBundles>
+<GPURenderPassEncoderInsertDebugMarker>
+<summary>
+The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface marks a specific point in a series of encoded render pass commands with a label.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/insertDebugMarker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderInsertDebugMarker>
+<GPURenderPassEncoderLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPURenderPassEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUCommandEncoder.BeginRenderPass"/> call, or you can get and set it directly on the <c>GPURenderPassEncoder</c> object.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPURenderPassEncoderLabel>
+<GPURenderPassEncoderPopDebugGroup>
+<summary>
+The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface ends a render pass debug group, which is begun with a <see cref="GPURenderPassEncoder.PushDebugGroup"/> call.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderPopDebugGroup>
+<GPURenderPassEncoderPushDebugGroup>
+<summary>
+The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface begins a render pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPURenderPassEncoder.PopDebugGroup"/> method is invoked.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/pushDebugGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderPushDebugGroup>
+<GPURenderPassEncoderSetBindGroup>
+<summary>
+The <strong><c>setBindGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the <see cref="GPUBindGroup"/> to use for subsequent render commands, for a given index.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setBindGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetBindGroup>
+<GPURenderPassEncoderSetBlendConstant>
+<summary>
+The <strong><c>setBlendConstant()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the constant blend color and alpha values used with <c>&amp;quot;constant&amp;quot;</c> and <c>&amp;quot;one-minus-constant&amp;quot;</c> blend factors (as set in the descriptor of the <see cref="GPUDevice.CreateRenderPipeline"/> method, in the <c>blend</c> property).
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setBlendConstant"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetBlendConstant>
+<GPURenderPassEncoderSetIndexBuffer>
+<summary>
+The <strong><c>setIndexBuffer()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the current <see cref="GPUBuffer"/> that will provide index data for subsequent drawing commands.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setIndexBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetIndexBuffer>
+<GPURenderPassEncoderSetPipeline>
+<summary>
+The <strong><c>setPipeline()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the <see cref="GPURenderPipeline"/> to use for subsequent render pass commands.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setPipeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetPipeline>
+<GPURenderPassEncoderSetScissorRect>
+<summary>
+The <strong><c>setScissorRect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setScissorRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetScissorRect>
+<GPURenderPassEncoderSetStencilReference>
+<summary>
+The <strong><c>setStencilReference()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the stencil reference value using during stencil tests with the <c>&amp;quot;replace&amp;quot;</c> stencil operation (as set in the descriptor of the <see cref="GPUDevice.CreateRenderPipeline"/> method, in the properties defining the various stencil operations).
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setStencilReference"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetStencilReference>
+<GPURenderPassEncoderSetVertexBuffer>
+<summary>
+The <strong><c>setVertexBuffer()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets or unsets the current <see cref="GPUBuffer"/> for the given slot that will provide vertex data for subsequent drawing commands.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setVertexBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetVertexBuffer>
+<GPURenderPassEncoderSetViewport>
+<summary>
+The <strong><c>setViewport()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder/setViewport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPURenderPassEncoderSetViewport>
 </docs>

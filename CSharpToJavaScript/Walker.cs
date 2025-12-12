@@ -5014,8 +5014,12 @@ internal class Walker : CSharpSyntaxWalker
 								{
 									_AttributeDatasForInvocation[0] = string.Empty;
 									string _operator = _AttributeDatasForInvocation[1];
-									
+
 									VisitArgument(_arguments.Arguments[0]);
+
+									if (!_arguments.Arguments[0].HasTrailingTrivia)
+										JSSB.Append(' ');
+									
 									JSSB.Append(_operator);
 									VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
 									VisitArgument(_arguments.Arguments[1]);

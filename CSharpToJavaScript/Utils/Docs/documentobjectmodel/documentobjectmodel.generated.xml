@@ -1,0 +1,74 @@
+<docs>
+<Document_Object_Model>
+<summary>
+The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
+</summary>
+<remarks>
+<para>The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document&amp;apos;s structure, style, or content.</para><para>Nodes can also have event handlers attached to them. Once an event is triggered, the event handlers get executed.</para><para>To learn more about what the DOM is and how it represents documents, see our article <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples">DOM Examples</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_Model>
+<Document_Object_ModelEvents>
+<summary>
+<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Events</see> are fired to notify code of &amp;quot;interesting changes&amp;quot; that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g., low battery or media events from the operating system), and other causes.
+</summary>
+<remarks>
+<para>Each event is represented by an object that is based on the <see cref="Event"/> interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event#interfaces_based_on_event">Event &amp;gt; Interfaces based on Event</see>.</para><para>This topic provides an index to the main <strong>sorts</strong> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling">Event bubbling</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelEvents>
+<Document_Object_ModelExamples>
+<summary>
+This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelExamples>
+<Document_Object_ModelIntroduction>
+<summary>
+The <strong>Document Object Model</strong> (<strong>DOM</strong>) is the data representation of the objects<br/>that comprise the structure and content of a document on the web.<br/>This guide will introduce the DOM,<br/>look at how the DOM represents an <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see> document in memory<br/>and how to use APIs to create web content and applications.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelIntroduction>
+<Document_Object_ModelLocating_DOM_elements_using_selectors>
+<summary>
+The Selectors API provides methods that make it quick and easy to retrieve <see cref="Element"/> nodes from the DOM by matching against a set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">selectors</see>. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
+</summary>
+<remarks>
+<para>-<see href="https://drafts.csswg.org/selectors/">Selectors specification</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS Selectors</see><br/>-<see cref="Element.QuerySelector"/><br/>-<see cref="Element.QuerySelectorAll"/><br/>-<see cref="Document.QuerySelector"/><br/>-<see cref="Document.QuerySelectorAll"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelLocating_DOM_elements_using_selectors>
+<Document_Object_ModelReflected_attributes>
+<summary>
+Many attributes are <strong>reflected</strong> in the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</see> interface.<br/>This means that the value of the attribute can be read or written directly in JavaScript through a property on the corresponding interface, and vice versa.<br/>The reflected properties offer a more natural programming approach than getting and setting attribute values using the <see cref="Element.GetAttribute"/> and <see cref="Element.SetAttribute"/> methods of the <see cref="Element"/> interface.
+</summary>
+<remarks>
+<para>This guide provides an overview of reflected attributes and how they are used.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelReflected_attributes>
+<Document_Object_ModelTraversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces>
+<summary>
+This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelTraversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces>
+<Document_Object_ModelUsing_the_Document_Object_Model>
+<summary>
+The <strong>Document Object Model</strong> (DOM) is an API for manipulating DOM trees of HTML and XML documents (among other tree-like documents). This API is at the root of the description of a page and serves as a base for scripting on the web.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</see> (DOM).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document_Object_ModelUsing_the_Document_Object_Model>
+</docs>

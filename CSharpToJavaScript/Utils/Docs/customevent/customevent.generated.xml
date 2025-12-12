@@ -9,16 +9,6 @@ The <strong><c>CustomEvent</c></strong> interface can be used to attach custom d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CustomEvent>
-<CustomEventDetail>
-<summary>
-The read-only <strong><c>detail</c></strong> property of the <see cref="CustomEvent"/> interface returns any data passed when initializing the event.
-</summary>
-<remarks>
-<para>-<see cref="CustomEvent"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Whatever data the event was initialized with.</value>
-</CustomEventDetail>
 <CustomEventCustomEvent>
 <summary>
 The <strong><c>CustomEvent()</c></strong> constructor creates a new <see cref="CustomEvent"/> object.
@@ -29,6 +19,16 @@ The <strong><c>CustomEvent()</c></strong> constructor creates a new <see cref="C
 </remarks>
 <returns>A new <see cref="CustomEvent"/> object.</returns>
 </CustomEventCustomEvent>
+<CustomEventDetail>
+<summary>
+The read-only <strong><c>detail</c></strong> property of the <see cref="CustomEvent"/> interface returns any data passed when initializing the event.
+</summary>
+<remarks>
+<para>-<see cref="CustomEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Whatever data the event was initialized with.</value>
+</CustomEventDetail>
 <CustomEventInitCustomEvent>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>CustomEvent.initCustomEvent()</c></strong> method initializes a <see cref="CustomEvent"/> object.<br/>If the event has already been dispatched, this method does nothing.

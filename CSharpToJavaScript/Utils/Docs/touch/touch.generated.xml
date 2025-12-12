@@ -9,15 +9,51 @@ The <strong><c>Touch</c></strong> interface represents a single contact point on
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Touch>
-<TouchTarget>
+<TouchClientX>
 <summary>
-The read-only <strong><c>target</c></strong> property of the <c>Touch</c> interface returns the (<see cref="EventTarget"/>) on which the touch contact started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document. Note that if the target element is removed from the document, events will still be targeted at it, and hence won't necessarily bubble up to the window or document anymore. If there is any risk of an element being removed while it is being touched, the best practice is to attach the touch listeners directly to the target.
+The <c>Touch.clientX</c> read-only property returns the X coordinate of the touch<br/>point relative to the viewport, not including any scroll offset.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/target"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="EventTarget"/> the <see cref="Touch"/> object applies to.</value>
-</TouchTarget>
+<value>A <c>double</c> floating point value representing the X coordinate of the touch point<br/>relative to the viewport, not including any scroll offset.</value>
+</TouchClientX>
+<TouchClientY>
+<summary>
+The <strong><c>Touch.clientY</c></strong> read-only property returns the Y<br/>coordinate of the touch point relative to the browser&amp;apos;s viewport, not including any<br/>scroll offset.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> floating point value representing the Y coordinate of the touch point<br/>relative to the viewport, not including any scroll offset.</value>
+</TouchClientY>
+<TouchForce>
+<summary>
+The <strong><c>Touch.force</c></strong> read-only property returns the amount of<br/>pressure the user is applying to the touch surface for a <see cref="Touch"/> point.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/force"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>float</c> that represents the amount of pressure the user is applying to the<br/>touch surface. This is a value between <c>0.0</c> (no pressure) and<br/><c>1.0</c> (the maximum amount of pressure the hardware can recognize). A value of<br/><c>0.0</c> is returned if no value is known (for example the touch device does not<br/>support this property). In environments where force is known, the absolute pressure<br/>represented by the force attribute, and the sensitivity in levels of pressure, may vary.</value>
+</TouchForce>
+<TouchIdentifier>
+<summary>
+The <strong><c>Touch.identifier</c></strong> returns a value uniquely identifying<br/>this point of contact with the touch surface. This value remains consistent for every<br/>event involving this finger&amp;apos;s (or stylus&amp;apos;s) movement on the surface until it is lifted<br/>off the surface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/identifier"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>long</c> that represents the unique ID of the <see cref="Touch"/> object.</value>
+</TouchIdentifier>
+<TouchPageX>
+<summary>
+The <strong><c>Touch.pageX</c></strong> read-only property returns the X<br/>coordinate of the touch point relative to the viewport, including any scroll offset.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/pageX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> floating point value representing the X coordinate of the touch point<br/>relative to the viewport, including any scroll offset.</value>
+</TouchPageX>
 <TouchPageY>
 <summary>
 The <strong><c>Touch.pageY</c></strong> read-only property returns the Y<br/>coordinate of the touch point relative to the viewport, including any scroll offset.
@@ -37,69 +73,6 @@ The <strong><c>radiusX</c></strong> read-only property of the <see cref="Touch"/
 </remarks>
 <value>A number.</value>
 </TouchRadiusX>
-<TouchScreenX>
-<summary>
-Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/screenX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</TouchScreenX>
-<TouchRotationAngle>
-<summary>
-The <strong><c>rotationAngle</c></strong> read-only property of the <see cref="Touch"/> interface returns the rotation angle, in degrees, of the contact area ellipse defined by <see cref="Touch.RadiusX"/> and <see cref="Touch.RadiusY"/>. The value may be between 0 and 90. Together, these three values describe an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/rotationAngle"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</TouchRotationAngle>
-<TouchClientX>
-<summary>
-The <c>Touch.clientX</c> read-only property returns the X coordinate of the touch<br/>point relative to the viewport, not including any scroll offset.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>double</c> floating point value representing the X coordinate of the touch point<br/>relative to the viewport, not including any scroll offset.</value>
-</TouchClientX>
-<TouchIdentifier>
-<summary>
-The <strong><c>Touch.identifier</c></strong> returns a value uniquely identifying<br/>this point of contact with the touch surface. This value remains consistent for every<br/>event involving this finger&amp;apos;s (or stylus&amp;apos;s) movement on the surface until it is lifted<br/>off the surface.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/identifier"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>long</c> that represents the unique ID of the <see cref="Touch"/> object.</value>
-</TouchIdentifier>
-<TouchTouch>
-<summary>
-The <strong><c>Touch()</c></strong> constructor creates a new <see cref="Touch"/> object.
-</summary>
-<remarks>
-<para>-<see cref="TouchEvent"/>, the interface of the objects it constructs.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/Touch"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</TouchTouch>
-<TouchScreenY>
-<summary>
-Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/screenY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</TouchScreenY>
-<TouchClientY>
-<summary>
-The <strong><c>Touch.clientY</c></strong> read-only property returns the Y<br/>coordinate of the touch point relative to the browser&amp;apos;s viewport, not including any<br/>scroll offset.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <c>double</c> floating point value representing the Y coordinate of the touch point<br/>relative to the viewport, not including any scroll offset.</value>
-</TouchClientY>
 <TouchRadiusY>
 <summary>
 The <strong><c>radiusY</c></strong> read-only property of the <see cref="Touch"/> interface returns the Y radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as <see cref="Touch.ScreenX"/>.
@@ -110,22 +83,49 @@ The <strong><c>radiusY</c></strong> read-only property of the <see cref="Touch"/
 </remarks>
 <value>A number.</value>
 </TouchRadiusY>
-<TouchForce>
+<TouchRotationAngle>
 <summary>
-The <strong><c>Touch.force</c></strong> read-only property returns the amount of<br/>pressure the user is applying to the touch surface for a <see cref="Touch"/> point.
+The <strong><c>rotationAngle</c></strong> read-only property of the <see cref="Touch"/> interface returns the rotation angle, in degrees, of the contact area ellipse defined by <see cref="Touch.RadiusX"/> and <see cref="Touch.RadiusY"/>. The value may be between 0 and 90. Together, these three values describe an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/force"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/rotationAngle"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <c>float</c> that represents the amount of pressure the user is applying to the<br/>touch surface. This is a value between <c>0.0</c> (no pressure) and<br/><c>1.0</c> (the maximum amount of pressure the hardware can recognize). A value of<br/><c>0.0</c> is returned if no value is known (for example the touch device does not<br/>support this property). In environments where force is known, the absolute pressure<br/>represented by the force attribute, and the sensitivity in levels of pressure, may vary.</value>
-</TouchForce>
-<TouchPageX>
+<value>A number.</value>
+</TouchRotationAngle>
+<TouchScreenX>
 <summary>
-The <strong><c>Touch.pageX</c></strong> read-only property returns the X<br/>coordinate of the touch point relative to the viewport, including any scroll offset.
+Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/pageX"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/screenX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <c>double</c> floating point value representing the X coordinate of the touch point<br/>relative to the viewport, including any scroll offset.</value>
-</TouchPageX>
+<value>A number.</value>
+</TouchScreenX>
+<TouchScreenY>
+<summary>
+Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/screenY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</TouchScreenY>
+<TouchTarget>
+<summary>
+The read-only <strong><c>target</c></strong> property of the <c>Touch</c> interface returns the (<see cref="EventTarget"/>) on which the touch contact started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document. Note that if the target element is removed from the document, events will still be targeted at it, and hence won't necessarily bubble up to the window or document anymore. If there is any risk of an element being removed while it is being touched, the best practice is to attach the touch listeners directly to the target.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="EventTarget"/> the <see cref="Touch"/> object applies to.</value>
+</TouchTarget>
+<TouchTouch>
+<summary>
+The <strong><c>Touch()</c></strong> constructor creates a new <see cref="Touch"/> object.
+</summary>
+<remarks>
+<para>-<see cref="TouchEvent"/>, the interface of the objects it constructs.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/Touch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TouchTouch>
 </docs>

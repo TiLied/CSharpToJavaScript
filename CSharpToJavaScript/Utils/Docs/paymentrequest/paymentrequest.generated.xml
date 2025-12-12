@@ -8,27 +8,6 @@ The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentRequest>
-<PaymentRequestSecurePaymentConfirmationAvailability>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>securePaymentConfirmationAvailability()</c></strong> static method of the <see cref="PaymentRequest"/> interface indicates whether the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation">Secure payment confirmation</see> (SPC) feature is available.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation">Using Secure Payment Confirmation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/securePaymentConfirmationAvailability"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves with an enumerated value indicating whether SPC is available, and if not, a reason for non-availability.Possible values are:</returns>
-</PaymentRequestSecurePaymentConfirmationAvailability>
-<PaymentRequestShow>
-<summary>
-The <strong><see cref="'PaymentRequest'"/></strong> interface&amp;apos;s<br/><strong><c>show()</c></strong> method instructs the user agent to begin the<br/>process of showing and handling the user interface for the payment request to the<br/>user.
-</summary>
-<remarks>
-<para>Only one payment request can be in the process of being handled at once, across all<br/>documents. Once one <c>PaymentRequest</c>&amp;apos;s <c>show()</c> method has been<br/>called, any other call to <c>show()</c> will by rejected with an<br/><c>AbortError</c> until the returned promise has been concluded, either by being<br/>fulfilled with a <see cref="PaymentResponse"/> indicating the results of the payment<br/>request, or by being rejected with an error.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In reality, despite the fact that the specification says this<br/>can&amp;apos;t be done, some browsers, including Firefox, support multiple active payment<br/>requests at a time.</para></blockquote><para>If your architecture doesn&amp;apos;t necessarily have all of the data ready to go at the moment<br/>it instantiates the payment interface by calling <c>show()</c>, specify the<br/><c>detailsPromise</c> parameter, providing a <see cref="Promise"/> that is<br/>fulfilled once the data is ready. If this is provided, <c>show()</c> will not<br/>allow the user to interact with the payment interface until the promise is fulfilled, so<br/>that data can be updated prior to the user engaging with the payment process.</para><para>Processing the result and, if necessary, calling <see cref="PaymentResponse.Retry"/><br/>to retry a failed payment can all be done either asynchronously or synchronously,<br/>depending on your needs. For the best user experience, asynchronous solutions are<br/>typically the best way to go. Most examples on MDN and elsewhere use<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><c>async</c></see>/<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"><c>await</c></see><br/>to wait asynchronously while results are validated and so forth.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see cref="'PaymentRequest.Abort'"/><br/>-<see cref="PaymentResponse"/><br/>-<see cref="PaymentResponse.Retry"/><br/>-<see cref="PaymentResponse.Complete"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/show"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that eventually resolves with a <see cref="PaymentResponse"/>.<br/>The promise is resolved when the user accepts the payment request (such as by clicking a<br/>&amp;quot;Pay&amp;quot; button in the browser&amp;apos;s payment sheet).</returns>
-</PaymentRequestShow>
 <PaymentRequestAbort>
 <summary>
 The <c>PaymentRequest.abort()</c> method of the <see cref="'PaymentRequest'"/><br/>interface causes the user agent to end the payment request and to remove any user<br/>interface that might be shown.
@@ -38,15 +17,6 @@ The <c>PaymentRequest.abort()</c> method of the <see cref="'PaymentRequest'"/><b
 </remarks>
 <returns>None (<see cref="'undefined'"/>).</returns>
 </PaymentRequestAbort>
-<PaymentRequestShippingaddresschange>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingaddresschange</c></strong> event is sent to the <see cref="PaymentRequest"/> object when the user selects a shipping address or changes details of their shipping address.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingaddresschange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</PaymentRequestShippingaddresschange>
 <PaymentRequestCanMakePayment>
 <summary>
 The <see cref="PaymentRequest"/> method<br/><strong><c>canMakePayment()</c></strong> determines whether or not the request<br/>is configured in a way that is compatible with at least one payment method supported<br/>by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see>.
@@ -58,6 +28,16 @@ The <see cref="PaymentRequest"/> method<br/><strong><c>canMakePayment()</c></str
 </remarks>
 <returns>A <see cref="Promise"/> to a boolean value that resolves to <c>true</c><br/>if the user agent supports any of the payment methods supplied when instantiating the<br/>request using the <see cref="'PaymentRequest.PaymentRequest'"/><br/>constructor. If the payment can&amp;apos;t be processed, the promise receives a value of<br/><c>false</c>.<blockquote class="NOTE"><h5>NOTE</h5>If you call this too often, the browser may reject the<br/>returned promise with a <c>DOMException</c>.</blockquote></returns>
 </PaymentRequestCanMakePayment>
+<PaymentRequestId>
+<summary>
+The <strong><c>id</c></strong> read-only attribute of the<br/><see cref="PaymentRequest"/> interface returns a unique identifier for a particular<br/><see cref="PaymentRequest"/> instance.
+</summary>
+<remarks>
+<para>When constructing an instance of the <see cref="PaymentRequest"/>, you are able to<br/>supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentRequestId>
 <PaymentRequestMerchantvalidation>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>merchantvalidation</c></strong> events are delivered by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> to a <see cref="PaymentRequest"/> object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
@@ -78,15 +58,6 @@ The <strong><c>paymentmethodchange</c></strong> event is delivered the <see href
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/paymentmethodchange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentRequestPaymentmethodchange>
-<PaymentRequestShippingoptionchange>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> For payment requests that request shipping information, and for which shipping options are offered, the <strong><c>shippingoptionchange</c></strong> event is sent to the <see cref="PaymentRequest"/> whenever the user chooses a shipping option from the list of available options.
-</summary>
-<remarks>
-<para>The string identifying the currently-selected shipping option can be found in the <see cref="PaymentRequest.ShippingOption"/> property.</para><para>This event is not cancelable and does not bubble.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingoptionchange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</PaymentRequestShippingoptionchange>
 <PaymentRequestPaymentRequest>
 <summary>
 The <strong><c>PaymentRequest()</c></strong> constructor<br/>creates a new <see cref="PaymentRequest"/> object which will be used to handle the<br/>process of generating, validating, and submitting a payment request.
@@ -96,6 +67,16 @@ The <strong><c>PaymentRequest()</c></strong> constructor<br/>creates a new <see 
 </remarks>
 <returns>A new <see cref="PaymentRequest"/> object, configured for use as configured by the<br/>input parameters.</returns>
 </PaymentRequestPaymentRequest>
+<PaymentRequestSecurePaymentConfirmationAvailability>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>securePaymentConfirmationAvailability()</c></strong> static method of the <see cref="PaymentRequest"/> interface indicates whether the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation">Secure payment confirmation</see> (SPC) feature is available.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation">Using Secure Payment Confirmation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/securePaymentConfirmationAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an enumerated value indicating whether SPC is available, and if not, a reason for non-availability.Possible values are:</returns>
+</PaymentRequestSecurePaymentConfirmationAvailability>
 <PaymentRequestShippingAddress>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingAddress</c></strong> read-only property of<br/>the <see cref="'PaymentRequest'"/> interface returns the shipping address provided by the<br/>user. It is <c>null</c> by default.
@@ -105,25 +86,15 @@ The <strong><c>PaymentRequest()</c></strong> constructor<br/>creates a new <see 
 </remarks>
 <value>A <see cref="'PaymentAddress'"/> object or <c>null</c>.</value>
 </PaymentRequestShippingAddress>
-<PaymentRequestShippingType>
+<PaymentRequestShippingaddresschange>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingType</c></strong> read-only property of the<br/><see cref="PaymentRequest"/> interface returns one of <c>&amp;quot;shipping&amp;quot;</c>,<br/><c>&amp;quot;delivery&amp;quot;</c>, <c>&amp;quot;pickup&amp;quot;</c>, or <c>null</c> if one was not<br/>provided by the constructor.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingaddresschange</c></strong> event is sent to the <see cref="PaymentRequest"/> object when the user selects a shipping address or changes details of their shipping address.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingType"> <em>See also on MDN</em> </seealso></para>
+<para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingaddresschange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>One of <c>&amp;quot;shipping&amp;quot;</c>, <c>&amp;quot;delivery&amp;quot;</c>, <c>&amp;quot;pickup&amp;quot;</c>, or<br/><c>null</c>.</value>
-</PaymentRequestShippingType>
-<PaymentRequestId>
-<summary>
-The <strong><c>id</c></strong> read-only attribute of the<br/><see cref="PaymentRequest"/> interface returns a unique identifier for a particular<br/><see cref="PaymentRequest"/> instance.
-</summary>
-<remarks>
-<para>When constructing an instance of the <see cref="PaymentRequest"/>, you are able to<br/>supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/id"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</PaymentRequestId>
+</PaymentRequestShippingaddresschange>
 <PaymentRequestShippingOption>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingOption</c></strong> read-only attribute of the <see cref="'PaymentRequest'"/> interface returns either the id of a selected shipping option, null (if no shipping option was set to be selected) or a shipping option selected by the user.<br/>It is initially <c>null</c> by when no &amp;quot;selected&amp;quot; shipping options are provided.
@@ -134,4 +105,33 @@ The <strong><c>id</c></strong> read-only attribute of the<br/><see cref="Payment
 </remarks>
 <value>An object or <c>null</c>.</value>
 </PaymentRequestShippingOption>
+<PaymentRequestShippingoptionchange>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> For payment requests that request shipping information, and for which shipping options are offered, the <strong><c>shippingoptionchange</c></strong> event is sent to the <see cref="PaymentRequest"/> whenever the user chooses a shipping option from the list of available options.
+</summary>
+<remarks>
+<para>The string identifying the currently-selected shipping option can be found in the <see cref="PaymentRequest.ShippingOption"/> property.</para><para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingoptionchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PaymentRequestShippingoptionchange>
+<PaymentRequestShippingType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingType</c></strong> read-only property of the<br/><see cref="PaymentRequest"/> interface returns one of <c>&amp;quot;shipping&amp;quot;</c>,<br/><c>&amp;quot;delivery&amp;quot;</c>, <c>&amp;quot;pickup&amp;quot;</c>, or <c>null</c> if one was not<br/>provided by the constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of <c>&amp;quot;shipping&amp;quot;</c>, <c>&amp;quot;delivery&amp;quot;</c>, <c>&amp;quot;pickup&amp;quot;</c>, or<br/><c>null</c>.</value>
+</PaymentRequestShippingType>
+<PaymentRequestShow>
+<summary>
+The <strong><see cref="'PaymentRequest'"/></strong> interface&amp;apos;s<br/><strong><c>show()</c></strong> method instructs the user agent to begin the<br/>process of showing and handling the user interface for the payment request to the<br/>user.
+</summary>
+<remarks>
+<para>Only one payment request can be in the process of being handled at once, across all<br/>documents. Once one <c>PaymentRequest</c>&amp;apos;s <c>show()</c> method has been<br/>called, any other call to <c>show()</c> will by rejected with an<br/><c>AbortError</c> until the returned promise has been concluded, either by being<br/>fulfilled with a <see cref="PaymentResponse"/> indicating the results of the payment<br/>request, or by being rejected with an error.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In reality, despite the fact that the specification says this<br/>can&amp;apos;t be done, some browsers, including Firefox, support multiple active payment<br/>requests at a time.</para></blockquote><para>If your architecture doesn&amp;apos;t necessarily have all of the data ready to go at the moment<br/>it instantiates the payment interface by calling <c>show()</c>, specify the<br/><c>detailsPromise</c> parameter, providing a <see cref="Promise"/> that is<br/>fulfilled once the data is ready. If this is provided, <c>show()</c> will not<br/>allow the user to interact with the payment interface until the promise is fulfilled, so<br/>that data can be updated prior to the user engaging with the payment process.</para><para>Processing the result and, if necessary, calling <see cref="PaymentResponse.Retry"/><br/>to retry a failed payment can all be done either asynchronously or synchronously,<br/>depending on your needs. For the best user experience, asynchronous solutions are<br/>typically the best way to go. Most examples on MDN and elsewhere use<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><c>async</c></see>/<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"><c>await</c></see><br/>to wait asynchronously while results are validated and so forth.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see cref="'PaymentRequest.Abort'"/><br/>-<see cref="PaymentResponse"/><br/>-<see cref="PaymentResponse.Retry"/><br/>-<see cref="PaymentResponse.Complete"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/show"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that eventually resolves with a <see cref="PaymentResponse"/>.<br/>The promise is resolved when the user accepts the payment request (such as by clicking a<br/>&amp;quot;Pay&amp;quot; button in the browser&amp;apos;s payment sheet).</returns>
+</PaymentRequestShow>
 </docs>

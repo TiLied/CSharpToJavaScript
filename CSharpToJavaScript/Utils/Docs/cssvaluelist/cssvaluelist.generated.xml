@@ -9,16 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSValueList>
-<CSSValueListLength>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>length</c></strong> read-only property of the<br/><see cref="CSSValueList"/> interface represents the number of <see cref="CSSValue"/>s<br/>in the list. The range of valid values of the indices is <c>0</c> to<br/><c>length-1</c> inclusive.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long</c> representing the number of <see cref="CSSValue"/>s.</value>
-</CSSValueListLength>
 <CSSValueListItem>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>item()</c></strong> method of the <see cref="CSSValueList"/><br/>interface is used to retrieve a <see cref="CSSValue"/> by ordinal index.
@@ -29,4 +19,14 @@
 </remarks>
 <returns>A <see cref="CSSValue"/> object at the <c>index</c> position in the<br/><c>CSSValueList</c>, or <c>null</c> if that is not a valid index.</returns>
 </CSSValueListItem>
+<CSSValueListLength>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>length</c></strong> read-only property of the<br/><see cref="CSSValueList"/> interface represents the number of <see cref="CSSValue"/>s<br/>in the list. The range of valid values of the indices is <c>0</c> to<br/><c>length-1</c> inclusive.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c> representing the number of <see cref="CSSValue"/>s.</value>
+</CSSValueListLength>
 </docs>

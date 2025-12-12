@@ -9,16 +9,6 @@ The <strong><c>SVGViewElement</c></strong> interface provides access to the prop
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGViewElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGViewElement>
-<SVGViewElementViewBox>
-<summary>
-The <strong><c>viewBox</c></strong> read-only property of the <see cref="SVGViewElement"/> interface reflects the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("view")}} element. It represents the <c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> values defining the area to be used for the <c>view</c>&amp;apos;s <c>viewBox</c>.
-</summary>
-<remarks>
-<para>-viewBox<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGViewElement/viewBox"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedRect"/> object.</value>
-</SVGViewElementViewBox>
 <SVGViewElementPreserveAspectRatio>
 <summary>
 The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see cref="SVGViewElement"/> interface reflects the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("view")}} element. It defines how the content within the <c>view</c> should be scaled to fit its viewport while preserving its aspect ratio.
@@ -29,4 +19,14 @@ The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see c
 </remarks>
 <value>An <see cref="SVGAnimatedPreserveAspectRatio"/> object.</value>
 </SVGViewElementPreserveAspectRatio>
+<SVGViewElementViewBox>
+<summary>
+The <strong><c>viewBox</c></strong> read-only property of the <see cref="SVGViewElement"/> interface reflects the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("view")}} element. It represents the <c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> values defining the area to be used for the <c>view</c>&amp;apos;s <c>viewBox</c>.
+</summary>
+<remarks>
+<para>-viewBox<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGViewElement/viewBox"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedRect"/> object.</value>
+</SVGViewElementViewBox>
 </docs>

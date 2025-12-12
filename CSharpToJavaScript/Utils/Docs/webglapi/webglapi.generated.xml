@@ -1,0 +1,292 @@
+<docs>
+<WebGL_API>
+<summary>
+<strong>WebGL</strong> (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
+</summary>
+<remarks>
+<para>Support for WebGL is present in all modern browsers (see the <see href="https://developer.mozilla.org#browser_compatibility">compatibility tables</see> below); however, the user&amp;apos;s device must also have hardware that supports these features.</para><para>The <see href="https://developer.mozilla.org#webgl_2">WebGL 2</see> API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the <see cref="WebGL2RenderingContext"/> interface.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element is also used by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> to do 2D graphics on web pages.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#browser_compatibility">Compatibility info about WebGL extensions</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_API>
+<WebGL_APIBasic_2D_animation_example>
+<summary>
+In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas&amp;apos;s coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBasic_2D_animation_example>
+<WebGL_APIBy_example>
+<summary>
+<strong>WebGL by example</strong> is a series of live samples with short explanations that showcase WebGL concepts and capabilities.
+</summary>
+<remarks>
+<para>The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_example>
+<WebGL_APIBy_exampleBasic_scissoring>
+<summary>
+In this example, we see how to draw rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Basic_scissoring"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleBasic_scissoring>
+<WebGL_APIBy_exampleBoilerplate_1>
+<summary>
+This example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Boilerplate_1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleBoilerplate_1>
+<WebGL_APIBy_exampleCanvas_size_and_WebGL>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleCanvas_size_and_WebGL>
+<WebGL_APIBy_exampleClearing_by_clicking>
+<summary>
+This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Clearing_by_clicking"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleClearing_by_clicking>
+<WebGL_APIBy_exampleClearing_with_colors>
+<summary>
+An example showing how to clear a WebGL rendering context to a solid color.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Clearing_with_colors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleClearing_with_colors>
+<WebGL_APIBy_exampleColor_masking>
+<summary>
+This WebGL example modifies random colors by applying color masking to limit the range of displayed colors to specific shades.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Color_masking"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleColor_masking>
+<WebGL_APIBy_exampleDetect_WebGL>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Detect_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleDetect_WebGL>
+<WebGL_APIBy_exampleHello_GLSL>
+<summary>
+This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleHello_GLSL>
+<WebGL_APIBy_exampleHello_vertex_attributes>
+<summary>
+This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Hello_vertex_attributes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleHello_vertex_attributes>
+<WebGL_APIBy_exampleRaining_rectangles>
+<summary>
+A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Raining_rectangles"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleRaining_rectangles>
+<WebGL_APIBy_exampleScissor_animation>
+<summary>
+A simple WebGL example in which we have some animation fun using scissoring and clearing operations.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Scissor_animation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleScissor_animation>
+<WebGL_APIBy_exampleSimple_color_animation>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Simple_color_animation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleSimple_color_animation>
+<WebGL_APIBy_exampleTextures_from_code>
+<summary>
+This WebGL example provides a simple demonstration of procedural texturing with fragment shaders. That is, using code to generate textures for use in shading WebGL objects.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Textures_from_code"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleTextures_from_code>
+<WebGL_APIBy_exampleVideo_textures>
+<summary>
+This example demonstrates how to use video files as textures for WebGL surfaces.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Video_textures"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIBy_exampleVideo_textures>
+<WebGL_APICompressed_texture_formats>
+<summary>
+The WebGL API provides methods to use compressed texture formats. These are useful to increase texture detail while limiting the additional video memory necessary. By default, no compressed formats are available: a corresponding compressed texture format extension must first be enabled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APICompressed_texture_formats>
+<WebGL_APIConstants>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> provides several constants that are passed into or returned by functions. All constants are of type <see cref="WebGL_APITypes"/>.
+</summary>
+<remarks>
+<para>Standard WebGL constants are installed on the <see cref="WebGLRenderingContext"/> and <see cref="WebGL2RenderingContext"/> objects, so that you use them as <c>gl.CONSTANT_NAME</c>:</para><para>Some constants are also provided by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</see>. A <see href="https://developer.mozilla.org#constants_defined_in_webgl_extensions">list</see> is provided below.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see> has more information, examples, and resources on how to get started with WebGL.</para>
+<para>-<see cref="WebGLRenderingContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIConstants>
+<WebGL_APIData>
+<summary>
+Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site&amp;apos;s JavaScript code, depending on the specific type of variable.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIData>
+<WebGL_APIMatrix_math_for_the_web>
+<summary>
+Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms">CSS transforms</see> and the <c>matrix3d</c> transform type.
+</summary>
+<remarks>
+<para>While this article uses <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> to simplify explanations, matrices are a core concept used by many different technologies including <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see>, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> (VR and AR) API, and <see href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">GLSL shaders</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIMatrix_math_for_the_web>
+<WebGL_APITutorial>
+<summary>
+<see href="https://www.khronos.org/webgl/">WebGL</see> enables web content to use an API based on <see href="https://www.khronos.org/opengles/">OpenGL ES</see> 2.0 to perform 3D rendering in an HTML <c>&amp;lt;canvas&amp;gt;</c> in browsers that support it without the use of plug-ins. WebGL programs consist of control code written in JavaScript and special effects code (shader code) that is executed on a computer&amp;apos;s Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorial>
+<WebGL_APITutorialAdding_2D_content_to_a_WebGL_context>
+<summary>
+Once you&amp;apos;ve successfully <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">created a WebGL context</see>, you can start rendering into it. A simple thing we can do is draw an untextured square plane, so let&amp;apos;s start there.
+</summary>
+<remarks>
+<para>The complete source code for this project is <see href="https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2">available on GitHub</see>.</para>
+<para>-<see href="https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html">Matrices</see> on WebGLFundamentals<br/>-<see href="https://mathworld.wolfram.com/Matrix.html">Matrices</see> on Wolfram MathWorld<br/>-<see href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</see> on Wikipedia<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialAdding_2D_content_to_a_WebGL_context>
+<WebGL_APITutorialAnimating_objects_with_WebGL>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialAnimating_objects_with_WebGL>
+<WebGL_APITutorialAnimating_textures_in_WebGL>
+<summary>
+
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio">HTML video and audio</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialAnimating_textures_in_WebGL>
+<WebGL_APITutorialCreating_3D_objects_using_WebGL>
+<summary>
+Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the <see cref="WebGLRenderingContext.DrawArrays"/> method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling <see cref="WebGLRenderingContext.DrawElements"/>.
+</summary>
+<remarks>
+<para>Consider: each face requires four vertices to define it, but each vertex is shared by three faces. We can pass a lot fewer data around by building an array of all 24 vertices, then referring to each vertex by its index into that array instead of moving entire sets of coordinates around. If you wonder why we need 24 vertices, and not just 8, it is because each corner belongs to three faces of different colors, and a single vertex needs to have a single specific color; therefore we will create three copies of each vertex in three different colors, one for each face.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialCreating_3D_objects_using_WebGL>
+<WebGL_APITutorialGetting_started_with_WebGL>
+<summary>
+<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> enables web content to use an API based on <see href="https://www.khronos.org/opengles/">OpenGL ES</see> 2.0 to perform 2D and 3D rendering in an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"><c>canvas</c></see> in browsers that support it without the use of plug-ins.
+</summary>
+<remarks>
+<para>WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer&amp;apos;s Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</para><para>This article will introduce you to the basics of using WebGL. It&amp;apos;s assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn&amp;apos;t pretend to try to teach you 3D graphics concepts itself.</para><para>The code examples in this tutorial can also be found in the <see href="https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial">webgl-examples folder on GitHub</see>.</para><para>It&amp;apos;s worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL&amp;apos;s capabilities, making it easier to build 3D applications and games, such as <see href="https://threejs.org/">THREE.js</see> and <see href="https://www.babylonjs.com/">BABYLON.js</see>.</para>
+<para>-<see href="https://webglfundamentals.org/">WebGL Fundamentals</see><br/>-<see href="https://duriansoftware.com/joe/an-intro-to-modern-opengl.-table-of-contents">An intro to modern OpenGL:</see> A series of nice articles about OpenGL written by Joe Groff, providing a clear introduction to OpenGL from its history to the important graphics pipeline concept, and also includes some examples to demonstrate how OpenGL works. If you have no idea what OpenGL is, this is a good place to start.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialGetting_started_with_WebGL>
+<WebGL_APITutorialLighting_in_WebGL>
+<summary>
+As should be clear by now, WebGL doesn&amp;apos;t have much built-in knowledge. It just runs two functions you supply — a vertex shader and a fragment shader — and expects you to write creative functions to get the results you want. In other words, if you want lighting you have to calculate it yourself. Fortunately, it&amp;apos;s not all that hard to do, and this article will cover some of the basics.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialLighting_in_WebGL>
+<WebGL_APITutorialUsing_shaders_to_apply_color_in_WebGL>
+<summary>
+Having created a square plane in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">previous demonstration</see>, the next obvious step is to add a splash of color to it. We can do this by revising the shaders.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialUsing_shaders_to_apply_color_in_WebGL>
+<WebGL_APITutorialUsing_textures_in_WebGL>
+<summary>
+Now that our sample program has a rotating 3D cube, let&amp;apos;s map a texture onto it instead of having its faces be solid colors.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITutorialUsing_textures_in_WebGL>
+<WebGL_APITypes>
+<summary>
+The following types are used in <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> interfaces.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APITypes>
+<WebGL_APIUsing_Extensions>
+<summary>
+WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the <see href="https://registry.khronos.org/webgl/extensions/">khronos webgl extension registry</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetSupportedExtensions"/><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see href="https://webglreport.com/">webglreport.com</see><br/>-<see href="https://web3dsurvey.com/">web3dsurvey.com - WebGL Extension Support Survey</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIUsing_Extensions>
+<WebGL_APIWebGL_best_practices>
+<summary>
+WebGL is a complicated API, and it&amp;apos;s often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don&amp;apos;ts, but also details <strong>why</strong>. You can rely on this document to guide your choice of approach, and ensure you&amp;apos;re on the right track no matter what browser or hardware your users run.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIWebGL_best_practices>
+<WebGL_APIWebGL_model_view_projection>
+<summary>
+This article explores how to take data within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> project, and project it into the proper spaces to display it on the screen. It assumes a knowledge of basic matrix math using translation, scale, and rotation matrices. It explains the three core matrices that are typically used when composing a 3D scene: the model, view and projection matrices.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/>-<see href="https://en.wikipedia.org/wiki/3D_projection">3D projection</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL_APIWebGL_model_view_projection>
+</docs>

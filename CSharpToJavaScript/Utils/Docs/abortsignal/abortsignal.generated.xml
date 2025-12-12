@@ -21,6 +21,14 @@ The <strong><c>aborted</c></strong> read-only property returns a value that indi
 </AbortSignalAborted>
 <AbortSignalAbort>
 <summary>
+The <strong><c>abort</c></strong> event of the <see cref="AbortSignal"/> is fired when the associated request is aborted, i.e., using <see cref="AbortController.Abort"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AbortSignalAbort>
+<AbortSignalAbort>
+<summary>
 The <strong><c>AbortSignal.abort()</c></strong> static method returns an <see cref="AbortSignal"/> that is already set as aborted (and which does not trigger an <see cref="AbortSignalabort"/> event).
 </summary>
 <remarks>
@@ -29,14 +37,15 @@ The <strong><c>AbortSignal.abort()</c></strong> static method returns an <see cr
 </remarks>
 <returns>An <c>AbortSignal</c> instance with the <see cref="AbortSignal.Aborted"/> property set to <c>true</c>, and <see cref="AbortSignal.Reason"/> set to the specified or default reason value.</returns>
 </AbortSignalAbort>
-<AbortSignalAbort>
+<AbortSignalAny>
 <summary>
-The <strong><c>abort</c></strong> event of the <see cref="AbortSignal"/> is fired when the associated request is aborted, i.e., using <see cref="AbortController.Abort"/>.
+The <strong><c>AbortSignal.any()</c></strong> static method takes an iterable of abort signals and returns an <see cref="AbortSignal"/>. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason",&amp;quot;&amp;quot;,"true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned <see cref="AbortSignal"/>.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</AbortSignalAbort>
+<returns>A <see cref="AbortSignal"/> that is:</returns>
+</AbortSignalAny>
 <AbortSignalReason>
 <summary>
 The <strong><c>reason</c></strong> read-only property returns a JavaScript value that indicates the abort reason.
@@ -59,15 +68,6 @@ The <strong><c>throwIfAborted()</c></strong> method throws the signal's abort <s
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </AbortSignalThrowIfAborted>
-<AbortSignalAny>
-<summary>
-The <strong><c>AbortSignal.any()</c></strong> static method takes an iterable of abort signals and returns an <see cref="AbortSignal"/>. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason",&amp;quot;&amp;quot;,"true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned <see cref="AbortSignal"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="AbortSignal"/> that is:</returns>
-</AbortSignalAny>
 <AbortSignalTimeout>
 <summary>
 The <strong><c>AbortSignal.timeout()</c></strong> static method returns an <see cref="AbortSignal"/> that will automatically abort after a specified time.

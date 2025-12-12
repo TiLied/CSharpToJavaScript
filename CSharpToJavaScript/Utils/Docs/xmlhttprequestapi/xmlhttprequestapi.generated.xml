@@ -1,0 +1,59 @@
+<docs>
+<XMLHttpRequest_API>
+<summary>
+The <strong>XMLHttpRequest API</strong> enables web apps to make HTTP requests to web servers and receive the responses programmatically using JavaScript. This in turn enables a website to update just part of a page with data from the server, rather than having to navigate to a whole new page. This practice is also sometimes known as <see href="https://developer.mozilla.org/en-US/docs/Glossary/AJAX">AJAX</see>.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see> is the more flexible and powerful replacement for the XMLHttpRequest API. The Fetch API uses {{jsxref(&amp;quot;Promise&amp;quot;, &amp;quot;promises&amp;quot;, &amp;quot;&amp;quot;, 1)}} instead of events to handle asynchronous responses, integrates well with <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>, and supports advanced aspects of HTTP such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">CORS</see>. For these reasons, the Fetch API is usually used in modern web apps instead of <see cref="XMLHttpRequest"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_API>
+<XMLHttpRequest_APIHTML_in_XMLHttpRequest>
+<summary>
+The W3C <see cref="XMLHttpRequest"/> specification adds <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> parsing support to <see cref="XMLHttpRequest"/>, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using <c>XMLHttpRequest</c>.
+</summary>
+<remarks>
+<para>To get an overview of how to use <c>XMLHttpRequest</c> in general, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see>.</para>
+<para>-<see cref="XMLHttpRequest"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_APIHTML_in_XMLHttpRequest>
+<XMLHttpRequest_APISending_and_Receiving_Binary_Data>
+<summary>
+
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_APISending_and_Receiving_Binary_Data>
+<XMLHttpRequest_APISynchronous_and_Asynchronous_Requests>
+<summary>
+<see cref="'XMLHttpRequest'"/> supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
+</summary>
+<remarks>
+<para>Synchronous requests block the execution of code which causes &amp;quot;freezing&amp;quot; on the screen and an unresponsive user experience.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon"><c>navigator.sendBeacon</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_APISynchronous_and_Asynchronous_Requests>
+<XMLHttpRequest_APIUsing_FormData_Objects>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"><c>FormData</c></see> object lets you compile a set of key/value pairs to send using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API">XMLHttpRequest</see> API. It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's <see cref="HTMLFormElement.Submit"/> method would use to send the data if the form's encoding type were set to <c>multipart/form-data</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using the Fetch API</see><br/>-<see cref="HTMLFormElement"/><br/>-<see cref="Blob"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Typed_arrays">Typed Arrays</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_APIUsing_FormData_Objects>
+<XMLHttpRequest_APIUsing_XMLHttpRequest>
+<summary>
+In this guide, we'll take a look at how to use <see cref="XMLHttpRequest"/> to issue <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see> requests in order to exchange data between the website and a server.
+</summary>
+<remarks>
+<para>Examples of both common and more obscure use cases for <c>XMLHttpRequest</c> are included.</para><para>To send an HTTP request:</para><para>After the transaction completes, the <c>XMLHttpRequest</c> object will contain useful information such as the response body and the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP status</see> of the result.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using the Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control</see><br/>-<see href="https://www.peej.co.uk/articles/rich-user-experience.html">XMLHttpRequest - REST and the Rich User Experience</see><br/>-<see href="https://xhr.spec.whatwg.org/">The <c>XMLHttpRequest</c> object: WHATWG specification</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequest_APIUsing_XMLHttpRequest>
+</docs>

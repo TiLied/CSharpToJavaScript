@@ -9,46 +9,6 @@ The list of <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLVideoElement>
-<HTMLVideoElementVideoWidth>
-<summary>
-The <see cref="HTMLVideoElement"/> interface's read-only <strong><c>videoWidth</c></strong> property indicates the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height">intrinsic width</see> of the video, expressed in CSS pixels.<br/>In simple terms, this is the width of the media in its natural size.
-</summary>
-<remarks>
-<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height"><c>HTMLVideoElement.videoHeight</c> &amp;gt; About intrinsic width and height</see> for more details.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value specifying the intrinsic width of the video in CSS pixels.<br/>If the element's <see cref="HTMLMediaElement.ReadyState"/> is <c>HTMLMediaElement.HAVE_NOTHING</c>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</value>
-</HTMLVideoElementVideoWidth>
-<HTMLVideoElementEnterpictureinpicture>
-<summary>
-The <c>enterpictureinpicture</c> event is fired when the <see cref="HTMLVideoElement"/> enters picture-in-picture mode successfully.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLVideoElementEnterpictureinpicture>
-<HTMLVideoElementWidth>
-<summary>
-The <strong><c>width</c></strong> property of the <see cref="HTMLVideoElement"/> interface returns an integer that reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element, specifying the displayed width of the resource in CSS pixels.
-</summary>
-<remarks>
-<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive integer or 0.</value>
-</HTMLVideoElementWidth>
-<HTMLVideoElementResize>
-<summary>
-The <strong><c>resize</c></strong> event of the <see cref="HTMLVideoElement"/> interface fires when one or both of the <see cref="HTMLVideoElement.VideoWidth"/> and <see cref="HTMLVideoElement.VideoHeight"/> properties have just been updated.
-</summary>
-<remarks>
-<para>This event is not cancelable but may bubble.</para>
-<para>-<see cref="HTMLVideoElement.VideoHeight"/><br/>-<see cref="HTMLVideoElement.VideoWidth"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/resize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLVideoElementResize>
 <HTMLVideoElementCancelVideoFrameCallback>
 <summary>
 The <strong><c>cancelVideoFrameCallback()</c></strong> method of the <see cref="HTMLVideoElement"/> interface cancels a previously-registered video frame callback.
@@ -59,16 +19,57 @@ The <strong><c>cancelVideoFrameCallback()</c></strong> method of the <see cref="
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HTMLVideoElementCancelVideoFrameCallback>
-<HTMLVideoElementRequestVideoFrameCallback>
+<HTMLVideoElementDisablePictureInPicture>
 <summary>
-The <strong><c>requestVideoFrameCallback()</c></strong> method of the <see cref="HTMLVideoElement"/> interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
+The <see cref="HTMLVideoElement"/> <strong><c>disablePictureInPicture</c></strong> property reflects the HTML attribute indicating whether the picture-in-picture feature is disabled for the current element.
 </summary>
 <remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>-<see cref="HTMLVideoElement.CancelVideoFrameCallback"/><br/>-<see href="https://web.dev/articles/requestvideoframecallback-rvfc">Perform efficient per-video-frame operations on video with <c>requestVideoFrameCallback()</c></see> on developer.chrome.com (2023)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback"> <em>See also on MDN</em> </seealso></para>
+<para>This value only represents a request from the website to the user agent. User configuration may change the eventual behavior—for example, Firefox users can change the <c>media.videocontrols.picture-in-picture.respect-disablePictureInPicture</c> setting to ignore the request to disable PiP.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/disablePictureInPicture"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A number representing a unique callback ID.This can be passed to <see cref="HTMLVideoElement.CancelVideoFrameCallback"/> to cancel the callback registration.</returns>
-</HTMLVideoElementRequestVideoFrameCallback>
+<value>A boolean value that is <c>true</c> if the picture-in-picture feature is disabled for this element. This means that the user agent should not suggest that feature to users, or request it automatically.</value>
+</HTMLVideoElementDisablePictureInPicture>
+<HTMLVideoElementEnterpictureinpicture>
+<summary>
+The <c>enterpictureinpicture</c> event is fired when the <see cref="HTMLVideoElement"/> enters picture-in-picture mode successfully.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLVideoElementEnterpictureinpicture>
+<HTMLVideoElementGetVideoPlaybackQuality>
+<summary>
+The <strong><see cref="HTMLVideoElement"/></strong> method<br/><strong><c>getVideoPlaybackQuality()</c></strong> creates and returns a<br/><see cref="VideoPlaybackQuality"/> object containing metrics including how many<br/>frames have been lost.
+</summary>
+<remarks>
+<para>The data returned can be used to evaluate the quality of the video stream.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>-The <see cref="VideoPlaybackQuality"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="VideoPlaybackQuality"/> object providing information about the video<br/>element&amp;apos;s current playback quality.</returns>
+</HTMLVideoElementGetVideoPlaybackQuality>
+<HTMLVideoElementHeight>
+<summary>
+The <strong><c>height</c></strong> property of the <see cref="HTMLVideoElement"/> interface returns an integer that reflects the <c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element, specifying the displayed height of the resource in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLImageElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer or 0.</value>
+</HTMLVideoElementHeight>
+<HTMLVideoElementLeavepictureinpicture>
+<summary>
+The <c>leavepictureinpicture</c> event is fired when the <see cref="HTMLVideoElement"/> leaves picture-in-picture mode successfully.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLVideoElementLeavepictureinpicture>
 <HTMLVideoElementPoster>
 <summary>
 The <strong><c>poster</c></strong> property of the <see cref="HTMLVideoElement"/> interface is a string that reflects the URL for an image to be shown while no video data is available. If the property does not represent a valid URL, no poster frame will be shown.
@@ -90,47 +91,26 @@ The <strong><see cref="HTMLVideoElement"/></strong> method<br/><strong><c>reques
 </remarks>
 <returns>A {{jsxref("Promise")}} that will resolve to a <see cref="PictureInPictureWindow"/><br/>object that can be used to listen when a user will resize that floating window.</returns>
 </HTMLVideoElementRequestPictureInPicture>
-<HTMLVideoElementDisablePictureInPicture>
+<HTMLVideoElementRequestVideoFrameCallback>
 <summary>
-The <see cref="HTMLVideoElement"/> <strong><c>disablePictureInPicture</c></strong> property reflects the HTML attribute indicating whether the picture-in-picture feature is disabled for the current element.
+The <strong><c>requestVideoFrameCallback()</c></strong> method of the <see cref="HTMLVideoElement"/> interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
 </summary>
 <remarks>
-<para>This value only represents a request from the website to the user agent. User configuration may change the eventual behavior—for example, Firefox users can change the <c>media.videocontrols.picture-in-picture.respect-disablePictureInPicture</c> setting to ignore the request to disable PiP.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/disablePictureInPicture"> <em>See also on MDN</em> </seealso></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>-<see cref="HTMLVideoElement.CancelVideoFrameCallback"/><br/>-<see href="https://web.dev/articles/requestvideoframecallback-rvfc">Perform efficient per-video-frame operations on video with <c>requestVideoFrameCallback()</c></see> on developer.chrome.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value that is <c>true</c> if the picture-in-picture feature is disabled for this element. This means that the user agent should not suggest that feature to users, or request it automatically.</value>
-</HTMLVideoElementDisablePictureInPicture>
-<HTMLVideoElementHeight>
+<returns>A number representing a unique callback ID.This can be passed to <see cref="HTMLVideoElement.CancelVideoFrameCallback"/> to cancel the callback registration.</returns>
+</HTMLVideoElementRequestVideoFrameCallback>
+<HTMLVideoElementResize>
 <summary>
-The <strong><c>height</c></strong> property of the <see cref="HTMLVideoElement"/> interface returns an integer that reflects the <c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element, specifying the displayed height of the resource in CSS pixels.
+The <strong><c>resize</c></strong> event of the <see cref="HTMLVideoElement"/> interface fires when one or both of the <see cref="HTMLVideoElement.VideoWidth"/> and <see cref="HTMLVideoElement.VideoHeight"/> properties have just been updated.
 </summary>
 <remarks>
-<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLImageElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/height"> <em>See also on MDN</em> </seealso></para>
+<para>This event is not cancelable but may bubble.</para>
+<para>-<see cref="HTMLVideoElement.VideoHeight"/><br/>-<see cref="HTMLVideoElement.VideoWidth"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/resize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A positive integer or 0.</value>
-</HTMLVideoElementHeight>
-<HTMLVideoElementLeavepictureinpicture>
-<summary>
-The <c>leavepictureinpicture</c> event is fired when the <see cref="HTMLVideoElement"/> leaves picture-in-picture mode successfully.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLVideoElementLeavepictureinpicture>
-<HTMLVideoElementGetVideoPlaybackQuality>
-<summary>
-The <strong><see cref="HTMLVideoElement"/></strong> method<br/><strong><c>getVideoPlaybackQuality()</c></strong> creates and returns a<br/><see cref="VideoPlaybackQuality"/> object containing metrics including how many<br/>frames have been lost.
-</summary>
-<remarks>
-<para>The data returned can be used to evaluate the quality of the video stream.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>-The <see cref="VideoPlaybackQuality"/> interface.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="VideoPlaybackQuality"/> object providing information about the video<br/>element&amp;apos;s current playback quality.</returns>
-</HTMLVideoElementGetVideoPlaybackQuality>
+</HTMLVideoElementResize>
 <HTMLVideoElementVideoHeight>
 <summary>
 The <see cref="HTMLVideoElement"/> interface's read-only <strong><c>videoHeight</c></strong> property indicates the <see href="https://developer.mozilla.org#about_intrinsic_width_and_height">intrinsic height</see> of the video, expressed in CSS pixels.<br/>In simple terms, this is the height of the media in its natural size.
@@ -140,4 +120,24 @@ The <see cref="HTMLVideoElement"/> interface's read-only <strong><c>videoHeight<
 </remarks>
 <value>An integer value specifying the intrinsic height of the video in CSS pixels.<br/>If the element's <see cref="HTMLMediaElement.ReadyState"/> is <c>HTMLMediaElement.HAVE_NOTHING</c>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</value>
 </HTMLVideoElementVideoHeight>
+<HTMLVideoElementVideoWidth>
+<summary>
+The <see cref="HTMLVideoElement"/> interface's read-only <strong><c>videoWidth</c></strong> property indicates the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height">intrinsic width</see> of the video, expressed in CSS pixels.<br/>In simple terms, this is the width of the media in its natural size.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height"><c>HTMLVideoElement.videoHeight</c> &amp;gt; About intrinsic width and height</see> for more details.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value specifying the intrinsic width of the video in CSS pixels.<br/>If the element's <see cref="HTMLMediaElement.ReadyState"/> is <c>HTMLMediaElement.HAVE_NOTHING</c>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</value>
+</HTMLVideoElementVideoWidth>
+<HTMLVideoElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the <see cref="HTMLVideoElement"/> interface returns an integer that reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element, specifying the displayed width of the resource in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer or 0.</value>
+</HTMLVideoElementWidth>
 </docs>

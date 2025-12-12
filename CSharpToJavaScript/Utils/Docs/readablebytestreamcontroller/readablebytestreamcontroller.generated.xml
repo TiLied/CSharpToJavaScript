@@ -9,17 +9,6 @@ The <strong><c>ReadableByteStreamController</c></strong> interface of the <see h
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ReadableByteStreamController>
-<ReadableByteStreamControllerError>
-<summary>
-The <strong><c>error()</c></strong> method of the <see cref="ReadableByteStreamController"/> interface causes any future interactions with the associated stream to error with the specified reason.
-</summary>
-<remarks>
-<para>This is commonly called by an underlying source to surface an error from the interface where it gets its data (such as a file-read or socket error).<br/>It can also be called from elsewhere to trigger a stream error, for example if another part of the system that the stream relies on fails.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/error"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ReadableByteStreamControllerError>
 <ReadableByteStreamControllerByobRequest>
 <summary>
 The <strong><c>byobRequest</c></strong> read-only property of the <see cref="ReadableByteStreamController"/> interface returns the current BYOB request, or <c>null</c> if there are no pending requests.
@@ -31,17 +20,6 @@ The <strong><c>byobRequest</c></strong> read-only property of the <see cref="Rea
 </remarks>
 <value>A <see cref="ReadableStreamBYOBRequest"/> object instance, or <c>null</c>.</value>
 </ReadableByteStreamControllerByobRequest>
-<ReadableByteStreamControllerDesiredSize>
-<summary>
-The <strong><c>desiredSize</c></strong> read-only property of the <see cref="ReadableByteStreamController"/> interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
-</summary>
-<remarks>
-<para>The value is used by the stream to indicate a preferred flow rate to the underlying source.<br/>Sources that support throttling or pausing their inflow of data (not all do!) should control the inflow such that <c>desiredSize</c> of the stream buffer is kept positive and as close to zero as possible.</para><para>The <c>desiredSize</c> is used to apply <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> from downstream consumers.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/desiredSize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream has errored and <c>0</c> if it is closed.</value>
-</ReadableByteStreamControllerDesiredSize>
 <ReadableByteStreamControllerClose>
 <summary>
 The <strong><c>close()</c></strong> method of the <see cref="ReadableByteStreamController"/> interface closes the associated stream.
@@ -53,6 +31,17 @@ The <strong><c>close()</c></strong> method of the <see cref="ReadableByteStreamC
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ReadableByteStreamControllerClose>
+<ReadableByteStreamControllerDesiredSize>
+<summary>
+The <strong><c>desiredSize</c></strong> read-only property of the <see cref="ReadableByteStreamController"/> interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
+</summary>
+<remarks>
+<para>The value is used by the stream to indicate a preferred flow rate to the underlying source.<br/>Sources that support throttling or pausing their inflow of data (not all do!) should control the inflow such that <c>desiredSize</c> of the stream buffer is kept positive and as close to zero as possible.</para><para>The <c>desiredSize</c> is used to apply <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> from downstream consumers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/desiredSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream has errored and <c>0</c> if it is closed.</value>
+</ReadableByteStreamControllerDesiredSize>
 <ReadableByteStreamControllerEnqueue>
 <summary>
 The <strong><c>enqueue()</c></strong> method of the <see cref="ReadableByteStreamController"/> interface enqueues a given chunk on the associated readable byte stream (the chunk is transferred into the stream's internal queues).
@@ -64,4 +53,15 @@ The <strong><c>enqueue()</c></strong> method of the <see cref="ReadableByteStrea
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ReadableByteStreamControllerEnqueue>
+<ReadableByteStreamControllerError>
+<summary>
+The <strong><c>error()</c></strong> method of the <see cref="ReadableByteStreamController"/> interface causes any future interactions with the associated stream to error with the specified reason.
+</summary>
+<remarks>
+<para>This is commonly called by an underlying source to surface an error from the interface where it gets its data (such as a file-read or socket error).<br/>It can also be called from elsewhere to trigger a stream error, for example if another part of the system that the stream relies on fails.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ReadableByteStreamControllerError>
 </docs>

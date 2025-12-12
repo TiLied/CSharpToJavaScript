@@ -9,16 +9,6 @@ The <strong><c>RTCSessionDescription</c></strong> interface describes one end of
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSessionDescription>
-<RTCSessionDescriptionType>
-<summary>
-The property <strong><c>RTCSessionDescription.type</c></strong> is a read-only<br/>string value which describes the description&amp;apos;s type.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The possible values are:</value>
-</RTCSessionDescriptionType>
 <RTCSessionDescriptionRTCSessionDescription>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>RTCSessionDescription()</c></strong> constructor creates a new<br/><see cref="RTCSessionDescription"/> with its properties initialized as described in the<br/>specified object.
@@ -49,4 +39,14 @@ The <strong><c>RTCSessionDescription.toJSON()</c></strong> method generates a<br
 </remarks>
 <returns>A <see cref="JSON"/> object containing the following properties:</returns>
 </RTCSessionDescriptionToJSON>
+<RTCSessionDescriptionType>
+<summary>
+The property <strong><c>RTCSessionDescription.type</c></strong> is a read-only<br/>string value which describes the description&amp;apos;s type.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</RTCSessionDescriptionType>
 </docs>

@@ -8,184 +8,6 @@ The <strong><c>ElementInternals</c></strong> interface of the <see href="https:/
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementInternals>
-<ElementInternalsAriaModal>
-<summary>
-The <strong><c>ariaModal</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal"><c>aria-modal</c></see> attribute, which indicates whether an element is modal when displayed.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role">ARIA: dialog role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaModal"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaModal>
-<ElementInternalsWillValidate>
-<summary>
-The <strong><c>willValidate</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns <c>true</c> if the element is a submittable element that is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
-</summary>
-<remarks>
-<para>Elements that are barred from being candidates for constraint validation include those that have the attributes: <c>disabled</c>, <c>hidden</c> or <c>readonly</c>, input elements of <c>type=button</c> or <c>type=reset</c>, or any element that is a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see> element or has a <c>&amp;lt;datalist&amp;gt;</c> element ancestor.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value><c>true</c> if the element is a candidate for constraint validation, otherwise <c>false</c>.</value>
-</ElementInternalsWillValidate>
-<ElementInternalsValidity>
-<summary>
-The <strong><c>validity</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns a <see cref="ValidityState"/> object which represents the different validity states the element can be in, with respect to constraint validation.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ValidityState"/> object.</value>
-</ElementInternalsValidity>
-<ElementInternalsAriaColIndexText>
-<summary>
-The <strong><c>ariaColIndexText</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext"><c>aria-colindextext</c></see> attribute, which defines a human readable text alternative of aria-colindex.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColIndexText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaColIndexText>
-<ElementInternalsAriaOrientation>
-<summary>
-The <strong><c>ariaOrientation</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation"><c>aria-orientation</c></see> attribute, which indicates whether the element&amp;apos;s orientation is horizontal, vertical, or unknown/ambiguous.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaOrientation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaOrientation>
-<ElementInternalsAriaBrailleRoleDescription>
-<summary>
-The <strong><c>ariaBrailleRoleDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> attribute, which defines the ARIA braille role description of the element.
-</summary>
-<remarks>
-<para>This property may be used to provide an abbreviated version of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription"><c>aria-roledescription</c></see> value.<br/>It should only be used if <c>aria-roledescription</c> is present and in the rare case where it is too verbose for braille.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> contains additional information about when the property should be set.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">ARIA roles</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBrailleRoleDescription"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string that is intended to be converted into braille.</value>
-</ElementInternalsAriaBrailleRoleDescription>
-<ElementInternalsAriaMultiLine>
-<summary>
-The <strong><c>ariaMultiLine</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline"><c>aria-multiline</c></see> attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaMultiLine"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaMultiLine>
-<ElementInternalsAriaBusy>
-<summary>
-The <strong><c>ariaBusy</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy"><c>aria-busy</c></see> attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBusy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaBusy>
-<ElementInternalsAriaSetSize>
-<summary>
-The <strong><c>ariaSetSize</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize"><c>aria-setsize</c></see> attribute, which defines the number of items in the current set of listitems or treeitems.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role">ARIA: tab role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaSetSize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing an integer.</value>
-</ElementInternalsAriaSetSize>
-<ElementInternalsAriaSort>
-<summary>
-The <strong><c>ariaSort</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort"><c>aria-sort</c></see> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaSort"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaSort>
-<ElementInternalsAriaChecked>
-<summary>
-The <strong><c>ariaChecked</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked"><c>aria-checked</c></see> attribute, which indicates the current &amp;quot;checked&amp;quot; state of checkboxes, radio buttons, and other widgets that have a checked state.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role">ARIA: checkbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaChecked"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaChecked>
-<ElementInternalsAriaExpanded>
-<summary>
-The <strong><c>ariaExpanded</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded"><c>aria-expanded</c></see> attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaExpanded"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaExpanded>
-<ElementInternalsAriaAtomic>
-<summary>
-The <strong><c>ariaAtomic</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic"><c>aria-atomic</c></see> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <c>aria-relevant</c> attribute.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaAtomic"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaAtomic>
-<ElementInternalsSetValidity>
-<summary>
-The <strong><c>setValidity()</c></strong> method of the <see cref="ElementInternals"/> interface sets the validity of the element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/setValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</ElementInternalsSetValidity>
-<ElementInternalsAriaRequired>
-<summary>
-The <strong><c>ariaRequired</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required"><c>aria-required</c></see> attribute, which indicates that user input is required on the element before a form may be submitted.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRequired"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaRequired>
-<ElementInternalsAriaPlaceholder>
-<summary>
-The <strong><c>ariaPlaceholder</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder"><c>aria-placeholder</c></see> attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPlaceholder"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaPlaceholder>
-<ElementInternalsAriaControlsElements>
-<summary>
-The <strong><c>ariaControlsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that are controlled by the element it is applied to.<br/>For example, this might be set on a <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</see> to indicate the element that it pops up, or on a <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><c>scrollbar</c></see> to indicate the ID of the element it controls.
-</summary>
-<remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls"><c>aria-controls</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls"><c>aria-controls</c></see> attribute<br/>-<see cref="Element.AriaControlsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaControlsElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of subclasses of <see cref="HTMLElement"/>, representing the elements that are controlled by this element.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaControlsElements>
 <ElementInternalsAriaActiveDescendantElement>
 <summary>
 The <strong><c>ariaActiveDescendantElement</c></strong> property of the <see cref="ElementInternals"/> interface represents the current active element when focus is on a <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role"><c>composite</c></see> widget, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><c>combobox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role"><c>textbox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><c>group</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><c>application</c></see>.
@@ -197,6 +19,135 @@ The <strong><c>ariaActiveDescendantElement</c></strong> property of the <see cre
 </remarks>
 <value>An subclass of <see cref="HTMLElement"/> that represents the active descendant, or <c>null</c> if there is no active descendant.</value>
 </ElementInternalsAriaActiveDescendantElement>
+<ElementInternalsAriaAtomic>
+<summary>
+The <strong><c>ariaAtomic</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic"><c>aria-atomic</c></see> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <c>aria-relevant</c> attribute.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaAtomic"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaAtomic>
+<ElementInternalsAriaAutoComplete>
+<summary>
+The <strong><c>ariaAutoComplete</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute, which indicates whether inputting text could trigger display of one or more predictions of the user&amp;apos;s intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaAutoComplete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaAutoComplete>
+<ElementInternalsAriaBrailleLabel>
+<summary>
+The <strong><c>ariaBrailleLabel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel"><c>aria-braillelabel</c></see> attribute, which defines the ARIA braille label of the element.
+</summary>
+<remarks>
+<para>This element label may be used by assistive technologies that can present content in braille, but should only be set if a braille-specific label would improve the user experience.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel"><c>aria-braillelabel</c></see> contains additional information about when the property should be set.</para>
+<para>-<see cref="ElementInternals.AriaBrailleRoleDescription"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBrailleLabel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that is intended to be converted into braille.</value>
+</ElementInternalsAriaBrailleLabel>
+<ElementInternalsAriaBrailleRoleDescription>
+<summary>
+The <strong><c>ariaBrailleRoleDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> attribute, which defines the ARIA braille role description of the element.
+</summary>
+<remarks>
+<para>This property may be used to provide an abbreviated version of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription"><c>aria-roledescription</c></see> value.<br/>It should only be used if <c>aria-roledescription</c> is present and in the rare case where it is too verbose for braille.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> contains additional information about when the property should be set.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">ARIA roles</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBrailleRoleDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that is intended to be converted into braille.</value>
+</ElementInternalsAriaBrailleRoleDescription>
+<ElementInternalsAriaBusy>
+<summary>
+The <strong><c>ariaBusy</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy"><c>aria-busy</c></see> attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBusy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaBusy>
+<ElementInternalsAriaChecked>
+<summary>
+The <strong><c>ariaChecked</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked"><c>aria-checked</c></see> attribute, which indicates the current &amp;quot;checked&amp;quot; state of checkboxes, radio buttons, and other widgets that have a checked state.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role">ARIA: checkbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaChecked"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaChecked>
+<ElementInternalsAriaColCount>
+<summary>
+The <strong><c>ariaColCount</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount"><c>aria-colcount</c></see> attribute, which defines the number of columns in a table, grid, or treegrid.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaColCount>
+<ElementInternalsAriaColIndex>
+<summary>
+The <strong><c>ariaColIndex</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex"><c>aria-colindex</c></see> attribute, which defines an element&amp;apos;s column index or position with respect to the total number of columns within a table, grid, or treegrid.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains an integer.</value>
+</ElementInternalsAriaColIndex>
+<ElementInternalsAriaColIndexText>
+<summary>
+The <strong><c>ariaColIndexText</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext"><c>aria-colindextext</c></see> attribute, which defines a human readable text alternative of aria-colindex.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColIndexText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaColIndexText>
+<ElementInternalsAriaColSpan>
+<summary>
+The <strong><c>ariaColSpan</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan"><c>aria-colspan</c></see> attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColSpan"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains an integer.</value>
+</ElementInternalsAriaColSpan>
+<ElementInternalsAriaControlsElements>
+<summary>
+The <strong><c>ariaControlsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that are controlled by the element it is applied to.<br/>For example, this might be set on a <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</see> to indicate the element that it pops up, or on a <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><c>scrollbar</c></see> to indicate the ID of the element it controls.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls"><c>aria-controls</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls"><c>aria-controls</c></see> attribute<br/>-<see cref="Element.AriaControlsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaControlsElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of subclasses of <see cref="HTMLElement"/>, representing the elements that are controlled by this element.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaControlsElements>
+<ElementInternalsAriaCurrent>
+<summary>
+The <strong><c>ariaCurrent</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current"><c>aria-current</c></see> attribute, which indicates the element that represents the current item within a container or set of related elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaCurrent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaCurrent>
 <ElementInternalsAriaDescribedByElements>
 <summary>
 The <strong><c>ariaDescribedByElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an accessible description for the element it is applied to.<br/>The accessible description is similar to the accessible label (see <see cref="ElementariaLabelledByElements"/>), but provides more verbose information.
@@ -208,6 +159,142 @@ The <strong><c>ariaDescribedByElements</c></strong> property of the <see cref="E
 </remarks>
 <value>An array of subclasses of <see cref="HTMLElement"/>.<br/>The inner text of these elements can be joined with spaces to get the accessible description.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
 </ElementInternalsAriaDescribedByElements>
+<ElementInternalsAriaDescription>
+<summary>
+The <strong><c>ariaDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description"><c>aria-description</c></see> attribute, which defines a string value that describes or annotates the current element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaDescription>
+<ElementInternalsAriaDetailsElements>
+<summary>
+The <strong><c>ariaDetailsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an accessible details for the element it is applied to.<br/>The accessible details are similar to the accessible description (see <see cref="ElementInternalsariaDescribedByElements"/>), but provides more verbose information.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see> attribute<br/>-<see cref="Element.AriaDetailsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDetailsElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of subclasses of <see cref="HTMLElement"/>.<br/>The inner text of these elements can be joined with spaces to get the accessible details.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaDetailsElements>
+<ElementInternalsAriaDisabled>
+<summary>
+The <strong><c>ariaDisabled</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled"><c>aria-disabled</c></see> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDisabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaDisabled>
+<ElementInternalsAriaErrorMessageElements>
+<summary>
+The <strong><c>ariaErrorMessageElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an error message for the element it is applied to.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see> attribute<br/>-<see cref="Element.AriaErrorMessageElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaErrorMessageElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of subclasses of <see cref="HTMLElement"/>.<br/>The inner text of these elements can be joined with spaces to get the error message.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaErrorMessageElements>
+<ElementInternalsAriaExpanded>
+<summary>
+The <strong><c>ariaExpanded</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded"><c>aria-expanded</c></see> attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaExpanded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaExpanded>
+<ElementInternalsAriaFlowToElements>
+<summary>
+The <strong><c>ariaFlowToElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an alternate reading order of content, overriding the general default reading order at the user's discretion.<br/>If just one element is provided this is the next element in the reading order.<br/>If multiple elements are provided, then each element represents a possible path that should be offered to the user for selection.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto"><c>aria-flowto</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto"><c>aria-flowto</c></see> attribute<br/>-<see cref="Element.AriaFlowToElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaFlowToElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of subclasses of <see cref="HTMLElement"/>.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaFlowToElements>
+<ElementInternalsAriaHasPopup>
+<summary>
+The <strong><c>ariaHasPopup</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup"><c>aria-haspopup</c></see> attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaHasPopup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaHasPopup>
+<ElementInternalsAriaHidden>
+<summary>
+The <strong><c>ariaHidden</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden"><c>aria-hidden</c></see> attribute, which indicates whether the element is exposed to an accessibility API.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaHidden"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaHidden>
+<ElementInternalsAriaInvalid>
+<summary>
+The <strong><c>ariaInvalid</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid"><c>aria-invalid</c></see> attribute. Relevant for the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><c>application</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>checkbox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><c>combobox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role"><c>gridcell</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><c>listbox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><c>radiogroup</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><c>slider</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><c>spinbutton</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role"><c>textbox</c></see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><c>tree</c></see> roles, it indicates to the accessibility API whether the entered value does not conform to the format expected by the application.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting ARIA attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see cref="ElementInternals.AriaRequired"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required"><c>aria-required</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaInvalid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaInvalid>
+<ElementInternalsAriaKeyShortcuts>
+<summary>
+The <strong><c>ariaKeyShortcuts</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts"><c>aria-keyshortcuts</c></see> attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaKeyShortcuts>
+<ElementInternalsAriaLabel>
+<summary>
+The <strong><c>ariaLabel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label"><c>aria-label</c></see> attribute, which defines a string value that labels the current Element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLabel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaLabel>
+<ElementInternalsAriaLabelledByElements>
+<summary>
+The <strong><c>ariaLabelledByElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an accessible name for the element it is applied to.
+</summary>
+<remarks>
+<para>The property is primarily intended to provide a label for elements that don&amp;apos;t have a standard method for defining their accessible name.<br/>For example, this might be used to name a generic container element, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">span</see>, or a grouping of elements, such as an image with a slider that can be used to change its opacity.<br/>The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby"><c>aria-labelledby</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby"><c>aria-labelledby</c></see> attribute<br/>-<see cref="Element.AriaLabelledByElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLabelledByElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of elements.<br/>The inner text of these elements can be joined with spaces to get the accessible name.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaLabelledByElements>
+<ElementInternalsAriaLevel>
+<summary>
+The <strong><c>ariaLevel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level"><c>aria-level</c></see> attribute, which defines the hierarchical level of an element within a structure.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role">ARIA: heading role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLevel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing an integer.</value>
+</ElementInternalsAriaLevel>
 <ElementInternalsAriaLive>
 <summary>
 The <strong><c>ariaLive</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions"><c>aria-live</c></see> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
@@ -218,16 +305,157 @@ The <strong><c>ariaLive</c></strong> property of the <see cref="ElementInternals
 </remarks>
 <value>A string with one of the following values:</value>
 </ElementInternalsAriaLive>
-<ElementInternalsAriaAutoComplete>
+<ElementInternalsAriaModal>
 <summary>
-The <strong><c>ariaAutoComplete</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute, which indicates whether inputting text could trigger display of one or more predictions of the user&amp;apos;s intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+The <strong><c>ariaModal</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal"><c>aria-modal</c></see> attribute, which indicates whether an element is modal when displayed.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaAutoComplete"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role">ARIA: dialog role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaModal"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string with one of the following values:</value>
-</ElementInternalsAriaAutoComplete>
+</ElementInternalsAriaModal>
+<ElementInternalsAriaMultiLine>
+<summary>
+The <strong><c>ariaMultiLine</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline"><c>aria-multiline</c></see> attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaMultiLine"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaMultiLine>
+<ElementInternalsAriaMultiSelectable>
+<summary>
+The <strong><c>ariaMultiSelectable</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable"><c>aria-multiselectable</c></see> attribute, which indicates that the user may select more than one item from the current selectable descendants.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">ARIA: listbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaMultiSelectable>
+<ElementInternalsAriaOrientation>
+<summary>
+The <strong><c>ariaOrientation</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation"><c>aria-orientation</c></see> attribute, which indicates whether the element&amp;apos;s orientation is horizontal, vertical, or unknown/ambiguous.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaOrientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaOrientation>
+<ElementInternalsAriaOwnsElements>
+<summary>
+The <strong><c>ariaOwnsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that define a visual, functional, or contextual relationship between a parent element that it is applied to, and its child elements.<br/>This is used when the shadow DOM hierarchy cannot be used to represent the relationship, and it would not otherwise be available to assistive technology,
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns"><c>aria-owns</c></see> topic contains additional information about how the attribute and property should be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns"><c>aria-owns</c></see> attribute<br/>-<see cref="Element.AriaOwnsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaOwnsElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of subclasses of <see cref="HTMLElement"/>.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
+</ElementInternalsAriaOwnsElements>
+<ElementInternalsAriaPlaceholder>
+<summary>
+The <strong><c>ariaPlaceholder</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder"><c>aria-placeholder</c></see> attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPlaceholder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaPlaceholder>
+<ElementInternalsAriaPosInSet>
+<summary>
+The <strong><c>ariaPosInSet</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset"><c>aria-posinset</c></see> attribute, which defines an element&amp;apos;s number or position in the current set of listitems or treeitems.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPosInSet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing an integer.</value>
+</ElementInternalsAriaPosInSet>
+<ElementInternalsAriaPressed>
+<summary>
+The <strong><c>ariaPressed</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed"><c>aria-pressed</c></see> attribute, which indicates the current &amp;quot;pressed&amp;quot; state of toggle buttons.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">ARIA: button role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPressed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaPressed>
+<ElementInternalsAriaReadOnly>
+<summary>
+The <strong><c>ariaReadOnly</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly"><c>aria-readonly</c></see> attribute, which indicates that the element is not editable, but is otherwise operable.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaReadOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaReadOnly>
+<ElementInternalsAriaRelevant>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>ariaRelevant</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant"><c>aria-relevant</c></see> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <c>aria-live</c> region are relevant and should be announced.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRelevant"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one or more of the following values, space separated:</value>
+</ElementInternalsAriaRelevant>
+<ElementInternalsAriaRequired>
+<summary>
+The <strong><c>ariaRequired</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required"><c>aria-required</c></see> attribute, which indicates that user input is required on the element before a form may be submitted.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRequired"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaRequired>
+<ElementInternalsAriaRoleDescription>
+<summary>
+The <strong><c>ariaRoleDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription"><c>aria-roledescription</c></see> attribute, which defines a human-readable, author-localized description for the role of an element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role">ARIA: application role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRoleDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ElementInternalsAriaRoleDescription>
+<ElementInternalsAriaRowCount>
+<summary>
+The <strong><c>ariaRowCount</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount"><c>aria-rowcount</c></see> attribute, which defines the total number of rows in a table, grid, or treegrid.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRowCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains an integer.</value>
+</ElementInternalsAriaRowCount>
+<ElementInternalsAriaRowIndex>
+<summary>
+The <strong><c>ariaRowIndex</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex"><c>aria-rowindex</c></see> attribute, which defines an element&amp;apos;s row index or position with respect to the total number of rows within a table, grid, or treegrid.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRowIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains an integer.</value>
+</ElementInternalsAriaRowIndex>
 <ElementInternalsAriaRowIndexText>
 <summary>
 The <strong><c>ariaRowIndexText</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext"><c>aria-rowindextext</c></see> attribute, which defines a human readable text alternative of aria-rowindex.
@@ -250,284 +478,6 @@ The <strong><c>ariaRowSpan</c></strong> property of the <see cref="ElementIntern
 </remarks>
 <value>A string which contains an integer.</value>
 </ElementInternalsAriaRowSpan>
-<ElementInternalsAriaDisabled>
-<summary>
-The <strong><c>ariaDisabled</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled"><c>aria-disabled</c></see> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDisabled"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaDisabled>
-<ElementInternalsAriaColIndex>
-<summary>
-The <strong><c>ariaColIndex</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex"><c>aria-colindex</c></see> attribute, which defines an element&amp;apos;s column index or position with respect to the total number of columns within a table, grid, or treegrid.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColIndex"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains an integer.</value>
-</ElementInternalsAriaColIndex>
-<ElementInternalsAriaBrailleLabel>
-<summary>
-The <strong><c>ariaBrailleLabel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel"><c>aria-braillelabel</c></see> attribute, which defines the ARIA braille label of the element.
-</summary>
-<remarks>
-<para>This element label may be used by assistive technologies that can present content in braille, but should only be set if a braille-specific label would improve the user experience.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel"><c>aria-braillelabel</c></see> contains additional information about when the property should be set.</para>
-<para>-<see cref="ElementInternals.AriaBrailleRoleDescription"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaBrailleLabel"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string that is intended to be converted into braille.</value>
-</ElementInternalsAriaBrailleLabel>
-<ElementInternalsAriaLevel>
-<summary>
-The <strong><c>ariaLevel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level"><c>aria-level</c></see> attribute, which defines the hierarchical level of an element within a structure.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role">ARIA: heading role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLevel"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing an integer.</value>
-</ElementInternalsAriaLevel>
-<ElementInternalsForm>
-<summary>
-The <strong><c>form</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see cref="HTMLFormElement"/> associated with this element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/form"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="HTMLFormElement"/>.</value>
-</ElementInternalsForm>
-<ElementInternalsAriaInvalid>
-<summary>
-The <strong><c>ariaInvalid</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid"><c>aria-invalid</c></see> attribute. Relevant for the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><c>application</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>checkbox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><c>combobox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role"><c>gridcell</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><c>listbox</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><c>radiogroup</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><c>slider</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><c>spinbutton</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role"><c>textbox</c></see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><c>tree</c></see> roles, it indicates to the accessibility API whether the entered value does not conform to the format expected by the application.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting ARIA attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see cref="ElementInternals.AriaRequired"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required"><c>aria-required</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaInvalid"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaInvalid>
-<ElementInternalsAriaReadOnly>
-<summary>
-The <strong><c>ariaReadOnly</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly"><c>aria-readonly</c></see> attribute, which indicates that the element is not editable, but is otherwise operable.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">ARIA: textbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaReadOnly"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaReadOnly>
-<ElementInternalsAriaRelevant>
-<summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>ariaRelevant</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant"><c>aria-relevant</c></see> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <c>aria-live</c> region are relevant and should be announced.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRelevant"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing one or more of the following values, space separated:</value>
-</ElementInternalsAriaRelevant>
-<ElementInternalsAriaValueNow>
-<summary>
-The <strong><c>ariaValueNow</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow"><c>aria-valuenow</c></see> attribute, which defines the current value for a range widget.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueNow"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains a number.</value>
-</ElementInternalsAriaValueNow>
-<ElementInternalsRole>
-<summary>
-The <strong><c>role</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">WAI-ARIA role</see> for the element. For example, a checkbox might have <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>role=&amp;quot;checkbox&amp;quot;</c></see>. It reflects the <c>role</c> attribute; it does not return the element&amp;apos;s implicit ARIA role, if any, unless explicitly set.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/role"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains an ARIA role. A full list of ARIA roles can be found on the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques">ARIA techniques page</see>.</value>
-</ElementInternalsRole>
-<ElementInternalsAriaMultiSelectable>
-<summary>
-The <strong><c>ariaMultiSelectable</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable"><c>aria-multiselectable</c></see> attribute, which indicates that the user may select more than one item from the current selectable descendants.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">ARIA: listbox role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaMultiSelectable>
-<ElementInternalsAriaDetailsElements>
-<summary>
-The <strong><c>ariaDetailsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an accessible details for the element it is applied to.<br/>The accessible details are similar to the accessible description (see <see cref="ElementInternalsariaDescribedByElements"/>), but provides more verbose information.
-</summary>
-<remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see> attribute<br/>-<see cref="Element.AriaDetailsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDetailsElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of subclasses of <see cref="HTMLElement"/>.<br/>The inner text of these elements can be joined with spaces to get the accessible details.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaDetailsElements>
-<ElementInternalsAriaRowIndex>
-<summary>
-The <strong><c>ariaRowIndex</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex"><c>aria-rowindex</c></see> attribute, which defines an element&amp;apos;s row index or position with respect to the total number of rows within a table, grid, or treegrid.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRowIndex"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains an integer.</value>
-</ElementInternalsAriaRowIndex>
-<ElementInternalsAriaRoleDescription>
-<summary>
-The <strong><c>ariaRoleDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription"><c>aria-roledescription</c></see> attribute, which defines a human-readable, author-localized description for the role of an element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role">ARIA: application role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRoleDescription"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaRoleDescription>
-<ElementInternalsAriaColSpan>
-<summary>
-The <strong><c>ariaColSpan</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan"><c>aria-colspan</c></see> attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColSpan"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains an integer.</value>
-</ElementInternalsAriaColSpan>
-<ElementInternalsAriaColCount>
-<summary>
-The <strong><c>ariaColCount</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount"><c>aria-colcount</c></see> attribute, which defines the number of columns in a table, grid, or treegrid.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaColCount"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaColCount>
-<ElementInternalsAriaPressed>
-<summary>
-The <strong><c>ariaPressed</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed"><c>aria-pressed</c></see> attribute, which indicates the current &amp;quot;pressed&amp;quot; state of toggle buttons.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">ARIA: button role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPressed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaPressed>
-<ElementInternalsShadowRoot>
-<summary>
-The <strong><c>shadowRoot</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see cref="ShadowRoot"/> for this element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/shadowRoot"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ShadowRoot"/> if the element has a shadow root, otherwise <c>null</c>.</value>
-</ElementInternalsShadowRoot>
-<ElementInternalsAriaDescription>
-<summary>
-The <strong><c>ariaDescription</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description"><c>aria-description</c></see> attribute, which defines a string value that describes or annotates the current element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDescription"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaDescription>
-<ElementInternalsAriaValueText>
-<summary>
-The <strong><c>ariaValueText</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext"><c>aria-valuetext</c></see> attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueText"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</ElementInternalsAriaValueText>
-<ElementInternalsAriaHasPopup>
-<summary>
-The <strong><c>ariaHasPopup</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup"><c>aria-haspopup</c></see> attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaHasPopup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaHasPopup>
-<ElementInternalsAriaFlowToElements>
-<summary>
-The <strong><c>ariaFlowToElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an alternate reading order of content, overriding the general default reading order at the user's discretion.<br/>If just one element is provided this is the next element in the reading order.<br/>If multiple elements are provided, then each element represents a possible path that should be offered to the user for selection.
-</summary>
-<remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto"><c>aria-flowto</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto"><c>aria-flowto</c></see> attribute<br/>-<see cref="Element.AriaFlowToElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaFlowToElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of subclasses of <see cref="HTMLElement"/>.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaFlowToElements>
-<ElementInternalsSetFormValue>
-<summary>
-The <strong><c>setFormValue()</c></strong> method of the <see cref="ElementInternals"/> interface sets the element's submission value and state, communicating these to the user agent.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/setFormValue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Undefined.</returns>
-</ElementInternalsSetFormValue>
-<ElementInternalsAriaPosInSet>
-<summary>
-The <strong><c>ariaPosInSet</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset"><c>aria-posinset</c></see> attribute, which defines an element&amp;apos;s number or position in the current set of listitems or treeitems.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaPosInSet"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing an integer.</value>
-</ElementInternalsAriaPosInSet>
-<ElementInternalsStates>
-<summary>
-The <strong><c>states</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns a <see cref="CustomStateSet"/> representing the possible states of the custom element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/states"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="CustomStateSet"/> which is a {{jsxref("Set")}} of strings.</value>
-</ElementInternalsStates>
-<ElementInternalsCheckValidity>
-<summary>
-The <strong><c>checkValidity()</c></strong> method of the <see cref="ElementInternals"/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it.
-</summary>
-<remarks>
-<para>If <c>checkValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/checkValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value, <c>true</c> if the element meets all validation constraints.</returns>
-</ElementInternalsCheckValidity>
-<ElementInternalsReportValidity>
-<summary>
-The <strong><c>reportValidity()</c></strong> method of the <see cref="ElementInternals"/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it.
-</summary>
-<remarks>
-<para>If <c>reportValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para><para>This method behaves in a similar way to <see cref="ElementInternals.CheckValidity"/>, however it additionally sends the value of <see cref="ElementInternals.ValidationMessage"/> to the user agent for display.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/reportValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value, <c>true</c> if the element meets all validation constraints.</returns>
-</ElementInternalsReportValidity>
 <ElementInternalsAriaSelected>
 <summary>
 The <strong><c>ariaSelected</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected"><c>aria-selected</c></see> attribute, which indicates the current &amp;quot;selected&amp;quot; state of elements that have a selected state.
@@ -539,88 +489,28 @@ The <strong><c>ariaSelected</c></strong> property of the <see cref="ElementInter
 </remarks>
 <value>A string with one of the following values:</value>
 </ElementInternalsAriaSelected>
-<ElementInternalsAriaHidden>
+<ElementInternalsAriaSetSize>
 <summary>
-The <strong><c>ariaHidden</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden"><c>aria-hidden</c></see> attribute, which indicates whether the element is exposed to an accessibility API.
+The <strong><c>ariaSetSize</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize"><c>aria-setsize</c></see> attribute, which defines the number of items in the current set of listitems or treeitems.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaHidden"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role">ARIA: tab role</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaSetSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaHidden>
-<ElementInternalsAriaValueMin>
+<value>A string containing an integer.</value>
+</ElementInternalsAriaSetSize>
+<ElementInternalsAriaSort>
 <summary>
-The <strong><c>ariaValueMin</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin"><c>aria-valuemin</c></see> attribute, which defines the minimum allowed value for a range widget.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueMin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which contains a number.</value>
-</ElementInternalsAriaValueMin>
-<ElementInternalsAriaLabelledByElements>
-<summary>
-The <strong><c>ariaLabelledByElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an accessible name for the element it is applied to.
-</summary>
-<remarks>
-<para>The property is primarily intended to provide a label for elements that don&amp;apos;t have a standard method for defining their accessible name.<br/>For example, this might be used to name a generic container element, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">span</see>, or a grouping of elements, such as an image with a slider that can be used to change its opacity.<br/>The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby"><c>aria-labelledby</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby"><c>aria-labelledby</c></see> attribute<br/>-<see cref="Element.AriaLabelledByElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLabelledByElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of elements.<br/>The inner text of these elements can be joined with spaces to get the accessible name.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaLabelledByElements>
-<ElementInternalsAriaOwnsElements>
-<summary>
-The <strong><c>ariaOwnsElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that define a visual, functional, or contextual relationship between a parent element that it is applied to, and its child elements.<br/>This is used when the shadow DOM hierarchy cannot be used to represent the relationship, and it would not otherwise be available to assistive technology,
-</summary>
-<remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns"><c>aria-owns</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns"><c>aria-owns</c></see> attribute<br/>-<see cref="Element.AriaOwnsElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaOwnsElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of subclasses of <see cref="HTMLElement"/>.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaOwnsElements>
-<ElementInternalsAriaErrorMessageElements>
-<summary>
-The <strong><c>ariaErrorMessageElements</c></strong> property of the <see cref="ElementInternals"/> interface is an array containing the element (or elements) that provide an error message for the element it is applied to.
-</summary>
-<remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see> topic contains additional information about how the attribute and property should be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage"><c>aria-errormessage</c></see> attribute<br/>-<see cref="Element.AriaErrorMessageElements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaErrorMessageElements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An array of subclasses of <see cref="HTMLElement"/>.<br/>The inner text of these elements can be joined with spaces to get the error message.When read, the returned array is a static and read-only.<br/>When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.</value>
-</ElementInternalsAriaErrorMessageElements>
-<ElementInternalsLabels>
-<summary>
-The <strong><c>labels</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the labels associated with the element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/labels"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="NodeList"/> containing all of the label elements associated with this element.</value>
-</ElementInternalsLabels>
-<ElementInternalsAriaRowCount>
-<summary>
-The <strong><c>ariaRowCount</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount"><c>aria-rowcount</c></see> attribute, which defines the total number of rows in a table, grid, or treegrid.
+The <strong><c>ariaSort</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort"><c>aria-sort</c></see> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role">ARIA: table role</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaRowCount"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaSort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which contains an integer.</value>
-</ElementInternalsAriaRowCount>
-<ElementInternalsValidationMessage>
-<summary>
-The <strong><c>validationMessage</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the validation message for the element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validationMessage"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing the validation message of this element.</value>
-</ElementInternalsValidationMessage>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaSort>
 <ElementInternalsAriaValueMax>
 <summary>
 The <strong><c>ariaValueMax</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax"><c>aria-valuemax</c></see> attribute, which defines the maximum allowed value for a range widget.
@@ -631,35 +521,145 @@ The <strong><c>ariaValueMax</c></strong> property of the <see cref="ElementInter
 </remarks>
 <value>A string which contains a number.</value>
 </ElementInternalsAriaValueMax>
-<ElementInternalsAriaCurrent>
+<ElementInternalsAriaValueMin>
 <summary>
-The <strong><c>ariaCurrent</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current"><c>aria-current</c></see> attribute, which indicates the element that represents the current item within a container or set of related elements.
+The <strong><c>ariaValueMin</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin"><c>aria-valuemin</c></see> attribute, which defines the minimum allowed value for a range widget.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para>-<see href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaCurrent"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueMin"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string with one of the following values:</value>
-</ElementInternalsAriaCurrent>
-<ElementInternalsAriaKeyShortcuts>
+<value>A string which contains a number.</value>
+</ElementInternalsAriaValueMin>
+<ElementInternalsAriaValueNow>
 <summary>
-The <strong><c>ariaKeyShortcuts</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts"><c>aria-keyshortcuts</c></see> attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
+The <strong><c>ariaValueNow</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow"><c>aria-valuenow</c></see> attribute, which defines the current value for a range widget.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueNow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains a number.</value>
+</ElementInternalsAriaValueNow>
+<ElementInternalsAriaValueText>
+<summary>
+The <strong><c>ariaValueText</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext"><c>aria-valuetext</c></see> attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaValueText"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</ElementInternalsAriaKeyShortcuts>
-<ElementInternalsAriaLabel>
+</ElementInternalsAriaValueText>
+<ElementInternalsCheckValidity>
 <summary>
-The <strong><c>ariaLabel</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label"><c>aria-label</c></see> attribute, which defines a string value that labels the current Element.
+The <strong><c>checkValidity()</c></strong> method of the <see cref="ElementInternals"/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLabel"> <em>See also on MDN</em> </seealso></para>
+<para>If <c>checkValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/checkValidity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</ElementInternalsAriaLabel>
+<returns>A boolean value, <c>true</c> if the element meets all validation constraints.</returns>
+</ElementInternalsCheckValidity>
+<ElementInternalsForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see cref="HTMLFormElement"/> associated with this element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/>.</value>
+</ElementInternalsForm>
+<ElementInternalsLabels>
+<summary>
+The <strong><c>labels</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the labels associated with the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing all of the label elements associated with this element.</value>
+</ElementInternalsLabels>
+<ElementInternalsReportValidity>
+<summary>
+The <strong><c>reportValidity()</c></strong> method of the <see cref="ElementInternals"/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it.
+</summary>
+<remarks>
+<para>If <c>reportValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para><para>This method behaves in a similar way to <see cref="ElementInternals.CheckValidity"/>, however it additionally sends the value of <see cref="ElementInternals.ValidationMessage"/> to the user agent for display.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/reportValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value, <c>true</c> if the element meets all validation constraints.</returns>
+</ElementInternalsReportValidity>
+<ElementInternalsRole>
+<summary>
+The <strong><c>role</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">WAI-ARIA role</see> for the element. For example, a checkbox might have <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>role=&amp;quot;checkbox&amp;quot;</c></see>. It reflects the <c>role</c> attribute; it does not return the element&amp;apos;s implicit ARIA role, if any, unless explicitly set.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/role"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains an ARIA role. A full list of ARIA roles can be found on the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques">ARIA techniques page</see>.</value>
+</ElementInternalsRole>
+<ElementInternalsSetFormValue>
+<summary>
+The <strong><c>setFormValue()</c></strong> method of the <see cref="ElementInternals"/> interface sets the element's submission value and state, communicating these to the user agent.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/setFormValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</ElementInternalsSetFormValue>
+<ElementInternalsSetValidity>
+<summary>
+The <strong><c>setValidity()</c></strong> method of the <see cref="ElementInternals"/> interface sets the validity of the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/setValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementInternalsSetValidity>
+<ElementInternalsShadowRoot>
+<summary>
+The <strong><c>shadowRoot</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see cref="ShadowRoot"/> for this element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/shadowRoot"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ShadowRoot"/> if the element has a shadow root, otherwise <c>null</c>.</value>
+</ElementInternalsShadowRoot>
+<ElementInternalsStates>
+<summary>
+The <strong><c>states</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns a <see cref="CustomStateSet"/> representing the possible states of the custom element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/states"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CustomStateSet"/> which is a {{jsxref("Set")}} of strings.</value>
+</ElementInternalsStates>
+<ElementInternalsValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the validation message for the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the validation message of this element.</value>
+</ElementInternalsValidationMessage>
+<ElementInternalsValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns a <see cref="ValidityState"/> object which represents the different validity states the element can be in, with respect to constraint validation.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</ElementInternalsValidity>
+<ElementInternalsWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns <c>true</c> if the element is a submittable element that is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>Elements that are barred from being candidates for constraint validation include those that have the attributes: <c>disabled</c>, <c>hidden</c> or <c>readonly</c>, input elements of <c>type=button</c> or <c>type=reset</c>, or any element that is a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see> element or has a <c>&amp;lt;datalist&amp;gt;</c> element ancestor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the element is a candidate for constraint validation, otherwise <c>false</c>.</value>
+</ElementInternalsWillValidate>
 </docs>

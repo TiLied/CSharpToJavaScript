@@ -1,0 +1,50 @@
+<docs>
+<Web_Workers_API>
+<summary>
+<strong>Web Workers</strong> makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</see><br/>-<see cref="Worker"/> interface<br/>-<see cref="SharedWorker"/> interface<br/>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_API>
+<Web_Workers_APIFunctions_and_classes_available_to_workers>
+<summary>
+In addition to the standard <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</see> set of functions (such as <see cref="String"/>, <see cref="Array"/>, <see cref="Object"/>, <see cref="JSON"/>, etc.), there are a variety of functions (and APIs) available in the workers. This article provides a list of those.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/>-<see cref="Worker"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_APIFunctions_and_classes_available_to_workers>
+<Web_Workers_APIStructured_clone_algorithm>
+<summary>
+The <strong>structured clone algorithm</strong> copies complex JavaScript objects.<br/>It is used internally when invoking <see cref="WorkerGlobalScope.StructuredClone"/>, to transfer data between <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</see> via <see cref="Worker.PostMessage"/>, storing objects with <see href="https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB">IndexedDB</see>, or copying objects for <see href="https://developer.mozilla.org#see_also">other APIs</see>.
+</summary>
+<remarks>
+<para>It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.</para>
+<para>-<see href="https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data">HTML Specification: Safe passing of structured data</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">Transferable objects</see><br/>-<see cref="Window.StructuredClone"/><br/>-<see cref="WorkerGlobalScope.StructuredClone"/><br/>-<see cref="Window.PostMessage"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_APIStructured_clone_algorithm>
+<Web_Workers_APITransferable_objects>
+<summary>
+<strong>Transferable objects</strong> are objects that own resources that can be <strong>transferred</strong> from one context to another, ensuring that the resources are only available in one context at a time.<br/>Following a transfer, the original object is no longer usable; it no longer points to the transferred resource, and any attempt to read or write the object will throw an exception.
+</summary>
+<remarks>
+<para><strong>Transferable objects</strong> are commonly used to share resources that can only be safely exposed to a single JavaScript thread at a time.<br/>For example, an <see cref="ArrayBuffer"/> is a transferable object that owns a block of memory.<br/>When such a buffer is transferred between threads, the associated memory resource is detached from the original buffer and attached to the buffer object created in the new thread.<br/>The buffer object in the original thread is no longer usable because it no longer owns a memory resource.</para><para>Transferring may also be used when creating deep copies of objects with <see cref="WorkerGlobalScope.StructuredClone"/>.<br/>Following the cloning operation, the transferred resources are moved rather than copied to the cloned object.</para><para>For both <c>postMessage()</c> and <c>structuredClone()</c>, transferred resources have to be attached to the data object, otherwise they would not be available on the receiving end, because the transferable array only indicates how certain resources should be sent, but does not actually send them (although they would always be detached).</para><para>The mechanism used to transfer an object&amp;apos;s resources depends on the object.<br/>For example, when an <see cref="ArrayBuffer"/> is transferred between threads, the memory resource that it points to is <strong>literally</strong> moved between contexts in a fast and efficient zero-copy operation.<br/>Other objects may be transferred by copying the associated resource and then deleting it from the old context.</para><para>Not all objects are transferable.<br/>A list of transferable objects is <see href="https://developer.mozilla.org#supported_objects">provided below</see>.</para>
+<para>-<see href="https://developer.chrome.com/blog/transferable-objects-lightning-fast/">Transferable Objects: Lightning Fast!</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</see><br/>-<see href="https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects">Transferable objects in the HTML specification</see><br/>-<see cref="DedicatedWorkerGlobalScope.PostMessage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_APITransferable_objects>
+<Web_Workers_APIUsing_web_workers>
+<summary>
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the <see cref="WorkerGlobalScopefetch"/> or <see cref="XMLHttpRequest"/> APIs. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+</summary>
+<remarks>
+<para>This article provides a detailed introduction to using web workers.</para>
+<para>-<see cref="Worker"/> interface<br/>-<see cref="SharedWorker"/> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</see><br/>-<see cref="OffscreenCanvas"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_APIUsing_web_workers>
+</docs>

@@ -7,6 +7,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </USBConfiguration>
+<USBConfigurationConfigurationName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurationName</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the name provided by the device<br/>to describe this configuration. This is equal to the value of the string descriptor with<br/>the index provided in the <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>iConfiguration</c></see><br/>field of the configuration descriptor defining this configuration.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/configurationName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The name provided by the device to describe this configuration.</value>
+</USBConfigurationConfigurationName>
 <USBConfigurationConfigurationValue>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurationValue</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the configuration value of this configuration. This is equal to the<br/><see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>bConfigurationValue</c></see> field of the configuration descriptor provided by the device defining this configuration.
@@ -25,15 +34,6 @@
 </remarks>
 <value>An array containing instances of <see cref="'USBInterface'"/>.</value>
 </USBConfigurationInterfaces>
-<USBConfigurationConfigurationName>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurationName</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the name provided by the device<br/>to describe this configuration. This is equal to the value of the string descriptor with<br/>the index provided in the <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>iConfiguration</c></see><br/>field of the configuration descriptor defining this configuration.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/configurationName"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The name provided by the device to describe this configuration.</value>
-</USBConfigurationConfigurationName>
 <USBConfigurationUSBConfiguration>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>USBConfiguration()</c></strong> constructor<br/>creates a new <see cref="USBConfiguration"/> object which contains information about<br/>the configuration on the provided USBDevice with the given configuration value.

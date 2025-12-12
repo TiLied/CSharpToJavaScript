@@ -8,27 +8,6 @@ The <strong><c>FileSystemEntry</c></strong> interface of the File and Directory 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FileSystemEntry>
-<FileSystemEntryRemove>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>remove()</c></strong> deletes the file<br/>or directory from the file system. Directories must be empty before they can be<br/>removed.
-</summary>
-<remarks>
-<para>To recursively remove a directory as well as all of its contents and its<br/>subdirectories, call <see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/>instead.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/remove"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</FileSystemEntryRemove>
-<FileSystemEntryFilesystem>
-<summary>
-The read-only <strong><c>filesystem</c></strong><br/>property of the <see cref="FileSystemEntry"/> interface contains a<br/><see cref="FileSystem"/> object that represents the file system on which the entry<br/>resides.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystem"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/filesystem"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="FileSystem"/> representing the file system on which the file or directory<br/>described by the <c>FileSystemEntry</c> is located.</value>
-</FileSystemEntryFilesystem>
 <FileSystemEntryCopyTo>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>copyTo()</c></strong> copies the file<br/>specified by the entry to a new location on the file system.
@@ -40,17 +19,16 @@ The read-only <strong><c>filesystem</c></strong><br/>property of the <see cref="
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </FileSystemEntryCopyTo>
-<FileSystemEntryMoveTo>
+<FileSystemEntryFilesystem>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>moveTo()</c></strong> moves the file<br/>specified by the entry to a new location on the file system, or renames the file if<br/>the destination directory is the same as the source.
+The read-only <strong><c>filesystem</c></strong><br/>property of the <see cref="FileSystemEntry"/> interface contains a<br/><see cref="FileSystem"/> object that represents the file system on which the entry<br/>resides.
 </summary>
 <remarks>
-<para>There are some typical<br/>restrictions on what you can do:</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry.CopyTo"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/moveTo"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystem"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/filesystem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</FileSystemEntryMoveTo>
+<value>A <see cref="FileSystem"/> representing the file system on which the file or directory<br/>described by the <c>FileSystemEntry</c> is located.</value>
+</FileSystemEntryFilesystem>
 <FileSystemEntryFullPath>
 <summary>
 The read-only <strong><c>fullPath</c></strong> property<br/>of the <see cref="FileSystemEntry"/> interface returns a string<br/>specifying the full, absolute path from the file system&amp;apos;s root to the file represented<br/>by the entry.
@@ -62,16 +40,26 @@ The read-only <strong><c>fullPath</c></strong> property<br/>of the <see cref="Fi
 </remarks>
 <value>A string indicating the entry&amp;apos;s full path.</value>
 </FileSystemEntryFullPath>
-<FileSystemEntryToURL>
+<FileSystemEntryGetMetadata>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>toURL()</c></strong> creates and<br/>returns a string containing a URL which can be used to identify the file system entry.<br/>This is done by exposing a new URL scheme—<c>filesystem:</c>—that can be used as<br/>the value of <c>src</c> and <c>href</c> attributes.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>getMetadata()</c></strong> obtains a<br/><see cref="Metadata"/> object with information about the file system entry, such as<br/>its modification date and time and its size.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/toURL"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/getMetadata"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A string containing a URL that can then be used as a document<br/>reference in HTML content, or an empty string if the URL can&amp;apos;t be generated (such as if<br/>the file system implementation doesn&amp;apos;t support <c>toURL()</c>).</returns>
-</FileSystemEntryToURL>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileSystemEntryGetMetadata>
+<FileSystemEntryGetParent>
+<summary>
+The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>getParent()</c></strong> obtains a<br/><see cref="FileSystemDirectoryEntry"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/getParent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileSystemEntryGetParent>
 <FileSystemEntryIsDirectory>
 <summary>
 The read-only <strong><c>isDirectory</c></strong><br/>property of the <see cref="FileSystemEntry"/> interface is <c>true</c> if the<br/>entry represents a directory (meaning it's a <see cref="FileSystemDirectoryEntry"/>)<br/>and <c>false</c> if it&amp;apos;s not.
@@ -83,26 +71,6 @@ The read-only <strong><c>isDirectory</c></strong><br/>property of the <see cref=
 </remarks>
 <value>A Boolean indicating whether or not the <see cref="FileSystemEntry"/> is a directory.</value>
 </FileSystemEntryIsDirectory>
-<FileSystemEntryGetMetadata>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>getMetadata()</c></strong> obtains a<br/><see cref="Metadata"/> object with information about the file system entry, such as<br/>its modification date and time and its size.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/getMetadata"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</FileSystemEntryGetMetadata>
-<FileSystemEntryName>
-<summary>
-The read-only <strong><c>name</c></strong> property of<br/>the <see cref="FileSystemEntry"/> interface returns a string<br/>specifying the entry&amp;apos;s name; this is the entry within its parent directory (the last<br/>component of the path as indicated by the <see cref="FileSystemEntry.FullPath"/> property).
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystemEntry.FullPath"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/name"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string indicating the entry&amp;apos;s name.</value>
-</FileSystemEntryName>
 <FileSystemEntryIsFile>
 <summary>
 The read-only <strong><c>isFile</c></strong> property of<br/>the <see cref="FileSystemEntry"/> interface is <c>true</c> if the entry<br/>represents a file (meaning it's a <see cref="FileSystemFileEntry"/>) and<br/><c>false</c> if it&amp;apos;s not.
@@ -114,14 +82,46 @@ The read-only <strong><c>isFile</c></strong> property of<br/>the <see cref="File
 </remarks>
 <value>A Boolean indicating whether or not the <see cref="FileSystemEntry"/> is a file.</value>
 </FileSystemEntryIsFile>
-<FileSystemEntryGetParent>
+<FileSystemEntryMoveTo>
 <summary>
-The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>getParent()</c></strong> obtains a<br/><see cref="FileSystemDirectoryEntry"/>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>moveTo()</c></strong> moves the file<br/>specified by the entry to a new location on the file system, or renames the file if<br/>the destination directory is the same as the source.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/getParent"> <em>See also on MDN</em> </seealso></para>
+<para>There are some typical<br/>restrictions on what you can do:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry.CopyTo"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/moveTo"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</FileSystemEntryGetParent>
+</FileSystemEntryMoveTo>
+<FileSystemEntryName>
+<summary>
+The read-only <strong><c>name</c></strong> property of<br/>the <see cref="FileSystemEntry"/> interface returns a string<br/>specifying the entry&amp;apos;s name; this is the entry within its parent directory (the last<br/>component of the path as indicated by the <see cref="FileSystemEntry.FullPath"/> property).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystemEntry.FullPath"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the entry&amp;apos;s name.</value>
+</FileSystemEntryName>
+<FileSystemEntryRemove>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>remove()</c></strong> deletes the file<br/>or directory from the file system. Directories must be empty before they can be<br/>removed.
+</summary>
+<remarks>
+<para>To recursively remove a directory as well as all of its contents and its<br/>subdirectories, call <see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/>instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileSystemEntryRemove>
+<FileSystemEntryToURL>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>toURL()</c></strong> creates and<br/>returns a string containing a URL which can be used to identify the file system entry.<br/>This is done by exposing a new URL scheme—<c>filesystem:</c>—that can be used as<br/>the value of <c>src</c> and <c>href</c> attributes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/toURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing a URL that can then be used as a document<br/>reference in HTML content, or an empty string if the URL can&amp;apos;t be generated (such as if<br/>the file system implementation doesn&amp;apos;t support <c>toURL()</c>).</returns>
+</FileSystemEntryToURL>
 </docs>

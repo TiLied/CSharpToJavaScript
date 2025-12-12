@@ -9,15 +9,6 @@ The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">W
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </OfflineAudioCompletionEvent>
-<OfflineAudioCompletionEventRenderedBuffer>
-<summary>
-The <strong><c>renderedBuffer</c></strong> read-only property of the<br/><see cref="OfflineAudioCompletionEvent"/> interface is an <see cref="AudioBuffer"/><br/>containing the result of processing an <see cref="OfflineAudioContext"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/renderedBuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioBuffer"/>.</value>
-</OfflineAudioCompletionEventRenderedBuffer>
 <OfflineAudioCompletionEventOfflineAudioCompletionEvent>
 <summary>
 The <strong><c>OfflineAudioCompletionEvent()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="OfflineAudioCompletionEvent"/> object.
@@ -28,4 +19,13 @@ The <strong><c>OfflineAudioCompletionEvent()</c></strong> constructor of the <se
 </remarks>
 <returns>A new <see cref="OfflineAudioCompletionEvent"/> object.</returns>
 </OfflineAudioCompletionEventOfflineAudioCompletionEvent>
+<OfflineAudioCompletionEventRenderedBuffer>
+<summary>
+The <strong><c>renderedBuffer</c></strong> read-only property of the<br/><see cref="OfflineAudioCompletionEvent"/> interface is an <see cref="AudioBuffer"/><br/>containing the result of processing an <see cref="OfflineAudioContext"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/renderedBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioBuffer"/>.</value>
+</OfflineAudioCompletionEventRenderedBuffer>
 </docs>

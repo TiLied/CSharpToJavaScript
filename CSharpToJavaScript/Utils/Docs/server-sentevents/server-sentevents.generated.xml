@@ -1,0 +1,18 @@
+<docs>
+<Server-sents>
+<summary>
+Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it&amp;apos;s possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as <strong><see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Events</see></strong><strong> + data</strong> inside the web page.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Server-sents>
+<Server-sentsUsing_server-sents>
+<summary>
+Developing a web application that uses <see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">server-sent events</see> is straightforward. You&amp;apos;ll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">websockets</see> in part of handling incoming events. This is a one-way connection, so you can&amp;apos;t send events from a client to a server.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sents/Using_server-sents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Server-sentsUsing_server-sents>
+</docs>

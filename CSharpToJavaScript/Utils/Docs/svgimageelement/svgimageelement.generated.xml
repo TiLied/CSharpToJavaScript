@@ -8,61 +8,6 @@ The <strong><c>SVGImageElement</c></strong> interface corresponds to the <see hr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGImageElement>
-<SVGImageElementWidth>
-<summary>
-The <strong><c>width</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the {{SVGAttr("width")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGImageElementWidth>
-<SVGImageElementX>
-<summary>
-The <strong><c>x</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the {{SVGAttr("x")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/x"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGImageElementX>
-<SVGImageElementHref>
-<summary>
-The <strong><c>href</c></strong> read-only property of the <see cref="SVGImageElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/href"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGImageElementHref>
-<SVGImageElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the height attribute of the given<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGImageElementHeight>
-<SVGImageElementDecoding>
-<summary>
-The <strong><c>decoding</c></strong> property of the <see cref="SVGImageElement"/> interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
-</summary>
-<remarks>
-<para>-The <see cref="SVGImageElement.Decode"/> method<br/>-The SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element {{SVGAttr("decoding")}} attribute.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the decoding hint. Possible values are:</value>
-</SVGImageElementDecoding>
-<SVGImageElementPreserveAspectRatio>
-<summary>
-The <strong><c>preserveAspectRatio</c></strong> read-only<br/>property of the <see cref="SVGImageElement"/> interface returns an<br/><see cref="SVGAnimatedPreserveAspectRatio"/> corresponding to the<br/>{{SVGAttr("preserveAspectRatio")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedPreserveAspectRatio"/>.</value>
-</SVGImageElementPreserveAspectRatio>
 <SVGImageElementCrossOrigin>
 <summary>
 The <strong><c>crossOrigin</c></strong> property of the <see cref="SVGImageElement"/> interface is a string which specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when retrieving the image. It reflects the {{SVGAttr("crossorigin")}} content attribute of the given {{SVGElement("image")}} element.
@@ -83,6 +28,61 @@ The <strong><c>decode()</c></strong> method of the<br/><see cref="SVGImageElemen
 </remarks>
 <returns>A <see cref="'Promise'"/> that fulfills with <c>undefined</c> once the image data is ready to be used, for example by appending it to the DOM, replacing an existing image, and so forth.</returns>
 </SVGImageElementDecode>
+<SVGImageElementDecoding>
+<summary>
+The <strong><c>decoding</c></strong> property of the <see cref="SVGImageElement"/> interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
+</summary>
+<remarks>
+<para>-The <see cref="SVGImageElement.Decode"/> method<br/>-The SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element {{SVGAttr("decoding")}} attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the decoding hint. Possible values are:</value>
+</SVGImageElementDecoding>
+<SVGImageElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the height attribute of the given<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGImageElementHeight>
+<SVGImageElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGImageElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGImageElementHref>
+<SVGImageElementPreserveAspectRatio>
+<summary>
+The <strong><c>preserveAspectRatio</c></strong> read-only<br/>property of the <see cref="SVGImageElement"/> interface returns an<br/><see cref="SVGAnimatedPreserveAspectRatio"/> corresponding to the<br/>{{SVGAttr("preserveAspectRatio")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedPreserveAspectRatio"/>.</value>
+</SVGImageElementPreserveAspectRatio>
+<SVGImageElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the {{SVGAttr("width")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGImageElementWidth>
+<SVGImageElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the {{SVGAttr("x")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGImageElementX>
 <SVGImageElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the<br/><see cref="SVGImageElement"/> interface returns an <see cref="SVGAnimatedLength"/><br/>corresponding to the {{SVGAttr("y")}} attribute of the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see><br/>element.

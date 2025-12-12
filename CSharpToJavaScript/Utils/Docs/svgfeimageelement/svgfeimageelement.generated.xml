@@ -9,6 +9,47 @@ The <strong><c>SVGFEImageElement</c></strong> interface corresponds to the <see 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEImageElement>
+<SVGFEImageElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeImage">feImage</see> element, which fetches image data from an external source and provides the pixel data as output. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEImageElement.Width"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG Filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEImageElementHeight>
+<SVGFEImageElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("feImage")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFEImageElementHref>
+<SVGFEImageElementPreserveAspectRatio>
+<summary>
+The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface reflects the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("feImage")}} element.
+</summary>
+<remarks>
+<para>-preserveAspectRatio<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedPreserveAspectRatio"/> object.</value>
+</SVGFEImageElementPreserveAspectRatio>
+<SVGFEImageElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feImage")}} element, which fetches image data from an external source and provides the pixel data as output. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feImage&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG Filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEImageElementResult>
 <SVGFEImageElementWidth>
 <summary>
 The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
@@ -31,47 +72,6 @@ The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEImageEle
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGFEImageElementX>
-<SVGFEImageElementHref>
-<summary>
-The <strong><c>href</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("feImage")}} element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/href"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/> object.</value>
-</SVGFEImageElementHref>
-<SVGFEImageElementHeight>
-<summary>
-The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeImage">feImage</see> element, which fetches image data from an external source and provides the pixel data as output. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
-<para>-<see cref="SVGFEImageElement.Width"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG Filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGFEImageElementHeight>
-<SVGFEImageElementResult>
-<summary>
-The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
-</summary>
-<remarks>
-<para>It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feImage")}} element, which fetches image data from an external source and provides the pixel data as output. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feImage&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects">SVG tutorial: Filter effects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes">SVG Filter primitive attributes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/result"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedString"/>.</value>
-</SVGFEImageElementResult>
-<SVGFEImageElementPreserveAspectRatio>
-<summary>
-The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface reflects the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("feImage")}} element.
-</summary>
-<remarks>
-<para>-preserveAspectRatio<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedPreserveAspectRatio"/> object.</value>
-</SVGFEImageElementPreserveAspectRatio>
 <SVGFEImageElementY>
 <summary>
 The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEImageElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.

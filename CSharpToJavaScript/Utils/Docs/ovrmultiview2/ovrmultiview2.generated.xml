@@ -1,0 +1,22 @@
+<docs>
+<OVR_multiview2>
+<summary>
+The <c>OVR_multiview2</c> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.
+</summary>
+<remarks>
+<para>For more information, see also:</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Support depends on the system&amp;apos;s graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).</para><para>This extension is only available to {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL 2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts as it needs GLSL 3.00 and texture arrays.</para><para>Currently, there is no way to use multiview to render to a multisampled backbuffer, so you should create contexts with <c>antialias: false</c>. However, the Oculus browser (6+) also supports multisampling using the <see href="https://developers.meta.com/horizon/documentation/web/web-multiview/#using-oculus_multiview-in-webgl-20"><c>OCULUS_multiview</c></see> extension. See also <see href="https://github.com/KhronosGroup/WebGL/issues/2912">this WebGL issue</see>.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OVR_multiview2"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OVR_multiview2>
+<OVR_multiview2FramebufferTextureMultiviewOVR>
+<summary>
+The <strong><c>OVR_multiview2.framebufferTextureMultiviewOVR()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> attaches a multiview<br/>texture to a <see cref="WebGLFramebuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="OVR_multiview2"/><br/>-<see cref="WEBGL_depth_texture"/><br/>-<see cref="WEBGL_draw_buffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OVR_multiview2/framebufferTextureMultiviewOVR"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OVR_multiview2FramebufferTextureMultiviewOVR>
+</docs>

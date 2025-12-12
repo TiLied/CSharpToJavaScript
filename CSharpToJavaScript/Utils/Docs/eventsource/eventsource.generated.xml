@@ -9,6 +9,66 @@ The <strong><c>EventSource</c></strong> interface is web content&amp;apos;s inte
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </EventSource>
+<EventSourceClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="EventSource"/><br/>interface closes the connection, if one is made, and sets the<br/><see cref="EventSource.ReadyState"/> attribute to <c>2</c> (closed).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the connection is already closed, the method does nothing.</para></blockquote>
+<para>-<see cref="EventSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EventSourceClose>
+<EventSourceError>
+<summary>
+The <strong><c>error</c></strong> event of the <see cref="EventSource"/> API is fired when a connection with an event source fails to be opened.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event"><c>open</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message_event"><c>message</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventSourceError>
+<EventSourceEventSource>
+<summary>
+The <strong><c>EventSource()</c></strong><br/>constructor returns a newly-created <see cref="EventSource"/>, which represents a<br/>remote resource.
+</summary>
+<remarks>
+<para>-<see cref="EventSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventSourceEventSource>
+<EventSourceMessage>
+<summary>
+The <strong><c>message</c></strong> event of the <see cref="EventSource"/> interface is fired when data is received through an event source.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event"><c>open</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error_event"><c>error</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventSourceMessage>
+<EventSourceOpen>
+<summary>
+The <strong><c>open</c></strong> event of the <see cref="EventSource"/> interface is fired when a connection with an event source is opened.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see cref="EventSourceerror"/><br/>-<see cref="EventSourcemessage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventSourceOpen>
+<EventSourceReadyState>
+<summary>
+The <strong><c>readyState</c></strong> read-only property of the<br/><see cref="EventSource"/> interface returns a number representing the state of the<br/>connection.
+</summary>
+<remarks>
+<para>-<see cref="EventSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/readyState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number which is one of the three possible state constants defined on the <see cref="EventSource"/> interface:</value>
+</EventSourceReadyState>
 <EventSourceUrl>
 <summary>
 The <strong><c>url</c></strong> read-only property of the<br/><see cref="EventSource"/> interface returns a string representing the<br/>URL of the source.
@@ -29,64 +89,4 @@ The <strong><c>withCredentials</c></strong> read-only property of the<br/><see c
 </remarks>
 <value>A boolean value indicating whether the <c>EventSource</c> object was<br/>instantiated with CORS credentials set (<c>true</c>), or not (<c>false</c>,<br/>the default).</value>
 </EventSourceWithCredentials>
-<EventSourceError>
-<summary>
-The <strong><c>error</c></strong> event of the <see cref="EventSource"/> API is fired when a connection with an event source fails to be opened.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event"><c>open</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message_event"><c>message</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</EventSourceError>
-<EventSourceEventSource>
-<summary>
-The <strong><c>EventSource()</c></strong><br/>constructor returns a newly-created <see cref="EventSource"/>, which represents a<br/>remote resource.
-</summary>
-<remarks>
-<para>-<see cref="EventSource"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</EventSourceEventSource>
-<EventSourceReadyState>
-<summary>
-The <strong><c>readyState</c></strong> read-only property of the<br/><see cref="EventSource"/> interface returns a number representing the state of the<br/>connection.
-</summary>
-<remarks>
-<para>-<see cref="EventSource"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/readyState"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number which is one of the three possible state constants defined on the <see cref="EventSource"/> interface:</value>
-</EventSourceReadyState>
-<EventSourceOpen>
-<summary>
-The <strong><c>open</c></strong> event of the <see cref="EventSource"/> interface is fired when a connection with an event source is opened.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see cref="EventSourceerror"/><br/>-<see cref="EventSourcemessage"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</EventSourceOpen>
-<EventSourceClose>
-<summary>
-The <strong><c>close()</c></strong> method of the <see cref="EventSource"/><br/>interface closes the connection, if one is made, and sets the<br/><see cref="EventSource.ReadyState"/> attribute to <c>2</c> (closed).
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>If the connection is already closed, the method does nothing.</para></blockquote>
-<para>-<see cref="EventSource"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</EventSourceClose>
-<EventSourceMessage>
-<summary>
-The <strong><c>message</c></strong> event of the <see cref="EventSource"/> interface is fired when data is received through an event source.
-</summary>
-<remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event"><c>open</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error_event"><c>error</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</EventSourceMessage>
 </docs>

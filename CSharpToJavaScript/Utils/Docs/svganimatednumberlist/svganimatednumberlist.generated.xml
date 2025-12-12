@@ -7,17 +7,6 @@ The <strong><c>SVGAnimatedNumberList</c></strong> interface represents a list of
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumberList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedNumberList>
-<SVGAnimatedNumberListBaseVal>
-<summary>
-The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedNumberList"/> interface represents the base (non-animated) value of an animatable attribute that accepts a list of <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see> values.
-</summary>
-<remarks>
-<para>This property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox"><c>viewBox</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"><c>&amp;lt;svg&amp;gt;</c></see> element, the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/values#fecolormatrix"><c>values</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/feColorMatrix"><c>feColorMatrix</c></see> element and the {{SVGAttr("points")}} attribute of the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or {{SVGElement("polyline")}} element as a readonly <see cref="SVGNumberList"/>, providing access to a static list of points defined by the {{SVGAttr("points")}} attribute.</para>
-<para>-<see cref="SVGAnimatedNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumberList/baseVal"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGNumberList"/> object representing the base value of the attribute. The list contains one or more numbers corresponding to the individual number values specified in the attribute.</value>
-</SVGAnimatedNumberListBaseVal>
 <SVGAnimatedNumberListAnimVal>
 <summary>
 The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedNumberList"/> interface represents the current animated value of an animatable attribute that accepts a list of <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see> values.
@@ -29,4 +18,15 @@ The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnim
 </remarks>
 <value>An <see cref="SVGNumberList"/> object representing the animated value of the attribute. The list contains one or more numbers corresponding to the individual number values specified in the attribute.</value>
 </SVGAnimatedNumberListAnimVal>
+<SVGAnimatedNumberListBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedNumberList"/> interface represents the base (non-animated) value of an animatable attribute that accepts a list of <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see> values.
+</summary>
+<remarks>
+<para>This property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox"><c>viewBox</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"><c>&amp;lt;svg&amp;gt;</c></see> element, the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/values#fecolormatrix"><c>values</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/feColorMatrix"><c>feColorMatrix</c></see> element and the {{SVGAttr("points")}} attribute of the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or {{SVGElement("polyline")}} element as a readonly <see cref="SVGNumberList"/>, providing access to a static list of points defined by the {{SVGAttr("points")}} attribute.</para>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumberList/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGNumberList"/> object representing the base value of the attribute. The list contains one or more numbers corresponding to the individual number values specified in the attribute.</value>
+</SVGAnimatedNumberListBaseVal>
 </docs>

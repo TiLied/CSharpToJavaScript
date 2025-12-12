@@ -9,64 +9,6 @@ The <strong><c>BatteryManager</c></strong> interface of the {{domxref(&amp;quot;
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BatteryManager>
-<BatteryManagerLevelchange>
-<summary>
-The <strong><c>levelchange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.Level"/> property is updated.
-</summary>
-<remarks>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/levelchange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</BatteryManagerLevelchange>
-<BatteryManagerDischargingTime>
-<summary>
-The <strong><c>dischargingTime</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the amount of time, in seconds, that remains until the battery is fully discharged,<br/>or <see cref="Infinity"/> if the battery is currently charging rather than discharging or the user agent is unable to report the battery status information.<br/>When its value changes, the <see cref="BatteryManagerdischargingtimechange"/> event is fired.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Even if the time returned is precise to the second, browsers round them to a higher<br/>interval (typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/dischargingTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</BatteryManagerDischargingTime>
-<BatteryManagerChargingtimechange>
-<summary>
-The <strong><c>chargingtimechange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.ChargingTime"/> property is updated.
-</summary>
-<remarks>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingtimechange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</BatteryManagerChargingtimechange>
-<BatteryManagerChargingTime>
-<summary>
-The <strong><c>chargingTime</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the amount of time, in seconds, that remain until the battery is fully charged, or <c>0</c> if the battery is already fully charged or the user agent is unable to report the battery status information.<br/>If the battery is currently discharging, its value is <see cref="Infinity"/>.<br/>When its value changes, the <see cref="BatteryManagerchargingtimechange"/> event is fired.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Even if the time returned is precise to the second,<br/>browsers round them to a higher interval<br/>(typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingTime"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</BatteryManagerChargingTime>
-<BatteryManagerDischargingtimechange>
-<summary>
-The <strong><c>dischargingtimechange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.DischargingTime"/> property is updated.
-</summary>
-<remarks>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/dischargingtimechange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</BatteryManagerDischargingtimechange>
-<BatteryManagerChargingchange>
-<summary>
-The <strong><c>chargingchange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.Charging"/> property is updated.
-</summary>
-<remarks>
-<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingchange"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</BatteryManagerChargingchange>
 <BatteryManagerCharging>
 <summary>
 The <strong><c>charging</c></strong> read-only property of the <see cref="BatteryManager"/> interface is a Boolean value indicating whether or not the device's battery is currently being charged. When its value changes, the <see cref="BatteryManagerchargingchange"/> event is fired.
@@ -78,6 +20,55 @@ The <strong><c>charging</c></strong> read-only property of the <see cref="Batter
 </remarks>
 <value>A boolean.</value>
 </BatteryManagerCharging>
+<BatteryManagerChargingchange>
+<summary>
+The <strong><c>chargingchange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.Charging"/> property is updated.
+</summary>
+<remarks>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BatteryManagerChargingchange>
+<BatteryManagerChargingTime>
+<summary>
+The <strong><c>chargingTime</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the amount of time, in seconds, that remain until the battery is fully charged, or <c>0</c> if the battery is already fully charged or the user agent is unable to report the battery status information.<br/>If the battery is currently discharging, its value is <see cref="Infinity"/>.<br/>When its value changes, the <see cref="BatteryManagerchargingtimechange"/> event is fired.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Even if the time returned is precise to the second,<br/>browsers round them to a higher interval<br/>(typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</BatteryManagerChargingTime>
+<BatteryManagerChargingtimechange>
+<summary>
+The <strong><c>chargingtimechange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.ChargingTime"/> property is updated.
+</summary>
+<remarks>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingtimechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BatteryManagerChargingtimechange>
+<BatteryManagerDischargingTime>
+<summary>
+The <strong><c>dischargingTime</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the amount of time, in seconds, that remains until the battery is fully discharged,<br/>or <see cref="Infinity"/> if the battery is currently charging rather than discharging or the user agent is unable to report the battery status information.<br/>When its value changes, the <see cref="BatteryManagerdischargingtimechange"/> event is fired.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Even if the time returned is precise to the second, browsers round them to a higher<br/>interval (typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/dischargingTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</BatteryManagerDischargingTime>
+<BatteryManagerDischargingtimechange>
+<summary>
+The <strong><c>dischargingtimechange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.DischargingTime"/> property is updated.
+</summary>
+<remarks>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/dischargingtimechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BatteryManagerDischargingtimechange>
 <BatteryManagerLevel>
 <summary>
 The <strong><c>level</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the current battery charge level as a value between <c>0.0</c> and <c>1.0</c>.<br/>A value of <c>0.0</c> means the battery is empty and the system is about to be suspended.<br/>A value of <c>1.0</c> means the battery is full or the user agent is unable to report the battery status information.<br/>When its value changes, the <see cref="BatteryManagerlevelchange"/> event is fired.
@@ -88,4 +79,13 @@ The <strong><c>level</c></strong> read-only property of the <see cref="BatteryMa
 </remarks>
 <value>A number.</value>
 </BatteryManagerLevel>
+<BatteryManagerLevelchange>
+<summary>
+The <strong><c>levelchange</c></strong> event of the <see cref="BatteryManager"/> interface is fired when the battery <see cref="BatteryManager.Level"/> property is updated.
+</summary>
+<remarks>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/levelchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BatteryManagerLevelchange>
 </docs>

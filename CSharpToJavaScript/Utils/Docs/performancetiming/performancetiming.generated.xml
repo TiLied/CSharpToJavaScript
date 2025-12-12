@@ -9,6 +9,61 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceTiming>
+<PerformanceTimingConnectEnd>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.connectEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the connection is opened network. If the<br/>transport layer reports an error and the connection establishment is started again, the<br/>last connection establishment end time is given. If a persistent connection is used, the<br/>value will be the same as <see cref="PerformanceTiming.FetchStart"/>. A connection is<br/>considered as opened when all secure connection handshake, or SOCKS authentication, is<br/>terminated.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/connectEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingConnectEnd>
+<PerformanceTimingConnectStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.connectStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the request to open a connection is sent to<br/>the network. If the transport layer reports an error and the connection establishment is<br/>started again, the last connection establishment start time is given. If a persistent<br/>connection is used, the value will be the same as<br/><see cref="PerformanceTiming.FetchStart"/>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/connectStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingConnectStart>
+<PerformanceTimingDomainLookupEnd>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domainLookupEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the domain lookup is finished. If a<br/>persistent connection is used, or the information is stored in a cache or a local<br/>resource, the value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomainLookupEnd>
+<PerformanceTimingDomainLookupStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domainLookupStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the domain lookup starts. If a persistent<br/>connection is used, or the information is stored in a cache or a local resource, the<br/>value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomainLookupStart>
+<PerformanceTimingDomComplete>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domComplete</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser finished its work on the main<br/>document, that is when its <see cref="Document.ReadyState"/> changes to<br/><c>&amp;apos;complete&amp;apos;</c> and the corresponding <see cref="Documentreadystatechange"/> event is<br/>thrown.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domComplete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomComplete>
 <PerformanceTimingDomContentLoadedEventEnd>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
@@ -20,6 +75,105 @@
 </remarks>
 <value>An <c>unsigned long long</c>.</value>
 </PerformanceTimingDomContentLoadedEventEnd>
+<PerformanceTimingDomContentLoadedEventStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domContentLoadedEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right before the parser sent the<br/><see cref="DocumentDOMContentLoaded"/> event, that is right after all the scripts that need to be<br/>executed right after parsing has been executed.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomContentLoadedEventStart>
+<PerformanceTimingDomInteractive>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domInteractive</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser finished its work on the main<br/>document, that is when its <see cref="Document.ReadyState"/> changes to<br/><c>&amp;apos;interactive&amp;apos;</c> and the corresponding <see cref="Documentreadystatechange"/> event is<br/>thrown.</para><para>This property can be used to measure the speed of loading websites that users<br/><strong>feels</strong>. Nevertheless there are a few caveats that happens if scripts are<br/>blocking rendering and not loaded asynchronously or with custom Web fonts. <see href="https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Check if you are in one of these cases</see> before using this property as a proxy for the<br/>user experience of a website&amp;apos;s speed of loading.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/>-The article &amp;quot;<see href="https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">domInteractive: is it? really?</see>&amp;quot; explaining when you can use this property as a proxy for the<br/>user experience of loading a website.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domInteractive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomInteractive>
+<PerformanceTimingDomLoading>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.domLoading</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser started its work, that is when its<br/><see cref="Document.ReadyState"/> changes to <c>&amp;apos;loading&amp;apos;</c> and the<br/>corresponding <see cref="Documentreadystatechange"/> event is thrown.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domLoading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingDomLoading>
+<PerformanceTimingFetchStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.fetchStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the browser is ready to fetch the document using<br/>an HTTP request. This moment is <strong>before</strong> the check to any application cache.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/fetchStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingFetchStart>
+<PerformanceTimingLoadEventEnd>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface's <see cref="PerformanceNavigationTiming.LoadEventEnd"/> read-only property instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.loadEventEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the <see cref="Windowload"/> event handler<br/>terminated, that is when the load event is completed. If this event has not yet been<br/>sent, or is not yet completed, it returns <c>0</c>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingLoadEventEnd>
+<PerformanceTimingLoadEventStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface's <see cref="PerformanceNavigationTiming.LoadEventStart"/> read-only property instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.loadEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the <see cref="Windowload"/> event was sent for the<br/>current document. If this event has not yet been sent, it returns <c>0</c>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingLoadEventStart>
+<PerformanceTimingNavigationStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.navigationStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right after the prompt for unload terminates on<br/>the previous document in the same browsing context. If there is no previous document,<br/>this value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingNavigationStart>
+<PerformanceTimingRedirectEnd>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.redirectEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when<br/>the last byte of the HTTP response has been received. If there is no redirect, or if one<br/>of the redirect is not of the same origin, the value returned is <c>0</c>.</para>
+<para>-The <see cref="Performance"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingRedirectEnd>
+<PerformanceTimingRedirectStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.redirectStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the first HTTP redirect starts. If there is no<br/>redirect, or if one of the redirect is not of the same origin, the value returned is<br/><c>0</c>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingRedirectStart>
 <PerformanceTimingRequestStart>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
@@ -42,105 +196,6 @@
 </remarks>
 <value>An <c>unsigned long long</c>.</value>
 </PerformanceTimingResponseEnd>
-<PerformanceTimingLoadEventEnd>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface's <see cref="PerformanceNavigationTiming.LoadEventEnd"/> read-only property instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.loadEventEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the <see cref="Windowload"/> event handler<br/>terminated, that is when the load event is completed. If this event has not yet been<br/>sent, or is not yet completed, it returns <c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingLoadEventEnd>
-<PerformanceTimingNavigationStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.navigationStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right after the prompt for unload terminates on<br/>the previous document in the same browsing context. If there is no previous document,<br/>this value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingNavigationStart>
-<PerformanceTimingDomainLookupStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domainLookupStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the domain lookup starts. If a persistent<br/>connection is used, or the information is stored in a cache or a local resource, the<br/>value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomainLookupStart>
-<PerformanceTimingSecureConnectionStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.secureConnectionStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the secure connection handshake starts. If<br/>no such connection is requested, it returns <c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingSecureConnectionStart>
-<PerformanceTimingConnectEnd>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.connectEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the connection is opened network. If the<br/>transport layer reports an error and the connection establishment is started again, the<br/>last connection establishment end time is given. If a persistent connection is used, the<br/>value will be the same as <see cref="PerformanceTiming.FetchStart"/>. A connection is<br/>considered as opened when all secure connection handshake, or SOCKS authentication, is<br/>terminated.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/connectEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingConnectEnd>
-<PerformanceTimingUnloadEventEnd>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.unloadEventEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the <see cref="Windowunload"/> event handler finishes. If<br/>there is no previous document, or if the previous document, or one of the needed<br/>redirects, is not of the same origin, the value returned is <c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingUnloadEventEnd>
-<PerformanceTimingDomainLookupEnd>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domainLookupEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the domain lookup is finished. If a<br/>persistent connection is used, or the information is stored in a cache or a local<br/>resource, the value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomainLookupEnd>
-<PerformanceTimingDomComplete>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domComplete</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser finished its work on the main<br/>document, that is when its <see cref="Document.ReadyState"/> changes to<br/><c>&amp;apos;complete&amp;apos;</c> and the corresponding <see cref="Documentreadystatechange"/> event is<br/>thrown.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domComplete"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomComplete>
-<PerformanceTimingDomContentLoadedEventStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domContentLoadedEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right before the parser sent the<br/><see cref="DocumentDOMContentLoaded"/> event, that is right after all the scripts that need to be<br/>executed right after parsing has been executed.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomContentLoadedEventStart>
 <PerformanceTimingResponseStart>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
@@ -152,94 +207,17 @@
 </remarks>
 <value>An <c>unsigned long long</c>.</value>
 </PerformanceTimingResponseStart>
-<PerformanceTimingLoadEventStart>
+<PerformanceTimingSecureConnectionStart>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface's <see cref="PerformanceNavigationTiming.LoadEventStart"/> read-only property instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
 </summary>
 <remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.loadEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the <see cref="Windowload"/> event was sent for the<br/>current document. If this event has not yet been sent, it returns <c>0</c>.</para>
+<para>The legacy<br/><strong><c>PerformanceTiming.secureConnectionStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the secure connection handshake starts. If<br/>no such connection is requested, it returns <c>0</c>.</para>
 <para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventStart"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingLoadEventStart>
-<PerformanceTimingFetchStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.fetchStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the browser is ready to fetch the document using<br/>an HTTP request. This moment is <strong>before</strong> the check to any application cache.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/fetchStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingFetchStart>
-<PerformanceTimingUnloadEventStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.unloadEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the <see cref="Windowunload"/> event has been thrown. If<br/>there is no previous document, or if the previous document, or one of the needed<br/>redirects, is not of the same origin, the value returned is <c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/unloadEventStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingUnloadEventStart>
-<PerformanceTimingDomLoading>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domLoading</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser started its work, that is when its<br/><see cref="Document.ReadyState"/> changes to <c>&amp;apos;loading&amp;apos;</c> and the<br/>corresponding <see cref="Documentreadystatechange"/> event is thrown.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domLoading"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomLoading>
-<PerformanceTimingRedirectEnd>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.redirectEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when<br/>the last byte of the HTTP response has been received. If there is no redirect, or if one<br/>of the redirect is not of the same origin, the value returned is <c>0</c>.</para>
-<para>-The <see cref="Performance"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectEnd"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingRedirectEnd>
-<PerformanceTimingDomInteractive>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domInteractive</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, when the parser finished its work on the main<br/>document, that is when its <see cref="Document.ReadyState"/> changes to<br/><c>&amp;apos;interactive&amp;apos;</c> and the corresponding <see cref="Documentreadystatechange"/> event is<br/>thrown.</para><para>This property can be used to measure the speed of loading websites that users<br/><strong>feels</strong>. Nevertheless there are a few caveats that happens if scripts are<br/>blocking rendering and not loaded asynchronously or with custom Web fonts. <see href="https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Check if you are in one of these cases</see> before using this property as a proxy for the<br/>user experience of a website&amp;apos;s speed of loading.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/>-The article &amp;quot;<see href="https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">domInteractive: is it? really?</see>&amp;quot; explaining when you can use this property as a proxy for the<br/>user experience of loading a website.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domInteractive"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingDomInteractive>
-<PerformanceTimingConnectStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.connectStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the request to open a connection is sent to<br/>the network. If the transport layer reports an error and the connection establishment is<br/>started again, the last connection establishment start time is given. If a persistent<br/>connection is used, the value will be the same as<br/><see cref="PerformanceTiming.FetchStart"/>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/connectStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingConnectStart>
-<PerformanceTimingRedirectStart>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
-</summary>
-<remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.redirectStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the first HTTP redirect starts. If there is no<br/>redirect, or if one of the redirect is not of the same origin, the value returned is<br/><c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectStart"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <c>unsigned long long</c>.</value>
-</PerformanceTimingRedirectStart>
+</PerformanceTimingSecureConnectionStart>
 <PerformanceTimingToJSON>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
@@ -251,4 +229,26 @@
 </remarks>
 <returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceTiming"/> object.</returns>
 </PerformanceTimingToJSON>
+<PerformanceTimingUnloadEventEnd>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.unloadEventEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the <see cref="Windowunload"/> event handler finishes. If<br/>there is no previous document, or if the previous document, or one of the needed<br/>redirects, is not of the same origin, the value returned is <c>0</c>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingUnloadEventEnd>
+<PerformanceTimingUnloadEventStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.unloadEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the <see cref="Windowunload"/> event has been thrown. If<br/>there is no previous document, or if the previous document, or one of the needed<br/>redirects, is not of the same origin, the value returned is <c>0</c>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/unloadEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingUnloadEventStart>
 </docs>

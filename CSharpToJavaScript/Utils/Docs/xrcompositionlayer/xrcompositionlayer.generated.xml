@@ -9,6 +9,36 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRCompositionLayer>
+<XRCompositionLayerBlendTextureSourceAlpha>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>blendTextureSourceAlpha</c></strong> property of the <see cref="XRCompositionLayer"/> interface is a boolean enabling the layer's texture {{Glossary("Alpha", "alpha channel")}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Alpha">Alpha</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/blendTextureSourceAlpha"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. <c>true</c> enables the alpha channel, <c>false</c> disables it.</value>
+</XRCompositionLayerBlendTextureSourceAlpha>
+<XRCompositionLayerDestroy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="XRCompositionLayer"/> interface deletes the references to the underlying graphics library for the layer. It also sets the color textures and depth stencil texture arrays to an empty array.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XRCompositionLayerDestroy>
+<XRCompositionLayerLayout>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>layout</c></strong> property of the <see cref="XRCompositionLayer"/> interface is the layout type of the layer.
+</summary>
+<remarks>
+<para>To specify the layout type of a layer, use one of the layer creation methods and their <c>layout</c> option:</para>
+<para>-<see cref="XRSubImage"/><br/>-<see cref="XRWebGLBinding.CreateQuadLayer"/><br/>-<see cref="XRWebGLBinding.CreateCylinderLayer"/><br/>-<see cref="XRWebGLBinding.CreateEquirectLayer"/><br/>-<see cref="XRWebGLBinding.CreateCubeLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/layout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Possible values:</value>
+</XRCompositionLayerLayout>
 <XRCompositionLayerMipLevels>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>mipLevels</c></strong> property of the <see cref="XRCompositionLayer"/> interface is a layer's number of mip levels in the color and texture data. See also <see href="https://en.wikipedia.org/wiki/Mipmap">Mipmap</see> on Wikipedia.
@@ -31,34 +61,4 @@
 </remarks>
 <value>A boolean. <c>true</c> indicates a rerendering is needed in the next frame, <c>false</c> indicates no re-rendering is needed.</value>
 </XRCompositionLayerNeedsRedraw>
-<XRCompositionLayerLayout>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>layout</c></strong> property of the <see cref="XRCompositionLayer"/> interface is the layout type of the layer.
-</summary>
-<remarks>
-<para>To specify the layout type of a layer, use one of the layer creation methods and their <c>layout</c> option:</para>
-<para>-<see cref="XRSubImage"/><br/>-<see cref="XRWebGLBinding.CreateQuadLayer"/><br/>-<see cref="XRWebGLBinding.CreateCylinderLayer"/><br/>-<see cref="XRWebGLBinding.CreateEquirectLayer"/><br/>-<see cref="XRWebGLBinding.CreateCubeLayer"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/layout"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. Possible values:</value>
-</XRCompositionLayerLayout>
-<XRCompositionLayerDestroy>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="XRCompositionLayer"/> interface deletes the references to the underlying graphics library for the layer. It also sets the color textures and depth stencil texture arrays to an empty array.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/destroy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</XRCompositionLayerDestroy>
-<XRCompositionLayerBlendTextureSourceAlpha>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>blendTextureSourceAlpha</c></strong> property of the <see cref="XRCompositionLayer"/> interface is a boolean enabling the layer's texture {{Glossary("Alpha", "alpha channel")}}.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Alpha">Alpha</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/blendTextureSourceAlpha"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean. <c>true</c> enables the alpha channel, <c>false</c> disables it.</value>
-</XRCompositionLayerBlendTextureSourceAlpha>
 </docs>

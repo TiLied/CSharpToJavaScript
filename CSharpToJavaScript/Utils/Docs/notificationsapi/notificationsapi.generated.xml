@@ -1,0 +1,21 @@
+<docs>
+<Notifications_API>
+<summary>
+The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Notifications_API>
+<Notifications_APIUsing_the_Notifications_API>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</see> lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
+</summary>
+<remarks>
+<para>Typically, system notifications refer to the operating system&amp;apos;s standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.</para><para><see href="https://developer.mozilla.orgdesktop-notification.png">Desktop notification: To do list via mdn.github.io HEY! Your task &amp;quot;Go shopping&amp;quot; is now overdue</see></para><para>The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.</para>
+<para>-<see cref="Notification"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Notifications_APIUsing_the_Notifications_API>
+</docs>

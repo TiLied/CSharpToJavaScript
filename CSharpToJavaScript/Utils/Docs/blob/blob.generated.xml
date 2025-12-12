@@ -19,6 +19,24 @@ The <strong><c>arrayBuffer()</c></strong> method of the <see cref="Blob"/><br/>i
 </remarks>
 <returns>A promise that resolves with an <see cref="ArrayBuffer"/> that contains the blob's<br/>data in binary form.</returns>
 </BlobArrayBuffer>
+<BlobBlob>
+<summary>
+The <strong><c>Blob()</c></strong> constructor returns a<br/>new <see cref="Blob"/> object. The content of the blob consists of the concatenation<br/>of the values given in the parameter <c>blobParts</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="Blob"/> object containing the specified data.</returns>
+</BlobBlob>
+<BlobBytes>
+<summary>
+The <strong><c>bytes()</c></strong> method of the <see cref="Blob"/> interface returns a {{jsxref("Promise")}} that resolves with a {{jsxref("Uint8Array")}} containing the contents of the blob as an array of bytes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/bytes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a <see cref="Uint8Array"/> object containing the blob data.</returns>
+</BlobBytes>
 <BlobSize>
 <summary>
 The <strong><c>size</c></strong> read-only property of the <see cref="Blob"/> interface returns<br/>the size of the <see cref="Blob"/> or <see cref="File"/> in bytes.
@@ -29,6 +47,16 @@ The <strong><c>size</c></strong> read-only property of the <see cref="Blob"/> in
 </remarks>
 <value>The number of bytes of data contained within the <c>Blob</c> (or<br/><c>Blob</c>-based object, such as a <see cref="File"/>).</value>
 </BlobSize>
+<BlobSlice>
+<summary>
+The <strong><c>slice()</c></strong> method of the <see cref="Blob"/> interface<br/>creates and returns a new <c>Blob</c> object which contains data from a subset of<br/>the blob on which it&amp;apos;s called.
+</summary>
+<remarks>
+<para>-<see cref="Blob"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="Blob"/> object containing the specified subset of the data contained<br/>within the blob on which this method was called. The original blob is not altered.</returns>
+</BlobSlice>
 <BlobStream>
 <summary>
 The <strong><c>stream()</c></strong> method of the <see cref="Blob"/> interface returns a <see cref="ReadableStream"/> which upon reading returns the data contained within the <c>Blob</c>.
@@ -49,25 +77,6 @@ The <strong><c>text()</c></strong> method of the<br/><see cref="Blob"/> interfac
 </remarks>
 <returns>A promise that resolves with a string which contains the blob&amp;apos;s data<br/>as a text string. The data is <strong>always</strong> presumed to be in UTF-8 format.</returns>
 </BlobText>
-<BlobSlice>
-<summary>
-The <strong><c>slice()</c></strong> method of the <see cref="Blob"/> interface<br/>creates and returns a new <c>Blob</c> object which contains data from a subset of<br/>the blob on which it&amp;apos;s called.
-</summary>
-<remarks>
-<para>-<see cref="Blob"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="Blob"/> object containing the specified subset of the data contained<br/>within the blob on which this method was called. The original blob is not altered.</returns>
-</BlobSlice>
-<BlobBlob>
-<summary>
-The <strong><c>Blob()</c></strong> constructor returns a<br/>new <see cref="Blob"/> object. The content of the blob consists of the concatenation<br/>of the values given in the parameter <c>blobParts</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="Blob"/> object containing the specified data.</returns>
-</BlobBlob>
 <BlobType>
 <summary>
 The <strong><c>type</c></strong> read-only property of the <see cref="Blob"/> interface returns the {{Glossary("MIME type")}} of the file.
@@ -79,13 +88,4 @@ The <strong><c>type</c></strong> read-only property of the <see cref="Blob"/> in
 </remarks>
 <value>A string containing the file&amp;apos;s MIME type, or an empty string if the<br/>type could not be determined.</value>
 </BlobType>
-<BlobBytes>
-<summary>
-The <strong><c>bytes()</c></strong> method of the <see cref="Blob"/> interface returns a {{jsxref("Promise")}} that resolves with a {{jsxref("Uint8Array")}} containing the contents of the blob as an array of bytes.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/bytes"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that fulfills with a <see cref="Uint8Array"/> object containing the blob data.</returns>
-</BlobBytes>
 </docs>

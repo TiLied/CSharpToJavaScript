@@ -9,6 +9,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SnapEvent>
+<SnapEventSnapEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SnapEvent()</c></strong> constructor creates a new<br/><see cref="SnapEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent/SnapEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SnapEventSnapEvent>
 <SnapEventSnapTargetBlock>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>snapTargetBlock</c></strong> read-only property of the<br/><see cref="SnapEvent"/> interface returns a reference to the element snapped to in the block direction when the event fired.
@@ -31,13 +40,4 @@
 </remarks>
 <value>A <see cref="Node"/> representing the snapped element, or <c>null</c> if scroll snapping only occurs in the block direction so no element is snapped to in the inline direction.If the snapped element was a pseudo-element, the returned <c>Node</c> will be the owning element of that pseudo-element.</value>
 </SnapEventSnapTargetInline>
-<SnapEventSnapEvent>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SnapEvent()</c></strong> constructor creates a new<br/><see cref="SnapEvent"/> object instance.
-</summary>
-<remarks>
-<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent/SnapEvent"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</SnapEventSnapEvent>
 </docs>

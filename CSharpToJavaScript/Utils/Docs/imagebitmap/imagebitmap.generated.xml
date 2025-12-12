@@ -9,24 +9,6 @@ The <strong><c>ImageBitmap</c></strong> interface represents a bitmap image whic
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ImageBitmap>
-<ImageBitmapWidth>
-<summary>
-The <strong><c>ImageBitmap.width</c></strong> read-only property returns the <see cref="ImageBitmap"/> object's width in CSS pixels.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number represents the <see cref="ImageBitmap"/> object's width in CSS pixels.</value>
-</ImageBitmapWidth>
-<ImageBitmapHeight>
-<summary>
-The <strong><c>ImageBitmap.height</c></strong> read-only property returns the <see cref="ImageBitmap"/> object's height in CSS pixels.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number represents the <see cref="ImageBitmap"/> object's height in CSS pixels.</value>
-</ImageBitmapHeight>
 <ImageBitmapClose>
 <summary>
 The <strong><c>ImageBitmap.close()</c></strong><br/>method disposes of all graphical resources associated with an <c>ImageBitmap</c>.
@@ -37,4 +19,22 @@ The <strong><c>ImageBitmap.close()</c></strong><br/>method disposes of all graph
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </ImageBitmapClose>
+<ImageBitmapHeight>
+<summary>
+The <strong><c>ImageBitmap.height</c></strong> read-only property returns the <see cref="ImageBitmap"/> object's height in CSS pixels.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number represents the <see cref="ImageBitmap"/> object's height in CSS pixels.</value>
+</ImageBitmapHeight>
+<ImageBitmapWidth>
+<summary>
+The <strong><c>ImageBitmap.width</c></strong> read-only property returns the <see cref="ImageBitmap"/> object's width in CSS pixels.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number represents the <see cref="ImageBitmap"/> object's width in CSS pixels.</value>
+</ImageBitmapWidth>
 </docs>

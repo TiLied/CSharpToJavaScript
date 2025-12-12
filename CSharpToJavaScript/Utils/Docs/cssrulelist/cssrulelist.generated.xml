@@ -9,15 +9,6 @@ A <c>CSSRuleList</c> represents an ordered collection of read-only <see cref="CS
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSRuleList>
-<CSSRuleListLength>
-<summary>
-The <strong><c>length</c></strong> property of the <see cref="CSSRuleList"/> interface returns the number of <see cref="CSSRule"/> objects in the list.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</CSSRuleListLength>
 <CSSRuleListItem>
 <summary>
 The <strong><c>item()</c></strong> method of the <see cref="CSSRuleList"/> interface returns the <see cref="CSSRule"/> object at the specified <c>index</c> or <c>null</c> if the specified <c>index</c> doesn&amp;apos;t exist.
@@ -27,4 +18,13 @@ The <strong><c>item()</c></strong> method of the <see cref="CSSRuleList"/> inter
 </remarks>
 <returns>A <see cref="CSSRule"/>.</returns>
 </CSSRuleListItem>
+<CSSRuleListLength>
+<summary>
+The <strong><c>length</c></strong> property of the <see cref="CSSRuleList"/> interface returns the number of <see cref="CSSRule"/> objects in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</CSSRuleListLength>
 </docs>

@@ -8,6 +8,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DelegatedInkTrailPresenter>
+<DelegatedInkTrailPresenterExpectedImprovement>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>expectedImprovement</c></strong> read-only property of the <see cref="DelegatedInkTrailPresenter"/> interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter/expectedImprovement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</DelegatedInkTrailPresenterExpectedImprovement>
 <DelegatedInkTrailPresenterPresentationArea>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>presentationArea</c></strong> read-only property of the <see cref="DelegatedInkTrailPresenter"/> interface returns the <see cref="Element"/> inside which rendering of ink strokes is confined.
@@ -27,13 +36,4 @@
 </remarks>
 <returns><c>undefined</c>.</returns>
 </DelegatedInkTrailPresenterUpdateInkTrailStartPoint>
-<DelegatedInkTrailPresenterExpectedImprovement>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>expectedImprovement</c></strong> read-only property of the <see cref="DelegatedInkTrailPresenter"/> interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter/expectedImprovement"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number.</value>
-</DelegatedInkTrailPresenterExpectedImprovement>
 </docs>

@@ -9,32 +9,6 @@ The <strong><c>HTMLFormElement</c></strong> interface represents a <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLFormElement>
-<HTMLFormElementReset>
-<summary>
-The <strong><c>reset</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is reset.
-</summary>
-<remarks>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLFormElementReset>
-<HTMLFormElementEncoding>
-<summary>
-The <strong><c>HTMLFormElement.encoding</c></strong> property is an alternative name for the <see cref="HTMLFormElement.Enctype"/> element on the DOM <see cref="HTMLFormElement"/> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/encoding"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HTMLFormElementEncoding>
-<HTMLFormElementTarget>
-<summary>
-The <strong><c>target</c></strong> property of the <see cref="HTMLFormElement"/><br/>interface represents the target of the form&amp;apos;s action (i.e., the frame in which to render<br/>its output).
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/target"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLFormElementTarget>
 <HTMLFormElementAcceptCharset>
 <summary>
 The <strong><c>HTMLFormElement.acceptCharset</c></strong> property represents the <see href="https://developer.mozilla.org/en-US/docs/Glossary/character encoding">character encoding</see> for the given {{htmlelement("form")}} element.
@@ -45,26 +19,65 @@ The <strong><c>HTMLFormElement.acceptCharset</c></strong> property represents th
 </remarks>
 <value>A string which may be a case-insensitive match for <c>UTF-8</c>.</value>
 </HTMLFormElementAcceptCharset>
-<HTMLFormElementMethod>
+<HTMLFormElementAction>
 <summary>
-The <strong><c>HTMLFormElement.method</c></strong> property represents the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> method used to submit the {{HtmlElement("form")}}.
+The <strong><c>HTMLFormElement.action</c></strong> property represents the action<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element.
 </summary>
 <remarks>
-<para>Unless explicitly specified, the default method is &amp;apos;get&amp;apos;.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method"> <em>See also on MDN</em> </seealso></para>
+<para>The action of a form is the program that is executed on the server when the form is<br/>submitted. This property can be retrieved or set.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</HTMLFormElementMethod>
-<HTMLFormElementSubmit>
+</HTMLFormElementAction>
+<HTMLFormElementAutocomplete>
 <summary>
-The <strong><c>submit</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is submitted.
+The <strong><c>autocomplete</c></strong> property of the <see cref="HTMLFormElement"/> interface indicates whether the value of the form's controls can be automatically completed by the browser. It reflects the {{htmlelement("form")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute.
 </summary>
 <remarks>
-<para>Note that the <c>submit</c> event fires on the <c>&amp;lt;form&amp;gt;</c> element itself, and not on any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> or <c>{{HtmlElement(&amp;apos;input/submit&amp;apos;, &amp;apos;&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;&amp;apos;)}}</c> inside it. However, the <see cref="SubmitEvent"/> which is sent to indicate the form's submit action has been triggered includes a <see cref="SubmitEvent.Submitter"/> property, which is the button that was invoked to trigger the submit request.</para><para>The <c>submit</c> event fires when:</para><para>However, the event is <strong>not</strong> sent to the form when a script calls the <see cref="HTMLFormElement.Submit"/> method directly.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Trying to submit a form that does not pass <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">validation</see> triggers an <see cref="HTMLInputElementinvalid"/> event. In this case, the validation prevents form submission, and thus there is no <c>submit</c> event.</para></blockquote>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/>-Related event: <see cref="HTMLInputElementinvalid"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute<br/>-ARIA <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion">Turning off autocompletion</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/autocomplete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLFormElementSubmit>
+<value>A string; the value <c>&amp;quot;off&amp;quot;</c> if explicitly set to <c>&amp;quot;off&amp;quot;</c>, and otherwise always <c>&amp;quot;on&amp;quot;</c>.</value>
+</HTMLFormElementAutocomplete>
+<HTMLFormElementCheckValidity>
+<summary>
+The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLFormElement"/> interface returns a boolean value which indicates if all associated controls meet any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to them. The method also fires an <see cref="HTMLElementinvalid"/> event on each invalid element, but not on the form element itself. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> CSS pseudo-classes are applied to <c>&amp;lt;form&amp;gt;</c> elements based on the validity of its owned form controls, not the validity of the <c>&amp;lt;form&amp;gt;</c> element itself.</para></blockquote>
+<para>-<see cref="HTMLFormElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the associated controls&amp;apos; values have no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLFormElementCheckValidity>
+<HTMLFormElementElements>
+<summary>
+The <strong><c>elements</c></strong> property of the <see cref="HTMLFormElement"/> interface returns an <see cref="HTMLFormControlsCollection"/> listing all the listed form controls associated with the {{HTMLElement("form")}} element.
+</summary>
+<remarks>
+<para>You can access a particular form control in the returned collection by using either an index or the element&amp;apos;s <c>name</c> or <c>id</c> attributes.</para><para>Prior to HTML 5, the returned object was an <see cref="HTMLCollection"/>, on which <c>HTMLFormControlsCollection</c> is based.</para><para>Independently, you can obtain just the number of associated form controls using the <see cref="HTMLFormElement.Length"/> property. You can get a list of all of the forms contained within a given document using the document's <see cref="Document.Forms"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormControlsCollection"/> containing all non-image controls associated with the form.<br/>This is a live collection; if form controls are associated with or disassociated from the form, this collection will update to reflect the change.The form controls in the returned collection are in the same order in which they appear in the document by following a preorder, depth-first traversal of the tree.<br/>This is called <strong>tree order</strong>.Only the following form controls are returned:</value>
+</HTMLFormElementElements>
+<HTMLFormElementEncoding>
+<summary>
+The <strong><c>HTMLFormElement.encoding</c></strong> property is an alternative name for the <see cref="HTMLFormElement.Enctype"/> element on the DOM <see cref="HTMLFormElement"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLFormElementEncoding>
+<HTMLFormElementEnctype>
+<summary>
+The <strong><c>HTMLFormElement.enctype</c></strong> property is the <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME_type">MIME_type</see> of content that is used<br/>to submit the form to the server. Possible values are:
+</summary>
+<remarks>
+<para>This value can be overridden by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formenctype"><c>formenctype</c></see> attribute<br/>on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLFormElementEnctype>
 <HTMLFormElementFormdata>
 <summary>
 The <strong><c>formdata</c></strong> event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a <see cref="FormData.FormData"/> constructor.
@@ -85,47 +98,26 @@ The <strong><c>HTMLFormElement.length</c></strong><br/>read-only property return
 </remarks>
 <value>A number.</value>
 </HTMLFormElementLength>
-<HTMLFormElementAction>
+<HTMLFormElementMethod>
 <summary>
-The <strong><c>HTMLFormElement.action</c></strong> property represents the action<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element.
+The <strong><c>HTMLFormElement.method</c></strong> property represents the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> method used to submit the {{HtmlElement("form")}}.
 </summary>
 <remarks>
-<para>The action of a form is the program that is executed on the server when the form is<br/>submitted. This property can be retrieved or set.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action"> <em>See also on MDN</em> </seealso></para>
+<para>Unless explicitly specified, the default method is &amp;apos;get&amp;apos;.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</HTMLFormElementAction>
-<HTMLFormElementSubmit>
+</HTMLFormElementMethod>
+<HTMLFormElementName>
 <summary>
-The <strong><c>HTMLFormElement.submit()</c></strong> method submits a given<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>.
+The <strong><c>HTMLFormElement.name</c></strong> property represents the name of<br/>the current <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element as a string.
 </summary>
 <remarks>
-<para>This method is similar, but not identical to, activating a form&amp;apos;s submit<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>. When invoking this method directly, however:</para><para>The <see cref="HTMLFormElement.RequestSubmit"/> method is identical to activating a<br/>form's submit <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> and does not have these differences.</para><para>A form control (such as a submit button) with a <c>name</c> or <c>id</c> of <c>submit</c> will mask the form&amp;apos;s <c>submit</c> method. Trying to call <c>myForm.submit();</c> throws an error &amp;quot;submit is not a function&amp;quot; because in this case <c>submit</c> refers to the form control which has a <c>name</c> or <c>id</c> of <c>submit</c>.</para><para><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> with attribute type="submit" will not be submitted with the<br/>form when using <strong><c>HTMLFormElement.submit()</c></strong>, but it would be<br/>submitted when you do it with original HTML form submit.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLFormElementSubmit>
-<HTMLFormElementEnctype>
-<summary>
-The <strong><c>HTMLFormElement.enctype</c></strong> property is the <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME_type">MIME_type</see> of content that is used<br/>to submit the form to the server. Possible values are:
-</summary>
-<remarks>
-<para>This value can be overridden by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formenctype"><c>formenctype</c></see> attribute<br/>on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype"> <em>See also on MDN</em> </seealso></para>
+<para>If your <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see> element contains an element named <strong>name</strong> then<br/>that element overrides the <c>form.name</c> property, so that you can&amp;apos;t access it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
-</HTMLFormElementEnctype>
-<HTMLFormElementRelList>
-<summary>
-The <strong><c>relList</c></strong> read-only property of the <see cref="HTMLFormElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
-</summary>
-<remarks>
-<para>The property itself is read-only, meaning you can not reassign the property with another <see cref="DOMTokenList"/>, but the content of the returned list can be changed.</para><para>To retrieve a string containing the values as space-separated tokens, use <see cref="HTMLFormElement.Rel"/>. The <c>rel</c> property can also be used to set the <c>rel</c> attribute value.</para>
-<para>-<see cref="HTMLAnchorElement.RelList"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/>-<see cref="HTMLFormElement.Rel"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/relList"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A live <see cref="DOMTokenList"/> of strings.</value>
-</HTMLFormElementRelList>
+</HTMLFormElementName>
 <HTMLFormElementNoValidate>
 <summary>
 The <strong><c>noValidate</c></strong> property of the <see cref="HTMLFormElement"/> interface is a boolean value indicating if the {{htmlelement("form")}} will bypass <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> when submitted. It reflects the <c>&amp;lt;form&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#novalidate"><c>novalidate</c></see> attribute; if the attribute present, the value is <c>true</c>.
@@ -148,36 +140,17 @@ The <strong><c>rel</c></strong> property of the <see cref="HTMLFormElement"/> in
 </remarks>
 <value>A string.</value>
 </HTMLFormElementRel>
-<HTMLFormElementAutocomplete>
+<HTMLFormElementRelList>
 <summary>
-The <strong><c>autocomplete</c></strong> property of the <see cref="HTMLFormElement"/> interface indicates whether the value of the form's controls can be automatically completed by the browser. It reflects the {{htmlelement("form")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute.
+The <strong><c>relList</c></strong> read-only property of the <see cref="HTMLFormElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute<br/>-ARIA <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion">Turning off autocompletion</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/autocomplete"> <em>See also on MDN</em> </seealso></para>
+<para>The property itself is read-only, meaning you can not reassign the property with another <see cref="DOMTokenList"/>, but the content of the returned list can be changed.</para><para>To retrieve a string containing the values as space-separated tokens, use <see cref="HTMLFormElement.Rel"/>. The <c>rel</c> property can also be used to set the <c>rel</c> attribute value.</para>
+<para>-<see cref="HTMLAnchorElement.RelList"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/>-<see cref="HTMLFormElement.Rel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string; the value <c>&amp;quot;off&amp;quot;</c> if explicitly set to <c>&amp;quot;off&amp;quot;</c>, and otherwise always <c>&amp;quot;on&amp;quot;</c>.</value>
-</HTMLFormElementAutocomplete>
-<HTMLFormElementRequestSubmit>
-<summary>
-The <see cref="HTMLFormElement"/> method <strong><c>requestSubmit()</c></strong> requests<br/>that the form be submitted using a specific submit button.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HTMLFormElementRequestSubmit>
-<HTMLFormElementCheckValidity>
-<summary>
-The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLFormElement"/> interface returns a boolean value which indicates if all associated controls meet any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to them. The method also fires an <see cref="HTMLElementinvalid"/> event on each invalid element, but not on the form element itself. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> CSS pseudo-classes are applied to <c>&amp;lt;form&amp;gt;</c> elements based on the validity of its owned form controls, not the validity of the <c>&amp;lt;form&amp;gt;</c> element itself.</para></blockquote>
-<para>-<see cref="HTMLFormElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns <c>true</c> if the associated controls&amp;apos; values have no validity problems; otherwise, returns <c>false</c>.</returns>
-</HTMLFormElementCheckValidity>
+<value>A live <see cref="DOMTokenList"/> of strings.</value>
+</HTMLFormElementRelList>
 <HTMLFormElementReportValidity>
 <summary>
 The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLFormElement"/> interface performs the same validity checking steps as the <see cref="HTMLFormElement.CheckValidity"/> method. In addition, for each <see cref="HTMLElementinvalid"/> event that was fired and not canceled, the browser displays the problem to the user.
@@ -188,26 +161,15 @@ The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLFormEl
 </remarks>
 <returns>Returns <c>true</c> if the associated controls&amp;apos; values have no validity problems; otherwise, returns <c>false</c>.</returns>
 </HTMLFormElementReportValidity>
-<HTMLFormElementName>
+<HTMLFormElementRequestSubmit>
 <summary>
-The <strong><c>HTMLFormElement.name</c></strong> property represents the name of<br/>the current <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element as a string.
+The <see cref="HTMLFormElement"/> method <strong><c>requestSubmit()</c></strong> requests<br/>that the form be submitted using a specific submit button.
 </summary>
 <remarks>
-<para>If your <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see> element contains an element named <strong>name</strong> then<br/>that element overrides the <c>form.name</c> property, so that you can&amp;apos;t access it.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
-</HTMLFormElementName>
-<HTMLFormElementElements>
-<summary>
-The <strong><c>elements</c></strong> property of the <see cref="HTMLFormElement"/> interface returns an <see cref="HTMLFormControlsCollection"/> listing all the listed form controls associated with the {{HTMLElement("form")}} element.
-</summary>
-<remarks>
-<para>You can access a particular form control in the returned collection by using either an index or the element&amp;apos;s <c>name</c> or <c>id</c> attributes.</para><para>Prior to HTML 5, the returned object was an <see cref="HTMLCollection"/>, on which <c>HTMLFormControlsCollection</c> is based.</para><para>Independently, you can obtain just the number of associated form controls using the <see cref="HTMLFormElement.Length"/> property. You can get a list of all of the forms contained within a given document using the document's <see cref="Document.Forms"/> property.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="HTMLFormControlsCollection"/> containing all non-image controls associated with the form.<br/>This is a live collection; if form controls are associated with or disassociated from the form, this collection will update to reflect the change.The form controls in the returned collection are in the same order in which they appear in the document by following a preorder, depth-first traversal of the tree.<br/>This is called <strong>tree order</strong>.Only the following form controls are returned:</value>
-</HTMLFormElementElements>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFormElementRequestSubmit>
 <HTMLFormElementReset>
 <summary>
 The <strong><c>HTMLFormElement.reset()</c></strong> method restores a form<br/>element&amp;apos;s default values. This method does the same thing as clicking the form&amp;apos;s<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/reset"><c>&amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;</c></see> control.
@@ -218,4 +180,42 @@ The <strong><c>HTMLFormElement.reset()</c></strong> method restores a form<br/>e
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HTMLFormElementReset>
+<HTMLFormElementReset>
+<summary>
+The <strong><c>reset</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is reset.
+</summary>
+<remarks>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLFormElementReset>
+<HTMLFormElementSubmit>
+<summary>
+The <strong><c>HTMLFormElement.submit()</c></strong> method submits a given<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>.
+</summary>
+<remarks>
+<para>This method is similar, but not identical to, activating a form&amp;apos;s submit<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>. When invoking this method directly, however:</para><para>The <see cref="HTMLFormElement.RequestSubmit"/> method is identical to activating a<br/>form's submit <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> and does not have these differences.</para><para>A form control (such as a submit button) with a <c>name</c> or <c>id</c> of <c>submit</c> will mask the form&amp;apos;s <c>submit</c> method. Trying to call <c>myForm.submit();</c> throws an error &amp;quot;submit is not a function&amp;quot; because in this case <c>submit</c> refers to the form control which has a <c>name</c> or <c>id</c> of <c>submit</c>.</para><para><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> with attribute type="submit" will not be submitted with the<br/>form when using <strong><c>HTMLFormElement.submit()</c></strong>, but it would be<br/>submitted when you do it with original HTML form submit.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFormElementSubmit>
+<HTMLFormElementSubmit>
+<summary>
+The <strong><c>submit</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is submitted.
+</summary>
+<remarks>
+<para>Note that the <c>submit</c> event fires on the <c>&amp;lt;form&amp;gt;</c> element itself, and not on any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> or <c>{{HtmlElement(&amp;apos;input/submit&amp;apos;, &amp;apos;&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;&amp;apos;)}}</c> inside it. However, the <see cref="SubmitEvent"/> which is sent to indicate the form's submit action has been triggered includes a <see cref="SubmitEvent.Submitter"/> property, which is the button that was invoked to trigger the submit request.</para><para>The <c>submit</c> event fires when:</para><para>However, the event is <strong>not</strong> sent to the form when a script calls the <see cref="HTMLFormElement.Submit"/> method directly.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Trying to submit a form that does not pass <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">validation</see> triggers an <see cref="HTMLInputElementinvalid"/> event. In this case, the validation prevents form submission, and thus there is no <c>submit</c> event.</para></blockquote>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/>-Related event: <see cref="HTMLInputElementinvalid"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLFormElementSubmit>
+<HTMLFormElementTarget>
+<summary>
+The <strong><c>target</c></strong> property of the <see cref="HTMLFormElement"/><br/>interface represents the target of the form&amp;apos;s action (i.e., the frame in which to render<br/>its output).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLFormElementTarget>
 </docs>

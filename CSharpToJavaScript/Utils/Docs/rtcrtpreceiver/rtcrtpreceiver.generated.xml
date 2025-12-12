@@ -8,6 +8,72 @@ The <strong><c>RTCRtpReceiver</c></strong> interface of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCRtpReceiver>
+<RTCRtpReceiverGetCapabilities>
+<summary>
+The <strong>static method</strong> <strong><c>RTCRtpReceiver.getCapabilities()</c></strong> returns an object describing the codec and header extension capabilities supported by <see cref="RTCRtpReceiver"/> objects on the current device.
+</summary>
+<remarks>
+<para>You can, similarly, obtain the capabilities of <see cref="RTCRtpSender"/> objects by calling the static function <see cref="RTCRtpSender.GetCapabilities"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new object that indicates what capabilities the browser has for receiving the specified media kind over an <see cref="RTCPeerConnection"/>.<br/>If the browser doesn&amp;apos;t have any support for the given media <c>kind</c>, the returned value is <c>null</c>.The returned object has the following properties:</returns>
+</RTCRtpReceiverGetCapabilities>
+<RTCRtpReceiverGetContributingSources>
+<summary>
+The <strong><c>getContributingSources()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an array of objects, each corresponding to one CSRC (contributing source) identifier received by the current <c>RTCRtpReceiver</c> in the last ten seconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of objects, each describing one of the contributing sources that provided data to the incoming stream in the past ten seconds.<br/>These objects contain the following properties:</returns>
+</RTCRtpReceiverGetContributingSources>
+<RTCRtpReceiverGetParameters>
+<summary>
+The <strong><c>getParameters()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an object describing the current configuration for how the receiver's <see cref="RTCRtpReceiver.Track"/> is decoded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object indicating the current configuration of the receiver.</returns>
+</RTCRtpReceiverGetParameters>
+<RTCRtpReceiverGetStats>
+<summary>
+The <see cref="RTCRtpReceiver"/> method <strong><c>getStats()</c></strong> asynchronously requests an <see cref="RTCStatsReport"/> object which provides statistics about incoming traffic on the owning <see cref="RTCPeerConnection"/>, returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the results are available.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCStatsReport"/><br/>-<see cref="RTCRtpSender.GetStats"/><br/>-<see cref="RTCPeerConnection.GetStats"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JavaScript <see cref="Promise"/> which is fulfilled once the statistics are available.<br/>The promise's fulfillment handler receives as a parameter a <see cref="RTCStatsReport"/> object containing the collected statistics.The returned statistics include those from all streams which are coming in through the <c>RTCRtpReceiver</c>, as well as any of their dependencies.These might include, for example, statistics with <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">types</see>: <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats"><c>inbound-rtp</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats"><c>candidate-pair</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>local-candidate</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>remote-candidate</c></see>.</returns>
+</RTCRtpReceiverGetStats>
+<RTCRtpReceiverGetSynchronizationSources>
+<summary>
+The <strong><c>getSynchronizationSources()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an array of objects, each corresponding to one SSRC (synchronization source) identifier received by the current <c>RTCRtpReceiver</c> in the last ten seconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of objects, each describing one of the synchronization sources that provided data to the incoming stream in the past ten seconds.<br/>These objects contain the following properties:</returns>
+</RTCRtpReceiverGetSynchronizationSources>
+<RTCRtpReceiverJitterBufferTarget>
+<summary>
+The <strong><c>jitterBufferTarget</c></strong> property of the <see cref="RTCRtpReceiver"/> interface is a <see cref="DOMHighResTimeStamp"/> that indicates the application's preferred duration, in milliseconds, for which the {{glossary("jitter","jitter buffer")}} should hold media before playing it out.
+</summary>
+<remarks>
+<para>The application can use it to influence the tradeoff between playout delay and the risk of running out of audio or video frames due to network jitter.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/jitterBufferTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> that indicates the current jitter buffer target hold time, in milliseconds.The value can be set to a positive value of no greater than 4000 milliseconds.</value>
+</RTCRtpReceiverJitterBufferTarget>
+<RTCRtpReceiverTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of the<br/><see cref="RTCRtpReceiver"/> interface returns the <see cref="MediaStreamTrack"/><br/>associated with the current <see cref="RTCRtpReceiver"/> instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStreamTrack"/> instance.</value>
+</RTCRtpReceiverTrack>
 <RTCRtpReceiverTransform>
 <summary>
 The <strong><c>transform</c></strong> property of the <see cref="RTCRtpReceiver"/> object is used to insert a transform stream (<see cref="TransformStream"/>) running in a worker thread into the receiver pipeline.<br/>This allows stream transforms to be applied to encoded video and audio frames as they arrive from the packetizer (before they are played/rendered).
@@ -19,63 +85,6 @@ The <strong><c>transform</c></strong> property of the <see cref="RTCRtpReceiver"
 </remarks>
 <value>A <see cref="RTCRtpScriptTransform"/>&amp;lt;!-- or {{domxref(&amp;quot;SFrameTransform&amp;quot;)}} --&amp;gt;, or <c>null</c> if the receiver has no associated transform stream.</value>
 </RTCRtpReceiverTransform>
-<RTCRtpReceiverGetContributingSources>
-<summary>
-The <strong><c>getContributingSources()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an array of objects, each corresponding to one CSRC (contributing source) identifier received by the current <c>RTCRtpReceiver</c> in the last ten seconds.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of objects, each describing one of the contributing sources that provided data to the incoming stream in the past ten seconds.<br/>These objects contain the following properties:</returns>
-</RTCRtpReceiverGetContributingSources>
-<RTCRtpReceiverTrack>
-<summary>
-The <strong><c>track</c></strong> read-only property of the<br/><see cref="RTCRtpReceiver"/> interface returns the <see cref="MediaStreamTrack"/><br/>associated with the current <see cref="RTCRtpReceiver"/> instance.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/track"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="MediaStreamTrack"/> instance.</value>
-</RTCRtpReceiverTrack>
-<RTCRtpReceiverJitterBufferTarget>
-<summary>
-The <strong><c>jitterBufferTarget</c></strong> property of the <see cref="RTCRtpReceiver"/> interface is a <see cref="DOMHighResTimeStamp"/> that indicates the application's preferred duration, in milliseconds, for which the {{glossary("jitter","jitter buffer")}} should hold media before playing it out.
-</summary>
-<remarks>
-<para>The application can use it to influence the tradeoff between playout delay and the risk of running out of audio or video frames due to network jitter.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/jitterBufferTarget"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> that indicates the current jitter buffer target hold time, in milliseconds.The value can be set to a positive value of no greater than 4000 milliseconds.</value>
-</RTCRtpReceiverJitterBufferTarget>
-<RTCRtpReceiverGetSynchronizationSources>
-<summary>
-The <strong><c>getSynchronizationSources()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an array of objects, each corresponding to one SSRC (synchronization source) identifier received by the current <c>RTCRtpReceiver</c> in the last ten seconds.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of objects, each describing one of the synchronization sources that provided data to the incoming stream in the past ten seconds.<br/>These objects contain the following properties:</returns>
-</RTCRtpReceiverGetSynchronizationSources>
-<RTCRtpReceiverGetCapabilities>
-<summary>
-The <strong>static method</strong> <strong><c>RTCRtpReceiver.getCapabilities()</c></strong> returns an object describing the codec and header extension capabilities supported by <see cref="RTCRtpReceiver"/> objects on the current device.
-</summary>
-<remarks>
-<para>You can, similarly, obtain the capabilities of <see cref="RTCRtpSender"/> objects by calling the static function <see cref="RTCRtpSender.GetCapabilities"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new object that indicates what capabilities the browser has for receiving the specified media kind over an <see cref="RTCPeerConnection"/>.<br/>If the browser doesn&amp;apos;t have any support for the given media <c>kind</c>, the returned value is <c>null</c>.The returned object has the following properties:</returns>
-</RTCRtpReceiverGetCapabilities>
-<RTCRtpReceiverGetStats>
-<summary>
-The <see cref="RTCRtpReceiver"/> method <strong><c>getStats()</c></strong> asynchronously requests an <see cref="RTCStatsReport"/> object which provides statistics about incoming traffic on the owning <see cref="RTCPeerConnection"/>, returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the results are available.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCStatsReport"/><br/>-<see cref="RTCRtpSender.GetStats"/><br/>-<see cref="RTCPeerConnection.GetStats"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A JavaScript <see cref="Promise"/> which is fulfilled once the statistics are available.<br/>The promise's fulfillment handler receives as a parameter a <see cref="RTCStatsReport"/> object containing the collected statistics.The returned statistics include those from all streams which are coming in through the <c>RTCRtpReceiver</c>, as well as any of their dependencies.These might include, for example, statistics with <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">types</see>: <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats"><c>inbound-rtp</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats"><c>candidate-pair</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>local-candidate</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>remote-candidate</c></see>.</returns>
-</RTCRtpReceiverGetStats>
 <RTCRtpReceiverTransport>
 <summary>
 The read-only <strong><c>transport</c></strong> property of an<br/><see cref="RTCRtpReceiver"/> object provides the <see cref="RTCDtlsTransport"/> object<br/>used to interact with the underlying transport over which the receiver is exchanging<br/>Real-time Transport Control Protocol (<see href="https://developer.mozilla.org/en-US/docs/Glossary/RTCP">RTCP</see>) packets.
@@ -86,13 +95,4 @@ The read-only <strong><c>transport</c></strong> property of an<br/><see cref="RT
 </remarks>
 <value>An <see cref="RTCDtlsTransport"/> object representing the underlying transport being<br/>used by the receiver to exchange packets with the remote peer, or <c>null</c> if<br/>the receiver isn&amp;apos;t yet connected to a transport.</value>
 </RTCRtpReceiverTransport>
-<RTCRtpReceiverGetParameters>
-<summary>
-The <strong><c>getParameters()</c></strong> method of the <see cref="RTCRtpReceiver"/> interface returns an object describing the current configuration for how the receiver's <see cref="RTCRtpReceiver.Track"/> is decoded.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An object indicating the current configuration of the receiver.</returns>
-</RTCRtpReceiverGetParameters>
 </docs>

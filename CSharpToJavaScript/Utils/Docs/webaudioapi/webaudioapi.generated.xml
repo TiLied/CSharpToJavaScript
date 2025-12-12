@@ -1,0 +1,99 @@
+<docs>
+<Web_Audio_API>
+<summary>
+The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning) and much more.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_API>
+<Web_Audio_APIAdvanced_techniques>
+<summary>
+In this tutorial, we&amp;apos;re going to cover sound creation and modification, as well as timing and scheduling. We will introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you&amp;apos;re familiar with these terms and looking for an introduction to their application with the Web Audio API, you&amp;apos;ve come to the right place.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You can find the source code for the demo below on GitHub in the <see href="https://github.com/mdn/webaudio-examples/tree/main/step-sequencer">step-sequencer</see> subdirectory of the MDN <see href="https://github.com/mdn/webaudio-examples">webaudio-examples</see> repo. You can also see the <see href="https://mdn.github.io/webaudio-examples/step-sequencer/">live demo</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIAdvanced_techniques>
+<Web_Audio_APIBasic_concepts_behind_Web_Audio_API>
+<summary>
+This article explains some of the audio theory behind how the features of the Web Audio API work to help you make informed decisions while designing how your app routes audio. If you are not already a sound engineer, it will give you enough background to understand why the Web Audio API works as it does.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIBasic_concepts_behind_Web_Audio_API>
+<Web_Audio_APIBest_practices>
+<summary>
+There&amp;apos;s no strict right or wrong way when writing creative code. As long as you consider security, performance, and accessibility, you can adapt to your own style. In this article, we&amp;apos;ll share a number of <strong>best practices</strong> — guidelines, tips, and tricks for working with the Web Audio API.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIBest_practices>
+<Web_Audio_APIControlling_multiple_parameters_with_ConstantSourceNode>
+<summary>
+This article demonstrates how to use a <see cref="ConstantSourceNode"/> to link multiple parameters together so they share the same value, which can be changed by setting the value of the <see cref="ConstantSourceNode.Offset"/> parameter.
+</summary>
+<remarks>
+<para>You may sometimes want multiple audio parameters to be linked so they share the same value while being changed somehow. For example, perhaps you have a set of oscillators, two of which need to share the same configurable volume, or you have a filter applied to specific inputs but not all of them. You could use a loop and change the value of each affected <see cref="AudioParam"/> one at a time. Still, there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.</para><para>The solution is simple, and it involves using an audio node type that, at first glance, doesn't look all that useful: <see cref="ConstantSourceNode"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth">Simple synth keyboard</see> (example)<br/>-<see cref="OscillatorNode"/><br/>-<see cref="ConstantSourceNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIControlling_multiple_parameters_with_ConstantSourceNode>
+<Web_Audio_APISimple_synth>
+<summary>
+This article presents the code and working demo of a video keyboard you can play using the mouse. The keyboard allows you to switch among the standard waveforms as well as one custom waveform, and you can control the main gain using a volume slider beneath the keyboard. This example makes use of the following Web API interfaces: <see cref="AudioContext"/>, <see cref="OscillatorNode"/>, <see cref="PeriodicWave"/>, and <see cref="GainNode"/>.
+</summary>
+<remarks>
+<para>Because <see cref="OscillatorNode"/> is based on <see cref="AudioScheduledSourceNode"/>, this is to some extent an example for that as well.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see cref="OscillatorNode"/><br/>-<see cref="GainNode"/><br/>-<see cref="AudioContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APISimple_synth>
+<Web_Audio_APIUsing_AudioWorklet>
+<summary>
+This article explains how to create an audio worklet processor and use it in a Web Audio application.
+</summary>
+<remarks>
+<para>When the Web Audio API was first introduced to browsers, it included the ability to use JavaScript code to create custom audio processors that would be invoked to perform real-time audio manipulations. The drawback to <c>ScriptProcessorNode</c> was that it ran on the main thread, thus blocking everything else going on until it completed execution. This was far less than ideal, especially for something that can be as computationally expensive as audio processing.</para><para>Enter <see cref="AudioWorklet"/>. An audio context's audio worklet is a <see cref="Worklet"/> which runs off the main thread, executing audio processing code added to it by calling the context's <see cref="Worklet.AddModule"/> method. Calling <c>addModule()</c> loads the specified JavaScript file, which should contain the implementation of the audio processor. With the processor registered, you can create a new <see cref="AudioWorkletNode"/> which passes the audio through the processor's code when the node is linked into the chain of audio nodes along with any other audio nodes.</para><para>It&amp;apos;s worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using <see href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</see>, which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.chrome.com/blog/audio-worklet/">Enter Audio Worklet</see> (Chrome Developers blog)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIUsing_AudioWorklet>
+<Web_Audio_APIUsing_IIR_filters>
+<summary>
+The <strong><c>IIRFilterNode</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> is an <see cref="AudioNode"/> processor that implements a general <see href="https://en.wikipedia.org/wiki/Infinite_impulse_response">infinite impulse response</see> (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIUsing_IIR_filters>
+<Web_Audio_APIUsing_Web_Audio_API>
+<summary>
+Let&amp;apos;s take a look at getting started with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see>. We&amp;apos;ll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.
+</summary>
+<remarks>
+<para>The Web Audio API does not replace the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> media element, but rather complements it, just like <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> coexists alongside the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element. Your use case will determine what tools you use to implement audio. If you want to control playback of an audio track, the <c>&amp;lt;audio&amp;gt;</c> media element provides a better, quicker solution than the Web Audio API. If you want to carry out more complex audio processing, as well as playback, the Web Audio API provides much more power and control.</para><para>A powerful feature of the Web Audio API is that it does not have a strict &amp;quot;sound call limitation&amp;quot;. For example, there is no ceiling of 32 or 64 sound calls at one time. Some processors may be capable of playing more than 1,000 simultaneous sounds without stuttering.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIUsing_Web_Audio_API>
+<Web_Audio_APIVisualizations_with_Web_Audio_API>
+<summary>
+One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You can find working examples of all the code snippets in our <see href="https://mdn.github.io/webaudio-examples/voice-change-o-matic/">Voice-change-O-matic</see> demo.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIVisualizations_with_Web_Audio_API>
+<Web_Audio_APIWeb_audio_spatialization_basics>
+<summary>
+As if its extensive variety of sound processing (and other) options wasn&amp;apos;t enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game.<br/>The official term for this is <strong>spatialization</strong>, and this article will cover the basics of how to implement such a system.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Audio_APIWeb_audio_spatialization_basics>
+</docs>

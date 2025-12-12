@@ -9,6 +9,46 @@ The <strong><c>SecurityPolicyViolationEvent</c></strong> interface inherits from
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SecurityPolicyViolationEvent>
+<SecurityPolicyViolationEventBlockedURI>
+<summary>
+The <strong><c>blockedURI</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URI of the resource that was blocked because it violates a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>-<see cref="CSPViolationReportBody.BlockedURL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/blockedURI"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the URI of the blocked resource.</value>
+</SecurityPolicyViolationEventBlockedURI>
+<SecurityPolicyViolationEventColumnNumber>
+<summary>
+The <strong><c>columnNumber</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is the column number in the document or worker script at which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
+</summary>
+<remarks>
+<para>-<see cref="CSPViolationReportBody.ColumnNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/columnNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the column number where the violation occurred.</value>
+</SecurityPolicyViolationEventColumnNumber>
+<SecurityPolicyViolationEventDisposition>
+<summary>
+The <strong><c>disposition</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface indicates how the violated <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> is configured to be treated by the user agent.
+</summary>
+<remarks>
+<para>-<see cref="CSPViolationReportBody.Disposition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/disposition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Possible values are:</value>
+</SecurityPolicyViolationEventDisposition>
+<SecurityPolicyViolationEventDocumentURI>
+<summary>
+The <strong><c>documentURI</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URI of the document or worker in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
+</summary>
+<remarks>
+<para>-<see cref="CSPViolationReportBody.DocumentURL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/documentURI"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the URI of the document or worker in which the violation occurred.</value>
+</SecurityPolicyViolationEventDocumentURI>
 <SecurityPolicyViolationEventEffectiveDirective>
 <summary>
 The <strong><c>effectiveDirective</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> directive that was violated.
@@ -30,6 +70,16 @@ The <strong><c>lineNumber</c></strong> read-only property of the <see cref="Secu
 </remarks>
 <value>A number representing the line number at which the violation occurred.</value>
 </SecurityPolicyViolationEventLineNumber>
+<SecurityPolicyViolationEventOriginalPolicy>
+<summary>
+The <strong><c>originalPolicy</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> whose enforcement uncovered the violation.
+</summary>
+<remarks>
+<para>-<see cref="CSPViolationReportBody.OriginalPolicy"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/originalPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the policy whose enforcement uncovered the violation.This is the string in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header that contains the list of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives">directives</see> and their values that make the CSP policy.</value>
+</SecurityPolicyViolationEventOriginalPolicy>
 <SecurityPolicyViolationEventReferrer>
 <summary>
 The <strong><c>referrer</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the referrer for the resources whose <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> was violated.<br/>This will be a URL or <c>null</c>.
@@ -51,56 +101,6 @@ The <strong><c>sample</c></strong> read-only property of the <see cref="Security
 </remarks>
 <value>A string containing a sample of the resource that caused the violation, usually the first 40 characters, or the empty string.</value>
 </SecurityPolicyViolationEventSample>
-<SecurityPolicyViolationEventOriginalPolicy>
-<summary>
-The <strong><c>originalPolicy</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> whose enforcement uncovered the violation.
-</summary>
-<remarks>
-<para>-<see cref="CSPViolationReportBody.OriginalPolicy"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/originalPolicy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the policy whose enforcement uncovered the violation.This is the string in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header that contains the list of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives">directives</see> and their values that make the CSP policy.</value>
-</SecurityPolicyViolationEventOriginalPolicy>
-<SecurityPolicyViolationEventViolatedDirective>
-<summary>
-The <strong><c>violatedDirective</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> directive that was violated.
-</summary>
-<remarks>
-<para>This is a historical alias of <see cref="SecurityPolicyViolationEvent.EffectiveDirective"/>, and has the same value.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/violatedDirective"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives"><c>Content-Security-Policy</c> directive</see> that was violated.</value>
-</SecurityPolicyViolationEventViolatedDirective>
-<SecurityPolicyViolationEventSourceFile>
-<summary>
-The <strong><c>sourceFile</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URL of the script in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
-</summary>
-<remarks>
-<para>-<see cref="CSPViolationReportBody.SourceFile"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sourceFile"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the URL of the script in which the violation occurred, or <c>null</c> if the violation is not in a script.Note that both <c>columnNumber</c> and <c>lineNumber</c> should have non-null values if this property is not <c>null</c>.</value>
-</SecurityPolicyViolationEventSourceFile>
-<SecurityPolicyViolationEventDisposition>
-<summary>
-The <strong><c>disposition</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface indicates how the violated <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> is configured to be treated by the user agent.
-</summary>
-<remarks>
-<para>-<see cref="CSPViolationReportBody.Disposition"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/disposition"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>Possible values are:</value>
-</SecurityPolicyViolationEventDisposition>
-<SecurityPolicyViolationEventStatusCode>
-<summary>
-The <strong><c>statusCode</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a number representing the HTTP status code of the window or worker in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
-</summary>
-<remarks>
-<para>-<see cref="CSPViolationReportBody.StatusCode"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/statusCode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number representing the status code of the window or worker in which the violation occurred.</value>
-</SecurityPolicyViolationEventStatusCode>
 <SecurityPolicyViolationEventSecurityPolicyViolationEvent>
 <summary>
 The <strong><c>SecurityPolicyViolationEvent()</c></strong> constructor creates a new <see cref="SecurityPolicyViolationEvent"/> object.
@@ -111,34 +111,34 @@ The <strong><c>SecurityPolicyViolationEvent()</c></strong> constructor creates a
 </remarks>
 <returns>A new <c>SecurityPolicyViolationEvent</c> object.</returns>
 </SecurityPolicyViolationEventSecurityPolicyViolationEvent>
-<SecurityPolicyViolationEventDocumentURI>
+<SecurityPolicyViolationEventSourceFile>
 <summary>
-The <strong><c>documentURI</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URI of the document or worker in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
+The <strong><c>sourceFile</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URL of the script in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
 </summary>
 <remarks>
-<para>-<see cref="CSPViolationReportBody.DocumentURL"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/documentURI"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="CSPViolationReportBody.SourceFile"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sourceFile"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the URI of the document or worker in which the violation occurred.</value>
-</SecurityPolicyViolationEventDocumentURI>
-<SecurityPolicyViolationEventBlockedURI>
+<value>A string representing the URL of the script in which the violation occurred, or <c>null</c> if the violation is not in a script.Note that both <c>columnNumber</c> and <c>lineNumber</c> should have non-null values if this property is not <c>null</c>.</value>
+</SecurityPolicyViolationEventSourceFile>
+<SecurityPolicyViolationEventStatusCode>
 <summary>
-The <strong><c>blockedURI</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the URI of the resource that was blocked because it violates a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+The <strong><c>statusCode</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a number representing the HTTP status code of the window or worker in which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
 </summary>
 <remarks>
-<para>-<see cref="CSPViolationReportBody.BlockedURL"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/blockedURI"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="CSPViolationReportBody.StatusCode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/statusCode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the URI of the blocked resource.</value>
-</SecurityPolicyViolationEventBlockedURI>
-<SecurityPolicyViolationEventColumnNumber>
+<value>A number representing the status code of the window or worker in which the violation occurred.</value>
+</SecurityPolicyViolationEventStatusCode>
+<SecurityPolicyViolationEventViolatedDirective>
 <summary>
-The <strong><c>columnNumber</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is the column number in the document or worker script at which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation occurred.
+The <strong><c>violatedDirective</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> directive that was violated.
 </summary>
 <remarks>
-<para>-<see cref="CSPViolationReportBody.ColumnNumber"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/columnNumber"> <em>See also on MDN</em> </seealso></para>
+<para>This is a historical alias of <see cref="SecurityPolicyViolationEvent.EffectiveDirective"/>, and has the same value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/violatedDirective"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number representing the column number where the violation occurred.</value>
-</SecurityPolicyViolationEventColumnNumber>
+<value>A string representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives"><c>Content-Security-Policy</c> directive</see> that was violated.</value>
+</SecurityPolicyViolationEventViolatedDirective>
 </docs>

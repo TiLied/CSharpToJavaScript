@@ -9,6 +9,16 @@ The <strong><c>GamepadButton</c></strong> interface defines an individual button
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GamepadButton>
+<GamepadButtonPressed>
+<summary>
+The <strong><c>GamepadButton.pressed</c></strong> property of the<br/><see cref="GamepadButton"/> interface returns a <c>boolean</c> indicating whether<br/>the button is currently pressed (<c>true</c>) or unpressed (<c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton/pressed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</GamepadButtonPressed>
 <GamepadButtonTouched>
 <summary>
 The <strong><c>touched</c></strong> property of the<br/><see cref="GamepadButton"/> interface returns a <c>boolean</c> indicating whether<br/>a button capable of detecting touch is currently touched (<c>true</c>) or not touched (<c>false</c>).
@@ -31,14 +41,4 @@ The <strong><c>GamepadButton.value</c></strong> property of the<br/><see cref="G
 </remarks>
 <value>A double.</value>
 </GamepadButtonValue>
-<GamepadButtonPressed>
-<summary>
-The <strong><c>GamepadButton.pressed</c></strong> property of the<br/><see cref="GamepadButton"/> interface returns a <c>boolean</c> indicating whether<br/>the button is currently pressed (<c>true</c>) or unpressed (<c>false</c>).
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton/pressed"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</GamepadButtonPressed>
 </docs>

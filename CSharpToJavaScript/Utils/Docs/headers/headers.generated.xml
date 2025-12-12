@@ -9,81 +9,6 @@ The <strong><c>Headers</c></strong> interface of the <see href="https://develope
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Headers>
-<HeadersEntries>
-<summary>
-The <strong><c>Headers.entries()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all key/value pairs<br/>contained in this object. Both the key and value of each pair are<br/><see cref="String"/> objects.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/entries"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
-</HeadersEntries>
-<HeadersHas>
-<summary>
-The <strong><c>has()</c></strong> method of the <see cref="Headers"/> interface<br/>returns a boolean stating whether a <c>Headers</c> object contains a certain<br/>header.
-</summary>
-<remarks>
-<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/has"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A boolean value.</returns>
-</HeadersHas>
-<HeadersForEach>
-<summary>
-The <strong><c>Headers.forEach()</c></strong> method executes a callback function once per each key/value pair in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"><c>Headers</c></see> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach"><c>Map.prototype.forEach()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/forEach"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns><see cref="Undefined"/>.</returns>
-</HeadersForEach>
-<HeadersGetSetCookie>
-<summary>
-The <strong><c>getSetCookie()</c></strong> method of the <see cref="Headers"/> interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows <see cref="Headers"/> objects to handle having multiple <c>Set-Cookie</c> headers, which wasn&amp;apos;t possible prior to its implementation.
-</summary>
-<remarks>
-<para>This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see> header, as required by the Fetch spec, which defines <c>Set-Cookie</c> as a <see href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</see> that <see href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</see> from any response exposed to frontend code.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/getSetCookie"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An array of strings representing the values of all the different <c>Set-Cookie</c> headers associated with a response.If no <c>Set-Cookie</c> headers are set, the method will return an empty array (<c>[ ]</c>).</returns>
-</HeadersGetSetCookie>
-<HeadersGet>
-<summary>
-The <strong><c>get()</c></strong> method of the <see cref="Headers"/> interface<br/>returns a byte string of all the values of a header within a <c>Headers</c> object<br/>with a given name. If the requested header doesn&amp;apos;t exist in the <c>Headers</c><br/>object, it returns <c>null</c>.
-</summary>
-<remarks>
-<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/get"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="String"/> sequence representing the values of the retrieved header or<br/><c>null</c> if this header is not set.</returns>
-</HeadersGet>
-<HeadersDelete>
-<summary>
-The <strong><c>delete()</c></strong> method of the <see cref="Headers"/><br/>interface deletes a header from the current <c>Headers</c> object.
-</summary>
-<remarks>
-<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HeadersDelete>
-<HeadersSet>
-<summary>
-The <strong><c>set()</c></strong> method of the <see cref="Headers"/> interface<br/>sets a new value for an existing header inside a <c>Headers</c> object, or adds<br/>the header if it does not already exist.
-</summary>
-<remarks>
-<para>The difference between <c>set()</c> and <see cref="Headers.Append"/> is that if<br/>the specified header already exists and accepts multiple values, <c>set()</c><br/>overwrites the existing value with the new one, whereas <see cref="Headers.Append"/><br/>appends the new value to the end of the set of values.</para><para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/set"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</HeadersSet>
 <HeadersAppend>
 <summary>
 The <strong><c>append()</c></strong> method of the <see cref="Headers"/><br/>interface appends a new value onto an existing header inside a <c>Headers</c><br/>object, or adds the header if it does not already exist.
@@ -95,6 +20,79 @@ The <strong><c>append()</c></strong> method of the <see cref="Headers"/><br/>int
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </HeadersAppend>
+<HeadersDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="Headers"/><br/>interface deletes a header from the current <c>Headers</c> object.
+</summary>
+<remarks>
+<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HeadersDelete>
+<HeadersEntries>
+<summary>
+The <strong><c>Headers.entries()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all key/value pairs<br/>contained in this object. Both the key and value of each pair are<br/><see cref="String"/> objects.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</HeadersEntries>
+<HeadersForEach>
+<summary>
+The <strong><c>Headers.forEach()</c></strong> method executes a callback function once per each key/value pair in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"><c>Headers</c></see> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach"><c>Map.prototype.forEach()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="Undefined"/>.</returns>
+</HeadersForEach>
+<HeadersGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="Headers"/> interface<br/>returns a byte string of all the values of a header within a <c>Headers</c> object<br/>with a given name. If the requested header doesn&amp;apos;t exist in the <c>Headers</c><br/>object, it returns <c>null</c>.
+</summary>
+<remarks>
+<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="String"/> sequence representing the values of the retrieved header or<br/><c>null</c> if this header is not set.</returns>
+</HeadersGet>
+<HeadersGetSetCookie>
+<summary>
+The <strong><c>getSetCookie()</c></strong> method of the <see cref="Headers"/> interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows <see cref="Headers"/> objects to handle having multiple <c>Set-Cookie</c> headers, which wasn&amp;apos;t possible prior to its implementation.
+</summary>
+<remarks>
+<para>This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see> header, as required by the Fetch spec, which defines <c>Set-Cookie</c> as a <see href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</see> that <see href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</see> from any response exposed to frontend code.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/getSetCookie"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of strings representing the values of all the different <c>Set-Cookie</c> headers associated with a response.If no <c>Set-Cookie</c> headers are set, the method will return an empty array (<c>[ ]</c>).</returns>
+</HeadersGetSetCookie>
+<HeadersHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="Headers"/> interface<br/>returns a boolean stating whether a <c>Headers</c> object contains a certain<br/>header.
+</summary>
+<remarks>
+<para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value.</returns>
+</HeadersHas>
+<HeadersHeaders>
+<summary>
+The <strong><c>Headers()</c></strong> constructor creates a new<br/><see cref="Headers"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HeadersHeaders>
 <HeadersKeys>
 <summary>
 The <strong><c>Headers.keys()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all keys contained<br/>in this object. The keys are <see cref="String"/> objects.
@@ -105,6 +103,17 @@ The <strong><c>Headers.keys()</c></strong> method returns an<br/><see cref="Iter
 </remarks>
 <returns>Returns an <see cref="Iteration_protocols"/>.</returns>
 </HeadersKeys>
+<HeadersSet>
+<summary>
+The <strong><c>set()</c></strong> method of the <see cref="Headers"/> interface<br/>sets a new value for an existing header inside a <c>Headers</c> object, or adds<br/>the header if it does not already exist.
+</summary>
+<remarks>
+<para>The difference between <c>set()</c> and <see cref="Headers.Append"/> is that if<br/>the specified header already exists and accepts multiple values, <c>set()</c><br/>overwrites the existing value with the new one, whereas <see cref="Headers.Append"/><br/>appends the new value to the end of the set of values.</para><para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_request_header">Forbidden_request_header</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HeadersSet>
 <HeadersValues>
 <summary>
 The <strong><c>Headers.values()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all values contained<br/>in this object. The values are <see cref="String"/> objects.
@@ -115,13 +124,4 @@ The <strong><c>Headers.values()</c></strong> method returns an<br/><see cref="It
 </remarks>
 <returns>Returns an <see cref="Iteration_protocols"/>.</returns>
 </HeadersValues>
-<HeadersHeaders>
-<summary>
-The <strong><c>Headers()</c></strong> constructor creates a new<br/><see cref="Headers"/> object.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</HeadersHeaders>
 </docs>

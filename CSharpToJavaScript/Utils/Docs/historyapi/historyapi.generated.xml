@@ -1,0 +1,22 @@
+<docs>
+<History_API>
+<summary>
+The <strong>History API</strong> provides access to the browser&amp;apos;s session history (not to be confused with <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">WebExtensions history</see>) through the <see cref="Window.History"/> global object. It exposes useful methods and properties that let you navigate back and forth through the user's history, and manipulate the contents of the history stack.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This API is only available on the main thread (<see cref="Window"/>). It cannot be accessed in <see cref="Worker"/> or <see cref="Worklet"/> contexts.</para></blockquote>
+<para>-<see cref="Window.History"/> global object<br/>-<see cref="Windowpopstate"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</History_API>
+<History_APIWorking_with_the_History_API>
+<summary>
+The History API enables a website to interact with the browser&amp;apos;s session history: that is, the list of pages that the user has visited in a given window. As the user visits new pages, for example by clicking links, those new pages are added to the session history. The user can also move back and forth through the history using the browser&amp;apos;s &amp;quot;Back&amp;quot; and &amp;quot;Forward&amp;quot; buttons.
+</summary>
+<remarks>
+<para>The main interface defined in the History API is the <see cref="History"/> interface, and this defines two quite distinct sets of methods:</para><para>In this guide, we&amp;apos;ll cover only the second set of methods.</para><para>The <c>pushState()</c> method adds a new entry to the session history, while the <c>replaceState()</c> method updates the session history entry for the current page. Both these methods take a <c>state</c> parameter which can contain any {{Glossary("Serializable_object", "serializable object")}}. When the browser navigates to this history entry, the browser fires a <see cref="Window.Popstate"/> event, which contains the state object associated with that entry.</para><para>The main purpose of these APIs is to support websites like {{Glossary("SPA", "Single-page applications")}}, that use JavaScript APIs such as <see cref="Windowfetch"/> to update the page with new content, instead of loading a whole new page.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">History API</see><br/>-<see cref="Window.History"/> global object<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</History_APIWorking_with_the_History_API>
+</docs>

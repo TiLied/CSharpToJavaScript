@@ -9,16 +9,6 @@ The <strong><c>Crypto</c></strong> interface represents basic cryptography featu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Crypto>
-<CryptoSubtle>
-<summary>
-The <strong><c>Crypto.subtle</c></strong> read-only property returns a<br/><see cref="SubtleCrypto"/> which can then be used to perform low-level<br/>cryptographic operations.
-</summary>
-<remarks>
-<para>-<see cref="Crypto"/>.<br/>-<see cref="SubtleCrypto"/>.<br/>-<see href="https://vibornoff.github.io/webcrypto-examples/index.html">Compatibility test page</see>.<br/>-<see href="https://github.com/vibornoff/webcrypto-shim">Shim for IE11 and Safari</see>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="SubtleCrypto"/> object you can use to interact with the Web Crypto API's<br/>low-level cryptography features.</value>
-</CryptoSubtle>
 <CryptoGetRandomValues>
 <summary>
 The <strong><c>Crypto.getRandomValues()</c></strong> method lets you get cryptographically strong random values.<br/>The array given as the parameter is filled with random numbers (random in its cryptographic meaning).
@@ -40,4 +30,14 @@ The <strong><c>randomUUID()</c></strong> method of the <see cref="Crypto"/> inte
 </remarks>
 <returns>A string containing a randomly generated, 36 character long v4 UUID.</returns>
 </CryptoRandomUUID>
+<CryptoSubtle>
+<summary>
+The <strong><c>Crypto.subtle</c></strong> read-only property returns a<br/><see cref="SubtleCrypto"/> which can then be used to perform low-level<br/>cryptographic operations.
+</summary>
+<remarks>
+<para>-<see cref="Crypto"/>.<br/>-<see cref="SubtleCrypto"/>.<br/>-<see href="https://vibornoff.github.io/webcrypto-examples/index.html">Compatibility test page</see>.<br/>-<see href="https://github.com/vibornoff/webcrypto-shim">Shim for IE11 and Safari</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SubtleCrypto"/> object you can use to interact with the Web Crypto API's<br/>low-level cryptography features.</value>
+</CryptoSubtle>
 </docs>

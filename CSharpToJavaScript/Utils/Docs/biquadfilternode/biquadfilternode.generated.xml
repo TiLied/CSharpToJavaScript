@@ -9,16 +9,36 @@ The <c>BiquadFilterNode</c> interface represents a simple low-order filter, and 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BiquadFilterNode>
-<BiquadFilterNodeQ>
+<BiquadFilterNodeBiquadFilterNode>
 <summary>
-The <c>Q</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>, a double representing a <see href="https://en.wikipedia.org/wiki/Q_factor">Q factor</see>, or <strong>quality factor</strong>.
+The <strong><c>BiquadFilterNode()</c></strong><br/>constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>creates a new <see cref="BiquadFilterNode"/> object, which represents a simple<br/>low-order filter.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="BiquadFilterNode"/> object instance.</returns>
+</BiquadFilterNodeBiquadFilterNode>
+<BiquadFilterNodeDetune>
+<summary>
+The <c>detune</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing detuning of the frequency in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/Q"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="AudioParam"/>. Its <see cref="AudioParamdefaultValue"/> is <c>1</c>, and its <see cref="AudioParamminValue"/> and <see cref="AudioParammaxValue"/> are ±(2&amp;lt;sup&amp;gt;128&amp;lt;/sup&amp;gt; - 2&amp;lt;sup&amp;gt;104&amp;lt;/sup&amp;gt;), or approximately ±3.403e38. This is the range of single-precision floating-point numbers.Its actual value range depends on the filter's <see cref="BiquadFilterNodetype"/>:<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
-</BiquadFilterNodeQ>
+<value>An <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+</BiquadFilterNodeDetune>
+<BiquadFilterNodeFrequency>
+<summary>
+The <c>frequency</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> — a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
+</summary>
+<remarks>
+<para>Its default value is <c>350</c>, with a nominal range of <c>10</c> to the <see href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</see> — that is, half of the sample rate.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+</BiquadFilterNodeFrequency>
 <BiquadFilterNodeGain>
 <summary>
 The <c>gain</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> — a double representing the <see href="https://en.wikipedia.org/wiki/Gain">gain</see> used in the current filtering algorithm.
@@ -41,36 +61,16 @@ The <c>getFrequencyResponse()</c> method of the <see cref="BiquadFilterNode"/> i
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </BiquadFilterNodeGetFrequencyResponse>
-<BiquadFilterNodeBiquadFilterNode>
+<BiquadFilterNodeQ>
 <summary>
-The <strong><c>BiquadFilterNode()</c></strong><br/>constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>creates a new <see cref="BiquadFilterNode"/> object, which represents a simple<br/>low-order filter.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A new <see cref="BiquadFilterNode"/> object instance.</returns>
-</BiquadFilterNodeBiquadFilterNode>
-<BiquadFilterNodeFrequency>
-<summary>
-The <c>frequency</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> — a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
-</summary>
-<remarks>
-<para>Its default value is <c>350</c>, with a nominal range of <c>10</c> to the <see href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</see> — that is, half of the sample rate.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
-</BiquadFilterNodeFrequency>
-<BiquadFilterNodeDetune>
-<summary>
-The <c>detune</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing detuning of the frequency in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
+The <c>Q</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>, a double representing a <see href="https://en.wikipedia.org/wiki/Q_factor">Q factor</see>, or <strong>quality factor</strong>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/Q"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
-</BiquadFilterNodeDetune>
+<value>An <see cref="AudioParam"/>. Its <see cref="AudioParamdefaultValue"/> is <c>1</c>, and its <see cref="AudioParamminValue"/> and <see cref="AudioParammaxValue"/> are ±(2&amp;lt;sup&amp;gt;128&amp;lt;/sup&amp;gt; - 2&amp;lt;sup&amp;gt;104&amp;lt;/sup&amp;gt;), or approximately ±3.403e38. This is the range of single-precision floating-point numbers.Its actual value range depends on the filter's <see cref="BiquadFilterNodetype"/>:<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+</BiquadFilterNodeQ>
 <BiquadFilterNodeType>
 <summary>
 The <c>type</c> property of the <see cref="BiquadFilterNode"/> interface is a string (enum) value defining the kind of filtering algorithm the node is implementing.

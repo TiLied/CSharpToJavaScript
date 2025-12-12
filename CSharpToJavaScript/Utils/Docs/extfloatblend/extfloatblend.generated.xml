@@ -1,0 +1,12 @@
+<docs>
+<EXT_float_blend>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>&amp;apos;s <c>EXT_float_blend</c> extension allows blending and draw buffers with 32-bit floating-point components.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts. However, to use it, you need to enable the use of 32-bit floating-point draw buffers by enabling the extension <see cref="WEBGL_color_buffer_float"/> (for WebGL1) or <see cref="EXT_color_buffer_float"/> (for WebGL2). Doing so automatically enables <c>EXT_float_blend</c> as well, if and only if <c>EXT_float_blend</c> is also supported. Support for <c>EXT_color_buffer_float</c> does not imply support for <c>EXT_float_blend</c>.</para></blockquote><para>With this extension enabled, calling <see cref="WebGLRenderingContext.DrawArrays"/> or <see cref="WebGLRenderingContext.DrawElements"/> with blending enabled and a draw buffer with 32-bit floating-point components will no longer result in an <c>INVALID_OPERATION</c> error.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="EXT_color_buffer_float"/><br/>-<see cref="WEBGL_color_buffer_float"/><br/>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_float_blend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EXT_float_blend>
+</docs>

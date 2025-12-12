@@ -18,6 +18,16 @@ The <strong><c>abort()</c></strong> method of the <see cref="WritableStream"/> i
 </remarks>
 <returns>A <see cref="Promise"/>, which fulfills with the value given in the <c>reason</c> parameter.</returns>
 </WritableStreamAbort>
+<WritableStreamClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="WritableStream"/> interface closes the associated stream. All chunks written before this method is called are sent before the returned promise is fulfilled.
+</summary>
+<remarks>
+<para>This is equivalent to getting a <see cref="WritableStreamDefaultWriter"/> with <see cref="WritableStream.GetWriter"/>, calling <see cref="WritableStreamDefaultWriter.Close"/> on it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which fulfills with the <c>undefined</c> when all<br/>remaining chunks were successfully written before the close, or rejects with an error if<br/>a problem was encountered during the process.</returns>
+</WritableStreamClose>
 <WritableStreamGetWriter>
 <summary>
 The <strong><c>getWriter()</c></strong> method of the <see cref="WritableStream"/> interface returns a new instance of <see cref="WritableStreamDefaultWriter"/> and locks the stream to that instance.<br/>While the stream is locked, no other writer can be acquired until this one is released.
@@ -45,14 +55,4 @@ The <strong><c>WritableStream()</c></strong> constructor creates a new <see cref
 </remarks>
 <returns>An instance of the <see cref="WritableStream"/> object.</returns>
 </WritableStreamWritableStream>
-<WritableStreamClose>
-<summary>
-The <strong><c>close()</c></strong> method of the <see cref="WritableStream"/> interface closes the associated stream. All chunks written before this method is called are sent before the returned promise is fulfilled.
-</summary>
-<remarks>
-<para>This is equivalent to getting a <see cref="WritableStreamDefaultWriter"/> with <see cref="WritableStream.GetWriter"/>, calling <see cref="WritableStreamDefaultWriter.Close"/> on it.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/close"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> which fulfills with the <c>undefined</c> when all<br/>remaining chunks were successfully written before the close, or rejects with an error if<br/>a problem was encountered during the process.</returns>
-</WritableStreamClose>
 </docs>

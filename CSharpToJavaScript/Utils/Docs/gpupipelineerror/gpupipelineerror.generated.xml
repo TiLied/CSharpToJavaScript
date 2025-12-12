@@ -9,6 +9,15 @@ The <strong><c>GPUPipelineError</c></strong> interface of the {{domxref(&amp;quo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUPipelineError"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUPipelineError>
+<GPUPipelineErrorGPUPipelineError>
+<summary>
+The <strong><c>GPUPipelineError()</c></strong> constructor creates a new<br/><see cref="GPUPipelineError"/> object instance.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/>-<see href="https://toji.dev/webgpu-best-practices/error-handling">WebGPU Error Handling best practices</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUPipelineError/GPUPipelineError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUPipelineErrorGPUPipelineError>
 <GPUPipelineErrorReason>
 <summary>
 The <strong><c>reason</c></strong> read-only property of the<br/><see cref="GPUPipelineError"/> interface defines the reason the pipeline creation failed in a machine-readable way.
@@ -19,13 +28,4 @@ The <strong><c>reason</c></strong> read-only property of the<br/><see cref="GPUP
 </remarks>
 <value>An enumerated value that can be one of:</value>
 </GPUPipelineErrorReason>
-<GPUPipelineErrorGPUPipelineError>
-<summary>
-The <strong><c>GPUPipelineError()</c></strong> constructor creates a new<br/><see cref="GPUPipelineError"/> object instance.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/>-<see href="https://toji.dev/webgpu-best-practices/error-handling">WebGPU Error Handling best practices</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUPipelineError/GPUPipelineError"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</GPUPipelineErrorGPUPipelineError>
 </docs>

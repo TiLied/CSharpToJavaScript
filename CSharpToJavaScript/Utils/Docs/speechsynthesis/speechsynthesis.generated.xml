@@ -9,26 +9,6 @@ The <strong><c>SpeechSynthesis</c></strong> interface of the <see href="https://
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesis>
-<SpeechSynthesisVoiceschanged>
-<summary>
-The <strong><c>voiceschanged</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> is fired when the list of <see cref="SpeechSynthesisVoice"/> objects that would be returned by the <see cref="SpeechSynthesis.GetVoices"/> method has changed (when the <c>voiceschanged</c> event fires.)
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</SpeechSynthesisVoiceschanged>
-<SpeechSynthesisPaused>
-<summary>
-The <strong><c>paused</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if the <c>SpeechSynthesis</c> object is in a paused state, or <c>false</c> if not.
-</summary>
-<remarks>
-<para>It can be set to <see cref="SpeechSynthesis.Pause"/> even if nothing is<br/>currently being spoken through it. If<br/><see cref="SpeechSynthesisUtterance"/> are then added to the utterance<br/>queue, they will not be spoken until the <c>SpeechSynthesis</c> object is<br/>unpaused, using <see cref="SpeechSynthesis.Resume"/>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</SpeechSynthesisPaused>
 <SpeechSynthesisCancel>
 <summary>
 The <strong><c>cancel()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface removes all utterances from the utterance queue.
@@ -40,56 +20,6 @@ The <strong><c>cancel()</c></strong> method of the <see cref="SpeechSynthesis"/>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </SpeechSynthesisCancel>
-<SpeechSynthesisSpeaking>
-<summary>
-The <strong><c>speaking</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if an utterance is currently in the process of being spoken — even<br/>if <c>SpeechSynthesis</c> is in a<br/><see cref="SpeechSynthesispause"/> state.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</SpeechSynthesisSpeaking>
-<SpeechSynthesisSpeak>
-<summary>
-The <strong><c>speak()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface adds an <see cref="SpeechSynthesisUtterance"/> to the utterance<br/>queue; it will be spoken when any other utterances queued before it have been spoken.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</SpeechSynthesisSpeak>
-<SpeechSynthesisResume>
-<summary>
-The <strong><c>resume()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface puts the <c>SpeechSynthesis</c> object into a non-paused state:<br/>resumes it if it was already paused.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</SpeechSynthesisResume>
-<SpeechSynthesisPause>
-<summary>
-The <strong><c>pause()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface puts the <c>SpeechSynthesis</c> object into a paused state.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</SpeechSynthesisPause>
-<SpeechSynthesisPending>
-<summary>
-The <strong><c>pending</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if the utterance queue contains as-yet-unspoken utterances.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean value.</value>
-</SpeechSynthesisPending>
 <SpeechSynthesisGetVoices>
 <summary>
 The <strong><c>getVoices()</c></strong> method of the<br/><see cref="SpeechSynthesis"/> interface returns a list of<br/><see cref="SpeechSynthesisVoice"/> objects representing all the available voices on the<br/>current device.
@@ -100,4 +30,74 @@ The <strong><c>getVoices()</c></strong> method of the<br/><see cref="SpeechSynth
 </remarks>
 <returns>A list (array) of <see cref="SpeechSynthesisVoice"/> objects.</returns>
 </SpeechSynthesisGetVoices>
+<SpeechSynthesisPause>
+<summary>
+The <strong><c>pause()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface puts the <c>SpeechSynthesis</c> object into a paused state.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SpeechSynthesisPause>
+<SpeechSynthesisPaused>
+<summary>
+The <strong><c>paused</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if the <c>SpeechSynthesis</c> object is in a paused state, or <c>false</c> if not.
+</summary>
+<remarks>
+<para>It can be set to <see cref="SpeechSynthesis.Pause"/> even if nothing is<br/>currently being spoken through it. If<br/><see cref="SpeechSynthesisUtterance"/> are then added to the utterance<br/>queue, they will not be spoken until the <c>SpeechSynthesis</c> object is<br/>unpaused, using <see cref="SpeechSynthesis.Resume"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SpeechSynthesisPaused>
+<SpeechSynthesisPending>
+<summary>
+The <strong><c>pending</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if the utterance queue contains as-yet-unspoken utterances.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SpeechSynthesisPending>
+<SpeechSynthesisResume>
+<summary>
+The <strong><c>resume()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface puts the <c>SpeechSynthesis</c> object into a non-paused state:<br/>resumes it if it was already paused.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SpeechSynthesisResume>
+<SpeechSynthesisSpeak>
+<summary>
+The <strong><c>speak()</c></strong> method of the <see cref="SpeechSynthesis"/><br/>interface adds an <see cref="SpeechSynthesisUtterance"/> to the utterance<br/>queue; it will be spoken when any other utterances queued before it have been spoken.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SpeechSynthesisSpeak>
+<SpeechSynthesisSpeaking>
+<summary>
+The <strong><c>speaking</c></strong> read-only property of the<br/><see cref="SpeechSynthesis"/> interface is a boolean value that returns<br/><c>true</c> if an utterance is currently in the process of being spoken — even<br/>if <c>SpeechSynthesis</c> is in a<br/><see cref="SpeechSynthesispause"/> state.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SpeechSynthesisSpeaking>
+<SpeechSynthesisVoiceschanged>
+<summary>
+The <strong><c>voiceschanged</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> is fired when the list of <see cref="SpeechSynthesisVoice"/> objects that would be returned by the <see cref="SpeechSynthesis.GetVoices"/> method has changed (when the <c>voiceschanged</c> event fires.)
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechSynthesisVoiceschanged>
 </docs>

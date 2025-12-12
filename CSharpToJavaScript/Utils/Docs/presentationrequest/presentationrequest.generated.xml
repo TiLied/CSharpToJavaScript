@@ -8,6 +8,14 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PresentationRequest>
+<PresentationRequestGetAvailability>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>getAvailability()</c> method is called, the user agent <strong>MUST</strong> run the following steps:
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/getAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationRequestGetAvailability>
 <PresentationRequestPresentationRequest>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PresentationRequest()</c></strong><br/>constructor creates a new <see cref="PresentationRequest"/> object which creates a<br/>new PresentationRequest.
@@ -33,12 +41,4 @@
 </remarks>
 <returns>A {{jsxref("Promise")}} that resolves with a <see cref="PresentationConnection"/>.</returns>
 </PresentationRequestStart>
-<PresentationRequestGetAvailability>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>getAvailability()</c> method is called, the user agent <strong>MUST</strong> run the following steps:
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/getAvailability"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</PresentationRequestGetAvailability>
 </docs>

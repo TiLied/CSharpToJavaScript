@@ -8,6 +8,33 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SerialPort>
+<SerialPortClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SerialPort.close()</c></strong> method of the <see cref="SerialPort"/> interface returns a {{jsxref("Promise")}} that resolves when the port closes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</SerialPortClose>
+<SerialPortConnected>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>connected</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a boolean value that indicates whether the port is <see href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connect_event#description">logically connected</see> to the device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean — <c>true</c> if the port is logically connected, and <c>false</c> if not.</value>
+</SerialPortConnected>
+<SerialPortConnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>connect</c></strong> event of the <see cref="SerialPort"/> interface is fired when the port connects to the device.
+</summary>
+<remarks>
+<para>-<see cref="SerialPort.Disconnect"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SerialPortConnect>
 <SerialPortDisconnect>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>disconnect</c></strong> event of the <see cref="SerialPort"/> interface is fired when the port disconnects from the device.
@@ -26,24 +53,6 @@
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the connection is revoked.</returns>
 </SerialPortForget>
-<SerialPortConnected>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>connected</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a boolean value that indicates whether the port is <see href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connect_event#description">logically connected</see> to the device.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connected"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean — <c>true</c> if the port is logically connected, and <c>false</c> if not.</value>
-</SerialPortConnected>
-<SerialPortReadable>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>readable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="ReadableStream"/> for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/readable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="ReadableStream"/>.</value>
-</SerialPortReadable>
 <SerialPortGetInfo>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getInfo()</c></strong> method of the <see cref="SerialPort"/> interface returns an object containing identifying information for the device available via the port.
@@ -53,15 +62,6 @@
 </remarks>
 <returns>An object containing the following properties:</returns>
 </SerialPortGetInfo>
-<SerialPortWritable>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="WritableStream"/> for sending data to the device connected to the port. Chunks written to this stream must be instances of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/writable"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="WritableStream"/></value>
-</SerialPortWritable>
 <SerialPortGetSignals>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SerialPort.getSignals()</c></strong> method of the <see cref="SerialPort"/> interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
@@ -80,15 +80,15 @@
 </remarks>
 <returns>A <see cref="Promise"/>.</returns>
 </SerialPortOpen>
-<SerialPortClose>
+<SerialPortReadable>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SerialPort.close()</c></strong> method of the <see cref="SerialPort"/> interface returns a {{jsxref("Promise")}} that resolves when the port closes.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>readable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="ReadableStream"/> for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/close"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/readable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/>.</returns>
-</SerialPortClose>
+<value>A <see cref="ReadableStream"/>.</value>
+</SerialPortReadable>
 <SerialPortSetSignals>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setSignals()</c></strong> method of the <see cref="SerialPort"/> interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
@@ -98,13 +98,13 @@
 </remarks>
 <returns>A <see cref="Promise"/>.</returns>
 </SerialPortSetSignals>
-<SerialPortConnect>
+<SerialPortWritable>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>connect</c></strong> event of the <see cref="SerialPort"/> interface is fired when the port connects to the device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="WritableStream"/> for sending data to the device connected to the port. Chunks written to this stream must be instances of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 </summary>
 <remarks>
-<para>-<see cref="SerialPort.Disconnect"/> event<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/connect"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</SerialPortConnect>
+<value>A <see cref="WritableStream"/></value>
+</SerialPortWritable>
 </docs>

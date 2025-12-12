@@ -9,36 +9,6 @@ The <strong><c>OffscreenCanvas</c></strong> interface provides a canvas that can
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </OffscreenCanvas>
-<OffscreenCanvasWidth>
-<summary>
-The <strong><c>width</c></strong> property returns and sets the width of an <see cref="OffscreenCanvas"/> object.
-</summary>
-<remarks>
-<para>-<see cref="OffscreenCanvas"/>, the interface this property belongs to.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive integer representing the width of the offscreen canvas in CSS pixels.</value>
-</OffscreenCanvasWidth>
-<OffscreenCanvasTransferToImageBitmap>
-<summary>
-The <strong><c>OffscreenCanvas.transferToImageBitmap()</c></strong> method creates an <see cref="ImageBitmap"/> object from the most recently rendered image of the <c>OffscreenCanvas</c>. The <c>OffscreenCanvas</c> allocates a new image for its subsequent rendering.
-</summary>
-<remarks>
-<para>-The interface defining this method, <see cref="OffscreenCanvas"/><br/>-<see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A newly-allocated <see cref="ImageBitmap"/>.This <c>ImageBitmap</c> references a potentially large graphics resource, and to ensure your web application remains robust, it is important to avoid allocating too many of these resources at any point in time. For this reason it is important to ensure that the <c>ImageBitmap</c> is either <strong>consumed</strong> or <strong>closed</strong>.As described in the <see cref="OffscreenCanvas"/> examples, passing this <c>ImageBitmap</c> to <see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/> <strong>consumes</strong> the <c>ImageBitmap</c> object; it no longer references the underlying graphics resource, and can not be passed to any other web APIs.If your goal is to pass the <c>ImageBitmap</c> to other web APIs which do not consume it - for example, <see cref="CanvasRenderingContext2D.DrawImage"/> - then you should <strong>close</strong> it when you're done with it by calling <see cref="ImageBitmap.Close"/>. Don't simply drop the JavaScript reference to the <c>ImageBitmap</c>; doing so will keep its graphics resource alive until the next time the garbage collector runs.If you call <c>transferToImageBitmap()</c> and don't intend to pass it to <see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/>, consider whether you need to call <c>transferToImageBitmap()</c> at all. Many web APIs which accept <c>ImageBitmap</c> also accept <c>OffscreenCanvas</c> as an argument.</returns>
-</OffscreenCanvasTransferToImageBitmap>
-<OffscreenCanvasGetContext>
-<summary>
-The <strong><c>OffscreenCanvas.getContext()</c></strong> method returns a drawing context for an offscreen canvas, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the context identifier is not supported, or the offscreen canvas has already been set to a different context mode.
-</summary>
-<remarks>
-<para>-The interface defining this method: <see cref="OffscreenCanvas"/><br/>-<see cref="HTMLCanvasElement.GetContext"/><br/>-Available rendering contexts: <see cref="CanvasRenderingContext2D"/>, <see cref="WebGLRenderingContext"/>, <see cref="WebGL2RenderingContext"/>, <see cref="ImageBitmapRenderingContext"/>, and <see cref="OffscreenCanvasRenderingContext2D"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A rendering context which is either aIf the context identifier is not supported, or the canvas has already been set to a different context mode, <c>null</c> is returned.</returns>
-</OffscreenCanvasGetContext>
 <OffscreenCanvasContextlost>
 <summary>
 The <strong><c>contextlost</c></strong> event of the <see cref="OffscreenCanvas"/> interface is fired if the browser detects that the <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D"><c>OffscreenCanvasRenderingContext2D</c></see> context is lost.<br/>Contexts can be lost for several reasons, such as an associated GPU driver crashes, or the application runs out of memory, and so on.
@@ -49,6 +19,16 @@ The <strong><c>contextlost</c></strong> event of the <see cref="OffscreenCanvas"
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </OffscreenCanvasContextlost>
+<OffscreenCanvasContextrestored>
+<summary>
+The <strong><c>contextrestored</c></strong> event of the <see cref="OffscreenCanvas"/> interface is fired if the browser restores a <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D"><c>OffscreenCanvasRenderingContext2D</c></see> context that was <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event">previously lost</see>.
+</summary>
+<remarks>
+<para>You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event"><c>OffscreenCanvas: contextlost</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.iscontextlost"><c>OffscreenCanvasRenderingContext2D.isContextLost()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>HTMLCanvasElement: contextrestored</c> event</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextrestored"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OffscreenCanvasContextrestored>
 <OffscreenCanvasConvertToBlob>
 <summary>
 The <strong><c>OffscreenCanvas.convertToBlob()</c></strong> method creates a <see cref="Blob"/> object representing the image contained in the canvas.
@@ -60,16 +40,16 @@ The <strong><c>OffscreenCanvas.convertToBlob()</c></strong> method creates a <se
 </remarks>
 <returns>A {{jsxref("Promise")}} returning a <see cref="Blob"/> object representing the image contained in the canvas.</returns>
 </OffscreenCanvasConvertToBlob>
-<OffscreenCanvasContextrestored>
+<OffscreenCanvasGetContext>
 <summary>
-The <strong><c>contextrestored</c></strong> event of the <see cref="OffscreenCanvas"/> interface is fired if the browser restores a <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D"><c>OffscreenCanvasRenderingContext2D</c></see> context that was <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event">previously lost</see>.
+The <strong><c>OffscreenCanvas.getContext()</c></strong> method returns a drawing context for an offscreen canvas, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the context identifier is not supported, or the offscreen canvas has already been set to a different context mode.
 </summary>
 <remarks>
-<para>You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event"><c>OffscreenCanvas: contextlost</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.iscontextlost"><c>OffscreenCanvasRenderingContext2D.isContextLost()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>HTMLCanvasElement: contextrestored</c> event</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextrestored"> <em>See also on MDN</em> </seealso></para>
+<para>-The interface defining this method: <see cref="OffscreenCanvas"/><br/>-<see cref="HTMLCanvasElement.GetContext"/><br/>-Available rendering contexts: <see cref="CanvasRenderingContext2D"/>, <see cref="WebGLRenderingContext"/>, <see cref="WebGL2RenderingContext"/>, <see cref="ImageBitmapRenderingContext"/>, and <see cref="OffscreenCanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</OffscreenCanvasContextrestored>
+<returns>A rendering context which is either aIf the context identifier is not supported, or the canvas has already been set to a different context mode, <c>null</c> is returned.</returns>
+</OffscreenCanvasGetContext>
 <OffscreenCanvasHeight>
 <summary>
 The <strong><c>height</c></strong> property returns and sets the height of an <see cref="OffscreenCanvas"/> object.
@@ -89,4 +69,24 @@ The <strong><c>OffscreenCanvas()</c></strong> constructor returns a newly instan
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </OffscreenCanvasOffscreenCanvas>
+<OffscreenCanvasTransferToImageBitmap>
+<summary>
+The <strong><c>OffscreenCanvas.transferToImageBitmap()</c></strong> method creates an <see cref="ImageBitmap"/> object from the most recently rendered image of the <c>OffscreenCanvas</c>. The <c>OffscreenCanvas</c> allocates a new image for its subsequent rendering.
+</summary>
+<remarks>
+<para>-The interface defining this method, <see cref="OffscreenCanvas"/><br/>-<see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-allocated <see cref="ImageBitmap"/>.This <c>ImageBitmap</c> references a potentially large graphics resource, and to ensure your web application remains robust, it is important to avoid allocating too many of these resources at any point in time. For this reason it is important to ensure that the <c>ImageBitmap</c> is either <strong>consumed</strong> or <strong>closed</strong>.As described in the <see cref="OffscreenCanvas"/> examples, passing this <c>ImageBitmap</c> to <see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/> <strong>consumes</strong> the <c>ImageBitmap</c> object; it no longer references the underlying graphics resource, and can not be passed to any other web APIs.If your goal is to pass the <c>ImageBitmap</c> to other web APIs which do not consume it - for example, <see cref="CanvasRenderingContext2D.DrawImage"/> - then you should <strong>close</strong> it when you're done with it by calling <see cref="ImageBitmap.Close"/>. Don't simply drop the JavaScript reference to the <c>ImageBitmap</c>; doing so will keep its graphics resource alive until the next time the garbage collector runs.If you call <c>transferToImageBitmap()</c> and don't intend to pass it to <see cref="ImageBitmapRenderingContext.TransferFromImageBitmap"/>, consider whether you need to call <c>transferToImageBitmap()</c> at all. Many web APIs which accept <c>ImageBitmap</c> also accept <c>OffscreenCanvas</c> as an argument.</returns>
+</OffscreenCanvasTransferToImageBitmap>
+<OffscreenCanvasWidth>
+<summary>
+The <strong><c>width</c></strong> property returns and sets the width of an <see cref="OffscreenCanvas"/> object.
+</summary>
+<remarks>
+<para>-<see cref="OffscreenCanvas"/>, the interface this property belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer representing the width of the offscreen canvas in CSS pixels.</value>
+</OffscreenCanvasWidth>
 </docs>

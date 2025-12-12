@@ -1,0 +1,22 @@
+<docs>
+<WEBGL_debug_shaders>
+<summary>
+The <strong><c>WEBGL_debug_shaders</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and exposes a method to debug shaders from privileged contexts.
+</summary>
+<remarks>
+<para>This extension is not directly available to websites as the way of how the shader is translated may uncover personally-identifiable information to the web page about the kind of graphics card in the user&amp;apos;s computer.</para><para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Depending on the privacy settings of the browser, this extension might only be available to privileged contexts.</para><para>This extension is available to both, {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL1&amp;quot;, &amp;quot;&amp;quot;, 1)}} and {{domxref(&amp;quot;WebGL2RenderingContext&amp;quot;, &amp;quot;WebGL2&amp;quot;, &amp;quot;&amp;quot;, 1)}} contexts.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_shaders"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WEBGL_debug_shaders>
+<WEBGL_debug_shadersGetTranslatedShaderSource>
+<summary>
+The <strong><c>WEBGL_debug_shaders.getTranslatedShaderSource()</c></strong><br/>method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and allows<br/>you to debug a translated shader.
+</summary>
+<remarks>
+<para>-<see cref="WebGLShader"/><br/>-<see cref="WebGLRenderingContext.CompileShader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_shaders/getTranslatedShaderSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="String"/> containing the translated shader source. An empty string is<br/>returned, if:</returns>
+</WEBGL_debug_shadersGetTranslatedShaderSource>
+</docs>

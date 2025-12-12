@@ -16,6 +16,15 @@ The <strong><c>length</c></strong> property of the <see cref="ImageTrackList"/> 
 </remarks>
 <value>An integer.</value>
 </ImageTrackListLength>
+<ImageTrackListReady>
+<summary>
+The <strong><c>ready</c></strong> property of the <see cref="ImageTrackList"/> interface returns a {{jsxref("Promise")}} that resolves when the <c>ImageTrackList</c> is populated with <see cref="ImageTrack"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</value>
+</ImageTrackListReady>
 <ImageTrackListSelectedIndex>
 <summary>
 The <strong><c>selectedIndex</c></strong> property of the <see cref="ImageTrackList"/> interface returns the <c>index</c> of the selected track.
@@ -34,13 +43,4 @@ The <strong><c>selectedTrack</c></strong> property of the <see cref="ImageTrackL
 </remarks>
 <value>An <see cref="ImageTrack"/> object.</value>
 </ImageTrackListSelectedTrack>
-<ImageTrackListReady>
-<summary>
-The <strong><c>ready</c></strong> property of the <see cref="ImageTrackList"/> interface returns a {{jsxref("Promise")}} that resolves when the <c>ImageTrackList</c> is populated with <see cref="ImageTrack"/>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList/ready"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</value>
-</ImageTrackListReady>
 </docs>

@@ -8,15 +8,6 @@ The <strong><c>HashChangeEvent</c></strong> interface represents events that fir
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HashChangeEvent>
-<HashChangeEventNewURL>
-<summary>
-The <strong><c>newURL</c></strong> read-only property of the<br/><see cref="HashChangeEvent"/> interface returns the new URL to which the window is<br/>navigating.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/newURL"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HashChangeEventNewURL>
 <HashChangeEventHashChangeEvent>
 <summary>
 The <strong><c>HashChangeEvent()</c></strong> constructor creates a new <see cref="HashChangeEvent"/> object, that is used by the <see cref="Windowhashchange"/> event fired at the <see cref="Window"/> object when the fragment of the URL changes.
@@ -28,6 +19,15 @@ The <strong><c>HashChangeEvent()</c></strong> constructor creates a new <see cre
 </remarks>
 <returns>A new <see cref="HashChangeEvent"/> object.</returns>
 </HashChangeEventHashChangeEvent>
+<HashChangeEventNewURL>
+<summary>
+The <strong><c>newURL</c></strong> read-only property of the<br/><see cref="HashChangeEvent"/> interface returns the new URL to which the window is<br/>navigating.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/newURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HashChangeEventNewURL>
 <HashChangeEventOldURL>
 <summary>
 The <strong><c>oldURL</c></strong> read-only property of the<br/><see cref="HashChangeEvent"/> interface returns the previous URL from which the window<br/>was navigated.

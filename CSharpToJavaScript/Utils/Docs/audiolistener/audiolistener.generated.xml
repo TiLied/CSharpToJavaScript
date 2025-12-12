@@ -9,105 +9,6 @@ The <c>AudioListener</c> interface represents the position and orientation of th
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioListener>
-<AudioListenerUpY>
-<summary>
-The <c>upY</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the y value of the direction vector defining the up direction the listener is pointing in.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 1, and it can range between positive and negative infinity.</value>
-</AudioListenerUpY>
-<AudioListenerForwardZ>
-<summary>
-The <c>forwardZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z value of the direction vector defining the forward direction the listener is pointing in.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardZ"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is -1, and it can range between positive and negative infinity.</value>
-</AudioListenerForwardZ>
-<AudioListenerSetPosition>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>setPosition()</c> method of the <see cref="AudioListener"/> Interface defines the position of the listener.
-</summary>
-<remarks>
-<para>The three parameters <c>x</c>, <c>y</c> and <c>z</c> are unitless and describe the listener's position in 3D space according to the right-hand Cartesian coordinate system. <see cref="PannerNode"/> objects use this position relative to individual audio sources for spatialization.</para><para>The default value of the position vector is <c>(0, 0, 0)</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>As this method is deprecated, use the three <see cref="AudioListener.PositionX"/>, <see cref="AudioListener.PositionY"/>, and <see cref="AudioListener.PositionZ"/> properties instead.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</AudioListenerSetPosition>
-<AudioListenerForwardY>
-<summary>
-The <c>forwardY</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the y value of the direction vector defining the forward direction the listener is pointing in.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardY"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
-</AudioListenerForwardY>
-<AudioListenerPositionX>
-<summary>
-The <c>positionX</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the x position of the listener in 3D cartesian space.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate"><strong>a-rate</strong></see> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate"><strong>k-rate</strong></see> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
-</AudioListenerPositionX>
-<AudioListenerSetOrientation>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>setOrientation()</c> method of the <see cref="AudioListener"/> interface defines the orientation of the listener.
-</summary>
-<remarks>
-<para>It consists of two direction vectors:</para><para>The two vectors must be separated by an angle of 90° — in linear analysis terms, they must be perpendicular to each other.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setOrientation"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</AudioListenerSetOrientation>
-<AudioListenerUpZ>
-<summary>
-The <c>upZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z value of the direction vector defining the up direction the listener is pointing in.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upZ"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
-</AudioListenerUpZ>
-<AudioListenerPositionZ>
-<summary>
-The <c>positionZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z position of the listener in 3D cartesian space.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate"><strong>a-rate</strong></see> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate"><strong>k-rate</strong></see> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionZ"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
-</AudioListenerPositionZ>
-<AudioListenerUpX>
-<summary>
-The <c>upX</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the x value of the direction vector defining the up direction the listener is pointing in.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upX"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
-</AudioListenerUpX>
 <AudioListenerForwardX>
 <summary>
 The <c>forwardX</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the x value of the direction vector defining the forward direction the listener is pointing in.
@@ -119,6 +20,39 @@ The <c>forwardX</c> read-only property of the <see cref="AudioListener"/> interf
 </remarks>
 <value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
 </AudioListenerForwardX>
+<AudioListenerForwardY>
+<summary>
+The <c>forwardY</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the y value of the direction vector defining the forward direction the listener is pointing in.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
+</AudioListenerForwardY>
+<AudioListenerForwardZ>
+<summary>
+The <c>forwardZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z value of the direction vector defining the forward direction the listener is pointing in.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is -1, and it can range between positive and negative infinity.</value>
+</AudioListenerForwardZ>
+<AudioListenerPositionX>
+<summary>
+The <c>positionX</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the x position of the listener in 3D cartesian space.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate"><strong>a-rate</strong></see> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate"><strong>k-rate</strong></see> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
+</AudioListenerPositionX>
 <AudioListenerPositionY>
 <summary>
 The <c>positionY</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the y position of the listener in 3D cartesian space.
@@ -130,4 +64,70 @@ The <c>positionY</c> read-only property of the <see cref="AudioListener"/> inter
 </remarks>
 <value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
 </AudioListenerPositionY>
+<AudioListenerPositionZ>
+<summary>
+The <c>positionZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z position of the listener in 3D cartesian space.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate"><strong>a-rate</strong></see> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate"><strong>k-rate</strong></see> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
+</AudioListenerPositionZ>
+<AudioListenerSetOrientation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>setOrientation()</c> method of the <see cref="AudioListener"/> interface defines the orientation of the listener.
+</summary>
+<remarks>
+<para>It consists of two direction vectors:</para><para>The two vectors must be separated by an angle of 90° — in linear analysis terms, they must be perpendicular to each other.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setOrientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioListenerSetOrientation>
+<AudioListenerSetPosition>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>setPosition()</c> method of the <see cref="AudioListener"/> Interface defines the position of the listener.
+</summary>
+<remarks>
+<para>The three parameters <c>x</c>, <c>y</c> and <c>z</c> are unitless and describe the listener's position in 3D space according to the right-hand Cartesian coordinate system. <see cref="PannerNode"/> objects use this position relative to individual audio sources for spatialization.</para><para>The default value of the position vector is <c>(0, 0, 0)</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>As this method is deprecated, use the three <see cref="AudioListener.PositionX"/>, <see cref="AudioListener.PositionY"/>, and <see cref="AudioListener.PositionZ"/> properties instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioListenerSetPosition>
+<AudioListenerUpX>
+<summary>
+The <c>upX</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the x value of the direction vector defining the up direction the listener is pointing in.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
+</AudioListenerUpX>
+<AudioListenerUpY>
+<summary>
+The <c>upY</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the y value of the direction vector defining the up direction the listener is pointing in.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 1, and it can range between positive and negative infinity.</value>
+</AudioListenerUpY>
+<AudioListenerUpZ>
+<summary>
+The <c>upZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z value of the direction vector defining the up direction the listener is pointing in.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>. Its default value is 0, and it can range between positive and negative infinity.</value>
+</AudioListenerUpZ>
 </docs>

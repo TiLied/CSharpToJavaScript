@@ -30,6 +30,16 @@ The <strong><c>info</c></strong> read-only property of the<br/><see cref="GPUAda
 </remarks>
 <value>A <see cref="GPUAdapterInfo"/> object instance.</value>
 </GPUAdapterInfo>
+<GPUAdapterIsFallbackAdapter>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>isFallbackAdapter</c></strong> read-only property of the<br/><see cref="GPUAdapter"/> interface returns <c>true</c> if the adapter is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters">fallback adapter</see>, and <c>false</c> if not.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapter/isFallbackAdapter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</GPUAdapterIsFallbackAdapter>
 <GPUAdapterLimits>
 <summary>
 The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUAdapter"/> interface returns a <see cref="GPUSupportedLimits"/> object that describes the limits supported by the adapter.
@@ -52,16 +62,6 @@ The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUA
 </remarks>
 <returns>A {{jsxref("Promise")}} that fulfills with a <see cref="GPUAdapterInfo"/> object instance.</returns>
 </GPUAdapterRequestAdapterInfo>
-<GPUAdapterIsFallbackAdapter>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>isFallbackAdapter</c></strong> read-only property of the<br/><see cref="GPUAdapter"/> interface returns <c>true</c> if the adapter is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters">fallback adapter</see>, and <c>false</c> if not.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapter/isFallbackAdapter"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean.</value>
-</GPUAdapterIsFallbackAdapter>
 <GPUAdapterRequestDevice>
 <summary>
 The <strong><c>requestDevice()</c></strong> method of the<br/><see cref="GPUAdapter"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPUDevice"/> object, which is the primary interface for communicating with the GPU.

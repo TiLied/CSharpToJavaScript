@@ -9,16 +9,15 @@ The <strong><c>Text</c></strong> interface represents a text <see cref="Node"/> 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Text>
-<TextText>
+<TextAssignedSlot>
 <summary>
-The <strong><c>Text()</c></strong> constructor returns a new <see cref="Text"/> object<br/>with the optional string given in parameter as its textual content.
+The read-only <strong><c>assignedSlot</c></strong> property of the <see cref="Text"/> interface<br/>returns the <see cref="HTMLSlotElement"/> object associated with the element.
 </summary>
 <remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text/Text"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text/assignedSlot"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="Text"/> object with the content of the <c>string</c> parameter, or the empty string if no parameter was given.</returns>
-</TextText>
+<value>An <see cref="HTMLSlotElement"/>,<br/>or <c>null</c> if no <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot">slot</see> element is associated with the text node.</value>
+</TextAssignedSlot>
 <TextSplitText>
 <summary>
 The <strong><c>splitText()</c></strong> method of the <see cref="Text"/> interface<br/>breaks the <see cref="Text"/> node into two nodes at the specified offset,<br/>keeping both nodes in the tree as siblings.
@@ -30,6 +29,16 @@ The <strong><c>splitText()</c></strong> method of the <see cref="Text"/> interfa
 </remarks>
 <returns>Returns the newly created <see cref="Text"/> node that contains the text after the<br/>specified offset point.</returns>
 </TextSplitText>
+<TextText>
+<summary>
+The <strong><c>Text()</c></strong> constructor returns a new <see cref="Text"/> object<br/>with the optional string given in parameter as its textual content.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text/Text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="Text"/> object with the content of the <c>string</c> parameter, or the empty string if no parameter was given.</returns>
+</TextText>
 <TextWholeText>
 <summary>
 The read-only <strong><c>wholeText</c></strong> property of the <see cref="Text"/> interface<br/>returns the full text of all <see cref="Text"/> nodes logically adjacent to the node.<br/>The text is concatenated in document order.<br/>This allows specifying any text node and obtaining all adjacent text as a single string.
@@ -41,13 +50,4 @@ The read-only <strong><c>wholeText</c></strong> property of the <see cref="Text"
 </remarks>
 <value>A string with the concatenated text.</value>
 </TextWholeText>
-<TextAssignedSlot>
-<summary>
-The read-only <strong><c>assignedSlot</c></strong> property of the <see cref="Text"/> interface<br/>returns the <see cref="HTMLSlotElement"/> object associated with the element.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text/assignedSlot"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="HTMLSlotElement"/>,<br/>or <c>null</c> if no <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot">slot</see> element is associated with the text node.</value>
-</TextAssignedSlot>
 </docs>

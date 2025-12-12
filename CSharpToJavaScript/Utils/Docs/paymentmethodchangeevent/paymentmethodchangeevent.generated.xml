@@ -8,15 +8,6 @@ The <strong><c>PaymentMethodChangeEvent</c></strong> interface of the <see href=
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentMethodChangeEvent>
-<PaymentMethodChangeEventMethodName>
-<summary>
-The read-only <strong><c>methodName</c></strong> property of the <see cref="PaymentMethodChangeEvent"/> interface is a string which<br/>uniquely identifies the payment handler currently selected by the user. The<br/>payment handler may be a payment technology, such as Apple Pay or Android Pay, and each<br/>payment handler may support multiple payment methods; changes to the payment method<br/>within the payment handler are described by the <c>PaymentMethodChangeEvent</c>.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent/methodName"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string which uniquely identifies the currently-selected payment<br/>handler. This may be a string chosen from the list of standardized payment method<br/>identifiers, or a URL used by the payment processing service. See<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers">Payment method identifiers</see> for more information.The default value is the empty string, <c>&amp;quot;&amp;quot;</c>.</value>
-</PaymentMethodChangeEventMethodName>
 <PaymentMethodChangeEventMethodDetails>
 <summary>
 The read-only <strong><c>methodDetails</c></strong> property of the <see cref="PaymentMethodChangeEvent"/> interface is an object<br/>containing any data the payment handler may provide to describe the change the user<br/>has made to their payment method. The value is <c>null</c> if no details<br/>are available.
@@ -26,6 +17,15 @@ The read-only <strong><c>methodDetails</c></strong> property of the <see cref="P
 </remarks>
 <value>An object containing any data needed to describe the changes made to the payment<br/>method. The contents vary depending on the actual payment method chosen, so you will<br/>need to refer to the <see cref="PaymentMethodChangeEvent.MethodName"/><br/>property first, then interpret the <c>methodDetails</c> after that.The default value is <c>null</c>, indicating that no additional details are<br/>available.</value>
 </PaymentMethodChangeEventMethodDetails>
+<PaymentMethodChangeEventMethodName>
+<summary>
+The read-only <strong><c>methodName</c></strong> property of the <see cref="PaymentMethodChangeEvent"/> interface is a string which<br/>uniquely identifies the payment handler currently selected by the user. The<br/>payment handler may be a payment technology, such as Apple Pay or Android Pay, and each<br/>payment handler may support multiple payment methods; changes to the payment method<br/>within the payment handler are described by the <c>PaymentMethodChangeEvent</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent/methodName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the currently-selected payment<br/>handler. This may be a string chosen from the list of standardized payment method<br/>identifiers, or a URL used by the payment processing service. See<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers">Payment method identifiers</see> for more information.The default value is the empty string, <c>&amp;quot;&amp;quot;</c>.</value>
+</PaymentMethodChangeEventMethodName>
 <PaymentMethodChangeEventPaymentMethodChangeEvent>
 <summary>
 The <strong><c>PaymentMethodChangeEvent()</c></strong><br/>constructor creates a new <see cref="PaymentMethodChangeEvent"/> object providing<br/>details about a <see cref="PaymentRequest.Paymentmethodchange"/> event.

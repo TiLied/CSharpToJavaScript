@@ -8,24 +8,6 @@ The <strong><c>AudioTrackList</c></strong> interface is used to represent a list
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioTrackList>
-<AudioTrackListLength>
-<summary>
-The read-only <strong><see cref="AudioTrackList"/></strong><br/>property <strong><c>length</c></strong> returns the number of entries in the<br/><c>AudioTrackList</c>, each of which is an <see cref="AudioTrack"/><br/>representing one audio track in the media element. A value of 0 indicates that<br/>there are no audio tracks in the media.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A number indicating how many audio tracks are included in the<br/><c>AudioTrackList</c>. Each track can be accessed by treating the<br/><c>AudioTrackList</c> as an array of objects of type <see cref="AudioTrack"/>.</value>
-</AudioTrackListLength>
-<AudioTrackListGetTrackById>
-<summary>
-The <strong><see cref="AudioTrackList"/></strong> method <strong><c>getTrackById()</c></strong> returns the first <see cref="AudioTrack"/> object from the track list whose <see cref="AudioTrack.Id"/> matches the specified string.<br/>This lets you find a specified track if you know its ID string.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/getTrackById"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>An <see cref="AudioTrack"/> object indicating the first track found within the<br/><c>AudioTrackList</c> whose <c>id</c> matches the specified string. If no<br/>match is found, this method returns <c>null</c>.The tracks are searched in their natural order; that is, in the order defined by the<br/>media resource itself, or, if the resource doesn&amp;apos;t define an order, the relative order<br/>in which the tracks are declared by the media resource.</returns>
-</AudioTrackListGetTrackById>
 <AudioTrackListAddtrack>
 <summary>
 The <c>addtrack</c> event is fired when a track is added to an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"><c>AudioTrackList</c></see>.
@@ -45,6 +27,24 @@ The <c>change</c> event is fired when an audio track is enabled or disabled, for
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/change"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioTrackListChange>
+<AudioTrackListGetTrackById>
+<summary>
+The <strong><see cref="AudioTrackList"/></strong> method <strong><c>getTrackById()</c></strong> returns the first <see cref="AudioTrack"/> object from the track list whose <see cref="AudioTrack.Id"/> matches the specified string.<br/>This lets you find a specified track if you know its ID string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/getTrackById"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="AudioTrack"/> object indicating the first track found within the<br/><c>AudioTrackList</c> whose <c>id</c> matches the specified string. If no<br/>match is found, this method returns <c>null</c>.The tracks are searched in their natural order; that is, in the order defined by the<br/>media resource itself, or, if the resource doesn&amp;apos;t define an order, the relative order<br/>in which the tracks are declared by the media resource.</returns>
+</AudioTrackListGetTrackById>
+<AudioTrackListLength>
+<summary>
+The read-only <strong><see cref="AudioTrackList"/></strong><br/>property <strong><c>length</c></strong> returns the number of entries in the<br/><c>AudioTrackList</c>, each of which is an <see cref="AudioTrack"/><br/>representing one audio track in the media element. A value of 0 indicates that<br/>there are no audio tracks in the media.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating how many audio tracks are included in the<br/><c>AudioTrackList</c>. Each track can be accessed by treating the<br/><c>AudioTrackList</c> as an array of objects of type <see cref="AudioTrack"/>.</value>
+</AudioTrackListLength>
 <AudioTrackListRemovetrack>
 <summary>
 The <c>removetrack</c> event is fired when a track is removed from an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"><c>AudioTrackList</c></see>.

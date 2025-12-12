@@ -9,17 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VRFrameData>
-<VRFrameDataPose>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>pose</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns the <see cref="VRPose"/> of the <see cref="VRDisplay"/> at the current <see cref="VRFrameData.Timestamp"/>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/pose"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="VRPose"/> object.</value>
-</VRFrameDataPose>
 <VRFrameDataLeftProjectionMatrix>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>leftProjectionMatrix</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye's rendering.
@@ -31,27 +20,6 @@
 </remarks>
 <value>A <see cref="Float32Array"/> object.</value>
 </VRFrameDataLeftProjectionMatrix>
-<VRFrameDataRightProjectionMatrix>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>rightProjectionMatrix</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye's rendering.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This value may be passed directly to WebGL's <see cref="WebGLRenderingContext.UniformMatrix"/> function.</para><blockquote class="WARNING"><h5>WARNING</h5><para>It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/rightProjectionMatrix"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A <see cref="Float32Array"/> object.</value>
-</VRFrameDataRightProjectionMatrix>
-<VRFrameDataVRFrameData>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRFrameData()</c></strong> constructor creates a <see cref="VRFrameData"/> object instance.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This constructor was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/VRFrameData"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</VRFrameDataVRFrameData>
 <VRFrameDataLeftViewMatrix>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>leftViewMatrix</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye's rendering.
@@ -63,6 +31,28 @@
 </remarks>
 <value>A <see cref="Float32Array"/> object.</value>
 </VRFrameDataLeftViewMatrix>
+<VRFrameDataPose>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>pose</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns the <see cref="VRPose"/> of the <see cref="VRDisplay"/> at the current <see cref="VRFrameData.Timestamp"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/pose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VRPose"/> object.</value>
+</VRFrameDataPose>
+<VRFrameDataRightProjectionMatrix>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>rightProjectionMatrix</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye's rendering.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This value may be passed directly to WebGL's <see cref="WebGLRenderingContext.UniformMatrix"/> function.</para><blockquote class="WARNING"><h5>WARNING</h5><para>It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/rightProjectionMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/> object.</value>
+</VRFrameDataRightProjectionMatrix>
 <VRFrameDataRightViewMatrix>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>rightViewMatrix</c></strong> read-only property of the <see cref="VRFrameData"/> interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye's rendering.
@@ -85,4 +75,14 @@
 </remarks>
 <value>A <see cref="DOMHighResTimeStamp"/> object.</value>
 </VRFrameDataTimestamp>
+<VRFrameDataVRFrameData>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRFrameData()</c></strong> constructor creates a <see cref="VRFrameData"/> object instance.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This constructor was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData/VRFrameData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VRFrameDataVRFrameData>
 </docs>

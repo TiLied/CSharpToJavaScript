@@ -9,6 +9,14 @@ The <c>MediaStreamAudioDestinationNode</c> interface represents an audio destina
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStreamAudioDestinationNode>
+<MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
+<summary>
+The <strong><c>MediaStreamAudioDestinationNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new <see cref="MediaStreamAudioDestinationNode"/> object instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
 <MediaStreamAudioDestinationNodeStream>
 <summary>
 The <c>stream</c> property of the <see cref="AudioContext"/> interface represents a <see cref="MediaStream"/> containing a single audio <see cref="MediaStreamTrack"/> with the same number of channels as the node itself.
@@ -20,12 +28,4 @@ The <c>stream</c> property of the <see cref="AudioContext"/> interface represent
 </remarks>
 <value>A <see cref="MediaStream"/> containing a single audio track. The audio track is a <see cref="MediaStreamTrack"/> whose <see cref="MediaStreamTrack.Kind"/> is <c>audio</c>.</value>
 </MediaStreamAudioDestinationNodeStream>
-<MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
-<summary>
-The <strong><c>MediaStreamAudioDestinationNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new <see cref="MediaStreamAudioDestinationNode"/> object instance.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-</MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
 </docs>

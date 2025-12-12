@@ -9,6 +9,36 @@ The <strong><c>PushManager</c></strong> interface of the <see href="https://deve
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PushManager>
+<PushManagerGetSubscription>
+<summary>
+The <strong><c>PushManager.getSubscription()</c></strong> method of the <see cref="PushManager"/> interface retrieves an existing push subscription.
+</summary>
+<remarks>
+<para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object containing details of an existing subscription. If no existing subscription exists, this resolves to a <c>null</c> value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object or <c>null</c>.</returns>
+</PushManagerGetSubscription>
+<PushManagerHasPermission>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>PushManager.hasPermission()</c></strong> method of the <see cref="PushManager"/> interface returns a {{jsxref("Promise")}} that resolves to the <c>PushPermissionStatus</c> of the requesting webapp, which will be one of <c>granted</c>, <c>denied</c>, or <c>default</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature has been superseded by the <see cref="PushManager.PermissionState"/> method.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/hasPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to the <c>PushPermissionStatus</c>.</returns>
+</PushManagerHasPermission>
+<PushManagerPermissionState>
+<summary>
+The <strong><c>permissionState()</c></strong> method of the<br/><see cref="PushManager"/> interface returns a {{jsxref("Promise")}} that resolves to a<br/>string indicating the permission state of the push manager. Possible<br/>values are <c>&amp;apos;prompt&amp;apos;</c>, <c>&amp;apos;denied&amp;apos;</c>, or <c>&amp;apos;granted&amp;apos;</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>As of Firefox 44, the permissions for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push</see> have been merged. If permission is<br/>granted for notifications, push will also be enabled.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a string with a value of<br/><c>&amp;apos;prompt&amp;apos;</c>, <c>&amp;apos;denied&amp;apos;</c>, or <c>&amp;apos;granted&amp;apos;</c>.</returns>
+</PushManagerPermissionState>
 <PushManagerRegister>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>register</c></strong> method is used to ask the system to request<br/>a new endpoint for notifications.
@@ -20,47 +50,6 @@ The <strong><c>PushManager</c></strong> interface of the <see href="https://deve
 </remarks>
 <returns>A <c>DOMRequest</c> object to handle the success or failure of the method call.If the method call is successful, the request&amp;apos;s <c>result</c> will be a string,<br/>which is the endpoint URL.<blockquote class="NOTE"><h5>NOTE</h5>If you do not need the URL any more, please use<br/><see cref="PushManager.Unregister"/> to clean up after yourself.</blockquote></returns>
 </PushManagerRegister>
-<PushManagerUnregister>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>unregister()</c></strong> method was used to ask the system to<br/>unregister and delete the specified endpoint.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>In the updated API, a subscription can be unregistered via the <see cref="PushSubscription.Unsubscribe"/> method.</para></blockquote>
-<para>-<see cref="PushManager"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/unregister"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <c>DOMRequest</c> object to handle the success or failure of the method call.If the method call is successful, the request&amp;apos;s <c>result</c> will be a<br/><see href="https://developer.mozilla.org#pushregistration">PushRegistration</see> object representing the endpoint that has been<br/>unregistered.</returns>
-</PushManagerUnregister>
-<PushManagerPermissionState>
-<summary>
-The <strong><c>permissionState()</c></strong> method of the<br/><see cref="PushManager"/> interface returns a {{jsxref("Promise")}} that resolves to a<br/>string indicating the permission state of the push manager. Possible<br/>values are <c>&amp;apos;prompt&amp;apos;</c>, <c>&amp;apos;denied&amp;apos;</c>, or <c>&amp;apos;granted&amp;apos;</c>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>As of Firefox 44, the permissions for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push</see> have been merged. If permission is<br/>granted for notifications, push will also be enabled.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to a string with a value of<br/><c>&amp;apos;prompt&amp;apos;</c>, <c>&amp;apos;denied&amp;apos;</c>, or <c>&amp;apos;granted&amp;apos;</c>.</returns>
-</PushManagerPermissionState>
-<PushManagerSubscribe>
-<summary>
-The <strong><c>subscribe()</c></strong> method of the <see cref="PushManager"/><br/>interface subscribes to a push service.
-</summary>
-<remarks>
-<para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/><br/>object containing details of a push subscription. A new push subscription is created if<br/>the current service worker does not have an existing subscription.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object.</returns>
-</PushManagerSubscribe>
-<PushManagerHasPermission>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>PushManager.hasPermission()</c></strong> method of the <see cref="PushManager"/> interface returns a {{jsxref("Promise")}} that resolves to the <c>PushPermissionStatus</c> of the requesting webapp, which will be one of <c>granted</c>, <c>denied</c>, or <c>default</c>.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This feature has been superseded by the <see cref="PushManager.PermissionState"/> method.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/hasPermission"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to the <c>PushPermissionStatus</c>.</returns>
-</PushManagerHasPermission>
 <PushManagerRegistrations>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>registrations</c></strong> method is used to ask the system about<br/>existing push endpoint registrations.
@@ -72,16 +61,16 @@ The <strong><c>subscribe()</c></strong> method of the <see cref="PushManager"/><
 </remarks>
 <returns>A <c>DOMRequest</c> object to handle the success or failure of the method call.If the method call is successful, the request&amp;apos;s <c>result</c> will be an array of<br/><see href="https://developer.mozilla.org#pushregistration">PushRegistration</see> objects.</returns>
 </PushManagerRegistrations>
-<PushManagerGetSubscription>
+<PushManagerSubscribe>
 <summary>
-The <strong><c>PushManager.getSubscription()</c></strong> method of the <see cref="PushManager"/> interface retrieves an existing push subscription.
+The <strong><c>subscribe()</c></strong> method of the <see cref="PushManager"/><br/>interface subscribes to a push service.
 </summary>
 <remarks>
-<para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object containing details of an existing subscription. If no existing subscription exists, this resolves to a <c>null</c> value.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription"> <em>See also on MDN</em> </seealso></para>
+<para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/><br/>object containing details of a push subscription. A new push subscription is created if<br/>the current service worker does not have an existing subscription.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object or <c>null</c>.</returns>
-</PushManagerGetSubscription>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription"/> object.</returns>
+</PushManagerSubscribe>
 <PushManagerSupportedContentEncodings>
 <summary>
 The <strong><c>supportedContentEncodings</c></strong> read-only static property of the <see cref="PushManager"/> interface returns an array of supported content codings that can be used to encrypt the payload of a push message.
@@ -92,4 +81,15 @@ The <strong><c>supportedContentEncodings</c></strong> read-only static property 
 </remarks>
 <value>An array of strings.<br/>This usually contains just one value: <c>&amp;quot;aes128gcm&amp;quot;</c>.</value>
 </PushManagerSupportedContentEncodings>
+<PushManagerUnregister>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>unregister()</c></strong> method was used to ask the system to<br/>unregister and delete the specified endpoint.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In the updated API, a subscription can be unregistered via the <see cref="PushSubscription.Unsubscribe"/> method.</para></blockquote>
+<para>-<see cref="PushManager"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/unregister"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>DOMRequest</c> object to handle the success or failure of the method call.If the method call is successful, the request&amp;apos;s <c>result</c> will be a<br/><see href="https://developer.mozilla.org#pushregistration">PushRegistration</see> object representing the endpoint that has been<br/>unregistered.</returns>
+</PushManagerUnregister>
 </docs>

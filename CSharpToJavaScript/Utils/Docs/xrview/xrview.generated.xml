@@ -7,16 +7,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRView>
-<XRViewTransform>
+<XRViewEye>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>transform</c></strong> property of the<br/><see cref="XRView"/> interface is an <see cref="XRRigidTransform"/> object which<br/>provides the position and orientation of the viewpoint relative to the<br/><see cref="XRReferenceSpace"/> specified when the<br/><see cref="XRFrame.GetViewerPose"/> method was called to obtain the view object.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRView"/> interface's read-only <strong><c>eye</c></strong><br/>property is a string indicating which eye&amp;apos;s viewpoint the <c>XRView</c> represents: <c>left</c> or<br/><c>right</c>. For views which represent neither eye, such as monoscopic views,<br/>this property&amp;apos;s value is <c>none</c>.
 </summary>
 <remarks>
-<para>With the <c>transform</c>, you can then position the view as a camera within the<br/>3D scene. If you instead need the more traditional view matrix, you can get using<br/><c>view.transform.inverse.matrix</c>; this gets the underlying<br/><see cref="XRRigidTransform.Matrix"/> of the transform's<br/><see cref="XRRigidTransform.Inverse"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="XRRigidTransform"/> object specifying the position and orientation of the<br/>viewpoint represented by the <c>XRView</c>.</value>
-</XRViewTransform>
+<value>A string that can be one of the following values:</value>
+</XRViewEye>
 <XRViewIsFirstPersonObserver>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRView"/> interface's read-only <strong><c>isFirstPersonObserver</c></strong> property is a boolean indicating if the <c>XRView</c> is a first-person observer view.
@@ -26,16 +25,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/isFirstPersonObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRViewIsFirstPersonObserver>
-<XRViewRequestViewportScale>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestViewportScale()</c></strong> method of the <see cref="XRView"/> interface requests that the user agent sets the requested viewport scale for this viewport to the given value. This is used for dynamic viewport scaling which allows rendering to a subset of the WebXR viewport using a scale factor that can be changed every animation frame.
-</summary>
-<remarks>
-<para>-<see cref="XRView.RecommendedViewportScale"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/requestViewportScale"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</XRViewRequestViewportScale>
 <XRViewProjectionMatrix>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRView"/> interface's read-only<br/><strong><c>projectionMatrix</c></strong> property specifies the projection matrix<br/>to apply to the underlying view. This should be used to integrate perspective to<br/>everything in the scene, in order to ensure the result is consistent with what the eye<br/>expects to see.
@@ -56,13 +45,24 @@
 </remarks>
 <value>A number greater than 0.0 and less than or equal to 1.0; or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the user agent does not provide a recommended scale.</value>
 </XRViewRecommendedViewportScale>
-<XRViewEye>
+<XRViewRequestViewportScale>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRView"/> interface's read-only <strong><c>eye</c></strong><br/>property is a string indicating which eye&amp;apos;s viewpoint the <c>XRView</c> represents: <c>left</c> or<br/><c>right</c>. For views which represent neither eye, such as monoscopic views,<br/>this property&amp;apos;s value is <c>none</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestViewportScale()</c></strong> method of the <see cref="XRView"/> interface requests that the user agent sets the requested viewport scale for this viewport to the given value. This is used for dynamic viewport scaling which allows rendering to a subset of the WebXR viewport using a scale factor that can be changed every animation frame.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="XRView.RecommendedViewportScale"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/requestViewportScale"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string that can be one of the following values:</value>
-</XRViewEye>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XRViewRequestViewportScale>
+<XRViewTransform>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>transform</c></strong> property of the<br/><see cref="XRView"/> interface is an <see cref="XRRigidTransform"/> object which<br/>provides the position and orientation of the viewpoint relative to the<br/><see cref="XRReferenceSpace"/> specified when the<br/><see cref="XRFrame.GetViewerPose"/> method was called to obtain the view object.
+</summary>
+<remarks>
+<para>With the <c>transform</c>, you can then position the view as a camera within the<br/>3D scene. If you instead need the more traditional view matrix, you can get using<br/><c>view.transform.inverse.matrix</c>; this gets the underlying<br/><see cref="XRRigidTransform.Matrix"/> of the transform's<br/><see cref="XRRigidTransform.Inverse"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="XRRigidTransform"/> object specifying the position and orientation of the<br/>viewpoint represented by the <c>XRView</c>.</value>
+</XRViewTransform>
 </docs>

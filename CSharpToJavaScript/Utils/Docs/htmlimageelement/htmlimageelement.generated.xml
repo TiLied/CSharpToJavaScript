@@ -9,75 +9,16 @@ The <strong><c>HTMLImageElement</c></strong> interface represents an HTML <see h
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLImageElement>
-<HTMLImageElementImage>
+<HTMLImageElementAlign>
 <summary>
-The <strong><c>Image()</c></strong><br/>constructor creates a new <see cref="HTMLImageElement"/> instance. It is functionally<br/>equivalent to <see cref="Document.CreateElement"/>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <strong><c>align</c></strong><br/>property of the <see cref="HTMLImageElement"/> interface is a string which indicates<br/>how to position the image relative to its container.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This function should not be confused with the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image"><c>image()</c></see> function.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image"> <em>See also on MDN</em> </seealso></para>
+<para>You should instead use the<br/>CSS property <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-align</see>, which does in fact also work on images<br/>despite its name. You can also use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property to float the image<br/>to the left or right margin.</para><para>The <c>align</c> property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#align"><c>align</c></see><br/>content attribute.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/align"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLImageElementImage>
-<HTMLImageElementSrcset>
-<summary>
-The <see cref="HTMLImageElement"/> property<br/><strong><c>srcset</c></strong> is a string which identifies one or more<br/><strong>image candidate strings</strong>, separated using commas (<c>,</c>) each<br/>specifying image resources to use under given circumstances.
-</summary>
-<remarks>
-<para>Each image<br/>candidate string contains an image URL and an optional width or pixel density descriptor<br/>that indicates the conditions under which that candidate should be used instead of the<br/>image specified by the <see cref="HTMLImageElement.Src"/> property.</para><para>The <c>srcset</c> property, along with the <see cref="HTMLImageElement.Sizes"/><br/>property, are a crucial component in designing responsive websites, as they<br/>can be used together to make pages that use appropriate images for the rendering<br/>situation.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#srcset"><c>srcset</c></see> attribute uses width descriptors, the <c>sizes</c> attribute must also be present, or the <c>srcset</c> itself will be ignored.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images">HTML images</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images">Responsive images</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types">Image file type and format guide</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing a comma-separated list of one or more image<br/>candidate strings to be used when determining which image resource to present inside the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element represented by the<br/><c>HTMLImageElement</c>.Each image candidate string must begin with a valid URL referencing a non-interactive<br/>graphic resource. This is followed by whitespace and then a condition descriptor that<br/>indicates the circumstances in which the indicated image should be used. Space<br/>characters, other than the whitespace separating the URL and the corresponding condition<br/>descriptor, are ignored; this includes both leading and trailing space, as well as space<br/>before or after each comma.The condition descriptor may take one of two forms:If the condition descriptor is not provided (in other words, the image candidate<br/>provides only a URL), the candidate is assigned a default descriptor of &amp;quot;1x&amp;quot;.This string provides versions of an image to be used at the standard pixel density<br/>(undescribed, assigned a default of <c>1x</c>) as well as double that pixel density (<c>2x</c>).When an image element&amp;apos;s <c>srcset</c> contains &amp;quot;x&amp;quot; descriptors, browsers also consider<br/>the URL in the <see cref="HTMLImageElement.Src"/> attribute (if present) as a<br/>candidate, and assign it a default descriptor of <c>1x</c>.This string provides versions of a header image to use when the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see><br/>renderer needs an image of width 640px, 960px, or 1024px.Note that if any resource in a <c>srcset</c> is described with a &amp;quot;w&amp;quot; descriptor, all<br/>resources within that <c>srcset</c> must also be described with &amp;quot;w&amp;quot; descriptors, and<br/>the image element's <see cref="HTMLImageElement.Src"/> is not considered<br/>a candidate.</value>
-</HTMLImageElementSrcset>
-<HTMLImageElementHspace>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The<br/><strong>obsolete</strong> <strong><c>hspace</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface specifies the number of pixels of empty<br/>space to leave empty on the left and right sides of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>when laying out the page.
-</summary>
-<remarks>
-<para>This property reflects the <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#hspace"><c>hspace</c></see><br/>attribute.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/hspace"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value specifying the width, in pixels, of the horizontal margin to apply to<br/>the left and right sides of the image.</value>
-</HTMLImageElementHspace>
-<HTMLImageElementBorder>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="HTMLImageElement"/><br/>property <strong><c>border</c></strong> specifies the number of pixels thick the<br/>border surrounding the image should be. A value of 0, the default, indicates that no<br/>border should be drawn.
-</summary>
-<remarks>
-<para>You should <strong>not</strong> use this property! Instead, you should use CSS to style the<br/>border. The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</see> property or its longhand properties to not only set<br/>the thickness of the border but to potentially apply a wide variety of other styling<br/>options to it.</para><para>The width, specifically, is controlled using the writing-mode aware<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start-width">border-block-start-width</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end-width">border-block-end-width</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start-width">border-inline-start-width</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end-width">border-inline-end-width</see><br/>properties.</para><para>For compatibility (or perhaps other) reasons, you can use the older properties instead<br/>(or in addition): <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-width">border-right-width</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-width">border-bottom-width</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-width">border-left-width</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/border"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing an integer value specifying the thickness of the<br/>border that should surround the image, in CSS pixels. A value of <c>0</c>, or an<br/>empty string, indicates that there should be no border drawn. The default value of<br/><c>border</c> is <c>0</c>.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.border = null</c> is equivalent to <c>elt.border = &amp;quot;&amp;quot;</c>.</value>
-</HTMLImageElementBorder>
-<HTMLImageElementWidth>
-<summary>
-The <strong><c>width</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface indicates the width at which an image is<br/>drawn in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if it's being drawn or rendered to<br/>any visual medium such as a screen or printer. Otherwise, it&amp;apos;s the natural, pixel<br/>density-corrected width of the image.
-</summary>
-<remarks>
-<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value indicating the width of the image. The way the width is defined<br/>depends on whether or not the image is being rendered to a visual medium, such as a<br/>screen or printer:</value>
-</HTMLImageElementWidth>
-<HTMLImageElementVspace>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <strong><c>vspace</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface specifies the number of pixels of empty space<br/>to leave empty on the top and bottom of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element when laying<br/>out the page.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/vspace"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value specifying the height, in pixels, of the vertical margin to apply to<br/>the top and bottom sides of the image.</value>
-</HTMLImageElementVspace>
-<HTMLImageElementReferrerPolicy>
-<summary>
-The<br/><strong><c>HTMLImageElement.referrerPolicy</c></strong><br/>property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy"><c>referrerpolicy</c></see> attribute of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element defining which referrer is sent when fetching the<br/>resource.
-</summary>
-<remarks>
-<para>-<see cref="HTMLAnchorElement.ReferrerPolicy"/>,<br/><see cref="HTMLAreaElement.ReferrerPolicy"/>, and<br/><see cref="HTMLIFrameElement.ReferrerPolicy"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string; one of the following:</value>
-</HTMLImageElementReferrerPolicy>
+<value>A string specifying one of the following strings which set the<br/>alignment mode for the image.</value>
+</HTMLImageElementAlign>
 <HTMLImageElementAlt>
 <summary>
 The <see cref="HTMLImageElement"/> property <strong><c>alt</c></strong> provides fallback (alternate) text to display when the image specified by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element is not loaded.
@@ -88,26 +29,76 @@ The <see cref="HTMLImageElement"/> property <strong><c>alt</c></strong> provides
 </remarks>
 <value>A string which contains the alternate text to display when the image is not loaded or for use by assistive devices.The <c>alt</c> attribute is officially mandatory; it&amp;apos;s meant to always be specified.<br/>If the image doesn&amp;apos;t require a fallback (such as for an image which is decorative or an advisory icon of minimal importance), you may specify an empty string (<c>&amp;quot;&amp;quot;</c>).<br/>For compatibility reasons, browsers generally will accept an image without an <c>alt</c> attribute, but you should try to get into the habit of using it.</value>
 </HTMLImageElementAlt>
-<HTMLImageElementX>
+<HTMLImageElementAttributionSrc>
 <summary>
-The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>x</c></strong> indicates the x-coordinate of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's left border edge relative to the root element's<br/>origin.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong><c>attributionSrc</c></strong> property of the <see cref="HTMLImageElement"/> interface gets and sets the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc"><c>attributionsrc</c></see> attribute on an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element programmatically, reflecting the value of that attribute. <c>attributionsrc</c> specifies that you want the browser to send an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible">Attribution-Reporting-Eligible</see> header along with the image request.
 </summary>
 <remarks>
-<para>The <c>x</c> and <see cref="HTMLImageElement.Y"/> properties are only valid<br/>for an image if its <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property has the computed value<br/><c>table-column</c> or <c>table-column-group</c>. In other words: it has<br/>either of those values set explicitly on it, or it has inherited it from a containing<br/>element, or by being located within a column described by either <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">col</see><br/>or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">colgroup</see>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/x"> <em>See also on MDN</em> </seealso></para>
+<para>On the server-side this is used to trigger sending an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source">Attribution-Reporting-Register-Source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger">Attribution-Reporting-Register-Trigger</see> header in the response, to register an image-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers">attribution trigger</see>, respectively. Which response header should be sent back depends on the value of the <c>Attribution-Reporting-Eligible</c> header that triggered the registration.</para><para>The source/trigger is registered once the browser receives the response containing the image file.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.</para></blockquote><para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/attributionSrc"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the distance in pixels from the left edge of the element&amp;apos;s<br/>nearest root element and the left edge of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's border<br/>box. The nearest root element is the outermost <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element that<br/>contains the image. If the image is in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, its <c>x</c><br/>is relative to that frame.In the diagram below, the left border edge is the left edge of the blue padding area.<br/>So the value returned by <c>x</c> would be the distance from that point to the<br/>left edge of the content area.<see href="https://developer.mozilla.orgboxmodel-3.png">Diagram showing the relationships between the various boxes associated with an element</see><blockquote class="NOTE"><h5>NOTE</h5>The <c>x</c> property is only valid if the computed<br/>value of the image's <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property is either<br/><c>table-column</c> or <c>table-column-group</c>; in other words, either<br/>of those are set directly on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> or they're inherited from a<br/>containing element or by being located within a column described by either<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">col</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">colgroup</see>.</blockquote></value>
-</HTMLImageElementX>
-<HTMLImageElementLongDesc>
+<value>A string. There are two versions of this property that you can get and set:</value>
+</HTMLImageElementAttributionSrc>
+<HTMLImageElementBorder>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>deprecated</strong> property <strong><c>longDesc</c></strong> on<br/>the <see cref="HTMLImageElement"/> interface specifies the URL of a text or HTML file<br/>which contains a long-form description of the image. This can be used to<br/>provide optional added details beyond the short description provided in the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title"><c>title</c></see> attribute.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="HTMLImageElement"/><br/>property <strong><c>border</c></strong> specifies the number of pixels thick the<br/>border surrounding the image should be. A value of 0, the default, indicates that no<br/>border should be drawn.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/longDesc"> <em>See also on MDN</em> </seealso></para>
+<para>You should <strong>not</strong> use this property! Instead, you should use CSS to style the<br/>border. The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</see> property or its longhand properties to not only set<br/>the thickness of the border but to potentially apply a wide variety of other styling<br/>options to it.</para><para>The width, specifically, is controlled using the writing-mode aware<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start-width">border-block-start-width</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end-width">border-block-end-width</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start-width">border-inline-start-width</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end-width">border-inline-end-width</see><br/>properties.</para><para>For compatibility (or perhaps other) reasons, you can use the older properties instead<br/>(or in addition): <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-width">border-right-width</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-width">border-bottom-width</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-width">border-left-width</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/border"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which may be either an empty string (indicating that no long<br/>description is available) or the URL of a file containing a long form description of the<br/>image&amp;apos;s contents.For example, if the image is a <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics">PNG</see> of a flowchart.<br/>The <c>longDesc</c> property could be used to provide an explanation of the flow<br/>of control represented by the chart, using only text. This can be used by readers both<br/>as an explanation, but also as a substitute for visually-impaired users.</value>
-</HTMLImageElementLongDesc>
+<value>A string containing an integer value specifying the thickness of the<br/>border that should surround the image, in CSS pixels. A value of <c>0</c>, or an<br/>empty string, indicates that there should be no border drawn. The default value of<br/><c>border</c> is <c>0</c>.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.border = null</c> is equivalent to <c>elt.border = &amp;quot;&amp;quot;</c>.</value>
+</HTMLImageElementBorder>
+<HTMLImageElementComplete>
+<summary>
+The read-only <see cref="HTMLImageElement"/> interface's<br/><strong><c>complete</c></strong> attribute is a Boolean value which indicates<br/>whether or not the image has completely loaded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/complete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the image has completely loaded;<br/>otherwise, the value is <c>false</c>.The image is considered completely loaded if any of the following are true:It&amp;apos;s worth noting that due to the image potentially being received asynchronously, the<br/>value of <c>complete</c> may change while your script is running.</value>
+</HTMLImageElementComplete>
+<HTMLImageElementCrossOrigin>
+<summary>
+The <see cref="HTMLImageElement"/><br/>interface&amp;apos;s <strong><c>crossOrigin</c></strong> attribute is a string which<br/>specifies the Cross-Origin Resource Sharing (<see href="https://developer.mozilla.org/en-US/docs/Glossary/CORS">CORS</see>) setting to use when<br/>retrieving the image.
+</summary>
+<remarks>
+<para>-<see cref="HTMLLinkElement.CrossOrigin"/><br/>-<see cref="HTMLMediaElement.CrossOrigin"/><br/>-<see cref="HTMLScriptElement.CrossOrigin"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string of a keyword specifying the CORS mode to use when fetching<br/>the image resource. If you don&amp;apos;t specify <c>crossOrigin</c>, the image is fetched<br/>without CORS (the fetch <c>no-cors</c> mode).Permitted values are:If <c>crossOrigin</c> is an empty string (<c>&amp;quot;&amp;quot;</c>),<br/>the <c>anonymous</c> mode is selected.</value>
+</HTMLImageElementCrossOrigin>
+<HTMLImageElementCurrentSrc>
+<summary>
+The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>currentSrc</c></strong> indicates the URL of the image which is<br/>currently presented in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element it represents.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/currentSrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the full URL of the image currently visible in<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element represented by the <c>HTMLImageElement</c>.<br/>This is useful when you provide multiple image options using the<br/><see cref="HTMLImageElement.Sizes"/> and/or<br/><see cref="HTMLImageElement.Srcset"/> properties. <c>currentSrc</c> lets you<br/>determine which image from the set of provided images was selected by the browser.</value>
+</HTMLImageElementCurrentSrc>
+<HTMLImageElementDecode>
+<summary>
+The <strong><c>decode()</c></strong><br/>method of the <see cref="HTMLImageElement"/> interface returns a<br/><see cref="Promise"/> that resolves once the image is decoded and it is safe to append<br/>it to the DOM.
+</summary>
+<remarks>
+<para>This can be used to initiate loading of the image prior<br/>to attaching it to an element in the DOM (or adding it to the DOM as a new element), so<br/>that the image can be rendered immediately upon being added to the DOM. This, in turn,<br/>prevents the rendering of the next frame after adding the image to the DOM from causing<br/>a delay while the image loads.</para>
+<para>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/>-The <see cref="HTMLImageElement.Decoding"/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that fulfills with <c>undefined</c> once the image data is ready to be used.</returns>
+</HTMLImageElementDecode>
+<HTMLImageElementDecoding>
+<summary>
+The <strong><c>decoding</c></strong> property of the <see cref="HTMLImageElement"/> interface provides a hint to the browser as to how it should decode the image. More specifically, whether it should wait for the image to be decoded before presenting other content updates or not.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLImageElement.Decode"/> method<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element <c>decoding</c> attribute<br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the decoding hint. Possible values are:</value>
+</HTMLImageElementDecoding>
 <HTMLImageElementFetchPriority>
 <summary>
 The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLImageElement"/> interface represents a hint to the browser indicating how it should prioritize fetching a particular image relative to other images.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#fetchpriority"><c>fetchpriority</c></see> attribute of the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element.
@@ -119,6 +110,75 @@ The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLImageEl
 </remarks>
 <value>A string representing the priority hint.<br/>Possible values are:</value>
 </HTMLImageElementFetchPriority>
+<HTMLImageElementHeight>
+<summary>
+The <strong><c>height</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface indicates the height at which the image is<br/>drawn, in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if the image is being drawn or rendered to any<br/>visual medium such as the screen or a printer; otherwise, it&amp;apos;s the natural, pixel<br/>density corrected height of the image.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/>-<see cref="HTMLVideoElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the height of the image. The terms in which the height is<br/>defined depends on whether the image is being rendered to a visual medium or not.</value>
+</HTMLImageElementHeight>
+<HTMLImageElementHspace>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The<br/><strong>obsolete</strong> <strong><c>hspace</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface specifies the number of pixels of empty<br/>space to leave empty on the left and right sides of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>when laying out the page.
+</summary>
+<remarks>
+<para>This property reflects the <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#hspace"><c>hspace</c></see><br/>attribute.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/hspace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value specifying the width, in pixels, of the horizontal margin to apply to<br/>the left and right sides of the image.</value>
+</HTMLImageElementHspace>
+<HTMLImageElementImage>
+<summary>
+The <strong><c>Image()</c></strong><br/>constructor creates a new <see cref="HTMLImageElement"/> instance. It is functionally<br/>equivalent to <see cref="Document.CreateElement"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This function should not be confused with the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image"><c>image()</c></see> function.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLImageElementImage>
+<HTMLImageElementIsMap>
+<summary>
+The <see cref="HTMLImageElement"/> property <strong><c>isMap</c></strong> is a<br/>Boolean value which indicates that the image is to be used by a server-side image map.<br/>This may only be used on images located within an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For accessibility reasons, you should generally avoid using<br/>server-side image maps, as they require the use of a mouse. Use a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image">client-side image map</see> instead.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/isMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the image is being used for a server-side<br/>image map; otherwise, the value is <c>false</c>.</value>
+</HTMLImageElementIsMap>
+<HTMLImageElementLoading>
+<summary>
+The <see cref="HTMLImageElement"/> property <strong><c>loading</c></strong> is a string whose value provides a hint to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> on how to handle the loading of the image which is currently outside the window's <see href="https://developer.mozilla.org/en-US/docs/Glossary/visual viewport">visual viewport</see>.
+</summary>
+<remarks>
+<para>This helps to optimize the loading of the document&amp;apos;s contents by postponing loading the image until it&amp;apos;s expected to be needed, rather than immediately during the initial page load.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance">Web performance</see> in the MDN Learning Area<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading">Lazy loading</see> in the MDN web<br/>performance guide<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a hint to the user agent as to how to best schedule the loading of the image to optimize page performance.<br/>The possible values are:</value>
+</HTMLImageElementLoading>
+<HTMLImageElementLongDesc>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>deprecated</strong> property <strong><c>longDesc</c></strong> on<br/>the <see cref="HTMLImageElement"/> interface specifies the URL of a text or HTML file<br/>which contains a long-form description of the image. This can be used to<br/>provide optional added details beyond the short description provided in the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title"><c>title</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details"><c>aria-details</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/longDesc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which may be either an empty string (indicating that no long<br/>description is available) or the URL of a file containing a long form description of the<br/>image&amp;apos;s contents.For example, if the image is a <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics">PNG</see> of a flowchart.<br/>The <c>longDesc</c> property could be used to provide an explanation of the flow<br/>of control represented by the chart, using only text. This can be used by readers both<br/>as an explanation, but also as a substitute for visually-impaired users.</value>
+</HTMLImageElementLongDesc>
+<HTMLImageElementName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="HTMLImageElement"/><br/>interface&amp;apos;s <strong>deprecated</strong> <strong><c>name</c></strong> property specifies<br/>a name for the element. This has been replaced by the <see cref="Element.Id"/><br/>property available on all elements.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a name by which the image can be referenced.<blockquote class="WARNING"><h5>WARNING</h5>This property is deprecated and is only in the<br/>specification still for backward compatibility purposes. Since it functions<br/>identically to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><c>id</c></see>, you can and should use it instead.</blockquote></value>
+</HTMLImageElementName>
 <HTMLImageElementNaturalHeight>
 <summary>
 The <see cref="HTMLImageElement"/> interface's<br/><strong><c>naturalHeight</c></strong> property is a read-only value which<br/>returns the intrinsic (natural), density-corrected height of the image in<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see>.
@@ -139,75 +199,16 @@ The <see cref="HTMLImageElement"/> interface's read-only<br/><strong><c>naturalW
 </remarks>
 <value>An integer value indicating the intrinsic width of the image, in CSS pixels. This is<br/>the width at which the image is naturally drawn when no constraint or specific value is<br/>established for the image. This natural width is corrected for the pixel density of the<br/>device on which it&amp;apos;s being presented, unlike the value of<br/><see cref="HTMLImageElement.Width"/>.If the intrinsic width is not available—either because the image does not specify an<br/>intrinsic width or because the image data is not available in order to obtain this<br/>information, <c>naturalWidth</c> returns 0.</value>
 </HTMLImageElementNaturalWidth>
-<HTMLImageElementSrc>
+<HTMLImageElementReferrerPolicy>
 <summary>
-The <see cref="HTMLImageElement"/> property<br/><strong><c>src</c></strong>, which reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#src"><c>src</c></see> attribute, specifies the image to display in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see><br/>element.
+The<br/><strong><c>HTMLImageElement.referrerPolicy</c></strong><br/>property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy"><c>referrerpolicy</c></see> attribute of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element defining which referrer is sent when fetching the<br/>resource.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="HTMLAnchorElement.ReferrerPolicy"/>,<br/><see cref="HTMLAreaElement.ReferrerPolicy"/>, and<br/><see cref="HTMLIFrameElement.ReferrerPolicy"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>When providing only a single image, rather than a set of images from which the browser<br/>selects the best match for the viewport size and display pixel density, the<br/><c>src</c> attribute is a string specifying the URL of the<br/>desired image. This can be set either within the HTML itself using the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#src"><c>src</c></see> content attribute, or programmatically by setting the<br/>element&amp;apos;s <c>src</c> property.If you use the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#srcset"><c>srcset</c></see> content attribute to provide multiple<br/>image options for different display pixel densities, the URL specified by the<br/><c>src</c> attribute is used in one of two ways:Additionally, if you use <c>src</c> along with <strong>both</strong><br/><see cref="HTMLImageElement.Sizes"/> (or the<br/>corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#sizes"><c>sizes</c></see> content attribute) <strong>and</strong><br/><c>srcset</c> in order to choose an image based on the viewport size, the<br/><c>src</c> attribute is only used as a fallback for browsers that don&amp;apos;t support<br/><c>sizes</c> and <c>srcset</c>; otherwise, it&amp;apos;s not used at all.</value>
-</HTMLImageElementSrc>
-<HTMLImageElementIsMap>
-<summary>
-The <see cref="HTMLImageElement"/> property <strong><c>isMap</c></strong> is a<br/>Boolean value which indicates that the image is to be used by a server-side image map.<br/>This may only be used on images located within an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> element.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>For accessibility reasons, you should generally avoid using<br/>server-side image maps, as they require the use of a mouse. Use a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image">client-side image map</see> instead.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/isMap"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean value which is <c>true</c> if the image is being used for a server-side<br/>image map; otherwise, the value is <c>false</c>.</value>
-</HTMLImageElementIsMap>
-<HTMLImageElementHeight>
-<summary>
-The <strong><c>height</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface indicates the height at which the image is<br/>drawn, in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if the image is being drawn or rendered to any<br/>visual medium such as the screen or a printer; otherwise, it&amp;apos;s the natural, pixel<br/>density corrected height of the image.
-</summary>
-<remarks>
-<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/>-<see cref="HTMLVideoElement.Height"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/height"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer value indicating the height of the image. The terms in which the height is<br/>defined depends on whether the image is being rendered to a visual medium or not.</value>
-</HTMLImageElementHeight>
-<HTMLImageElementDecoding>
-<summary>
-The <strong><c>decoding</c></strong> property of the <see cref="HTMLImageElement"/> interface provides a hint to the browser as to how it should decode the image. More specifically, whether it should wait for the image to be decoded before presenting other content updates or not.
-</summary>
-<remarks>
-<para>-The <see cref="HTMLImageElement.Decode"/> method<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element <c>decoding</c> attribute<br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string representing the decoding hint. Possible values are:</value>
-</HTMLImageElementDecoding>
-<HTMLImageElementAttributionSrc>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong><c>attributionSrc</c></strong> property of the <see cref="HTMLImageElement"/> interface gets and sets the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc"><c>attributionsrc</c></see> attribute on an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element programmatically, reflecting the value of that attribute. <c>attributionsrc</c> specifies that you want the browser to send an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible">Attribution-Reporting-Eligible</see> header along with the image request.
-</summary>
-<remarks>
-<para>On the server-side this is used to trigger sending an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source">Attribution-Reporting-Register-Source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger">Attribution-Reporting-Register-Trigger</see> header in the response, to register an image-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers">attribution trigger</see>, respectively. Which response header should be sent back depends on the value of the <c>Attribution-Reporting-Eligible</c> header that triggered the registration.</para><para>The source/trigger is registered once the browser receives the response containing the image file.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.</para></blockquote><para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see> for more details.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/attributionSrc"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. There are two versions of this property that you can get and set:</value>
-</HTMLImageElementAttributionSrc>
-<HTMLImageElementAlign>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <strong><c>align</c></strong><br/>property of the <see cref="HTMLImageElement"/> interface is a string which indicates<br/>how to position the image relative to its container.
-</summary>
-<remarks>
-<para>You should instead use the<br/>CSS property <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-align</see>, which does in fact also work on images<br/>despite its name. You can also use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property to float the image<br/>to the left or right margin.</para><para>The <c>align</c> property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#align"><c>align</c></see><br/>content attribute.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/align"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string specifying one of the following strings which set the<br/>alignment mode for the image.</value>
-</HTMLImageElementAlign>
-<HTMLImageElementCurrentSrc>
-<summary>
-The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>currentSrc</c></strong> indicates the URL of the image which is<br/>currently presented in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element it represents.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/currentSrc"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string indicating the full URL of the image currently visible in<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element represented by the <c>HTMLImageElement</c>.<br/>This is useful when you provide multiple image options using the<br/><see cref="HTMLImageElement.Sizes"/> and/or<br/><see cref="HTMLImageElement.Srcset"/> properties. <c>currentSrc</c> lets you<br/>determine which image from the set of provided images was selected by the browser.</value>
-</HTMLImageElementCurrentSrc>
+<value>A string; one of the following:</value>
+</HTMLImageElementReferrerPolicy>
 <HTMLImageElementSizes>
 <summary>
 The <see cref="HTMLImageElement"/> property<br/><strong><c>sizes</c></strong> allows you to specify the layout width of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img">image</see> for each of a list of media conditions. This provides the ability to<br/>automatically select among different images—even images of different orientations or<br/>aspect ratios—as the document state changes to match different media<br/>conditions.
@@ -219,45 +220,26 @@ The <see cref="HTMLImageElement"/> property<br/><strong><c>sizes</c></strong> al
 </remarks>
 <value>A string containing a comma-separated list of source size descriptors<br/>followed by an optional fallback size. Each source size descriptor is<br/>comprised of a media condition, then at least one whitespace character, then the<br/>source size value to use for the image when the media condition<br/>evaluates to <c>true</c>.<br/>You can use the value <c>auto</c> to replace the whole list of sizes or the first entry in the list.<br/>For more information about the syntax of the <c>sizes</c> attribute, see <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#sizes"><c>&amp;lt;img&amp;gt;</c></see>.</value>
 </HTMLImageElementSizes>
-<HTMLImageElementComplete>
+<HTMLImageElementSrc>
 <summary>
-The read-only <see cref="HTMLImageElement"/> interface's<br/><strong><c>complete</c></strong> attribute is a Boolean value which indicates<br/>whether or not the image has completely loaded.
+The <see cref="HTMLImageElement"/> property<br/><strong><c>src</c></strong>, which reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#src"><c>src</c></see> attribute, specifies the image to display in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see><br/>element.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/complete"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean value which is <c>true</c> if the image has completely loaded;<br/>otherwise, the value is <c>false</c>.The image is considered completely loaded if any of the following are true:It&amp;apos;s worth noting that due to the image potentially being received asynchronously, the<br/>value of <c>complete</c> may change while your script is running.</value>
-</HTMLImageElementComplete>
-<HTMLImageElementName>
+<value>When providing only a single image, rather than a set of images from which the browser<br/>selects the best match for the viewport size and display pixel density, the<br/><c>src</c> attribute is a string specifying the URL of the<br/>desired image. This can be set either within the HTML itself using the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#src"><c>src</c></see> content attribute, or programmatically by setting the<br/>element&amp;apos;s <c>src</c> property.If you use the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#srcset"><c>srcset</c></see> content attribute to provide multiple<br/>image options for different display pixel densities, the URL specified by the<br/><c>src</c> attribute is used in one of two ways:Additionally, if you use <c>src</c> along with <strong>both</strong><br/><see cref="HTMLImageElement.Sizes"/> (or the<br/>corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#sizes"><c>sizes</c></see> content attribute) <strong>and</strong><br/><c>srcset</c> in order to choose an image based on the viewport size, the<br/><c>src</c> attribute is only used as a fallback for browsers that don&amp;apos;t support<br/><c>sizes</c> and <c>srcset</c>; otherwise, it&amp;apos;s not used at all.</value>
+</HTMLImageElementSrc>
+<HTMLImageElementSrcset>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="HTMLImageElement"/><br/>interface&amp;apos;s <strong>deprecated</strong> <strong><c>name</c></strong> property specifies<br/>a name for the element. This has been replaced by the <see cref="Element.Id"/><br/>property available on all elements.
+The <see cref="HTMLImageElement"/> property<br/><strong><c>srcset</c></strong> is a string which identifies one or more<br/><strong>image candidate strings</strong>, separated using commas (<c>,</c>) each<br/>specifying image resources to use under given circumstances.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/name"> <em>See also on MDN</em> </seealso></para>
+<para>Each image<br/>candidate string contains an image URL and an optional width or pixel density descriptor<br/>that indicates the conditions under which that candidate should be used instead of the<br/>image specified by the <see cref="HTMLImageElement.Src"/> property.</para><para>The <c>srcset</c> property, along with the <see cref="HTMLImageElement.Sizes"/><br/>property, are a crucial component in designing responsive websites, as they<br/>can be used together to make pages that use appropriate images for the rendering<br/>situation.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#srcset"><c>srcset</c></see> attribute uses width descriptors, the <c>sizes</c> attribute must also be present, or the <c>srcset</c> itself will be ignored.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images">HTML images</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images">Responsive images</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types">Image file type and format guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string providing a name by which the image can be referenced.<blockquote class="WARNING"><h5>WARNING</h5>This property is deprecated and is only in the<br/>specification still for backward compatibility purposes. Since it functions<br/>identically to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><c>id</c></see>, you can and should use it instead.</blockquote></value>
-</HTMLImageElementName>
-<HTMLImageElementCrossOrigin>
-<summary>
-The <see cref="HTMLImageElement"/><br/>interface&amp;apos;s <strong><c>crossOrigin</c></strong> attribute is a string which<br/>specifies the Cross-Origin Resource Sharing (<see href="https://developer.mozilla.org/en-US/docs/Glossary/CORS">CORS</see>) setting to use when<br/>retrieving the image.
-</summary>
-<remarks>
-<para>-<see cref="HTMLLinkElement.CrossOrigin"/><br/>-<see cref="HTMLMediaElement.CrossOrigin"/><br/>-<see cref="HTMLScriptElement.CrossOrigin"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string of a keyword specifying the CORS mode to use when fetching<br/>the image resource. If you don&amp;apos;t specify <c>crossOrigin</c>, the image is fetched<br/>without CORS (the fetch <c>no-cors</c> mode).Permitted values are:If <c>crossOrigin</c> is an empty string (<c>&amp;quot;&amp;quot;</c>),<br/>the <c>anonymous</c> mode is selected.</value>
-</HTMLImageElementCrossOrigin>
-<HTMLImageElementDecode>
-<summary>
-The <strong><c>decode()</c></strong><br/>method of the <see cref="HTMLImageElement"/> interface returns a<br/><see cref="Promise"/> that resolves once the image is decoded and it is safe to append<br/>it to the DOM.
-</summary>
-<remarks>
-<para>This can be used to initiate loading of the image prior<br/>to attaching it to an element in the DOM (or adding it to the DOM as a new element), so<br/>that the image can be rendered immediately upon being added to the DOM. This, in turn,<br/>prevents the rendering of the next frame after adding the image to the DOM from causing<br/>a delay while the image loads.</para>
-<para>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/>-The <see cref="HTMLImageElement.Decoding"/> property<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decode"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="'Promise'"/> that fulfills with <c>undefined</c> once the image data is ready to be used.</returns>
-</HTMLImageElementDecode>
+<value>A string containing a comma-separated list of one or more image<br/>candidate strings to be used when determining which image resource to present inside the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element represented by the<br/><c>HTMLImageElement</c>.Each image candidate string must begin with a valid URL referencing a non-interactive<br/>graphic resource. This is followed by whitespace and then a condition descriptor that<br/>indicates the circumstances in which the indicated image should be used. Space<br/>characters, other than the whitespace separating the URL and the corresponding condition<br/>descriptor, are ignored; this includes both leading and trailing space, as well as space<br/>before or after each comma.The condition descriptor may take one of two forms:If the condition descriptor is not provided (in other words, the image candidate<br/>provides only a URL), the candidate is assigned a default descriptor of &amp;quot;1x&amp;quot;.This string provides versions of an image to be used at the standard pixel density<br/>(undescribed, assigned a default of <c>1x</c>) as well as double that pixel density (<c>2x</c>).When an image element&amp;apos;s <c>srcset</c> contains &amp;quot;x&amp;quot; descriptors, browsers also consider<br/>the URL in the <see cref="HTMLImageElement.Src"/> attribute (if present) as a<br/>candidate, and assign it a default descriptor of <c>1x</c>.This string provides versions of a header image to use when the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see><br/>renderer needs an image of width 640px, 960px, or 1024px.Note that if any resource in a <c>srcset</c> is described with a &amp;quot;w&amp;quot; descriptor, all<br/>resources within that <c>srcset</c> must also be described with &amp;quot;w&amp;quot; descriptors, and<br/>the image element's <see cref="HTMLImageElement.Src"/> is not considered<br/>a candidate.</value>
+</HTMLImageElementSrcset>
 <HTMLImageElementUseMap>
 <summary>
 The <strong><c>useMap</c></strong> property on the<br/><see cref="HTMLImageElement"/> interface reflects the value of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#usemap"><c>usemap</c></see> attribute, which is a string<br/>providing the name of the client-side image map to apply to the image.
@@ -267,6 +249,35 @@ The <strong><c>useMap</c></strong> property on the<br/><see cref="HTMLImageEleme
 </remarks>
 <value>A string providing the page-local URL (that is, a URL that begins<br/>with the hash or pound symbol, <c>#</c>) of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see> element<br/>which defines the image map to apply to the image.You can learn more about client-side image maps in our learning article <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image">Add a hitmap on top of an image</see>.</value>
 </HTMLImageElementUseMap>
+<HTMLImageElementVspace>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <strong><c>vspace</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface specifies the number of pixels of empty space<br/>to leave empty on the top and bottom of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element when laying<br/>out the page.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/vspace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value specifying the height, in pixels, of the vertical margin to apply to<br/>the top and bottom sides of the image.</value>
+</HTMLImageElementVspace>
+<HTMLImageElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface indicates the width at which an image is<br/>drawn in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if it's being drawn or rendered to<br/>any visual medium such as a screen or printer. Otherwise, it&amp;apos;s the natural, pixel<br/>density-corrected width of the image.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the width of the image. The way the width is defined<br/>depends on whether or not the image is being rendered to a visual medium, such as a<br/>screen or printer:</value>
+</HTMLImageElementWidth>
+<HTMLImageElementX>
+<summary>
+The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>x</c></strong> indicates the x-coordinate of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's left border edge relative to the root element's<br/>origin.
+</summary>
+<remarks>
+<para>The <c>x</c> and <see cref="HTMLImageElement.Y"/> properties are only valid<br/>for an image if its <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property has the computed value<br/><c>table-column</c> or <c>table-column-group</c>. In other words: it has<br/>either of those values set explicitly on it, or it has inherited it from a containing<br/>element, or by being located within a column described by either <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">col</see><br/>or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">colgroup</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the distance in pixels from the left edge of the element&amp;apos;s<br/>nearest root element and the left edge of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's border<br/>box. The nearest root element is the outermost <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element that<br/>contains the image. If the image is in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, its <c>x</c><br/>is relative to that frame.In the diagram below, the left border edge is the left edge of the blue padding area.<br/>So the value returned by <c>x</c> would be the distance from that point to the<br/>left edge of the content area.<see href="https://developer.mozilla.orgboxmodel-3.png">Diagram showing the relationships between the various boxes associated with an element</see><blockquote class="NOTE"><h5>NOTE</h5>The <c>x</c> property is only valid if the computed<br/>value of the image's <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property is either<br/><c>table-column</c> or <c>table-column-group</c>; in other words, either<br/>of those are set directly on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> or they're inherited from a<br/>containing element or by being located within a column described by either<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">col</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">colgroup</see>.</blockquote></value>
+</HTMLImageElementX>
 <HTMLImageElementY>
 <summary>
 The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>y</c></strong> indicates the y-coordinate of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's top border edge relative to the root element's<br/>origin.
@@ -277,15 +288,4 @@ The read-only <see cref="HTMLImageElement"/> property<br/><strong><c>y</c></stro
 </remarks>
 <value>An integer value indicating the distance in pixels from the top edge of the element&amp;apos;s<br/>nearest root element to the top edge of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's border<br/>box. The nearest root element is the outermost <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element that<br/>contains the image. If the image is in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, its<br/><c>y</c> is relative to that frame.In the diagram below, the top border edge is the top edge of the blue padding area. So<br/>the value returned by <c>y</c> would be the distance from that point to the top<br/>edge of the content area.<see href="https://developer.mozilla.orgboxmodel-3.png">Diagram showing the relationships between the various boxes associated with an element</see><blockquote class="NOTE"><h5>NOTE</h5>The <c>y</c> property is only valid if the computed<br/>value of the image's <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property is either<br/><c>table-column</c> or <c>table-column-group</c>; in other words,<br/>either of those are set directly on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> or they're<br/>inherited from a containing element or by being located within a column described<br/>by either <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">col</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">colgroup</see>.</blockquote></value>
 </HTMLImageElementY>
-<HTMLImageElementLoading>
-<summary>
-The <see cref="HTMLImageElement"/> property <strong><c>loading</c></strong> is a string whose value provides a hint to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> on how to handle the loading of the image which is currently outside the window's <see href="https://developer.mozilla.org/en-US/docs/Glossary/visual viewport">visual viewport</see>.
-</summary>
-<remarks>
-<para>This helps to optimize the loading of the document&amp;apos;s contents by postponing loading the image until it&amp;apos;s expected to be needed, rather than immediately during the initial page load.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance">Web performance</see> in the MDN Learning Area<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading">Lazy loading</see> in the MDN web<br/>performance guide<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string providing a hint to the user agent as to how to best schedule the loading of the image to optimize page performance.<br/>The possible values are:</value>
-</HTMLImageElementLoading>
 </docs>

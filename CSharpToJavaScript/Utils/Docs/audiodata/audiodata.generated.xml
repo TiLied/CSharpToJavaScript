@@ -17,33 +17,6 @@ The <strong><c>allocationSize()</c></strong> method of the <see cref="AudioData"
 </remarks>
 <returns>An integer containing the number of bytes needed to hold the samples described by <c>options</c>.</returns>
 </AudioDataAllocationSize>
-<AudioDataCopyTo>
-<summary>
-The <strong><c>copyTo()</c></strong> method of the <see cref="AudioData"/> interface copies a plane of an <c>AudioData</c> object to a destination buffer.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/copyTo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>Undefined.</returns>
-</AudioDataCopyTo>
-<AudioDataDuration>
-<summary>
-The <strong><c>duration</c></strong> read-only property of the <see cref="AudioData"/> interface returns the duration in microseconds of this <c>AudioData</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/duration"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</AudioDataDuration>
-<AudioDataNumberOfFrames>
-<summary>
-The <strong><c>numberOfFrames</c></strong> read-only property of the <see cref="AudioData"/> interface returns the number of frames in the <c>AudioData</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/numberOfFrames"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</AudioDataNumberOfFrames>
 <AudioDataAudioData>
 <summary>
 The <strong><c>AudioData()</c></strong> constructor creates a new <see cref="AudioData"/> object which represents an individual audio sample.
@@ -52,15 +25,6 @@ The <strong><c>AudioData()</c></strong> constructor creates a new <see cref="Aud
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/AudioData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioDataAudioData>
-<AudioDataNumberOfChannels>
-<summary>
-The <strong><c>numberOfChannels</c></strong> read-only property of the <see cref="AudioData"/> interface returns the number of channels in the <c>AudioData</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/numberOfChannels"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An integer.</value>
-</AudioDataNumberOfChannels>
 <AudioDataClone>
 <summary>
 The <strong><c>clone()</c></strong> method of the <see cref="AudioData"/> interface creates a new <c>AudioData</c> object with reference to the same media resource as the original.
@@ -79,6 +43,51 @@ The <strong><c>close()</c></strong> method of the <see cref="AudioData"/> interf
 </remarks>
 <returns>Undefined.</returns>
 </AudioDataClose>
+<AudioDataCopyTo>
+<summary>
+The <strong><c>copyTo()</c></strong> method of the <see cref="AudioData"/> interface copies a plane of an <c>AudioData</c> object to a destination buffer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/copyTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</AudioDataCopyTo>
+<AudioDataDuration>
+<summary>
+The <strong><c>duration</c></strong> read-only property of the <see cref="AudioData"/> interface returns the duration in microseconds of this <c>AudioData</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioDataDuration>
+<AudioDataFormat>
+<summary>
+The <strong><c>format</c></strong> read-only property of the <see cref="AudioData"/> interface returns the sample format of the <c>AudioData</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/format"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. One of:</value>
+</AudioDataFormat>
+<AudioDataNumberOfChannels>
+<summary>
+The <strong><c>numberOfChannels</c></strong> read-only property of the <see cref="AudioData"/> interface returns the number of channels in the <c>AudioData</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/numberOfChannels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioDataNumberOfChannels>
+<AudioDataNumberOfFrames>
+<summary>
+The <strong><c>numberOfFrames</c></strong> read-only property of the <see cref="AudioData"/> interface returns the number of frames in the <c>AudioData</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/numberOfFrames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioDataNumberOfFrames>
 <AudioDataSampleRate>
 <summary>
 The <strong><c>sampleRate</c></strong> read-only property of the <see cref="AudioData"/> interface returns the sample rate in Hz.
@@ -97,13 +106,4 @@ The <strong><c>timestamp</c></strong> read-only property of the <see cref="Audio
 </remarks>
 <value>An integer.</value>
 </AudioDataTimestamp>
-<AudioDataFormat>
-<summary>
-The <strong><c>format</c></strong> read-only property of the <see cref="AudioData"/> interface returns the sample format of the <c>AudioData</c> object.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData/format"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. One of:</value>
-</AudioDataFormat>
 </docs>

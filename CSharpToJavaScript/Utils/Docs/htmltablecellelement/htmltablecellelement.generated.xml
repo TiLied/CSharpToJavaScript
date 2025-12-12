@@ -9,6 +9,38 @@ The <strong><c>HTMLTableCellElement</c></strong> interface provides special prop
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLTableCellElement>
+<HTMLTableCellElementAbbr>
+<summary>
+The <strong><c>abbr</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>indicates an abbreviation associated with the cell. If the cell does not represent a header cell <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see>, it is ignored.
+</summary>
+<remarks>
+<para>It reflects the <c>abbr</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> element.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property doesn&amp;apos;t have a visual effect in browsers. It adds information to help assistive technology like screen readers that can use this abbreviation</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/abbr"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTableCellElementAbbr>
+<HTMLTableCellElementAlign>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>align</c></strong> property of the <see cref="HTMLTableCellElement"/> interface is a string indicating how to horizontally align text in the {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> property, which takes precedence, to horizontally align text in a cell instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">Learn: Styling tables</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/align"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</HTMLTableCellElementAlign>
+<HTMLTableCellElementBgColor>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableCellElement.bgColor</c></strong> property is used to set the background color of a cell or get the value of the obsolete <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td#bgcolor"><c>bgColor</c></see> attribute, if present.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated and CSS should be used to set the background color. Use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</see> property instead.</para></blockquote>
+<para>-<see cref="HTMLTableRowElement.BgColor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/bgColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following value types can be used:<blockquote class="NOTE"><h5>NOTE</h5>The values accepted here are a limited subset of the CSS color values. Only <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">named-color</see> and 3- or 6-digit <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color">hex-color</see> (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.</blockquote></value>
+</HTMLTableCellElementBgColor>
 <HTMLTableCellElementCellIndex>
 <summary>
 The <strong><c>cellIndex</c></strong> read-only property of the <see cref="HTMLTableCellElement"/> interface<br/>represents the position of a cell within its row (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>). The first cell has an index of <c>0</c>.
@@ -50,17 +82,45 @@ The <strong><c>colSpan</c></strong> property of the <see cref="HTMLTableCellElem
 </remarks>
 <value>A positive number representing the number of columns.<blockquote class="NOTE"><h5>NOTE</h5>When setting a new value, the value is <strong>clamped</strong> to the nearest strictly positive number.</blockquote></value>
 </HTMLTableCellElementColSpan>
-<HTMLTableCellElementBgColor>
+<HTMLTableCellElementHeaders>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableCellElement.bgColor</c></strong> property is used to set the background color of a cell or get the value of the obsolete <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td#bgcolor"><c>bgColor</c></see> attribute, if present.
+The <strong><c>headers</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>contains a list of IDs of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> elements that are <strong>headers</strong> for this specific cell.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated and CSS should be used to set the background color. Use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</see> property instead.</para></blockquote>
-<para>-<see cref="HTMLTableRowElement.BgColor"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/bgColor"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/headers"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>One of the following value types can be used:<blockquote class="NOTE"><h5>NOTE</h5>The values accepted here are a limited subset of the CSS color values. Only <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">named-color</see> and 3- or 6-digit <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color">hex-color</see> (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.</blockquote></value>
-</HTMLTableCellElementBgColor>
+<value>A string containing space-separated IDs.</value>
+</HTMLTableCellElementHeaders>
+<HTMLTableCellElementNoWrap>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>noWrap</c></strong> property of the <see cref="HTMLTableCellElement"/> interface returns a Boolean value indicating if the text of the cell may be wrapped on several lines or not.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated and you should use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">white-space</see> property with the value <c>nowrap</c> instead.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/noWrap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value.</value>
+</HTMLTableCellElementNoWrap>
+<HTMLTableCellElementRowSpan>
+<summary>
+The <strong><c>rowSpan</c></strong> property of the <see cref="HTMLTableCellElement"/> interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td#colspan"><c>rowspan</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTableCellElement.ColSpan"/><br/>-<see cref="HTMLTableColElement.Span"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/rowSpan"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number representing the number of rows. If it is <c>0</c>, it means all remaining rows in the column.<blockquote class="NOTE"><h5>NOTE</h5>When setting a new value, a value different from 0 is <strong>clamped</strong> to the nearest strictly positive number.</blockquote></value>
+</HTMLTableCellElementRowSpan>
+<HTMLTableCellElementScope>
+<summary>
+The <strong><c>scope</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>indicates the scope of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> cell.
+</summary>
+<remarks>
+<para>Header cells can be configured, using the <c>scope</c> attribute, to apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see> element). If no value is specified for <c>scope</c>, the header is not associated directly with cells in this way. Permitted values for <c>scope</c> are:</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property doesn&amp;apos;t have a visual effect in browsers. It adds semantic information to help assistive technology like screen readers to present the table in a more coherent way.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/scope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following values:</value>
+</HTMLTableCellElementScope>
 <HTMLTableCellElementVAlign>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>vAlign</c></strong> property of the <see cref="HTMLTableCellElement"/> interface is a string indicating how to vertically align text in a {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
@@ -72,64 +132,4 @@ The <strong><c>colSpan</c></strong> property of the <see cref="HTMLTableCellElem
 </remarks>
 <value>The possible values are: <c>&amp;quot;top&amp;quot;</c>, <c>&amp;quot;middle&amp;quot;</c>, <c>&amp;quot;bottom&amp;quot;</c>, or <c>&amp;quot;baseline&amp;quot;</c></value>
 </HTMLTableCellElementVAlign>
-<HTMLTableCellElementAlign>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>align</c></strong> property of the <see cref="HTMLTableCellElement"/> interface is a string indicating how to horizontally align text in the {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> property, which takes precedence, to horizontally align text in a cell instead.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">Learn: Styling tables</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/align"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The possible values are:</value>
-</HTMLTableCellElementAlign>
-<HTMLTableCellElementScope>
-<summary>
-The <strong><c>scope</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>indicates the scope of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> cell.
-</summary>
-<remarks>
-<para>Header cells can be configured, using the <c>scope</c> attribute, to apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see> element). If no value is specified for <c>scope</c>, the header is not associated directly with cells in this way. Permitted values for <c>scope</c> are:</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property doesn&amp;apos;t have a visual effect in browsers. It adds semantic information to help assistive technology like screen readers to present the table in a more coherent way.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/scope"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>One of the following values:</value>
-</HTMLTableCellElementScope>
-<HTMLTableCellElementRowSpan>
-<summary>
-The <strong><c>rowSpan</c></strong> property of the <see cref="HTMLTableCellElement"/> interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td#colspan"><c>rowspan</c></see> attribute.
-</summary>
-<remarks>
-<para>-<see cref="HTMLTableCellElement.ColSpan"/><br/>-<see cref="HTMLTableColElement.Span"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/rowSpan"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A positive number representing the number of rows. If it is <c>0</c>, it means all remaining rows in the column.<blockquote class="NOTE"><h5>NOTE</h5>When setting a new value, a value different from 0 is <strong>clamped</strong> to the nearest strictly positive number.</blockquote></value>
-</HTMLTableCellElementRowSpan>
-<HTMLTableCellElementAbbr>
-<summary>
-The <strong><c>abbr</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>indicates an abbreviation associated with the cell. If the cell does not represent a header cell <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see>, it is ignored.
-</summary>
-<remarks>
-<para>It reflects the <c>abbr</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> element.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property doesn&amp;apos;t have a visual effect in browsers. It adds information to help assistive technology like screen readers that can use this abbreviation</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/abbr"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string.</value>
-</HTMLTableCellElementAbbr>
-<HTMLTableCellElementNoWrap>
-<summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>noWrap</c></strong> property of the <see cref="HTMLTableCellElement"/> interface returns a Boolean value indicating if the text of the cell may be wrapped on several lines or not.
-</summary>
-<remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated and you should use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">white-space</see> property with the value <c>nowrap</c> instead.</para></blockquote>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/noWrap"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A Boolean value.</value>
-</HTMLTableCellElementNoWrap>
-<HTMLTableCellElementHeaders>
-<summary>
-The <strong><c>headers</c></strong> property of the <see cref="HTMLTableCellElement"/> interface<br/>contains a list of IDs of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> elements that are <strong>headers</strong> for this specific cell.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/headers"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string containing space-separated IDs.</value>
-</HTMLTableCellElementHeaders>
 </docs>

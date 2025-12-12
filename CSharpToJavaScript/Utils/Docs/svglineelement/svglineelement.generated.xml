@@ -9,6 +9,17 @@ The <strong><c>SVGLineElement</c></strong> interface provides access to the prop
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGLineElement>
+<SVGLineElementX1>
+<summary>
+The <strong><c>x1</c></strong> read-only property of the <see cref="SVGLineElement"/> interface describes the start of the SVG line along the x-axis as an <see cref="SVGAnimatedLength"/>. It reflects the {{SVGElement("line")}} element's {{SVGAttr("x1")}} geometric attribute.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is that start position as a length along the x-axis in user coordinate system units.</para>
+<para>-<see cref="SVGLineElement.X2"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement/x1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGLineElementX1>
 <SVGLineElementX2>
 <summary>
 The <strong><c>x2</c></strong> read-only property of the <see cref="SVGLineElement"/> interface describes the x-axis coordinate value of the end of a line as an <see cref="SVGAnimatedLength"/>. It reflects the {{SVGElement("line")}} element's {{SVGAttr("x2")}} geometric attribute.
@@ -42,15 +53,4 @@ The <strong><c>y2</c></strong> read-only property of the <see cref="SVGLineEleme
 </remarks>
 <value>An <see cref="SVGAnimatedLength"/>.</value>
 </SVGLineElementY2>
-<SVGLineElementX1>
-<summary>
-The <strong><c>x1</c></strong> read-only property of the <see cref="SVGLineElement"/> interface describes the start of the SVG line along the x-axis as an <see cref="SVGAnimatedLength"/>. It reflects the {{SVGElement("line")}} element's {{SVGAttr("x1")}} geometric attribute.
-</summary>
-<remarks>
-<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is that start position as a length along the x-axis in user coordinate system units.</para>
-<para>-<see cref="SVGLineElement.X2"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement/x1"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>An <see cref="SVGAnimatedLength"/>.</value>
-</SVGLineElementX1>
 </docs>

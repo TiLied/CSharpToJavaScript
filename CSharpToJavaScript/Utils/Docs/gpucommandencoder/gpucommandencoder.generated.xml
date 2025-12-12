@@ -9,48 +9,6 @@ The <strong><c>GPUCommandEncoder</c></strong> interface of the {{domxref(&amp;qu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUCommandEncoder>
-<GPUCommandEncoderPopDebugGroup>
-<summary>
-The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface ends a debug group, which is begun with a <see cref="GPUCommandEncoder.PushDebugGroup"/> call.
-</summary>
-<remarks>
-<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderPopDebugGroup>
-<GPUCommandEncoderCopyTextureToTexture>
-<summary>
-The <strong><c>copyTextureToTexture()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from one <see cref="GPUTexture"/> to another.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToTexture"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderCopyTextureToTexture>
-<GPUCommandEncoderLabel>
-<summary>
-The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUCommandEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
-</summary>
-<remarks>
-<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateCommandEncoder"/> call, or you can get and set it directly on the <c>GPUCommandEncoder</c> object.</para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/label"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
-</GPUCommandEncoderLabel>
-<GPUCommandEncoderCopyBufferToTexture>
-<summary>
-The <strong><c>copyBufferToTexture()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from a <see cref="GPUBuffer"/> to a <see cref="GPUTexture"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyBufferToTexture"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderCopyBufferToTexture>
 <GPUCommandEncoderBeginComputePass>
 <summary>
 The <strong><c>beginComputePass()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface starts encoding a compute pass, returning a <see cref="GPUComputePassEncoder"/> that can be used to control computation.
@@ -61,6 +19,76 @@ The <strong><c>beginComputePass()</c></strong> method of the<br/><see cref="GPUC
 </remarks>
 <returns>A <see cref="GPUComputePassEncoder"/> object instance.</returns>
 </GPUCommandEncoderBeginComputePass>
+<GPUCommandEncoderBeginRenderPass>
+<summary>
+The <strong><c>beginRenderPass()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface starts encoding a render pass, returning a <see cref="GPURenderPassEncoder"/> that can be used to control rendering.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/beginRenderPass"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPURenderPassEncoder"/> object instance.</returns>
+</GPUCommandEncoderBeginRenderPass>
+<GPUCommandEncoderClearBuffer>
+<summary>
+The <strong><c>clearBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that fills a region of a <see cref="GPUBuffer"/> with zeroes.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/clearBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUCommandEncoderClearBuffer>
+<GPUCommandEncoderCopyBufferToBuffer>
+<summary>
+The <strong><c>copyBufferToBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from one <see cref="GPUBuffer"/> to another.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyBufferToBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUCommandEncoderCopyBufferToBuffer>
+<GPUCommandEncoderCopyBufferToTexture>
+<summary>
+The <strong><c>copyBufferToTexture()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from a <see cref="GPUBuffer"/> to a <see cref="GPUTexture"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyBufferToTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUCommandEncoderCopyBufferToTexture>
+<GPUCommandEncoderCopyTextureToBuffer>
+<summary>
+The <strong><c>copyTextureToBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from a <see cref="GPUTexture"/> to a <see cref="GPUBuffer"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUCommandEncoderCopyTextureToBuffer>
+<GPUCommandEncoderCopyTextureToTexture>
+<summary>
+The <strong><c>copyTextureToTexture()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from one <see cref="GPUTexture"/> to another.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUCommandEncoderCopyTextureToTexture>
+<GPUCommandEncoderFinish>
+<summary>
+The <strong><c>finish()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface completes recording of the command sequence encoded on this <c>GPUCommandEncoder</c>, returning a corresponding <see cref="GPUCommandBuffer"/>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUCommandBuffer"/> object instance.</returns>
+</GPUCommandEncoderFinish>
 <GPUCommandEncoderInsertDebugMarker>
 <summary>
 The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface marks a specific point in a series of encoded commands with a label.
@@ -72,27 +100,28 @@ The <strong><c>insertDebugMarker()</c></strong> method of the<br/><see cref="GPU
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPUCommandEncoderInsertDebugMarker>
-<GPUCommandEncoderCopyBufferToBuffer>
+<GPUCommandEncoderLabel>
 <summary>
-The <strong><c>copyBufferToBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from one <see cref="GPUBuffer"/> to another.
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUCommandEncoder"/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
 </summary>
 <remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateCommandEncoder"/> call, or you can get and set it directly on the <c>GPUCommandEncoder</c> object.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyBufferToBuffer"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/label"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderCopyBufferToBuffer>
-<GPUCommandEncoderWriteTimestamp>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPUCommandEncoderLabel>
+<GPUCommandEncoderPopDebugGroup>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>writeTimestamp()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that writes a timestamp into a <see cref="GPUQuerySet"/> once the previous commands recorded into the same queued <see cref="GPUCommandBuffer"/> have been executed by the GPU.
+The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface ends a debug group, which is begun with a <see cref="GPUCommandEncoder.PushDebugGroup"/> call.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>To use timestamp queries, the <c>timestamp-query</c> {{domxref(&amp;quot;GPUSupportedFeatures&amp;quot;, &amp;quot;feature&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} must be enabled in the <see cref="GPUDevice"/>.</para></blockquote>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/writeTimestamp"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderWriteTimestamp>
+</GPUCommandEncoderPopDebugGroup>
 <GPUCommandEncoderPushDebugGroup>
 <summary>
 The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPUCommandEncoder.PopDebugGroup"/> method is invoked.
@@ -114,44 +143,15 @@ The <strong><c>resolveQuerySet()</c></strong> method of the<br/><see cref="GPUCo
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </GPUCommandEncoderResolveQuerySet>
-<GPUCommandEncoderBeginRenderPass>
+<GPUCommandEncoderWriteTimestamp>
 <summary>
-The <strong><c>beginRenderPass()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface starts encoding a render pass, returning a <see cref="GPURenderPassEncoder"/> that can be used to control rendering.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>writeTimestamp()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that writes a timestamp into a <see cref="GPUQuerySet"/> once the previous commands recorded into the same queued <see cref="GPUCommandBuffer"/> have been executed by the GPU.
 </summary>
 <remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>To use timestamp queries, the <c>timestamp-query</c> {{domxref(&amp;quot;GPUSupportedFeatures&amp;quot;, &amp;quot;feature&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} must be enabled in the <see cref="GPUDevice"/>.</para></blockquote>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/beginRenderPass"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPURenderPassEncoder"/> object instance.</returns>
-</GPUCommandEncoderBeginRenderPass>
-<GPUCommandEncoderClearBuffer>
-<summary>
-The <strong><c>clearBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that fills a region of a <see cref="GPUBuffer"/> with zeroes.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/clearBuffer"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/writeTimestamp"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderClearBuffer>
-<GPUCommandEncoderFinish>
-<summary>
-The <strong><c>finish()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface completes recording of the command sequence encoded on this <c>GPUCommandEncoder</c>, returning a corresponding <see cref="GPUCommandBuffer"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/finish"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="GPUCommandBuffer"/> object instance.</returns>
-</GPUCommandEncoderFinish>
-<GPUCommandEncoderCopyTextureToBuffer>
-<summary>
-The <strong><c>copyTextureToBuffer()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface encodes a command that copies data from a <see cref="GPUTexture"/> to a <see cref="GPUBuffer"/>.
-</summary>
-<remarks>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToBuffer"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</GPUCommandEncoderCopyTextureToBuffer>
+</GPUCommandEncoderWriteTimestamp>
 </docs>

@@ -18,25 +18,17 @@ The <strong><c>UIEvent.detail</c></strong> read-only property, when non-zero, pr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </UIEventDetail>
-<UIEventWhich>
+<UIEventInitUIEvent>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.which</c></strong> read-only property of the <see cref="UIEvent"/> interface returns a number that indicates which button was pressed on the mouse, or the numeric <c>keyCode</c> or the character code (<c>charCode</c>) of the key pressed on the keyboard.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.initUIEvent()</c></strong> method initializes a UI event<br/>once it&amp;apos;s been created.
 </summary>
 <remarks>
-<para>-<see cref="KeyboardEvent"/><br/>-<see cref="MouseEvent"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/which"> <em>See also on MDN</em> </seealso></para>
+<para>Events initialized in this way must have been created with the <see cref="Document.CreateEvent"/> method. This method must be called to set the event<br/>before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>. Once<br/>dispatched, it doesn&amp;apos;t do anything anymore.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Do not use this method anymore as it is deprecated.</para><para>Instead use specific event constructors, like <see cref="UIEvent.UIEvent"/>. The page on <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events">Creating and dispatching events</see> gives more information about the way to use these.</para></blockquote>
+<para>-<see cref="UIEvent"/><br/>-The constructor to use instead of this deprecated method:<br/><see cref="UIEvent.UIEvent"/>. More specific constructors can be used<br/>too.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>For <see cref="KeyboardEvent"/>, <c>event.which</c> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.<br/>Please see deprecated <see cref="KeyboardEvent.CharCode"/> and <see cref="KeyboardEvent.KeyCode"/> for more details.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="KeyboardEvent.Key"/> or <see cref="KeyboardEvent.Code"/> for new code.</blockquote>For <see cref="MouseEvent"/>, <c>event.which</c> is a number representing a given button:For a mouse configured for left-handed use, the button actions are reversed.<br/>In this case, the values are read from right to left.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="MouseEvent.Button"/> for new code.</blockquote></value>
-</UIEventWhich>
-<UIEventView>
-<summary>
-The <strong><c>UIEvent.view</c></strong> read-only property returns the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</see> object from which the event was generated. In browsers, this<br/>is the <see cref="Window"/> object the event happened in.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A reference to an <c>AbstractView</c> object.</value>
-</UIEventView>
+<returns>None (<see cref="Undefined"/>).</returns>
+</UIEventInitUIEvent>
 <UIEventSourceCapabilities>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceCapabilities</c></strong> read-only property of the <see cref="UIEvent"/> interface returns<br/>an instance of the <see cref="'InputDeviceCapabilities'"/> interface which provides<br/>information about the physical device responsible for generating a touch event. If no<br/>input device was responsible for the event, it returns <c>null</c>.
@@ -57,15 +49,23 @@ The <strong><c>UIEvent()</c></strong> constructor creates a new <see cref="UIEve
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/UIEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </UIEventUIEvent>
-<UIEventInitUIEvent>
+<UIEventView>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.initUIEvent()</c></strong> method initializes a UI event<br/>once it&amp;apos;s been created.
+The <strong><c>UIEvent.view</c></strong> read-only property returns the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</see> object from which the event was generated. In browsers, this<br/>is the <see cref="Window"/> object the event happened in.
 </summary>
 <remarks>
-<para>Events initialized in this way must have been created with the <see cref="Document.CreateEvent"/> method. This method must be called to set the event<br/>before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>. Once<br/>dispatched, it doesn&amp;apos;t do anything anymore.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Do not use this method anymore as it is deprecated.</para><para>Instead use specific event constructors, like <see cref="UIEvent.UIEvent"/>. The page on <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events">Creating and dispatching events</see> gives more information about the way to use these.</para></blockquote>
-<para>-<see cref="UIEvent"/><br/>-The constructor to use instead of this deprecated method:<br/><see cref="UIEvent.UIEvent"/>. More specific constructors can be used<br/>too.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</UIEventInitUIEvent>
+<value>A reference to an <c>AbstractView</c> object.</value>
+</UIEventView>
+<UIEventWhich>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.which</c></strong> read-only property of the <see cref="UIEvent"/> interface returns a number that indicates which button was pressed on the mouse, or the numeric <c>keyCode</c> or the character code (<c>charCode</c>) of the key pressed on the keyboard.
+</summary>
+<remarks>
+<para>-<see cref="KeyboardEvent"/><br/>-<see cref="MouseEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/which"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For <see cref="KeyboardEvent"/>, <c>event.which</c> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.<br/>Please see deprecated <see cref="KeyboardEvent.CharCode"/> and <see cref="KeyboardEvent.KeyCode"/> for more details.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="KeyboardEvent.Key"/> or <see cref="KeyboardEvent.Code"/> for new code.</blockquote>For <see cref="MouseEvent"/>, <c>event.which</c> is a number representing a given button:For a mouse configured for left-handed use, the button actions are reversed.<br/>In this case, the values are read from right to left.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="MouseEvent.Button"/> for new code.</blockquote></value>
+</UIEventWhich>
 </docs>

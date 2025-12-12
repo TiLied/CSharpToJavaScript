@@ -9,26 +9,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBCursor>
-<IDBCursorSource>
-<summary>
-The <strong><c>source</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the <see cref="IDBObjectStore"/> or<br/><see cref="IDBIndex"/> that the cursor is iterating over. This function never returns<br/>null or throws an exception, even if the cursor is currently being iterated, has<br/>iterated past its end, or its transaction is not active.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/source"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The <see cref="IDBObjectStore"/> or <see cref="IDBIndex"/> that the cursor is<br/>iterating over.</value>
-</IDBCursorSource>
-<IDBCursorKey>
-<summary>
-The <strong><c>key</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the key for the record at the cursor's<br/>position. If the cursor is outside its range, this is set to undefined. The cursor&amp;apos;s<br/>key can be any data type.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/key"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A value of any type.</value>
-</IDBCursorKey>
 <IDBCursorAdvance>
 <summary>
 The <strong><c>advance()</c></strong> method of the <see cref="IDBCursor"/><br/>interface sets the number of times a cursor should move<br/>its position forward.
@@ -39,6 +19,16 @@ The <strong><c>advance()</c></strong> method of the <see cref="IDBCursor"/><br/>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </IDBCursorAdvance>
+<IDBCursorContinue>
+<summary>
+The <strong><c>continue()</c></strong> method of the <see cref="IDBCursor"/><br/>interface advances the cursor to the next position along its direction, to the item<br/>whose key matches the optional key parameter. If no key is specified, the cursor<br/>advances to the immediate next position, based on its direction.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBCursorContinue>
 <IDBCursorContinuePrimaryKey>
 <summary>
 The <strong><c>continuePrimaryKey()</c></strong> method of the<br/><see cref="IDBCursor"/> interface advances the cursor to the item whose key<br/>matches the key parameter as well as whose primary key matches the primary key<br/>parameter.
@@ -71,26 +61,16 @@ The <strong><c>direction</c></strong> read-only property of the<br/><see cref="I
 </remarks>
 <value>A string indicating the direction in which the cursor is traversing the data.<br/>Possible values are:</value>
 </IDBCursorDirection>
-<IDBCursorRequest>
+<IDBCursorKey>
 <summary>
-The <strong><c>request</c></strong> read-only property of the <see cref="IDBCursor"/> interface returns the <see cref="IDBRequest"/> used to obtain the cursor.
+The <strong><c>key</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the key for the record at the cursor's<br/>position. If the cursor is outside its range, this is set to undefined. The cursor&amp;apos;s<br/>key can be any data type.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/request"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/key"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="IDBRequest"/> object instance.</value>
-</IDBCursorRequest>
-<IDBCursorContinue>
-<summary>
-The <strong><c>continue()</c></strong> method of the <see cref="IDBCursor"/><br/>interface advances the cursor to the next position along its direction, to the item<br/>whose key matches the optional key parameter. If no key is specified, the cursor<br/>advances to the immediate next position, based on its direction.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continue"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</IDBCursorContinue>
+<value>A value of any type.</value>
+</IDBCursorKey>
 <IDBCursorPrimaryKey>
 <summary>
 The <strong><c>primaryKey</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the cursor's current effective key. If the<br/>cursor is currently being iterated or has iterated outside its range, this is set to<br/>undefined. The cursor&amp;apos;s primary key can be any data type.
@@ -101,6 +81,26 @@ The <strong><c>primaryKey</c></strong> read-only property of the<br/><see cref="
 </remarks>
 <value>A value of any data type.</value>
 </IDBCursorPrimaryKey>
+<IDBCursorRequest>
+<summary>
+The <strong><c>request</c></strong> read-only property of the <see cref="IDBCursor"/> interface returns the <see cref="IDBRequest"/> used to obtain the cursor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/request"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="IDBRequest"/> object instance.</value>
+</IDBCursorRequest>
+<IDBCursorSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the <see cref="IDBObjectStore"/> or<br/><see cref="IDBIndex"/> that the cursor is iterating over. This function never returns<br/>null or throws an exception, even if the cursor is currently being iterated, has<br/>iterated past its end, or its transaction is not active.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="IDBObjectStore"/> or <see cref="IDBIndex"/> that the cursor is<br/>iterating over.</value>
+</IDBCursorSource>
 <IDBCursorUpdate>
 <summary>
 The <strong><c>update()</c></strong> method of the <see cref="IDBCursor"/><br/>interface returns an <see cref="IDBRequest"/> object, and, in a separate thread,<br/>updates the value at the current position of the cursor in the object store. If the<br/>cursor points to a record that has just been deleted, a new record is created.

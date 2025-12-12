@@ -8,42 +8,6 @@ The <strong><c>SVGPointList</c></strong> interface represents a list of <see cre
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGPointList>
-<SVGPointListInitialize>
-<summary>
-The <strong><c>initialize()</c></strong> method of the <see cref="SVGPointList"/> interface clears the list then adds a single new <see cref="DOMPoint"/> object to the list.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/initialize"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>The added <see cref="DOMPoint"/> object.</returns>
-</SVGPointListInitialize>
-<SVGPointListGetItem>
-<summary>
-The <strong><c>getItem()</c></strong> method of the <see cref="SVGPointList"/> interface gets one item from the list at the specified index.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/getItem"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="DOMPoint"/> object.</returns>
-</SVGPointListGetItem>
-<SVGPointListClear>
-<summary>
-The <strong><c>clear()</c></strong> method of the <see cref="SVGPointList"/> interface removes all items from the list.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/clear"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
-</SVGPointListClear>
-<SVGPointListLength>
-<summary>
-The <strong><c>length</c></strong> read-only property of the <see cref="SVGPointList"/> interface returns the number of items in the list.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/length"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>The number of items in the list.</value>
-</SVGPointListLength>
 <SVGPointListAppendItem>
 <summary>
 The <strong><c>appendItem()</c></strong> method of the <see cref="SVGPointList"/> interface adds a <see cref="DOMPoint"/> to the end of the list.
@@ -53,15 +17,33 @@ The <strong><c>appendItem()</c></strong> method of the <see cref="SVGPointList"/
 </remarks>
 <returns>The <see cref="DOMPoint"/> object that was appended.</returns>
 </SVGPointListAppendItem>
-<SVGPointListReplaceItem>
+<SVGPointListClear>
 <summary>
-The <strong><c>replaceItem()</c></strong> method of the <see cref="SVGPointList"/> interface replaces a <see cref="DOMPoint"/> in the list.
+The <strong><c>clear()</c></strong> method of the <see cref="SVGPointList"/> interface removes all items from the list.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/replaceItem"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/clear"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The new <see cref="DOMPoint"/> object.</returns>
-</SVGPointListReplaceItem>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGPointListClear>
+<SVGPointListGetItem>
+<summary>
+The <strong><c>getItem()</c></strong> method of the <see cref="SVGPointList"/> interface gets one item from the list at the specified index.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/getItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMPoint"/> object.</returns>
+</SVGPointListGetItem>
+<SVGPointListInitialize>
+<summary>
+The <strong><c>initialize()</c></strong> method of the <see cref="SVGPointList"/> interface clears the list then adds a single new <see cref="DOMPoint"/> object to the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/initialize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The added <see cref="DOMPoint"/> object.</returns>
+</SVGPointListInitialize>
 <SVGPointListInsertItemBefore>
 <summary>
 The <strong><c>insertItemBefore()</c></strong> method of the <see cref="SVGPointList"/> interface inserts a <see cref="DOMPoint"/> before another item in the list.
@@ -71,6 +53,15 @@ The <strong><c>insertItemBefore()</c></strong> method of the <see cref="SVGPoint
 </remarks>
 <returns>The <see cref="DOMPoint"/> object that was inserted.</returns>
 </SVGPointListInsertItemBefore>
+<SVGPointListLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the <see cref="SVGPointList"/> interface returns the number of items in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of items in the list.</value>
+</SVGPointListLength>
 <SVGPointListNumberOfItems>
 <summary>
 The <strong><c>numberOfItems</c></strong> read-only property of the <see cref="SVGPointList"/> interface returns the number of items in the list.
@@ -89,4 +80,13 @@ The <strong><c>removeItem()</c></strong> method of the <see cref="SVGPointList"/
 </remarks>
 <returns>The removed <see cref="DOMPoint"/> object.</returns>
 </SVGPointListRemoveItem>
+<SVGPointListReplaceItem>
+<summary>
+The <strong><c>replaceItem()</c></strong> method of the <see cref="SVGPointList"/> interface replaces a <see cref="DOMPoint"/> in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPointList/replaceItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The new <see cref="DOMPoint"/> object.</returns>
+</SVGPointListReplaceItem>
 </docs>

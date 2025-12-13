@@ -57,7 +57,8 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _IgnoreAsParenthesis = false;
 	private bool _IgnoreTailingDot = false;
 	private bool _GlobalStatement = false;
-
+	private bool _ThisIsUsed = false;
+	
 	private int _EnumMembers = 0;
 
 	private string[] _AttributeDatasForInvocation = new string[2];
@@ -1057,8 +1058,11 @@ internal class Walker : CSharpSyntaxWalker
 						VisitIdentifierName((IdentifierNameSyntax)asNode);
 						break;
 					case SyntaxKind.ThisExpression:
-						VisitThisExpression((ThisExpressionSyntax)asNode);
-						break;
+						{
+							_ThisIsUsed = true;
+							VisitThisExpression((ThisExpressionSyntax)asNode);
+							break;
+						}
 					case SyntaxKind.ParenthesizedExpression:
 						VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
 						break;
@@ -1127,6 +1131,8 @@ internal class Walker : CSharpSyntaxWalker
 				}
 			}
 		}
+		
+		_ThisIsUsed = false;
 	}
 	public override void VisitAnonymousObjectCreationExpression(AnonymousObjectCreationExpressionSyntax node)
 	{
@@ -3532,7 +3538,7 @@ internal class Walker : CSharpSyntaxWalker
 						return true;
 					}
 
-					if (_attributeData[j].AttributeClass.Name == nameof(EnumValueAttribute))
+					if (_attributeData[j].AttributeClass!.Name == nameof(EnumValueAttribute))
 					{
 						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
 						for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -3551,7 +3557,7 @@ internal class Walker : CSharpSyntaxWalker
 						return true;
 					}
 
-					if (_attributeData[j].AttributeClass.Name == nameof(ValueAttribute))
+					if (_attributeData[j].AttributeClass!.Name == nameof(ValueAttribute))
 					{
 						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
 						for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -3570,9 +3576,9 @@ internal class Walker : CSharpSyntaxWalker
 						return true;
 					}
 
-					if (_attributeData[j].AttributeClass.Name == nameof(ToAttribute))
+					if (_attributeData[j].AttributeClass!.Name == nameof(ToAttribute))
 					{
-						ToAttribute _toAttr = new ToAttribute(_attributeData[j].ConstructorArguments[0].Value.ToString());
+						ToAttribute _toAttr = new(_attributeData[j].ConstructorArguments[0].Value.ToString());
 
 						if (_toAttr.To == ToAttribute.None)
 							_IgnoreTailingDot = true;
@@ -6102,9 +6108,9 @@ internal class Walker : CSharpSyntaxWalker
 		else
 			iSymbol = symbolInfo?.Symbol;
 
-		if (iSymbol != null && 
-			iSymbol.Kind != SymbolKind.ErrorType && 
-			iSymbol.Kind != SymbolKind.DynamicType && 
+		if (iSymbol != null &&
+			iSymbol.Kind != SymbolKind.ErrorType &&
+			iSymbol.Kind != SymbolKind.DynamicType &&
 			iSymbol.Kind != SymbolKind.Namespace)
 		{
 			string? _containingNamespace = iSymbol.ContainingNamespace.ToString();
@@ -6114,6 +6120,18 @@ internal class Walker : CSharpSyntaxWalker
 				_containingNamespace = string.Empty;
 			}
 
+			if (_GlobalStatement)
+			{
+				if (iSymbol.Kind == SymbolKind.Parameter ||
+					iSymbol.Kind == SymbolKind.Local)
+				{
+					return false;
+				}
+				if (iSymbol.Kind == SymbolKind.Method &&
+					((IMethodSymbol)iSymbol).MethodKind == MethodKind.LocalFunction)
+					return false;
+			}
+			
 			if (_containingNamespace.Contains(_NameSpaceStr) && !_GlobalStatement)
 			{
 				if (iSymbol.Kind == SymbolKind.Parameter ||
@@ -6121,7 +6139,57 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					return false;
 				}
+				if (!_ThisIsUsed)
+				{
+					if (iSymbol.Kind == SymbolKind.Method &&
+						((IMethodSymbol)iSymbol).MethodKind == MethodKind.Ordinary)
+					{
+						if (node.Parent is MemberAccessExpressionSyntax member)
+						{
+							ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
+							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
+								return false;
+						}
+						if (((IMethodSymbol)iSymbol).ReceiverType.ToString().EndsWith(_CurrentClassStr))
+						{
+							VisitLeadingTrivia(identifier);
 
+							JSSB.Append($"this.");
+							VisitToken(identifier.WithoutTrivia());
+
+							VisitTrailingTrivia(identifier);
+
+							return true;
+						}
+						return false;
+					}
+
+					if (iSymbol.Kind == SymbolKind.Property ||
+						iSymbol.Kind == SymbolKind.Field)
+					{
+						if (node.Parent is MemberAccessExpressionSyntax member)
+						{
+							ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
+							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
+								return false;
+						}
+						string? _type = iSymbol.ContainingType.ToString();
+						if (_type != null &&
+							_type.EndsWith(_CurrentClassStr))
+						{
+							VisitLeadingTrivia(identifier);
+
+							JSSB.Append($"this.");
+							VisitToken(identifier.WithoutTrivia());
+
+							VisitTrailingTrivia(identifier);
+
+							return true;
+						}
+						return false;
+					}
+				}
+				/*
 				ClassDeclarationSyntax? _class = node.Ancestors().FirstOrDefault(n => n.IsKind(SyntaxKind.ClassDeclaration)) as ClassDeclarationSyntax;
 
 				if (_class == null)
@@ -6134,7 +6202,7 @@ internal class Walker : CSharpSyntaxWalker
 				//This is for struct.
 				//maybe later convert struct to class?
 				//
-				if (_class == default(ClassDeclarationSyntax)) 
+				if (_class == default(ClassDeclarationSyntax))
 				{
 					Log.WarningLine("_class is default");
 					return false;
@@ -6177,7 +6245,7 @@ internal class Walker : CSharpSyntaxWalker
 							if (node.Parent is MemberAccessExpressionSyntax member)
 							{
 								ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
-								if (_iSymbolParent != null && _iSymbolParent.Kind == SymbolKind.Local)
+								if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
 									return false;
 							}
 
@@ -6199,11 +6267,11 @@ internal class Walker : CSharpSyntaxWalker
 						}
 					}
 				}
-
+*/
 				return false;
 			}
 		}
-
+		
 		if (iSymbol != null && iSymbol.ContainingType != null && iSymbol.ContainingType.IsAnonymousType == true)
 		{
 			if (CustomCSNamesToJS(node) == false)
@@ -6278,6 +6346,19 @@ internal class Walker : CSharpSyntaxWalker
 			return false;
 		}
 
+		ISymbol typeSymbol = symbol;
+
+		if (typeSymbol.Kind != SymbolKind.NamedType)
+		{
+			typeSymbol = symbol.ContainingSymbol;
+
+			if (typeSymbol.Kind != SymbolKind.NamedType)
+			{
+				Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+				return false;
+			}
+		}
+		
 		if (nodeL is IdentifierNameSyntax _identifierName)
 		{
 			VisitLeadingTrivia(_identifierName.Identifier);
@@ -6286,20 +6367,7 @@ internal class Walker : CSharpSyntaxWalker
 		{
 			VisitLeadingTrivia(_genericName.Identifier);
 		}
-
-		ISymbol typeSymbol = symbol;
-
-		if(typeSymbol.Kind != SymbolKind.NamedType)
-		{
-			typeSymbol = symbol.ContainingSymbol;
-
-			if(typeSymbol.Kind != SymbolKind.NamedType) 
-			{
-				Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
-				return false;
-			}
-		}
-
+		
 		string typeName = typeSymbol.Name;
 
 		string? jsStr = _NETAPI.ReturnJSString(typeName);

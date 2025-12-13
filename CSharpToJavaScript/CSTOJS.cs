@@ -177,7 +177,6 @@ public static class CSTOJS
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Console.dll")))
 				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Console.dll")));
-
 		}
 		if (binPath != null)
 		{

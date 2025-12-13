@@ -1,4 +1,4 @@
-//12.12.2025 21:28:31
+//13.12.2025 16:38:38
 
 #nullable enable
 //Disable missing XML comments.
@@ -315,11 +315,11 @@ public partial interface EventListener
 	public Undefined HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/document/document.generated.xml' path='docs/Document/*'/>
+///<include file='CSharpToJavaScript/Utils/Docs/document/document.generated.xml' path='docs/Document/*'/>
 [Value("NonElementParentNode")]
 public partial interface NonElementParentNode
 {
-	///<include file='Utils/Docs/document/document.generated.xml' path='docs/DocumentGetElementById/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/document/document.generated.xml' path='docs/DocumentGetElementById/*'/>
 [Value("getElementById")]
 	public Element? GetElementById(DOMString elementId) { throw new System.NotImplementedException(); }
 }
@@ -332,35 +332,35 @@ public partial interface DocumentOrShadowRoot
 
 
 
-///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
+///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ParentNode")]
 public partial interface ParentNode
 {
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildren/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementChildren/*'/>
 [Value("children")]
 	public HTMLCollection Children { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementFirstElementChild/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementFirstElementChild/*'/>
 [Value("firstElementChild")]
 	public Element? FirstElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementLastElementChild/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementLastElementChild/*'/>
 [Value("lastElementChild")]
 	public Element? LastElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildElementCount/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementChildElementCount/*'/>
 [Value("childElementCount")]
 	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementPrepend/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementPrepend/*'/>
 [Value("prepend")]
 	public Undefined Prepend(params Union28[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAppend/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementAppend/*'/>
 [Value("append")]
 	public Undefined Append(params Union29[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceChildren/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceChildren/*'/>
 [Value("replaceChildren")]
 	public Undefined ReplaceChildren(params Union30[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelector/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelector/*'/>
 [Value("querySelector")]
 	public Element? QuerySelector(DOMString selectors) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
 [Value("querySelectorAll")]
 	public NodeList QuerySelectorAll(DOMString selectors) { throw new System.NotImplementedException(); }
 }
@@ -379,20 +379,20 @@ public partial interface NonDocumentTypeChildNode
 
 
 
-///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
+///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ChildNode")]
 public partial interface ChildNode
 {
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementBefore/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementBefore/*'/>
 [Value("before")]
 	public Undefined Before(params Union31[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAfter/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementAfter/*'/>
 [Value("after")]
 	public Undefined After(params Union32[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceWith/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceWith/*'/>
 [Value("replaceWith")]
 	public Undefined ReplaceWith(params Union33[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementRemove/*'/>
+	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementRemove/*'/>
 [Value("remove")]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
 }

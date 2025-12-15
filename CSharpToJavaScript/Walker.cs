@@ -2170,6 +2170,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ThisExpression:
+						VisitThisExpression((ThisExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.ExpressionStatement:
 						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
 						break;
@@ -2727,6 +2733,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.ThisExpression:
+						VisitThisExpression((ThisExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.AddExpression:
 					case SyntaxKind.SubtractExpression:
 					case SyntaxKind.MultiplyExpression:
@@ -3682,6 +3691,10 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.PointerMemberAccessExpression:
+					case SyntaxKind.SimpleMemberAccessExpression:
+						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.SimpleAssignmentExpression:
 						{
 							AssignmentExpressionSyntax _expr = (AssignmentExpressionSyntax)asNode;
@@ -4509,6 +4522,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.IfStatement:
+						VisitIfStatement((IfStatementSyntax)asNode);
+						break;
 					case SyntaxKind.ThisExpression:
 						VisitThisExpression((ThisExpressionSyntax)asNode);
 						break;
@@ -4814,6 +4830,15 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.EmptyStatement:
+						VisitEmptyStatement((EmptyStatementSyntax)asNode);
+						break;
+					case SyntaxKind.IfStatement:
+						VisitIfStatement((IfStatementSyntax)asNode);
+						break;
+					case SyntaxKind.ThrowStatement:
+						VisitThrowStatement((ThrowStatementSyntax)asNode);
+						break;
 					case SyntaxKind.BreakStatement:
 						VisitBreakStatement((BreakStatementSyntax)asNode);
 						break;
@@ -6120,13 +6145,17 @@ internal class Walker : CSharpSyntaxWalker
 				_containingNamespace = string.Empty;
 			}
 
-			if (_GlobalStatement)
+			if (_GlobalStatement || _containingNamespace.Contains(_NameSpaceStr))
 			{
 				if (iSymbol.Kind == SymbolKind.Parameter ||
 					iSymbol.Kind == SymbolKind.Local)
 				{
 					return false;
 				}
+			}
+			
+			if (_GlobalStatement)
+			{
 				if (iSymbol.Kind == SymbolKind.Method &&
 					((IMethodSymbol)iSymbol).MethodKind == MethodKind.LocalFunction)
 					return false;
@@ -6134,11 +6163,6 @@ internal class Walker : CSharpSyntaxWalker
 			
 			if (_containingNamespace.Contains(_NameSpaceStr) && !_GlobalStatement)
 			{
-				if (iSymbol.Kind == SymbolKind.Parameter ||
-					iSymbol.Kind == SymbolKind.Local)
-				{
-					return false;
-				}
 				if (!_ThisIsUsed)
 				{
 					if (iSymbol.Kind == SymbolKind.Method &&
@@ -6189,85 +6213,6 @@ internal class Walker : CSharpSyntaxWalker
 						return false;
 					}
 				}
-				/*
-				ClassDeclarationSyntax? _class = node.Ancestors().FirstOrDefault(n => n.IsKind(SyntaxKind.ClassDeclaration)) as ClassDeclarationSyntax;
-
-				if (_class == null)
-				{
-					//TODO?
-					//Hitting with "TestPropertiesDefaultValue" + "CustomClass()" + "new CustomClass()"
-					Log.WarningLine("_class is null");
-					return false;
-				}
-				//This is for struct.
-				//maybe later convert struct to class?
-				//
-				if (_class == default(ClassDeclarationSyntax))
-				{
-					Log.WarningLine("_class is default");
-					return false;
-				}
-
-				SyntaxList<MemberDeclarationSyntax> _members = _class.Members;
-
-				for (int i = 0; i < _members.Count; i++)
-				{
-					SyntaxToken _sT = default;
-					if (_members[i] is MethodDeclarationSyntax m)
-					{
-						_sT = m.Identifier;
-					}
-
-					if (_members[i] is PropertyDeclarationSyntax p)
-					{
-						_sT = p.Identifier;
-					}
-
-					if (_members[i] is FieldDeclarationSyntax f)
-					{
-						IEnumerable<SyntaxNode> vds = (from el in f.DescendantNodes()
-													   where el.IsKind(SyntaxKind.VariableDeclarator)
-													   select el);
-
-						IEnumerable<SyntaxNodeOrToken> d3 = from e in vds.First().DescendantNodesAndTokens()
-															where e.IsKind(SyntaxKind.IdentifierToken)
-															select e;
-
-						_sT = (SyntaxToken)d3.First();
-					}
-
-					if (_sT.ToString() == node.ToString())
-					{
-						if (node.Parent != null &&
-							node.Parent.Parent != null &&
-							!node.Parent.DescendantNodes().Any((e) => e.IsKind(SyntaxKind.ThisExpression)))
-						{
-							if (node.Parent is MemberAccessExpressionSyntax member)
-							{
-								ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
-								if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
-									return false;
-							}
-
-							if (_class.Identifier.Text == _CurrentClassStr)
-							{
-								VisitLeadingTrivia(identifier);
-
-								JSSB.Append($"this.");
-								VisitToken(identifier.WithoutTrivia());
-
-								VisitTrailingTrivia(identifier);
-
-								return true;
-							}
-						}
-						else
-						{
-							Log.WarningLine("node.Parent is null or kind is not ThisExpression");
-						}
-					}
-				}
-*/
 				return false;
 			}
 		}

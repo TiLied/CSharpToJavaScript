@@ -4522,6 +4522,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.IfStatement:
 						VisitIfStatement((IfStatementSyntax)asNode);
 						break;
@@ -4830,6 +4833,10 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.SimpleMemberAccessExpression:
+					case SyntaxKind.PointerMemberAccessExpression:
+						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.EmptyStatement:
 						VisitEmptyStatement((EmptyStatementSyntax)asNode);
 						break;

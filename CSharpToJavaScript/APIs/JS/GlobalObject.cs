@@ -34,4 +34,9 @@ public partial class GlobalObject
 	{
 		return true;
 	}
+	[Binary("in")]
+	public static bool In(dynamic left, dynamic right)
+	{
+		return true;
+	}
 }

@@ -1,5 +1,4 @@
-﻿
-namespace CSharpToJavaScript;
+﻿namespace CSharpToJavaScript;
 
 //Currently needs to be in Utils!!
 //See GenDocsLib/GenDocs.cs/GenerateDocs

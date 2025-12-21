@@ -171,10 +171,7 @@ public partial class GlobalObject
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class Undefined
-	{
-
-	}
+	public class Undefined {	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static dynamic Eval(string x) 

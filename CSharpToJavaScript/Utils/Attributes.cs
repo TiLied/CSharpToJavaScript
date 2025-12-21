@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace CSharpToJavaScript.Utils;
 
 [AttributeUsage(AttributeTargets.Class)]
@@ -75,4 +74,9 @@ public class UnaryAttribute : Attribute
 	{
 		Value = value;
 	}
+}
+[AttributeUsage(AttributeTargets.All)]
+public class ToObjectAttribute : Attribute
+{
+	
 }

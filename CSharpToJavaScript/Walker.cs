@@ -17,23 +17,6 @@ namespace CSharpToJavaScript;
 //https://roslynquoter.azurewebsites.net/
 //https://sourceroslyn.io/
 //https://sharplab.io/
-//
-//Annotations are interesting, but because everything is immutable...
-//I don't think it is faster than the current approach.
-//https://joshvarty.com/2015/09/18/learn-roslyn-now-part-13-keeping-track-of-syntax-nodes-with-syntax-annotations/
-//
-//NOTE for me: Read about DocumentEditor!
-//https://joshvarty.wordpress.com/2015/08/18/learn-roslyn-now-part-12-the-documenteditor/
-//Should I do it in two phases??? First one, change c# code. The second one translate as-is to js...
-//Also see roslyn source!
-//https://github.com/dotnet/roslyn
-//"this" is IDE0009
-//https://learn.microsoft.com/ru-ru/dotnet/fundamentals/code-analysis/style-rules/ide0003-ide0009
-//https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/CodeCleanup/CommonCodeCleanUpFixerDiagnosticIds.cs#L20
-//https://github.com/dotnet/roslyn/blob/main/src/Analyzers/Core/Analyzers/QualifyMemberAccess/AbstractQualifyMemberAccessDiagnosticAnalyzer.cs
-//Read and think about it!
-//
-//also f#??? vb??? test)
 
 internal class Walker : CSharpSyntaxWalker
 {
@@ -58,7 +41,7 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _IgnoreTailingDot = false;
 	private bool _GlobalStatement = false;
 	private bool _ThisIsUsed = false;
-	
+	private bool _IsArrayInitializer = false;
 	private int _EnumMembers = 0;
 
 	private string[] _AttributeDatasForInvocation = new string[2];
@@ -2320,8 +2303,12 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.ArrayInitializerExpression:
-						VisitInitializerExpression((InitializerExpressionSyntax)asNode);
-						break;
+						{
+							_IsArrayInitializer = true;
+							VisitInitializerExpression((InitializerExpressionSyntax)asNode);
+							_IsArrayInitializer = false;
+							break;
+						}
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;
@@ -2528,6 +2515,32 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ObjectCreationExpression:
 						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.SimpleAssignmentExpression:
+					case SyntaxKind.AddAssignmentExpression:
+					case SyntaxKind.SubtractAssignmentExpression:
+					case SyntaxKind.MultiplyAssignmentExpression:
+					case SyntaxKind.DivideAssignmentExpression:
+					case SyntaxKind.ModuloAssignmentExpression:
+					case SyntaxKind.AndAssignmentExpression:
+					case SyntaxKind.ExclusiveOrAssignmentExpression:
+					case SyntaxKind.OrAssignmentExpression:
+					case SyntaxKind.LeftShiftAssignmentExpression:
+					case SyntaxKind.RightShiftAssignmentExpression:
+					case SyntaxKind.UnsignedRightShiftAssignmentExpression:
+					case SyntaxKind.CoalesceAssignmentExpression:
+						{
+							//TODO?
+							//Ignore if _IsArrayInitializer is true?
+							AssignmentExpressionSyntax _expr = (AssignmentExpressionSyntax)asNode;
+							Visit(_expr.Left);
+
+							VisitLeadingTrivia(_expr.OperatorToken);
+							JSSB.Append(':');
+							VisitTrailingTrivia(_expr.OperatorToken);
+
+							Visit(_expr.Right);
+							break;
+						}
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;
@@ -2542,16 +2555,30 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					case SyntaxKind.OpenBraceToken:
 						{
-							VisitLeadingTrivia(asToken);
-							JSSB.Append('(');
-							VisitTrailingTrivia(asToken);
+							if (_IsArrayInitializer)
+							{
+								VisitLeadingTrivia(asToken);
+								JSSB.Append('(');
+								VisitTrailingTrivia(asToken);
+							}
+							else
+							{
+								//TODO formating?
+								//Ignore leading trivia?
+								VisitToken(asToken);
+							}
 							break;
 						}
 					case SyntaxKind.CloseBraceToken:
 						{
-							VisitLeadingTrivia(asToken);
-							JSSB.Append(')');
-							VisitTrailingTrivia(asToken);
+							if (_IsArrayInitializer)
+							{
+								VisitLeadingTrivia(asToken);
+								JSSB.Append(')');
+								VisitTrailingTrivia(asToken);
+							}
+							else
+								VisitToken(asToken);
 							break;
 						}
 					case SyntaxKind.CommaToken:
@@ -3222,53 +3249,130 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitObjectCreationExpression(ObjectCreationExpressionSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+		bool translateAsObject = false;
 
-		for (int i = 0; i < nodesAndTokens.Count; i++)
+		SymbolInfo? symbolInfo = null;
+
+		if (_SNPropertyType != null)
+			symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
+		else
+			symbolInfo = _Model.GetSymbolInfo(nodesAndTokens[1].AsNode());
+		
+		ISymbol? symbol = null;
+
+		if (symbolInfo?.CandidateSymbols.Length >= 1)
+			symbol = symbolInfo?.CandidateSymbols[0];
+		else
+			symbol = symbolInfo?.Symbol;
+
+		if (symbol != null)
 		{
-			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-
-			if (asNode != null)
+			AttributeData[] attributeData = symbol.GetAttributes().ToArray();
+			for (int i = 0; i < attributeData.Length; i++)
 			{
-				SyntaxKind kind = asNode.Kind();
-
-				switch (kind)
+				if (attributeData[i].ToString().EndsWith(nameof(ToObjectAttribute)))
 				{
-					case SyntaxKind.ObjectInitializerExpression:
-						{
-							Log.WarningLine($"'ObjectInitializerExpression' Ignored! Please use constructor for '{nodesAndTokens[1].ToString()}'");
-							//Todo? How? JS does not have object initializer...
-							break;
-						}
-					case SyntaxKind.ArgumentList:
-						VisitArgumentList((ArgumentListSyntax)asNode);
-						break;
-					case SyntaxKind.PredefinedType:
-						VisitPredefinedType((PredefinedTypeSyntax)asNode);
-						break;
-					case SyntaxKind.IdentifierName:
-						VisitIdentifierName((IdentifierNameSyntax)asNode);
-						break;
-					case SyntaxKind.GenericName:
-						VisitGenericName((GenericNameSyntax)asNode);
-						break;
-					default:
-						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
-						break;
+					translateAsObject = true;
+					break;
 				}
 			}
-			else
+		}
+		if (translateAsObject)
+		{
+			for (int i = 0; i < nodesAndTokens.Count; i++)
 			{
-				SyntaxToken asToken = nodesAndTokens[i].AsToken();
-				SyntaxKind kind = asToken.Kind();
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
-				switch (kind)
+				if (asNode != null)
 				{
-					case SyntaxKind.NewKeyword:
-						VisitToken(asToken);
-						break;
-					default:
-						Log.ErrorLine($"asToken : {kind}");
-						break;
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ObjectInitializerExpression:
+							VisitInitializerExpression((InitializerExpressionSyntax)asNode);
+							break;
+						case SyntaxKind.ArgumentList:
+							{
+								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
+
+								//Ignore the first one!
+								//we keep trailing trivia with "="
+								//example cs: 
+								//MutationObserverInit a =|1|new MutationObserverInit()|2|{...
+								//example js:
+								//let a =|1|{...
+								//We keep |1| one but ignore |2| otherwise, we get double whitespace
+								//if there is a new line, for example |3|=newline, then:
+								//let a =|1||3|
+								//{...
+								if (_syntaxTrivias.Count > 1)
+								{
+									for (int _i = 1; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
+								}
+								break;
+							}
+						case SyntaxKind.IdentifierName:
+							break;
+						default:
+							Log.ErrorLine($"translateAsObject: asNode: {kind}\n|{asNode.ToFullString()}|");
+							break;
+					}
+				}
+			}
+		}
+		else
+		{
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ObjectInitializerExpression:
+							{
+								Log.WarningLine($"'ObjectInitializerExpression' Ignored! Please use constructor for '{nodesAndTokens[1].ToString()}'");
+								//Todo? How? JS does not have object initializer...
+								break;
+							}
+						case SyntaxKind.ArgumentList:
+							VisitArgumentList((ArgumentListSyntax)asNode);
+							break;
+						case SyntaxKind.PredefinedType:
+							VisitPredefinedType((PredefinedTypeSyntax)asNode);
+							break;
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							break;
+						case SyntaxKind.GenericName:
+							VisitGenericName((GenericNameSyntax)asNode);
+							break;
+						default:
+							Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.NewKeyword:
+							VisitToken(asToken);
+							break;
+						default:
+							Log.ErrorLine($"asToken : {kind}");
+							break;
+					}
 				}
 			}
 		}

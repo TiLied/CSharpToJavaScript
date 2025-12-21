@@ -39,4 +39,9 @@ public partial class GlobalObject
 	{
 		return true;
 	}
+	[Binary(",")]
+	public static dynamic Comma(dynamic left, dynamic right)
+	{
+		return right;
+	}
 }

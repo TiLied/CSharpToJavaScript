@@ -1,4 +1,4 @@
-//21.12.2025 16:22:31
+//13.01.2026 17:12:20
 
 #nullable enable
 //Disable missing XML comments.
@@ -291,7 +291,7 @@ public partial class ANGLE_instanced_arrays
 
 ///<include file='CSharpToJavaScript/Utils/Docs/htmliframeelement/htmliframeelement.generated.xml' path='docs/HTMLIFrameElement/*'/>
 [Value("HTMLIFrameElement")]
-public partial class HTMLIFrameElement
+public partial class HTMLIFrameElement : HTMLSharedStorageWritableElementUtils
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/htmliframeelement/htmliframeelement.generated.xml' path='docs/HTMLIFrameElementCredentialless/*'/>
 [Value("credentialless")]
@@ -300,7 +300,7 @@ public partial class HTMLIFrameElement
 
 ///<include file='CSharpToJavaScript/Utils/Docs/window/window.generated.xml' path='docs/Window/*'/>
 [Value("Window")]
-public partial class Window
+public partial class Window : GlobalEventHandlers, WindowEventHandlers, WindowOrWorkerGlobalScope, AnimationFrameProvider, WindowSessionStorage, WindowLocalStorage
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/window/window.generated.xml' path='docs/WindowCredentialless/*'/>
 [Value("credentialless")]
@@ -350,7 +350,7 @@ public partial class AudioSession : EventTarget
 
 ///<include file='CSharpToJavaScript/Utils/Docs/navigator/navigator.generated.xml' path='docs/Navigator/*'/>
 [Value("Navigator")]
-public partial class Navigator
+public partial class Navigator : NavigatorBadge, NavigatorDeviceMemory, GlobalPrivacyControl, NavigatorID, NavigatorLanguage, NavigatorOnLine, NavigatorContentUtils, NavigatorCookies, NavigatorPlugins, NavigatorConcurrentHardware, NavigatorNetworkInformation, NavigatorStorageBuckets, NavigatorStorage, NavigatorUA, NavigatorLocks, NavigatorAutomationInformation, NavigatorGPU, NavigatorML
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/navigator/navigator.generated.xml' path='docs/NavigatorAudioSession/*'/>
 [Value("audioSession")]
@@ -698,7 +698,7 @@ public partial class Window
 
 ///<include file='CSharpToJavaScript/Utils/Docs/htmlbodyelement/htmlbodyelement.generated.xml' path='docs/HTMLBodyElement/*'/>
 [Value("HTMLBodyElement")]
-public partial class HTMLBodyElement
+public partial class HTMLBodyElement : WindowEventHandlers
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/htmlbodyelement/htmlbodyelement.generated.xml' path='docs/HTMLBodyElementOnorientationchange/*'/>
 [Value("onorientationchange")]
@@ -707,7 +707,7 @@ public partial class HTMLBodyElement
 
 ///<include file='CSharpToJavaScript/Utils/Docs/compressionstream/compressionstream.generated.xml' path='docs/CompressionStream/*'/>
 [Value("CompressionStream")]
-public partial class CompressionStream
+public partial class CompressionStream : GenericTransformStream
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/compressionstream/compressionstream.generated.xml' path='docs/CompressionStreamCompressionStream/*'/>
 	public CompressionStream(CompressionFormat format) { }
@@ -717,7 +717,7 @@ public partial class CompressionStream
 
 ///<include file='CSharpToJavaScript/Utils/Docs/decompressionstream/decompressionstream.generated.xml' path='docs/DecompressionStream/*'/>
 [Value("DecompressionStream")]
-public partial class DecompressionStream
+public partial class DecompressionStream : GenericTransformStream
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/decompressionstream/decompressionstream.generated.xml' path='docs/DecompressionStreamDecompressionStream/*'/>
 	public DecompressionStream(CompressionFormat format) { }
@@ -2185,7 +2185,7 @@ public partial class Window
 
 ///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("Element")]
-public partial class Element
+public partial class Element : Region, GeometryUtils, ParentNode, NonDocumentTypeChildNode, ChildNode, Slottable, ARIAMixin, Animatable
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementGetSpatialNavigationContainer/*'/>
 [Value("getSpatialNavigationContainer")]
@@ -2232,7 +2232,7 @@ public partial class PaintWorkletGlobalScope : WorkletGlobalScope
 
 ///<include file='CSharpToJavaScript/Utils/Docs/paintrenderingcontext2d/paintrenderingcontext2d.generated.xml' path='docs/PaintRenderingContext2D/*'/>
 [Value("PaintRenderingContext2D")]
-public partial class PaintRenderingContext2D
+public partial class PaintRenderingContext2D : CanvasState, CanvasTransform, CanvasCompositing, CanvasImageSmoothing, CanvasFillStrokeStyles, CanvasShadowStyles, CanvasRect, CanvasDrawPath, CanvasDrawImage, CanvasPathDrawingStyles, CanvasPath
 {
 }
 
@@ -2379,7 +2379,7 @@ public partial class Element
 
 ///<include file='CSharpToJavaScript/Utils/Docs/document/document.generated.xml' path='docs/Document/*'/>
 [Value("Document")]
-public partial class Document
+public partial class Document : FontFaceSource, GeometryUtils, NonElementParentNode, DocumentOrShadowRoot, ParentNode, XPathEvaluatorBase, GlobalEventHandlers
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/document/document.generated.xml' path='docs/DocumentNamedFlows/*'/>
 [Value("namedFlows")]
@@ -3331,7 +3331,7 @@ public partial class Element
 
 ///<include file='CSharpToJavaScript/Utils/Docs/htmlelement/htmlelement.generated.xml' path='docs/HTMLElement/*'/>
 [Value("HTMLElement")]
-public partial class HTMLElement
+public partial class HTMLElement : ElementCSSInlineStyle, GlobalEventHandlers, ElementContentEditable, HTMLOrSVGElement
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/htmlelement/htmlelement.generated.xml' path='docs/HTMLElementOffsetParent/*'/>
 [Value("offsetParent")]
@@ -3352,7 +3352,7 @@ public partial class HTMLElement
 
 ///<include file='CSharpToJavaScript/Utils/Docs/htmlimageelement/htmlimageelement.generated.xml' path='docs/HTMLImageElement/*'/>
 [Value("HTMLImageElement")]
-public partial class HTMLImageElement
+public partial class HTMLImageElement : HTMLAttributionSrcElementUtils, HTMLSharedStorageWritableElementUtils
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/htmlimageelement/htmlimageelement.generated.xml' path='docs/HTMLImageElementX/*'/>
 [Value("x")]
@@ -4961,7 +4961,7 @@ public partial class XPathExpression
 
 ///<include file='CSharpToJavaScript/Utils/Docs/xpathevaluator/xpathevaluator.generated.xml' path='docs/XPathEvaluator/*'/>
 [Value("XPathEvaluator")]
-public partial class XPathEvaluator
+public partial class XPathEvaluator : XPathEvaluatorBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/xpathevaluator/xpathevaluator.generated.xml' path='docs/XPathEvaluatorXPathEvaluator/*'/>
 	public XPathEvaluator() { }
@@ -5202,7 +5202,7 @@ public partial class Element
 
 ///<include file='CSharpToJavaScript/Utils/Docs/textdecoder/textdecoder.generated.xml' path='docs/TextDecoder/*'/>
 [Value("TextDecoder")]
-public partial class TextDecoder
+public partial class TextDecoder : TextDecoderCommon
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/textdecoder/textdecoder.generated.xml' path='docs/TextDecoderTextDecoder/*'/>
 	public TextDecoder(DOMString label = default, TextDecoderOptions options = default) { }
@@ -5215,7 +5215,7 @@ public partial class TextDecoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/textencoder/textencoder.generated.xml' path='docs/TextEncoder/*'/>
 [Value("TextEncoder")]
-public partial class TextEncoder
+public partial class TextEncoder : TextEncoderCommon
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/textencoder/textencoder.generated.xml' path='docs/TextEncoderTextEncoder/*'/>
 	public TextEncoder() { }
@@ -5230,7 +5230,7 @@ public partial class TextEncoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/textdecoderstream/textdecoderstream.generated.xml' path='docs/TextDecoderStream/*'/>
 [Value("TextDecoderStream")]
-public partial class TextDecoderStream
+public partial class TextDecoderStream : TextDecoderCommon, GenericTransformStream
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/textdecoderstream/textdecoderstream.generated.xml' path='docs/TextDecoderStreamTextDecoderStream/*'/>
 	public TextDecoderStream(DOMString label = default, TextDecoderOptions options = default) { }
@@ -5241,7 +5241,7 @@ public partial class TextDecoderStream
 
 ///<include file='CSharpToJavaScript/Utils/Docs/textencoderstream/textencoderstream.generated.xml' path='docs/TextEncoderStream/*'/>
 [Value("TextEncoderStream")]
-public partial class TextEncoderStream
+public partial class TextEncoderStream : TextEncoderCommon, GenericTransformStream
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/textencoderstream/textencoderstream.generated.xml' path='docs/TextEncoderStreamTextEncoderStream/*'/>
 	public TextEncoderStream() { }
@@ -5400,7 +5400,7 @@ public partial class File
 
 ///<include file='CSharpToJavaScript/Utils/Docs/htmlinputelement/htmlinputelement.generated.xml' path='docs/HTMLInputElement/*'/>
 [Value("HTMLInputElement")]
-public partial class HTMLInputElement
+public partial class HTMLInputElement : PopoverInvokerElement
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/htmlinputelement/htmlinputelement.generated.xml' path='docs/HTMLInputElementWebkitdirectory/*'/>
 [Value("webkitdirectory")]
@@ -5850,7 +5850,7 @@ public partial class Headers
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/Request/*'/>
 [Value("Request")]
-public partial class Request
+public partial class Request : Body
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestRequest/*'/>
 	public Request(RequestInfo input, RequestInit init = default) { }
@@ -5911,7 +5911,7 @@ public partial class Request
 
 ///<include file='CSharpToJavaScript/Utils/Docs/response/response.generated.xml' path='docs/Response/*'/>
 [Value("Response")]
-public partial class Response
+public partial class Response : Body
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/response/response.generated.xml' path='docs/ResponseResponse/*'/>
 	public Response(BodyInit? body = default, ResponseInit init = default) { }
@@ -10171,7 +10171,7 @@ public partial class HTMLCanvasElement : HTMLElement
 
 ///<include file='CSharpToJavaScript/Utils/Docs/canvasrenderingcontext2d/canvasrenderingcontext2d.generated.xml' path='docs/CanvasRenderingContext2D/*'/>
 [Value("CanvasRenderingContext2D")]
-public partial class CanvasRenderingContext2D
+public partial class CanvasRenderingContext2D : CanvasState, CanvasTransform, CanvasCompositing, CanvasImageSmoothing, CanvasFillStrokeStyles, CanvasShadowStyles, CanvasFilters, CanvasRect, CanvasDrawPath, CanvasUserInterface, CanvasText, CanvasDrawImage, CanvasImageData, CanvasPathDrawingStyles, CanvasTextDrawingStyles, CanvasPath
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/canvasrenderingcontext2d/canvasrenderingcontext2d.generated.xml' path='docs/CanvasRenderingContext2DCanvas/*'/>
 [Value("canvas")]
@@ -10282,7 +10282,7 @@ public partial class ImageData
 
 ///<include file='CSharpToJavaScript/Utils/Docs/path2d/path2d.generated.xml' path='docs/Path2D/*'/>
 [Value("Path2D")]
-public partial class Path2D
+public partial class Path2D : CanvasPath
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/path2d/path2d.generated.xml' path='docs/Path2DPath2D/*'/>
 	public Path2D(Union77 path = default) { }
@@ -10337,7 +10337,7 @@ public partial class OffscreenCanvas : EventTarget
 
 ///<include file='CSharpToJavaScript/Utils/Docs/offscreencanvasrenderingcontext2d/offscreencanvasrenderingcontext2d.generated.xml' path='docs/OffscreenCanvasRenderingContext2D/*'/>
 [Value("OffscreenCanvasRenderingContext2D")]
-public partial class OffscreenCanvasRenderingContext2D
+public partial class OffscreenCanvasRenderingContext2D : CanvasState, CanvasTransform, CanvasCompositing, CanvasImageSmoothing, CanvasFillStrokeStyles, CanvasShadowStyles, CanvasFilters, CanvasRect, CanvasDrawPath, CanvasText, CanvasDrawImage, CanvasImageData, CanvasPathDrawingStyles, CanvasTextDrawingStyles, CanvasPath
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/offscreencanvasrenderingcontext2d/offscreencanvasrenderingcontext2d.generated.xml' path='docs/OffscreenCanvasRenderingContext2DCanvas/*'/>
 [Value("canvas")]
@@ -10382,7 +10382,7 @@ public partial class CustomElementRegistry
 
 ///<include file='CSharpToJavaScript/Utils/Docs/elementinternals/elementinternals.generated.xml' path='docs/ElementInternals/*'/>
 [Value("ElementInternals")]
-public partial class ElementInternals
+public partial class ElementInternals : ARIAMixin
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/elementinternals/elementinternals.generated.xml' path='docs/ElementInternalsShadowRoot/*'/>
 [Value("shadowRoot")]
@@ -11517,7 +11517,7 @@ public partial class SharedWorker : EventTarget, AbstractWorker
 
 ///<include file='CSharpToJavaScript/Utils/Docs/workernavigator/workernavigator.generated.xml' path='docs/WorkerNavigator/*'/>
 [Value("WorkerNavigator")]
-public partial class WorkerNavigator
+public partial class WorkerNavigator : NavigatorBadge, NavigatorDeviceMemory, GlobalPrivacyControl, NavigatorID, NavigatorLanguage, NavigatorOnLine, NavigatorConcurrentHardware, NavigatorNetworkInformation, NavigatorStorageBuckets, NavigatorStorage, NavigatorUA, NavigatorLocks, NavigatorGPU, NavigatorML
 {
 }
 
@@ -16872,7 +16872,7 @@ public partial class SharedStorage
 }
 
 [Value("SharedStorageWorkletNavigator")]
-public partial class SharedStorageWorkletNavigator
+public partial class SharedStorageWorkletNavigator : NavigatorLocks
 {
 }
 
@@ -17276,7 +17276,7 @@ public partial class ReadableStream
 
 ///<include file='CSharpToJavaScript/Utils/Docs/readablestreamdefaultreader/readablestreamdefaultreader.generated.xml' path='docs/ReadableStreamDefaultReader/*'/>
 [Value("ReadableStreamDefaultReader")]
-public partial class ReadableStreamDefaultReader
+public partial class ReadableStreamDefaultReader : ReadableStreamGenericReader
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/readablestreamdefaultreader/readablestreamdefaultreader.generated.xml' path='docs/ReadableStreamDefaultReaderReadableStreamDefaultReader/*'/>
 	public ReadableStreamDefaultReader(ReadableStream stream) { }
@@ -17292,7 +17292,7 @@ public partial class ReadableStreamDefaultReader
 
 ///<include file='CSharpToJavaScript/Utils/Docs/readablestreambyobreader/readablestreambyobreader.generated.xml' path='docs/ReadableStreamBYOBReader/*'/>
 [Value("ReadableStreamBYOBReader")]
-public partial class ReadableStreamBYOBReader
+public partial class ReadableStreamBYOBReader : ReadableStreamGenericReader
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/readablestreambyobreader/readablestreambyobreader.generated.xml' path='docs/ReadableStreamBYOBReaderReadableStreamBYOBReader/*'/>
 	public ReadableStreamBYOBReader(ReadableStream stream) { }
@@ -17580,7 +17580,7 @@ public partial class SVGDiscardElement : SVGAnimationElement
 
 ///<include file='CSharpToJavaScript/Utils/Docs/svgsvgelement/svgsvgelement.generated.xml' path='docs/SVGSVGElement/*'/>
 [Value("SVGSVGElement")]
-public partial class SVGSVGElement
+public partial class SVGSVGElement : SVGFitToViewBox, WindowEventHandlers
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/svgsvgelement/svgsvgelement.generated.xml' path='docs/SVGSVGElementPauseAnimations/*'/>
 [Value("pauseAnimations")]
@@ -20083,7 +20083,7 @@ public partial class LaunchQueue
 
 ///<include file='CSharpToJavaScript/Utils/Docs/bluetooth/bluetooth.generated.xml' path='docs/Bluetooth/*'/>
 [Value("Bluetooth")]
-public partial class Bluetooth
+public partial class Bluetooth : BluetoothDeviceEventHandlers, CharacteristicEventHandlers, ServiceEventHandlers
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/bluetooth/bluetooth.generated.xml' path='docs/BluetoothRequestLEScan/*'/>
 [Value("requestLEScan")]
@@ -22091,7 +22091,7 @@ public partial class WebGLShaderPrecisionFormat
 
 ///<include file='CSharpToJavaScript/Utils/Docs/webglrenderingcontext/webglrenderingcontext.generated.xml' path='docs/WebGLRenderingContext/*'/>
 [Value("WebGLRenderingContext")]
-public partial class WebGLRenderingContext
+public partial class WebGLRenderingContext : WebGLRenderingContextBase, WebGLRenderingContextOverloads
 {
 }
 
@@ -22142,7 +22142,7 @@ public partial class WebGLVertexArrayObject : WebGLObject
 
 ///<include file='CSharpToJavaScript/Utils/Docs/webgl2renderingcontext/webgl2renderingcontext.generated.xml' path='docs/WebGL2RenderingContext/*'/>
 [Value("WebGL2RenderingContext")]
-public partial class WebGL2RenderingContext
+public partial class WebGL2RenderingContext : WebGLRenderingContextBase, WebGL2RenderingContextBase, WebGL2RenderingContextOverloads
 {
 }
 
@@ -22743,7 +22743,7 @@ public partial class GPUDevice : EventTarget, GPUObjectBase
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpubuffer/gpubuffer.generated.xml' path='docs/GPUBuffer/*'/>
 [Value("GPUBuffer")]
-public partial class GPUBuffer
+public partial class GPUBuffer : GPUObjectBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpubuffer/gpubuffer.generated.xml' path='docs/GPUBufferSize/*'/>
 [Value("size")]
@@ -22771,7 +22771,7 @@ public partial class GPUBuffer
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gputexture/gputexture.generated.xml' path='docs/GPUTexture/*'/>
 [Value("GPUTexture")]
-public partial class GPUTexture
+public partial class GPUTexture : GPUObjectBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gputexture/gputexture.generated.xml' path='docs/GPUTextureCreateView/*'/>
 [Value("createView")]
@@ -22808,49 +22808,49 @@ public partial class GPUTexture
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gputextureview/gputextureview.generated.xml' path='docs/GPUTextureView/*'/>
 [Value("GPUTextureView")]
-public partial class GPUTextureView
+public partial class GPUTextureView : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpuexternaltexture/gpuexternaltexture.generated.xml' path='docs/GPUExternalTexture/*'/>
 [Value("GPUExternalTexture")]
-public partial class GPUExternalTexture
+public partial class GPUExternalTexture : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpusampler/gpusampler.generated.xml' path='docs/GPUSampler/*'/>
 [Value("GPUSampler")]
-public partial class GPUSampler
+public partial class GPUSampler : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpubindgrouplayout/gpubindgrouplayout.generated.xml' path='docs/GPUBindGroupLayout/*'/>
 [Value("GPUBindGroupLayout")]
-public partial class GPUBindGroupLayout
+public partial class GPUBindGroupLayout : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpubindgroup/gpubindgroup.generated.xml' path='docs/GPUBindGroup/*'/>
 [Value("GPUBindGroup")]
-public partial class GPUBindGroup
+public partial class GPUBindGroup : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpupipelinelayout/gpupipelinelayout.generated.xml' path='docs/GPUPipelineLayout/*'/>
 [Value("GPUPipelineLayout")]
-public partial class GPUPipelineLayout
+public partial class GPUPipelineLayout : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpushadermodule/gpushadermodule.generated.xml' path='docs/GPUShaderModule/*'/>
 [Value("GPUShaderModule")]
-public partial class GPUShaderModule
+public partial class GPUShaderModule : GPUObjectBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpushadermodule/gpushadermodule.generated.xml' path='docs/GPUShaderModuleGetCompilationInfo/*'/>
 [Value("getCompilationInfo")]
@@ -22905,7 +22905,7 @@ public partial class GPUPipelineError : DOMException
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpucomputepipeline/gpucomputepipeline.generated.xml' path='docs/GPUComputePipeline/*'/>
 [Value("GPUComputePipeline")]
-public partial class GPUComputePipeline
+public partial class GPUComputePipeline : GPUObjectBase, GPUPipelineBase
 {
 }
 
@@ -22913,7 +22913,7 @@ public partial class GPUComputePipeline
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpurenderpipeline/gpurenderpipeline.generated.xml' path='docs/GPURenderPipeline/*'/>
 [Value("GPURenderPipeline")]
-public partial class GPURenderPipeline
+public partial class GPURenderPipeline : GPUObjectBase, GPUPipelineBase
 {
 }
 
@@ -22921,14 +22921,14 @@ public partial class GPURenderPipeline
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpucommandbuffer/gpucommandbuffer.generated.xml' path='docs/GPUCommandBuffer/*'/>
 [Value("GPUCommandBuffer")]
-public partial class GPUCommandBuffer
+public partial class GPUCommandBuffer : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpucommandencoder/gpucommandencoder.generated.xml' path='docs/GPUCommandEncoder/*'/>
 [Value("GPUCommandEncoder")]
-public partial class GPUCommandEncoder
+public partial class GPUCommandEncoder : GPUObjectBase, GPUCommandsMixin, GPUDebugCommandsMixin
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpucommandencoder/gpucommandencoder.generated.xml' path='docs/GPUCommandEncoderBeginRenderPass/*'/>
 [Value("beginRenderPass")]
@@ -22964,7 +22964,7 @@ public partial class GPUCommandEncoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpucomputepassencoder/gpucomputepassencoder.generated.xml' path='docs/GPUComputePassEncoder/*'/>
 [Value("GPUComputePassEncoder")]
-public partial class GPUComputePassEncoder
+public partial class GPUComputePassEncoder : GPUObjectBase, GPUCommandsMixin, GPUDebugCommandsMixin, GPUBindingCommandsMixin
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpucomputepassencoder/gpucomputepassencoder.generated.xml' path='docs/GPUComputePassEncoderSetPipeline/*'/>
 [Value("setPipeline")]
@@ -22986,7 +22986,7 @@ public partial class GPUComputePassEncoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpurenderpassencoder/gpurenderpassencoder.generated.xml' path='docs/GPURenderPassEncoder/*'/>
 [Value("GPURenderPassEncoder")]
-public partial class GPURenderPassEncoder
+public partial class GPURenderPassEncoder : GPUObjectBase, GPUCommandsMixin, GPUDebugCommandsMixin, GPUBindingCommandsMixin, GPURenderCommandsMixin
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpurenderpassencoder/gpurenderpassencoder.generated.xml' path='docs/GPURenderPassEncoderSetViewport/*'/>
 [Value("setViewport")]
@@ -23021,14 +23021,14 @@ public partial class GPURenderPassEncoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpurenderbundle/gpurenderbundle.generated.xml' path='docs/GPURenderBundle/*'/>
 [Value("GPURenderBundle")]
-public partial class GPURenderBundle
+public partial class GPURenderBundle : GPUObjectBase
 {
 }
 
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpurenderbundleencoder/gpurenderbundleencoder.generated.xml' path='docs/GPURenderBundleEncoder/*'/>
 [Value("GPURenderBundleEncoder")]
-public partial class GPURenderBundleEncoder
+public partial class GPURenderBundleEncoder : GPUObjectBase, GPUCommandsMixin, GPUDebugCommandsMixin, GPUBindingCommandsMixin, GPURenderCommandsMixin
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpurenderbundleencoder/gpurenderbundleencoder.generated.xml' path='docs/GPURenderBundleEncoderFinish/*'/>
 [Value("finish")]
@@ -23042,7 +23042,7 @@ public partial class GPURenderBundleEncoder
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpuqueue/gpuqueue.generated.xml' path='docs/GPUQueue/*'/>
 [Value("GPUQueue")]
-public partial class GPUQueue
+public partial class GPUQueue : GPUObjectBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpuqueue/gpuqueue.generated.xml' path='docs/GPUQueueSubmit/*'/>
 [Value("submit")]
@@ -23064,7 +23064,7 @@ public partial class GPUQueue
 
 ///<include file='CSharpToJavaScript/Utils/Docs/gpuqueryset/gpuqueryset.generated.xml' path='docs/GPUQuerySet/*'/>
 [Value("GPUQuerySet")]
-public partial class GPUQuerySet
+public partial class GPUQuerySet : GPUObjectBase
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/gpuqueryset/gpuqueryset.generated.xml' path='docs/GPUQuerySetDestroy/*'/>
 [Value("destroy")]

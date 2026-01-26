@@ -1,4 +1,4 @@
-//21.12.2025 16:22:31
+//13.01.2026 17:12:20
 
 #nullable enable
 //Disable missing XML comments.
@@ -165,4643 +165,4643 @@ using XRWebGLRenderingContext = Union235;
 using FormDataEntryValue = Union237;
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AccelerometerLocalCoordinateSystem
 {
-	[EnumValue("device")]
+	[Value("\"device\"")]
 	Device,
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioSessionType
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("playback")]
+	[Value("\"playback\"")]
 	Playback,
-	[EnumValue("transient")]
+	[Value("\"transient\"")]
 	Transient,
-	[EnumValue("transient-solo")]
+	[Value("\"transient-solo\"")]
 	TransientSolo,
-	[EnumValue("ambient")]
+	[Value("\"ambient\"")]
 	Ambient,
-	[EnumValue("play-and-record")]
+	[Value("\"play-and-record\"")]
 	PlayAndRecord,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioSessionState
 {
-	[EnumValue("inactive")]
+	[Value("\"inactive\"")]
 	Inactive,
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("interrupted")]
+	[Value("\"interrupted\"")]
 	Interrupted,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AutoplayPolicy
 {
-	[EnumValue("allowed")]
+	[Value("\"allowed\"")]
 	Allowed,
-	[EnumValue("allowed-muted")]
+	[Value("\"allowed-muted\"")]
 	AllowedMuted,
-	[EnumValue("disallowed")]
+	[Value("\"disallowed\"")]
 	Disallowed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AutoplayPolicyMediaType
 {
-	[EnumValue("mediaelement")]
+	[Value("\"mediaelement\"")]
 	Mediaelement,
-	[EnumValue("audiocontext")]
+	[Value("\"audiocontext\"")]
 	Audiocontext,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BackgroundFetchResult
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("success")]
+	[Value("\"success\"")]
 	Success,
-	[EnumValue("failure")]
+	[Value("\"failure\"")]
 	Failure,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BackgroundFetchFailureReason
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("aborted")]
+	[Value("\"aborted\"")]
 	Aborted,
-	[EnumValue("bad-status")]
+	[Value("\"bad-status\"")]
 	BadStatus,
-	[EnumValue("fetch-error")]
+	[Value("\"fetch-error\"")]
 	FetchError,
-	[EnumValue("quota-exceeded")]
+	[Value("\"quota-exceeded\"")]
 	QuotaExceeded,
-	[EnumValue("download-total-exceeded")]
+	[Value("\"download-total-exceeded\"")]
 	DownloadTotalExceeded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PresentationStyle
 {
-	[EnumValue("unspecified")]
+	[Value("\"unspecified\"")]
 	Unspecified,
-	[EnumValue("inline")]
+	[Value("\"inline\"")]
 	Inline,
-	[EnumValue("attachment")]
+	[Value("\"attachment\"")]
 	Attachment,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CompressionFormat
 {
-	[EnumValue("deflate")]
+	[Value("\"deflate\"")]
 	Deflate,
-	[EnumValue("deflate-raw")]
+	[Value("\"deflate-raw\"")]
 	DeflateRaw,
-	[EnumValue("gzip")]
+	[Value("\"gzip\"")]
 	Gzip,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PressureSource
 {
-	[EnumValue("cpu")]
+	[Value("\"cpu\"")]
 	Cpu,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PressureState
 {
-	[EnumValue("nominal")]
+	[Value("\"nominal\"")]
 	Nominal,
-	[EnumValue("fair")]
+	[Value("\"fair\"")]
 	Fair,
-	[EnumValue("serious")]
+	[Value("\"serious\"")]
 	Serious,
-	[EnumValue("critical")]
+	[Value("\"critical\"")]
 	Critical,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ContactProperty
 {
-	[EnumValue("address")]
+	[Value("\"address\"")]
 	Address,
-	[EnumValue("email")]
+	[Value("\"email\"")]
 	Email,
-	[EnumValue("icon")]
+	[Value("\"icon\"")]
 	Icon,
-	[EnumValue("name")]
+	[Value("\"name\"")]
 	Name,
-	[EnumValue("tel")]
+	[Value("\"tel\"")]
 	Tel,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ContentCategory
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("homepage")]
+	[Value("\"homepage\"")]
 	Homepage,
-	[EnumValue("article")]
+	[Value("\"article\"")]
 	Article,
-	[EnumValue("video")]
+	[Value("\"video\"")]
 	Video,
-	[EnumValue("audio")]
+	[Value("\"audio\"")]
 	Audio,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CookieSameSite
 {
-	[EnumValue("strict")]
+	[Value("\"strict\"")]
 	Strict,
-	[EnumValue("lax")]
+	[Value("\"lax\"")]
 	Lax,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CredentialMediationRequirement
 {
-	[EnumValue("silent")]
+	[Value("\"silent\"")]
 	Silent,
-	[EnumValue("optional")]
+	[Value("\"optional\"")]
 	Optional,
-	[EnumValue("conditional")]
+	[Value("\"conditional\"")]
 	Conditional,
-	[EnumValue("required")]
+	[Value("\"required\"")]
 	Required,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScriptingPolicyViolationType
 {
-	[EnumValue("externalScript")]
+	[Value("\"externalScript\"")]
 	ExternalScript,
-	[EnumValue("inlineScript")]
+	[Value("\"inlineScript\"")]
 	InlineScript,
-	[EnumValue("inlineEventHandler")]
+	[Value("\"inlineEventHandler\"")]
 	InlineEventHandler,
-	[EnumValue("eval")]
+	[Value("\"eval\"")]
 	Eval,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SecurityPolicyViolationEventDisposition
 {
-	[EnumValue("enforce")]
+	[Value("\"enforce\"")]
 	Enforce,
-	[EnumValue("report")]
+	[Value("\"report\"")]
 	Report,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FontFaceLoadStatus
 {
-	[EnumValue("unloaded")]
+	[Value("\"unloaded\"")]
 	Unloaded,
-	[EnumValue("loading")]
+	[Value("\"loading\"")]
 	Loading,
-	[EnumValue("loaded")]
+	[Value("\"loaded\"")]
 	Loaded,
-	[EnumValue("error")]
+	[Value("\"error\"")]
 	Error,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FontFaceSetLoadStatus
 {
-	[EnumValue("loading")]
+	[Value("\"loading\"")]
 	Loading,
-	[EnumValue("loaded")]
+	[Value("\"loaded\"")]
 	Loaded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HighlightType
 {
-	[EnumValue("highlight")]
+	[Value("\"highlight\"")]
 	Highlight,
-	[EnumValue("spelling-error")]
+	[Value("\"spelling-error\"")]
 	SpellingError,
-	[EnumValue("grammar-error")]
+	[Value("\"grammar-error\"")]
 	GrammarError,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ChildDisplayType
 {
-	[EnumValue("block")]
+	[Value("\"block\"")]
 	Block,
-	[EnumValue("normal")]
+	[Value("\"normal\"")]
 	Normal,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LayoutSizingMode
 {
-	[EnumValue("block-like")]
+	[Value("\"block-like\"")]
 	BlockLike,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BlockFragmentationType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("page")]
+	[Value("\"page\"")]
 	Page,
-	[EnumValue("column")]
+	[Value("\"column\"")]
 	Column,
-	[EnumValue("region")]
+	[Value("\"region\"")]
 	Region,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BreakType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("line")]
+	[Value("\"line\"")]
 	Line,
-	[EnumValue("column")]
+	[Value("\"column\"")]
 	Column,
-	[EnumValue("page")]
+	[Value("\"page\"")]
 	Page,
-	[EnumValue("region")]
+	[Value("\"region\"")]
 	Region,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SpatialNavigationDirection
 {
-	[EnumValue("up")]
+	[Value("\"up\"")]
 	Up,
-	[EnumValue("down")]
+	[Value("\"down\"")]
 	Down,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FocusableAreaSearchMode
 {
-	[EnumValue("visible")]
+	[Value("\"visible\"")]
 	Visible,
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CSSNumericBaseType
 {
-	[EnumValue("length")]
+	[Value("\"length\"")]
 	Length,
-	[EnumValue("angle")]
+	[Value("\"angle\"")]
 	Angle,
-	[EnumValue("time")]
+	[Value("\"time\"")]
 	Time,
-	[EnumValue("frequency")]
+	[Value("\"frequency\"")]
 	Frequency,
-	[EnumValue("resolution")]
+	[Value("\"resolution\"")]
 	Resolution,
-	[EnumValue("flex")]
+	[Value("\"flex\"")]
 	Flex,
-	[EnumValue("percent")]
+	[Value("\"percent\"")]
 	Percent,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CSSMathOperator
 {
-	[EnumValue("sum")]
+	[Value("\"sum\"")]
 	Sum,
-	[EnumValue("product")]
+	[Value("\"product\"")]
 	Product,
-	[EnumValue("negate")]
+	[Value("\"negate\"")]
 	Negate,
-	[EnumValue("invert")]
+	[Value("\"invert\"")]
 	Invert,
-	[EnumValue("min")]
+	[Value("\"min\"")]
 	Min,
-	[EnumValue("max")]
+	[Value("\"max\"")]
 	Max,
-	[EnumValue("clamp")]
+	[Value("\"clamp\"")]
 	Clamp,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScrollBehavior
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("instant")]
+	[Value("\"instant\"")]
 	Instant,
-	[EnumValue("smooth")]
+	[Value("\"smooth\"")]
 	Smooth,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScrollLogicalPosition
 {
-	[EnumValue("start")]
+	[Value("\"start\"")]
 	Start,
-	[EnumValue("center")]
+	[Value("\"center\"")]
 	Center,
-	[EnumValue("end")]
+	[Value("\"end\"")]
 	End,
-	[EnumValue("nearest")]
+	[Value("\"nearest\"")]
 	Nearest,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CSSBoxType
 {
-	[EnumValue("margin")]
+	[Value("\"margin\"")]
 	Margin,
-	[EnumValue("border")]
+	[Value("\"border\"")]
 	Border,
-	[EnumValue("padding")]
+	[Value("\"padding\"")]
 	Padding,
-	[EnumValue("content")]
+	[Value("\"content\"")]
 	Content,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DevicePostureType
 {
-	[EnumValue("continuous")]
+	[Value("\"continuous\"")]
 	Continuous,
-	[EnumValue("folded")]
+	[Value("\"folded\"")]
 	Folded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ItemType
 {
-	[EnumValue("product")]
+	[Value("\"product\"")]
 	Product,
-	[EnumValue("subscription")]
+	[Value("\"subscription\"")]
 	Subscription,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ShadowRootMode
 {
-	[EnumValue("open")]
+	[Value("\"open\"")]
 	Open,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SlotAssignmentMode
 {
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
-	[EnumValue("named")]
+	[Value("\"named\"")]
 	Named,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum UnderlineStyle
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("solid")]
+	[Value("\"solid\"")]
 	Solid,
-	[EnumValue("dotted")]
+	[Value("\"dotted\"")]
 	Dotted,
-	[EnumValue("dashed")]
+	[Value("\"dashed\"")]
 	Dashed,
-	[EnumValue("wavy")]
+	[Value("\"wavy\"")]
 	Wavy,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum UnderlineThickness
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("thin")]
+	[Value("\"thin\"")]
 	Thin,
-	[EnumValue("thick")]
+	[Value("\"thick\"")]
 	Thick,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaKeysRequirement
 {
-	[EnumValue("required")]
+	[Value("\"required\"")]
 	Required,
-	[EnumValue("optional")]
+	[Value("\"optional\"")]
 	Optional,
-	[EnumValue("not-allowed")]
+	[Value("\"not-allowed\"")]
 	NotAllowed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaKeySessionType
 {
-	[EnumValue("temporary")]
+	[Value("\"temporary\"")]
 	Temporary,
-	[EnumValue("persistent-license")]
+	[Value("\"persistent-license\"")]
 	PersistentLicense,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaKeySessionClosedReason
 {
-	[EnumValue("internal-error")]
+	[Value("\"internal-error\"")]
 	InternalError,
-	[EnumValue("closed-by-application")]
+	[Value("\"closed-by-application\"")]
 	ClosedByApplication,
-	[EnumValue("release-acknowledged")]
+	[Value("\"release-acknowledged\"")]
 	ReleaseAcknowledged,
-	[EnumValue("hardware-context-reset")]
+	[Value("\"hardware-context-reset\"")]
 	HardwareContextReset,
-	[EnumValue("resource-evicted")]
+	[Value("\"resource-evicted\"")]
 	ResourceEvicted,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaKeyStatus
 {
-	[EnumValue("usable")]
+	[Value("\"usable\"")]
 	Usable,
-	[EnumValue("expired")]
+	[Value("\"expired\"")]
 	Expired,
-	[EnumValue("released")]
+	[Value("\"released\"")]
 	Released,
-	[EnumValue("output-restricted")]
+	[Value("\"output-restricted\"")]
 	OutputRestricted,
-	[EnumValue("output-downscaled")]
+	[Value("\"output-downscaled\"")]
 	OutputDownscaled,
-	[EnumValue("usable-in-future")]
+	[Value("\"usable-in-future\"")]
 	UsableInFuture,
-	[EnumValue("status-pending")]
+	[Value("\"status-pending\"")]
 	StatusPending,
-	[EnumValue("internal-error")]
+	[Value("\"internal-error\"")]
 	InternalError,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaKeyMessageType
 {
-	[EnumValue("license-request")]
+	[Value("\"license-request\"")]
 	LicenseRequest,
-	[EnumValue("license-renewal")]
+	[Value("\"license-renewal\"")]
 	LicenseRenewal,
-	[EnumValue("license-release")]
+	[Value("\"license-release\"")]
 	LicenseRelease,
-	[EnumValue("individualization-request")]
+	[Value("\"individualization-request\"")]
 	IndividualizationRequest,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IdentityCredentialRequestOptionsContext
 {
-	[EnumValue("signin")]
+	[Value("\"signin\"")]
 	Signin,
-	[EnumValue("signup")]
+	[Value("\"signup\"")]
 	Signup,
-	[EnumValue("use")]
+	[Value("\"use\"")]
 	Use,
-	[EnumValue("continue")]
+	[Value("\"continue\"")]
 	Continue,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IdentityCredentialRequestOptionsMode
 {
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("passive")]
+	[Value("\"passive\"")]
 	Passive,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OpaqueProperty
 {
-	[EnumValue("opaque")]
+	[Value("\"opaque\"")]
 	Opaque,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FenceReportingDestination
 {
-	[EnumValue("buyer")]
+	[Value("\"buyer\"")]
 	Buyer,
-	[EnumValue("seller")]
+	[Value("\"seller\"")]
 	Seller,
-	[EnumValue("component-seller")]
+	[Value("\"component-seller\"")]
 	ComponentSeller,
-	[EnumValue("direct-seller")]
+	[Value("\"direct-seller\"")]
 	DirectSeller,
-	[EnumValue("shared-storage-select-url")]
+	[Value("\"shared-storage-select-url\"")]
 	SharedStorageSelectUrl,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestDestination/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestDestination
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("audio")]
+	[Value("\"audio\"")]
 	Audio,
-	[EnumValue("audioworklet")]
+	[Value("\"audioworklet\"")]
 	Audioworklet,
-	[EnumValue("document")]
+	[Value("\"document\"")]
 	Document,
-	[EnumValue("embed")]
+	[Value("\"embed\"")]
 	Embed,
-	[EnumValue("font")]
+	[Value("\"font\"")]
 	Font,
-	[EnumValue("frame")]
+	[Value("\"frame\"")]
 	Frame,
-	[EnumValue("iframe")]
+	[Value("\"iframe\"")]
 	Iframe,
-	[EnumValue("image")]
+	[Value("\"image\"")]
 	Image,
-	[EnumValue("json")]
+	[Value("\"json\"")]
 	Json,
-	[EnumValue("manifest")]
+	[Value("\"manifest\"")]
 	Manifest,
-	[EnumValue("object")]
+	[Value("\"object\"")]
 	Object,
-	[EnumValue("paintworklet")]
+	[Value("\"paintworklet\"")]
 	Paintworklet,
-	[EnumValue("report")]
+	[Value("\"report\"")]
 	Report,
-	[EnumValue("script")]
+	[Value("\"script\"")]
 	Script,
-	[EnumValue("sharedworker")]
+	[Value("\"sharedworker\"")]
 	Sharedworker,
-	[EnumValue("style")]
+	[Value("\"style\"")]
 	Style,
-	[EnumValue("track")]
+	[Value("\"track\"")]
 	Track,
-	[EnumValue("video")]
+	[Value("\"video\"")]
 	Video,
-	[EnumValue("worker")]
+	[Value("\"worker\"")]
 	Worker,
-	[EnumValue("xslt")]
+	[Value("\"xslt\"")]
 	Xslt,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestMode/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestMode
 {
-	[EnumValue("navigate")]
+	[Value("\"navigate\"")]
 	Navigate,
-	[EnumValue("same-origin")]
+	[Value("\"same-origin\"")]
 	SameOrigin,
-	[EnumValue("no-cors")]
+	[Value("\"no-cors\"")]
 	NoCors,
-	[EnumValue("cors")]
+	[Value("\"cors\"")]
 	Cors,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestCredentials/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestCredentials
 {
-	[EnumValue("omit")]
+	[Value("\"omit\"")]
 	Omit,
-	[EnumValue("same-origin")]
+	[Value("\"same-origin\"")]
 	SameOrigin,
-	[EnumValue("include")]
+	[Value("\"include\"")]
 	Include,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestCache/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestCache
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("no-store")]
+	[Value("\"no-store\"")]
 	NoStore,
-	[EnumValue("reload")]
+	[Value("\"reload\"")]
 	Reload,
-	[EnumValue("no-cache")]
+	[Value("\"no-cache\"")]
 	NoCache,
-	[EnumValue("force-cache")]
+	[Value("\"force-cache\"")]
 	ForceCache,
-	[EnumValue("only-if-cached")]
+	[Value("\"only-if-cached\"")]
 	OnlyIfCached,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestRedirect/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestRedirect
 {
-	[EnumValue("follow")]
+	[Value("\"follow\"")]
 	Follow,
-	[EnumValue("error")]
+	[Value("\"error\"")]
 	Error,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestDuplex/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestDuplex
 {
-	[EnumValue("half")]
+	[Value("\"half\"")]
 	Half,
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestPriority/*'/>
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RequestPriority
 {
-	[EnumValue("high")]
+	[Value("\"high\"")]
 	High,
-	[EnumValue("low")]
+	[Value("\"low\"")]
 	Low,
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ResponseType
 {
-	[EnumValue("basic")]
+	[Value("\"basic\"")]
 	Basic,
-	[EnumValue("cors")]
+	[Value("\"cors\"")]
 	Cors,
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("error")]
+	[Value("\"error\"")]
 	Error,
-	[EnumValue("opaque")]
+	[Value("\"opaque\"")]
 	Opaque,
-	[EnumValue("opaqueredirect")]
+	[Value("\"opaqueredirect\"")]
 	Opaqueredirect,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FileSystemPermissionMode
 {
-	[EnumValue("read")]
+	[Value("\"read\"")]
 	Read,
-	[EnumValue("readwrite")]
+	[Value("\"readwrite\"")]
 	Readwrite,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WellKnownDirectory
 {
-	[EnumValue("desktop")]
+	[Value("\"desktop\"")]
 	Desktop,
-	[EnumValue("documents")]
+	[Value("\"documents\"")]
 	Documents,
-	[EnumValue("downloads")]
+	[Value("\"downloads\"")]
 	Downloads,
-	[EnumValue("music")]
+	[Value("\"music\"")]
 	Music,
-	[EnumValue("pictures")]
+	[Value("\"pictures\"")]
 	Pictures,
-	[EnumValue("videos")]
+	[Value("\"videos\"")]
 	Videos,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum EndingType
 {
-	[EnumValue("transparent")]
+	[Value("\"transparent\"")]
 	Transparent,
-	[EnumValue("native")]
+	[Value("\"native\"")]
 	Native,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FileSystemHandleKind
 {
-	[EnumValue("file")]
+	[Value("\"file\"")]
 	File,
-	[EnumValue("directory")]
+	[Value("\"directory\"")]
 	Directory,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WriteCommandType
 {
-	[EnumValue("write")]
+	[Value("\"write\"")]
 	Write,
-	[EnumValue("seek")]
+	[Value("\"seek\"")]
 	Seek,
-	[EnumValue("truncate")]
+	[Value("\"truncate\"")]
 	Truncate,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FullscreenNavigationUI
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("show")]
+	[Value("\"show\"")]
 	Show,
-	[EnumValue("hide")]
+	[Value("\"hide\"")]
 	Hide,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GamepadHand
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GamepadMappingType
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("standard")]
+	[Value("\"standard\"")]
 	Standard,
-	[EnumValue("xr-standard")]
+	[Value("\"xr-standard\"")]
 	XrStandard,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GamepadHapticsResult
 {
-	[EnumValue("complete")]
+	[Value("\"complete\"")]
 	Complete,
-	[EnumValue("preempted")]
+	[Value("\"preempted\"")]
 	Preempted,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GamepadHapticEffectType
 {
-	[EnumValue("dual-rumble")]
+	[Value("\"dual-rumble\"")]
 	DualRumble,
-	[EnumValue("trigger-rumble")]
+	[Value("\"trigger-rumble\"")]
 	TriggerRumble,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GyroscopeLocalCoordinateSystem
 {
-	[EnumValue("device")]
+	[Value("\"device\"")]
 	Device,
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HandwritingRecognitionType
 {
-	[EnumValue("text")]
+	[Value("\"text\"")]
 	Text,
-	[EnumValue("per-character")]
+	[Value("\"per-character\"")]
 	PerCharacter,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HandwritingInputType
 {
-	[EnumValue("mouse")]
+	[Value("\"mouse\"")]
 	Mouse,
-	[EnumValue("stylus")]
+	[Value("\"stylus\"")]
 	Stylus,
-	[EnumValue("touch")]
+	[Value("\"touch\"")]
 	Touch,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DocumentReadyState
 {
-	[EnumValue("loading")]
+	[Value("\"loading\"")]
 	Loading,
-	[EnumValue("interactive")]
+	[Value("\"interactive\"")]
 	Interactive,
-	[EnumValue("complete")]
+	[Value("\"complete\"")]
 	Complete,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DocumentVisibilityState
 {
-	[EnumValue("visible")]
+	[Value("\"visible\"")]
 	Visible,
-	[EnumValue("hidden")]
+	[Value("\"hidden\"")]
 	Hidden,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanPlayTypeResult
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("maybe")]
+	[Value("\"maybe\"")]
 	Maybe,
-	[EnumValue("probably")]
+	[Value("\"probably\"")]
 	Probably,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TextTrackMode
 {
-	[EnumValue("disabled")]
+	[Value("\"disabled\"")]
 	Disabled,
-	[EnumValue("hidden")]
+	[Value("\"hidden\"")]
 	Hidden,
-	[EnumValue("showing")]
+	[Value("\"showing\"")]
 	Showing,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TextTrackKind
 {
-	[EnumValue("subtitles")]
+	[Value("\"subtitles\"")]
 	Subtitles,
-	[EnumValue("captions")]
+	[Value("\"captions\"")]
 	Captions,
-	[EnumValue("descriptions")]
+	[Value("\"descriptions\"")]
 	Descriptions,
-	[EnumValue("chapters")]
+	[Value("\"chapters\"")]
 	Chapters,
-	[EnumValue("metadata")]
+	[Value("\"metadata\"")]
 	Metadata,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SelectionMode
 {
-	[EnumValue("select")]
+	[Value("\"select\"")]
 	Select,
-	[EnumValue("start")]
+	[Value("\"start\"")]
 	Start,
-	[EnumValue("end")]
+	[Value("\"end\"")]
 	End,
-	[EnumValue("preserve")]
+	[Value("\"preserve\"")]
 	Preserve,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PredefinedColorSpace
 {
-	[EnumValue("srgb")]
+	[Value("\"srgb\"")]
 	Srgb,
-	[EnumValue("display-p3")]
+	[Value("\"display-p3\"")]
 	DisplayP3,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasFillRule
 {
-	[EnumValue("nonzero")]
+	[Value("\"nonzero\"")]
 	Nonzero,
-	[EnumValue("evenodd")]
+	[Value("\"evenodd\"")]
 	Evenodd,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ImageSmoothingQuality
 {
-	[EnumValue("low")]
+	[Value("\"low\"")]
 	Low,
-	[EnumValue("medium")]
+	[Value("\"medium\"")]
 	Medium,
-	[EnumValue("high")]
+	[Value("\"high\"")]
 	High,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasLineCap
 {
-	[EnumValue("butt")]
+	[Value("\"butt\"")]
 	Butt,
-	[EnumValue("round")]
+	[Value("\"round\"")]
 	Round,
-	[EnumValue("square")]
+	[Value("\"square\"")]
 	Square,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasLineJoin
 {
-	[EnumValue("round")]
+	[Value("\"round\"")]
 	Round,
-	[EnumValue("bevel")]
+	[Value("\"bevel\"")]
 	Bevel,
-	[EnumValue("miter")]
+	[Value("\"miter\"")]
 	Miter,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasTextAlign
 {
-	[EnumValue("start")]
+	[Value("\"start\"")]
 	Start,
-	[EnumValue("end")]
+	[Value("\"end\"")]
 	End,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
-	[EnumValue("center")]
+	[Value("\"center\"")]
 	Center,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasTextBaseline
 {
-	[EnumValue("top")]
+	[Value("\"top\"")]
 	Top,
-	[EnumValue("hanging")]
+	[Value("\"hanging\"")]
 	Hanging,
-	[EnumValue("middle")]
+	[Value("\"middle\"")]
 	Middle,
-	[EnumValue("alphabetic")]
+	[Value("\"alphabetic\"")]
 	Alphabetic,
-	[EnumValue("ideographic")]
+	[Value("\"ideographic\"")]
 	Ideographic,
-	[EnumValue("bottom")]
+	[Value("\"bottom\"")]
 	Bottom,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasDirection
 {
-	[EnumValue("ltr")]
+	[Value("\"ltr\"")]
 	Ltr,
-	[EnumValue("rtl")]
+	[Value("\"rtl\"")]
 	Rtl,
-	[EnumValue("inherit")]
+	[Value("\"inherit\"")]
 	Inherit,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasFontKerning
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("normal")]
+	[Value("\"normal\"")]
 	Normal,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasFontStretch
 {
-	[EnumValue("ultra-condensed")]
+	[Value("\"ultra-condensed\"")]
 	UltraCondensed,
-	[EnumValue("extra-condensed")]
+	[Value("\"extra-condensed\"")]
 	ExtraCondensed,
-	[EnumValue("condensed")]
+	[Value("\"condensed\"")]
 	Condensed,
-	[EnumValue("semi-condensed")]
+	[Value("\"semi-condensed\"")]
 	SemiCondensed,
-	[EnumValue("normal")]
+	[Value("\"normal\"")]
 	Normal,
-	[EnumValue("semi-expanded")]
+	[Value("\"semi-expanded\"")]
 	SemiExpanded,
-	[EnumValue("expanded")]
+	[Value("\"expanded\"")]
 	Expanded,
-	[EnumValue("extra-expanded")]
+	[Value("\"extra-expanded\"")]
 	ExtraExpanded,
-	[EnumValue("ultra-expanded")]
+	[Value("\"ultra-expanded\"")]
 	UltraExpanded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasFontVariantCaps
 {
-	[EnumValue("normal")]
+	[Value("\"normal\"")]
 	Normal,
-	[EnumValue("small-caps")]
+	[Value("\"small-caps\"")]
 	SmallCaps,
-	[EnumValue("all-small-caps")]
+	[Value("\"all-small-caps\"")]
 	AllSmallCaps,
-	[EnumValue("petite-caps")]
+	[Value("\"petite-caps\"")]
 	PetiteCaps,
-	[EnumValue("all-petite-caps")]
+	[Value("\"all-petite-caps\"")]
 	AllPetiteCaps,
-	[EnumValue("unicase")]
+	[Value("\"unicase\"")]
 	Unicase,
-	[EnumValue("titling-caps")]
+	[Value("\"titling-caps\"")]
 	TitlingCaps,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CanvasTextRendering
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("optimizeSpeed")]
+	[Value("\"optimizeSpeed\"")]
 	OptimizeSpeed,
-	[EnumValue("optimizeLegibility")]
+	[Value("\"optimizeLegibility\"")]
 	OptimizeLegibility,
-	[EnumValue("geometricPrecision")]
+	[Value("\"geometricPrecision\"")]
 	GeometricPrecision,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OffscreenRenderingContextId
 {
-	[EnumValue("2d")]
+	[Value("\"2d\"")]
 	_2d,
-	[EnumValue("bitmaprenderer")]
+	[Value("\"bitmaprenderer\"")]
 	Bitmaprenderer,
-	[EnumValue("webgl")]
+	[Value("\"webgl\"")]
 	Webgl,
-	[EnumValue("webgl2")]
+	[Value("\"webgl2\"")]
 	Webgl2,
-	[EnumValue("webgpu")]
+	[Value("\"webgpu\"")]
 	Webgpu,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScrollRestoration
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NavigationHistoryBehavior
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("push")]
+	[Value("\"push\"")]
 	Push,
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NavigationType
 {
-	[EnumValue("push")]
+	[Value("\"push\"")]
 	Push,
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
-	[EnumValue("reload")]
+	[Value("\"reload\"")]
 	Reload,
-	[EnumValue("traverse")]
+	[Value("\"traverse\"")]
 	Traverse,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NavigationFocusReset
 {
-	[EnumValue("after-transition")]
+	[Value("\"after-transition\"")]
 	AfterTransition,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NavigationScrollBehavior
 {
-	[EnumValue("after-transition")]
+	[Value("\"after-transition\"")]
 	AfterTransition,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DOMParserSupportedType
 {
-	[EnumValue("text/html")]
+	[Value("\"text/html\"")]
 	TextHtml,
-	[EnumValue("text/xml")]
+	[Value("\"text/xml\"")]
 	TextXml,
-	[EnumValue("application/xml")]
+	[Value("\"application/xml\"")]
 	ApplicationXml,
-	[EnumValue("application/xhtml+xml")]
+	[Value("\"application/xhtml+xml\"")]
 	ApplicationXhtmlXml,
-	[EnumValue("image/svg+xml")]
+	[Value("\"image/svg+xml\"")]
 	ImageSvgXml,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ImageOrientation
 {
-	[EnumValue("from-image")]
+	[Value("\"from-image\"")]
 	FromImage,
-	[EnumValue("flipY")]
+	[Value("\"flipY\"")]
 	FlipY,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PremultiplyAlpha
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("premultiply")]
+	[Value("\"premultiply\"")]
 	Premultiply,
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ColorSpaceConversion
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ResizeQuality
 {
-	[EnumValue("pixelated")]
+	[Value("\"pixelated\"")]
 	Pixelated,
-	[EnumValue("low")]
+	[Value("\"low\"")]
 	Low,
-	[EnumValue("medium")]
+	[Value("\"medium\"")]
 	Medium,
-	[EnumValue("high")]
+	[Value("\"high\"")]
 	High,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WorkerType
 {
-	[EnumValue("classic")]
+	[Value("\"classic\"")]
 	Classic,
-	[EnumValue("module")]
+	[Value("\"module\"")]
 	Module,
 }
 
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum UserIdleState
 {
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("idle")]
+	[Value("\"idle\"")]
 	Idle,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScreenIdleState
 {
-	[EnumValue("locked")]
+	[Value("\"locked\"")]
 	Locked,
-	[EnumValue("unlocked")]
+	[Value("\"unlocked\"")]
 	Unlocked,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RedEyeReduction
 {
-	[EnumValue("never")]
+	[Value("\"never\"")]
 	Never,
-	[EnumValue("always")]
+	[Value("\"always\"")]
 	Always,
-	[EnumValue("controllable")]
+	[Value("\"controllable\"")]
 	Controllable,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FillLightMode
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("off")]
+	[Value("\"off\"")]
 	Off,
-	[EnumValue("flash")]
+	[Value("\"flash\"")]
 	Flash,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MeteringMode
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("manual")]
+	[Value("\"manual\"")]
 	Manual,
-	[EnumValue("single-shot")]
+	[Value("\"single-shot\"")]
 	SingleShot,
-	[EnumValue("continuous")]
+	[Value("\"continuous\"")]
 	Continuous,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IDBRequestReadyState
 {
-	[EnumValue("pending")]
+	[Value("\"pending\"")]
 	Pending,
-	[EnumValue("done")]
+	[Value("\"done\"")]
 	Done,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IDBTransactionDurability
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("strict")]
+	[Value("\"strict\"")]
 	Strict,
-	[EnumValue("relaxed")]
+	[Value("\"relaxed\"")]
 	Relaxed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IDBCursorDirection
 {
-	[EnumValue("next")]
+	[Value("\"next\"")]
 	Next,
-	[EnumValue("nextunique")]
+	[Value("\"nextunique\"")]
 	Nextunique,
-	[EnumValue("prev")]
+	[Value("\"prev\"")]
 	Prev,
-	[EnumValue("prevunique")]
+	[Value("\"prevunique\"")]
 	Prevunique,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IDBTransactionMode
 {
-	[EnumValue("readonly")]
+	[Value("\"readonly\"")]
 	Readonly,
-	[EnumValue("readwrite")]
+	[Value("\"readwrite\"")]
 	Readwrite,
-	[EnumValue("versionchange")]
+	[Value("\"versionchange\"")]
 	Versionchange,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LoginStatus
 {
-	[EnumValue("logged-in")]
+	[Value("\"logged-in\"")]
 	LoggedIn,
-	[EnumValue("logged-out")]
+	[Value("\"logged-out\"")]
 	LoggedOut,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScriptInvokerType
 {
-	[EnumValue("classic-script")]
+	[Value("\"classic-script\"")]
 	ClassicScript,
-	[EnumValue("module-script")]
+	[Value("\"module-script\"")]
 	ModuleScript,
-	[EnumValue("event-listener")]
+	[Value("\"event-listener\"")]
 	EventListener,
-	[EnumValue("user-callback")]
+	[Value("\"user-callback\"")]
 	UserCallback,
-	[EnumValue("resolve-promise")]
+	[Value("\"resolve-promise\"")]
 	ResolvePromise,
-	[EnumValue("reject-promise")]
+	[Value("\"reject-promise\"")]
 	RejectPromise,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScriptWindowAttribution
 {
-	[EnumValue("self")]
+	[Value("\"self\"")]
 	Self,
-	[EnumValue("descendant")]
+	[Value("\"descendant\"")]
 	Descendant,
-	[EnumValue("ancestor")]
+	[Value("\"ancestor\"")]
 	Ancestor,
-	[EnumValue("same-page")]
+	[Value("\"same-page\"")]
 	SamePage,
-	[EnumValue("other")]
+	[Value("\"other\"")]
 	Other,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MagnetometerLocalCoordinateSystem
 {
-	[EnumValue("device")]
+	[Value("\"device\"")]
 	Device,
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AppBannerPromptOutcome
 {
-	[EnumValue("accepted")]
+	[Value("\"accepted\"")]
 	Accepted,
-	[EnumValue("dismissed")]
+	[Value("\"dismissed\"")]
 	Dismissed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaDecodingType
 {
-	[EnumValue("file")]
+	[Value("\"file\"")]
 	File,
-	[EnumValue("media-source")]
+	[Value("\"media-source\"")]
 	MediaSource,
-	[EnumValue("webrtc")]
+	[Value("\"webrtc\"")]
 	Webrtc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaEncodingType
 {
-	[EnumValue("record")]
+	[Value("\"record\"")]
 	Record,
-	[EnumValue("webrtc")]
+	[Value("\"webrtc\"")]
 	Webrtc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HdrMetadataType
 {
-	[EnumValue("smpteSt2086")]
+	[Value("\"smpteSt2086\"")]
 	SmpteSt2086,
-	[EnumValue("smpteSt2094-10")]
+	[Value("\"smpteSt2094-10\"")]
 	SmpteSt209410,
-	[EnumValue("smpteSt2094-40")]
+	[Value("\"smpteSt2094-40\"")]
 	SmpteSt209440,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ColorGamut
 {
-	[EnumValue("srgb")]
+	[Value("\"srgb\"")]
 	Srgb,
-	[EnumValue("p3")]
+	[Value("\"p3\"")]
 	P3,
-	[EnumValue("rec2020")]
+	[Value("\"rec2020\"")]
 	Rec2020,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TransferFunction
 {
-	[EnumValue("srgb")]
+	[Value("\"srgb\"")]
 	Srgb,
-	[EnumValue("pq")]
+	[Value("\"pq\"")]
 	Pq,
-	[EnumValue("hlg")]
+	[Value("\"hlg\"")]
 	Hlg,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ReadyState
 {
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("open")]
+	[Value("\"open\"")]
 	Open,
-	[EnumValue("ended")]
+	[Value("\"ended\"")]
 	Ended,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum EndOfStreamError
 {
-	[EnumValue("network")]
+	[Value("\"network\"")]
 	Network,
-	[EnumValue("decode")]
+	[Value("\"decode\"")]
 	Decode,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AppendMode
 {
-	[EnumValue("segments")]
+	[Value("\"segments\"")]
 	Segments,
-	[EnumValue("sequence")]
+	[Value("\"sequence\"")]
 	Sequence,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MockCapturePromptResult
 {
-	[EnumValue("granted")]
+	[Value("\"granted\"")]
 	Granted,
-	[EnumValue("denied")]
+	[Value("\"denied\"")]
 	Denied,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CaptureAction
 {
-	[EnumValue("next")]
+	[Value("\"next\"")]
 	Next,
-	[EnumValue("previous")]
+	[Value("\"previous\"")]
 	Previous,
-	[EnumValue("first")]
+	[Value("\"first\"")]
 	First,
-	[EnumValue("last")]
+	[Value("\"last\"")]
 	Last,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaStreamTrackState
 {
-	[EnumValue("live")]
+	[Value("\"live\"")]
 	Live,
-	[EnumValue("ended")]
+	[Value("\"ended\"")]
 	Ended,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoFacingModeEnum
 {
-	[EnumValue("user")]
+	[Value("\"user\"")]
 	User,
-	[EnumValue("environment")]
+	[Value("\"environment\"")]
 	Environment,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoResizeModeEnum
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("crop-and-scale")]
+	[Value("\"crop-and-scale\"")]
 	CropAndScale,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaDeviceKind
 {
-	[EnumValue("audioinput")]
+	[Value("\"audioinput\"")]
 	Audioinput,
-	[EnumValue("audiooutput")]
+	[Value("\"audiooutput\"")]
 	Audiooutput,
-	[EnumValue("videoinput")]
+	[Value("\"videoinput\"")]
 	Videoinput,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaSessionPlaybackState
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("paused")]
+	[Value("\"paused\"")]
 	Paused,
-	[EnumValue("playing")]
+	[Value("\"playing\"")]
 	Playing,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MediaSessionAction
 {
-	[EnumValue("play")]
+	[Value("\"play\"")]
 	Play,
-	[EnumValue("pause")]
+	[Value("\"pause\"")]
 	Pause,
-	[EnumValue("seekbackward")]
+	[Value("\"seekbackward\"")]
 	Seekbackward,
-	[EnumValue("seekforward")]
+	[Value("\"seekforward\"")]
 	Seekforward,
-	[EnumValue("previoustrack")]
+	[Value("\"previoustrack\"")]
 	Previoustrack,
-	[EnumValue("nexttrack")]
+	[Value("\"nexttrack\"")]
 	Nexttrack,
-	[EnumValue("skipad")]
+	[Value("\"skipad\"")]
 	Skipad,
-	[EnumValue("stop")]
+	[Value("\"stop\"")]
 	Stop,
-	[EnumValue("seekto")]
+	[Value("\"seekto\"")]
 	Seekto,
-	[EnumValue("togglemicrophone")]
+	[Value("\"togglemicrophone\"")]
 	Togglemicrophone,
-	[EnumValue("togglecamera")]
+	[Value("\"togglecamera\"")]
 	Togglecamera,
-	[EnumValue("togglescreenshare")]
+	[Value("\"togglescreenshare\"")]
 	Togglescreenshare,
-	[EnumValue("hangup")]
+	[Value("\"hangup\"")]
 	Hangup,
-	[EnumValue("previousslide")]
+	[Value("\"previousslide\"")]
 	Previousslide,
-	[EnumValue("nextslide")]
+	[Value("\"nextslide\"")]
 	Nextslide,
-	[EnumValue("enterpictureinpicture")]
+	[Value("\"enterpictureinpicture\"")]
 	Enterpictureinpicture,
-	[EnumValue("voiceactivity")]
+	[Value("\"voiceactivity\"")]
 	Voiceactivity,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BitrateMode
 {
-	[EnumValue("constant")]
+	[Value("\"constant\"")]
 	Constant,
-	[EnumValue("variable")]
+	[Value("\"variable\"")]
 	Variable,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RecordingState
 {
-	[EnumValue("inactive")]
+	[Value("\"inactive\"")]
 	Inactive,
-	[EnumValue("recording")]
+	[Value("\"recording\"")]
 	Recording,
-	[EnumValue("paused")]
+	[Value("\"paused\"")]
 	Paused,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCDegradationPreference
 {
-	[EnumValue("maintain-framerate")]
+	[Value("\"maintain-framerate\"")]
 	MaintainFramerate,
-	[EnumValue("maintain-resolution")]
+	[Value("\"maintain-resolution\"")]
 	MaintainResolution,
-	[EnumValue("balanced")]
+	[Value("\"balanced\"")]
 	Balanced,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NavigationTimingType
 {
-	[EnumValue("navigate")]
+	[Value("\"navigate\"")]
 	Navigate,
-	[EnumValue("reload")]
+	[Value("\"reload\"")]
 	Reload,
-	[EnumValue("back_forward")]
+	[Value("\"back_forward\"")]
 	Back_forward,
-	[EnumValue("prerender")]
+	[Value("\"prerender\"")]
 	Prerender,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ConnectionType
 {
-	[EnumValue("bluetooth")]
+	[Value("\"bluetooth\"")]
 	Bluetooth,
-	[EnumValue("cellular")]
+	[Value("\"cellular\"")]
 	Cellular,
-	[EnumValue("ethernet")]
+	[Value("\"ethernet\"")]
 	Ethernet,
-	[EnumValue("mixed")]
+	[Value("\"mixed\"")]
 	Mixed,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("other")]
+	[Value("\"other\"")]
 	Other,
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
-	[EnumValue("wifi")]
+	[Value("\"wifi\"")]
 	Wifi,
-	[EnumValue("wimax")]
+	[Value("\"wimax\"")]
 	Wimax,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum EffectiveConnectionType
 {
-	[EnumValue("2g")]
+	[Value("\"2g\"")]
 	_2g,
-	[EnumValue("3g")]
+	[Value("\"3g\"")]
 	_3g,
-	[EnumValue("4g")]
+	[Value("\"4g\"")]
 	_4g,
-	[EnumValue("slow-2g")]
+	[Value("\"slow-2g\"")]
 	Slow2g,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NotificationPermission
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("denied")]
+	[Value("\"denied\"")]
 	Denied,
-	[EnumValue("granted")]
+	[Value("\"granted\"")]
 	Granted,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum NotificationDirection
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("ltr")]
+	[Value("\"ltr\"")]
 	Ltr,
-	[EnumValue("rtl")]
+	[Value("\"rtl\"")]
 	Rtl,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OrientationSensorLocalCoordinateSystem
 {
-	[EnumValue("device")]
+	[Value("\"device\"")]
 	Device,
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ClientLifecycleState
 {
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("frozen")]
+	[Value("\"frozen\"")]
 	Frozen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PaymentDelegation
 {
-	[EnumValue("shippingAddress")]
+	[Value("\"shippingAddress\"")]
 	ShippingAddress,
-	[EnumValue("payerName")]
+	[Value("\"payerName\"")]
 	PayerName,
-	[EnumValue("payerPhone")]
+	[Value("\"payerPhone\"")]
 	PayerPhone,
-	[EnumValue("payerEmail")]
+	[Value("\"payerEmail\"")]
 	PayerEmail,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PaymentShippingType
 {
-	[EnumValue("shipping")]
+	[Value("\"shipping\"")]
 	Shipping,
-	[EnumValue("delivery")]
+	[Value("\"delivery\"")]
 	Delivery,
-	[EnumValue("pickup")]
+	[Value("\"pickup\"")]
 	Pickup,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PaymentComplete
 {
-	[EnumValue("fail")]
+	[Value("\"fail\"")]
 	Fail,
-	[EnumValue("success")]
+	[Value("\"success\"")]
 	Success,
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PermissionState
 {
-	[EnumValue("granted")]
+	[Value("\"granted\"")]
 	Granted,
-	[EnumValue("denied")]
+	[Value("\"denied\"")]
 	Denied,
-	[EnumValue("prompt")]
+	[Value("\"prompt\"")]
 	Prompt,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PresentationConnectionState
 {
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("terminated")]
+	[Value("\"terminated\"")]
 	Terminated,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PresentationConnectionCloseReason
 {
-	[EnumValue("error")]
+	[Value("\"error\"")]
 	Error,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("wentaway")]
+	[Value("\"wentaway\"")]
 	Wentaway,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IPAddressSpace
 {
-	[EnumValue("public")]
+	[Value("\"public\"")]
 	Public,
-	[EnumValue("private")]
+	[Value("\"private\"")]
 	Private,
-	[EnumValue("local")]
+	[Value("\"local\"")]
 	Local,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PushEncryptionKeyName
 {
-	[EnumValue("p256dh")]
+	[Value("\"p256dh\"")]
 	P256dh,
-	[EnumValue("auth")]
+	[Value("\"auth\"")]
 	Auth,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ReferrerPolicy
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("no-referrer")]
+	[Value("\"no-referrer\"")]
 	NoReferrer,
-	[EnumValue("no-referrer-when-downgrade")]
+	[Value("\"no-referrer-when-downgrade\"")]
 	NoReferrerWhenDowngrade,
-	[EnumValue("same-origin")]
+	[Value("\"same-origin\"")]
 	SameOrigin,
-	[EnumValue("origin")]
+	[Value("\"origin\"")]
 	Origin,
-	[EnumValue("strict-origin")]
+	[Value("\"strict-origin\"")]
 	StrictOrigin,
-	[EnumValue("origin-when-cross-origin")]
+	[Value("\"origin-when-cross-origin\"")]
 	OriginWhenCrossOrigin,
-	[EnumValue("strict-origin-when-cross-origin")]
+	[Value("\"strict-origin-when-cross-origin\"")]
 	StrictOriginWhenCrossOrigin,
-	[EnumValue("unsafe-url")]
+	[Value("\"unsafe-url\"")]
 	UnsafeUrl,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RemotePlaybackState
 {
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
-	[EnumValue("disconnected")]
+	[Value("\"disconnected\"")]
 	Disconnected,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ResizeObserverBoxOptions
 {
-	[EnumValue("border-box")]
+	[Value("\"border-box\"")]
 	BorderBox,
-	[EnumValue("content-box")]
+	[Value("\"content-box\"")]
 	ContentBox,
-	[EnumValue("device-pixel-content-box")]
+	[Value("\"device-pixel-content-box\"")]
 	DevicePixelContentBox,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RenderBlockingStatusType
 {
-	[EnumValue("blocking")]
+	[Value("\"blocking\"")]
 	Blocking,
-	[EnumValue("non-blocking")]
+	[Value("\"non-blocking\"")]
 	NonBlocking,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SameSiteCookiesType
 {
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SanitizerPresets
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TaskPriority
 {
-	[EnumValue("user-blocking")]
+	[Value("\"user-blocking\"")]
 	UserBlocking,
-	[EnumValue("user-visible")]
+	[Value("\"user-visible\"")]
 	UserVisible,
-	[EnumValue("background")]
+	[Value("\"background\"")]
 	Background,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CaptureStartFocusBehavior
 {
-	[EnumValue("focus-capturing-application")]
+	[Value("\"focus-capturing-application\"")]
 	FocusCapturingApplication,
-	[EnumValue("focus-captured-surface")]
+	[Value("\"focus-captured-surface\"")]
 	FocusCapturedSurface,
-	[EnumValue("no-focus-change")]
+	[Value("\"no-focus-change\"")]
 	NoFocusChange,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SelfCapturePreferenceEnum
 {
-	[EnumValue("include")]
+	[Value("\"include\"")]
 	Include,
-	[EnumValue("exclude")]
+	[Value("\"exclude\"")]
 	Exclude,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SystemAudioPreferenceEnum
 {
-	[EnumValue("include")]
+	[Value("\"include\"")]
 	Include,
-	[EnumValue("exclude")]
+	[Value("\"exclude\"")]
 	Exclude,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SurfaceSwitchingPreferenceEnum
 {
-	[EnumValue("include")]
+	[Value("\"include\"")]
 	Include,
-	[EnumValue("exclude")]
+	[Value("\"exclude\"")]
 	Exclude,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MonitorTypeSurfacesEnum
 {
-	[EnumValue("include")]
+	[Value("\"include\"")]
 	Include,
-	[EnumValue("exclude")]
+	[Value("\"exclude\"")]
 	Exclude,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DisplayCaptureSurfaceType
 {
-	[EnumValue("monitor")]
+	[Value("\"monitor\"")]
 	Monitor,
-	[EnumValue("window")]
+	[Value("\"window\"")]
 	Window,
-	[EnumValue("browser")]
+	[Value("\"browser\"")]
 	Browser,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CursorCaptureConstraint
 {
-	[EnumValue("never")]
+	[Value("\"never\"")]
 	Never,
-	[EnumValue("always")]
+	[Value("\"always\"")]
 	Always,
-	[EnumValue("motion")]
+	[Value("\"motion\"")]
 	Motion,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OrientationLockType
 {
-	[EnumValue("any")]
+	[Value("\"any\"")]
 	Any,
-	[EnumValue("natural")]
+	[Value("\"natural\"")]
 	Natural,
-	[EnumValue("landscape")]
+	[Value("\"landscape\"")]
 	Landscape,
-	[EnumValue("portrait")]
+	[Value("\"portrait\"")]
 	Portrait,
-	[EnumValue("portrait-primary")]
+	[Value("\"portrait-primary\"")]
 	PortraitPrimary,
-	[EnumValue("portrait-secondary")]
+	[Value("\"portrait-secondary\"")]
 	PortraitSecondary,
-	[EnumValue("landscape-primary")]
+	[Value("\"landscape-primary\"")]
 	LandscapePrimary,
-	[EnumValue("landscape-secondary")]
+	[Value("\"landscape-secondary\"")]
 	LandscapeSecondary,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OrientationType
 {
-	[EnumValue("portrait-primary")]
+	[Value("\"portrait-primary\"")]
 	PortraitPrimary,
-	[EnumValue("portrait-secondary")]
+	[Value("\"portrait-secondary\"")]
 	PortraitSecondary,
-	[EnumValue("landscape-primary")]
+	[Value("\"landscape-primary\"")]
 	LandscapePrimary,
-	[EnumValue("landscape-secondary")]
+	[Value("\"landscape-secondary\"")]
 	LandscapeSecondary,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WakeLockType
 {
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScrollAxis
 {
-	[EnumValue("block")]
+	[Value("\"block\"")]
 	Block,
-	[EnumValue("inline")]
+	[Value("\"inline\"")]
 	Inline,
-	[EnumValue("x")]
+	[Value("\"x\"")]
 	X,
-	[EnumValue("y")]
+	[Value("\"y\"")]
 	Y,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ParityType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("even")]
+	[Value("\"even\"")]
 	Even,
-	[EnumValue("odd")]
+	[Value("\"odd\"")]
 	Odd,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FlowControlType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("hardware")]
+	[Value("\"hardware\"")]
 	Hardware,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ServiceWorkerState
 {
-	[EnumValue("parsed")]
+	[Value("\"parsed\"")]
 	Parsed,
-	[EnumValue("installing")]
+	[Value("\"installing\"")]
 	Installing,
-	[EnumValue("installed")]
+	[Value("\"installed\"")]
 	Installed,
-	[EnumValue("activating")]
+	[Value("\"activating\"")]
 	Activating,
-	[EnumValue("activated")]
+	[Value("\"activated\"")]
 	Activated,
-	[EnumValue("redundant")]
+	[Value("\"redundant\"")]
 	Redundant,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ServiceWorkerUpdateViaCache
 {
-	[EnumValue("imports")]
+	[Value("\"imports\"")]
 	Imports,
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FrameType
 {
-	[EnumValue("auxiliary")]
+	[Value("\"auxiliary\"")]
 	Auxiliary,
-	[EnumValue("top-level")]
+	[Value("\"top-level\"")]
 	TopLevel,
-	[EnumValue("nested")]
+	[Value("\"nested\"")]
 	Nested,
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ClientType
 {
-	[EnumValue("window")]
+	[Value("\"window\"")]
 	Window,
-	[EnumValue("worker")]
+	[Value("\"worker\"")]
 	Worker,
-	[EnumValue("sharedworker")]
+	[Value("\"sharedworker\"")]
 	Sharedworker,
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RunningStatus
 {
-	[EnumValue("running")]
+	[Value("\"running\"")]
 	Running,
-	[EnumValue("not-running")]
+	[Value("\"not-running\"")]
 	NotRunning,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RouterSourceEnum
 {
-	[EnumValue("cache")]
+	[Value("\"cache\"")]
 	Cache,
-	[EnumValue("fetch-event")]
+	[Value("\"fetch-event\"")]
 	FetchEvent,
-	[EnumValue("network")]
+	[Value("\"network\"")]
 	Network,
-	[EnumValue("race-network-and-fetch-handler")]
+	[Value("\"race-network-and-fetch-handler\"")]
 	RaceNetworkAndFetchHandler,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LandmarkType
 {
-	[EnumValue("mouth")]
+	[Value("\"mouth\"")]
 	Mouth,
-	[EnumValue("eye")]
+	[Value("\"eye\"")]
 	Eye,
-	[EnumValue("nose")]
+	[Value("\"nose\"")]
 	Nose,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BarcodeFormat
 {
-	[EnumValue("aztec")]
+	[Value("\"aztec\"")]
 	Aztec,
-	[EnumValue("code_128")]
+	[Value("\"code_128\"")]
 	Code_128,
-	[EnumValue("code_39")]
+	[Value("\"code_39\"")]
 	Code_39,
-	[EnumValue("code_93")]
+	[Value("\"code_93\"")]
 	Code_93,
-	[EnumValue("codabar")]
+	[Value("\"codabar\"")]
 	Codabar,
-	[EnumValue("data_matrix")]
+	[Value("\"data_matrix\"")]
 	Data_matrix,
-	[EnumValue("ean_13")]
+	[Value("\"ean_13\"")]
 	Ean_13,
-	[EnumValue("ean_8")]
+	[Value("\"ean_8\"")]
 	Ean_8,
-	[EnumValue("itf")]
+	[Value("\"itf\"")]
 	Itf,
-	[EnumValue("pdf417")]
+	[Value("\"pdf417\"")]
 	Pdf417,
-	[EnumValue("qr_code")]
+	[Value("\"qr_code\"")]
 	Qr_code,
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
-	[EnumValue("upc_a")]
+	[Value("\"upc_a\"")]
 	Upc_a,
-	[EnumValue("upc_e")]
+	[Value("\"upc_e\"")]
 	Upc_e,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SpeechRecognitionErrorCode
 {
-	[EnumValue("no-speech")]
+	[Value("\"no-speech\"")]
 	NoSpeech,
-	[EnumValue("aborted")]
+	[Value("\"aborted\"")]
 	Aborted,
-	[EnumValue("audio-capture")]
+	[Value("\"audio-capture\"")]
 	AudioCapture,
-	[EnumValue("network")]
+	[Value("\"network\"")]
 	Network,
-	[EnumValue("not-allowed")]
+	[Value("\"not-allowed\"")]
 	NotAllowed,
-	[EnumValue("service-not-allowed")]
+	[Value("\"service-not-allowed\"")]
 	ServiceNotAllowed,
-	[EnumValue("bad-grammar")]
+	[Value("\"bad-grammar\"")]
 	BadGrammar,
-	[EnumValue("language-not-supported")]
+	[Value("\"language-not-supported\"")]
 	LanguageNotSupported,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SpeechSynthesisErrorCode
 {
-	[EnumValue("canceled")]
+	[Value("\"canceled\"")]
 	Canceled,
-	[EnumValue("interrupted")]
+	[Value("\"interrupted\"")]
 	Interrupted,
-	[EnumValue("audio-busy")]
+	[Value("\"audio-busy\"")]
 	AudioBusy,
-	[EnumValue("audio-hardware")]
+	[Value("\"audio-hardware\"")]
 	AudioHardware,
-	[EnumValue("network")]
+	[Value("\"network\"")]
 	Network,
-	[EnumValue("synthesis-unavailable")]
+	[Value("\"synthesis-unavailable\"")]
 	SynthesisUnavailable,
-	[EnumValue("synthesis-failed")]
+	[Value("\"synthesis-failed\"")]
 	SynthesisFailed,
-	[EnumValue("language-unavailable")]
+	[Value("\"language-unavailable\"")]
 	LanguageUnavailable,
-	[EnumValue("voice-unavailable")]
+	[Value("\"voice-unavailable\"")]
 	VoiceUnavailable,
-	[EnumValue("text-too-long")]
+	[Value("\"text-too-long\"")]
 	TextTooLong,
-	[EnumValue("invalid-argument")]
+	[Value("\"invalid-argument\"")]
 	InvalidArgument,
-	[EnumValue("not-allowed")]
+	[Value("\"not-allowed\"")]
 	NotAllowed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ReadableStreamReaderMode
 {
-	[EnumValue("byob")]
+	[Value("\"byob\"")]
 	Byob,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ReadableStreamType
 {
-	[EnumValue("bytes")]
+	[Value("\"bytes\"")]
 	Bytes,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TouchType
 {
-	[EnumValue("direct")]
+	[Value("\"direct\"")]
 	Direct,
-	[EnumValue("stylus")]
+	[Value("\"stylus\"")]
 	Stylus,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RefreshPolicy
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("refresh")]
+	[Value("\"refresh\"")]
 	Refresh,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TokenVersion
 {
-	[EnumValue("1")]
+	[Value("\"1\"")]
 	_1,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OperationType
 {
-	[EnumValue("token-request")]
+	[Value("\"token-request\"")]
 	TokenRequest,
-	[EnumValue("send-redemption-record")]
+	[Value("\"send-redemption-record\"")]
 	SendRedemptionRecord,
-	[EnumValue("token-redemption")]
+	[Value("\"token-redemption\"")]
 	TokenRedemption,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum KAnonStatus
 {
-	[EnumValue("passedAndEnforced")]
+	[Value("\"passedAndEnforced\"")]
 	PassedAndEnforced,
-	[EnumValue("passedNotEnforced")]
+	[Value("\"passedNotEnforced\"")]
 	PassedNotEnforced,
-	[EnumValue("belowThreshold")]
+	[Value("\"belowThreshold\"")]
 	BelowThreshold,
-	[EnumValue("notCalculated")]
+	[Value("\"notCalculated\"")]
 	NotCalculated,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ImportExportKind
 {
-	[EnumValue("function")]
+	[Value("\"function\"")]
 	Function,
-	[EnumValue("table")]
+	[Value("\"table\"")]
 	Table,
-	[EnumValue("memory")]
+	[Value("\"memory\"")]
 	Memory,
-	[EnumValue("global")]
+	[Value("\"global\"")]
 	Global,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TableKind
 {
-	[EnumValue("externref")]
+	[Value("\"externref\"")]
 	Externref,
-	[EnumValue("anyfunc")]
+	[Value("\"anyfunc\"")]
 	Anyfunc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ValueType
 {
-	[EnumValue("i32")]
+	[Value("\"i32\"")]
 	I32,
-	[EnumValue("i64")]
+	[Value("\"i64\"")]
 	I64,
-	[EnumValue("f32")]
+	[Value("\"f32\"")]
 	F32,
-	[EnumValue("f64")]
+	[Value("\"f64\"")]
 	F64,
-	[EnumValue("v128")]
+	[Value("\"v128\"")]
 	V128,
-	[EnumValue("externref")]
+	[Value("\"externref\"")]
 	Externref,
-	[EnumValue("anyfunc")]
+	[Value("\"anyfunc\"")]
 	Anyfunc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum IterationCompositeOperation
 {
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
-	[EnumValue("accumulate")]
+	[Value("\"accumulate\"")]
 	Accumulate,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AnimationPlayState
 {
-	[EnumValue("idle")]
+	[Value("\"idle\"")]
 	Idle,
-	[EnumValue("running")]
+	[Value("\"running\"")]
 	Running,
-	[EnumValue("paused")]
+	[Value("\"paused\"")]
 	Paused,
-	[EnumValue("finished")]
+	[Value("\"finished\"")]
 	Finished,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AnimationReplaceState
 {
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("removed")]
+	[Value("\"removed\"")]
 	Removed,
-	[EnumValue("persisted")]
+	[Value("\"persisted\"")]
 	Persisted,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum FillMode
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("forwards")]
+	[Value("\"forwards\"")]
 	Forwards,
-	[EnumValue("backwards")]
+	[Value("\"backwards\"")]
 	Backwards,
-	[EnumValue("both")]
+	[Value("\"both\"")]
 	Both,
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PlaybackDirection
 {
-	[EnumValue("normal")]
+	[Value("\"normal\"")]
 	Normal,
-	[EnumValue("reverse")]
+	[Value("\"reverse\"")]
 	Reverse,
-	[EnumValue("alternate")]
+	[Value("\"alternate\"")]
 	Alternate,
-	[EnumValue("alternate-reverse")]
+	[Value("\"alternate-reverse\"")]
 	AlternateReverse,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CompositeOperation
 {
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
-	[EnumValue("add")]
+	[Value("\"add\"")]
 	Add,
-	[EnumValue("accumulate")]
+	[Value("\"accumulate\"")]
 	Accumulate,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CompositeOperationOrAuto
 {
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
-	[EnumValue("add")]
+	[Value("\"add\"")]
 	Add,
-	[EnumValue("accumulate")]
+	[Value("\"accumulate\"")]
 	Accumulate,
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LockMode
 {
-	[EnumValue("shared")]
+	[Value("\"shared\"")]
 	Shared,
-	[EnumValue("exclusive")]
+	[Value("\"exclusive\"")]
 	Exclusive,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OTPCredentialTransportType
 {
-	[EnumValue("sms")]
+	[Value("\"sms\"")]
 	Sms,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioContextState
 {
-	[EnumValue("suspended")]
+	[Value("\"suspended\"")]
 	Suspended,
-	[EnumValue("running")]
+	[Value("\"running\"")]
 	Running,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioContextRenderSizeCategory
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("hardware")]
+	[Value("\"hardware\"")]
 	Hardware,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioContextLatencyCategory
 {
-	[EnumValue("balanced")]
+	[Value("\"balanced\"")]
 	Balanced,
-	[EnumValue("interactive")]
+	[Value("\"interactive\"")]
 	Interactive,
-	[EnumValue("playback")]
+	[Value("\"playback\"")]
 	Playback,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioSinkType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ChannelCountMode
 {
-	[EnumValue("max")]
+	[Value("\"max\"")]
 	Max,
-	[EnumValue("clamped-max")]
+	[Value("\"clamped-max\"")]
 	ClampedMax,
-	[EnumValue("explicit")]
+	[Value("\"explicit\"")]
 	Explicit,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ChannelInterpretation
 {
-	[EnumValue("speakers")]
+	[Value("\"speakers\"")]
 	Speakers,
-	[EnumValue("discrete")]
+	[Value("\"discrete\"")]
 	Discrete,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AutomationRate
 {
-	[EnumValue("a-rate")]
+	[Value("\"a-rate\"")]
 	ARate,
-	[EnumValue("k-rate")]
+	[Value("\"k-rate\"")]
 	KRate,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BiquadFilterType
 {
-	[EnumValue("lowpass")]
+	[Value("\"lowpass\"")]
 	Lowpass,
-	[EnumValue("highpass")]
+	[Value("\"highpass\"")]
 	Highpass,
-	[EnumValue("bandpass")]
+	[Value("\"bandpass\"")]
 	Bandpass,
-	[EnumValue("lowshelf")]
+	[Value("\"lowshelf\"")]
 	Lowshelf,
-	[EnumValue("highshelf")]
+	[Value("\"highshelf\"")]
 	Highshelf,
-	[EnumValue("peaking")]
+	[Value("\"peaking\"")]
 	Peaking,
-	[EnumValue("notch")]
+	[Value("\"notch\"")]
 	Notch,
-	[EnumValue("allpass")]
+	[Value("\"allpass\"")]
 	Allpass,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OscillatorType
 {
-	[EnumValue("sine")]
+	[Value("\"sine\"")]
 	Sine,
-	[EnumValue("square")]
+	[Value("\"square\"")]
 	Square,
-	[EnumValue("sawtooth")]
+	[Value("\"sawtooth\"")]
 	Sawtooth,
-	[EnumValue("triangle")]
+	[Value("\"triangle\"")]
 	Triangle,
-	[EnumValue("custom")]
+	[Value("\"custom\"")]
 	Custom,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PanningModelType
 {
-	[EnumValue("equalpower")]
+	[Value("\"equalpower\"")]
 	Equalpower,
-	[EnumValue("HRTF")]
+	[Value("\"HRTF\"")]
 	HRTF,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DistanceModelType
 {
-	[EnumValue("linear")]
+	[Value("\"linear\"")]
 	Linear,
-	[EnumValue("inverse")]
+	[Value("\"inverse\"")]
 	Inverse,
-	[EnumValue("exponential")]
+	[Value("\"exponential\"")]
 	Exponential,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OverSampleType
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("2x")]
+	[Value("\"2x\"")]
 	_2x,
-	[EnumValue("4x")]
+	[Value("\"4x\"")]
 	_4x,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AuthenticatorAttachment
 {
-	[EnumValue("platform")]
+	[Value("\"platform\"")]
 	Platform,
-	[EnumValue("cross-platform")]
+	[Value("\"cross-platform\"")]
 	CrossPlatform,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ResidentKeyRequirement
 {
-	[EnumValue("discouraged")]
+	[Value("\"discouraged\"")]
 	Discouraged,
-	[EnumValue("preferred")]
+	[Value("\"preferred\"")]
 	Preferred,
-	[EnumValue("required")]
+	[Value("\"required\"")]
 	Required,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AttestationConveyancePreference
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("indirect")]
+	[Value("\"indirect\"")]
 	Indirect,
-	[EnumValue("direct")]
+	[Value("\"direct\"")]
 	Direct,
-	[EnumValue("enterprise")]
+	[Value("\"enterprise\"")]
 	Enterprise,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum TokenBindingStatus
 {
-	[EnumValue("present")]
+	[Value("\"present\"")]
 	Present,
-	[EnumValue("supported")]
+	[Value("\"supported\"")]
 	Supported,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PublicKeyCredentialType
 {
-	[EnumValue("public-key")]
+	[Value("\"public-key\"")]
 	PublicKey,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AuthenticatorTransport
 {
-	[EnumValue("usb")]
+	[Value("\"usb\"")]
 	Usb,
-	[EnumValue("nfc")]
+	[Value("\"nfc\"")]
 	Nfc,
-	[EnumValue("ble")]
+	[Value("\"ble\"")]
 	Ble,
-	[EnumValue("smart-card")]
+	[Value("\"smart-card\"")]
 	SmartCard,
-	[EnumValue("hybrid")]
+	[Value("\"hybrid\"")]
 	Hybrid,
-	[EnumValue("internal")]
+	[Value("\"internal\"")]
 	Internal,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum UserVerificationRequirement
 {
-	[EnumValue("required")]
+	[Value("\"required\"")]
 	Required,
-	[EnumValue("preferred")]
+	[Value("\"preferred\"")]
 	Preferred,
-	[EnumValue("discouraged")]
+	[Value("\"discouraged\"")]
 	Discouraged,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ClientCapability
 {
-	[EnumValue("conditionalCreate")]
+	[Value("\"conditionalCreate\"")]
 	ConditionalCreate,
-	[EnumValue("conditionalGet")]
+	[Value("\"conditionalGet\"")]
 	ConditionalGet,
-	[EnumValue("hybridTransport")]
+	[Value("\"hybridTransport\"")]
 	HybridTransport,
-	[EnumValue("passkeyPlatformAuthenticator")]
+	[Value("\"passkeyPlatformAuthenticator\"")]
 	PasskeyPlatformAuthenticator,
-	[EnumValue("userVerifyingPlatformAuthenticator")]
+	[Value("\"userVerifyingPlatformAuthenticator\"")]
 	UserVerifyingPlatformAuthenticator,
-	[EnumValue("relatedOrigins")]
+	[Value("\"relatedOrigins\"")]
 	RelatedOrigins,
-	[EnumValue("signalAllAcceptedCredentials")]
+	[Value("\"signalAllAcceptedCredentials\"")]
 	SignalAllAcceptedCredentials,
-	[EnumValue("signalCurrentUserDetails")]
+	[Value("\"signalCurrentUserDetails\"")]
 	SignalCurrentUserDetails,
-	[EnumValue("signalUnknownCredential")]
+	[Value("\"signalUnknownCredential\"")]
 	SignalUnknownCredential,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PublicKeyCredentialHint
 {
-	[EnumValue("security-key")]
+	[Value("\"security-key\"")]
 	SecurityKey,
-	[EnumValue("client-device")]
+	[Value("\"client-device\"")]
 	ClientDevice,
-	[EnumValue("hybrid")]
+	[Value("\"hybrid\"")]
 	Hybrid,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LargeBlobSupport
 {
-	[EnumValue("required")]
+	[Value("\"required\"")]
 	Required,
-	[EnumValue("preferred")]
+	[Value("\"preferred\"")]
 	Preferred,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AacBitstreamFormat
 {
-	[EnumValue("aac")]
+	[Value("\"aac\"")]
 	Aac,
-	[EnumValue("adts")]
+	[Value("\"adts\"")]
 	Adts,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AvcBitstreamFormat
 {
-	[EnumValue("annexb")]
+	[Value("\"annexb\"")]
 	Annexb,
-	[EnumValue("avc")]
+	[Value("\"avc\"")]
 	Avc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HevcBitstreamFormat
 {
-	[EnumValue("annexb")]
+	[Value("\"annexb\"")]
 	Annexb,
-	[EnumValue("hevc")]
+	[Value("\"hevc\"")]
 	Hevc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OpusBitstreamFormat
 {
-	[EnumValue("opus")]
+	[Value("\"opus\"")]
 	Opus,
-	[EnumValue("ogg")]
+	[Value("\"ogg\"")]
 	Ogg,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OpusSignal
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
-	[EnumValue("music")]
+	[Value("\"music\"")]
 	Music,
-	[EnumValue("voice")]
+	[Value("\"voice\"")]
 	Voice,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum OpusApplication
 {
-	[EnumValue("voip")]
+	[Value("\"voip\"")]
 	Voip,
-	[EnumValue("audio")]
+	[Value("\"audio\"")]
 	Audio,
-	[EnumValue("lowdelay")]
+	[Value("\"lowdelay\"")]
 	Lowdelay,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HardwareAcceleration
 {
-	[EnumValue("no-preference")]
+	[Value("\"no-preference\"")]
 	NoPreference,
-	[EnumValue("prefer-hardware")]
+	[Value("\"prefer-hardware\"")]
 	PreferHardware,
-	[EnumValue("prefer-software")]
+	[Value("\"prefer-software\"")]
 	PreferSoftware,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AlphaOption
 {
-	[EnumValue("keep")]
+	[Value("\"keep\"")]
 	Keep,
-	[EnumValue("discard")]
+	[Value("\"discard\"")]
 	Discard,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LatencyMode
 {
-	[EnumValue("quality")]
+	[Value("\"quality\"")]
 	Quality,
-	[EnumValue("realtime")]
+	[Value("\"realtime\"")]
 	Realtime,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoEncoderBitrateMode
 {
-	[EnumValue("constant")]
+	[Value("\"constant\"")]
 	Constant,
-	[EnumValue("variable")]
+	[Value("\"variable\"")]
 	Variable,
-	[EnumValue("quantizer")]
+	[Value("\"quantizer\"")]
 	Quantizer,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum CodecState
 {
-	[EnumValue("unconfigured")]
+	[Value("\"unconfigured\"")]
 	Unconfigured,
-	[EnumValue("configured")]
+	[Value("\"configured\"")]
 	Configured,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum EncodedAudioChunkType
 {
-	[EnumValue("key")]
+	[Value("\"key\"")]
 	Key,
-	[EnumValue("delta")]
+	[Value("\"delta\"")]
 	Delta,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum EncodedVideoChunkType
 {
-	[EnumValue("key")]
+	[Value("\"key\"")]
 	Key,
-	[EnumValue("delta")]
+	[Value("\"delta\"")]
 	Delta,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AudioSampleFormat
 {
-	[EnumValue("u8")]
+	[Value("\"u8\"")]
 	U8,
-	[EnumValue("s16")]
+	[Value("\"s16\"")]
 	S16,
-	[EnumValue("s32")]
+	[Value("\"s32\"")]
 	S32,
-	[EnumValue("f32")]
+	[Value("\"f32\"")]
 	F32,
-	[EnumValue("u8-planar")]
+	[Value("\"u8-planar\"")]
 	U8Planar,
-	[EnumValue("s16-planar")]
+	[Value("\"s16-planar\"")]
 	S16Planar,
-	[EnumValue("s32-planar")]
+	[Value("\"s32-planar\"")]
 	S32Planar,
-	[EnumValue("f32-planar")]
+	[Value("\"f32-planar\"")]
 	F32Planar,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoPixelFormat
 {
-	[EnumValue("I420")]
+	[Value("\"I420\"")]
 	I420,
-	[EnumValue("I420P10")]
+	[Value("\"I420P10\"")]
 	I420P10,
-	[EnumValue("I420P12")]
+	[Value("\"I420P12\"")]
 	I420P12,
-	[EnumValue("I420A")]
+	[Value("\"I420A\"")]
 	I420A,
-	[EnumValue("I420AP10")]
+	[Value("\"I420AP10\"")]
 	I420AP10,
-	[EnumValue("I420AP12")]
+	[Value("\"I420AP12\"")]
 	I420AP12,
-	[EnumValue("I422")]
+	[Value("\"I422\"")]
 	I422,
-	[EnumValue("I422P10")]
+	[Value("\"I422P10\"")]
 	I422P10,
-	[EnumValue("I422P12")]
+	[Value("\"I422P12\"")]
 	I422P12,
-	[EnumValue("I422A")]
+	[Value("\"I422A\"")]
 	I422A,
-	[EnumValue("I422AP10")]
+	[Value("\"I422AP10\"")]
 	I422AP10,
-	[EnumValue("I422AP12")]
+	[Value("\"I422AP12\"")]
 	I422AP12,
-	[EnumValue("I444")]
+	[Value("\"I444\"")]
 	I444,
-	[EnumValue("I444P10")]
+	[Value("\"I444P10\"")]
 	I444P10,
-	[EnumValue("I444P12")]
+	[Value("\"I444P12\"")]
 	I444P12,
-	[EnumValue("I444A")]
+	[Value("\"I444A\"")]
 	I444A,
-	[EnumValue("I444AP10")]
+	[Value("\"I444AP10\"")]
 	I444AP10,
-	[EnumValue("I444AP12")]
+	[Value("\"I444AP12\"")]
 	I444AP12,
-	[EnumValue("NV12")]
+	[Value("\"NV12\"")]
 	NV12,
-	[EnumValue("RGBA")]
+	[Value("\"RGBA\"")]
 	RGBA,
-	[EnumValue("RGBX")]
+	[Value("\"RGBX\"")]
 	RGBX,
-	[EnumValue("BGRA")]
+	[Value("\"BGRA\"")]
 	BGRA,
-	[EnumValue("BGRX")]
+	[Value("\"BGRX\"")]
 	BGRX,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoColorPrimaries
 {
-	[EnumValue("bt709")]
+	[Value("\"bt709\"")]
 	Bt709,
-	[EnumValue("bt470bg")]
+	[Value("\"bt470bg\"")]
 	Bt470bg,
-	[EnumValue("smpte170m")]
+	[Value("\"smpte170m\"")]
 	Smpte170m,
-	[EnumValue("bt2020")]
+	[Value("\"bt2020\"")]
 	Bt2020,
-	[EnumValue("smpte432")]
+	[Value("\"smpte432\"")]
 	Smpte432,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoTransferCharacteristics
 {
-	[EnumValue("bt709")]
+	[Value("\"bt709\"")]
 	Bt709,
-	[EnumValue("smpte170m")]
+	[Value("\"smpte170m\"")]
 	Smpte170m,
-	[EnumValue("iec61966-2-1")]
+	[Value("\"iec61966-2-1\"")]
 	Iec6196621,
-	[EnumValue("linear")]
+	[Value("\"linear\"")]
 	Linear,
-	[EnumValue("pq")]
+	[Value("\"pq\"")]
 	Pq,
-	[EnumValue("hlg")]
+	[Value("\"hlg\"")]
 	Hlg,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum VideoMatrixCoefficients
 {
-	[EnumValue("rgb")]
+	[Value("\"rgb\"")]
 	Rgb,
-	[EnumValue("bt709")]
+	[Value("\"bt709\"")]
 	Bt709,
-	[EnumValue("bt470bg")]
+	[Value("\"bt470bg\"")]
 	Bt470bg,
-	[EnumValue("smpte170m")]
+	[Value("\"smpte170m\"")]
 	Smpte170m,
-	[EnumValue("bt2020-ncl")]
+	[Value("\"bt2020-ncl\"")]
 	Bt2020Ncl,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum KeyType
 {
-	[EnumValue("public")]
+	[Value("\"public\"")]
 	Public,
-	[EnumValue("private")]
+	[Value("\"private\"")]
 	Private,
-	[EnumValue("secret")]
+	[Value("\"secret\"")]
 	Secret,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum KeyUsage
 {
-	[EnumValue("encrypt")]
+	[Value("\"encrypt\"")]
 	Encrypt,
-	[EnumValue("decrypt")]
+	[Value("\"decrypt\"")]
 	Decrypt,
-	[EnumValue("sign")]
+	[Value("\"sign\"")]
 	Sign,
-	[EnumValue("verify")]
+	[Value("\"verify\"")]
 	Verify,
-	[EnumValue("deriveKey")]
+	[Value("\"deriveKey\"")]
 	DeriveKey,
-	[EnumValue("deriveBits")]
+	[Value("\"deriveBits\"")]
 	DeriveBits,
-	[EnumValue("wrapKey")]
+	[Value("\"wrapKey\"")]
 	WrapKey,
-	[EnumValue("unwrapKey")]
+	[Value("\"unwrapKey\"")]
 	UnwrapKey,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum KeyFormat
 {
-	[EnumValue("raw")]
+	[Value("\"raw\"")]
 	Raw,
-	[EnumValue("spki")]
+	[Value("\"spki\"")]
 	Spki,
-	[EnumValue("pkcs8")]
+	[Value("\"pkcs8\"")]
 	Pkcs8,
-	[EnumValue("jwk")]
+	[Value("\"jwk\"")]
 	Jwk,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WebGLPowerPreference
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("low-power")]
+	[Value("\"low-power\"")]
 	LowPower,
-	[EnumValue("high-performance")]
+	[Value("\"high-performance\"")]
 	HighPerformance,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUPowerPreference
 {
-	[EnumValue("low-power")]
+	[Value("\"low-power\"")]
 	LowPower,
-	[EnumValue("high-performance")]
+	[Value("\"high-performance\"")]
 	HighPerformance,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUFeatureName
 {
-	[EnumValue("depth-clip-control")]
+	[Value("\"depth-clip-control\"")]
 	DepthClipControl,
-	[EnumValue("depth32float-stencil8")]
+	[Value("\"depth32float-stencil8\"")]
 	Depth32floatStencil8,
-	[EnumValue("texture-compression-bc")]
+	[Value("\"texture-compression-bc\"")]
 	TextureCompressionBc,
-	[EnumValue("texture-compression-bc-sliced-3d")]
+	[Value("\"texture-compression-bc-sliced-3d\"")]
 	TextureCompressionBcSliced3d,
-	[EnumValue("texture-compression-etc2")]
+	[Value("\"texture-compression-etc2\"")]
 	TextureCompressionEtc2,
-	[EnumValue("texture-compression-astc")]
+	[Value("\"texture-compression-astc\"")]
 	TextureCompressionAstc,
-	[EnumValue("texture-compression-astc-sliced-3d")]
+	[Value("\"texture-compression-astc-sliced-3d\"")]
 	TextureCompressionAstcSliced3d,
-	[EnumValue("timestamp-query")]
+	[Value("\"timestamp-query\"")]
 	TimestampQuery,
-	[EnumValue("indirect-first-instance")]
+	[Value("\"indirect-first-instance\"")]
 	IndirectFirstInstance,
-	[EnumValue("shader-f16")]
+	[Value("\"shader-f16\"")]
 	ShaderF16,
-	[EnumValue("rg11b10ufloat-renderable")]
+	[Value("\"rg11b10ufloat-renderable\"")]
 	Rg11b10ufloatRenderable,
-	[EnumValue("bgra8unorm-storage")]
+	[Value("\"bgra8unorm-storage\"")]
 	Bgra8unormStorage,
-	[EnumValue("float32-filterable")]
+	[Value("\"float32-filterable\"")]
 	Float32Filterable,
-	[EnumValue("float32-blendable")]
+	[Value("\"float32-blendable\"")]
 	Float32Blendable,
-	[EnumValue("clip-distances")]
+	[Value("\"clip-distances\"")]
 	ClipDistances,
-	[EnumValue("dual-source-blending")]
+	[Value("\"dual-source-blending\"")]
 	DualSourceBlending,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUBufferMapState
 {
-	[EnumValue("unmapped")]
+	[Value("\"unmapped\"")]
 	Unmapped,
-	[EnumValue("pending")]
+	[Value("\"pending\"")]
 	Pending,
-	[EnumValue("mapped")]
+	[Value("\"mapped\"")]
 	Mapped,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUTextureDimension
 {
-	[EnumValue("1d")]
+	[Value("\"1d\"")]
 	_1d,
-	[EnumValue("2d")]
+	[Value("\"2d\"")]
 	_2d,
-	[EnumValue("3d")]
+	[Value("\"3d\"")]
 	_3d,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUTextureViewDimension
 {
-	[EnumValue("1d")]
+	[Value("\"1d\"")]
 	_1d,
-	[EnumValue("2d")]
+	[Value("\"2d\"")]
 	_2d,
-	[EnumValue("2d-array")]
+	[Value("\"2d-array\"")]
 	_2dArray,
-	[EnumValue("cube")]
+	[Value("\"cube\"")]
 	Cube,
-	[EnumValue("cube-array")]
+	[Value("\"cube-array\"")]
 	CubeArray,
-	[EnumValue("3d")]
+	[Value("\"3d\"")]
 	_3d,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUTextureAspect
 {
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
-	[EnumValue("stencil-only")]
+	[Value("\"stencil-only\"")]
 	StencilOnly,
-	[EnumValue("depth-only")]
+	[Value("\"depth-only\"")]
 	DepthOnly,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUTextureFormat
 {
-	[EnumValue("r8unorm")]
+	[Value("\"r8unorm\"")]
 	R8unorm,
-	[EnumValue("r8snorm")]
+	[Value("\"r8snorm\"")]
 	R8snorm,
-	[EnumValue("r8uint")]
+	[Value("\"r8uint\"")]
 	R8uint,
-	[EnumValue("r8sint")]
+	[Value("\"r8sint\"")]
 	R8sint,
-	[EnumValue("r16uint")]
+	[Value("\"r16uint\"")]
 	R16uint,
-	[EnumValue("r16sint")]
+	[Value("\"r16sint\"")]
 	R16sint,
-	[EnumValue("r16float")]
+	[Value("\"r16float\"")]
 	R16float,
-	[EnumValue("rg8unorm")]
+	[Value("\"rg8unorm\"")]
 	Rg8unorm,
-	[EnumValue("rg8snorm")]
+	[Value("\"rg8snorm\"")]
 	Rg8snorm,
-	[EnumValue("rg8uint")]
+	[Value("\"rg8uint\"")]
 	Rg8uint,
-	[EnumValue("rg8sint")]
+	[Value("\"rg8sint\"")]
 	Rg8sint,
-	[EnumValue("r32uint")]
+	[Value("\"r32uint\"")]
 	R32uint,
-	[EnumValue("r32sint")]
+	[Value("\"r32sint\"")]
 	R32sint,
-	[EnumValue("r32float")]
+	[Value("\"r32float\"")]
 	R32float,
-	[EnumValue("rg16uint")]
+	[Value("\"rg16uint\"")]
 	Rg16uint,
-	[EnumValue("rg16sint")]
+	[Value("\"rg16sint\"")]
 	Rg16sint,
-	[EnumValue("rg16float")]
+	[Value("\"rg16float\"")]
 	Rg16float,
-	[EnumValue("rgba8unorm")]
+	[Value("\"rgba8unorm\"")]
 	Rgba8unorm,
-	[EnumValue("rgba8unorm-srgb")]
+	[Value("\"rgba8unorm-srgb\"")]
 	Rgba8unormSrgb,
-	[EnumValue("rgba8snorm")]
+	[Value("\"rgba8snorm\"")]
 	Rgba8snorm,
-	[EnumValue("rgba8uint")]
+	[Value("\"rgba8uint\"")]
 	Rgba8uint,
-	[EnumValue("rgba8sint")]
+	[Value("\"rgba8sint\"")]
 	Rgba8sint,
-	[EnumValue("bgra8unorm")]
+	[Value("\"bgra8unorm\"")]
 	Bgra8unorm,
-	[EnumValue("bgra8unorm-srgb")]
+	[Value("\"bgra8unorm-srgb\"")]
 	Bgra8unormSrgb,
-	[EnumValue("rgb9e5ufloat")]
+	[Value("\"rgb9e5ufloat\"")]
 	Rgb9e5ufloat,
-	[EnumValue("rgb10a2uint")]
+	[Value("\"rgb10a2uint\"")]
 	Rgb10a2uint,
-	[EnumValue("rgb10a2unorm")]
+	[Value("\"rgb10a2unorm\"")]
 	Rgb10a2unorm,
-	[EnumValue("rg11b10ufloat")]
+	[Value("\"rg11b10ufloat\"")]
 	Rg11b10ufloat,
-	[EnumValue("rg32uint")]
+	[Value("\"rg32uint\"")]
 	Rg32uint,
-	[EnumValue("rg32sint")]
+	[Value("\"rg32sint\"")]
 	Rg32sint,
-	[EnumValue("rg32float")]
+	[Value("\"rg32float\"")]
 	Rg32float,
-	[EnumValue("rgba16uint")]
+	[Value("\"rgba16uint\"")]
 	Rgba16uint,
-	[EnumValue("rgba16sint")]
+	[Value("\"rgba16sint\"")]
 	Rgba16sint,
-	[EnumValue("rgba16float")]
+	[Value("\"rgba16float\"")]
 	Rgba16float,
-	[EnumValue("rgba32uint")]
+	[Value("\"rgba32uint\"")]
 	Rgba32uint,
-	[EnumValue("rgba32sint")]
+	[Value("\"rgba32sint\"")]
 	Rgba32sint,
-	[EnumValue("rgba32float")]
+	[Value("\"rgba32float\"")]
 	Rgba32float,
-	[EnumValue("stencil8")]
+	[Value("\"stencil8\"")]
 	Stencil8,
-	[EnumValue("depth16unorm")]
+	[Value("\"depth16unorm\"")]
 	Depth16unorm,
-	[EnumValue("depth24plus")]
+	[Value("\"depth24plus\"")]
 	Depth24plus,
-	[EnumValue("depth24plus-stencil8")]
+	[Value("\"depth24plus-stencil8\"")]
 	Depth24plusStencil8,
-	[EnumValue("depth32float")]
+	[Value("\"depth32float\"")]
 	Depth32float,
-	[EnumValue("depth32float-stencil8")]
+	[Value("\"depth32float-stencil8\"")]
 	Depth32floatStencil8,
-	[EnumValue("bc1-rgba-unorm")]
+	[Value("\"bc1-rgba-unorm\"")]
 	Bc1RgbaUnorm,
-	[EnumValue("bc1-rgba-unorm-srgb")]
+	[Value("\"bc1-rgba-unorm-srgb\"")]
 	Bc1RgbaUnormSrgb,
-	[EnumValue("bc2-rgba-unorm")]
+	[Value("\"bc2-rgba-unorm\"")]
 	Bc2RgbaUnorm,
-	[EnumValue("bc2-rgba-unorm-srgb")]
+	[Value("\"bc2-rgba-unorm-srgb\"")]
 	Bc2RgbaUnormSrgb,
-	[EnumValue("bc3-rgba-unorm")]
+	[Value("\"bc3-rgba-unorm\"")]
 	Bc3RgbaUnorm,
-	[EnumValue("bc3-rgba-unorm-srgb")]
+	[Value("\"bc3-rgba-unorm-srgb\"")]
 	Bc3RgbaUnormSrgb,
-	[EnumValue("bc4-r-unorm")]
+	[Value("\"bc4-r-unorm\"")]
 	Bc4RUnorm,
-	[EnumValue("bc4-r-snorm")]
+	[Value("\"bc4-r-snorm\"")]
 	Bc4RSnorm,
-	[EnumValue("bc5-rg-unorm")]
+	[Value("\"bc5-rg-unorm\"")]
 	Bc5RgUnorm,
-	[EnumValue("bc5-rg-snorm")]
+	[Value("\"bc5-rg-snorm\"")]
 	Bc5RgSnorm,
-	[EnumValue("bc6h-rgb-ufloat")]
+	[Value("\"bc6h-rgb-ufloat\"")]
 	Bc6hRgbUfloat,
-	[EnumValue("bc6h-rgb-float")]
+	[Value("\"bc6h-rgb-float\"")]
 	Bc6hRgbFloat,
-	[EnumValue("bc7-rgba-unorm")]
+	[Value("\"bc7-rgba-unorm\"")]
 	Bc7RgbaUnorm,
-	[EnumValue("bc7-rgba-unorm-srgb")]
+	[Value("\"bc7-rgba-unorm-srgb\"")]
 	Bc7RgbaUnormSrgb,
-	[EnumValue("etc2-rgb8unorm")]
+	[Value("\"etc2-rgb8unorm\"")]
 	Etc2Rgb8unorm,
-	[EnumValue("etc2-rgb8unorm-srgb")]
+	[Value("\"etc2-rgb8unorm-srgb\"")]
 	Etc2Rgb8unormSrgb,
-	[EnumValue("etc2-rgb8a1unorm")]
+	[Value("\"etc2-rgb8a1unorm\"")]
 	Etc2Rgb8a1unorm,
-	[EnumValue("etc2-rgb8a1unorm-srgb")]
+	[Value("\"etc2-rgb8a1unorm-srgb\"")]
 	Etc2Rgb8a1unormSrgb,
-	[EnumValue("etc2-rgba8unorm")]
+	[Value("\"etc2-rgba8unorm\"")]
 	Etc2Rgba8unorm,
-	[EnumValue("etc2-rgba8unorm-srgb")]
+	[Value("\"etc2-rgba8unorm-srgb\"")]
 	Etc2Rgba8unormSrgb,
-	[EnumValue("eac-r11unorm")]
+	[Value("\"eac-r11unorm\"")]
 	EacR11unorm,
-	[EnumValue("eac-r11snorm")]
+	[Value("\"eac-r11snorm\"")]
 	EacR11snorm,
-	[EnumValue("eac-rg11unorm")]
+	[Value("\"eac-rg11unorm\"")]
 	EacRg11unorm,
-	[EnumValue("eac-rg11snorm")]
+	[Value("\"eac-rg11snorm\"")]
 	EacRg11snorm,
-	[EnumValue("astc-4x4-unorm")]
+	[Value("\"astc-4x4-unorm\"")]
 	Astc4x4Unorm,
-	[EnumValue("astc-4x4-unorm-srgb")]
+	[Value("\"astc-4x4-unorm-srgb\"")]
 	Astc4x4UnormSrgb,
-	[EnumValue("astc-5x4-unorm")]
+	[Value("\"astc-5x4-unorm\"")]
 	Astc5x4Unorm,
-	[EnumValue("astc-5x4-unorm-srgb")]
+	[Value("\"astc-5x4-unorm-srgb\"")]
 	Astc5x4UnormSrgb,
-	[EnumValue("astc-5x5-unorm")]
+	[Value("\"astc-5x5-unorm\"")]
 	Astc5x5Unorm,
-	[EnumValue("astc-5x5-unorm-srgb")]
+	[Value("\"astc-5x5-unorm-srgb\"")]
 	Astc5x5UnormSrgb,
-	[EnumValue("astc-6x5-unorm")]
+	[Value("\"astc-6x5-unorm\"")]
 	Astc6x5Unorm,
-	[EnumValue("astc-6x5-unorm-srgb")]
+	[Value("\"astc-6x5-unorm-srgb\"")]
 	Astc6x5UnormSrgb,
-	[EnumValue("astc-6x6-unorm")]
+	[Value("\"astc-6x6-unorm\"")]
 	Astc6x6Unorm,
-	[EnumValue("astc-6x6-unorm-srgb")]
+	[Value("\"astc-6x6-unorm-srgb\"")]
 	Astc6x6UnormSrgb,
-	[EnumValue("astc-8x5-unorm")]
+	[Value("\"astc-8x5-unorm\"")]
 	Astc8x5Unorm,
-	[EnumValue("astc-8x5-unorm-srgb")]
+	[Value("\"astc-8x5-unorm-srgb\"")]
 	Astc8x5UnormSrgb,
-	[EnumValue("astc-8x6-unorm")]
+	[Value("\"astc-8x6-unorm\"")]
 	Astc8x6Unorm,
-	[EnumValue("astc-8x6-unorm-srgb")]
+	[Value("\"astc-8x6-unorm-srgb\"")]
 	Astc8x6UnormSrgb,
-	[EnumValue("astc-8x8-unorm")]
+	[Value("\"astc-8x8-unorm\"")]
 	Astc8x8Unorm,
-	[EnumValue("astc-8x8-unorm-srgb")]
+	[Value("\"astc-8x8-unorm-srgb\"")]
 	Astc8x8UnormSrgb,
-	[EnumValue("astc-10x5-unorm")]
+	[Value("\"astc-10x5-unorm\"")]
 	Astc10x5Unorm,
-	[EnumValue("astc-10x5-unorm-srgb")]
+	[Value("\"astc-10x5-unorm-srgb\"")]
 	Astc10x5UnormSrgb,
-	[EnumValue("astc-10x6-unorm")]
+	[Value("\"astc-10x6-unorm\"")]
 	Astc10x6Unorm,
-	[EnumValue("astc-10x6-unorm-srgb")]
+	[Value("\"astc-10x6-unorm-srgb\"")]
 	Astc10x6UnormSrgb,
-	[EnumValue("astc-10x8-unorm")]
+	[Value("\"astc-10x8-unorm\"")]
 	Astc10x8Unorm,
-	[EnumValue("astc-10x8-unorm-srgb")]
+	[Value("\"astc-10x8-unorm-srgb\"")]
 	Astc10x8UnormSrgb,
-	[EnumValue("astc-10x10-unorm")]
+	[Value("\"astc-10x10-unorm\"")]
 	Astc10x10Unorm,
-	[EnumValue("astc-10x10-unorm-srgb")]
+	[Value("\"astc-10x10-unorm-srgb\"")]
 	Astc10x10UnormSrgb,
-	[EnumValue("astc-12x10-unorm")]
+	[Value("\"astc-12x10-unorm\"")]
 	Astc12x10Unorm,
-	[EnumValue("astc-12x10-unorm-srgb")]
+	[Value("\"astc-12x10-unorm-srgb\"")]
 	Astc12x10UnormSrgb,
-	[EnumValue("astc-12x12-unorm")]
+	[Value("\"astc-12x12-unorm\"")]
 	Astc12x12Unorm,
-	[EnumValue("astc-12x12-unorm-srgb")]
+	[Value("\"astc-12x12-unorm-srgb\"")]
 	Astc12x12UnormSrgb,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUAddressMode
 {
-	[EnumValue("clamp-to-edge")]
+	[Value("\"clamp-to-edge\"")]
 	ClampToEdge,
-	[EnumValue("repeat")]
+	[Value("\"repeat\"")]
 	Repeat,
-	[EnumValue("mirror-repeat")]
+	[Value("\"mirror-repeat\"")]
 	MirrorRepeat,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUFilterMode
 {
-	[EnumValue("nearest")]
+	[Value("\"nearest\"")]
 	Nearest,
-	[EnumValue("linear")]
+	[Value("\"linear\"")]
 	Linear,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUMipmapFilterMode
 {
-	[EnumValue("nearest")]
+	[Value("\"nearest\"")]
 	Nearest,
-	[EnumValue("linear")]
+	[Value("\"linear\"")]
 	Linear,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUCompareFunction
 {
-	[EnumValue("never")]
+	[Value("\"never\"")]
 	Never,
-	[EnumValue("less")]
+	[Value("\"less\"")]
 	Less,
-	[EnumValue("equal")]
+	[Value("\"equal\"")]
 	Equal,
-	[EnumValue("less-equal")]
+	[Value("\"less-equal\"")]
 	LessEqual,
-	[EnumValue("greater")]
+	[Value("\"greater\"")]
 	Greater,
-	[EnumValue("not-equal")]
+	[Value("\"not-equal\"")]
 	NotEqual,
-	[EnumValue("greater-equal")]
+	[Value("\"greater-equal\"")]
 	GreaterEqual,
-	[EnumValue("always")]
+	[Value("\"always\"")]
 	Always,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUBufferBindingType
 {
-	[EnumValue("uniform")]
+	[Value("\"uniform\"")]
 	Uniform,
-	[EnumValue("storage")]
+	[Value("\"storage\"")]
 	Storage,
-	[EnumValue("read-only-storage")]
+	[Value("\"read-only-storage\"")]
 	ReadOnlyStorage,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUSamplerBindingType
 {
-	[EnumValue("filtering")]
+	[Value("\"filtering\"")]
 	Filtering,
-	[EnumValue("non-filtering")]
+	[Value("\"non-filtering\"")]
 	NonFiltering,
-	[EnumValue("comparison")]
+	[Value("\"comparison\"")]
 	Comparison,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUTextureSampleType
 {
-	[EnumValue("float")]
+	[Value("\"float\"")]
 	Float,
-	[EnumValue("unfilterable-float")]
+	[Value("\"unfilterable-float\"")]
 	UnfilterableFloat,
-	[EnumValue("depth")]
+	[Value("\"depth\"")]
 	Depth,
-	[EnumValue("sint")]
+	[Value("\"sint\"")]
 	Sint,
-	[EnumValue("uint")]
+	[Value("\"uint\"")]
 	Uint,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUStorageTextureAccess
 {
-	[EnumValue("write-only")]
+	[Value("\"write-only\"")]
 	WriteOnly,
-	[EnumValue("read-only")]
+	[Value("\"read-only\"")]
 	ReadOnly,
-	[EnumValue("read-write")]
+	[Value("\"read-write\"")]
 	ReadWrite,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUCompilationMessageType
 {
-	[EnumValue("error")]
+	[Value("\"error\"")]
 	Error,
-	[EnumValue("warning")]
+	[Value("\"warning\"")]
 	Warning,
-	[EnumValue("info")]
+	[Value("\"info\"")]
 	Info,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUPipelineErrorReason
 {
-	[EnumValue("validation")]
+	[Value("\"validation\"")]
 	Validation,
-	[EnumValue("internal")]
+	[Value("\"internal\"")]
 	Internal,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUAutoLayoutMode
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUPrimitiveTopology
 {
-	[EnumValue("point-list")]
+	[Value("\"point-list\"")]
 	PointList,
-	[EnumValue("line-list")]
+	[Value("\"line-list\"")]
 	LineList,
-	[EnumValue("line-strip")]
+	[Value("\"line-strip\"")]
 	LineStrip,
-	[EnumValue("triangle-list")]
+	[Value("\"triangle-list\"")]
 	TriangleList,
-	[EnumValue("triangle-strip")]
+	[Value("\"triangle-strip\"")]
 	TriangleStrip,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUFrontFace
 {
-	[EnumValue("ccw")]
+	[Value("\"ccw\"")]
 	Ccw,
-	[EnumValue("cw")]
+	[Value("\"cw\"")]
 	Cw,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUCullMode
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("front")]
+	[Value("\"front\"")]
 	Front,
-	[EnumValue("back")]
+	[Value("\"back\"")]
 	Back,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUBlendFactor
 {
-	[EnumValue("zero")]
+	[Value("\"zero\"")]
 	Zero,
-	[EnumValue("one")]
+	[Value("\"one\"")]
 	One,
-	[EnumValue("src")]
+	[Value("\"src\"")]
 	Src,
-	[EnumValue("one-minus-src")]
+	[Value("\"one-minus-src\"")]
 	OneMinusSrc,
-	[EnumValue("src-alpha")]
+	[Value("\"src-alpha\"")]
 	SrcAlpha,
-	[EnumValue("one-minus-src-alpha")]
+	[Value("\"one-minus-src-alpha\"")]
 	OneMinusSrcAlpha,
-	[EnumValue("dst")]
+	[Value("\"dst\"")]
 	Dst,
-	[EnumValue("one-minus-dst")]
+	[Value("\"one-minus-dst\"")]
 	OneMinusDst,
-	[EnumValue("dst-alpha")]
+	[Value("\"dst-alpha\"")]
 	DstAlpha,
-	[EnumValue("one-minus-dst-alpha")]
+	[Value("\"one-minus-dst-alpha\"")]
 	OneMinusDstAlpha,
-	[EnumValue("src-alpha-saturated")]
+	[Value("\"src-alpha-saturated\"")]
 	SrcAlphaSaturated,
-	[EnumValue("constant")]
+	[Value("\"constant\"")]
 	Constant,
-	[EnumValue("one-minus-constant")]
+	[Value("\"one-minus-constant\"")]
 	OneMinusConstant,
-	[EnumValue("src1")]
+	[Value("\"src1\"")]
 	Src1,
-	[EnumValue("one-minus-src1")]
+	[Value("\"one-minus-src1\"")]
 	OneMinusSrc1,
-	[EnumValue("src1-alpha")]
+	[Value("\"src1-alpha\"")]
 	Src1Alpha,
-	[EnumValue("one-minus-src1-alpha")]
+	[Value("\"one-minus-src1-alpha\"")]
 	OneMinusSrc1Alpha,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUBlendOperation
 {
-	[EnumValue("add")]
+	[Value("\"add\"")]
 	Add,
-	[EnumValue("subtract")]
+	[Value("\"subtract\"")]
 	Subtract,
-	[EnumValue("reverse-subtract")]
+	[Value("\"reverse-subtract\"")]
 	ReverseSubtract,
-	[EnumValue("min")]
+	[Value("\"min\"")]
 	Min,
-	[EnumValue("max")]
+	[Value("\"max\"")]
 	Max,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUStencilOperation
 {
-	[EnumValue("keep")]
+	[Value("\"keep\"")]
 	Keep,
-	[EnumValue("zero")]
+	[Value("\"zero\"")]
 	Zero,
-	[EnumValue("replace")]
+	[Value("\"replace\"")]
 	Replace,
-	[EnumValue("invert")]
+	[Value("\"invert\"")]
 	Invert,
-	[EnumValue("increment-clamp")]
+	[Value("\"increment-clamp\"")]
 	IncrementClamp,
-	[EnumValue("decrement-clamp")]
+	[Value("\"decrement-clamp\"")]
 	DecrementClamp,
-	[EnumValue("increment-wrap")]
+	[Value("\"increment-wrap\"")]
 	IncrementWrap,
-	[EnumValue("decrement-wrap")]
+	[Value("\"decrement-wrap\"")]
 	DecrementWrap,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUIndexFormat
 {
-	[EnumValue("uint16")]
+	[Value("\"uint16\"")]
 	Uint16,
-	[EnumValue("uint32")]
+	[Value("\"uint32\"")]
 	Uint32,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUVertexFormat
 {
-	[EnumValue("uint8")]
+	[Value("\"uint8\"")]
 	Uint8,
-	[EnumValue("uint8x2")]
+	[Value("\"uint8x2\"")]
 	Uint8x2,
-	[EnumValue("uint8x4")]
+	[Value("\"uint8x4\"")]
 	Uint8x4,
-	[EnumValue("sint8")]
+	[Value("\"sint8\"")]
 	Sint8,
-	[EnumValue("sint8x2")]
+	[Value("\"sint8x2\"")]
 	Sint8x2,
-	[EnumValue("sint8x4")]
+	[Value("\"sint8x4\"")]
 	Sint8x4,
-	[EnumValue("unorm8")]
+	[Value("\"unorm8\"")]
 	Unorm8,
-	[EnumValue("unorm8x2")]
+	[Value("\"unorm8x2\"")]
 	Unorm8x2,
-	[EnumValue("unorm8x4")]
+	[Value("\"unorm8x4\"")]
 	Unorm8x4,
-	[EnumValue("snorm8")]
+	[Value("\"snorm8\"")]
 	Snorm8,
-	[EnumValue("snorm8x2")]
+	[Value("\"snorm8x2\"")]
 	Snorm8x2,
-	[EnumValue("snorm8x4")]
+	[Value("\"snorm8x4\"")]
 	Snorm8x4,
-	[EnumValue("uint16")]
+	[Value("\"uint16\"")]
 	Uint16,
-	[EnumValue("uint16x2")]
+	[Value("\"uint16x2\"")]
 	Uint16x2,
-	[EnumValue("uint16x4")]
+	[Value("\"uint16x4\"")]
 	Uint16x4,
-	[EnumValue("sint16")]
+	[Value("\"sint16\"")]
 	Sint16,
-	[EnumValue("sint16x2")]
+	[Value("\"sint16x2\"")]
 	Sint16x2,
-	[EnumValue("sint16x4")]
+	[Value("\"sint16x4\"")]
 	Sint16x4,
-	[EnumValue("unorm16")]
+	[Value("\"unorm16\"")]
 	Unorm16,
-	[EnumValue("unorm16x2")]
+	[Value("\"unorm16x2\"")]
 	Unorm16x2,
-	[EnumValue("unorm16x4")]
+	[Value("\"unorm16x4\"")]
 	Unorm16x4,
-	[EnumValue("snorm16")]
+	[Value("\"snorm16\"")]
 	Snorm16,
-	[EnumValue("snorm16x2")]
+	[Value("\"snorm16x2\"")]
 	Snorm16x2,
-	[EnumValue("snorm16x4")]
+	[Value("\"snorm16x4\"")]
 	Snorm16x4,
-	[EnumValue("float16")]
+	[Value("\"float16\"")]
 	Float16,
-	[EnumValue("float16x2")]
+	[Value("\"float16x2\"")]
 	Float16x2,
-	[EnumValue("float16x4")]
+	[Value("\"float16x4\"")]
 	Float16x4,
-	[EnumValue("float32")]
+	[Value("\"float32\"")]
 	Float32,
-	[EnumValue("float32x2")]
+	[Value("\"float32x2\"")]
 	Float32x2,
-	[EnumValue("float32x3")]
+	[Value("\"float32x3\"")]
 	Float32x3,
-	[EnumValue("float32x4")]
+	[Value("\"float32x4\"")]
 	Float32x4,
-	[EnumValue("uint32")]
+	[Value("\"uint32\"")]
 	Uint32,
-	[EnumValue("uint32x2")]
+	[Value("\"uint32x2\"")]
 	Uint32x2,
-	[EnumValue("uint32x3")]
+	[Value("\"uint32x3\"")]
 	Uint32x3,
-	[EnumValue("uint32x4")]
+	[Value("\"uint32x4\"")]
 	Uint32x4,
-	[EnumValue("sint32")]
+	[Value("\"sint32\"")]
 	Sint32,
-	[EnumValue("sint32x2")]
+	[Value("\"sint32x2\"")]
 	Sint32x2,
-	[EnumValue("sint32x3")]
+	[Value("\"sint32x3\"")]
 	Sint32x3,
-	[EnumValue("sint32x4")]
+	[Value("\"sint32x4\"")]
 	Sint32x4,
-	[EnumValue("unorm10-10-10-2")]
+	[Value("\"unorm10-10-10-2\"")]
 	Unorm1010102,
-	[EnumValue("unorm8x4-bgra")]
+	[Value("\"unorm8x4-bgra\"")]
 	Unorm8x4Bgra,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUVertexStepMode
 {
-	[EnumValue("vertex")]
+	[Value("\"vertex\"")]
 	Vertex,
-	[EnumValue("instance")]
+	[Value("\"instance\"")]
 	Instance,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPULoadOp
 {
-	[EnumValue("load")]
+	[Value("\"load\"")]
 	Load,
-	[EnumValue("clear")]
+	[Value("\"clear\"")]
 	Clear,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUStoreOp
 {
-	[EnumValue("store")]
+	[Value("\"store\"")]
 	Store,
-	[EnumValue("discard")]
+	[Value("\"discard\"")]
 	Discard,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUQueryType
 {
-	[EnumValue("occlusion")]
+	[Value("\"occlusion\"")]
 	Occlusion,
-	[EnumValue("timestamp")]
+	[Value("\"timestamp\"")]
 	Timestamp,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUCanvasAlphaMode
 {
-	[EnumValue("opaque")]
+	[Value("\"opaque\"")]
 	Opaque,
-	[EnumValue("premultiplied")]
+	[Value("\"premultiplied\"")]
 	Premultiplied,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUCanvasToneMappingMode
 {
-	[EnumValue("standard")]
+	[Value("\"standard\"")]
 	Standard,
-	[EnumValue("extended")]
+	[Value("\"extended\"")]
 	Extended,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUDeviceLostReason
 {
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
-	[EnumValue("destroyed")]
+	[Value("\"destroyed\"")]
 	Destroyed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum GPUErrorFilter
 {
-	[EnumValue("validation")]
+	[Value("\"validation\"")]
 	Validation,
-	[EnumValue("out-of-memory")]
+	[Value("\"out-of-memory\"")]
 	OutOfMemory,
-	[EnumValue("internal")]
+	[Value("\"internal\"")]
 	Internal,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum HIDUnitSystem
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("si-linear")]
+	[Value("\"si-linear\"")]
 	SiLinear,
-	[EnumValue("si-rotation")]
+	[Value("\"si-rotation\"")]
 	SiRotation,
-	[EnumValue("english-linear")]
+	[Value("\"english-linear\"")]
 	EnglishLinear,
-	[EnumValue("english-rotation")]
+	[Value("\"english-rotation\"")]
 	EnglishRotation,
-	[EnumValue("vendor-defined")]
+	[Value("\"vendor-defined\"")]
 	VendorDefined,
-	[EnumValue("reserved")]
+	[Value("\"reserved\"")]
 	Reserved,
 }
 
 
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MIDIPortType
 {
-	[EnumValue("input")]
+	[Value("\"input\"")]
 	Input,
-	[EnumValue("output")]
+	[Value("\"output\"")]
 	Output,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MIDIPortDeviceState
 {
-	[EnumValue("disconnected")]
+	[Value("\"disconnected\"")]
 	Disconnected,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MIDIPortConnectionState
 {
-	[EnumValue("open")]
+	[Value("\"open\"")]
 	Open,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("pending")]
+	[Value("\"pending\"")]
 	Pending,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLDeviceType
 {
-	[EnumValue("cpu")]
+	[Value("\"cpu\"")]
 	Cpu,
-	[EnumValue("gpu")]
+	[Value("\"gpu\"")]
 	Gpu,
-	[EnumValue("npu")]
+	[Value("\"npu\"")]
 	Npu,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLPowerPreference
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("high-performance")]
+	[Value("\"high-performance\"")]
 	HighPerformance,
-	[EnumValue("low-power")]
+	[Value("\"low-power\"")]
 	LowPower,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLInputOperandLayout
 {
-	[EnumValue("nchw")]
+	[Value("\"nchw\"")]
 	Nchw,
-	[EnumValue("nhwc")]
+	[Value("\"nhwc\"")]
 	Nhwc,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLOperandDataType
 {
-	[EnumValue("float32")]
+	[Value("\"float32\"")]
 	Float32,
-	[EnumValue("float16")]
+	[Value("\"float16\"")]
 	Float16,
-	[EnumValue("int32")]
+	[Value("\"int32\"")]
 	Int32,
-	[EnumValue("uint32")]
+	[Value("\"uint32\"")]
 	Uint32,
-	[EnumValue("int64")]
+	[Value("\"int64\"")]
 	Int64,
-	[EnumValue("uint64")]
+	[Value("\"uint64\"")]
 	Uint64,
-	[EnumValue("int8")]
+	[Value("\"int8\"")]
 	Int8,
-	[EnumValue("uint8")]
+	[Value("\"uint8\"")]
 	Uint8,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLConv2dFilterOperandLayout
 {
-	[EnumValue("oihw")]
+	[Value("\"oihw\"")]
 	Oihw,
-	[EnumValue("hwio")]
+	[Value("\"hwio\"")]
 	Hwio,
-	[EnumValue("ohwi")]
+	[Value("\"ohwi\"")]
 	Ohwi,
-	[EnumValue("ihwo")]
+	[Value("\"ihwo\"")]
 	Ihwo,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLConvTranspose2dFilterOperandLayout
 {
-	[EnumValue("iohw")]
+	[Value("\"iohw\"")]
 	Iohw,
-	[EnumValue("hwoi")]
+	[Value("\"hwoi\"")]
 	Hwoi,
-	[EnumValue("ohwi")]
+	[Value("\"ohwi\"")]
 	Ohwi,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLGruWeightLayout
 {
-	[EnumValue("zrn")]
+	[Value("\"zrn\"")]
 	Zrn,
-	[EnumValue("rzn")]
+	[Value("\"rzn\"")]
 	Rzn,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLRecurrentNetworkActivation
 {
-	[EnumValue("relu")]
+	[Value("\"relu\"")]
 	Relu,
-	[EnumValue("sigmoid")]
+	[Value("\"sigmoid\"")]
 	Sigmoid,
-	[EnumValue("tanh")]
+	[Value("\"tanh\"")]
 	Tanh,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLRecurrentNetworkDirection
 {
-	[EnumValue("forward")]
+	[Value("\"forward\"")]
 	Forward,
-	[EnumValue("backward")]
+	[Value("\"backward\"")]
 	Backward,
-	[EnumValue("both")]
+	[Value("\"both\"")]
 	Both,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLLstmWeightLayout
 {
-	[EnumValue("iofg")]
+	[Value("\"iofg\"")]
 	Iofg,
-	[EnumValue("ifgo")]
+	[Value("\"ifgo\"")]
 	Ifgo,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLPaddingMode
 {
-	[EnumValue("constant")]
+	[Value("\"constant\"")]
 	Constant,
-	[EnumValue("edge")]
+	[Value("\"edge\"")]
 	Edge,
-	[EnumValue("reflection")]
+	[Value("\"reflection\"")]
 	Reflection,
-	[EnumValue("symmetric")]
+	[Value("\"symmetric\"")]
 	Symmetric,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLRoundingType
 {
-	[EnumValue("floor")]
+	[Value("\"floor\"")]
 	Floor,
-	[EnumValue("ceil")]
+	[Value("\"ceil\"")]
 	Ceil,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum MLInterpolationMode
 {
-	[EnumValue("nearest-neighbor")]
+	[Value("\"nearest-neighbor\"")]
 	NearestNeighbor,
-	[EnumValue("linear")]
+	[Value("\"linear\"")]
 	Linear,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SFrameTransformRole
 {
-	[EnumValue("encrypt")]
+	[Value("\"encrypt\"")]
 	Encrypt,
-	[EnumValue("decrypt")]
+	[Value("\"decrypt\"")]
 	Decrypt,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum SFrameTransformErrorEventType
 {
-	[EnumValue("authentication")]
+	[Value("\"authentication\"")]
 	Authentication,
-	[EnumValue("keyID")]
+	[Value("\"keyID\"")]
 	KeyID,
-	[EnumValue("syntax")]
+	[Value("\"syntax\"")]
 	Syntax,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCEncodedVideoFrameType
 {
-	[EnumValue("empty")]
+	[Value("\"empty\"")]
 	Empty,
-	[EnumValue("key")]
+	[Value("\"key\"")]
 	Key,
-	[EnumValue("delta")]
+	[Value("\"delta\"")]
 	Delta,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCErrorDetailTypeIdp
 {
-	[EnumValue("idp-bad-script-failure")]
+	[Value("\"idp-bad-script-failure\"")]
 	IdpBadScriptFailure,
-	[EnumValue("idp-execution-failure")]
+	[Value("\"idp-execution-failure\"")]
 	IdpExecutionFailure,
-	[EnumValue("idp-load-failure")]
+	[Value("\"idp-load-failure\"")]
 	IdpLoadFailure,
-	[EnumValue("idp-need-login")]
+	[Value("\"idp-need-login\"")]
 	IdpNeedLogin,
-	[EnumValue("idp-timeout")]
+	[Value("\"idp-timeout\"")]
 	IdpTimeout,
-	[EnumValue("idp-tls-failure")]
+	[Value("\"idp-tls-failure\"")]
 	IdpTlsFailure,
-	[EnumValue("idp-token-expired")]
+	[Value("\"idp-token-expired\"")]
 	IdpTokenExpired,
-	[EnumValue("idp-token-invalid")]
+	[Value("\"idp-token-invalid\"")]
 	IdpTokenInvalid,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCPriorityType
 {
-	[EnumValue("very-low")]
+	[Value("\"very-low\"")]
 	VeryLow,
-	[EnumValue("low")]
+	[Value("\"low\"")]
 	Low,
-	[EnumValue("medium")]
+	[Value("\"medium\"")]
 	Medium,
-	[EnumValue("high")]
+	[Value("\"high\"")]
 	High,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCStatsType
 {
-	[EnumValue("codec")]
+	[Value("\"codec\"")]
 	Codec,
-	[EnumValue("inbound-rtp")]
+	[Value("\"inbound-rtp\"")]
 	InboundRtp,
-	[EnumValue("outbound-rtp")]
+	[Value("\"outbound-rtp\"")]
 	OutboundRtp,
-	[EnumValue("remote-inbound-rtp")]
+	[Value("\"remote-inbound-rtp\"")]
 	RemoteInboundRtp,
-	[EnumValue("remote-outbound-rtp")]
+	[Value("\"remote-outbound-rtp\"")]
 	RemoteOutboundRtp,
-	[EnumValue("media-source")]
+	[Value("\"media-source\"")]
 	MediaSource,
-	[EnumValue("media-playout")]
+	[Value("\"media-playout\"")]
 	MediaPlayout,
-	[EnumValue("peer-connection")]
+	[Value("\"peer-connection\"")]
 	PeerConnection,
-	[EnumValue("data-channel")]
+	[Value("\"data-channel\"")]
 	DataChannel,
-	[EnumValue("transport")]
+	[Value("\"transport\"")]
 	Transport,
-	[EnumValue("candidate-pair")]
+	[Value("\"candidate-pair\"")]
 	CandidatePair,
-	[EnumValue("local-candidate")]
+	[Value("\"local-candidate\"")]
 	LocalCandidate,
-	[EnumValue("remote-candidate")]
+	[Value("\"remote-candidate\"")]
 	RemoteCandidate,
-	[EnumValue("certificate")]
+	[Value("\"certificate\"")]
 	Certificate,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCQualityLimitationReason
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("cpu")]
+	[Value("\"cpu\"")]
 	Cpu,
-	[EnumValue("bandwidth")]
+	[Value("\"bandwidth\"")]
 	Bandwidth,
-	[EnumValue("other")]
+	[Value("\"other\"")]
 	Other,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCDtlsRole
 {
-	[EnumValue("client")]
+	[Value("\"client\"")]
 	Client,
-	[EnumValue("server")]
+	[Value("\"server\"")]
 	Server,
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCStatsIceCandidatePairState
 {
-	[EnumValue("frozen")]
+	[Value("\"frozen\"")]
 	Frozen,
-	[EnumValue("waiting")]
+	[Value("\"waiting\"")]
 	Waiting,
-	[EnumValue("in-progress")]
+	[Value("\"in-progress\"")]
 	InProgress,
-	[EnumValue("failed")]
+	[Value("\"failed\"")]
 	Failed,
-	[EnumValue("succeeded")]
+	[Value("\"succeeded\"")]
 	Succeeded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceTransportPolicy
 {
-	[EnumValue("relay")]
+	[Value("\"relay\"")]
 	Relay,
-	[EnumValue("all")]
+	[Value("\"all\"")]
 	All,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCBundlePolicy
 {
-	[EnumValue("balanced")]
+	[Value("\"balanced\"")]
 	Balanced,
-	[EnumValue("max-compat")]
+	[Value("\"max-compat\"")]
 	MaxCompat,
-	[EnumValue("max-bundle")]
+	[Value("\"max-bundle\"")]
 	MaxBundle,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCRtcpMuxPolicy
 {
-	[EnumValue("require")]
+	[Value("\"require\"")]
 	Require,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCSignalingState
 {
-	[EnumValue("stable")]
+	[Value("\"stable\"")]
 	Stable,
-	[EnumValue("have-local-offer")]
+	[Value("\"have-local-offer\"")]
 	HaveLocalOffer,
-	[EnumValue("have-remote-offer")]
+	[Value("\"have-remote-offer\"")]
 	HaveRemoteOffer,
-	[EnumValue("have-local-pranswer")]
+	[Value("\"have-local-pranswer\"")]
 	HaveLocalPranswer,
-	[EnumValue("have-remote-pranswer")]
+	[Value("\"have-remote-pranswer\"")]
 	HaveRemotePranswer,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceGatheringState
 {
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("gathering")]
+	[Value("\"gathering\"")]
 	Gathering,
-	[EnumValue("complete")]
+	[Value("\"complete\"")]
 	Complete,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCPeerConnectionState
 {
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("failed")]
+	[Value("\"failed\"")]
 	Failed,
-	[EnumValue("disconnected")]
+	[Value("\"disconnected\"")]
 	Disconnected,
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceConnectionState
 {
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("failed")]
+	[Value("\"failed\"")]
 	Failed,
-	[EnumValue("disconnected")]
+	[Value("\"disconnected\"")]
 	Disconnected,
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("checking")]
+	[Value("\"checking\"")]
 	Checking,
-	[EnumValue("completed")]
+	[Value("\"completed\"")]
 	Completed,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCSdpType
 {
-	[EnumValue("offer")]
+	[Value("\"offer\"")]
 	Offer,
-	[EnumValue("pranswer")]
+	[Value("\"pranswer\"")]
 	Pranswer,
-	[EnumValue("answer")]
+	[Value("\"answer\"")]
 	Answer,
-	[EnumValue("rollback")]
+	[Value("\"rollback\"")]
 	Rollback,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceProtocol
 {
-	[EnumValue("udp")]
+	[Value("\"udp\"")]
 	Udp,
-	[EnumValue("tcp")]
+	[Value("\"tcp\"")]
 	Tcp,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceTcpCandidateType
 {
-	[EnumValue("active")]
+	[Value("\"active\"")]
 	Active,
-	[EnumValue("passive")]
+	[Value("\"passive\"")]
 	Passive,
-	[EnumValue("so")]
+	[Value("\"so\"")]
 	So,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceCandidateType
 {
-	[EnumValue("host")]
+	[Value("\"host\"")]
 	Host,
-	[EnumValue("srflx")]
+	[Value("\"srflx\"")]
 	Srflx,
-	[EnumValue("prflx")]
+	[Value("\"prflx\"")]
 	Prflx,
-	[EnumValue("relay")]
+	[Value("\"relay\"")]
 	Relay,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceServerTransportProtocol
 {
-	[EnumValue("udp")]
+	[Value("\"udp\"")]
 	Udp,
-	[EnumValue("tcp")]
+	[Value("\"tcp\"")]
 	Tcp,
-	[EnumValue("tls")]
+	[Value("\"tls\"")]
 	Tls,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCRtpTransceiverDirection
 {
-	[EnumValue("sendrecv")]
+	[Value("\"sendrecv\"")]
 	Sendrecv,
-	[EnumValue("sendonly")]
+	[Value("\"sendonly\"")]
 	Sendonly,
-	[EnumValue("recvonly")]
+	[Value("\"recvonly\"")]
 	Recvonly,
-	[EnumValue("inactive")]
+	[Value("\"inactive\"")]
 	Inactive,
-	[EnumValue("stopped")]
+	[Value("\"stopped\"")]
 	Stopped,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCDtlsTransportState
 {
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("failed")]
+	[Value("\"failed\"")]
 	Failed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceGathererState
 {
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("gathering")]
+	[Value("\"gathering\"")]
 	Gathering,
-	[EnumValue("complete")]
+	[Value("\"complete\"")]
 	Complete,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceTransportState
 {
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
-	[EnumValue("failed")]
+	[Value("\"failed\"")]
 	Failed,
-	[EnumValue("disconnected")]
+	[Value("\"disconnected\"")]
 	Disconnected,
-	[EnumValue("new")]
+	[Value("\"new\"")]
 	New,
-	[EnumValue("checking")]
+	[Value("\"checking\"")]
 	Checking,
-	[EnumValue("completed")]
+	[Value("\"completed\"")]
 	Completed,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceRole
 {
-	[EnumValue("unknown")]
+	[Value("\"unknown\"")]
 	Unknown,
-	[EnumValue("controlling")]
+	[Value("\"controlling\"")]
 	Controlling,
-	[EnumValue("controlled")]
+	[Value("\"controlled\"")]
 	Controlled,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCIceComponent
 {
-	[EnumValue("rtp")]
+	[Value("\"rtp\"")]
 	Rtp,
-	[EnumValue("rtcp")]
+	[Value("\"rtcp\"")]
 	Rtcp,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCSctpTransportState
 {
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("connected")]
+	[Value("\"connected\"")]
 	Connected,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCDataChannelState
 {
-	[EnumValue("connecting")]
+	[Value("\"connecting\"")]
 	Connecting,
-	[EnumValue("open")]
+	[Value("\"open\"")]
 	Open,
-	[EnumValue("closing")]
+	[Value("\"closing\"")]
 	Closing,
-	[EnumValue("closed")]
+	[Value("\"closed\"")]
 	Closed,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum RTCErrorDetailType
 {
-	[EnumValue("data-channel-failure")]
+	[Value("\"data-channel-failure\"")]
 	DataChannelFailure,
-	[EnumValue("dtls-failure")]
+	[Value("\"dtls-failure\"")]
 	DtlsFailure,
-	[EnumValue("fingerprint-failure")]
+	[Value("\"fingerprint-failure\"")]
 	FingerprintFailure,
-	[EnumValue("sctp-failure")]
+	[Value("\"sctp-failure\"")]
 	SctpFailure,
-	[EnumValue("sdp-syntax-error")]
+	[Value("\"sdp-syntax-error\"")]
 	SdpSyntaxError,
-	[EnumValue("hardware-encoder-not-available")]
+	[Value("\"hardware-encoder-not-available\"")]
 	HardwareEncoderNotAvailable,
-	[EnumValue("hardware-encoder-error")]
+	[Value("\"hardware-encoder-error\"")]
 	HardwareEncoderError,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum BinaryType
 {
-	[EnumValue("blob")]
+	[Value("\"blob\"")]
 	Blob,
-	[EnumValue("arraybuffer")]
+	[Value("\"arraybuffer\"")]
 	Arraybuffer,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WebTransportReliabilityMode
 {
-	[EnumValue("pending")]
+	[Value("\"pending\"")]
 	Pending,
-	[EnumValue("reliable-only")]
+	[Value("\"reliable-only\"")]
 	ReliableOnly,
-	[EnumValue("supports-unreliable")]
+	[Value("\"supports-unreliable\"")]
 	SupportsUnreliable,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WebTransportCongestionControl
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("throughput")]
+	[Value("\"throughput\"")]
 	Throughput,
-	[EnumValue("low-latency")]
+	[Value("\"low-latency\"")]
 	LowLatency,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum WebTransportErrorSource
 {
-	[EnumValue("stream")]
+	[Value("\"stream\"")]
 	Stream,
-	[EnumValue("session")]
+	[Value("\"session\"")]
 	Session,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum USBTransferStatus
 {
-	[EnumValue("ok")]
+	[Value("\"ok\"")]
 	Ok,
-	[EnumValue("stall")]
+	[Value("\"stall\"")]
 	Stall,
-	[EnumValue("babble")]
+	[Value("\"babble\"")]
 	Babble,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum USBRequestType
 {
-	[EnumValue("standard")]
+	[Value("\"standard\"")]
 	Standard,
-	[EnumValue("class")]
+	[Value("\"class\"")]
 	Class,
-	[EnumValue("vendor")]
+	[Value("\"vendor\"")]
 	Vendor,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum USBRecipient
 {
-	[EnumValue("device")]
+	[Value("\"device\"")]
 	Device,
-	[EnumValue("interface")]
+	[Value("\"interface\"")]
 	Interface,
-	[EnumValue("endpoint")]
+	[Value("\"endpoint\"")]
 	Endpoint,
-	[EnumValue("other")]
+	[Value("\"other\"")]
 	Other,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum USBDirection
 {
-	[EnumValue("in")]
+	[Value("\"in\"")]
 	In,
-	[EnumValue("out")]
+	[Value("\"out\"")]
 	Out,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum USBEndpointType
 {
-	[EnumValue("bulk")]
+	[Value("\"bulk\"")]
 	Bulk,
-	[EnumValue("interrupt")]
+	[Value("\"interrupt\"")]
 	Interrupt,
-	[EnumValue("isochronous")]
+	[Value("\"isochronous\"")]
 	Isochronous,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AutoKeyword
 {
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum DirectionSetting
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("rl")]
+	[Value("\"rl\"")]
 	Rl,
-	[EnumValue("lr")]
+	[Value("\"lr\"")]
 	Lr,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum LineAlignSetting
 {
-	[EnumValue("start")]
+	[Value("\"start\"")]
 	Start,
-	[EnumValue("center")]
+	[Value("\"center\"")]
 	Center,
-	[EnumValue("end")]
+	[Value("\"end\"")]
 	End,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum PositionAlignSetting
 {
-	[EnumValue("line-left")]
+	[Value("\"line-left\"")]
 	LineLeft,
-	[EnumValue("center")]
+	[Value("\"center\"")]
 	Center,
-	[EnumValue("line-right")]
+	[Value("\"line-right\"")]
 	LineRight,
-	[EnumValue("auto")]
+	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum AlignSetting
 {
-	[EnumValue("start")]
+	[Value("\"start\"")]
 	Start,
-	[EnumValue("center")]
+	[Value("\"center\"")]
 	Center,
-	[EnumValue("end")]
+	[Value("\"end\"")]
 	End,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum ScrollSetting
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("up")]
+	[Value("\"up\"")]
 	Up,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XREnvironmentBlendMode
 {
-	[EnumValue("opaque")]
+	[Value("\"opaque\"")]
 	Opaque,
-	[EnumValue("alpha-blend")]
+	[Value("\"alpha-blend\"")]
 	AlphaBlend,
-	[EnumValue("additive")]
+	[Value("\"additive\"")]
 	Additive,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRInteractionMode
 {
-	[EnumValue("screen-space")]
+	[Value("\"screen-space\"")]
 	ScreenSpace,
-	[EnumValue("world-space")]
+	[Value("\"world-space\"")]
 	WorldSpace,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRDepthUsage
 {
-	[EnumValue("cpu-optimized")]
+	[Value("\"cpu-optimized\"")]
 	CpuOptimized,
-	[EnumValue("gpu-optimized")]
+	[Value("\"gpu-optimized\"")]
 	GpuOptimized,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRDepthDataFormat
 {
-	[EnumValue("luminance-alpha")]
+	[Value("\"luminance-alpha\"")]
 	LuminanceAlpha,
-	[EnumValue("float32")]
+	[Value("\"float32\"")]
 	Float32,
-	[EnumValue("unsigned-short")]
+	[Value("\"unsigned-short\"")]
 	UnsignedShort,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRDOMOverlayType
 {
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
-	[EnumValue("floating")]
+	[Value("\"floating\"")]
 	Floating,
-	[EnumValue("head-locked")]
+	[Value("\"head-locked\"")]
 	HeadLocked,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRHandJoint
 {
-	[EnumValue("wrist")]
+	[Value("\"wrist\"")]
 	Wrist,
-	[EnumValue("thumb-metacarpal")]
+	[Value("\"thumb-metacarpal\"")]
 	ThumbMetacarpal,
-	[EnumValue("thumb-phalanx-proximal")]
+	[Value("\"thumb-phalanx-proximal\"")]
 	ThumbPhalanxProximal,
-	[EnumValue("thumb-phalanx-distal")]
+	[Value("\"thumb-phalanx-distal\"")]
 	ThumbPhalanxDistal,
-	[EnumValue("thumb-tip")]
+	[Value("\"thumb-tip\"")]
 	ThumbTip,
-	[EnumValue("index-finger-metacarpal")]
+	[Value("\"index-finger-metacarpal\"")]
 	IndexFingerMetacarpal,
-	[EnumValue("index-finger-phalanx-proximal")]
+	[Value("\"index-finger-phalanx-proximal\"")]
 	IndexFingerPhalanxProximal,
-	[EnumValue("index-finger-phalanx-intermediate")]
+	[Value("\"index-finger-phalanx-intermediate\"")]
 	IndexFingerPhalanxIntermediate,
-	[EnumValue("index-finger-phalanx-distal")]
+	[Value("\"index-finger-phalanx-distal\"")]
 	IndexFingerPhalanxDistal,
-	[EnumValue("index-finger-tip")]
+	[Value("\"index-finger-tip\"")]
 	IndexFingerTip,
-	[EnumValue("middle-finger-metacarpal")]
+	[Value("\"middle-finger-metacarpal\"")]
 	MiddleFingerMetacarpal,
-	[EnumValue("middle-finger-phalanx-proximal")]
+	[Value("\"middle-finger-phalanx-proximal\"")]
 	MiddleFingerPhalanxProximal,
-	[EnumValue("middle-finger-phalanx-intermediate")]
+	[Value("\"middle-finger-phalanx-intermediate\"")]
 	MiddleFingerPhalanxIntermediate,
-	[EnumValue("middle-finger-phalanx-distal")]
+	[Value("\"middle-finger-phalanx-distal\"")]
 	MiddleFingerPhalanxDistal,
-	[EnumValue("middle-finger-tip")]
+	[Value("\"middle-finger-tip\"")]
 	MiddleFingerTip,
-	[EnumValue("ring-finger-metacarpal")]
+	[Value("\"ring-finger-metacarpal\"")]
 	RingFingerMetacarpal,
-	[EnumValue("ring-finger-phalanx-proximal")]
+	[Value("\"ring-finger-phalanx-proximal\"")]
 	RingFingerPhalanxProximal,
-	[EnumValue("ring-finger-phalanx-intermediate")]
+	[Value("\"ring-finger-phalanx-intermediate\"")]
 	RingFingerPhalanxIntermediate,
-	[EnumValue("ring-finger-phalanx-distal")]
+	[Value("\"ring-finger-phalanx-distal\"")]
 	RingFingerPhalanxDistal,
-	[EnumValue("ring-finger-tip")]
+	[Value("\"ring-finger-tip\"")]
 	RingFingerTip,
-	[EnumValue("pinky-finger-metacarpal")]
+	[Value("\"pinky-finger-metacarpal\"")]
 	PinkyFingerMetacarpal,
-	[EnumValue("pinky-finger-phalanx-proximal")]
+	[Value("\"pinky-finger-phalanx-proximal\"")]
 	PinkyFingerPhalanxProximal,
-	[EnumValue("pinky-finger-phalanx-intermediate")]
+	[Value("\"pinky-finger-phalanx-intermediate\"")]
 	PinkyFingerPhalanxIntermediate,
-	[EnumValue("pinky-finger-phalanx-distal")]
+	[Value("\"pinky-finger-phalanx-distal\"")]
 	PinkyFingerPhalanxDistal,
-	[EnumValue("pinky-finger-tip")]
+	[Value("\"pinky-finger-tip\"")]
 	PinkyFingerTip,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRHitTestTrackableType
 {
-	[EnumValue("point")]
+	[Value("\"point\"")]
 	Point,
-	[EnumValue("plane")]
+	[Value("\"plane\"")]
 	Plane,
-	[EnumValue("mesh")]
+	[Value("\"mesh\"")]
 	Mesh,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRReflectionFormat
 {
-	[EnumValue("srgba8")]
+	[Value("\"srgba8\"")]
 	Srgba8,
-	[EnumValue("rgba16f")]
+	[Value("\"rgba16f\"")]
 	Rgba16f,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRPlaneOrientation
 {
-	[EnumValue("horizontal")]
+	[Value("\"horizontal\"")]
 	Horizontal,
-	[EnumValue("vertical")]
+	[Value("\"vertical\"")]
 	Vertical,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRSessionMode
 {
-	[EnumValue("inline")]
+	[Value("\"inline\"")]
 	Inline,
-	[EnumValue("immersive-vr")]
+	[Value("\"immersive-vr\"")]
 	ImmersiveVr,
-	[EnumValue("immersive-ar")]
+	[Value("\"immersive-ar\"")]
 	ImmersiveAr,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRVisibilityState
 {
-	[EnumValue("visible")]
+	[Value("\"visible\"")]
 	Visible,
-	[EnumValue("visible-blurred")]
+	[Value("\"visible-blurred\"")]
 	VisibleBlurred,
-	[EnumValue("hidden")]
+	[Value("\"hidden\"")]
 	Hidden,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRReferenceSpaceType
 {
-	[EnumValue("viewer")]
+	[Value("\"viewer\"")]
 	Viewer,
-	[EnumValue("local")]
+	[Value("\"local\"")]
 	Local,
-	[EnumValue("local-floor")]
+	[Value("\"local-floor\"")]
 	LocalFloor,
-	[EnumValue("bounded-floor")]
+	[Value("\"bounded-floor\"")]
 	BoundedFloor,
-	[EnumValue("unbounded")]
+	[Value("\"unbounded\"")]
 	Unbounded,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XREye
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRHandedness
 {
-	[EnumValue("none")]
+	[Value("\"none\"")]
 	None,
-	[EnumValue("left")]
+	[Value("\"left\"")]
 	Left,
-	[EnumValue("right")]
+	[Value("\"right\"")]
 	Right,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRTargetRayMode
 {
-	[EnumValue("gaze")]
+	[Value("\"gaze\"")]
 	Gaze,
-	[EnumValue("tracked-pointer")]
+	[Value("\"tracked-pointer\"")]
 	TrackedPointer,
-	[EnumValue("screen")]
+	[Value("\"screen\"")]
 	Screen,
-	[EnumValue("transient-pointer")]
+	[Value("\"transient-pointer\"")]
 	TransientPointer,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRLayerLayout
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("mono")]
+	[Value("\"mono\"")]
 	Mono,
-	[EnumValue("stereo")]
+	[Value("\"stereo\"")]
 	Stereo,
-	[EnumValue("stereo-left-right")]
+	[Value("\"stereo-left-right\"")]
 	StereoLeftRight,
-	[EnumValue("stereo-top-bottom")]
+	[Value("\"stereo-top-bottom\"")]
 	StereoTopBottom,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRLayerQuality
 {
-	[EnumValue("default")]
+	[Value("\"default\"")]
 	Default,
-	[EnumValue("text-optimized")]
+	[Value("\"text-optimized\"")]
 	TextOptimized,
-	[EnumValue("graphics-optimized")]
+	[Value("\"graphics-optimized\"")]
 	GraphicsOptimized,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XRTextureType
 {
-	[EnumValue("texture")]
+	[Value("\"texture\"")]
 	Texture,
-	[EnumValue("texture-array")]
+	[Value("\"texture-array\"")]
 	TextureArray,
 }
 
-[To(ToAttribute.None)]
+[To(ToAttribute.NoneWithTailingDotRemoved)]
 public enum XMLHttpRequestResponseType
 {
-	[EnumValue("")]
+	[Value("\"\"")]
 	Empty,
-	[EnumValue("arraybuffer")]
+	[Value("\"arraybuffer\"")]
 	Arraybuffer,
-	[EnumValue("blob")]
+	[Value("\"blob\"")]
 	Blob,
-	[EnumValue("document")]
+	[Value("\"document\"")]
 	Document,
-	[EnumValue("json")]
+	[Value("\"json\"")]
 	Json,
-	[EnumValue("text")]
+	[Value("\"text\"")]
 	Text,
 }
 

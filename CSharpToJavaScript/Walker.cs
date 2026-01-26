@@ -55,9 +55,20 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		switch (trivia.Kind())
 		{
+			case SyntaxKind.SingleLineCommentTrivia:
+				{
+					string _full = trivia.ToString();
+					
+					//special syntax.
+					//for writing js code //...\\
+					if (_full.EndsWith(@"\\"))
+						JSSB.Append(_full.AsSpan(2, _full.Length - 4));
+					else
+						JSSB.Append(_full);
+					return;
+				}
 			case SyntaxKind.MultiLineCommentTrivia:
 			case SyntaxKind.WhitespaceTrivia:
-			case SyntaxKind.SingleLineCommentTrivia:
 				{
 					string _full = trivia.ToFullString();
 					JSSB.Append(_full);

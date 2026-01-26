@@ -30,10 +30,12 @@ internal class Walker : CSharpSyntaxWalker
 	private SyntaxNode? _SNOriginalAsExpression = null;
 	private SyntaxNode? _SNBaseConstructorInitializerNode = null;
 	private SyntaxNode? _SNPropertyType = null;
-
+	
 	private string _NameSpaceStr = string.Empty;
 	private string _CurrentClassStr = string.Empty;
-
+	
+	private List<Prop> _Properties = new();
+	
 	private bool _PropertyStatic = false;
 	private bool _ConstKeyword = false;
 	private bool _IgnoreArrayType = false;
@@ -42,9 +44,11 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _GlobalStatement = false;
 	private bool _ThisIsUsed = false;
 	private bool _IsArrayInitializer = false;
+	
 	private int _EnumMembers = 0;
 
 	private string[] _AttributeDatasForInvocation = new string[2];
+	
 	public Walker(CSTOJSOptions options, SemanticModel model) : base(SyntaxWalkerDepth.Trivia)
 	{
 		_Options = options;
@@ -54,7 +58,7 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitTrivia(SyntaxTrivia trivia)
 	{
 		switch (trivia.Kind())
-		{
+		{	
 			case SyntaxKind.SingleLineCommentTrivia:
 				{
 					string _full = trivia.ToString();
@@ -281,7 +285,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.AttributeList:
 						{
 #if DEBUG
-								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
 #endif
 							break;
 						}
@@ -326,7 +330,7 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					case SyntaxKind.SealedKeyword:
 					case SyntaxKind.UnsafeKeyword:
- 					case SyntaxKind.PartialKeyword:
+					case SyntaxKind.PartialKeyword:
 					case SyntaxKind.StaticKeyword:
 						break;
 					case SyntaxKind.InternalKeyword:
@@ -339,14 +343,23 @@ internal class Walker : CSharpSyntaxWalker
 						VisitToken(asToken);
 						break;
 					case SyntaxKind.IdentifierToken:
-						_CurrentClassStr = asToken.Text;
-						VisitToken(asToken);
-						break;
+						{
+							_CurrentClassStr = asToken.Text;
+							VisitToken(asToken);
+							break;
+						}
 					default:
 						Log.ErrorLine($"asToken : {kind}");
 						break;
 				}
 			}
+		}
+
+
+		//clear get and set list
+		if (_Options.MakePropertiesEnumerable)
+		{
+			_Properties.Clear();
 		}
 	}
 
@@ -660,6 +673,135 @@ internal class Walker : CSharpSyntaxWalker
 								//JSSB.Append(";");
 								_SNBaseConstructorInitializerNode = null;
 							}
+							
+							if (_Options.MakePropertiesEnumerable)
+							{
+								for (int j = 0; j < _Properties.Count; j++)
+								{
+									SyntaxTriviaList _syntaxTrivias = _Properties[j].SNGet.GetTrailingTrivia();
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
+									JSSB.Append($"Object.defineProperty(this, '{_Properties[j].Name}', {{ enumerable: true,");
+									if (_Properties[j].SNGet != null)
+									{
+										BlockSyntax? _body = ((AccessorDeclarationSyntax)_Properties[j].SNGet).Body;
+
+										if (_body != null)
+										{
+											JSSB.Append($"get: function ()");
+
+											_syntaxTrivias = _Properties[j].SNGet.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											VisitBlock(_body);
+										}
+										else
+										{
+											if (_PropertyStatic == true)
+												JSSB.Append($"get: function () {{ return this._{_Properties[j].Name}_; }}");
+											else
+												JSSB.Append($"get: function () {{ return this.#_{_Properties[j].Name}_; }}");
+
+											_syntaxTrivias = _Properties[j].SNGet.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+										}
+
+										JSSB.Append(",");
+									}
+									if (_Properties[j].SNSet != null)
+									{
+										BlockSyntax? _body = ((AccessorDeclarationSyntax)_Properties[j].SNSet).Body;
+
+										if (_body != null)
+										{
+											if (_Properties[j].SNSet.Parent != null)
+											{
+												if (_Properties[j].SNSet.Parent.Parent != null)
+												{
+													_syntaxTrivias = _Properties[j].SNSet.Parent.Parent.GetLeadingTrivia();
+
+													for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+													{
+														VisitTrivia(_syntaxTrivias[_i]);
+													}
+												}
+												else
+													Log.ErrorLine("_Properties[j].SNSet.Parent.Parent is null");
+
+											}
+											else
+												Log.ErrorLine("_Properties[j].SNSet.Parent is null");
+
+
+											if (_PropertyStatic == true)
+											{
+												JSSB.Append($"static ");
+												_PropertyStatic = false;
+											}
+											JSSB.Append($"set: function (value)");
+
+											_syntaxTrivias = _Properties[j].SNSet.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											VisitBlock(_body);
+										}
+										else
+										{
+											JSSB.AppendLine();
+
+											if (_Properties[j].SNSet.Parent != null)
+											{
+												if (_Properties[j].SNSet.Parent.Parent != null)
+												{
+													_syntaxTrivias = _Properties[j].SNSet.Parent.Parent.GetLeadingTrivia();
+
+													for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+													{
+														VisitTrivia(_syntaxTrivias[_i]);
+													}
+												}
+												else
+													Log.ErrorLine("_Properties[j].SNSet.Parent.Parent is null");
+
+											}
+											else
+												Log.ErrorLine("_Properties[j].SNSet.Parent is null");
+
+											if (_PropertyStatic == true)
+											{
+												JSSB.Append($"static ");
+												JSSB.Append($"set: function (value) {{ this._{_Properties[j].Name}_ = value; }}");
+												_PropertyStatic = false;
+											}
+											else
+												JSSB.Append($"set: function (value) {{ this.#_{_Properties[j].Name}_ = value; }}");
+
+											if (_Properties[j].SNSet.Parent != null)
+											{
+												_syntaxTrivias = _Properties[j].SNSet.Parent.GetTrailingTrivia();
+												for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+												{
+													VisitTrivia(_syntaxTrivias[_i]);
+												}
+											}
+											else
+												Log.ErrorLine("_Properties[j].SNSet.Parent is null");
+										}
+									}
+									JSSB.AppendLine("} );");
+								}
+							}
 							break;
 						}
 					default:
@@ -893,6 +1035,9 @@ internal class Walker : CSharpSyntaxWalker
 #endif
 							break;
 						}
+					case SyntaxKind.AwaitExpression:
+						VisitAwaitExpression((AwaitExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.UnaryPlusExpression:
 					case SyntaxKind.UnaryMinusExpression:
 					case SyntaxKind.BitwiseNotExpression:
@@ -924,10 +1069,19 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.GreaterThanExpression:
 					case SyntaxKind.GreaterThanOrEqualExpression:
 					case SyntaxKind.IsExpression:
-					case SyntaxKind.AsExpression:
 					case SyntaxKind.CoalesceExpression:
 						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.AsExpression:
+						{
+							//Todo double/multiply asExpression?? How?
+							_SNOriginalAsExpression = ((BinaryExpressionSyntax)asNode).Left;
+
+							Visit(_SNOriginalAsExpression.WithoutTrailingTrivia());
+
+							_SNOriginalAsExpression = null;
+							break;
+						}
 					case SyntaxKind.ObjectCreationExpression:
 						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
 						break;
@@ -1477,12 +1631,11 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.ReadOnlyKeyword:
-						break;
 					case SyntaxKind.StaticKeyword:
 					case SyntaxKind.SemicolonToken:
 						VisitToken(asToken);
 						break;
+					case SyntaxKind.ReadOnlyKeyword:
 					case SyntaxKind.ConstKeyword:
 					case SyntaxKind.PublicKeyword:
 					case SyntaxKind.PrivateKeyword:
@@ -1661,7 +1814,6 @@ internal class Walker : CSharpSyntaxWalker
 			_SNPropertyType = null;
 		}
 
-
 		//main for loop for property
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
@@ -1700,10 +1852,14 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.IdentifierToken:
+						{
+							if (_Options.MakePropertiesEnumerable)
+								_Properties.Add(new() {  Name = asToken.Text });
+							break;
+						}
 					case SyntaxKind.AbstractKeyword:
 					case SyntaxKind.RequiredKeyword:
-					case SyntaxKind.IdentifierToken:
-						break;
 					case SyntaxKind.SemicolonToken:
 						VisitTrailingTrivia(asToken);
 						break;
@@ -1738,6 +1894,11 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					case SyntaxKind.GetAccessorDeclaration:
 						{
+							if (_Options.MakePropertiesEnumerable)
+							{
+								_Properties[_Properties.Count - 1].SNGet = asNode;
+								break;
+							}
 							IEnumerable<SyntaxNode> c = asNode.Ancestors();
 
 							IEnumerable<SyntaxNode> a = from b in c
@@ -1809,6 +1970,12 @@ internal class Walker : CSharpSyntaxWalker
 						}
 					case SyntaxKind.SetAccessorDeclaration:
 						{
+							if (_Options.MakePropertiesEnumerable)
+							{
+								_Properties[_Properties.Count - 1].SNSet = asNode;
+								break;
+							}
+							
 							IEnumerable<SyntaxNode> c = asNode.Ancestors();
 
 							IEnumerable<SyntaxNode> a = from b in c
@@ -3662,25 +3829,6 @@ internal class Walker : CSharpSyntaxWalker
 						return true;
 					}
 
-					if (_attributeData[j].AttributeClass!.Name == nameof(EnumValueAttribute))
-					{
-						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
-						for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-						{
-							VisitTrivia(_syntaxTrivias[_i]);
-						}
-
-						JSSB.Append($"\"{_attributeData[j].ConstructorArguments[0].Value}\"");
-
-						_syntaxTrivias = identifier.GetTrailingTrivia();
-						for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-						{
-							VisitTrivia(_syntaxTrivias[_i]);
-						}
-
-						return true;
-					}
-
 					if (_attributeData[j].AttributeClass!.Name == nameof(ValueAttribute))
 					{
 						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
@@ -3704,9 +3852,12 @@ internal class Walker : CSharpSyntaxWalker
 					{
 						ToAttribute _toAttr = new(_attributeData[j].ConstructorArguments[0].Value.ToString());
 
-						if (_toAttr.To == ToAttribute.None)
+						if (_toAttr.To == ToAttribute.NoneWithLeadingDotRemoved)
+							JSSB.Remove(JSSB.Length - 1, 1);
+							
+						if (_toAttr.To == ToAttribute.NoneWithTailingDotRemoved)
 							_IgnoreTailingDot = true;
-
+							
 						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
 						for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 						{
@@ -3806,6 +3957,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.InterpolatedStringExpression:
+						VisitInterpolatedStringExpression((InterpolatedStringExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.PointerMemberAccessExpression:
 					case SyntaxKind.SimpleMemberAccessExpression:
 						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
@@ -6296,7 +6453,7 @@ internal class Walker : CSharpSyntaxWalker
 							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
 								return false;
 						}
-						if (((IMethodSymbol)iSymbol).ReceiverType.ToString().EndsWith(_CurrentClassStr))
+						if (((IMethodSymbol)iSymbol).ReceiverType.ToString().EndsWith(_CurrentClassStr) && !iSymbol.IsStatic)
 						{
 							VisitLeadingTrivia(identifier);
 
@@ -6463,4 +6620,11 @@ internal class Walker : CSharpSyntaxWalker
 			}
 		}
 	}
+}
+
+internal class Prop
+{
+	public string Name = string.Empty;
+	public SyntaxNode? SNGet = null;
+	public SyntaxNode? SNSet = null;
 }

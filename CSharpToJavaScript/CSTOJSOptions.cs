@@ -100,6 +100,26 @@ public class CSTOJSOptions
 	public bool TranslateFile { get; set; } = true;
 
 	/// <summary>
+	/// Make properties enumerable, needed if you want to use JSON.stringify.
+	/// </summary>
+	/// <remarks>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	/// cstojs_options.xml: &lt;Option MakePropertiesEnumerable=&quot;false&quot; /&gt;
+	/// </para>
+	/// </blockquote>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	///	Note, class must have constructor!
+	/// </para>
+	/// </blockquote>
+	/// </remarks>
+	/// <value>
+	/// Default: <c>false</c>
+	/// </value>
+	public bool MakePropertiesEnumerable { get; set; } = false;
+	
+	/// <summary>
 	/// Array of custom names to convert.
 	/// </summary>
 	/// <remarks>Example: <c>new(){["Console"] = "console"}</c>. Will convert "Console" to "console".

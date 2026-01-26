@@ -72,7 +72,8 @@ internal class NETAPI
 		_TypeNames[4].SymbolNames.Add(nameof(string.Replace), "replace");
 		_TypeNames[4].SymbolNames.Add(nameof(string.ToUpper), "toUpperCase");
 		_TypeNames[4].SymbolNames.Add(nameof(string.ToLower), "toLowerCase");
-
+		_TypeNames[4].SymbolNames.Add(nameof(string.EndsWith), "endsWith");
+		
 		//
 		//
 		//

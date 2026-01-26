@@ -2,11 +2,18 @@
 
 namespace CSharpToJavaScript.Utils;
 
+/// <summary>
+/// 
+/// </summary>
 [AttributeUsage(AttributeTargets.Class)]
 internal class IgnoreAttribute : Attribute
 {
 	public IgnoreAttribute() { }
 }
+
+/// <summary>
+/// Translates class/method to a specified value.
+/// </summary>
 [AttributeUsage(AttributeTargets.All)]
 public class ValueAttribute : Attribute
 {
@@ -17,6 +24,17 @@ public class ValueAttribute : Attribute
 	}
 }
 
+/// <summary>
+/// Changes class/method based on options.
+/// </summary>
+/// <remarks>
+/// Default: do nothing.<br />
+/// ToLower: convert to lowercase.<br />
+/// FirstCharToLowerCase: convert the first char to lowercase.<br />
+/// None: convert to empty.<br />
+/// NoneWithLeadingDotRemoved: convert to empty with the leading dot removed.<br />
+/// NoneWithTailingDotRemoved: convert to empty with the trailing dot removed.<br />
+/// </remarks>
 [AttributeUsage(AttributeTargets.All)]
 public class ToAttribute : Attribute
 {
@@ -52,6 +70,9 @@ public class ToAttribute : Attribute
 	}
 }
 
+/// <summary>
+/// Translates a method into a binary operator.
+/// </summary>
 [AttributeUsage(AttributeTargets.All)]
 public class BinaryAttribute : Attribute
 {
@@ -61,6 +82,10 @@ public class BinaryAttribute : Attribute
 		Value = value;
 	}
 }
+
+/// <summary>
+/// Translates a method into an unary operator.
+/// </summary>
 [AttributeUsage(AttributeTargets.All)]
 public class UnaryAttribute : Attribute
 {
@@ -70,6 +95,10 @@ public class UnaryAttribute : Attribute
 		Value = value;
 	}
 }
+
+/// <summary>
+/// Translates a class into a JS object.
+/// </summary>
 [AttributeUsage(AttributeTargets.All)]
 public class ToObjectAttribute : Attribute
 {

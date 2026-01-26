@@ -16,20 +16,13 @@ public class ValueAttribute : Attribute
 		Value = value;
 	}
 }
-[AttributeUsage(AttributeTargets.All)]
-public class EnumValueAttribute : Attribute
-{
-	public string Value { get; init; }
-	public EnumValueAttribute(string value)
-	{
-		Value = value;
-	}
-}
 
 [AttributeUsage(AttributeTargets.All)]
 public class ToAttribute : Attribute
 {
 	public const string None = "None";
+	public const string NoneWithLeadingDotRemoved = "NoneWithLeadingDotRemoved";
+	public const string NoneWithTailingDotRemoved = "NoneWithTailingDotRemoved";
 	public const string Default = "Default";
 	public const string ToLower = "ToLower";
 	public const string FirstCharToLowerCase = "FirstCharToLowerCase";
@@ -48,6 +41,8 @@ public class ToAttribute : Attribute
 				return str.ToLower();
 			case FirstCharToLowerCase:
 				return str.FirstCharToLowerCase();
+			case NoneWithLeadingDotRemoved:
+			case NoneWithTailingDotRemoved:
 			case None:
 				return "";
 			case Default:

@@ -48,11 +48,6 @@ public class DatePrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 	
-	//does not exists in es14
-	public float GetYear()
-	{
-		throw new System.NotImplementedException();
-	}
 	public float GetFullYear()
 	{
 		throw new System.NotImplementedException();
@@ -254,6 +249,23 @@ public class DatePrototype : FunctionPrototype
 	}
 
 	public new float ValueOf()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	//https://ecma-international.org/wp-content/uploads/ECMA-262_3rd_edition_december_1999.pdf
+	//B.2.4
+	public float GetYear()
+	{
+		throw new System.NotImplementedException();
+	}
+	//B.2.5
+	public float SetYear(float year)
+	{
+		throw new System.NotImplementedException();
+	}
+	//B.2.6
+	public string ToGMTString()
 	{
 		throw new System.NotImplementedException();
 	}

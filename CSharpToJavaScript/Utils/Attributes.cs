@@ -82,7 +82,18 @@ public class BinaryAttribute : Attribute
 		Value = value;
 	}
 }
-
+/// <summary>
+/// Translates a method into a binary operator. Generic as a second argument.
+/// </summary>
+[AttributeUsage(AttributeTargets.All)]
+public class GenericBinaryAttribute : Attribute
+{
+	public string Value { get; init; }
+	public GenericBinaryAttribute(string value)
+	{
+		Value = value;
+	}
+}
 /// <summary>
 /// Translates a method into an unary operator.
 /// </summary>
@@ -97,10 +108,25 @@ public class UnaryAttribute : Attribute
 }
 
 /// <summary>
+/// Translates a method into an unary operator. Generic as an argument
+/// </summary>
+[AttributeUsage(AttributeTargets.All)]
+public class GenericUnaryAttribute : Attribute
+{
+	public string Value { get; init; }
+	public GenericUnaryAttribute(string value)
+	{
+		Value = value;
+	}
+}
+/// <summary>
 /// Translates a class into a JS object.
 /// </summary>
 [AttributeUsage(AttributeTargets.All)]
 public class ToObjectAttribute : Attribute
 {
-	
+
 }
+
+[AttributeUsage(AttributeTargets.Method)]
+public class GenericAsArgument : Attribute { }

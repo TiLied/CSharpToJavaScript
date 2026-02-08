@@ -384,13 +384,10 @@ public static class CSTOJS
 }
 
 /// <summary>
-/// FileData includes a CSharp string, options and a JavaScript string.
+/// FileData includes a CSharp string, options, and a JavaScript string.
 /// </summary>
 public class FileData
 {
-	//Delete this?
-	public string PathID { get; set; } = string.Empty;
-
 	/// <summary>
 	/// Options for a translation.
 	/// </summary>

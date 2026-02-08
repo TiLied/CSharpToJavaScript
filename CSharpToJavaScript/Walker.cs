@@ -30,6 +30,7 @@ internal class Walker : CSharpSyntaxWalker
 	private SyntaxNode? _SNOriginalAsExpression = null;
 	private SyntaxNode? _SNBaseConstructorInitializerNode = null;
 	private SyntaxNode? _SNPropertyType = null;
+	private SyntaxNode? _SNAdditionalArgument = null;
 	
 	private string _NameSpaceStr = string.Empty;
 	private string _CurrentClassStr = string.Empty;
@@ -44,10 +45,11 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _GlobalStatement = false;
 	private bool _ThisIsUsed = false;
 	private bool _IsArrayInitializer = false;
+	private bool _GenericAsArgument = false;
 	
 	private int _EnumMembers = 0;
 
-	private string[] _AttributeDatasForInvocation = new string[2];
+	private string[] _AttributeDatasForInvocation = new string[3] { string.Empty, string.Empty, string.Empty };
 	
 	public Walker(CSTOJSOptions options, SemanticModel model) : base(SyntaxWalkerDepth.Trivia)
 	{
@@ -3694,9 +3696,21 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.TypeArgumentList: 
-						VisitTypeArgumentList((TypeArgumentListSyntax)asNode);
-						break;
+					case SyntaxKind.TypeArgumentList:
+						{
+							if (_AttributeDatasForInvocation[0] != string.Empty)
+							{
+								_AttributeDatasForInvocation[2] = ((TypeArgumentListSyntax)asNode).Arguments[0].ToString();
+							}
+							else if (_GenericAsArgument)
+							{
+								_SNAdditionalArgument = ((TypeArgumentListSyntax)asNode).Arguments[0];
+								_GenericAsArgument = false;
+							}
+							else
+								VisitTypeArgumentList((TypeArgumentListSyntax)asNode);
+							break;
+						}
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;
@@ -3757,8 +3771,8 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IdentifierToken:
 						{
 							if (IsRightAttribute(node, asToken))
-								break;							
-							
+								break;
+
 							if (IdentifierToken(node) == false)
 							{
 								base.VisitIdentifierName(node);
@@ -3772,6 +3786,9 @@ internal class Walker : CSharpSyntaxWalker
 			}
 		}
 	}
+	
+	//TODO!
+	//Request right attribute!
 	private bool IsRightAttribute<T>(T identifier, SyntaxToken asToken) where T : SimpleNameSyntax
 	{
 		SymbolInfo? _symbolInfo = null;
@@ -3820,8 +3837,15 @@ internal class Walker : CSharpSyntaxWalker
 			{
 				if (_attributeData[j].AttributeClass != null)
 				{
+					if (_attributeData[j].AttributeClass!.Name == nameof(GenericAsArgument))
+					{
+						_GenericAsArgument = true;
+					}
+
 					if (_attributeData[j].AttributeClass!.Name == nameof(BinaryAttribute) ||
-						_attributeData[j].AttributeClass!.Name == nameof(UnaryAttribute))
+						_attributeData[j].AttributeClass!.Name == nameof(UnaryAttribute) ||
+						_attributeData[j].AttributeClass!.Name == nameof(GenericBinaryAttribute) ||
+						_attributeData[j].AttributeClass!.Name == nameof(GenericUnaryAttribute))
 					{
 						_AttributeDatasForInvocation[0] = _attributeData[j].AttributeClass!.Name;
 						_AttributeDatasForInvocation[1] = _attributeData[j].ConstructorArguments[0].Value.ToString();
@@ -5318,6 +5342,8 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
+							
+							
 							if (_AttributeDatasForInvocation[0] != string.Empty)
 							{
 								if (_AttributeDatasForInvocation[0] == nameof(BinaryAttribute))
@@ -5347,15 +5373,54 @@ internal class Walker : CSharpSyntaxWalker
 								{
 									_AttributeDatasForInvocation[0] = string.Empty;
 									string _operator = _AttributeDatasForInvocation[1];
-									
+
 									JSSB.Append(_operator);
 									VisitArgument(_arguments.Arguments[0]);
+
+									goto BreakArgumentList;
+								}
+
+								if (_AttributeDatasForInvocation[0] == nameof(GenericUnaryAttribute))
+								{
+									_AttributeDatasForInvocation[0] = string.Empty;
+									string _operator = _AttributeDatasForInvocation[1];
+
+									JSSB.Append(_operator);
+									
+									//Generic
+									JSSB.Append(_AttributeDatasForInvocation[2]);
+									_AttributeDatasForInvocation[2] = string.Empty;
+
+									goto BreakArgumentList;
+								}
+								
+								if (_AttributeDatasForInvocation[0] == nameof(GenericBinaryAttribute))
+								{
+									_AttributeDatasForInvocation[0] = string.Empty;
+									string _operator = _AttributeDatasForInvocation[1];
+									
+									VisitArgument(_arguments.Arguments[0]);
+									JSSB.Append(_operator);
+									
+									//Generic
+									JSSB.Append(_AttributeDatasForInvocation[2]);
+									_AttributeDatasForInvocation[2] = string.Empty;
 									
 									goto BreakArgumentList;
 								}
 							}
 
 							VisitArgumentList(_arguments);
+
+							if (_SNAdditionalArgument != null)
+							{
+								//TODO?
+								JSSB.Remove(JSSB.Length - 1, 1);
+								JSSB.Append(", ");
+								VisitIdentifierName((IdentifierNameSyntax)_SNAdditionalArgument);
+								JSSB.Append(")");
+								_SNAdditionalArgument = null;
+							}
 							
 						BreakArgumentList:
 							break;

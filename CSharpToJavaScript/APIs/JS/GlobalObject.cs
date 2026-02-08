@@ -1,4 +1,5 @@
 using CSharpToJavaScript.Utils;
+using System;
 
 namespace CSharpToJavaScript.APIs.JS.Ecma;
 
@@ -61,7 +62,7 @@ public partial class GlobalObject
 	{
 		return new Undefined();
 	}
-	
+
 	/// <summary>
 	/// Translates this method into the "typeof" operator.
 	/// </summary>
@@ -71,7 +72,33 @@ public partial class GlobalObject
 	/// <param name="operand">An expression representing the object or primitive whose type is to be returned.</param>
 	/// <returns>string</returns>
 	[Unary("typeof ")]
-	public static string TypeOf(dynamic operand)
+	public static string TypeOf(object operand)
+	{
+		return string.Empty;
+	}
+	/// <summary>
+	/// Translates this method into the "typeof" operator.
+	/// </summary>
+	/// <remarks>
+	/// See mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+	/// </remarks>
+	/// <param name="operand">An expression representing the object or primitive whose type is to be returned.</param>
+	/// <returns>string</returns>
+	[Unary("typeof ")]
+	public static string TypeOf(Func<dynamic> operand)
+	{
+		return string.Empty;
+	}
+	/// <summary>
+	/// Translates this method into the "typeof" operator.
+	/// </summary>
+	/// <remarks>
+	/// See mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+	/// </remarks>
+	/// <typeparam name="O">An expression representing the object or primitive whose type is to be returned.</typeparam>
+	/// <returns>string</returns>
+	[GenericUnary("typeof ")]
+	public static string TypeOf<O>()
 	{
 		return string.Empty;
 	}
@@ -82,15 +109,14 @@ public partial class GlobalObject
 	/// <remarks>
 	/// See mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
 	/// </remarks>
+	/// <typeparam name="C">Constructor to test against.</typeparam>
 	/// <param name="obj">The object to test.</param>
-	/// <param name="constructor">Constructor to test against.</param>
 	/// <returns>bool</returns>
-	[Binary("instanceof")]
-	public static bool InstanceOf(dynamic obj, dynamic constructor)
+	[GenericBinary(" instanceof ")]
+	public static bool InstanceOf<C>(dynamic obj)
 	{
 		return true;
 	}
-	
 	/// <summary>
 	/// Translates this method into the "in" operator.
 	/// </summary>

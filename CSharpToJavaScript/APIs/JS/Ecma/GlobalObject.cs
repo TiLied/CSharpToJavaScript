@@ -29,27 +29,27 @@ public partial class GlobalObject
 		//Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Map, Promise,
 		//Proxy, Set, SharedArrayBuffer, Uint8Array, Uint8ClampedArray, Uint16Array,
 		//Uint32Array, WeakMap, WeakRef, WeakSet
-			
+
 		[To(ToAttribute.Default)]
 		public static AggregateError AggregateError(object[] errors, string? message = null, object? options = null)
 		{
 			throw new System.NotImplementedException();
 		}
-			
-			
+
+
 		[To(ToAttribute.Default)]
 		public static Array Array(params dynamic[] values)
 		{
 			throw new System.NotImplementedException();
 		}
-			
-			
+
+
 		[To(ToAttribute.Default)]
 		public static BigInt BigInt(dynamic value)
 		{
 			throw new System.NotImplementedException();
 		}
-			
+
 
 		[To(ToAttribute.Default)]
 		public static bool Boolean(dynamic value)
@@ -63,19 +63,19 @@ public partial class GlobalObject
 			throw new System.NotImplementedException();
 		}
 
-			
+
 		[To(ToAttribute.Default)]
 		public static Error Error(string message, object? options = null)
 		{
 			throw new System.NotImplementedException();
 		}
 
-			
+
 		[To(ToAttribute.Default)]
 		public static EvalError EvalError(string message, object? options = null)
 		{
 			throw new System.NotImplementedException();
-			
+
 		}
 
 		//https://262.ecma-international.org/14.0/#sec-function-p1-p2-pn-body
@@ -99,14 +99,14 @@ public partial class GlobalObject
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static RangeError RangeError(string message, object? options = null)
 		{
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static ReferenceError ReferenceError(string message, object? options = null)
 		{
@@ -120,7 +120,7 @@ public partial class GlobalObject
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static string String(dynamic value)
 		{
@@ -128,28 +128,28 @@ public partial class GlobalObject
 
 		}
 
-			
+
 		[To(ToAttribute.Default)]
 		public static Symbol Symbol(dynamic? description = null)
 		{
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static SyntaxError SyntaxError(string message, object? options = null)
 		{
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static TypeError TypeError(string message, object? options = null)
 		{
 			throw new System.NotImplementedException();
 
 		}
-			
+
 		[To(ToAttribute.Default)]
 		public static URIError URIError(string message, object? options = null)
 		{
@@ -171,14 +171,14 @@ public partial class GlobalObject
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class Undefined {	}
+	public class Undefined { }
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public static dynamic Eval(string x) 
+	public static dynamic Eval(string x)
 	{
 		throw new System.NotImplementedException();
 	}
-				
+
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static bool IsFinite(float number)
 	{
@@ -223,6 +223,19 @@ public partial class GlobalObject
 
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static string EncodeURIComponent(string uriComponent)
+	{
+		throw new System.NotImplementedException();
+	}
+
+
+	//https://262.ecma-international.org/5.1/index.html#sec-B.2
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static string Escape(string str)
+	{
+		throw new System.NotImplementedException();
+	}
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static string Unescape(string str)
 	{
 		throw new System.NotImplementedException();
 	}

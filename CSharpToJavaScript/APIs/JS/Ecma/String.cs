@@ -16,7 +16,7 @@ public partial class String : StringPrototype
 	public static implicit operator string(String value) { return new String(value) { Value = value }; }
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public StringPrototype Prototype { get; } = new();
+	public static StringPrototype Prototype { get; } = new();
 
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public int Length { get; } = 0;
@@ -173,6 +173,12 @@ public partial class StringPrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 	public new String ValueOf()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	//https://262.ecma-international.org/5.1/index.html#sec-B.2.3
+	public string Substr(int start, int length)
 	{
 		throw new System.NotImplementedException();
 	}

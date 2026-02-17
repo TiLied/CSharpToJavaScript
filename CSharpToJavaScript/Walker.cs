@@ -3095,10 +3095,24 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitCastExpression(CastExpressionSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+		
+		bool skipTokens = false;
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+			
+			if (skipTokens)
+			{
+				if (asNode != null)
+					continue;
+				
+				if (nodesAndTokens[i].AsToken().Kind() == SyntaxKind.CloseParenToken)
+					skipTokens = false;
+					
+				continue;
+			}	
+		
 
 			if (asNode != null)
 			{
@@ -3106,7 +3120,6 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.IdentifierName:
 					case SyntaxKind.NullableType:
 					case SyntaxKind.PredefinedType:
 						{
@@ -3115,6 +3128,9 @@ internal class Walker : CSharpSyntaxWalker
 #endif
 							break;
 						}
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
 					case SyntaxKind.ArgListExpression:
 					case SyntaxKind.NumericLiteralExpression:
 					case SyntaxKind.StringLiteralExpression:
@@ -3163,6 +3179,10 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.OpenParenToken:
+						{
+							skipTokens = true;
+							break;
+						}
 					case SyntaxKind.CloseParenToken:
 						break;
 					default:

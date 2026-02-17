@@ -1,4 +1,4 @@
-//13.01.2026 17:12:20
+//16.02.2026 21:28:23
 
 #nullable enable
 //Disable missing XML comments.
@@ -1124,7 +1124,7 @@ public struct Union76
 }
 
 ///<summary>
-///<see cref="double"/> or <see cref="DOMPointInit"/> or <see cref="List{Union76}"/>
+///<see cref="double"/> or <see cref="DOMPointInit"/> or <see cref="List{T}"/> or <see cref="List{DOMPointInit}"/>
 ///</summary>
 public struct Union75
 {
@@ -1133,8 +1133,10 @@ public struct Union75
 	public static implicit operator double(Union75 value){return new Union75 { Value = value };}
 	public static implicit operator Union75(DOMPointInit value){return new Union75 { Value = value };}
 	public static implicit operator DOMPointInit(Union75 value){return new Union75 { Value = value };}
-	public static implicit operator Union75(List<Union76> value){return new Union75 { Value = value };}
-	public static implicit operator List<Union76>(Union75 value){return new Union75 { Value = value };}
+	public static implicit operator Union75(List<double> value){return new Union75 { Value = value };}
+	public static implicit operator List<double>(Union75 value){return new Union75 { Value = value };}
+	public static implicit operator Union75(List<DOMPointInit> value){return new Union75 { Value = value };}
+	public static implicit operator List<DOMPointInit>(Union75 value){return new Union75 { Value = value };}
 }
 
 ///<summary>
@@ -1872,15 +1874,17 @@ public struct Union136
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{Union136}"/>
+///<see cref="DOMString"/> or <see cref="List{CSSNumericValue}"/> or <see cref="List{CSSKeywordValue}"/>
 ///</summary>
 public struct Union135
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union135(DOMString value){return new Union135 { Value = value };}
 	public static implicit operator DOMString(Union135 value){return new Union135 { Value = value };}
-	public static implicit operator Union135(List<Union136> value){return new Union135 { Value = value };}
-	public static implicit operator List<Union136>(Union135 value){return new Union135 { Value = value };}
+	public static implicit operator Union135(List<CSSNumericValue> value){return new Union135 { Value = value };}
+	public static implicit operator List<CSSNumericValue>(Union135 value){return new Union135 { Value = value };}
+	public static implicit operator Union135(List<CSSKeywordValue> value){return new Union135 { Value = value };}
+	public static implicit operator List<CSSKeywordValue>(Union135 value){return new Union135 { Value = value };}
 }
 
 ///<summary>

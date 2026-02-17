@@ -1,4 +1,4 @@
-//16.02.2026 21:28:23
+//17.02.2026 21:27:36
 
 #nullable enable
 //Disable missing XML comments.
@@ -7826,10 +7826,12 @@ public partial class AesKeyGenParams : Algorithm
 	public required ushort Length;
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/aesderivedkeyparams/aesderivedkeyparams.generated.xml' path='docs/AesDerivedKeyParams/*'/>
 [ToObject]
 public partial class AesDerivedKeyParams : Algorithm
 {
-	[Value("length")]
+	///<include file='CSharpToJavaScript/Utils/Docs/aesderivedkeyparams/aesderivedkeyparams.generated.xml' path='docs/AesDerivedKeyParamsLength/*'/>
+[Value("length")]
 	public required ushort Length;
 }
 

@@ -1,4 +1,4 @@
-//16.02.2026 21:28:23
+//17.02.2026 21:27:36
 
 #nullable enable
 //Disable missing XML comments.
@@ -337,14 +337,18 @@ public partial class MediaDevices
 	public Task<MediaDeviceInfo> SelectAudioOutput(AudioOutputOptions options = default) { throw new System.NotImplementedException(); }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/audiosession/audiosession.generated.xml' path='docs/AudioSession/*'/>
 [Value("AudioSession")]
 public partial class AudioSession : EventTarget
 {
-	[Value("type")]
+	///<include file='CSharpToJavaScript/Utils/Docs/audiosession/audiosession.generated.xml' path='docs/AudioSessionType/*'/>
+[Value("type")]
 	public AudioSessionType Type { get; set; }
-	[Value("state")]
+	///<include file='CSharpToJavaScript/Utils/Docs/audiosession/audiosession.generated.xml' path='docs/AudioSessionState/*'/>
+[Value("state")]
 	public AudioSessionState State { get; }
-	[Value("onstatechange")]
+	///<include file='CSharpToJavaScript/Utils/Docs/audiosession/audiosession.generated.xml' path='docs/AudioSessionOnstatechange/*'/>
+[Value("onstatechange")]
 	public EventHandler Onstatechange { get; set; }
 }
 
@@ -1958,11 +1962,13 @@ public partial class CSSFontFeatureValuesRule : CSSRule
 	public CSSFontFeatureValuesMap HistoricalForms { get; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssfontfeaturevaluesmap/cssfontfeaturevaluesmap.generated.xml' path='docs/CSSFontFeatureValuesMap/*'/>
 [Value("CSSFontFeatureValuesMap")]
 public partial class CSSFontFeatureValuesMap
 {
 	
-	[Value("set")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssfontfeaturevaluesmap/cssfontfeaturevaluesmap.generated.xml' path='docs/CSSFontFeatureValuesMapSet/*'/>
+[Value("set")]
 	public Undefined Set(CSSOMString featureValueName, Union4 values) { throw new System.NotImplementedException(); }
 }
 
@@ -2156,22 +2162,27 @@ public partial class SVGMaskElement : SVGElement
 	public SVGAnimatedLength Height { get; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssfunctionrule/cssfunctionrule.generated.xml' path='docs/CSSFunctionRule/*'/>
 [Value("CSSFunctionRule")]
 public partial class CSSFunctionRule : CSSGroupingRule
 {
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssfunctiondescriptors/cssfunctiondescriptors.generated.xml' path='docs/CSSFunctionDescriptors/*'/>
 [Value("CSSFunctionDescriptors")]
 public partial class CSSFunctionDescriptors : CSSStyleDeclaration
 {
-	[Value("result")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssfunctiondescriptors/cssfunctiondescriptors.generated.xml' path='docs/CSSFunctionDescriptorsResult/*'/>
+[Value("result")]
 	public CSSOMString Result { get; set; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssfunctiondeclarations/cssfunctiondeclarations.generated.xml' path='docs/CSSFunctionDeclarations/*'/>
 [Value("CSSFunctionDeclarations")]
 public partial class CSSFunctionDeclarations : CSSRule
 {
-	[Value("style")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssfunctiondeclarations/cssfunctiondeclarations.generated.xml' path='docs/CSSFunctionDeclarationsStyle/*'/>
+[Value("style")]
 	public CSSFunctionDescriptors Style { get; }
 }
 
@@ -3028,15 +3039,19 @@ public partial class CSSColor : CSSColorValue
 	public CSSColor() { }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssviewtransitionrule/cssviewtransitionrule.generated.xml' path='docs/CSSViewTransitionRule/*'/>
 [Value("CSSViewTransitionRule")]
 public partial class CSSViewTransitionRule : CSSRule
 {
-	[Value("navigation")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssviewtransitionrule/cssviewtransitionrule.generated.xml' path='docs/CSSViewTransitionRuleNavigation/*'/>
+[Value("navigation")]
 	public CSSOMString Navigation { get; }
-	[Value("types")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssviewtransitionrule/cssviewtransitionrule.generated.xml' path='docs/CSSViewTransitionRuleTypes/*'/>
+[Value("types")]
 	public CSSOMString[] Types { get; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/viewtransitiontypeset/viewtransitiontypeset.generated.xml' path='docs/ViewTransitionTypeSet/*'/>
 [Value("ViewTransitionTypeSet")]
 public partial class ViewTransitionTypeSet
 {
@@ -3085,10 +3100,12 @@ public partial class Window
 	public Viewport Viewport { get; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/viewport/viewport.generated.xml' path='docs/Viewport/*'/>
 [Value("Viewport")]
 public partial class Viewport
 {
-	[Value("segments")]
+	///<include file='CSharpToJavaScript/Utils/Docs/viewport/viewport.generated.xml' path='docs/ViewportSegments/*'/>
+[Value("segments")]
 	public DOMRect[]? Segments { get; }
 }
 
@@ -3739,10 +3756,12 @@ public partial class CSSStyleDeclaration
 	public CSSRule? ParentRule { get; }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/cssstyleproperties/cssstyleproperties.generated.xml' path='docs/CSSStyleProperties/*'/>
 [Value("CSSStyleProperties")]
 public partial class CSSStyleProperties : CSSStyleDeclaration
 {
-	[Value("cssFloat")]
+	///<include file='CSharpToJavaScript/Utils/Docs/cssstyleproperties/cssstyleproperties.generated.xml' path='docs/CSSStylePropertiesCssFloat/*'/>
+[Value("cssFloat")]
 	public CSSOMString CssFloat { get; set; }
 }
 
@@ -3754,13 +3773,17 @@ public partial class Window
 	public CSSStyleDeclaration GetComputedStyle(Element elt, CSSOMString? pseudoElt = default) { throw new System.NotImplementedException(); }
 }
 
+///<include file='CSharpToJavaScript/Utils/Docs/datacue/datacue.generated.xml' path='docs/DataCue/*'/>
 [Value("DataCue")]
 public partial class DataCue : TextTrackCue
 {
-		public DataCue(Number startTime, double endTime, dynamic value, DOMString type = default) { }
-	[Value("value")]
+	///<include file='CSharpToJavaScript/Utils/Docs/datacue/datacue.generated.xml' path='docs/DataCueDataCue/*'/>
+	public DataCue(Number startTime, double endTime, dynamic value, DOMString type = default) { }
+	///<include file='CSharpToJavaScript/Utils/Docs/datacue/datacue.generated.xml' path='docs/DataCueValue/*'/>
+[Value("value")]
 	public dynamic Value { get; set; }
-	[Value("type")]
+	///<include file='CSharpToJavaScript/Utils/Docs/datacue/datacue.generated.xml' path='docs/DataCueType/*'/>
+[Value("type")]
 	public DOMString Type { get; }
 	public DataCue() { }
 }

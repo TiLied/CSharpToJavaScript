@@ -6,9 +6,9 @@ This library is a "core" where all the "magic" happens for translating/convertin
 ## Status
 test262-parser([master](https://github.com/tc39/test262-parser-tests)): Only JS part (code is not public, yet. ES5 implemented) Total tests: 5363 | Passed: 2824 (52 %) | Failed: 2539
 
-test262([es5 branch](https://github.com/tc39/test262/tree/es5-tests)): Total tests: 11725 | Passed: 7300 (62 %)** | Failed: 4425
+test262([es5 branch](https://github.com/tc39/test262/tree/es5-tests)): Total tests: 11725 | Passed: 1272 (10 %)** | Failed: 10453
 
-**Note: Tests run with "UseVarOverLet" and "DisableCompilationErrors" options, using [Jint](https://github.com/sebastienros/jint) as an engine. The goal is to generate valid C# code and get rid of "DisableCompilationErrors" option.
+**Note: Tests run with "UseVarOverLet" option, using [Jint](https://github.com/sebastienros/jint) as an engine.
 
 ## Hello world
 - Install [nuget package](https://www.nuget.org/packages/CSharpToJavaScript/) or download a [specific version](https://github.com/TiLied/CSharpToJavaScript/releases).

@@ -16,7 +16,7 @@ The <strong><c>abort()</c></strong> method of the <see cref="WritableStream"/> i
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/abort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/>, which fulfills with the value given in the <c>reason</c> parameter.</returns>
+<returns>A <see cref="Promise"/>, which fulfills with <c>undefined</c>.</returns>
 </WritableStreamAbort>
 <WritableStreamClose>
 <summary>

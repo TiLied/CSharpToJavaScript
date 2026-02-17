@@ -176,7 +176,7 @@ The <strong><c>renderBlockingStatus</c></strong> read-only property returns the 
 </PerformanceResourceTimingRenderBlockingStatus>
 <PerformanceResourceTimingRequestStart>
 <summary>
-The <strong><c>requestStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.
+The <strong><c>requestStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retries the request, the value returned will be the start of the retry request.
 </summary>
 <remarks>
 <para>There is no <strong>end</strong> property for <c>requestStart</c>. To measure the request time, calculate <see cref="PerformanceResourceTiming.ResponseStart"/> - <c>requestStart</c> (see the example below).</para>

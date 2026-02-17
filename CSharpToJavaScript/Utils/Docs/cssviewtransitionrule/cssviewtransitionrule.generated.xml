@@ -1,0 +1,32 @@
+<docs>
+<CSSViewTransitionRule>
+<summary>
+The <strong><c>CSSViewTransitionRule</c></strong> interface represents a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition">@view-transition</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition">@view-transition</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSViewTransitionRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSViewTransitionRule>
+<CSSViewTransitionRuleNavigation>
+<summary>
+The <strong><c>navigation</c></strong> read-only property of the <see cref="CSSViewTransitionRule"/> interface returns the associated {{cssxref("@view-transition")}} at-rule's <c>navigation</c> descriptor value.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition">@view-transition</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSViewTransitionRule/navigation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If no <c>navigation</c> descriptor is set on the <c>_view-transition</c> at-rule, the <c>navigation</c> property is equal to an empty string.</value>
+</CSSViewTransitionRuleNavigation>
+<CSSViewTransitionRuleTypes>
+<summary>
+The <strong><c>types</c></strong> read-only property of the <see cref="CSSViewTransitionRule"/> interface returns an array containing the associated {{cssxref("@view-transition")}} at-rule's <c>types</c> descriptor values.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition">@view-transition</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSViewTransitionRule/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings.If no <c>types</c> descriptor is set on the <c>_view-transition</c> at-rule, the <c>types</c> property is equal to an empty array.</value>
+</CSSViewTransitionRuleTypes>
+</docs>

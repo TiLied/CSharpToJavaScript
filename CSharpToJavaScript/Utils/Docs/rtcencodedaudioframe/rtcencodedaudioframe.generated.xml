@@ -24,12 +24,21 @@ The <strong><c>data</c></strong> property of the <see cref="RTCEncodedAudioFrame
 The <strong><c>getMetadata()</c></strong> method of the <see cref="RTCEncodedAudioFrame"/> interface returns an object containing the metadata associated with the frame.
 </summary>
 <remarks>
-<para>This includes information about the frame, including the audio encoding used, the synchronization source and contributing sources, and the sequence number (for incoming frames).</para>
+<para>This includes information about the frame, such as the audio encoding used, the synchronization source and contributing sources, and the sequence number (for incoming frames).</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An object with the following properties:</returns>
 </RTCEncodedAudioFrameGetMetadata>
+<RTCEncodedAudioFrameRTCEncodedAudioFrame>
+<summary>
+The <strong><c>RTCEncodedAudioFrame()</c></strong> constructor creates a new and fully independent <see cref="RTCEncodedAudioFrame"/> object.
+</summary>
+<remarks>
+<para>The new object is a deep clone of the original object data and metadata, with any metadata specified in the options parameter overwriting the copied values.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame/RTCEncodedAudioFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCEncodedAudioFrameRTCEncodedAudioFrame>
 <RTCEncodedAudioFrameTimestamp>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>timestamp</c></strong> read-only property of the <see cref="RTCEncodedAudioFrame"/> interface indicates the time at which frame sampling started.

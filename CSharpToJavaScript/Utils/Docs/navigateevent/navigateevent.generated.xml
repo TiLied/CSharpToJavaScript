@@ -1,7 +1,7 @@
 <docs>
 <NavigateEvent>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigateEvent</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object for the <see cref="Navigationnavigate"/> event, which fires when <see href="https://github.com/WICG/navigation-api#appendix-types-of-navigations">any type of navigation</see> is initiated (this includes usage of {{domxref(&amp;quot;History API&amp;quot;, &amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} features like <see cref="History.Go"/>). <c>NavigateEvent</c> provides access to information about that navigation, and allows developers to intercept and control the navigation handling.
+The <strong><c>NavigateEvent</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object for the <see cref="Navigationnavigate"/> event, which fires when <see href="https://github.com/WICG/navigation-api#appendix-types-of-navigations">any type of navigation</see> is initiated (this includes usage of {{domxref(&amp;quot;History API&amp;quot;, &amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} features like <see cref="History.Go"/>). <c>NavigateEvent</c> provides access to information about that navigation, and allows developers to intercept and control the navigation handling.
 </summary>
 <remarks>
 <para></para>
@@ -11,7 +11,7 @@
 </NavigateEvent>
 <NavigateEventCanIntercept>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canIntercept</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation can be intercepted and have its URL rewritten, or <c>false</c> otherwise
+The <strong><c>canIntercept</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation can be intercepted and have its URL rewritten, or <c>false</c> otherwise
 </summary>
 <remarks>
 <para>There are several rules around when a navigation can be intercepted. For example:</para><para>See the spec for more explanation on <see href="https://html.spec.whatwg.org/multipage/nav-history-apis.html#can-have-its-url-rewritten">when a Document can have its URL rewritten</see>, including a table of examples.</para>
@@ -22,7 +22,7 @@
 </NavigateEventCanIntercept>
 <NavigateEventDestination>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destination</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns a <see cref="NavigationDestination"/> object representing the destination being navigated to.
+The <strong><c>destination</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns a <see cref="NavigationDestination"/> object representing the destination being navigated to.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -32,7 +32,7 @@
 </NavigateEventDestination>
 <NavigateEventDownloadRequest>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>downloadRequest</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the filename of the file requested for download, in the case of a download navigation (e.g., an {{htmlelement("a")}} or {{htmlelement("area")}} element with a <c>download</c> attribute), or <c>null</c> otherwise.
+The <strong><c>downloadRequest</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the filename of the file requested for download, in the case of a download navigation (e.g., an {{htmlelement("a")}} or {{htmlelement("area")}} element with a <c>download</c> attribute), or <c>null</c> otherwise.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -42,7 +42,7 @@
 </NavigateEventDownloadRequest>
 <NavigateEventFormData>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>formData</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the <see cref="FormData"/> object representing the submitted data in the case of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST"><c>POST</c></see> form submission, or <c>null</c> otherwise.
+The <strong><c>formData</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the <see cref="FormData"/> object representing the submitted data in the case of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST"><c>POST</c></see> form submission, or <c>null</c> otherwise.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -52,7 +52,7 @@
 </NavigateEventFormData>
 <NavigateEventHashChange>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hashChange</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation is a fragment navigation (i.e., to a fragment identifier in the same document), or <c>false</c> otherwise.
+The <strong><c>hashChange</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation is a fragment navigation (i.e., to a fragment identifier in the same document), or <c>false</c> otherwise.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -62,7 +62,7 @@
 </NavigateEventHashChange>
 <NavigateEventHasUAVisualTransition>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hasUAVisualTransition</c></strong> read-only property of the <see cref="NavigateEvent"/> interface returns <c>true</c> if the user agent performed a visual transition for this navigation before dispatching this event, or <c>false</c> otherwise.
+The <strong><c>hasUAVisualTransition</c></strong> read-only property of the <see cref="NavigateEvent"/> interface returns <c>true</c> if the user agent performed a visual transition for this navigation before dispatching this event, or <c>false</c> otherwise.
 </summary>
 <remarks>
 <para>User agents may provide a built-in visual transition when executing site navigations. If the site author also adds a visual transition, user agent and author transitions may conflict and confuse a visitor. The property lets you detect whether a UA transition was provided so that you can skip author transitions for a better user experience.</para>
@@ -73,7 +73,7 @@
 </NavigateEventHasUAVisualTransition>
 <NavigateEventInfo>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>info</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the <c>info</c> data value passed by the initiating navigation operation (e.g., <see cref="Navigation.Back"/>, or <see cref="Navigation.Navigate"/>), or <c>undefined</c> if no <c>info</c> data was passed.
+The <strong><c>info</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the <c>info</c> data value passed by the initiating navigation operation (e.g., <see cref="Navigation.Back"/>, or <see cref="Navigation.Navigate"/>), or <c>undefined</c> if no <c>info</c> data was passed.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Methods that allow info to be passed — <see cref="Navigation.Back"/>, <see cref="Navigation.Forward"/>, <see cref="Navigation.Navigate"/>, <see cref="Navigation.Reload"/>, and <see cref="Navigation.TraverseTo"/><br/></para>
@@ -83,7 +83,7 @@
 </NavigateEventInfo>
 <NavigateEventIntercept>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>intercept()</c></strong> method of the<br/><see cref="NavigateEvent"/> interface intercepts this navigation, turning it into a same-document navigation to the <see cref="NavigationDestination.Url"/> URL.
+The <strong><c>intercept()</c></strong> method of the<br/><see cref="NavigateEvent"/> interface intercepts this navigation, turning it into a same-document navigation to the <see cref="NavigationDestination.Url"/> URL.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -93,7 +93,7 @@
 </NavigateEventIntercept>
 <NavigateEventNavigateEvent>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigateEvent()</c></strong> constructor creates a new <see cref="NavigateEvent"/> object instance.
+The <strong><c>NavigateEvent()</c></strong> constructor creates a new <see cref="NavigateEvent"/> object instance.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -103,7 +103,7 @@
 </NavigateEventNavigateEvent>
 <NavigateEventNavigationType>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigationType</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the type of the navigation — <c>push</c>, <c>reload</c>, <c>replace</c>, or <c>traverse</c>.
+The <strong><c>navigationType</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns the type of the navigation — <c>push</c>, <c>reload</c>, <c>replace</c>, or <c>traverse</c>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -113,7 +113,7 @@
 </NavigateEventNavigationType>
 <NavigateEventScroll>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>scroll()</c></strong> method of the<br/><see cref="NavigateEvent"/> interface can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
+The <strong><c>scroll()</c></strong> method of the<br/><see cref="NavigateEvent"/> interface can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -123,7 +123,7 @@
 </NavigateEventScroll>
 <NavigateEventSignal>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>signal</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns an <see cref="AbortSignal"/>, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+The <strong><c>signal</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns an <see cref="AbortSignal"/>, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -133,7 +133,7 @@
 </NavigateEventSignal>
 <NavigateEventSourceElement>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceElement</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns an <see cref="Element"/> object representing the initiating element, in cases where the navigation was initiated by an element.
+The <strong><c>sourceElement</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns an <see cref="Element"/> object representing the initiating element, in cases where the navigation was initiated by an element.
 </summary>
 <remarks>
 <para>The initiating element can be:</para>
@@ -144,7 +144,7 @@
 </NavigateEventSourceElement>
 <NavigateEventUserInitiated>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>userInitiated</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser&amp;apos;s &amp;quot;Back&amp;quot;/&amp;quot;Forward&amp;quot; buttons), or <c>false</c> otherwise.
+The <strong><c>userInitiated</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser&amp;apos;s &amp;quot;Back&amp;quot;/&amp;quot;Forward&amp;quot; buttons), or <c>false</c> otherwise.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>The table found at <see href="https://github.com/WICG/navigation-api#appendix-types-of-navigations">Appendix: types of navigations</see> shows which navigation types are user-initiated.</para></blockquote>

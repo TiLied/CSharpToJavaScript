@@ -39,6 +39,16 @@ The <strong><c>device</c></strong> read-only property of the<br/><see cref="GPUA
 </remarks>
 <value>A string.</value>
 </GPUAdapterInfoDevice>
+<GPUAdapterInfoIsFallbackAdapter>
+<summary>
+The <strong><c>isFallbackAdapter</c></strong> read-only property of the<br/><see cref="GPUAdapterInfo"/> interface returns <c>true</c> if the adapter is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters">fallback adapter</see>, and <c>false</c> if not.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/isFallbackAdapter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</GPUAdapterInfoIsFallbackAdapter>
 <GPUAdapterInfoSubgroupMaxSize>
 <summary>
 The <strong><c>subgroupMaxSize</c></strong> read-only property of the <see cref="GPUAdapterInfo"/> interface returns the maximum supported <see href="https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size">subgroup size</see> for the <see cref="GPUAdapter"/>. This can be used along with the <c>subgroups</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures">feature</see>.

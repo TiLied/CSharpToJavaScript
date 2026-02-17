@@ -1,7 +1,7 @@
 <docs>
 <NavigationActivation>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationActivation</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see> represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
+The <strong><c>NavigationActivation</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see> represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
 </summary>
 <remarks>
 <para>This object is accessed via the <see cref="PageSwapEvent.Activation"/> and <see cref="Navigation.Activation"/> properties. Note that, in each case, the <c>NavigationActivation</c> represents a different navigation:</para>
@@ -11,7 +11,7 @@
 </NavigationActivation>
 <NavigationActivationEntry>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entry</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the inbound ("to") document in the navigation. This is equivalent to the <see cref="Navigation.CurrentEntry"/> property at the moment the inbound document was activated.
+The <strong><c>entry</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the inbound ("to") document in the navigation. This is equivalent to the <see cref="Navigation.CurrentEntry"/> property at the moment the inbound document was activated.
 </summary>
 <remarks>
 <para>There are some cases in which either the <c>from</c> or <c>entry</c> <see cref="NavigationHistoryEntry"/> objects would not be viable targets for the <c>traverseTo()</c> method, as they might not be retained in history. For example, the document can be activated using <c>location.replace()</c> or its initial entry could be replaced by <c>history.replaceState()</c>. However, those entries&amp;apos; <c>url</c> properties and <c>getState()</c> methods are still accessible.</para>
@@ -22,7 +22,7 @@
 </NavigationActivationEntry>
 <NavigationActivationFrom>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>from</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the outgoing ("from") document in the navigation.
+The <strong><c>from</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the outgoing ("from") document in the navigation.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
@@ -32,7 +32,7 @@
 </NavigationActivationFrom>
 <NavigationActivationNavigationType>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigationType</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a string indicating the type of navigation.
+The <strong><c>navigationType</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a string indicating the type of navigation.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>

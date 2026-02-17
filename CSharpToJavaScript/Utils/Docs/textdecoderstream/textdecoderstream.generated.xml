@@ -1,10 +1,10 @@
 <docs>
 <TextDecoderStream>
 <summary>
-The <strong><c>TextDecoderStream</c></strong> interface of the <see cref="'Encoding API'"/> converts a stream of text in a binary encoding, such as UTF-8 etc., to a stream of strings.<br/>It is the streaming equivalent of <see cref="TextDecoder"/>.
+The <strong><c>TextDecoderStream</c></strong> interface of the <see cref="'Encoding API'"/> converts a stream of text in a binary encoding, such as UTF-8 etc., to a stream of strings.<br/>It is the streaming equivalent of <see cref="TextDecoder"/>.<br/>It implements the same shape as a <see cref="TransformStream"/>, allowing it to be used in <see cref="ReadableStream.PipeThrough"/> and similar methods.
 </summary>
 <remarks>
-<para>-<see cref="TextEncoderStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</see><br/>-<see href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests">Streaming requests with the fetch API</see>, developer.chrome.com (2020)<br/></para>
+<para>-<see cref="TextEncoderStream"/><br/>-<see cref="TextDecoder"/><br/>-<see cref="TransformStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</see><br/>-<see href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests">Streaming requests with the fetch API</see>, developer.chrome.com (2020)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextDecoderStream>
@@ -39,9 +39,10 @@ The <strong><c>ignoreBOM</c></strong> read-only property of the <see cref="TextD
 </TextDecoderStreamIgnoreBOM>
 <TextDecoderStreamReadable>
 <summary>
-The <strong><c>readable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="ReadableStream"/>.
+The <strong><c>readable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="ReadableStream"/> that emits decoded strings.
 </summary>
 <remarks>
+<para>-<see cref="TransformStream.Readable"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/readable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="ReadableStream"/>.</value>
@@ -56,9 +57,10 @@ The <strong><c>TextDecoderStream()</c></strong> constructor creates a new <see c
 </TextDecoderStreamTextDecoderStream>
 <TextDecoderStreamWritable>
 <summary>
-The <strong><c>writable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="WritableStream"/>.
+The <strong><c>writable</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a <see cref="WritableStream"/> that accepts binary data, in the form of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} chunks ({{jsxref("SharedArrayBuffer")}} and its views are also allowed), to be decoded into strings.
 </summary>
 <remarks>
+<para>-<see cref="TransformStream.Writable"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="WritableStream"/>.</value>

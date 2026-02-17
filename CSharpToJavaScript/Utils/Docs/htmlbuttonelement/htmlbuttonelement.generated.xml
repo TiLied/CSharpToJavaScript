@@ -26,7 +26,7 @@ The <strong><c>command</c></strong> property of the <see cref="HTMLButtonElement
 </summary>
 <remarks>
 <para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command"><c>command</c></see> HTML attribute.</para>
-<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/>-<see cref="CommandEvent"/><br/></para>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/>-<see cref="CommandEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command"><c>&amp;lt;button&amp;gt;</c> <c>command</c> attribute</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/command"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string. See the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command"><c>command</c></see> attribute for valid values.</value>
@@ -116,6 +116,17 @@ The <strong><c>formTarget</c></strong> property of the <see cref="HTMLButtonElem
 </remarks>
 <value>A string.</value>
 </HTMLButtonElementFormTarget>
+<HTMLButtonElementInterestForElement>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>interestForElement</c></strong> property of the <see cref="HTMLButtonElement"/> interface gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("button")}} element is specified as an interest invoker.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker">Creating an interest invoker</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">The Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/interestForElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> object instance, or <c>null</c> if the associated <c>&amp;lt;button&amp;gt;</c> element does not have a target element set.</value>
+</HTMLButtonElementInterestForElement>
 <HTMLButtonElementLabels>
 <summary>
 The <strong><c>HTMLButtonElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element.

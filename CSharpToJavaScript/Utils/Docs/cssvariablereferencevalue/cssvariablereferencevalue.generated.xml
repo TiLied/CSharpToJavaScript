@@ -17,7 +17,7 @@ Creates a new <see cref="'CSSVariableReferenceValue'"/>.
 </CSSVariableReferenceValueCSSVariableReferenceValue>
 <CSSVariableReferenceValueFallback>
 <summary>
-The <strong><c>fallback</c></strong> read-only property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#custom_property_fallback_values">custom property fallback value</see> of the <see cref="CSSVariableReferenceValue"/>.
+The <strong><c>fallback</c></strong> read-only property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties#custom_property_fallback_values">custom property fallback value</see> of the <see cref="CSSVariableReferenceValue"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue/fallback"> <em>See also on MDN</em> </seealso></para>
@@ -26,11 +26,11 @@ The <strong><c>fallback</c></strong> read-only property of the<br/><see cref="CS
 </CSSVariableReferenceValueFallback>
 <CSSVariableReferenceValueVariable>
 <summary>
-The <strong><c>variable</c></strong> property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom property name</see> of the<br/><see cref="CSSVariableReferenceValue"/>.
+The <strong><c>variable</c></strong> property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/--*">custom property name</see> of the<br/><see cref="CSSVariableReferenceValue"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue/variable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string beginning with <c>--</c> (that is, a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom property name</see>).</value>
+<value>A string beginning with <c>--</c> (that is, a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/--*">custom property name</see>).</value>
 </CSSVariableReferenceValueVariable>
 </docs>

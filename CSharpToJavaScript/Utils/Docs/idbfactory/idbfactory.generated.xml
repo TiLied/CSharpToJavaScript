@@ -39,7 +39,7 @@ The <strong><c>deleteDatabase()</c></strong> method of the<br/><see cref="IDBFac
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="IDBOpenDBRequest"/> on which subsequent events related to this request are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is <c>null</c>.</returns>
+<returns>An <see cref="IDBOpenDBRequest"/> on which subsequent events related to this request are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is <c>null</c>.</returns>
 </IDBFactoryDeleteDatabase>
 <IDBFactoryOpen>
 <summary>
@@ -50,6 +50,6 @@ The <strong><c>open()</c></strong> method of the <see cref="IDBFactory"/> interf
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria">Browser storage quotas and eviction criteria</see>.<br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="IDBOpenDBRequest"/> object on which subsequent events related to this request are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is a <see cref="IDBDatabase"/> object representing the connection to the database.</returns>
+<returns>An <see cref="IDBOpenDBRequest"/> object on which subsequent events related to this request are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is an <see cref="IDBDatabase"/> object representing the connection to the database.</returns>
 </IDBFactoryOpen>
 </docs>

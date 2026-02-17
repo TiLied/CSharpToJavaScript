@@ -16,7 +16,7 @@ The <strong><c>id</c></strong> property contains a<br/>string which uniquely ide
 <para>This ID can be used with the<br/><see cref="VideoTrackList.GetTrackById"/> method to locate a specific track within<br/>the media associated with a media element.</para><para>The track ID can also be used as the fragment of a URL that loads the specific track<br/>(if the media supports media fragments).</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which identifies the track, suitable for use when calling<br/><see cref="VideoTrackList.GetTrackById"/> on an<br/><see cref="VideoTrackList"/> such as the one specified by a media element's<br/><see cref="HTMLMediaElement.VideoTracks"/> property.</value>
+<value>A string which identifies the track, suitable for use when calling<br/><see cref="VideoTrackList.GetTrackById"/> on a<br/><see cref="VideoTrackList"/> such as the one specified by a media element's<br/><see cref="HTMLMediaElement.VideoTracks"/> property.</value>
 </VideoTrackId>
 <VideoTrackKind>
 <summary>
@@ -45,7 +45,7 @@ The read-only <strong><see cref="VideoTrack"/></strong><br/>property <strong><c>
 <para>For tracks that include multiple languages<br/>(such as a movie in English in which a few lines are spoken in other languages), this<br/>should be the video&amp;apos;s primary language.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/language"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of<br/>the primary language used in the video track, or an empty string (<c>&amp;quot;&amp;quot;</c>) if<br/>the language is not specified or known, or if the track doesn&amp;apos;t contain speech.For example, if the primary language used in the track is United States English, this<br/>value would be <c>&amp;quot;en-US&amp;quot;</c>. For Brazilian Portuguese, the value would be<br/><c>&amp;quot;pt-BR&amp;quot;</c>.</value>
+<value>A string specifying the <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see> of<br/>the primary language used in the video track, or an empty string (<c>&amp;quot;&amp;quot;</c>) if<br/>the language is not specified or known, or if the track doesn&amp;apos;t contain speech.For example, if the primary language used in the track is United States English, this<br/>value would be <c>&amp;quot;en-US&amp;quot;</c>. For Brazilian Portuguese, the value would be<br/><c>&amp;quot;pt-BR&amp;quot;</c>.</value>
 </VideoTrackLanguage>
 <VideoTrackSelected>
 <summary>

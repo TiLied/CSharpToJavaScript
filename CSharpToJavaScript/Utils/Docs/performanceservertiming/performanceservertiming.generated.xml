@@ -21,7 +21,7 @@ The <strong><c>description</c></strong> read-only property returns a<br/>string 
 </PerformanceServerTimingDescription>
 <PerformanceServerTimingDuration>
 <summary>
-The <strong><c>duration</c></strong> read-only property returns a double that contains the server-specified metric duration, or the value <c>0.0</c>.
+The <strong><c>duration</c></strong> read-only property returns a double that contains the server-specified metric duration (usually in milliseconds), or the value <c>0.0</c>.
 </summary>
 <remarks>
 <para>-<see cref="PerformanceServerTiming"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see><br/></para>

@@ -38,4 +38,14 @@ The <strong><c>state</c></strong> read-only property of the<br/><see cref="RTCDt
 </remarks>
 <value>A string. Its value is one of the following:</value>
 </RTCDtlsTransportState>
+<RTCDtlsTransportStatechange>
+<summary>
+A <strong><c>statechange</c></strong> event occurs when the <see cref="RTCDtlsTransport"/> changes state. The <see cref="RTCDtlsTransport.State"/> property can be used to determine the current state of the underlying Datagram Transport Layer Security (DTLS) transport.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCDtlsTransport.State"/><br/>-<see cref="RTCDtlsTransport.Error"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/statechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDtlsTransportStatechange>
 </docs>

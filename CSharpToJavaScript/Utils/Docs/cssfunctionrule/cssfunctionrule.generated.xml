@@ -1,0 +1,42 @@
+<docs>
+<CSSFunctionRule>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CSSFunctionRule</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see> represents CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see> (custom function) <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rules</see>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/>-<see cref="CSSFunctionDescriptors"/><br/>-<see cref="CSSFunctionDeclarations"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFunctionRule>
+<CSSFunctionRuleGetParameters>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getParameters()</c></strong> method of the <see cref="CSSFunctionRule"/> interface returns an array of objects representing the custom function's parameters.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionRule/getParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of objects containing the following properties:If no parameters were specified in the associated <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see> at-rule, an empty array is returned.</returns>
+</CSSFunctionRuleGetParameters>
+<CSSFunctionRuleName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>name</c></strong> property of the <see cref="CSSFunctionRule"/> interface returns a string representing the custom function's name.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionRule/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CSSFunctionRuleName>
+<CSSFunctionRuleReturnType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>returnType</c></strong> property of the <see cref="CSSFunctionRule"/> interface returns a string representing the custom function's return type.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionRule/returnType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If no return type is specified in the associated <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see> at-rule, <c>returnType</c> returns <c>*</c>.</value>
+</CSSFunctionRuleReturnType>
+</docs>

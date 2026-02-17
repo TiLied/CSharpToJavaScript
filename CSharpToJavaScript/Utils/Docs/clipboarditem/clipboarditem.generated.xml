@@ -5,7 +5,7 @@ The <strong><c>ClipboardItem</c></strong> interface of the <see href="https://de
 </summary>
 <remarks>
 <para>The <strong><c>ClipboardItem</c></strong> interface enables developers to use a single type to represent a range of different data formats.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>read()</c> and <c>write()</c> methods can be used to work with text strings and arbitrary data items represented by <see cref="Blob"/> instances. However, if you are solely working with text, it is more convenient to use the <see cref="Clipboard.ReadText"/> and <see cref="Clipboard.WriteText"/> methods.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para>-<see cref="ClipboardChangeEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ClipboardItem>

@@ -23,6 +23,7 @@ The <strong><c>close()</c></strong> method of the <see cref="VideoDecoder"/> int
 The <strong><c>configure()</c></strong> method of the <see cref="VideoDecoder"/> interface enqueues a control message to configure the video decoder for decoding chunks.
 </summary>
 <remarks>
+<para>-<see cref="VideoDecoder.IsConfigSupported"/><br/>-<see href="https://webcodecsfundamentals.org/datasets/codec-support-table/">Codec String Support Table</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoDecoder/configure"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
@@ -68,6 +69,7 @@ The <strong><c>flush()</c></strong> method of the <see cref="VideoDecoder"/> int
 The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="VideoDecoder"/> interface checks if the given config is supported (that is, if <see cref="VideoDecoder"/> objects can be successfully configured with the given config).
 </summary>
 <remarks>
+<para>-<see cref="VideoDecoder.Configure"/><br/>-<see href="https://webcodecsfundamentals.org/datasets/codec-support-table/">Codec String Support Table</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoDecoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>

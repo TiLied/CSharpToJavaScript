@@ -13,6 +13,7 @@ The <strong><c>AbstractRange</c></strong> abstract interface is the base class u
 The read-only <strong><c>collapsed</c></strong> property of the <see cref="AbstractRange"/> interface returns <c>true</c> if the range&amp;apos;s start position and end position are the same.
 </summary>
 <remarks>
+<para>A collapsed range is empty (containing no content), and specifies a single point in a DOM tree. To collapse a range, see the <see cref="Range.Collapse"/> method.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/collapsed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value which is <c>true</c> if the range is <strong>collapsed</strong>. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range.</value>
@@ -22,6 +23,7 @@ The read-only <strong><c>collapsed</c></strong> property of the <see cref="Abstr
 The read-only <strong><c>endContainer</c></strong> property of the <see cref="AbstractRange"/> interface returns the <see cref="Node"/> in which the end of the range is located.
 </summary>
 <remarks>
+<para>To change the end position, use the <see cref="Range.SetEnd"/> method or a similar one.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/endContainer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <see cref="Node"/> which contains the last character of the range.</value>
@@ -31,15 +33,17 @@ The read-only <strong><c>endContainer</c></strong> property of the <see cref="Ab
 The <strong><c>endOffset</c></strong> property of the <see cref="AbstractRange"/> interface returns the offset into the end node of the range's end position.
 </summary>
 <remarks>
+<para>To change the end position, use the <see cref="Range.SetEnd"/> method or a similar one.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/endOffset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the number of characters into the <see cref="Node"/> indicated by <see cref="AbstractRange.EndContainer"/> at which the final character of the range is located.</value>
+<value>An integer value indicating the number of characters into the <see cref="Node"/> indicated by <see cref="AbstractRange.EndContainer"/> at which the final character of the range is located.If the <c>endContainer</c> is a <see cref="Node"/> of type <see cref="Text"/>, <see cref="Comment"/>, or <see cref="CDATASection"/>, then the offset is the number of characters from the start of the <c>endContainer</c> to the boundary point of the range. For other <see cref="Node"/> types, the <c>endOffset</c> is the number of child nodes between the start of the <c>endContainer</c> and the boundary point of the range.</value>
 </AbstractRangeEndOffset>
 <AbstractRangeStartContainer>
 <summary>
-The read-only <strong><c>startContainer</c></strong> property of the <see cref="AbstractRange"/> interface returns the start <see cref="Node"/> for the range.
+The read-only <strong><c>startContainer</c></strong> property of the <see cref="AbstractRange"/> interface returns the <see cref="Node"/> in which the start of the range is located.
 </summary>
 <remarks>
+<para>To change the start position, use the <see cref="Range.SetStart"/> method or a similar one.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/startContainer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <see cref="Node"/> inside which the start position of the range is found.</value>
@@ -49,8 +53,9 @@ The read-only <strong><c>startContainer</c></strong> property of the <see cref="
 The read-only <strong><c>startOffset</c></strong> property of the <see cref="AbstractRange"/> interface returns the offset into the start node of the range's start position.
 </summary>
 <remarks>
+<para>To change the start position, use the <see cref="Range.SetStart"/> method or a similar one.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/startOffset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the number of characters into the <see cref="Node"/> indicated by <see cref="AbstractRange.StartContainer"/> at which the first character of the range is located.</value>
+<value>An integer value indicating the number of characters into the <see cref="Node"/> indicated by <see cref="AbstractRange.StartContainer"/> at which the first character of the range is located.If the <c>startContainer</c> is a <see cref="Node"/> of type <see cref="Text"/>, <see cref="Comment"/>, or <see cref="CDATASection"/>, then the offset is the number of characters from the start of the <c>startContainer</c> to the boundary point of the range. For other <see cref="Node"/> types, the <c>startOffset</c> is the number of child nodes between the start of the <c>startContainer</c> and the boundary point of the range.</value>
 </AbstractRangeStartOffset>
 </docs>

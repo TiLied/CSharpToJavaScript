@@ -50,6 +50,16 @@ The <strong><c>interval</c></strong> read-only property of the <see cref="Device
 </remarks>
 <value>A number representing the interval of time, in milliseconds.</value>
 </DeviceMotionEventInterval>
+<DeviceMotionEventRequestPermission>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestPermission()</c></strong> static method of the <see cref="DeviceMotionEvent"/> interface requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. This method requires {{Glossary("transient activation")}}, meaning that it must be triggered by a UI event such as a button click.
+</summary>
+<remarks>
+<para>-<see cref="DeviceMotionEvent"/><br/>-<see cref="DeviceOrientationEvent.RequestPermission"/><br/>-<see cref="Window.Devicemotion"/> event<br/>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/requestPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a string which is either <c>&amp;quot;granted&amp;quot;</c> or <c>&amp;quot;denied&amp;quot;</c>.</returns>
+</DeviceMotionEventRequestPermission>
 <DeviceMotionEventRotationRate>
 <summary>
 The <strong><c>rotationRate</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the rate at which the device is rotating around each of its axes in degrees per<br/>second.

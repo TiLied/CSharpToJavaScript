@@ -1,7 +1,7 @@
 <docs>
 <CSSMatrixComponent>
 <summary>
-The <strong><c>CSSMatrixComponent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> represents the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">matrix()</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">matrix3d()</see> values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent <see cref="'CSSTransformValue'"/>.
+The <strong><c>CSSMatrixComponent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> represents the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent <see cref="'CSSTransformValue'"/>.
 </summary>
 <remarks>
 <para></para>
@@ -10,7 +10,7 @@ The <strong><c>CSSMatrixComponent</c></strong> interface of the <see href="https
 </CSSMatrixComponent>
 <CSSMatrixComponentCSSMatrixComponent>
 <summary>
-The <strong><c>CSSMatrixComponent()</c></strong> constructor<br/>creates a new <see cref="CSSMatrixComponent"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">matrix()</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">matrix3d()</see> values of the<br/>individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
+The <strong><c>CSSMatrixComponent()</c></strong> constructor<br/>creates a new <see cref="CSSMatrixComponent"/> object representing the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} values of the<br/>individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMatrixComponent/CSSMatrixComponent"> <em>See also on MDN</em> </seealso></para>
@@ -21,7 +21,7 @@ The <strong><c>CSSMatrixComponent()</c></strong> constructor<br/>creates a new <
 The <strong><c>matrix</c></strong> property of the<br/><see cref="CSSMatrixComponent"/> interface gets and sets a 2d or 3d matrix.
 </summary>
 <remarks>
-<para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">matrix()</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">matrix3d()</see> pages for<br/>examples.</para>
+<para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> pages for<br/>examples.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMatrixComponent/matrix"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>a matrix.</value>

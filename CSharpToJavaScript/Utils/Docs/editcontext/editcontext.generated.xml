@@ -50,7 +50,7 @@
 </EditContextCharacterboundsupdate>
 <EditContextCompositionend>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>compositionend</c> event of the <see cref="EditContext"/> interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window ends.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>compositionend</c> event of the <see cref="EditContext"/> interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window ends.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EditContext/compositionend"> <em>See also on MDN</em> </seealso></para>
@@ -58,7 +58,7 @@
 </EditContextCompositionend>
 <EditContextCompositionstart>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>compositionstart</c> event of the <see cref="EditContext"/> interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window starts.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>compositionstart</c> event of the <see cref="EditContext"/> interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window starts.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EditContext/compositionstart"> <em>See also on MDN</em> </seealso></para>
@@ -102,7 +102,7 @@
 </EditContextText>
 <EditContextTextformatupdate>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>textformatupdate</c> event of the <see cref="EditContext"/> interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>textformatupdate</c> event of the <see cref="EditContext"/> interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window is happening.
 </summary>
 <remarks>
 <para>The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.</para><para>The following screenshot shows an example of text being written in the Notepad app on Windows, by using the Japanese IME. The text is formatted with a thick underline to indicate that it&amp;apos;s been composed from one of the IME&amp;apos;s suggestions.</para><para><see href="https://developer.mozilla.org./ime-notepad.png">Notepad on Windows with some Japanese text being composed from the IME window</see></para><para>As a web developer, you should listen for the <c>textformatupdate</c> event and update the formatting of the text displayed in your editable region accordingly.</para>

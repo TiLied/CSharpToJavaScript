@@ -24,6 +24,7 @@ The <strong><c>configure()</c></strong> method of the <see cref="VideoEncoder"/>
 </summary>
 <remarks>
 <para>If the <see cref="VideoEncoder"/> has been previously configured, the new configuration will not be applied until all previous tasks have completed.</para>
+<para>-<see cref="VideoEncoder.IsConfigSupported"/><br/>-<see href="https://webcodecsfundamentals.org/datasets/codec-support-table/">Codec String Support Table</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/configure"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
@@ -69,6 +70,7 @@ The <strong><c>flush()</c></strong> method of the <see cref="VideoEncoder"/> int
 The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="VideoEncoder"/> interface checks if <see cref="VideoEncoder"/> can be successfully configured with the given config.
 </summary>
 <remarks>
+<para>-<see cref="VideoEncoder.Configure"/><br/>-<see href="https://webcodecsfundamentals.org/datasets/codec-support-table/">Codec String Support Table</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>

@@ -136,9 +136,10 @@ The <strong><c>fonts</c></strong> property of the <see cref="WorkerGlobalScope"/
 </WorkerGlobalScopeFonts>
 <WorkerGlobalScopeImportScripts>
 <summary>
-The <strong><c>importScripts()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface synchronously imports one or more scripts into the worker's scope.
+<blockquote class="WARNING"><h5>WARNING</h5>The parameters passed to this method represent the URLs of classic scripts to be imported into a worker.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>importScripts()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface synchronously imports one or more scripts into the scope of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers">classic worker</see> (a worker constructed from a classic script).</para><para>Note that the method cannot be used in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers">module workers</see>, which instead load dependencies using <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><c>import</c> statements</see>.</para>
 <para>-<see cref="WorkerGlobalScope"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -156,10 +157,10 @@ The <strong><c>indexedDB</c></strong> read-only property of the <see cref="Worke
 </WorkerGlobalScopeIndexedDB>
 <WorkerGlobalScopeIsSecureContext>
 <summary>
-The <strong><c>isSecureContext</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a boolean indicating whether the current <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">context is secure</see> (<c>true</c>) or not (<c>false</c>).
+The <strong><c>isSecureContext</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a boolean indicating whether the current <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts">context is secure</see> (<c>true</c>) or not (<c>false</c>).
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts">Secure contexts</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/isSecureContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean.</value>
@@ -176,7 +177,7 @@ The <strong><c>languagechange</c></strong> event is fired at the global scope ob
 </WorkerGlobalScopeLanguagechange>
 <WorkerGlobalScopeLocation>
 <summary>
-The <strong><c>location</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="WorkerLocation"/> associated with the worker. It is a specific location object, mostly a subset of the <see cref="Location"/> for browsing scopes, but adapted to workers.
+The read-only <strong><c>location</c></strong> property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="WorkerLocation"/> associated with the worker. It is a specific location object, mostly a subset of the <see cref="Location"/> for browsing scopes, but adapted to workers.
 </summary>
 <remarks>
 <para><see cref="WorkerGlobalScope"/></para>
@@ -259,7 +260,7 @@ The <strong><c>rejectionhandled</c></strong> event is sent to the script's globa
 The <strong><c>reportError()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface may be used to report errors to the console or event handlers of global scopes, emulating an uncaught JavaScript exception.
 </summary>
 <remarks>
-<para>This feature is primarily intended for custom event-dispatching or callback-manipulating libraries.<br/>Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.<br/>This ensures that an exception in one callback will not prevent others from being handled, while at the same time ensuring that stack trace information is still readily available for debugging at the top level.</para>
+<para>This feature is primarily intended for custom event-dispatching or callback-manipulating libraries.<br/>Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.<br/>This ensures that an exception in one callback will not prevent others from being handled, while at the same time ensuring that stack trace information is still readily available for debugging at the top level.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/reportError"><c>window.reportError()</c></see> for more information.</para>
 <para>-<see cref="WorkerGlobalScope"/><br/>-<see cref="Window.ReportError"/><br/>-<see cref="Windowerror"/> event<br/>-<see cref="WorkerGlobalScopeerror"/> event<br/>-<see cref="HTMLElementerror"/> event<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/reportError"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -298,24 +299,25 @@ The <strong><c>self</c></strong> read-only property of the <see cref="WorkerGlob
 </WorkerGlobalScopeSelf>
 <WorkerGlobalScopeSetInterval>
 <summary>
-The <strong><c>setInterval()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+<blockquote class="WARNING"><h5>WARNING</h5>When the <c>code</c> parameter is used, this method dynamically executes its value as JavaScript.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
-<para>This method is also available in window contexts: for a detailed description of <c>setInterval()</c>, see the <see cref="Window.SetInterval"/> page.</para>
+<para>You can mitigate this risk by always assigning <see cref="TrustedScript"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval#security_considerations">Security considerations</see> in <c>Window.setInterval()</c> for more information.</para><para>The <strong><c>setInterval()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.</para><para>It is commonly used to set a delay for functions that are executed again and again, such as animations.<br/>You can cancel the interval using <see cref="WorkerGlobalScope.ClearInterval"/>.<br/>See <see cref="Window.SetInterval"/> for more information.</para><para>Note that if you wish to have your function called <strong>once</strong> after the specified delay, use <see cref="WorkerGlobalScope.SetTimeout"/>.</para>
 <para>-<see href="https://github.com/zloirock/core-js#settimeout-and-setinterval">Polyfill of <c>setInterval</c> which allows passing arguments to the callback in <c>core-js</c></see><br/>-<see cref="Window.SetInterval"/><br/>-<see cref="WorkerGlobalScope.ClearInterval"/><br/>-<see cref="WorkerGlobalScope.SetTimeout"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setInterval"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The <c>setInterval()</c> method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the interval timer created by the call. This identifier, often referred to as an "interval ID", can be passed to <see cref="Window.ClearInterval"/> to stop the repeated execution of the specified function.Within the same global environment (e.g., a particular window or worker), the interval ID is ensured to remain unique and is not reused for any new interval timer as long as the original timer is still active. However, different global environments maintain their own independent pools of interval IDs.Be aware that <c>setInterval()</c> and <see cref="Window.SetTimeout"/> share the same pool of IDs, and that <c>clearInterval()</c> and <see cref="Window.ClearTimeout"/> can technically be used interchangeably.<br/>For clarity, however, you should try to always match them to avoid confusion when maintaining your code.<blockquote class="NOTE"><h5>NOTE</h5>The <c>delay</c> argument is converted to a signed 32-bit integer.<br/>This effectively limits <c>delay</c> to 2147483647 ms, roughly 24.8 days, since it&amp;apos;s specified as a signed integer in the IDL.</blockquote></returns>
+<returns>A positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the interval timer created by the call.This identifier, often referred to as an "interval ID", can be passed to <see cref="WorkerGlobalScope.ClearInterval"/> to stop the repeated execution of the specified function.</returns>
 </WorkerGlobalScopeSetInterval>
 <WorkerGlobalScopeSetTimeout>
 <summary>
-The <strong><c>setTimeout()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface sets a timer which executes a function or specified piece of code once the timer expires.
+<blockquote class="WARNING"><h5>WARNING</h5>When the <c>code</c> parameter is used, this method dynamically executes its value as JavaScript.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
+<para>You can mitigate this risk by always assigning <see cref="TrustedScript"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout#security_considerations">Security considerations</see> in <c>Window.setTimeout()</c> for more information.</para><para>The <strong><c>setTimeout()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface sets a timer which executes a function or specified piece of code once the timer expires.</para>
 <para>-<see href="https://github.com/zloirock/core-js#settimeout-and-setinterval">Polyfill of <c>setTimeout</c> which allows passing arguments to the callback in <c>core-js</c></see><br/>-<see cref="Window.SetTimeout"/><br/>-<see cref="WorkerGlobalScope.ClearTimeout"/><br/>-<see cref="WorkerGlobalScope.SetInterval"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/>-<see cref="WorkerGlobalScope.QueueMicrotask"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The <c>setTimeout()</c> method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call. This identifier, often referred to as a "timeout ID", can be passed to <see cref="Window.ClearTimeout"/> to cancel the timer.Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active. However, separate global environments maintain their own independent pools of timer IDs.</returns>
+<returns>A positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call.<br/>This identifier, often referred to as a "timeout ID", can be passed to <see cref="Window.ClearTimeout"/> to cancel the timer.Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active.<br/>However, separate global environments maintain their own independent pools of timer IDs.</returns>
 </WorkerGlobalScopeSetTimeout>
 <WorkerGlobalScopeStructuredClone>
 <summary>

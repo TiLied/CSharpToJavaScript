@@ -35,6 +35,7 @@ The <strong><c>info</c></strong> read-only property of the<br/><see cref="GPUAda
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>isFallbackAdapter</c></strong> read-only property of the<br/><see cref="GPUAdapter"/> interface returns <c>true</c> if the adapter is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters">fallback adapter</see>, and <c>false</c> if not.
 </summary>
 <remarks>
+<para>This property has been removed from the web platform. Use <see cref="GPUAdapterInfo.IsFallbackAdapter"/> instead.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapter/isFallbackAdapter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -70,6 +71,6 @@ The <strong><c>requestDevice()</c></strong> method of the<br/><see cref="GPUAdap
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapter/requestDevice"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="GPUDevice"/> object instance.If you make a duplicate call, i.e., call <c>requestDevice()</c> on a <see cref="GPUAdapter"/> that <c>requestDevice()</c> was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via <see cref="GPUDevice.Lost"/>.</returns>
+<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="GPUDevice"/> object instance.If you make a duplicate call, i.e., call <c>requestDevice()</c> on a <see cref="GPUAdapter"/> that <c>requestDevice()</c> was already called on, the promise rejects with an <c>OperationError</c> because the associated <c>GPUAdapter</c> is consumed when a <c>GPUDevice</c> is created.</returns>
 </GPUAdapterRequestDevice>
 </docs>

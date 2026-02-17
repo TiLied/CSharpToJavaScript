@@ -19,12 +19,13 @@ The <strong><c>selectorText</c></strong> property of the <see cref="CSSStyleRule
 </CSSStyleRuleSelectorText>
 <CSSStyleRuleStyle>
 <summary>
-The read-only <strong><c>style</c></strong> property is the <see cref="CSSStyleDeclaration"/> interface for the declaration block of the <see cref="CSSStyleRule"/>.
+The read-only <strong><c>style</c></strong> property of the <see cref="CSSStyleRule"/> interface contains a <see cref="CSSStyleProperties"/> object representing the properties list in this style rule's body.
 </summary>
 <remarks>
+<para>Each <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties">CSS property</see> supported by the browser is present on the object.<br/>The properties that are not defined inline in the corresponding CSS declaration are set to the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSStyleDeclaration"/> object, with the following properties:</value>
+<value>A <see cref="CSSStyleProperties"/> object.<blockquote class="NOTE"><h5>NOTE</h5>Earlier versions of the specification returned a <see cref="CSSStyleDeclaration"/>, which is now the base class of <see cref="CSSStyleProperties"/>.<br/>See the <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> table for browser support information.</blockquote>Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSStyleProperties</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSStyleProperties</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
 </CSSStyleRuleStyle>
 <CSSStyleRuleStyleMap>
 <summary>

@@ -103,6 +103,7 @@ The <strong><c>CanvasRenderingContext2D.createConicGradient()</c></strong> metho
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateLinearGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>A conic <see cref="CanvasGradient"/>.</returns>
 </CanvasRenderingContext2DCreateConicGradient>
 <CanvasRenderingContext2DCreateImageData>
 <summary>
@@ -134,7 +135,7 @@ The <strong><c>CanvasRenderingContext2D.createPattern()</c></strong> method of t
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasPattern"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete"/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
+<returns>An opaque <see cref="CanvasPattern"/> describing a pattern.If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete"/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
 </CanvasRenderingContext2DCreatePattern>
 <CanvasRenderingContext2DCreateRadialGradient>
 <summary>
@@ -242,7 +243,7 @@ The<br/><strong><c>CanvasRenderingContext2D.filter</c></strong><br/>property of 
 </CanvasRenderingContext2DFilter>
 <CanvasRenderingContext2DFont>
 <summary>
-The <strong><c>CanvasRenderingContext2D.font</c></strong> property of the Canvas 2D API specifies the current text style to use when drawing text.<br/>This string uses the same syntax as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">CSS font</see> specifier.
+The <strong><c>CanvasRenderingContext2D.font</c></strong> property of the Canvas 2D API specifies the current text style to use when drawing text.<br/>This string uses the same syntax as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font">CSS font</see> specifier.
 </summary>
 <remarks>
 <para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/></para>
@@ -255,7 +256,7 @@ The <strong><c>CanvasRenderingContext2D.font</c></strong> property of the Canvas
 The <strong><c>CanvasRenderingContext2D.fontKerning</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how font kerning information is used.
 </summary>
 <remarks>
-<para>Kerning adjusts how adjacent letters are spaced in a proportional font, allowing them to edge into each other&amp;apos;s visual area if there is space available.<br/>For example, in well-kerned fonts, the characters <c>AV</c>, <c>Ta</c> and <c>We</c> nest together and make character spacing more uniform and pleasant to read than the equivalent text without kerning.</para><para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning"><c>font-kerning</c></see> CSS property.</para>
+<para>Kerning adjusts how adjacent letters are spaced in a proportional font, allowing them to edge into each other&amp;apos;s visual area if there is space available.<br/>For example, in well-kerned fonts, the characters <c>AV</c>, <c>Ta</c> and <c>We</c> nest together and make character spacing more uniform and pleasant to read than the equivalent text without kerning.</para><para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning">font-kerning</see> CSS property.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The property can be used to get or set the value.Allowed values are:</value>
@@ -265,7 +266,7 @@ The <strong><c>CanvasRenderingContext2D.fontKerning</c></strong> property of the
 The <strong><c>CanvasRenderingContext2D.fontStretch</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how the font may be expanded or condensed when drawing text.
 </summary>
 <remarks>
-<para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch"><c>font-stretch</c></see> CSS property when used with keywords (percentage values are not supported).</para>
+<para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch">font-stretch</see> CSS property when used with keywords (percentage values are not supported).</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontStretch"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The font stretch value as a string.<br/>This is one of: <c>ultra-condensed</c>, <c>extra-condensed</c>, <c>condensed</c>, <c>semi-condensed</c>, <c>normal</c> (default), <c>semi-expanded</c>, <c>expanded</c>, <c>extra-expanded</c>, <c>ultra-expanded</c>.The property can be used to get or set the font stretch value.</value>
@@ -275,10 +276,10 @@ The <strong><c>CanvasRenderingContext2D.fontStretch</c></strong> property of the
 The <strong><c>CanvasRenderingContext2D.fontVariantCaps</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies an alternative capitalization of the rendered text.
 </summary>
 <remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps"><c>font-variant-caps</c></see> property.</para>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps">font-variant-caps</see> property.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The font alternative capitalization value, which is one of:The property can be used to get or set the font capitalization value.Note that there are accessibility concerns with some of these, which are outlined in the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps#accessibility"><c>font-variant-caps</c></see> topic.</value>
+<value>The font alternative capitalization value, which is one of:The property can be used to get or set the font capitalization value.Note that there are accessibility concerns with some of these, which are outlined in the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps#accessibility"><c>font-variant-caps</c></see> topic.</value>
 </CanvasRenderingContext2DFontVariantCaps>
 <CanvasRenderingContext2DGetContextAttributes>
 <summary>
@@ -385,6 +386,7 @@ The<br/><strong><c>CanvasRenderingContext2D.isPointInPath()</c></strong><br/>met
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>A boolean value, which is <c>true</c> if the specified point is contained in the current or specified path, otherwise <c>false</c>.</returns>
 </CanvasRenderingContext2DIsPointInPath>
 <CanvasRenderingContext2DIsPointInStroke>
 <summary>
@@ -394,6 +396,7 @@ The<br/><strong><c>CanvasRenderingContext2D.isPointInStroke()</c></strong><br/>m
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInStroke"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>A boolean value, which is <c>true</c> if the point is inside the area contained by the stroking of a path, otherwise <c>false</c>.</returns>
 </CanvasRenderingContext2DIsPointInStroke>
 <CanvasRenderingContext2DLang>
 <summary>
@@ -410,7 +413,7 @@ The<br/><strong><c>CanvasRenderingContext2D.isPointInStroke()</c></strong><br/>m
 The <strong><c>CanvasRenderingContext2D.letterSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between letters when drawing text.
 </summary>
 <remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><c>letter-spacing</c></see> property.</para>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</see> property.</para>
 <para>-<see cref="CanvasRenderingContext2D.WordSpacing"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -560,7 +563,7 @@ The<br/><strong><c>CanvasRenderingContext2D.resetTransform()</c></strong><br/>me
 The<br/><strong><c>CanvasRenderingContext2D.restore()</c></strong><br/>method of the Canvas 2D API restores the most recently saved canvas state by popping the<br/>top entry in the drawing state stack. If there is no saved state, this method does<br/>nothing.
 </summary>
 <remarks>
-<para>For more information about the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save#the_drawing_state">drawing state</see>, see <see cref="CanvasRenderingContext2D.Save"/>.</para>
+<para>For more information about the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save#description">drawing state</see>, see <see cref="CanvasRenderingContext2D.Save"/>.</para>
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Save"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/restore"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -581,7 +584,7 @@ The<br/><strong><c>CanvasRenderingContext2D.rotate()</c></strong><br/>method of 
 The <strong><c>CanvasRenderingContext2D.roundRect()</c></strong> method of the Canvas 2D API adds a rounded rectangle to the current path.
 </summary>
 <remarks>
-<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><c>border-radius</c></see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill"/> or <see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
+<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill"/> or <see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Rect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/roundRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -744,7 +747,7 @@ The<br/><strong><c>CanvasRenderingContext2D.textBaseline</c></strong><br/>proper
 The <strong><c>CanvasRenderingContext2D.textRendering</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> provides information to the rendering engine about what to optimize for when rendering text.
 </summary>
 <remarks>
-<para>The values correspond to the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/text-rendering"><c>text-rendering</c></see> attribute (and CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering"><c>text-rendering</c></see> property).</para>
+<para>The values correspond to the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/text-rendering"><c>text-rendering</c></see> attribute (and CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering">text-rendering</see> property).</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textRendering"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A text-rendering hint to the browser engine.<br/>This one of:The property can be used to get or set the value.</value>
@@ -775,7 +778,7 @@ The<br/><strong><c>CanvasRenderingContext2D.translate()</c></strong><br/>method 
 The <strong><c>CanvasRenderingContext2D.wordSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between words when drawing text.
 </summary>
 <remarks>
-<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><c>word-spacing</c></see> property.</para>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">word-spacing</see> property.</para>
 <para>-<see cref="CanvasRenderingContext2D.LetterSpacing"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/wordSpacing"> <em>See also on MDN</em> </seealso></para>
 </remarks>

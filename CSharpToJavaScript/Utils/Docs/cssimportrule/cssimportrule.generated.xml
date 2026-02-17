@@ -1,7 +1,7 @@
 <docs>
 <CSSImportRule>
 <summary>
-The <strong><c>CSSImportRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The <strong><c>CSSImportRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <para></para>
@@ -10,7 +10,7 @@ The <strong><c>CSSImportRule</c></strong> interface represents an <see href="htt
 </CSSImportRule>
 <CSSImportRuleHref>
 <summary>
-The read-only <strong><c>href</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns the URL specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The read-only <strong><c>href</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns the URL specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <para>The resolved URL will be the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#href"><c>href</c></see> attribute of the<br/>associated stylesheet.</para>
@@ -20,7 +20,7 @@ The read-only <strong><c>href</c></strong> property of the<br/><see cref="CSSImp
 </CSSImportRuleHref>
 <CSSImportRuleLayerName>
 <summary>
-The read-only <strong><c>layerName</c></strong> property of the <see cref="CSSImportRule"/> interface returns the name of the cascade layer created by the {{cssxref("@import")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The read-only <strong><c>layerName</c></strong> property of the <see cref="CSSImportRule"/> interface returns the name of the cascade layer created by the {{cssxref("@import")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <para>If the created layer is anonymous, the string is empty (<c>&amp;quot;&amp;quot;</c>), if no layer has been<br/>created, it is the <c>null</c> object.</para>
@@ -31,29 +31,29 @@ The read-only <strong><c>layerName</c></strong> property of the <see cref="CSSIm
 </CSSImportRuleLayerName>
 <CSSImportRuleMedia>
 <summary>
-The read-only <strong><c>media</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns a <see cref="MediaList"/> object,<br/>containing the value of the <c>media</c> attribute of the associated stylesheet.
+The read-only <strong><c>media</c></strong> property of the <see cref="CSSImportRule"/> interface returns a <see cref="MediaList"/> object representing the media query list of the {{cssxref("@import")}} rule.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule/media"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>Returns a <see cref="MediaList"/> object.The value of <c>media</c> can be set by passing a string containing the <c>media</c> attribute; for example <c>&amp;quot;print&amp;quot;</c>.</value>
+<value>A <see cref="MediaList"/> object.Although the <c>media</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>MediaList</c> object, you can still assign to the <c>media</c> property directly, which is equivalent to assigning to its <see cref="MediaListmediaText"/> property. You can also modify the <c>MediaList</c> object using the <see cref="MediaListappendMedium"/> and <see cref="MediaListdeleteMedium"/> methods.</value>
 </CSSImportRuleMedia>
 <CSSImportRuleStyleSheet>
 <summary>
-The read-only <strong><c>styleSheet</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns the CSS Stylesheet specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>. This will be<br/>in the form of a <see cref="CSSStyleSheet"/> object.
+The read-only <strong><c>styleSheet</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns the CSS Stylesheet specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>. This will be<br/>in the form of a <see cref="CSSStyleSheet"/> object.
 </summary>
 <remarks>
-<para>An <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see> always has<br/>an associated stylesheet.</para>
+<para>An <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see> always has<br/>an associated stylesheet.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule/styleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="CSSStyleSheet"/>.</value>
 </CSSImportRuleStyleSheet>
 <CSSImportRuleSupportsText>
 <summary>
-The read-only <strong><c>supportsText</c></strong> property of the <see cref="CSSImportRule"/> interface returns the supports condition specified by the {{cssxref("@import")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The read-only <strong><c>supportsText</c></strong> property of the <see cref="CSSImportRule"/> interface returns the supports condition specified by the {{cssxref("@import")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries">Using feature queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries">Using feature queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule/supportsText"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string, or <c>null</c>.</value>

@@ -4,7 +4,7 @@
 The <strong><c>Worker</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API</see> represents a background task that can be created via script, which can send messages back to its creator.
 </summary>
 <remarks>
-<para>Creating a worker is done by calling the <c>Worker(&amp;quot;path/to/worker/script&amp;quot;)</c> constructor.</para><para>Workers may themselves spawn new workers, as long as those workers are hosted at the same <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin</see> as the parent page.</para><para>Note that not all interfaces and functions are available to web workers. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</see> for details.</para><para></para>
+<para>Creating a worker is done by calling the <c>Worker(&amp;quot;path/to/worker/script&amp;quot;)</c> constructor.</para><para>Workers may themselves spawn new workers, as long as those workers are hosted at the same <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">origin</see> as the parent page.</para><para>Note that not all interfaces and functions are available to web workers. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</see> for details.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</see><br/>-Other kind of workers: <see cref="SharedWorker"/> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><c>OffscreenCanvas</c></see> interface<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -60,11 +60,11 @@ The <strong><c>terminate()</c></strong> method of the <see cref="Worker"/> inter
 </WorkerTerminate>
 <WorkerWorker>
 <summary>
-The <strong><c>Worker()</c></strong> constructor creates a <see cref="Worker"/> object that executes the script at the specified URL. This script must obey the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>.
+<blockquote class="WARNING"><h5>WARNING</h5>This script passed to the <c>url</c> element is executed.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>There is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that&amp;apos;s not the case in all other browsers.</para></blockquote>
-<para>The <see cref="Worker"/> interface it belongs to.</para>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>Worker()</c></strong> constructor creates a <see cref="Worker"/> object that executes the classic script or module at the specified URL.</para>
+<para>-<see cref="Worker"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API">Trusted Types API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WorkerWorker>

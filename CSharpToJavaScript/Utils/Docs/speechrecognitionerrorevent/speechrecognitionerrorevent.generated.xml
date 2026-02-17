@@ -17,7 +17,7 @@ The <strong><c>error</c></strong> read-only property of the<br/><see cref="Speec
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string naming the type of error. The possible error types are:</value>
+<value>An enumerated value representing the type of error. Possible values include:</value>
 </SpeechRecognitionErrorEventError>
 <SpeechRecognitionErrorEventMessage>
 <summary>
@@ -29,4 +29,13 @@ The <strong><c>message</c></strong> read-only property of the<br/><see cref="Spe
 </remarks>
 <value>A string containing more details about the error that was raised.<br/>Note that the spec does not define the exact wording of these messages — this is up to<br/>the implementors to decide upon.</value>
 </SpeechRecognitionErrorEventMessage>
+<SpeechRecognitionErrorEventSpeechRecognitionErrorEvent>
+<summary>
+The <strong><c>SpeechRecognitionErrorEvent()</c></strong> constructor creates a new<br/><see cref="SpeechRecognitionErrorEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/SpeechRecognitionErrorEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechRecognitionErrorEventSpeechRecognitionErrorEvent>
 </docs>

@@ -4,7 +4,7 @@
 The <strong>Popover API</strong> provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either using HTML attributes, or via JavaScript.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget"><c>popovertarget</c></see> HTML attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction"><c>popovertargetaction</c></see> HTML attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop"><c>::backdrop</c></see> CSS pseudo-element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open"><c>:popover-open</c></see> CSS pseudo-class<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> HTML global attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget"><c>popovertarget</c></see> HTML attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction"><c>popovertargetaction</c></see> HTML attribute<br/>-{{cssxref(&amp;quot;::backdrop&amp;quot;)}} CSS pseudo-element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open">:popover-open</see> CSS pseudo-class<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Popover_API>
@@ -13,7 +13,17 @@ The <strong>Popover API</strong> provides developers with a standard, consistent
 The <strong>Popover API</strong> provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via JavaScript. This article provides a detailed guide to using all of its features.
 </summary>
 <remarks>
+<para>-Collection of <see href="https://mdn.github.io/dom-examples/popover-api/">Popover API examples</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Popover_APIUsing>
+<Popover_APIUsing_interest_invokers>
+<summary>
+<strong>Interest invokers</strong> provide a mechanism for updating an interface or running custom code when a user &amp;quot;shows interest&amp;quot; or &amp;quot;loses interest&amp;quot; in an element (for example, by hovering or unhovering it). They are most commonly used to show and hide popovers. This guide explains the concepts behind interest invokers, what their use cases are, and how to use them.
+</summary>
+<remarks>
+<para>-<see href="https://mdn.github.io/dom-examples/interest-invokers/">Interest invoker examples landing page</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Popover_APIUsing_interest_invokers>
 </docs>

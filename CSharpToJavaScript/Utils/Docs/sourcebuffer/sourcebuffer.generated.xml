@@ -19,6 +19,15 @@ The <strong><c>abort()</c></strong> method of the <see cref="SourceBuffer"/><br/
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </SourceBufferAbort>
+<SourceBufferAbort>
+<summary>
+The <strong><c>abort</c></strong> event of the <see cref="SourceBuffer"/> interface is fired when the buffer appending is aborted, because the <see cref="SourceBuffer.Abort"/> or <see cref="SourceBuffer.Remove"/> method is called while the <see cref="SourceBuffer.AppendBuffer"/> algorithm is still running. The <see cref="SourceBuffer.Updating"/> property transitions from <c>true</c> to <c>false</c>. This event is fired before the <see cref="SourceBuffer.Updateend"/> event.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer.Abort"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBufferAbort>
 <SourceBufferAppendBuffer>
 <summary>
 The <strong><c>appendBuffer()</c></strong> method of the<br/><see cref="SourceBuffer"/> interface appends media segment data from an<br/><see cref="ArrayBuffer"/>, a <see cref="TypedArray"/> or a <see cref="DataView"/> object<br/>to the <c>SourceBuffer</c>.
@@ -92,6 +101,15 @@ The <strong><c>changeType()</c></strong> method of the<br/><see cref="SourceBuff
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
 </SourceBufferChangeType>
+<SourceBufferError>
+<summary>
+The <strong><c>error</c></strong> event of the <see cref="SourceBuffer"/> interface is fired when an error occurs during the processing of an <see cref="SourceBuffer.AppendBuffer"/> operation. This may happen, for example, if the data being appended is not in the expected format, the <c>SourceBuffer</c> is in an invalid state, or the user agent is unable to process the data. The <see cref="SourceBuffer.Updating"/> property transitions from <c>true</c> to <c>false</c>. This event is fired before the <see cref="SourceBuffer.Updateend"/> event.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="SourceBuffer.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBufferError>
 <SourceBufferMode>
 <summary>
 The <strong><c>mode</c></strong> property of the <see cref="SourceBuffer"/><br/>interface controls whether media segments can be appended to the<br/><c>SourceBuffer</c> in any order, or in a strict sequence.
@@ -132,7 +150,7 @@ The <strong><c>remove()</c></strong> method of the <see cref="SourceBuffer"/><br
 <para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/textTracks"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="TextTrackList"/> object.</value>
+<value>A <see cref="TextTrackList"/> object.</value>
 </SourceBufferTextTracks>
 <SourceBufferTimestampOffset>
 <summary>
@@ -145,6 +163,33 @@ The <strong><c>timestampOffset</c></strong> property of the<br/><see cref="Sourc
 </remarks>
 <value>A double, with the offset amount expressed in seconds.</value>
 </SourceBufferTimestampOffset>
+<SourceBufferUpdateend>
+<summary>
+The <strong><c>updateend</c></strong> event of the <see cref="SourceBuffer"/> interface signals the (not necessarily successful) completion of an <see cref="SourceBuffer.AppendBuffer"/> or <see cref="SourceBuffer.Remove"/> operation. The <see cref="SourceBuffer.Updating"/> attribute transitions from <c>true</c> to <c>false</c>. This event is fired after the <see cref="SourceBuffer.Update"/>, <see cref="SourceBuffer.Error"/>, or <see cref="SourceBuffer.Abort"/> events.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="SourceBuffer.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updateend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBufferUpdateend>
+<SourceBufferUpdatestart>
+<summary>
+The <strong><c>updatestart</c></strong> event of the <see cref="SourceBuffer"/> interface signals the beginning of an <see cref="SourceBuffer.AppendBuffer"/> or <see cref="SourceBuffer.Remove"/> operation. The <see cref="SourceBuffer.Updating"/> attribute transitions from <c>false</c> to <c>true</c>.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="SourceBuffer.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updatestart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBufferUpdatestart>
+<SourceBufferUpdate>
+<summary>
+The <strong><c>update</c></strong> event of the <see cref="SourceBuffer"/> interface signals the successful completion of an <see cref="SourceBuffer.AppendBuffer"/> or <see cref="SourceBuffer.Remove"/> operation. The <see cref="SourceBuffer.Updating"/> attribute transitions from <c>true</c> to <c>false</c>. This event is fired before the <see cref="SourceBuffer.Updateend"/> event.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="SourceBuffer.Remove"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/update"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBufferUpdate>
 <SourceBufferUpdating>
 <summary>
 The <strong><c>updating</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface indicates whether the <c>SourceBuffer</c> is<br/>currently being updated — i.e., whether an <see cref="SourceBuffer.AppendBuffer"/> or <see cref="SourceBuffer.Remove"/><br/>operation is currently in progress.
@@ -163,6 +208,6 @@ The <strong><c>videoTracks</c></strong> read-only property of the<br/><see cref=
 <para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/videoTracks"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="VideoTrackList"/> object.</value>
+<value>A <see cref="VideoTrackList"/> object.</value>
 </SourceBufferVideoTracks>
 </docs>

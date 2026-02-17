@@ -43,14 +43,25 @@ The value of the <strong><c>Navigator.appName</c></strong> property is always<br
 </NavigatorAppName>
 <NavigatorAppVersion>
 <summary>
-Returns either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about<br/>the browser.
+The <strong><c>Navigator.appVersion</c></strong> read-only property of the <see cref="Navigator"/> interface returns a string representing version information about the browser.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return the correct browser version.</para></blockquote>
+<para>-<see cref="Navigator.UserAgent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-agent">User-agent</see> HTTP header<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appVersion"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>Either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about the<br/>browser.</value>
+<value>A string.</value>
 </NavigatorAppVersion>
+<NavigatorAudioSession>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>audioSession</c></strong> read-only property of the <see cref="Navigator"/> interface returns the <see cref="AudioSession"/> object for the current document.
+</summary>
+<remarks>
+<para>The <see cref="AudioSession"/> interface can be used to control how audio from a web application interacts with other audio playing on a device, for example, allowing developers to specify whether their application's audio should play on its own, or along with other device audio.</para>
+<para>-<see cref="AudioSession"/><br/>-<see cref="AudioSession.Type"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Session_API">Audio Session API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/audioSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioSession"/> object.</value>
+</NavigatorAudioSession>
 <NavigatorBluetooth>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>bluetooth</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="Bluetooth"/> object for the current document, providing access to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</see> functionality.
@@ -154,14 +165,14 @@ The <strong><c>credentials</c></strong> read-only property of the <see cref="Nav
 </NavigatorDeprecatedReplaceInURN>
 <NavigatorDeviceMemory>
 <summary>
-The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="Navigator"/> interface returns the approximate amount of<br/>device memory in gigabytes.
+The <strong><c>deviceMemory</c></strong> read-only property of the <see cref="Navigator"/> interface returns the approximate amount of device memory in gigabytes.
 </summary>
 <remarks>
-<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>. It's approximated by<br/>rounding down to the nearest power of 2, then dividing that number by 1024. It is then<br/>clamped within lower and upper bounds to protect the privacy of owners of very low-memory or<br/>high-memory devices.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see> HTTP header<br/></para>
+<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>.<br/>It&amp;apos;s approximated by rounding the actual memory to the nearest power of 2, then dividing that number by 1024.<br/>It is then clamped within lower and upper bounds to protect the privacy of owners of very low-memory or high-memory devices.<br/>These bounds may change over time (see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility table</see>).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-Device-Memory">Sec-CH-Device-Memory</see> HTTP header<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A floating point number; one of <c>0.25</c>, <c>0.5</c>, <c>1</c>, <c>2</c>, <c>4</c>, <c>8</c>.</value>
+<value>A floating point number coarsened to a power of two value, clamped to implement-defined limits.For example, if a browser does not report below <c>2</c> or above <c>32</c> then the value is one of: <c>2</c>, <c>4</c>, <c>8</c>, <c>16</c>, <c>32</c>.</value>
 </NavigatorDeviceMemory>
 <NavigatorDevicePosture>
 <summary>
@@ -233,7 +244,7 @@ The <strong><c>Navigator.getGamepads()</c></strong> method returns an array of<b
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getInstalledRelatedApps()</c></strong> method returns a promise that resolves with an array of objects representing any related platform-specific apps or <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">Progressive Web Apps</see> that the user has installed. This could be used for content personalization such as removing &amp;quot;install our app&amp;quot; banners from the web app if the platform-specific app and/or PWA is already installed.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This method must be invoked in a top-level <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>, that is, not embedded in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method must be invoked in a top-level <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts">secure context</see>, that is, not embedded in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>.</para></blockquote>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/get-installed-related-apps">Is your app installed? getInstalledRelatedApps() will tell you!</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getInstalledRelatedApps"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -279,7 +290,7 @@ The <strong><c>Navigator.gpu</c></strong> read-only property returns the <see cr
 <para>-{{domxref(&amp;quot;WebGPU_API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/gpu"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="GPU"/> object.</value>
+<value>A <see cref="GPU"/> object.</value>
 </NavigatorGpu>
 <NavigatorHardwareConcurrency>
 <summary>
@@ -337,11 +348,11 @@ The <strong><c>language</c></strong> read-only property of the <see cref="Naviga
 <para>-<see cref="Navigator.Languages"/><br/>-<see cref="Navigator"/><br/>-<see cref="Intl"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: &amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
+<value>A string representing the language version in <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see> format. Examples of valid language tags include <c>en</c>, <c>en-US</c>, <c>fr</c>, <c>fr-FR</c>, <c>es-ES</c>, etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: &amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
 </NavigatorLanguage>
 <NavigatorLanguages>
 <summary>
-The <strong><c>languages</c></strong> read-only property of the <see cref="Navigator"/> interface<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using language tags according to<br/>{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned<br/>array they are ordered by preference with the most preferred language first.
+The <strong><c>languages</c></strong> read-only property of the <see cref="Navigator"/> interface<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using a <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>. In the returned<br/>array they are ordered by preference with the most preferred language first.
 </summary>
 <remarks>
 <para>The value of <see cref="Navigator.Language"/> is the<br/>first element of the returned array.</para><para>When its value changes, as the user&amp;apos;s preferred languages are changed a<br/><see cref="Window.Languagechange"/> event is fired on the <see cref="Window"/> object.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see> HTTP header in every HTTP request from the user's browser generally lists the same locales as the <c>navigator.languages</c> property, with decreasing <c>q</c> values (quality values). Some browsers (Chrome and Safari) add language-only fallback tags in <c>Accept-Language</c>—for example, <c>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</c> when <c>navigator.languages</c> is <c>[&amp;quot;en-US&amp;quot;, &amp;quot;zh-CN&amp;quot;]</c>. For privacy purposes (reducing <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>), both <c>Accept-Language</c> and <c>navigator.languages</c> may not include the full list of user preferences, such as in Safari (always) and Chrome&amp;apos;s incognito mode, where only one language is listed.</para>
@@ -463,11 +474,10 @@ The <strong><c>permissions</c></strong> read-only property of the <see cref="Nav
 The <strong><c>platform</c></strong> property read-only property of the <see cref="Navigator"/> interface returns a string identifying the platform on which the user's browser is running.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user&amp;apos;s environment, and instead write code that does <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection">feature detection</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/platform"><c>navigator.userAgentData.platform</c></see><br/></para>
+<para>-<see cref="Navigator.UserAgent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-agent">User-agent</see> HTTP header<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string identifying the platform on which the user&amp;apos;s browser is running; for example: <c>&amp;quot;MacIntel&amp;quot;</c>, <c>&amp;quot;Win32&amp;quot;</c>, <c>&amp;quot;Linux x86_64&amp;quot;</c>, <c>&amp;quot;Linux armv81&amp;quot;</c>.</value>
+<value>A string indicating a platform, for example:<blockquote class="NOTE"><h5>NOTE</h5>On Windows, modern browsers return <c>&amp;quot;Win32&amp;quot;</c> even if running on a 64-bit version of Windows.</blockquote></value>
 </NavigatorPlatform>
 <NavigatorPlugins>
 <summary>
@@ -561,7 +571,7 @@ The <strong><c>navigator.sendBeacon()</c></strong><br/>method <see href="https:/
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"><c>visibilitychange</c></see> event.<br/>-{{domxref(&amp;quot;Beacon_API&amp;quot;,&amp;quot;Beacon API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;true&amp;quot;)}} overview page.<br/>-<see href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don&amp;apos;t lose user and app state, use Page Visibility</see> explains in<br/>detail why you should use <c>visibilitychange</c>, not<br/><c>beforeunload</c>/<c>unload</c>.<br/>-<see href="https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</see> gives best-practices guidance on handling<br/>page lifecycle behavior in your web applications.<br/>-<see href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</see>: a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.<br/>-<see href="https://web.dev/articles/bfcache">Back/forward cache</see> explains what the back/forward cache is, and its implications for various page lifecycle events.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The <strong><c>sendBeacon()</c></strong> method returns <c>true</c> if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> successfully queued the <c>data</c> for transfer.<br/>Otherwise, it returns <c>false</c>.</returns>
+<returns>Returns <c>true</c> if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> successfully queued the <c>data</c> for transfer.<br/>Otherwise, it returns <c>false</c>.</returns>
 </NavigatorSendBeacon>
 <NavigatorSerial>
 <summary>
@@ -652,21 +662,20 @@ The <strong><c>usb</c></strong> read-only property of the <see cref="Navigator"/
 The read-only <strong><c>userActivation</c></strong> property of the <see cref="Navigator"/> interface returns a <see cref="UserActivation"/> object which contains information about the current window's user activation state.
 </summary>
 <remarks>
-<para>-<see cref="UserActivation"/><br/>-<see cref="UserActivation.HasBeenActive"/><br/>-<see cref="UserActivation.IsActive"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
+<para>-<see cref="UserActivation"/><br/>-<see cref="UserActivation.HasBeenActive"/><br/>-<see cref="UserActivation.IsActive"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/User_activation">Features gated by user activation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userActivation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="UserActivation"/> object.</value>
 </NavigatorUserActivation>
 <NavigatorUserAgent>
 <summary>
-The <strong><c>Navigator.userAgent</c></strong> read-only property returns the<br/>user agent string for the current browser.
+The <strong><c>Navigator.userAgent</c></strong> read-only property of the <see cref="Navigator"/> interface returns the <c>User-Agent</c> (UA) string for the current browser.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The specification asks browsers to provide as little information via this field as<br/>possible. Never assume that the value of this property will stay the same in future<br/>versions of the same browser. Try not to use it at all, or only for current and past<br/>versions of a browser. New browsers may start using the same UA, or part of it, as an<br/>older browser: you really have no guarantee that the browser agent is indeed the one<br/>advertised by this property.</para><para>Also keep in mind that users of a browser can change the value of this field if they<br/>want (UA spoofing).</para></blockquote><para>Browser identification based on detecting the user agent string is<br/><strong>unreliable</strong> and <strong>is not recommended</strong>, as the user agent<br/>string is user configurable. For example:</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</see> HTTP header<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the complete user agent string the browser<br/>provides both in <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> headers and in response to this and other related<br/>methods on the <see cref="Navigator"/> object.The user agent string is built on a formal structure which can be decomposed into<br/>several pieces of info. Each of these pieces of info comes from other navigator<br/>properties which are also settable by the user. For more information about the<br/>form of the user agent string, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-agent">User-agent</see> HTTP header.</value>
+<value>A string.</value>
 </NavigatorUserAgent>
 <NavigatorUserAgentData>
 <summary>

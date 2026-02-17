@@ -1,9 +1,10 @@
 <docs>
 <DecompressionStream>
 <summary>
-The <strong><c>DecompressionStream</c></strong> interface of the <see cref="'Compression Streams API'"/> is an API for decompressing a stream of data.
+The <strong><c>DecompressionStream</c></strong> interface of the <see cref="'Compression Streams API'"/> decompresses a stream of data. It implements the same shape as a <see cref="TransformStream"/>, allowing it to be used in <see cref="ReadableStream.PipeThrough"/> and similar methods.
 </summary>
 <remarks>
+<para>-<see cref="CompressionStream"/><br/>-<see cref="TransformStream"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DecompressionStream>
@@ -17,18 +18,20 @@ The <strong><c>DecompressionStream()</c></strong> constructor creates a new <see
 </DecompressionStreamDecompressionStream>
 <DecompressionStreamReadable>
 <summary>
-The <strong><c>readable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="ReadableStream"/>.
+The <strong><c>readable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="ReadableStream"/> that emits decompressed data as {{jsxref("Uint8Array")}} chunks.
 </summary>
 <remarks>
+<para>-<see cref="TransformStream.Readable"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream/readable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="ReadableStream"/>.</value>
 </DecompressionStreamReadable>
 <DecompressionStreamWritable>
 <summary>
-The <strong><c>writable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="WritableStream"/>.
+The <strong><c>writable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="WritableStream"/> that accepts compressed data to be decompressed, in the form of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} chunks.
 </summary>
 <remarks>
+<para>-<see cref="TransformStream.Writable"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="WritableStream"/>.</value>

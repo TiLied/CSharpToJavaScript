@@ -1,7 +1,7 @@
 <docs>
 <Navigation>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Navigation</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} allows control over all navigation actions for the current <c>window</c> in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
+The <strong><c>Navigation</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} allows control over all navigation actions for the current <c>window</c> in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
 </summary>
 <remarks>
 <para>It is accessed via the <see cref="Window.Navigation"/> property.</para><para>The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g., not navigations inside embedded <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.</para><para></para>
@@ -11,7 +11,7 @@
 </Navigation>
 <NavigationActivation>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>activation</c></strong> read-only property of the <see cref="Navigation"/> interface returns a <see cref="NavigationActivation"/> object containing information about the most recent cross-document navigation, which "activated" this Document. The property will stay constant during same-document navigations.
+The <strong><c>activation</c></strong> read-only property of the <see cref="Navigation"/> interface returns a <see cref="NavigationActivation"/> object containing information about the most recent cross-document navigation, which "activated" this Document. The property will stay constant during same-document navigations.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -21,7 +21,7 @@
 </NavigationActivation>
 <NavigationBack>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>back()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates backwards by one entry in the navigation history.
+The <strong><c>back()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates backwards by one entry in the navigation history.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -31,7 +31,7 @@
 </NavigationBack>
 <NavigationCanGoBack>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canGoBack</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c><br/>if it is possible to navigate backwards in the navigation history<br/>(i.e., the <see cref="Navigation.CurrentEntry"/> is<br/>not the first one in the history entry list),<br/>and <c>false</c> if it is not.
+The <strong><c>canGoBack</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c><br/>if it is possible to navigate backwards in the navigation history<br/>(i.e., the <see cref="Navigation.CurrentEntry"/> is<br/>not the first one in the history entry list),<br/>and <c>false</c> if it is not.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -41,7 +41,7 @@
 </NavigationCanGoBack>
 <NavigationCanGoForward>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canGoForward</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c> if it is possible to navigate forwards in the navigation history<br/>(i.e., the <see cref="Navigation.CurrentEntry"/> is not the last one in the history entry list),<br/>and <c>false</c> if it is not.
+The <strong><c>canGoForward</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c> if it is possible to navigate forwards in the navigation history<br/>(i.e., the <see cref="Navigation.CurrentEntry"/> is not the last one in the history entry list),<br/>and <c>false</c> if it is not.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -51,7 +51,7 @@
 </NavigationCanGoForward>
 <NavigationCurrentEntry>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>currentEntry</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns a <see cref="NavigationHistoryEntry"/> object representing the location the user is currently navigated to right now.
+The <strong><c>currentEntry</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns a <see cref="NavigationHistoryEntry"/> object representing the location the user is currently navigated to right now.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -61,7 +61,7 @@
 </NavigationCurrentEntry>
 <NavigationCurrententrychange>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>currententrychange</c></strong> event of the <see cref="Navigation"/> interface is fired when the <see cref="Navigation.CurrentEntry"/> has changed.
+The <strong><c>currententrychange</c></strong> event of the <see cref="Navigation"/> interface is fired when the <see cref="Navigation.CurrentEntry"/> has changed.
 </summary>
 <remarks>
 <para>This event will fire for:</para><para>This event fires after the navigation is committed, meaning that the visible URL has changed and the <see cref="NavigationHistoryEntry"/> update has occurred. It is useful for migrating from usage of older API features like the <see cref="Windowhashchange"/> or <see cref="Windowpopstate"/> events.</para>
@@ -71,7 +71,7 @@
 </NavigationCurrententrychange>
 <NavigationEntries>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the<br/><see cref="Navigation"/> interface returns an array of <see cref="NavigationHistoryEntry"/> objects representing all existing history entries.
+The <strong><c>entries()</c></strong> method of the<br/><see cref="Navigation"/> interface returns an array of <see cref="NavigationHistoryEntry"/> objects representing all existing history entries.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -81,7 +81,7 @@
 </NavigationEntries>
 <NavigationForward>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>forward()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates forwards by one entry in the navigation history.
+The <strong><c>forward()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates forwards by one entry in the navigation history.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -91,7 +91,7 @@
 </NavigationForward>
 <NavigationNavigate>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigate()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates to a specific URL, updating any provided state in the history entries list.
+The <strong><c>navigate()</c></strong> method of the<br/><see cref="Navigation"/> interface navigates to a specific URL, updating any provided state in the history entries list.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -101,7 +101,7 @@
 </NavigationNavigate>
 <NavigationNavigateerror>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigateerror</c></strong> event of the <see cref="Navigation"/> interface is fired when a navigation fails.
+The <strong><c>navigateerror</c></strong> event of the <see cref="Navigation"/> interface is fired when a navigation fails.
 </summary>
 <remarks>
 <para>For example, if the network is down, any <see cref="Windowfetch"/> method invoked to handle a navigation will fail, and the error will be routed to <c>navigateerror</c>.</para>
@@ -111,7 +111,7 @@
 </NavigationNavigateerror>
 <NavigationNavigatesuccess>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigatesuccess</c></strong> event of the <see cref="Navigation"/> interface is fired when a successful navigation has finished.
+The <strong><c>navigatesuccess</c></strong> event of the <see cref="Navigation"/> interface is fired when a successful navigation has finished.
 </summary>
 <remarks>
 <para>In the case of an intercepted navigation, this would occur after any promises returned by your <see cref="NavigateEvent.Intercept"/> handler are fulfilled. The <see cref="NavigationTransition.Finished"/> promise will also fulfill at the same time.</para>
@@ -121,7 +121,7 @@
 </NavigationNavigatesuccess>
 <NavigationNavigate>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigate</c></strong> event of the <see cref="Navigation"/> interface is fired when <see href="https://github.com/WICG/navigation-api#appendix-types-of-navigations">any type of navigation</see> is initiated, allowing you to intercept as required.
+The <strong><c>navigate</c></strong> event of the <see cref="Navigation"/> interface is fired when <see href="https://github.com/WICG/navigation-api#appendix-types-of-navigations">any type of navigation</see> is initiated, allowing you to intercept as required.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -130,9 +130,10 @@
 </NavigationNavigate>
 <NavigationReload>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reload()</c></strong> method of the<br/><see cref="Navigation"/> interface reloads the current URL, updating any provided state in the history entries list.
+The <strong><c>reload()</c></strong> method of the <see cref="Navigation"/> interface reloads the current URL, updating any provided state in the history entries list.
 </summary>
 <remarks>
+<para>Note that <c>reload()</c> does not trigger the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><c>popstate</c> event</see>, as this is only fired for soft navigations that cause a &amp;quot;traversal&amp;quot; of the history entries.</para>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/reload"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -140,7 +141,7 @@
 </NavigationReload>
 <NavigationTransition>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transition</c></strong> read-only property of the <see cref="Navigation"/> interface returns a <see cref="NavigationTransition"/> object representing the status of an in-progress navigation, which can be used to track it.
+The <strong><c>transition</c></strong> read-only property of the <see cref="Navigation"/> interface returns a <see cref="NavigationTransition"/> object representing the status of an in-progress navigation, which can be used to track it.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -150,7 +151,7 @@
 </NavigationTransition>
 <NavigationTraverseTo>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>traverseTo()</c></strong> method of the <see cref="Navigation"/> interface navigates to the <see cref="NavigationHistoryEntry"/> identified by the given <see cref="NavigationHistoryEntry.Key"/>.
+The <strong><c>traverseTo()</c></strong> method of the <see cref="Navigation"/> interface navigates to the <see cref="NavigationHistoryEntry"/> identified by the given <see cref="NavigationHistoryEntry.Key"/>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -160,7 +161,7 @@
 </NavigationTraverseTo>
 <NavigationUpdateCurrentEntry>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>updateCurrentEntry()</c></strong> method of the <see cref="Navigation"/> interface updates the <c>state</c> of the <see cref="Navigation.CurrentEntry"/>; used in cases where the state change will be independent of a navigation or reload.
+The <strong><c>updateCurrentEntry()</c></strong> method of the <see cref="Navigation"/> interface updates the <c>state</c> of the <see cref="Navigation.CurrentEntry"/>; used in cases where the state change will be independent of a navigation or reload.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>

@@ -18,7 +18,7 @@ The <strong><c>delete()</c></strong> method of the <see cref="CacheStorage"/> in
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/delete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the <see cref="Cache"/><br/>object is found and deleted, and <c>false</c> otherwise.</returns>
+<returns>A <see cref="Promise"/> that resolves to <c>true</c> if the <see cref="Cache"/><br/>object is found and deleted, and <c>false</c> otherwise.</returns>
 </CacheStorageDelete>
 <CacheStorageHas>
 <summary>
@@ -29,7 +29,7 @@ The <strong><c>has()</c></strong> method of the <see cref="CacheStorage"/><br/>i
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/has"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the cache exists or<br/><c>false</c> if not.</returns>
+<returns>A <see cref="Promise"/> that resolves to <c>true</c> if the cache exists or<br/><c>false</c> if not.</returns>
 </CacheStorageHas>
 <CacheStorageKeys>
 <summary>
@@ -40,7 +40,7 @@ The <strong><c>keys()</c></strong> method of the <see cref="CacheStorage"/> inte
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a {{jsxref("Promise")}} that resolves with an array of the <see cref="Cache"/> names inside the <see cref="CacheStorage"/> object.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with an array of the <see cref="Cache"/> names inside the <see cref="CacheStorage"/> object.</returns>
 </CacheStorageKeys>
 <CacheStorageMatch>
 <summary>
@@ -51,7 +51,7 @@ The <strong><c>match()</c></strong> method of the <see cref="CacheStorage"/> int
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a {{jsxref("Promise")}} that resolves to the matching <see cref="Response"/>. If<br/>no matching response to the specified request is found, the promise resolves<br/>with <c>undefined</c>.</returns>
+<returns>A {{jsxref("Promise")}} that resolves to the matching <see cref="Response"/>. If<br/>no matching response to the specified request is found, the promise resolves<br/>with <c>undefined</c>.</returns>
 </CacheStorageMatch>
 <CacheStorageOpen>
 <summary>

@@ -16,6 +16,7 @@ The <strong><c>item()</c></strong> method returns the <see cref="Touch"/><br/>ob
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchList/item"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>The requested <see cref="Touch"/> object from the <see cref="TouchList"/>. Returns <c>null</c> if the index is not less than the length of the list.</returns>
 </TouchListItem>
 <TouchListLength>
 <summary>

@@ -1,10 +1,10 @@
 <docs>
 <SanitizerConfig>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SanitizerConfig</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see> represents a sanitizer configuration object.<br/>The configuration specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an <see cref="Element"/> or <see cref="ShadowRoot"/>, or when parsing an HTML string into a <see cref="Document"/>.
+The <strong><c>SanitizerConfig</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see> specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an <see cref="Element"/> or <see cref="ShadowRoot"/>, or when parsing an HTML string into a <see cref="Document"/>.
 </summary>
 <remarks>
-<para>An instance of this type can be passed to the <see cref="Sanitizer.Sanitizer"/> constructor to configure a <see cref="Sanitizer"/>, and is returned by <see cref="'Sanitizer.Get'"/>.<br/>It can also be passed as the <c>option.sanitizer</c> parameter when calling the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods">sanitization methods</see>:</para><para>Note that normally a <see cref="Sanitizer"/> instance would be passed as the option instead of <c>SanitizerConfig</c> in the above methods, in particular because <c>sanitizer</c> instances are more efficient to share and modify.</para>
+<para>Note that normally <see cref="Sanitizer"/> instances are used instead of <c>SanitizerConfig</c> objects, as they are more efficient to share and modify.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SanitizerConfig>

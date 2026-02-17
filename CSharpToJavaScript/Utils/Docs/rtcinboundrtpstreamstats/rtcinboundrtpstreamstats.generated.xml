@@ -28,7 +28,7 @@ The <strong><c>bytesReceived</c></strong> property of the <see cref="RTCInboundR
 <para>The value can be used to calculate an approximation of the average media data rate:</para><para>The property value is reset to zero if the sender&amp;apos;s SSRC identifier changes for any reason.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/bytesReceived"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer.</value>
+<value>A positive integer.</value>
 </RTCInboundRtpStreamStatsBytesReceived>
 <RTCInboundRtpStreamStatsCodecId>
 <summary>
@@ -80,7 +80,7 @@ The <strong><c>fecPacketsDiscarded</c></strong> property of the <see cref="RTCIn
 <para>A FEC packet provides parity information that can be used to attempt to reconstruct RTP data packets which have been corrupted in transit.<br/>This kind of packet might be discarded if all the packets that it covers have already been received or recovered using another FEC packet, or if the FEC packet arrived outside the recovery window and the lost RTP packets have already been skipped during playback as a result.<br/>The value of <see cref="RTCInboundRtpStreamStatsfecPacketsReceived"/> includes these discarded packets.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer value.</value>
+<value>A positive integer value.</value>
 </RTCInboundRtpStreamStatsFecPacketsDiscarded>
 <RTCInboundRtpStreamStatsFecPacketsReceived>
 <summary>
@@ -91,7 +91,7 @@ The <strong><c>fecPacketsReceived</c></strong> property of the <see cref="RTCInb
 <para>-{{RFC(5109)}} (RTP Payload Format for Generic Forward Error Correction)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsReceived"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer value.</value>
+<value>A positive integer value.</value>
 </RTCInboundRtpStreamStatsFecPacketsReceived>
 <RTCInboundRtpStreamStatsFrameHeight>
 <summary>
@@ -122,7 +122,7 @@ The <strong><c>framesDecoded</c></strong> property of the <see cref="RTCInboundR
 <para>-<see cref="RTCInboundRtpStreamStats.TotalDecodeTime"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/framesDecoded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer.</value>
+<value>A positive integer.</value>
 </RTCInboundRtpStreamStatsFramesDecoded>
 <RTCInboundRtpStreamStatsFramesPerSecond>
 <summary>
@@ -307,7 +307,7 @@ The <strong><c>packetsDiscarded</c></strong> property of the <see cref="RTCInbou
 <para>-<see cref="RTCRemoteInboundRtpStreamStats.PacketsLost"/><br/>-<see cref="RTCRemoteInboundRtpStreamStats.PacketsReceived"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsDiscarded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer value.This is calculated as defined in {{rfc("7002",,"3.2")}} (and appendix A.a.)</value>
+<value>A positive integer value.This is calculated as defined in {{rfc("7002",,"3.2")}} (and appendix A.a.)</value>
 </RTCInboundRtpStreamStatsPacketsDiscarded>
 <RTCInboundRtpStreamStatsPacketsLost>
 <summary>
@@ -339,7 +339,7 @@ The <strong><c>packetsReceived</c></strong> property of the <see cref="RTCInboun
 <para>-<see cref="RTCInboundRtpStreamStats.TotalPausesDuration"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/pauseCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer.</value>
+<value>A positive integer.</value>
 </RTCInboundRtpStreamStatsPauseCount>
 <RTCInboundRtpStreamStatsPlayoutId>
 <summary>
@@ -441,7 +441,7 @@ The <strong><c>totalDecodeTime</c></strong> property of the <see cref="RTCInboun
 <para>-<see cref="RTCInboundRtpStreamStats.FramesDecoded"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/totalDecodeTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive number, in seconds.</value>
+<value>A positive number, in seconds.</value>
 </RTCInboundRtpStreamStatsTotalDecodeTime>
 <RTCInboundRtpStreamStatsTotalFreezesDuration>
 <summary>
@@ -452,7 +452,7 @@ The <strong><c>totalDecodeTime</c></strong> property of the <see cref="RTCInboun
 <para>-<see cref="RTCInboundRtpStreamStats.FreezeCount"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/totalFreezesDuration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive number, in seconds.</value>
+<value>A positive number, in seconds.</value>
 </RTCInboundRtpStreamStatsTotalFreezesDuration>
 <RTCInboundRtpStreamStatsTotalInterFrameDelay>
 <summary>
@@ -473,7 +473,7 @@ The <strong><c>totalInterFrameDelay</c></strong> property of the <see cref="RTCI
 <para>-<see cref="RTCInboundRtpStreamStats.PauseCount"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/totalPausesDuration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive number, in seconds.</value>
+<value>A positive number, in seconds.</value>
 </RTCInboundRtpStreamStatsTotalPausesDuration>
 <RTCInboundRtpStreamStatsTotalProcessingDelay>
 <summary>
@@ -494,7 +494,7 @@ The <strong><c>totalSamplesDuration</c></strong> property of the <see cref="RTCR
 <para>-<see cref="RTCAudioSourceStats.TotalSamplesDuration"/> for the audio duration of sent samples.<br/>-<see cref="RTCInboundRtpStreamStatstotalSamplesReceived"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/totalSamplesDuration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive number, in seconds.</value>
+<value>A positive number, in seconds.</value>
 </RTCInboundRtpStreamStatsTotalSamplesDuration>
 <RTCInboundRtpStreamStatsTotalSamplesReceived>
 <summary>
@@ -504,7 +504,7 @@ The <strong><c>totalSamplesReceived</c></strong> property of the <see cref="RTCI
 <blockquote class="NOTE"><h5>NOTE</h5><para>The value is undefined for video streams.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/totalSamplesReceived"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An positive integer.</value>
+<value>A positive integer.</value>
 </RTCInboundRtpStreamStatsTotalSamplesReceived>
 <RTCInboundRtpStreamStatsTotalSquaredInterFrameDelay>
 <summary>

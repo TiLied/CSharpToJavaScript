@@ -30,12 +30,12 @@ The <strong><c>href</c></strong> property of the <see cref="StyleSheet"/><br/>in
 </StyleSheetHref>
 <StyleSheetMedia>
 <summary>
-The <strong><c>media</c></strong> property of the <see cref="StyleSheet"/> interface specifies the intended destination media for style information. It is a read-only, array-like <c>MediaList</c> object and can be removed with <c>deleteMedium()</c> and added with <c>appendMedium()</c>.
+The read-only <strong><c>media</c></strong> property of the <see cref="StyleSheet"/> interface contains a <see cref="MediaList"/> object representing the intended destination media for style information.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/media"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A read-only array-like <c>MediaList</c> object.</value>
+<value>A <see cref="MediaList"/> object. Its value is set by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#media"><c>media</c></see> attribute on the corresponding <c>&amp;lt;link&amp;gt;</c> or <c>&amp;lt;style&amp;gt;</c> element. If the <c>media</c> attribute is not set or empty, it returns an empty <c>MediaList</c>, i.e., a <c>MediaList</c> with the <c>length</c> property equal to <c>0</c>.Although the <c>media</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>MediaList</c> object, you can still assign to the <c>media</c> property directly, which is equivalent to assigning to its <see cref="MediaListmediaText"/> property. You can also modify the <c>MediaList</c> object using the <see cref="MediaListappendMedium"/> and <see cref="MediaListdeleteMedium"/> methods.</value>
 </StyleSheetMedia>
 <StyleSheetOwnerNode>
 <summary>

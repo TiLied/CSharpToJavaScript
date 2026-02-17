@@ -1,7 +1,7 @@
 <docs>
 <SharedWorker>
 <summary>
-The <strong><c>SharedWorker</c></strong> interface represents a specific kind of worker that can be <strong>accessed</strong> from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, <see cref="SharedWorkerGlobalScope"/>.
+The <strong><c>SharedWorker</c></strong> interface represents a specific kind of worker that can be <strong>accessed</strong> from several browsing contexts, such as multiple windows or iframes. Shared workers implement a different interface than dedicated workers, have a different global scope (<see cref="SharedWorkerGlobalScope"/>), and their constructor is not exposed in <see cref="DedicatedWorkerGlobalScope"/>, so they cannot be instantiated from dedicated workers.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).</para></blockquote><para></para>
@@ -29,10 +29,10 @@ The <strong><c>port</c></strong> property of the <see cref="SharedWorker"/><br/>
 </SharedWorkerPort>
 <SharedWorkerSharedWorker>
 <summary>
-The <strong><c>SharedWorker()</c></strong> constructor creates a<br/><see cref="SharedWorker"/> object that executes the script at the specified URL. This<br/>script must obey the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>.
+<blockquote class="WARNING"><h5>WARNING</h5>This script passed to the <c>url</c> element is executed.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>There is disagreement among browser manufacturers about<br/>whether a data URL is of the same origin or not. Although Firefox 10.0<br/>and later accept data URLs, that&amp;apos;s not the case in all other<br/>browsers.</para></blockquote>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker#security_considerations">Security considerations</see> in the <c>Worker()</c> constructor for more information.</para><para>The <strong><c>SharedWorker()</c></strong> constructor creates a <see cref="SharedWorker"/> object that executes the script at the specified URL.</para>
 <para>-The <see cref="SharedWorker"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker"> <em>See also on MDN</em> </seealso></para>
 </remarks>

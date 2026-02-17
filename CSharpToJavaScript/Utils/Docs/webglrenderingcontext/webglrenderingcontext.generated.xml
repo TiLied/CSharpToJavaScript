@@ -143,7 +143,7 @@ The <strong><c>WebGLRenderingContext.bufferData()</c></strong> method of the <se
 </WebGLRenderingContextBufferData>
 <WebGLRenderingContextBufferSubData>
 <summary>
-The <strong><c>WebGLRenderingContext.bufferSubData()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> updates a subset of a buffer<br/>object&amp;apos;s data store.
+The <strong><c>WebGLRenderingContext.bufferSubData()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> updates a subset of a buffer object&amp;apos;s data store.
 </summary>
 <remarks>
 <para>-<see cref="WebGL2RenderingContext.BufferSubData"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
@@ -315,7 +315,7 @@ The <strong><c>WebGLRenderingContext.createRenderbuffer()</c></strong> method of
 <para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.IsRenderbuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="WebGLRenderbuffer"/> object that stores data such an image, or can be<br/>source or target of an rendering operation.</returns>
+<returns>A <see cref="WebGLRenderbuffer"/> object that stores data such an image, or can be<br/>source or target of a rendering operation.</returns>
 </WebGLRenderingContextCreateRenderbuffer>
 <WebGLRenderingContextCreateShader>
 <summary>
@@ -855,7 +855,7 @@ The <strong><c>WebGLRenderingContext.isBuffer()</c></strong> method of the <see 
 The<br/><strong><c>WebGLRenderingContext.isContextLost()</c></strong> method returns a<br/>boolean value indicating whether or not the WebGL context has been lost and<br/>must be re-established before rendering can resume.
 </summary>
 <remarks>
-<para>-The <see cref="WebGLContextEvent"/> signals changes in the context state.<br/>-<see href="https://www.khronos.org/webgl/wiki/HandlingContextLost">Handling lost context in WebGL</see>: Khronos WebGL wiki<br/></para>
+<para>-The <see cref="WebGLContextEvent"/> signals changes in the context state.<br/>-<see href="https://wikis.khronos.org/webgl/HandlingContextLost">Handling lost context in WebGL</see>: Khronos WebGL wiki<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A boolean value which is <c>true</c> if the context is lost, or<br/><c>false</c> if not.</returns>
@@ -1184,7 +1184,7 @@ The <strong><c>WebGLRenderingContext.vertexAttrib[1234]f[v]()</c></strong><br/>m
 The<br/><strong><c>WebGLRenderingContext.vertexAttribPointer()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds the buffer currently bound<br/>to <c>gl.ARRAY_BUFFER</c> to a generic vertex attribute of the current vertex<br/>buffer object and specifies its layout.
 </summary>
 <remarks>
-<para>-<see href="https://www.khronos.org/opengl/wiki/Vertex_Specification">Vertex Specification</see> on the OpenGL wiki<br/>-<see cref="WebGL2RenderingContext.VertexAttribIPointer"/><br/></para>
+<para>-<see href="https://wikis.khronos.org/opengl/Vertex_Specification">Vertex Specification</see> on the OpenGL wiki<br/>-<see cref="WebGL2RenderingContext.VertexAttribIPointer"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

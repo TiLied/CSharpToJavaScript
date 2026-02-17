@@ -1,0 +1,44 @@
+<docs>
+<DataCue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>DataCue</c></strong> interface represents a cue that associates arbitrary timed data with an audio or video media resource, or exposes timed data from a media resource to web pages. It extends the <see cref="TextTrackCue"/> interface with a <see cref="DataCue.Value"/> property that can hold any data type, and a <see cref="DataCue.Type"/> property that identifies the kind of data.
+</summary>
+<remarks>
+<para>Unlike <see cref="VTTCue"/>, which is designed for displaying subtitle and caption text, <c>DataCue</c> is intended for non-rendered timed metadata. Use cases include dynamic content replacement, ad insertion, presentation of supplemental content alongside audio or video, or more generally, triggering application logic at specific points on the media timeline.</para><para>Some user agents may also automatically generate <c>DataCue</c> objects for in-band timed metadata carried within media streams, such as ID3 tags in <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources#hls_encoding">HTTP Live Streaming (HLS)</see>.</para><para></para>
+<para>-<see cref="TextTrackCue"/><br/>-<see cref="VTTCue"/><br/>-<see cref="TextTrack"/><br/>-<see cref="TextTrackCueenter"/> event<br/>-<see cref="TextTrackCueexit"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataCue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DataCue>
+<DataCueDataCue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>DataCue()</c></strong> constructor creates and returns a new <see cref="DataCue"/> object that represents a timed metadata cue over a given time range. The resulting cue can be added to a metadata <see cref="TextTrack"/> using <see cref="TextTrack.AddCue"/>, allowing arbitrary data to be synchronized with audio or video playback.
+</summary>
+<remarks>
+<para>-<see cref="DataCue"/><br/>-<see cref="TextTrack"/><br/>-<see cref="TextTrack.AddCue"/><br/>-<see cref="TextTrackCueenter"/> event<br/>-<see cref="TextTrackCueexit"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataCue/DataCue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DataCue"/> object.</returns>
+</DataCueDataCue>
+<DataCueType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>type</c></strong> read-only property of the <see cref="DataCue"/> interface returns a string identifying the type or schema of the data stored in the cue's <see cref="DataCue.Value"/> property. This is typically a reverse-domain notation string (e.g., <c>&amp;quot;org.id3&amp;quot;</c>, <c>&amp;quot;com.apple.itunes&amp;quot;</c>) that allows applications to interpret the cue&amp;apos;s data payload correctly.
+</summary>
+<remarks>
+<para>When a user agent automatically generates <c>DataCue</c> objects for in-band timed metadata (for example, from an HTTP Live Streaming source), it sets this property to indicate the metadata format. When application code creates a <c>DataCue</c> using the <see cref="DataCue.DataCue"/> constructor, the <c>type</c> is set from the optional fourth argument and defaults to an empty string if omitted.</para>
+<para>-<see cref="DataCue"/><br/>-<see cref="DataCue.Value"/><br/>-<see cref="DataCue.DataCue"/> constructor<br/>-<see cref="TextTrackCue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataCue/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Common values set by user agents for in-band metadata include:Application-defined cues may use any string, but reverse-domain notation is recommended to avoid collisions.</value>
+</DataCueType>
+<DataCueValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>value</c></strong> property of the <see cref="DataCue"/> interface represents the data payload of the cue. Unlike <see cref="VTTCue"/>, which carries text content, <c>DataCue</c> can hold any data type — such as a JavaScript object, a string, or an <see cref="ArrayBuffer"/> — making it suitable for timed metadata use cases where structured data needs to be synchronized with media playback.
+</summary>
+<remarks>
+<para>The property is read-write for application-created cues, allowing the data to be updated after construction. For cues generated automatically by the user agent from in-band timed metadata (e.g., ID3 tags in an HTTP Live Streaming source), the value is set by the user agent and reflects the metadata payload.</para><para>The <see cref="DataCue.Type"/> property can be used alongside <c>value</c> to identify the format or schema of the data.</para>
+<para>-<see cref="DataCue"/><br/>-<see cref="DataCue.Type"/><br/>-<see cref="DataCue.DataCue"/> constructor<br/>-<see cref="TextTrackCue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataCue/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Any type. The value is typically a string, a plain object, or an <see cref="ArrayBuffer"/>, depending on the source of the cue and the kind of timed metadata it represents.</value>
+</DataCueValue>
+</docs>

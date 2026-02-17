@@ -5,7 +5,7 @@ The <strong><c>ViewTransition</c></strong> interface of the {{domxref(&amp;quot;
 </summary>
 <remarks>
 <para>This object type is made available in the following ways:</para><para>When a view transition is triggered by a <c>startViewTransition()</c> call (or a page navigation in the case of MPA transitions), a sequence of steps is followed as explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process">The view transition process</see>. This also explains when the different promises fulfill.</para>
-<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using">Using the View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using_types">Using view transition types</see><br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ViewTransition>
@@ -41,6 +41,16 @@ The <strong><c>skipTransition()</c></strong> method of the<br/><see cref="ViewTr
 </remarks>
 <returns><c>undefined</c>.</returns>
 </ViewTransitionSkipTransition>
+<ViewTransitionTypes>
+<summary>
+The <strong><c>types</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a <see cref="ViewTransitionTypeSet"/> that allows the <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using_types">types</see> set on the view transition to be accessed and modified.
+</summary>
+<remarks>
+<para>-<see cref="ViewTransitionTypeSet"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using">Using the View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using_types">Using view transition types</see><br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ViewTransitionTypeSet"/>. This is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis">Set-like object</see>, which means you can modify the types applied to a view transition on-the-fly using methods available on it such as <c>clear()</c>, <c>add()</c>, and <c>delete()</c>.</value>
+</ViewTransitionTypes>
 <ViewTransitionUpdateCallbackDone>
 <summary>
 The <strong><c>updateCallbackDone</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the <see cref="Document.StartViewTransition"/> method's callback fulfills, or rejects when it rejects.

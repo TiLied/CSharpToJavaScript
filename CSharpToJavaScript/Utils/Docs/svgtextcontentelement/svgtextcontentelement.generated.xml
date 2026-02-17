@@ -60,7 +60,7 @@ The <c>getNumberOfChars()</c> method of the <see cref="SVGTextContentElement"/> 
 The <c>getRotationOfChar()</c> method of the <see cref="SVGTextContentElement"/> interface the represents the rotation of a typographic character.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode"><c>writing-mode</c></see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">writing-mode</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getRotationOfChar"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A float; the rotation angle of the character in degrees.</returns>
@@ -79,7 +79,7 @@ The <c>getStartPositionOfChar()</c> method of the <see cref="SVGTextContentEleme
 The <c>getSubStringLength()</c> method of the <see cref="SVGTextContentElement"/> interface represents the computed length of the formatted text advance distance for a substring of text within the element.
 </summary>
 <remarks>
-<para>Note that this method only accounts for the widths of the glyphs in the substring and any extra spacing inserted by the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><c>letter-spacing</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><c>word-spacing</c></see> properties. Visual spacing adjustments made by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/x"><c>x</c></see> attribute are ignored.</para>
+<para>Note that this method only accounts for the widths of the glyphs in the substring and any extra spacing inserted by the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">word-spacing</see> properties. Visual spacing adjustments made by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/x">x</see> attribute are ignored.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement/getSubStringLength"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A float.</returns>

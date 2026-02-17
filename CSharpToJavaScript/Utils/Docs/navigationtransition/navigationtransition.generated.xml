@@ -1,7 +1,7 @@
 <docs>
 <NavigationTransition>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationTransition</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the <see cref="Navigationnavigatesuccess"/> or <see cref="Navigationnavigateerror"/> stage.
+The <strong><c>NavigationTransition</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the <see cref="Navigationnavigatesuccess"/> or <see cref="Navigationnavigateerror"/> stage.
 </summary>
 <remarks>
 <para>It is accessed via the <see cref="Navigation.Transition"/> property.</para><para></para>
@@ -11,7 +11,7 @@
 </NavigationTransition>
 <NavigationTransitionFinished>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>finished</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns a {{jsxref("Promise")}} that fulfills at the same time the <see cref="Navigationnavigatesuccess"/> event fires, or rejects at the same time the <see cref="Navigationnavigateerror"/> event fires.
+The <strong><c>finished</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns a {{jsxref("Promise")}} that fulfills at the same time the <see cref="Navigationnavigatesuccess"/> event fires, or rejects at the same time the <see cref="Navigationnavigateerror"/> event fires.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -21,7 +21,7 @@
 </NavigationTransitionFinished>
 <NavigationTransitionFrom>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>from</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns the <see cref="NavigationHistoryEntry"/> that the transition is coming from.
+The <strong><c>from</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns the <see cref="NavigationHistoryEntry"/> that the transition is coming from.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -31,7 +31,7 @@
 </NavigationTransitionFrom>
 <NavigationTransitionNavigationType>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigationType</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns the type of the ongoing navigation.
+The <strong><c>navigationType</c></strong> read-only property of the<br/><see cref="NavigationTransition"/> interface returns the type of the ongoing navigation.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>

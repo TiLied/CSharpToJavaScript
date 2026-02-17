@@ -43,7 +43,7 @@ The <strong><c>allowFullscreen</c></strong> property of the <see cref="HTMLIFram
 </HTMLIFrameElementAllowPaymentRequest>
 <HTMLIFrameElementBrowsingTopics>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section for details of opposition.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section for details of opposition.</blockquote>
 </summary>
 <remarks>
 <para>The <strong><c>browsingTopics</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a boolean specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the <c>browsingtopics</c> HTML attribute.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para>
@@ -54,7 +54,7 @@ The <strong><c>allowFullscreen</c></strong> property of the <see cref="HTMLIFram
 </HTMLIFrameElementBrowsingTopics>
 <HTMLIFrameElementContentDocument>
 <summary>
-If the iframe and the iframe&amp;apos;s parent document are <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same Origin</see>, returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document"><c>Document</c></see> (that is, the active document in the inline frame&amp;apos;s nested browsing context), else returns <c>null</c>.
+If the iframe and the iframe&amp;apos;s parent document are <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">Same Origin</see>, returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document"><c>Document</c></see> (that is, the active document in the inline frame&amp;apos;s nested browsing context), else returns <c>null</c>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument"> <em>See also on MDN</em> </seealso></para>
@@ -75,8 +75,8 @@ The <strong><c>contentWindow</c></strong> property returns the <see href="https:
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>credentialless</c></strong> property of the <see cref="HTMLIFrameElement"/> interface indicates whether the {{htmlelement("iframe")}} is credentialless, meaning that documents inside will be loaded using new, ephemeral contexts.
 </summary>
 <remarks>
-<para>Those contexts do not have access to their network, cookies and storage data associated with their origin. Instead, they use new ones, local to the top-level document lifetime. It means any data stored won&amp;apos;t be accessible anymore after the user navigates away from the page or reloads it.</para><para>In return, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">Cross-Origin-Embedder-Policy</see> (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See <see href="https://developer.mozilla.org/en-US/docs/Web/Security/IFrame_credentialless">IFrame credentialless</see> for a deeper explanation.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/IFrame_credentialless">IFrame credentialless</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see><br/></para>
+<para>Those contexts do not have access to their network, cookies and storage data associated with their origin. Instead, they use new ones, local to the top-level document lifetime. It means any data stored won&amp;apos;t be accessible anymore after the user navigates away from the page or reloads it.</para><para>In return, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">Cross-Origin-Embedder-Policy</see> (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/IFrame_credentialless">IFrame credentialless</see> for a deeper explanation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/IFrame_credentialless">IFrame credentialless</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/credentialless"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean. The default value is <c>false</c>; set it to <c>true</c> to make the <c>&amp;lt;iframe&amp;gt;</c> credentialless.</value>
@@ -139,6 +139,17 @@ The <strong><c>name</c></strong> property of the <see cref="HTMLIFrameElement"/>
 </remarks>
 <value>A string.</value>
 </HTMLIFrameElementName>
+<HTMLIFrameElementPrivateToken>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>privateToken</c></strong> property of the <see cref="HTMLIFrameElement"/> interface returns a string representation of an options object representing a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API/Using">private state token</see> operation; this object has the same structure as the <c>RequestInit</c> dictionary&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#privatetoken"><c>privateToken</c></see> property.
+</summary>
+<remarks>
+<para>This attribute mirrors the content of the associated <c>&amp;lt;iframe&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#privatetoken"><c>privateToken</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API">Private State Token API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/privateToken"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLIFrameElementPrivateToken>
 <HTMLIFrameElementReferrerPolicy>
 <summary>
 The<br/><strong><c>HTMLIFrameElement.referrerPolicy</c></strong><br/>property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy"><c>referrerpolicy</c></see> attribute of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element defining which referrer is sent when fetching the<br/>resource.
@@ -150,13 +161,12 @@ The<br/><strong><c>HTMLIFrameElement.referrerPolicy</c></strong><br/>property re
 </HTMLIFrameElementReferrerPolicy>
 <HTMLIFrameElementSandbox>
 <summary>
-The <strong><c>sandbox</c></strong> read-only property of the <see cref="HTMLIFrameElement"/> interface returns a <see cref="DOMTokenList"/> indicating extra restrictions on the behavior of the nested content.
+The read-only <strong><c>sandbox</c></strong> property of the <see cref="HTMLIFrameElement"/> returns a live <see cref="DOMTokenList"/> object indicating extra restrictions on the behavior of the nested content. It reflects the {{HTMLElement("iframe")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox"><c>sandbox</c></see> content attribute.
 </summary>
 <remarks>
-<para>It reflects the <c>sandbox</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/sandbox"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMTokenList"/>. Each item must be one of the tokens listed in the <c>sandbox</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>sandbox</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>sandbox</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLIFrameElementSandbox>
 <HTMLIFrameElementSrc>
 <summary>
@@ -170,11 +180,13 @@ The <strong><c>HTMLIFrameElement.src</c></strong><br/>A string that reflects the
 </HTMLIFrameElementSrc>
 <HTMLIFrameElementSrcdoc>
 <summary>
-The <strong><c>srcdoc</c></strong> property of the <see cref="HTMLIFrameElement"/> specifies the content of the page.
+<blockquote class="WARNING"><h5>WARNING</h5>This property parses its input as HTML, writing the result into the frame&amp;apos;s DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
+<para>You can mitigate this risk by always assigning <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>srcdoc</c></strong> property of the <see cref="HTMLIFrameElement"/> interface gets or sets the inline HTML markup of the frame's document.</para><para>This reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><c>srcdoc</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<value>Getting the property returns a string containing the HTML serialization of the frame&amp;apos;s document.<br/>This is <c>undefined</c> if the value is not set.Setting the property accepts either a <see cref="TrustedHTML"/> object or a string.<br/>It parses this input as a HTML document and replaces the content of the frame with the result.</value>
 </HTMLIFrameElementSrcdoc>
 <HTMLIFrameElementWidth>
 <summary>

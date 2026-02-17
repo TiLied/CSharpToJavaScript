@@ -37,6 +37,17 @@ The <strong><c>audiostart</c></strong> event of the <see href="https://developer
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audiostart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechRecognitionAudiostart>
+<SpeechRecognitionAvailable>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>available()</c></strong> static method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> checks whether the specified languages are available for speech recognition.
+</summary>
+<remarks>
+<para>To install a language pack for speech recognition locally, use the <see cref="SpeechRecognition.Install"/> method.</para><para>Access to the <c>available()</c> method is controlled by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/on-device-speech-recognition">Permissions-Policy/on-device-speech-recognition</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see>. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</see><br/>-<see cref="SpeechRecognition.ProcessLocally"/><br/>-<see cref="SpeechRecognition.Install"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/available"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.Possible values include:</returns>
+</SpeechRecognitionAvailable>
 <SpeechRecognitionContinuous>
 <summary>
 The <strong><c>continuous</c></strong> property of the<br/><see cref="SpeechRecognition"/> interface controls whether continuous results are<br/>returned for each recognition, or only a single result.
@@ -71,11 +82,23 @@ The <strong><c>error</c></strong> event of the <see href="https://developer.mozi
 The <strong><c>grammars</c></strong> property of the<br/><see cref="SpeechRecognition"/> interface returns and sets a collection of<br/><see cref="SpeechGrammar"/> objects that represent the grammars that will be understood<br/>by the current <c>SpeechRecognition</c>.
 </summary>
 <remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="SpeechGrammarList"/> containing the <see cref="SpeechGrammar"/> objects<br/>that represent your grammar for your app.</value>
+<value>A <see cref="SpeechGrammarList"/> containing the <see cref="SpeechGrammar"/> objects that represent the grammars used by your app.</value>
 </SpeechRecognitionGrammars>
+<SpeechRecognitionInstall>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>install()</c></strong> static method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> installs the required language packs for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition">on-device speech recognition</see> in the specified languages.
+</summary>
+<remarks>
+<para>To check if the language packs are already available, use the <see cref="SpeechRecognition.Available"/> method.</para><para>Access to the <c>install()</c> method is controlled by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/on-device-speech-recognition">Permissions-Policy/on-device-speech-recognition</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see> directive. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</see><br/>-<see cref="SpeechRecognition.ProcessLocally"/><br/>-<see cref="SpeechRecognition.Available"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/install"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a boolean value indicating whether the language pack was installed successfully. The conditions that result in each return value are as follows:</returns>
+</SpeechRecognitionInstall>
 <SpeechRecognitionInterimResults>
 <summary>
 The <strong><c>interimResults</c></strong> property of the<br/><see cref="SpeechRecognition"/> interface controls whether interim results should be<br/>returned (<c>true</c>) or not (<c>false</c>). Interim results are results<br/>that are not yet final (e.g., the <see cref="SpeechRecognitionResult.IsFinal"/> property<br/>is <c>false</c>).
@@ -95,7 +118,7 @@ The <strong><c>lang</c></strong> property of the <see cref="SpeechRecognition"/>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the BCP 47 language tag for the current <c>SpeechRecognition</c>.</value>
+<value>A string representing the language for the current <c>SpeechRecognition</c>. The value should be a valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </SpeechRecognitionLang>
 <SpeechRecognitionMaxAlternatives>
 <summary>
@@ -118,6 +141,27 @@ The <strong><c>nomatch</c></strong> event of the <see href="https://developer.mo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/nomatch"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechRecognitionNomatch>
+<SpeechRecognitionPhrases>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>phrases</c></strong> property of the<br/><see cref="SpeechRecognition"/> interface sets an array of <see cref="SpeechRecognitionPhrase"/> objects to be used for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition">contextual biasing</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/>-<see cref="SpeechRecognitionPhrase"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/phrases"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>ObservableArray</c> of <see cref="SpeechRecognitionPhrase"/> objects.</value>
+</SpeechRecognitionPhrases>
+<SpeechRecognitionProcessLocally>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>processLocally</c></strong> property of the<br/><see cref="SpeechRecognition"/> interface specifies whether speech recognition must be performed locally on the user's device.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition">On-device speech recognition</see> for more information.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/processLocally"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SpeechRecognitionProcessLocally>
 <SpeechRecognitionResult>
 <summary>
 The <strong><c>result</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
@@ -174,7 +218,7 @@ The <strong><c>speechstart</c></strong> event of the <see href="https://develope
 </SpeechRecognitionSpeechstart>
 <SpeechRecognitionStart>
 <summary>
-The <strong><c>start()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> starts the speech<br/>recognition service listening to incoming audio with intent to recognize grammars<br/>associated with the current <see cref="SpeechRecognition"/>.
+The <strong><c>start()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
@@ -193,7 +237,7 @@ The <strong><c>start</c></strong> event of the <see href="https://developer.mozi
 </SpeechRecognitionStart>
 <SpeechRecognitionStop>
 <summary>
-The <strong><c>stop()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> stops the speech<br/>recognition service from listening to incoming audio, and attempts to return a<br/><see cref="SpeechRecognitionResult"/> using the audio captured so far.
+The <strong><c>stop()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> stops the speech recognition service from listening for incoming audio and attempts to return a <see cref="SpeechRecognitionResult"/> based on the results captured so far.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>

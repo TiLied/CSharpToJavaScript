@@ -1,11 +1,11 @@
 <docs>
 <MediaQueryList>
 <summary>
-A <strong><c>MediaQueryList</c></strong> object stores information on a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries">media query</see> applied to a document, with support for both immediate and event-driven matching against the state of the document.
+A <strong><c>MediaQueryList</c></strong> object stores information on a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries">media query</see> applied to a document, with support for both immediate and event-driven matching against the state of the document.
 </summary>
 <remarks>
 <para>You can create a <c>MediaQueryList</c> by calling <see cref="Window.MatchMedia"/> on the <see cref="Window"/> object. The resulting object handles sending notifications to listeners when the media query state changes (i.e., when the media query test starts or stops evaluating to <c>true</c>).</para><para>This is very useful for adaptive design, since this makes it possible to observe a document to detect when its media queries change, instead of polling the values periodically, and allows you to programmatically make changes to a document based on media query status.</para><para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryListEvent"/><br/>-The article <see cref="Window.DevicePixelRatio"/> also has a useful example<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryListEvent"/><br/>-The article <see cref="Window.DevicePixelRatio"/> also has a useful example<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaQueryList>
@@ -15,7 +15,7 @@ A <strong><c>MediaQueryList</c></strong> object stores information on a <see hre
 </summary>
 <remarks>
 <para>In older browsers <c>MediaQueryList</c> did not yet inherit from <see cref="EventTarget"/>,<br/>so this method was provided as an alias of <see cref="EventTarget.AddEventListener"/>.<br/>Use <c>addEventListener()</c> instead of <c>addListener()</c> if it is<br/>available in the browsers you need to support.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/addListener"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
@@ -25,7 +25,7 @@ A <strong><c>MediaQueryList</c></strong> object stores information on a <see hre
 The <strong><c>change</c></strong> event of the <see cref="MediaQueryList"/> interface fires when the status of media query support changes.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/change"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaQueryListChange>
@@ -35,7 +35,7 @@ The <strong><c>matches</c></strong> read-only property of the<br/><see cref="Med
 </summary>
 <remarks>
 <para>You can be notified when the value of <c>matches</c> changes by watching for the<br/><see cref="MediaQueryList.Change"/> event to be fired at the<br/><c>MediaQueryList</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/matches"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value that is <c>true</c> if the <see cref="Document"/><br/>currently matches the media query list; otherwise, it&amp;apos;s <c>false</c>.</value>
@@ -45,7 +45,7 @@ The <strong><c>matches</c></strong> read-only property of the<br/><see cref="Med
 The <strong><c>media</c></strong> read-only property of the<br/><see cref="MediaQueryList"/> interface is a string representing a<br/>serialized media query.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/media"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string representing a serialized media query.</value>
@@ -56,7 +56,7 @@ The <strong><c>media</c></strong> read-only property of the<br/><see cref="Media
 </summary>
 <remarks>
 <para>In older browsers <c>MediaQueryList</c> did not yet inherit from <see cref="EventTarget"/>,<br/>so this method was provided as an alias of <see cref="EventTarget.RemoveEventListener"/>.<br/>Use <c>removeEventListener()</c> instead of <c>removeListener()</c> if it is<br/>available in the browsers you need to support.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Testing">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/removeListener"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

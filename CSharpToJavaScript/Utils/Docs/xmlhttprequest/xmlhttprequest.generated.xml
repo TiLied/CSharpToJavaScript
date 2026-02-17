@@ -144,7 +144,7 @@ The <see cref="XMLHttpRequest"/> method<br/><strong><c>send()</c></strong> sends
 </XMLHttpRequestSend>
 <XMLHttpRequestSetAttributionReporting>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setAttributionReporting()</c></strong> method of the<br/><see cref="XMLHttpRequest"/> interface indicates that you want the request's response to be able to register a JavaScript-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers">attribution trigger</see>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>setAttributionReporting()</c></strong> method of the<br/><see cref="XMLHttpRequest"/> interface indicates that you want the request's response to be able to register a JavaScript-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers">attribution trigger</see>.
 </summary>
 <remarks>
 <para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see> for more details.</para>
@@ -153,6 +153,16 @@ The <see cref="XMLHttpRequest"/> method<br/><strong><c>send()</c></strong> sends
 </remarks>
 <returns>None (<c>undefined</c>).</returns>
 </XMLHttpRequestSetAttributionReporting>
+<XMLHttpRequestSetPrivateToken>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XMLHttpRequest"/> method <strong><c>setPrivateToken()</c></strong> adds <see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API/Using">private state token</see> information to an <c>XMLHttpRequest</c> call, to initiate private state token operations.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API">Private State Token API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setPrivateToken"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XMLHttpRequestSetPrivateToken>
 <XMLHttpRequestSetRequestHeader>
 <summary>
 The <see cref="XMLHttpRequest"/> method <strong><c>setRequestHeader()</c></strong> sets the value of an HTTP request header.<br/>When using <c>setRequestHeader()</c>, you must call it after calling <see cref="XMLHttpRequest.Open"/>, but before calling <see cref="XMLHttpRequest.Send"/>.<br/>If this method is called several times with the same header, the values are merged into one single request header.

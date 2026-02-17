@@ -20,7 +20,7 @@ The <strong><c>Animation()</c></strong> constructor of the <see href="https://de
 </AnimationAnimation>
 <AnimationCancel>
 <summary>
-The Web Animations API&amp;apos;s <strong><c>cancel()</c></strong> method of the <see cref="Animation"/> interface clears all <see cref="KeyframeEffect"/>s caused by this animation and aborts its playback.
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>&amp;apos;s <strong><c>cancel()</c></strong> method of the <see cref="Animation"/> interface clears all <see cref="KeyframeEffect"/>s caused by this animation and aborts its playback.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>When an animation is cancelled, its <see cref="Animation.StartTime"/> and <see cref="Animation.CurrentTime"/> are set to <c>null</c>.</para></blockquote>
@@ -41,7 +41,7 @@ The <strong><c>cancel</c></strong> event of the <see cref="Animation"/> interfac
 </AnimationCancel>
 <AnimationCommitStyles>
 <summary>
-The <c>commitStyles()</c> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> interface writes the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value">computed values</see> of the animation&amp;apos;s current styles into its target element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
+The <c>commitStyles()</c> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> interface writes the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value">computed values</see> of the animation&amp;apos;s current styles into its target element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
 </summary>
 <remarks>
 <para>It is primarily used to write the styles for the final state of an animation into the target element, so that the styling persists after the animation ends.</para>
@@ -69,7 +69,7 @@ The <strong><c>Animation.effect</c></strong> property of the <see href="https://
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationEffect"/><br/>-<see cref="Animation"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/effect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="AnimationEffect"/> object describing the target animation effect for the animation, or <c>null</c> to indicate no active effect.</value>
+<value>An <see cref="AnimationEffect"/> object describing the target animation effect for the animation, or <c>null</c> to indicate no active effect.</value>
 </AnimationEffect>
 <AnimationFinish>
 <summary>

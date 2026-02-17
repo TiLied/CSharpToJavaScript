@@ -27,7 +27,7 @@ The <strong><c>blob()</c></strong> method of the <see cref="Request"/> interface
 <para>-<see cref="Response.Blob"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/blob"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A promise that resolves with a <see cref="Blob"/>.</returns>
+<returns>A promise that resolves with a <see cref="Blob"/> whose data is the body's bytes and the media type is the request's <c>Content-Type</c> header&amp;apos;s value.</returns>
 </RequestBlob>
 <RequestBody>
 <summary>
@@ -51,13 +51,13 @@ The <strong><c>bodyUsed</c></strong> read-only property of the<br/><see cref="Re
 </RequestBodyUsed>
 <RequestBytes>
 <summary>
-The <strong><c>bytes()</c></strong> method of the <see cref="Request"/> interface reads the request body and returns it as a promise that resolves with an {{jsxref("Uint8Array")}}.
+The <strong><c>bytes()</c></strong> method of the <see cref="Request"/> interface reads the request body and returns it as a promise that resolves with a {{jsxref("Uint8Array")}}.
 </summary>
 <remarks>
 <para>-<see cref="Response.ArrayBuffer"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/bytes"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A promise that resolves with an <see cref="Uint8Array"/>.</returns>
+<returns>A promise that resolves with a <see cref="Uint8Array"/>.</returns>
 </RequestBytes>
 <RequestCache>
 <summary>
@@ -134,7 +134,7 @@ The <strong><c>headers</c></strong> read-only property of the<br/><see cref="Req
 </RequestHeaders>
 <RequestIntegrity>
 <summary>
-The <strong><c>integrity</c></strong> read-only property of the <see cref="Request"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</see> value of the request.
+The <strong><c>integrity</c></strong> read-only property of the <see cref="Request"/> interface contains the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity">subresource integrity</see> value of the request.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>

@@ -1,0 +1,121 @@
+<docs>
+<CSSFontFeatureValuesMap>
+<summary>
+The <strong><c>CSSFontFeatureValuesMap</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</see> represents an iterable and read-only set of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule">CSSFontFeatureValuesRule</see> properties, such as <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/swash"><c>swash</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/annotation"><c>annotation</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/ornaments"><c>ornaments</c></see>, etc.
+</summary>
+<remarks>
+<para>An <c>CSSFontFeatureValuesMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis">Map-like object</see>, in which each key is the user-defined name used to reference a font feature, and the corresponding value is the index for the font feature within the font.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFontFeatureValuesMap>
+<CSSFontFeatureValuesMapClear>
+<summary>
+The <strong><c>clear()</c></strong> method of the <see cref="CSSFontFeatureValuesMap"/> interface removes all declarations in the <c>CSSFontFeatureValuesMap</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear">Map.prototype.clear()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSFontFeatureValuesMapClear>
+<CSSFontFeatureValuesMapDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="CSSFontFeatureValuesMap"/> interface removes the CSS declaration with the given property in the <c>CSSFontFeatureValuesMap</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete">Map.prototype.delete()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSFontFeatureValuesMapDelete>
+<CSSFontFeatureValuesMapEntries>
+<summary>
+The <strong><c>entries()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> instances returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">map iterator</see> object that contains the <c>[key, value]</c> pairs for each declaration in this <c>CSSFontFeatureValuesMap</c> in insertion order.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries">Map.prototype.entries()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterable <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">iterator object</see>.</returns>
+</CSSFontFeatureValuesMapEntries>
+<CSSFontFeatureValuesMapForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> instances executes a provided function once per each key/value pair in this map, in insertion order.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach">Map.prototype.forEach()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSFontFeatureValuesMapForEach>
+<CSSFontFeatureValuesMapGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="CSSFontFeatureValuesMap"/> interface returns value corresponding to the key in this <c>CSSFontFeatureValuesMap</c>, or <c>undefined</c> if there is none.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get">Map.prototype.get()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if an entry with the specified key exists in the <c>CSSFontFeatureValuesMap</c> object; otherwise <c>false</c>.</returns>
+</CSSFontFeatureValuesMapGet>
+<CSSFontFeatureValuesMapHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="CSSFontFeatureValuesMap"/> interface returns a boolean indicating whether an entry with the specified key exists in this <c>CSSFontFeatureValuesMap</c> or not.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has">Map.prototype.has()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The value associated with the specified key in the <c>CSSFontFeatureValuesMap</c> object. If the key can&amp;apos;t be found, <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</see> is returned.</returns>
+</CSSFontFeatureValuesMapHas>
+<CSSFontFeatureValuesMapKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> instances returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">map iterator</see> object that contains the <c>[key, value]</c> pairs for each declaration in this <c>CSSFontFeatureValuesMap</c> in insertion order.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys">Map.prototype.keys()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterable <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">iterator object</see>.</returns>
+</CSSFontFeatureValuesMapKeys>
+<CSSFontFeatureValuesMapSet>
+<summary>
+The <strong><c>set()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> instances adds a new entry with a specified key and value to this <c>CSSFontFeatureValuesMap</c>, or updates an existing entry if the key already exists.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set">Map.prototype.keys()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>CSSFontFeatureValuesMap</c> object.</returns>
+</CSSFontFeatureValuesMapSet>
+<CSSFontFeatureValuesMapSize>
+<summary>
+The <strong><c>size</c></strong> read-only property of the <see cref="CSSFontFeatureValuesMap"/> interface returns a positive integer containing the size of the <c>CSSFontFeatureValuesMap</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</CSSFontFeatureValuesMapSize>
+<CSSFontFeatureValuesMapSymbol.iterator>
+<summary>
+The <strong><c>[Symbol.iterator]()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> interface implements the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable protocol</see> and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</see> and <see cref="Statements/forOf"/> loops. It returns the value of <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><c>this</c></see>, which is the iterator object itself.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator"><c>Iterator.prototype[Symbol.iterator]()</c></see><br/>-<see cref="Iterator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The value of <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><c>this</c></see>, which is the iterator object itself.</returns>
+</CSSFontFeatureValuesMapSymbol.iterator>
+<CSSFontFeatureValuesMapValues>
+<summary>
+The <strong><c>values()</c></strong> method of <see cref="CSSFontFeatureValuesMap"/> instances returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">map iterator</see> object that contains the <c>[key, value]</c> pairs for each declaration in this <c>CSSFontFeatureValuesMap</c> in insertion order.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values">Map.prototype.values()</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterable <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator">iterator object</see>.</returns>
+</CSSFontFeatureValuesMapValues>
+</docs>

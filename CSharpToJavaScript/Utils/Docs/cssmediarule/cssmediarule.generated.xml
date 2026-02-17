@@ -10,11 +10,11 @@ The <strong><c>CSSMediaRule</c></strong> interface represents a single CSS <see 
 </CSSMediaRule>
 <CSSMediaRuleMedia>
 <summary>
-The read-only <strong><c>media</c></strong> property of the<br/><see cref="CSSMediaRule"/> interface returns a <see cref="MediaList"/> representing the intended<br/>destination medium for style information.
+The read-only <strong><c>media</c></strong> property of the <see cref="CSSMediaRule"/> interface contains a <see cref="MediaList"/> object representing the media query list of the {{cssxref("@media")}} rule.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMediaRule/media"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>a <see cref="MediaList"/></value>
+<value>A <see cref="MediaList"/> object.Although the <c>media</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>MediaList</c> object, you can still assign to the <c>media</c> property directly, which is equivalent to assigning to its <see cref="MediaListmediaText"/> property. You can also modify the <c>MediaList</c> object using the <see cref="MediaListappendMedium"/> and <see cref="MediaListdeleteMedium"/> methods.</value>
 </CSSMediaRuleMedia>
 </docs>

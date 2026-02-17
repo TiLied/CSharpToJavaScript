@@ -57,4 +57,14 @@ The <strong><c>gamma</c></strong> read-only property of the <see cref="DeviceOri
 </remarks>
 <value>A number.</value>
 </DeviceOrientationEventGamma>
+<DeviceOrientationEventRequestPermission>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestPermission()</c></strong> static method of the <see cref="DeviceOrientationEvent"/> interface requests the user's permission to access device orientation data from the accelerometer and gyroscope sensors. It can also request permission to access magnetometer data when absolute orientation is needed. This method requires {{Glossary("transient activation")}}, meaning that it must be triggered by a UI event such as a button click.
+</summary>
+<remarks>
+<para>-<see cref="DeviceOrientationEvent"/><br/>-<see cref="DeviceMotionEvent.RequestPermission"/><br/>-<see cref="Window.Deviceorientation"/> event<br/>-<see cref="Window.Deviceorientationabsolute"/> event<br/>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/requestPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a string which is either <c>&amp;quot;granted&amp;quot;</c> or <c>&amp;quot;denied&amp;quot;</c>.</returns>
+</DeviceOrientationEventRequestPermission>
 </docs>

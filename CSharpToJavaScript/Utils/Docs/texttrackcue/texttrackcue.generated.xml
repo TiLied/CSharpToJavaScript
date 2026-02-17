@@ -1,7 +1,7 @@
 <docs>
 <TextTrackCue>
 <summary>
-The <strong><c>TextTrackCue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT API</see> is the abstract base class for the various derived cue types, such as <see cref="VTTCue"/>; you will work with these derived types rather than the base class.
+The <strong><c>TextTrackCue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT API</see> is the abstract base class for the various derived cue types, such as <see cref="VTTCue"/> and <see cref="DataCue"/>; you will work with these derived types rather than the base class.
 </summary>
 <remarks>
 <para>These cues represent strings of text presented for some duration of time during the performance of a <see cref="TextTrack"/>. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.</para><para></para>

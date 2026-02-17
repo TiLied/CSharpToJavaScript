@@ -19,12 +19,12 @@ The read-only <strong><c>cancelable</c></strong> property returns the associated
 </PerformanceEventTimingCancelable>
 <PerformanceEventTimingInteractionId>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>interactionId</c></strong> property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
+The read-only <strong><c>interactionId</c></strong> property of the <see cref="PerformanceEventTiming"/> interface returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/interactionId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number.</value>
+<value>A number. For event types where an interaction ID is not calculated the value is 0.</value>
 </PerformanceEventTimingInteractionId>
 <PerformanceEventTimingProcessingEnd>
 <summary>

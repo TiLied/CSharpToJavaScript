@@ -21,7 +21,7 @@ The <strong><c>contextlost</c></strong> event of the <see cref="OffscreenCanvas"
 </OffscreenCanvasContextlost>
 <OffscreenCanvasContextrestored>
 <summary>
-The <strong><c>contextrestored</c></strong> event of the <see cref="OffscreenCanvas"/> interface is fired if the browser restores a <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D"><c>OffscreenCanvasRenderingContext2D</c></see> context that was <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event">previously lost</see>.
+The <strong><c>contextrestored</c></strong> event of the <see cref="OffscreenCanvas"/> interface is fired if the browser restores an <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D"><c>OffscreenCanvasRenderingContext2D</c></see> context that was <see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event">previously lost</see>.
 </summary>
 <remarks>
 <para>You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.</para>

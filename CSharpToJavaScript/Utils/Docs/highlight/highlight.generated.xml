@@ -5,7 +5,7 @@ The <strong><c>Highlight</c></strong> interface of the <see href="https://develo
 </summary>
 <remarks>
 <para>To style arbitrary ranges in a page, instantiate a new <c>Highlight</c> object, add one or more <c>Range</c> objects to it, and register it using the <see cref="HighlightRegistry"/>.</para><para>A <c>Highlight</c> instance is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis"><c>Set</c>-like object</see> that can hold one or more <c>Range</c> objects.</para><para></para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Highlight>
@@ -80,7 +80,7 @@ The <strong><c>has()</c></strong> method of the <see cref="Highlight"/> interfac
 The <strong><c>Highlight()</c></strong> constructor returns a newly created<br/><see cref="Highlight"/> object which can hold a collection of <see cref="Range"/> objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
 </summary>
 <remarks>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/Highlight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A new <c>Highlight</c> object.</returns>
@@ -123,7 +123,7 @@ The <c>type</c> property of the <see cref="Highlight"/> interface is an enumerat
 </summary>
 <remarks>
 <para>By default, a highlight object will have its type set to <c>highlight</c>, but you can change it to <c>spelling-error</c> or <c>grammar-error</c>.</para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The possible values of the <c>type</c> enumerated value are:</value>

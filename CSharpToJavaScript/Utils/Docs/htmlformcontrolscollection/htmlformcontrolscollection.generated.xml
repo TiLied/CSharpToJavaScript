@@ -18,5 +18,6 @@ The <strong><c>HTMLFormControlsCollection.namedItem()</c></strong> method return
 <para>-<see cref="HTMLCollection.NamedItem"/> that it replaces<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns><blockquote class="NOTE"><h5>NOTE</h5>The returned <see cref="RadioNodeList"/> is live, meaning that its contents automatically update if elements that match the given name are added to or removed from the collection. Furthermore, it may contain non-radio input elements despite the collection's name.</blockquote></returns>
 </HTMLFormControlsCollectionNamedItem>
 </docs>

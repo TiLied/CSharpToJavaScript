@@ -9,14 +9,34 @@ A <c>DOMQuad</c> is a collection of four <c>DOMPoint</c>s defining the corners o
 </DOMQuad>
 <DOMQuadDOMQuad>
 <summary>
-The <strong><c>DOMQuad()</c></strong> constructor<br/>creates and returns a new <see cref="DOMQuad"/> object, given the values for some or<br/>all of its properties.
+The <strong><c>DOMQuad()</c></strong> constructor creates and returns a new <see cref="DOMQuad"/> object, given the values for some or all of its properties.
 </summary>
 <remarks>
-<para>You can also create a <c>DOMQuad</c> by calling the<br/><see cref="DOMQuad.FromRect"/> or <see cref="DOMQuad.FromQuad"/> static function. That function accepts any object with the required parameters, including a <c>DOMQuad</c>, <see cref="DOMPoint"/> or<br/><see cref="DOMPointReadOnly"/>.</para>
+<para>You can also create a <c>DOMQuad</c> by calling the <see cref="DOMQuad.FromRect"/> or <see cref="DOMQuad.FromQuad"/> static function. These functions accept any object with the required parameters, including a <see cref="DOMRect"/>, <see cref="DOMRectReadOnly"/>, or another <c>DOMQuad</c>.</para>
 <para>-<see cref="DOMPoint"/><br/>-<see cref="DOMRect"/><br/>-<see cref="DOMMatrix"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/DOMQuad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMQuadDOMQuad>
+<DOMQuadFromQuad>
+<summary>
+The <strong><c>fromQuad()</c></strong> static method of the <see cref="DOMQuad"/> interface returns a new <c>DOMQuad</c> object based on the provided set of coordinates in the shape of another <c>DOMQuad</c> object.
+</summary>
+<remarks>
+<para>-<see cref="DOMQuad.DOMQuad"/> constructor<br/>-<see cref="DOMPoint"/><br/>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/fromQuad"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMQuad"/> object.</returns>
+</DOMQuadFromQuad>
+<DOMQuadFromRect>
+<summary>
+The <strong><c>fromRect()</c></strong> static method of the <see cref="DOMQuad"/> interface returns a new <c>DOMQuad</c> object based on the provided set of coordinates in the shape of a <see cref="DOMRect"/> object.
+</summary>
+<remarks>
+<para>-<see cref="DOMQuad.DOMQuad"/> constructor<br/>-<see cref="DOMRect"/><br/>-<see cref="DOMPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/fromRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMQuad"/> object.</returns>
+</DOMQuadFromRect>
 <DOMQuadGetBounds>
 <summary>
 The <see cref="DOMQuad"/> method<br/><c>getBounds()</c> returns a <see cref="DOMRect"/> object representing the smallest rectangle that fully contains the <c>DOMQuad</c> object.

@@ -1,7 +1,7 @@
 <docs>
 <CSSFontFaceRule>
 <summary>
-The <strong><c>CSSFontFaceRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The <strong><c>CSSFontFaceRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <para></para>
@@ -10,11 +10,11 @@ The <strong><c>CSSFontFaceRule</c></strong> interface represents an <see href="h
 </CSSFontFaceRule>
 <CSSFontFaceRuleStyle>
 <summary>
-The read-only <strong><c>style</c></strong> property of the <see cref="CSSFontFaceRule"/> interface returns the style information from the {{cssxref("@font-face")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>. This will be in the form of a <see cref="CSSStyleDeclaration"/> object.
+The read-only <strong><c>style</c></strong> property of the <see cref="CSSFontFaceRule"/> interface contains a <see cref="CSSStyleDeclaration"/> object representing the descriptors available in the {{cssxref("@font-face")}} rule's body.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFaceRule/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSStyleDeclaration"/>.</value>
+<value>A <see cref="CSSStyleDeclaration"/> object.Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSStyleDeclaration</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSStyleDeclaration</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
 </CSSFontFaceRuleStyle>
 </docs>

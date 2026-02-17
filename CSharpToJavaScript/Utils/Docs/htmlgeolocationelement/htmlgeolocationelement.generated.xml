@@ -1,0 +1,147 @@
+<docs>
+<HTMLGeolocationElement>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>HTMLGeolocationElement</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</see> represents the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element, and provides access to its properties and events.
+</summary>
+<remarks>
+<para>This element is based on, and inherits properties and methods from, the <see cref="HTMLElement"/> interface.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>&amp;lt;geolocation&amp;gt;</c> element and <c>HTMLGeolocationElement</c> interface allow the user to share their location data with the page in a more consistent and intuitive way than the older <see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Geolocation API</see>.</para></blockquote><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation">Permissions-Policy/geolocation</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Geolocation API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see><br/>-<see href="https://developer.chrome.com/blog/geolocation-html-element">Introducing the <c>&amp;lt;geolocation&amp;gt;</c> HTML element</see> on developer.chrome.com (2026)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLGeolocationElement>
+<HTMLGeolocationElementAutolocate>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>autolocate</c></strong> property of the <see cref="HTMLGeolocationElement"/> interface gets and sets a boolean value indicating whether the browser should immediately request location data when the {{htmlelement("geolocation")}} element is rendered, provided permission to use the <c>geolocation</c> feature is already granted.
+</summary>
+<remarks>
+<para>It reflects the value of the <c>&amp;lt;geolocation&amp;gt;</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate"><c>autolocate</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/autolocate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value:Defaults to <c>false</c>.If permission to use the <c>geolocation</c> feature was not previously granted, the <c>autolocate</c> property is ignored.</value>
+</HTMLGeolocationElementAutolocate>
+<HTMLGeolocationElementError>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>error</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns a <see cref="GeolocationPositionError"/> object representing error information, in the event of a failure to retrieve location data.
+</summary>
+<remarks>
+<para>If location data retrieval is successful, the data is available in the <see cref="HTMLGeolocationElement.Position"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GeolocationPositionError"/> object, or <c>null</c> if location data was successfully retrieved.</value>
+</HTMLGeolocationElementError>
+<HTMLGeolocationElementHTMLGeolocationElement>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>HTMLGeolocationElement()</c></strong> constructor creates a new <see cref="HTMLGeolocationElement"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/HTMLGeolocationElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="HTMLGeolocationElement"/> object instance, if used internally by the browser.Developers cannot use the <c>HTMLGeolocationElement()</c> constructor directly to create a new <c>HTMLGeolocationElement</c> instance: attempting to do so results in an &amp;quot;illegal constructor&amp;quot; error.</returns>
+</HTMLGeolocationElementHTMLGeolocationElement>
+<HTMLGeolocationElementInitialPermissionStatus>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>initialPermissionStatus</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns an enumerated value representing the permission status for the <c>geolocation</c> feature when the page first loads.
+</summary>
+<remarks>
+<para>If you want to access the current permission status for the <c>geolocation</c> feature, use the <see cref="HTMLGeolocationElement.PermissionStatus"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/initialPermissionStatus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value, which can be one of:</value>
+</HTMLGeolocationElementInitialPermissionStatus>
+<HTMLGeolocationElementInvalidReason>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>invalidReason</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid (blocked), if that is the case.
+</summary>
+<remarks>
+<para>When a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking">blocker</see> is active on a <c>&amp;lt;geolocation&amp;gt;</c> element, it is invalid: This means that it is prevented from functioning, either temporarily or permanently, depending on the reason.</para><para>You can query the <see cref="HTMLGeolocationElement.IsValid"/> property to check whether the <c>&amp;lt;geolocation&amp;gt;</c> element is valid or not.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/invalidReason"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The empty string (<c>&amp;quot;&amp;quot;</c>) if the element does not have an active blocker, or one of the following values (in priority order):These invalid reasons are listed in priority order, from highest to lowest.<br/>If multiple blockers are active, the <c>invalidReason</c> value returned will be the value representing the highest-priority active blocker.Also note that the descriptions above include a &amp;quot;blocker type&amp;quot; for each invalid reason, which is one of the following:</value>
+</HTMLGeolocationElementInvalidReason>
+<HTMLGeolocationElementIsValid>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isValid</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns a boolean value indicating whether the associated {{htmlelement("geolocation")}} element is valid or invalid (blocked).
+</summary>
+<remarks>
+<para>When a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking">blocker</see> is active on a <c>&amp;lt;geolocation&amp;gt;</c> element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.</para><para>You can return the reason why it is invalid via the <see cref="HTMLGeolocationElement.InvalidReason"/> property — see that page for a full list of possible reasons.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/isValid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value:Defaults to <c>false</c>.</value>
+</HTMLGeolocationElementIsValid>
+<HTMLGeolocationElementLocation>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>location</c></strong> event of the <see cref="HTMLGeolocationElement"/> interface is fired whenever the browser receives location data, or error information when a location data request was unsuccessful.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/location"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLGeolocationElementLocation>
+<HTMLGeolocationElementPermissionStatus>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>permissionStatus</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns an enumerated value representing the current permission status for the <c>geolocation</c> feature.
+</summary>
+<remarks>
+<para>If you want to access the initial permission status for the <c>geolocation</c> feature as it was when the page first loaded, use the <see cref="HTMLGeolocationElement.InitialPermissionStatus"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/permissionStatus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value, which can be one of:The permission status persists between page loads. If the <c>&amp;lt;geolocation&amp;gt;</c> element has its <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate"><c>autolocate</c></see> attribute set to <c>true</c>, and permission was previously granted, the browser will start to request location data as soon as the <c>&amp;lt;geolocation&amp;gt;</c> element renders without requiring the user to press the button.</value>
+</HTMLGeolocationElementPermissionStatus>
+<HTMLGeolocationElementPosition>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>position</c></strong> read-only property of the <see cref="HTMLGeolocationElement"/> interface returns a <see cref="GeolocationPosition"/> object representing the user's position, in the event of successful location data retrieval.
+</summary>
+<remarks>
+<para>The retrieved position may or may not be up to date. The user&amp;apos;s position will only be retrieved once when the <c>&amp;lt;geolocation&amp;gt;</c> element&amp;apos;s button control is pressed, unless you set the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch"><c>watch</c></see> attribute to <c>true</c>, in which case a new position will be retrieved each time the user&amp;apos;s device moves. To read the user&amp;apos;s current position, you should read the <c>position</c> property in response to the <see cref="HTMLGeolocationElement.Location"/> event firing.</para><para>If location data retrieval fails, associated error information will be available in the <see cref="HTMLGeolocationElement.Error"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/position"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GeolocationPosition"/> object, or <c>null</c> if location data retrieval failed or data has not yet been retrieved.</value>
+</HTMLGeolocationElementPosition>
+<HTMLGeolocationElementPromptaction>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>promptaction</c></strong> event of the <see cref="HTMLGeolocationElement"/> interface is fired whenever the user activates the <c>&amp;lt;geolocation&amp;gt;</c> element and selects an option from the resulting dialog, either to grant or deny <c>geolocation</c> permission.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/promptaction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLGeolocationElementPromptaction>
+<HTMLGeolocationElementPromptdismiss>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>promptdismiss</c></strong> event of the <see cref="HTMLGeolocationElement"/> interface is fired whenever the user activates the <c>&amp;lt;geolocation&amp;gt;</c> element and dismisses the resulting dialog, by pressing the &amp;quot;close&amp;quot; button or the &amp;lt;kbd&amp;gt;Esc&amp;lt;/kbd&amp;gt; key.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/promptdismiss"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLGeolocationElementPromptdismiss>
+<HTMLGeolocationElementValidationstatuschange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>validationstatuschange</c></strong> event of the <see cref="HTMLGeolocationElement"/> interface is fired whenever the {{htmlelement("geolocation")}} element's <see cref="HTMLGeolocationElement.IsValid"/> value changes.
+</summary>
+<remarks>
+<para>This occurs as a result of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking">blocker</see> being added to or removed from a <c>&amp;lt;geolocation&amp;gt;</c> element.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/validationstatuschange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLGeolocationElementValidationstatuschange>
+<HTMLGeolocationElementWatch>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>watch</c></strong> property of the <see cref="HTMLGeolocationElement"/> interface gets and sets a boolean value indicating whether the browser should continuously update the user's location data whenever the position of their device changes, or only retrieve it once.
+</summary>
+<remarks>
+<para>It reflects the value of the <c>&amp;lt;geolocation&amp;gt;</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch"><c>watch</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/geolocation">geolocation</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLGeolocationElement/watch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value:Defaults to <c>false</c>.</value>
+</HTMLGeolocationElementWatch>
+</docs>

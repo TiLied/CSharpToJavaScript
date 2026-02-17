@@ -1,7 +1,7 @@
 <docs>
 <Document>
 <summary>
-The <strong><c>Document</c></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page&amp;apos;s content, which is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree">DOM tree</see>.
+The <strong><c>Document</c></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page&amp;apos;s content, which is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#what_is_a_dom_tree">DOM tree</see>.
 </summary>
 <remarks>
 <para>The DOM tree includes elements such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>, among <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">many others</see>. It provides functionality globally to the document, like how to obtain the page&amp;apos;s URL and create new elements in the document.</para><para></para><para>The <c>Document</c> interface describes the common properties and methods for any kind of document. Depending on the document&amp;apos;s type (e.g., <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/XML">XML</see>, SVG, …), a larger API is available: HTML documents, served with the <c>&amp;quot;text/html&amp;quot;</c> content type, also implement the <see cref="HTMLDocument"/> interface, whereas XML and SVG documents implement the <see cref="XMLDocument"/> interface.</para>
@@ -13,18 +13,29 @@ The <strong><c>Document</c></strong> interface represents any web page loaded in
 The <strong><c>activeElement</c></strong> read-only property of the <see cref="Document"/> interface returns the <see cref="Element"/> within the DOM that is receiving keyboard events such as <see cref="Elementkeydown"/> and <see cref="Elementkeyup"/>. This is usually analogous to the focused element.
 </summary>
 <remarks>
-<para>Which elements are focusable varies depending on the platform and the browser&amp;apos;s current configuration. For example, on Safari, following the behavior of macOS, elements that aren&amp;apos;t text input elements are not focusable by default, unless the &amp;quot;Full Keyboard Access&amp;quot; setting is enabled in System Preferences.</para><para>Typically a user can press the &amp;lt;kbd&amp;gt;Tab&amp;lt;/kbd&amp;gt; key to move the focus around the page among focusable elements, and use keyboard gestures such as &amp;lt;kbd&amp;gt;Space&amp;lt;/kbd&amp;gt; or &amp;lt;kbd&amp;gt;Enter&amp;lt;/kbd&amp;gt; to simulate clicks on the focused element.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Focus (which element is receiving user input events) is not the same thing as selection (the currently highlighted part of the document). You can get the current selection using <see cref="Window.GetSelection"/>.</para></blockquote>
+<para>Which elements are focusable varies depending on the platform and the browser&amp;apos;s current configuration. For example, on Safari, following the behavior of macOS, elements that aren&amp;apos;t text input elements are not focusable by default, unless the &amp;quot;Full Keyboard Access&amp;quot; setting is enabled in System Settings.</para><para>Typically a user can press the &amp;lt;kbd&amp;gt;Tab&amp;lt;/kbd&amp;gt; key to move the focus around the page among focusable elements, and use keyboard gestures such as &amp;lt;kbd&amp;gt;Space&amp;lt;/kbd&amp;gt; or &amp;lt;kbd&amp;gt;Enter&amp;lt;/kbd&amp;gt; to simulate clicks on the focused element.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Focus (which element is receiving user input events) is not the same thing as selection (the currently highlighted part of the document). You can get the current selection using <see cref="Window.GetSelection"/>.</para></blockquote>
 <para>-<see cref="Document.HasFocus"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The deepest <see cref="'Element'"/> which currently has focus.</value>
 </DocumentActiveElement>
+<DocumentActiveViewTransition>
+<summary>
+The <strong><c>activeViewTransition</c></strong> read-only property of the <see cref="Document"/> interface returns a <see cref="ViewTransition"/> instance representing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">view transition</see> currently active on the document.
+</summary>
+<remarks>
+<para>The current <see cref="ViewTransition"/> can be accessed in other ways:</para><para>However, the <c>activeViewTransition</c> property provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.</para>
+<para>-<see cref="Document.StartViewTransition"/><br/>-<see cref="Window.Pagereveal"/> event<br/>-<see cref="Window.Pageswap"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/>-<see cref="ViewTransition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeViewTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ViewTransition"/> or <c>null</c> if there is no active view transition.</value>
+</DocumentActiveViewTransition>
 <DocumentAdoptedStyleSheets>
 <summary>
 The <strong><c>adoptedStyleSheets</c></strong> property of the <see cref="Document"/> interface is used for setting an array of constructed stylesheets to be used by the document.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>A constructed stylesheet is a stylesheet created programmatically using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see> (as compared to one created by a user-agent when importing a stylesheet from a script, imported using <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'style'">'style'</see> and {{CSSXref('@import')}}, or linked to via <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'link'">'link'</see>).</para></blockquote><para>The same constructed stylesheets can also be shared with one or more <see cref="ShadowRoot"/> instances using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets"><c>ShadowRoot.adoptedStyleSheets</c></see> property.<br/>Changing an adopted stylesheet will affect all the objects that adopt it.</para><para>Stylesheets in the property are evaluated along with the document&amp;apos;s other stylesheets using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade">CSS cascade algorithm</see>.<br/>Where the resolution of rules considers stylesheet order, <c>adoptedStyleSheets</c> are assumed to be ordered after those in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheets"><c>Document.styleSheets</c></see>.</para><para>Only stylesheets created using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see> within the context of the current <see cref="Document"/> may be adopted.</para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A constructed stylesheet is a stylesheet created programmatically using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see> (as compared to one created by a user-agent when importing a stylesheet from a script, imported using <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'style'">'style'</see> and {{CSSXref('@import')}}, or linked to via <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'link'">'link'</see>).</para></blockquote><para>The same constructed stylesheets can also be shared with one or more <see cref="ShadowRoot"/> instances using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets"><c>ShadowRoot.adoptedStyleSheets</c></see> property.<br/>Changing an adopted stylesheet will affect all the objects that adopt it.</para><para>Stylesheets in the property are evaluated along with the document&amp;apos;s other stylesheets using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction">CSS cascade algorithm</see>.<br/>Where the resolution of rules considers stylesheet order, <c>adoptedStyleSheets</c> are assumed to be ordered after those in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheets"><c>Document.styleSheets</c></see>.</para><para>Only stylesheets created using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see> within the context of the current <see cref="Document"/> may be adopted.</para>
 <para>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see><br/>-<see cref="CSSStyleSheet.ReplaceSync"/><br/>-<see cref="CSSStyleSheet.Replace"/><br/>-<see cref="CSSStyleSheet.InsertRule"/><br/>-<see cref="CSSStyleSheet.DeleteRule"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -98,6 +109,16 @@ The <strong><c>Document.append()</c></strong> method<br/>inserts a set of <see c
 </remarks>
 <value>An empty <see cref="HTMLCollection"/>.</value>
 </DocumentApplets>
+<DocumentAriaNotify>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>ariaNotify()</c></strong> method of the <see cref="Document"/> interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
+</summary>
+<remarks>
+<para>-<see cref="Element.AriaNotify"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions">ARIA live regions</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/ariaNotify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentAriaNotify>
 <DocumentBeforescriptexecute>
 <summary>
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>beforescriptexecute</c> event fires when a static {{HTMLElement("script")}} is about to start executing. It does not fire if the element is added dynamically, such as with <see cref="Node.AppendChild"/>.
@@ -128,7 +149,7 @@ The <strong><c>Document.body</c></strong> property represents the<br/><see href=
 </DocumentBody>
 <DocumentBrowsingTopics>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section below for details of opposition.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section below for details of opposition.</blockquote>
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>An <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment">Enrollment process</see> is required to use this feature in your applications.</para></blockquote><para>The <c>browsingTopics()</c> method of the <see cref="Document"/> interface returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. These topics could then be returned to the ad tech platform in a subsequent fetch request. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>browsingTopics()</c> does not rely on HTTP headers to send topics and mark topics as observed like the other <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api">Topics API enabling features</see>, but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to <c>browsingTopics()</c> only in situations where the headers cannot be modified.</para></blockquote>
@@ -231,6 +252,7 @@ The <strong><c>Document.contentType</c></strong> read-only property returns the<
 The <see cref="Document"/> property <c>cookie</c> lets you read and write <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies">cookies</see> associated with the document.<br/>It serves as a getter and setter for the actual values of the cookies.
 </summary>
 <remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>document.cookie</c> can be a source of performance issues because it is a synchronous API and blocks the main thread when reading cookies across processes or performing I/O operations. Developers should if possible use the asynchronous <see href="https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API">Cookie Store API</see> to manage cookies.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies">HTTP cookies</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">DOM Storage</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname"><c>URL.pathname</c></see><br/>-<see cref="DateToUTCString"/><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc2965">RFC 2965</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -245,7 +267,7 @@ The <strong><c>Document.createAttribute()</c></strong> method creates a new<br/>
 <para>-<see cref="Document.CreateAttributeNS"/><br/>-<see cref="Document.CreateElement"/><br/>-<see cref="Element.SetAttribute"/><br/>-<see cref="Element.SetAttributeNode"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Attr"/> node.</returns>
+<returns>An <see cref="Attr"/> node.</returns>
 </DocumentCreateAttribute>
 <DocumentCreateAttributeNS>
 <summary>
@@ -359,7 +381,7 @@ The <strong><c>Document.createNodeIterator()</c></strong> method returns a new <
 </DocumentCreateProcessingInstruction>
 <DocumentCreateRange>
 <summary>
-The <strong><c>Document.createRange()</c></strong> method returns a new<br/><see cref="Range"/> object.
+The <strong><c>Document.createRange()</c></strong> method returns a new<br/><see cref="Range"/> object whose start and end are offset 0 of the <see cref="Document"/><br/>object on which it was called.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createRange"> <em>See also on MDN</em> </seealso></para>
@@ -384,6 +406,7 @@ Creates a new <see cref="Text"/> node. This method can be used to escape HTML<br
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="TouchList"/><br/>-<see cref="Touch"/><br/>-<see cref="Document.CreateTouchList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTouch"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>A <see cref="Touch"/> object configured as described by the input parameters.</returns>
 </DocumentCreateTouch>
 <DocumentCreateTouchList>
 <summary>
@@ -393,6 +416,7 @@ Creates a new <see cref="Text"/> node. This method can be used to escape HTML<br
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="Touch"/><br/>-<see cref="TouchEvent"/><br/>-<see cref="TouchList"/><br/>-<see cref="Document.CreateTouch"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTouchList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>A <see cref="TouchList"/> object containing the <see cref="Touch"/> objects specified by the <c>touches</c> parameter.</returns>
 </DocumentCreateTouchList>
 <DocumentCreateTreeWalker>
 <summary>
@@ -469,7 +493,7 @@ The <strong><c>documentElement</c></strong> read-only property of the <see cref=
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Element"/> object.</value>
+<value>An <see cref="Element"/> object.</value>
 </DocumentDocumentElement>
 <DocumentDocumentURI>
 <summary>
@@ -483,10 +507,10 @@ The <strong><c>documentURI</c></strong> read-only property of the<br/><see cref=
 </DocumentDocumentURI>
 <DocumentDomain>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>domain</c></strong> property of the <see cref="Document"/><br/>interface gets/sets the domain portion of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> of the current<br/>document, as used by the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>domain</c></strong> property of the <see cref="Document"/><br/>interface gets/sets the domain portion of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> of the current<br/>document, as used by the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">same-origin policy</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</see><br/>-<see cref="Location.Hostname"/><br/>-<see cref="Location.Host"/><br/>-<see cref="Window.Origin"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">Same-origin policy</see><br/>-<see cref="Location.Hostname"/><br/>-<see cref="Location.Host"/><br/>-<see cref="Window.Origin"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/domain"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
@@ -622,7 +646,7 @@ The <strong><c>Document.firstElementChild</c></strong> read-only property<br/>re
 <para>-<see cref="Element.FirstElementChild"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/firstElementChild"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Element"/> object, or <c>null</c>.</value>
+<value>An <see cref="Element"/> object, or <c>null</c>.</value>
 </DocumentFirstElementChild>
 <DocumentFonts>
 <summary>
@@ -711,10 +735,10 @@ The <strong><c>fullscreenerror</c></strong> event is fired when the browser cann
 </DocumentFullscreenerror>
 <DocumentGetAnimations>
 <summary>
-The <c>getAnimations()</c> method of the <see cref="Document"/> interface<br/>returns an array of all <see cref="Animation"/> objects currently in effect whose<br/>target elements are descendants of the document. This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.
+The <c>getAnimations()</c> method of the <see cref="Document"/> interface<br/>returns an array of all <see cref="Animation"/> objects currently in effect whose<br/>target elements are descendants of the document. This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see><br/>-<see cref="Element.GetAnimations"/> - Fetch only the animations on a single<br/><see cref="Element"/> and its descendants.<br/>-<see cref="Animation"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</see><br/>-<see cref="Element.GetAnimations"/> - Fetch only the animations on a single<br/><see cref="Element"/> and its descendants.<br/>-<see cref="Animation"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An {{jsxref("Array")}} of <see cref="Animation"/> objects, each representing one<br/>animation currently associated with elements which are descendants of the<br/><see cref="Document"/> on which it's called.</returns>
@@ -791,6 +815,26 @@ The <strong><c>hasFocus()</c></strong> method of the <see cref="Document"/> inte
 </remarks>
 <returns><c>false</c> if the active element in the document has no focus;<br/><c>true</c> if the active element in the document has focus.</returns>
 </DocumentHasFocus>
+<DocumentHasPrivateToken>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hasPrivateToken()</c></strong> method of the <see cref="Document"/> interface returns a promise that fulfills with a boolean indicating whether the browser has a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API">private state token</see> stored from a particular issuer server.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API">Private State Token API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasPrivateToken"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a boolean value indicating whether the browser has a private state token stored from the specified issuer server.</returns>
+</DocumentHasPrivateToken>
+<DocumentHasRedemptionRecord>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hasRedemptionRecord()</c></strong> method of the <see cref="Document"/> interface returns a promise that fulfills with a boolean indicating whether the browser has a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_tokens">redemption record</see> originating from a particular issuer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Private_State_Token_API">Private State Token API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasRedemptionRecord"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a boolean value indicating whether the browser has a redemption record stored that originates from the specified issuer server.</returns>
+</DocumentHasRedemptionRecord>
 <DocumentHasStorageAccess>
 <summary>
 The <strong><c>hasStorageAccess()</c></strong> method of the <see cref="Document"/> interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies">third-party</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies">unpartitioned</see> cookies.
@@ -854,10 +898,10 @@ The <strong><c>Document.implementation</c></strong> property returns a<br/><see 
 </DocumentImplementation>
 <DocumentImportNode>
 <summary>
-The <see cref="Document"/> object's <strong><c>importNode()</c></strong> method creates a copy of a<br/><see cref="Node"/> or <see cref="DocumentFragment"/> from another document, to be<br/>inserted into the current document later.
+The <strong><c>importNode()</c></strong> method of the <see cref="Document"/> interface creates a copy of a <see cref="Node"/> or <see cref="DocumentFragment"/> from another document, to be inserted into the current document later.
 </summary>
 <remarks>
-<para>The imported node is not yet included in the document tree. To include it, you need to<br/>call an insertion method such as <see cref="Node.AppendChild"/> or<br/><see cref="Node.InsertBefore"/> with a node that <strong>is</strong><br/>currently in the document tree.</para><para>Unlike <see cref="Document.AdoptNode"/>, the original node is not removed from its<br/>original document. The imported node is a clone of the original.</para>
+<para>The imported node is not yet included in the document tree. To include it, you need to call an insertion method such as <see cref="Node.AppendChild"/> or <see cref="Node.InsertBefore"/> with a node that <strong>is</strong> currently in the document tree.</para><para>Unlike <see cref="Document.AdoptNode"/>, the original node is not removed from its original document. The imported node is a clone of the original.</para><para>The <see cref="Node.CloneNode"/> method also creates a copy of a node. The difference is that <c>importNode()</c> clones the node in the context of the calling document, whereas <c>cloneNode()</c> uses the document of the node being cloned. The document context determines the <see cref="CustomElementRegistry"/> for constructing any custom elements. For this reason, to clone nodes to be used in another document, use <c>importNode()</c> on the target document. The <see cref="HTMLTemplateElement.Content"/> is owned by a separate document, so it should also be cloned using <c>document.importNode()</c> so that custom element descendants are constructed using the definitions in the current document. See the <see cref="Node.CloneNode"/> page's examples for more details.</para>
 <para>-<see cref="Document.AdoptNode"/>, which behaves very similar to this method<br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Node.InsertBefore"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -915,18 +959,18 @@ The <strong><c>links</c></strong> read-only property of the <see cref="Document"
 </DocumentLinks>
 <DocumentLocation>
 <summary>
-The <strong><c>Document.location</c></strong> read-only property returns a<br/><see cref="Location"/> object, which contains information about the URL of the document<br/>and provides methods for changing that URL and loading another URL.
+The read-only <strong><c>location</c></strong> property of the <see cref="Document"/> interface returns a <see cref="Location"/> object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
 </summary>
 <remarks>
-<para>Though <c>Document.location</c> is a <strong>read-only</strong> <c>Location</c><br/>object, you can also assign a string to it. This means that you can<br/>work with document.location as if it were a string in most cases:<br/><c>document.location = &amp;apos;http://www.example.com&amp;apos;</c> is a synonym of<br/><c>document.location.href = &amp;apos;http://www.example.com&amp;apos;</c>. If you assign another<br/>string to it, browser will load the website you assigned.</para><para>To retrieve just the URL as a string, the read-only <see cref="Document.URL"/><br/>property can also be used.</para><para>If the current document is not in a browsing context, the returned value is<br/><c>null</c>.</para>
+<para>To retrieve just the URL as a string, the read-only <see cref="Document.URL"/><br/>property can also be used.</para>
 <para>-The interface of the returned value, <see cref="Location"/><br/>-A similar information, but attached to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/browsing context">browsing context</see>,<br/><see cref="Window.Location"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/location"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Location"/> object.</value>
+<value>A <see cref="Location"/> object. If the current document is not in a browsing context, the returned value is<br/><c>null</c>.Although the <c>location</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>Location</c> object, you can still assign to the <c>location</c> property directly, which is equivalent to assigning to its <see cref="Locationhref"/> property. You can also modify the <c>Location</c> object using the <see cref="Locationassign"/> and <see cref="Locationreplace"/> methods.</value>
 </DocumentLocation>
 <DocumentMoveBefore>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>moveBefore()</c></strong> method of the <see cref="Document"/> interface moves a given <see cref="Node"/> inside the <c>Document</c> DOM node as a direct child, before a given reference node.
+The <strong><c>moveBefore()</c></strong> method of the <see cref="Document"/> interface moves a given <see cref="Node"/> inside the <c>Document</c> DOM node as a direct child, before a given reference node.
 </summary>
 <remarks>
 <para>-<see cref="DocumentFragment.MoveBefore"/><br/>-<see cref="Element.MoveBefore"/><br/>-<see cref="Node.InsertBefore"/><br/></para>
@@ -957,7 +1001,7 @@ The <strong><c>Document.open()</c></strong> method opens a document for<br/>{{do
 </DocumentOpen>
 <DocumentParseHTMLUnsafe>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
 <para>You can mitigate this risk by always passing <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><blockquote class="NOTE"><h5>NOTE</h5><para><see cref="DocumentparseHTML"/> should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.</para></blockquote><para>The <strong><c>parseHTMLUnsafe()</c></strong> static method of the <see cref="Document"/> object is used to parse HTML input, optionally filtering unwanted HTML elements and attributes, in order to create a new <see cref="Document"/> instance.</para>
@@ -968,7 +1012,7 @@ The <strong><c>Document.open()</c></strong> method opens a document for<br/>{{do
 </DocumentParseHTMLUnsafe>
 <DocumentParseHTML>
 <summary>
-The <strong><c>parseHTML()</c></strong> static method of the <see cref="Document"/> object provides an XSS-safe method to parse and sanitize a string of HTML in order to create a new <see cref="Document"/> instance.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>parseHTML()</c></strong> static method of the <see cref="Document"/> object provides an XSS-safe method to parse and sanitize a string of HTML in order to create a new <see cref="Document"/> instance.
 </summary>
 <remarks>
 <para>-<see cref="Document.ParseHTMLUnsafe"/><br/>-<see cref="Element.SetHTML"/> and <see cref="Element.SetHTMLUnsafe"/><br/>-<see cref="ShadowRoot.SetHTML"/> and <see cref="ShadowRoot.SetHTMLUnsafe"/><br/>-<see cref="DOMParser.ParseFromString"/> for parsing HTML or XML into a DOM tree<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see><br/></para>
@@ -1061,7 +1105,7 @@ The <strong><c>Document.prepend()</c></strong> method<br/>inserts a set of <see 
 </DocumentPrepend>
 <DocumentPrerendering>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>prerendering</c></strong> read-only property of the <see cref="Document"/> interface returns <c>true</c> if the document is currently in the process of prerendering, as initiated via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API">Speculation Rules API</see>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>prerendering</c></strong> read-only property of the <see cref="Document"/> interface returns <c>true</c> if the document is currently in the process of prerendering, as initiated via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API">Speculation Rules API</see>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API">Speculation Rules API</see><br/>-<see cref="Document.Prerenderingchange"/> event<br/>-<see cref="PerformanceNavigationTiming.ActivationStart"/> property<br/></para>
@@ -1113,24 +1157,24 @@ The <strong><c>Document.prepend()</c></strong> method<br/>inserts a set of <see 
 </DocumentQueryCommandSupported>
 <DocumentQuerySelector>
 <summary>
-The <see cref="Document"/> method <strong><c>querySelector()</c></strong><br/>returns the first <see cref="Element"/> within the document that matches the specified<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selector</see>, or group of CSS selectors. If no matches are found, <c>null</c> is returned.
+The <see cref="Document"/> method <strong><c>querySelector()</c></strong><br/>returns the first <see cref="Element"/> within the document that matches the specified<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selector</see>, or group of CSS selectors. If no matches are found, <c>null</c> is returned.
 </summary>
 <remarks>
-<para>The matching is done using depth-first pre-order traversal of the document&amp;apos;s nodes starting with the first element in the document&amp;apos;s markup and iterating through sequential nodes by order of the number of child nodes.</para><para>If the specified selector matches an ID that is incorrectly used more than once in the<br/>document, the first element with that ID is returned.</para><para><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-elements</see> will never return any elements.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</see><br/>-<see cref="Element.QuerySelector"/><br/>-<see cref="Document.QuerySelectorAll"/><br/>-<see cref="Element.QuerySelectorAll"/><br/></para>
+<para>The matching is done using depth-first pre-order traversal of the document&amp;apos;s nodes starting with the first element in the document&amp;apos;s markup and iterating through sequential nodes by order of the number of child nodes.</para><para>If the specified selector matches an ID that is incorrectly used more than once in the<br/>document, the first element with that ID is returned.</para><para><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements">CSS pseudo-elements</see> will never return any elements.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">Selection and traversal on the DOM tree</see><br/>-<see cref="Element.QuerySelector"/><br/>-<see cref="Document.QuerySelectorAll"/><br/>-<see cref="Element.QuerySelectorAll"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.If you need a list of all elements matching the specified selectors, you should use<br/><see cref="Document.QuerySelectorAll"/> instead.</returns>
+<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.If you need a list of all elements matching the specified selectors, you should use<br/><see cref="Document.QuerySelectorAll"/> instead.</returns>
 </DocumentQuerySelector>
 <DocumentQuerySelectorAll>
 <summary>
 The <see cref="Document"/> method <strong><c>querySelectorAll()</c></strong><br/>returns a static (not live) <see cref="NodeList"/> representing a list of the<br/>document&amp;apos;s elements that match the specified group of selectors.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelector"/> and <see cref="Element.QuerySelectorAll"/><br/>-<see cref="Document.QuerySelector"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">Selection and traversal on the DOM tree</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelector"/> and <see cref="Element.QuerySelectorAll"/><br/>-<see cref="Document.QuerySelector"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each element that matches at least one of the specified selectors or an empty<br/><see cref="NodeList"/> in case of no matches. The elements are in document order — that is, parents before children, earlier siblings before later siblings.<blockquote class="NOTE"><h5>NOTE</h5>If the specified <c>selectors</c> include a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-element</see>, the returned list<br/>is always empty.</blockquote></returns>
+<returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each element that matches at least one of the specified selectors or an empty<br/><see cref="NodeList"/> in case of no matches. The elements are in document order — that is, parents before children, earlier siblings before later siblings.<blockquote class="NOTE"><h5>NOTE</h5>If the specified <c>selectors</c> include a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements">CSS pseudo-element</see>, the returned list<br/>is always empty.</blockquote></returns>
 </DocumentQuerySelectorAll>
 <DocumentReadyState>
 <summary>
@@ -1184,10 +1228,10 @@ The <strong><c>Document.replaceChildren()</c></strong> method replaces the<br/>e
 </DocumentReplaceChildren>
 <DocumentRequestStorageAccess>
 <summary>
-The <strong><c>requestStorageAccess()</c></strong> method of the <see cref="Document"/> interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies">third-party cookies</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning">unpartitioned state</see>. This is relevant to user agents that, by default, block access to third-party, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies">unpartitioned</see> cookies to improve privacy (e.g., to prevent tracking), and is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</see>.
+The <strong><c>requestStorageAccess()</c></strong> method of the <see cref="Document"/> interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies">third-party cookies</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning">unpartitioned state</see>.<br/>This is relevant to user agents that, by default, block access to third-party, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies">unpartitioned</see> cookies to improve privacy (e.g., to prevent tracking), and is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</see>.
 </summary>
 <remarks>
-<para>To check whether permission to access third-party cookies has already been granted, you can call <see cref="Permissions.Query"/>, specifying the feature name <c>&amp;quot;storage-access&amp;quot;</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Usage of this feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/storage-access">Permissions-Policy/storage-access</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/Clickjacking">clickjacking</see> heuristics, or prompting the user for explicit permission.</para></blockquote>
+<para>To check whether permission to access third-party cookies has already been granted, you can call <see cref="Permissions.Query"/>, specifying the feature name <c>&amp;quot;storage-access&amp;quot;</c>.</para><para>After an embed has activated <c>storage-access</c> permission via <c>requestStorageAccess()</c>, it should reload itself.<br/>The browser will re-request the resource with third-party unpartitioned cookies included, and make them available to the embedded resource once it has loaded.</para><para>Third-party cookies are sent only with requests to the embedded resource&amp;apos;s exact origin.<br/>Other origins within the same site that wish to access their third-party cookies will need to <strong>activate</strong> the granted storage-access permission.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#storage_access_headers">storage access headers</see> should be used for activating a granted <c>storage-access</c> permission.<br/>Note that the headers can activate a granted permission for any embedded resource, such as credentialed images, not just code embedded in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>.</para><para>It is also possible to activate a granted permission for a cross-origin, same-site endpoint by calling <c>requestStorageAccess()</c> (this time without the requirement for transient activation).<br/>However, this only works to activate permission for embedded code.<br/>It is also less efficient than using the headers, because the resource needs to be loaded in order to activate the permission.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Usage of this feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/storage-access">Permissions-Policy/storage-access</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/Clickjacking">clickjacking</see> heuristics, or prompting the user for explicit permission.</para></blockquote>
 <para>-<see cref="Document.HasStorageAccess"/>, <see cref="Document.HasUnpartitionedCookieAccess"/>, <see cref="Document.RequestStorageAccessFor"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/>-<see href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</see> (WebKit blog)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -1247,7 +1291,7 @@ The <strong><c>scrollingElement</c></strong> read-only property of the<br/><see 
 </summary>
 <remarks>
 <para>This event works in much the same way as the <see cref="Element"/> interface's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollsnapchange_event"><c>scrollsnapchange</c></see> event, except that the overall HTML document has to be set as the scroll snap container (i.e., {{cssxref("scroll-snap-type")}} is set on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element).</para>
-<para>-<see cref="Documentscrollsnapchanging"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para>-<see cref="Documentscrollsnapchanging"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollsnapchange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DocumentScrollsnapchange>
@@ -1257,7 +1301,7 @@ The <strong><c>scrollingElement</c></strong> read-only property of the<br/><see 
 </summary>
 <remarks>
 <para>This event works in much the same way as the <see cref="Element"/> interface's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollsnapchanging_event"><c>scrollsnapchanging</c></see> event, except that the overall HTML document has to be set as the scroll snap container (i.e., {{cssxref("scroll-snap-type")}} is set on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</see> element).</para>
-<para>-<see cref="Documentscrollsnapchange"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para>-<see cref="Documentscrollsnapchange"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollsnapchanging"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DocumentScrollsnapchanging>
@@ -1306,7 +1350,7 @@ The <strong><c>startViewTransition()</c></strong> method of the <see cref="Docum
 </summary>
 <remarks>
 <para>When <c>startViewTransition()</c> is invoked, a sequence of steps is followed as explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process">The view transition process</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active-view-transition">:active-view-transition</see> pseudo-class<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active-view-transition-type">:active-view-transition-type</see> pseudo-class<br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para>-<see cref="Document.ActiveViewTransition"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active-view-transition">:active-view-transition</see> pseudo-class<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active-view-transition-type">:active-view-transition-type</see> pseudo-class<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using">Using the View Transition API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using_types">Using view transition types</see><br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="ViewTransition"/> object instance.</returns>
@@ -1395,7 +1439,7 @@ The <strong><c>Document.visibilityState</c></strong><br/>read-only property retu
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>Use of the <c>document.write()</c> method is strongly discouraged.<br/>Avoid using it, and where possible replace it in existing code.</blockquote>
 </summary>
 <remarks>
-<para>As <see href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()">the HTML spec itself warns</see>:</para><blockquote><para>This method has very idiosyncratic behavior.<br/>In some cases, this method can affect the state of the <see href="https://html.spec.whatwg.org/multipage/parsing.html#html-parser">HTML parser</see> while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g., if the string written is the string &amp;quot;<c>&amp;lt;plaintext&amp;gt;</c>&amp;quot; or &amp;quot;<c>&amp;lt;!--</c>&amp;quot;).<br/>In other cases, the call can clear the current page first, as if <see cref="Document.Open"/> had been called.<br/>In yet more cases, the method is simply ignored, or throws an exception. Users agents are <see href="https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention">explicitly allowed to avoid executing <c>script</c> elements inserted via this method</see>.<br/>And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug.<br/>For all these reasons, use of this method is strongly discouraged.</para></blockquote><blockquote class="WARNING"><h5>WARNING</h5><para>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</para><para>You can mitigate this risk by always passing <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para></blockquote><para>The <strong><c>write()</c></strong> method of the <see cref="Document"/> interface writes text in one or more <see cref="TrustedHTML"/> or string parameters to a document stream opened by <see cref="Document.Open"/>.</para>
+<para>As <see href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()">the HTML spec itself warns</see>:</para><blockquote><para>This method has very idiosyncratic behavior.<br/>In some cases, this method can affect the state of the <see href="https://html.spec.whatwg.org/multipage/parsing.html#html-parser">HTML parser</see> while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g., if the string written is the string &amp;quot;<c>&amp;lt;plaintext&amp;gt;</c>&amp;quot; or &amp;quot;<c>&amp;lt;!--</c>&amp;quot;).<br/>In other cases, the call can clear the current page first, as if <see cref="Document.Open"/> had been called.<br/>In yet more cases, the method is simply ignored, or throws an exception. Users agents are <see href="https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention">explicitly allowed to avoid executing <c>script</c> elements inserted via this method</see>.<br/>And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug.<br/>For all these reasons, use of this method is strongly discouraged.</para></blockquote><blockquote class="WARNING"><h5>WARNING</h5><para>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</para><para>You can mitigate this risk by always passing <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para></blockquote><para>The <strong><c>write()</c></strong> method of the <see cref="Document"/> interface writes text in one or more <see cref="TrustedHTML"/> or string parameters to a document stream opened by <see cref="Document.Open"/>.</para>
 <para>-<see cref="Document.Writeln"/><br/>-<see cref="Element.InnerHTML"/><br/>-<see cref="Document.CreateElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API">Trusted Types API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">Cross-site scripting (XSS)</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write"> <em>See also on MDN</em> </seealso></para>
 </remarks>

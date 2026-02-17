@@ -19,7 +19,7 @@ The <strong><c>ConstantSourceNode()</c></strong> constructor creates a new<br/><
 </ConstantSourceNodeConstantSourceNode>
 <ConstantSourceNodeOffset>
 <summary>
-The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns a <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
+The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns an <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>While the <c>AudioParam</c> named <c>offset</c> is read-only, the<br/><c>value</c> property within is not. So you can change the value of<br/><c>offset</c> by setting the value of<br/><c>ConstantSourceNode.offset.value</c>:</para></blockquote>

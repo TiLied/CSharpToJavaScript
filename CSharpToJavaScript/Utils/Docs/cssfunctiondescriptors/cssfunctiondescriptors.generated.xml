@@ -1,0 +1,22 @@
+<docs>
+<CSSFunctionDescriptors>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CSSFunctionDescriptors</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see> represents the descriptors contained within a set of CSS declarations represented by a <see cref="CSSFunctionDeclarations"/> object.
+</summary>
+<remarks>
+<para>A <c>CSSFunctionDescriptors</c> object is accessed via the <see cref="CSSFunctionDeclarations.Style"/> property.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/>-<see cref="CSSFunctionRule"/><br/>-<see cref="CSSFunctionDeclarations"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDescriptors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFunctionDescriptors>
+<CSSFunctionDescriptorsResult>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>result</c></strong> property of the <see cref="CSSFunctionDescriptors"/> interface returns a string representing a <c>result</c> descriptor, if one exists in the associated set of declarations.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDescriptors/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If no <c>result</c> descriptor exists in the associated set of declarations, an empty string is returned.</value>
+</CSSFunctionDescriptorsResult>
+</docs>

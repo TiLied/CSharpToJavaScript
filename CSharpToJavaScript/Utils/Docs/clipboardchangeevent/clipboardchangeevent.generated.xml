@@ -1,0 +1,43 @@
+<docs>
+<ClipboardChangeEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ClipboardChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Clipboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents events fired whenever the contents of the system clipboard are changed.
+</summary>
+<remarks>
+<para></para>
+<para>-Copy-related events: <see cref="Elementcopy"/>, <see cref="Elementcut"/>, <see cref="Elementpaste"/><br/>-<see cref="ClipboardEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ClipboardChangeEvent>
+<ClipboardChangeEventChangeId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>changeId</c></strong> read-only property of the <see cref="ClipboardChangeEvent"/> interface returns an integer representing a unique identifier for this specific clipboard change operation.
+</summary>
+<remarks>
+<para>The identifier is consistent across all windows and tabs with the same storage key for the same clipboard change, enabling applications to deduplicate events when multiple windows receive the same clipboard change notification.</para>
+<para>-<see cref="ClipboardChangeEvent.Types"/><br/>-<see cref="ClipboardChangeEvent"/><br/>-<see cref="ClipboardEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardChangeEvent/changeId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. A cryptographically derived 128-bit integer that, after something is written to the clipboard, is guaranteed to yield a different value than it did before the write operation.</value>
+</ClipboardChangeEventChangeId>
+<ClipboardChangeEventClipboardChangeEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ClipboardChangeEvent()</c></strong> constructor creates a new <see cref="ClipboardChangeEvent"/> object instance when a <c>clipboardchange</c> event occurs. The <c>clipboardchange</c> event fires whenever the system clipboard contents are changed either by a web app or any other system application.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This event constructor is generally not needed for production websites. Its primary use is for tests that require an instance of this event.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardChangeEvent/ClipboardChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ClipboardChangeEvent"/> object.</returns>
+</ClipboardChangeEventClipboardChangeEvent>
+<ClipboardChangeEventTypes>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>types</c></strong> read-only property of the <see cref="ClipboardChangeEvent"/> interface returns an array of strings representing the mandatory {{glossary("MIME type","MIME types")}} available on the system clipboard when the <c>ClipboardChangeEvent</c> event was fired. Optional types and custom formats are not included to limit <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>.
+</summary>
+<remarks>
+<para>-<see cref="ClipboardChangeEvent.ChangeId"/><br/>-<see cref="ClipboardChangeEvent"/><br/>-<see cref="ClipboardEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardChangeEvent/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings.</value>
+</ClipboardChangeEventTypes>
+</docs>

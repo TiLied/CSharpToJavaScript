@@ -15,6 +15,6 @@ The read-only <strong><c>style</c></strong> property of the <see cref="CSSNested
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSNestedDeclarations/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An object.</value>
+<value>A <see cref="CSSStyleProperties"/> object.Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSStyleProperties</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSStyleProperties</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
 </CSSNestedDeclarationsStyle>
 </docs>

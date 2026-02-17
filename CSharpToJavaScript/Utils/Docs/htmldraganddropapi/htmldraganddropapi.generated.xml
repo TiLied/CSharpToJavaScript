@@ -5,37 +5,45 @@
 </summary>
 <remarks>
 <para>The user may select <strong>draggable</strong> elements with a mouse, drag those elements to a <strong>droppable</strong> element, and drop them by releasing the mouse button. A translucent representation of the <strong>draggable</strong> elements follows the pointer during the drag operation.</para><para>You can customize which elements can become <strong>draggable</strong>, the type of feedback the <strong>draggable</strong> elements produce, and the <strong>droppable</strong> elements.</para><para>This overview of HTML Drag and Drop includes a description of the interfaces, basic steps to add drag-and-drop support to an application, and an interoperability summary of the interfaces.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML Living Standard: Drag and Drop</see><br/>-<see href="https://caniuse.com/#search=draganddrop">Drag and Drop interoperability data from CanIUse</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store">Working with the drag data store</see><br/>-<see href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML Living Standard: Drag and Drop</see><br/>-<see href="https://caniuse.com/#search=draganddrop">Drag and Drop interoperability data from CanIUse</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTML_Drag_and_Drop_API>
-<HTML_Drag_and_Drop_APIDrag_operations>
+<HTML_Drag_and_Drop_APIDrag_data_store>
 <summary>
-The following describes the steps that occur during a drag and drop operation.
+The <see cref="DragEvent"/> interface has a <see cref="DragEvent.DataTransfer"/> property, which is a <see cref="DataTransfer"/> object. <see cref="DataTransfer"/> objects represent the main context of the drag operation, and it stays consistent across the firing of different events. It includes the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_data_store">drag data</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image">drag image</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop_effects">drop effect</see>, etc. This article focuses on the <strong>data store</strong> part of the <c>dataTransfer</c>.
 </summary>
 <remarks>
-<para>The drag operations described in this document use the <see cref="DataTransfer"/> interface. This document does <strong>not</strong> use the <see cref="DataTransferItem"/> interface nor the <see cref="DataTransferItemList"/> interface.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML Living Standard: Drag and Drop</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTML_Drag_and_Drop_APIDrag_data_store>
+<HTML_Drag_and_Drop_APIDrag_operations>
+<summary>
+Central to the Drag and Drop API are the various <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_events">drag events</see> that fire in a specific order and are expected to be handled in a specific way. This document describes the steps that occur during a drag and drop operation, and what the application is supposed to do within each handler.
+</summary>
+<remarks>
+<para>At a high level, here are the possible steps in a drag and drop operation:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store">Working with the drag data store</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTML_Drag_and_Drop_APIDrag_operations>
 <HTML_Drag_and_Drop_APIFile_drag_and_drop>
 <summary>
-HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform&amp;apos;s <strong>file manager</strong> and dropped on a web page.
+As mentioned on <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#concepts_and_usage">the landing page</see>, the Drag and Drop API simultaneously models three use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. This tutorial demonstrates the third use case: dragging data into a page. We will be implementing a basic drop zone that allows the user to drop image files from the user&amp;apos;s operation system file explorer and displays them on the page. For users who can&amp;apos;t or don&amp;apos;t want to use drag and drop, we also provide the alternative functionality of file selection via an <c>&amp;lt;input&amp;gt;</c> element.
 </summary>
 <remarks>
-<para>The main steps to drag and drop are to define a <strong>drop zone</strong> (i.e., a target element for the file drop) and to define event handlers for the <see cref="HTMLElementdrop"/> and <see cref="HTMLElementdragover"/> events. These steps are described below, including example code snippets.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML Living Standard: Drag and Drop</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTML_Drag_and_Drop_APIFile_drag_and_drop>
-<HTML_Drag_and_Drop_APIRecommended_drag_types>
+<HTML_Drag_and_Drop_APIKanban_board>
 <summary>
-The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
+As mentioned on <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#concepts_and_usage">the landing page</see>, the Drag and Drop API simultaneously models three use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. This tutorial demonstrates the first use case: dragging elements within a page. We will be implementing a Kanban application, similar to the functionality provided by <see href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">GitHub projects</see> or <see href="https://trello.com/">Trello</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML Living Standard: Drag and Drop</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTML_Drag_and_Drop_APIRecommended_drag_types>
+</HTML_Drag_and_Drop_APIKanban_board>
 </docs>

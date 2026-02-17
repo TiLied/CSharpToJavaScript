@@ -1,11 +1,11 @@
 <docs>
 <TransitionEvent>
 <summary>
-The <strong><c>TransitionEvent</c></strong> interface represents events providing information related to <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">transitions</see>.
+The <strong><c>TransitionEvent</c></strong> interface represents events providing information related to <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">transitions</see>.
 </summary>
 <remarks>
 <para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see><br/>-CSS at-rules: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style">@starting-style</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">Using CSS transitions</see><br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see><br/>-CSS at-rules: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style">@starting-style</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TransitionEvent>
@@ -14,7 +14,7 @@ The <strong><c>TransitionEvent</c></strong> interface represents events providin
 The <strong><c>TransitionEvent.elapsedTime</c></strong> read-only property is a<br/><c>float</c> giving the amount of time the animation has been running, in seconds,<br/>when this event fired. This value is not affected by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see><br/>property.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">Using CSS transitions</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/elapsedTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>
@@ -24,17 +24,17 @@ The <strong><c>TransitionEvent.elapsedTime</c></strong> read-only property is a<
 The <strong><c>propertyName</c></strong> read-only property of <see cref="TransitionEvent"/> objects is a string containing the name of the CSS property associated with the transition.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">Using CSS transitions</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/propertyName"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
 </TransitionEventPropertyName>
 <TransitionEventPseudoElement>
 <summary>
-The <strong><c>TransitionEvent.pseudoElement</c></strong> read-only property is a<br/>string, starting with <c>&amp;apos;::&amp;apos;</c>, containing the name of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</see> the animation runs on.<br/>If the transition doesn&amp;apos;t run on a pseudo-element but on the element, an empty string:<br/><c>&amp;quot;&amp;quot;</c>.
+The <strong><c>TransitionEvent.pseudoElement</c></strong> read-only property is a<br/>string, starting with <c>&amp;apos;::&amp;apos;</c>, containing the name of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements">pseudo-element</see> the animation runs on.<br/>If the transition doesn&amp;apos;t run on a pseudo-element but on the element, an empty string:<br/><c>&amp;quot;&amp;quot;</c>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">Using CSS transitions</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/pseudoElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
@@ -44,7 +44,7 @@ The <strong><c>TransitionEvent.pseudoElement</c></strong> read-only property is 
 The <strong><c>TransitionEvent()</c></strong> constructor returns a new <see cref="TransitionEvent"/> object, representing an event in relation with a transition.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">Using CSS transitions</see><br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/TransitionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A new <see cref="TransitionEvent"/> object.</returns>

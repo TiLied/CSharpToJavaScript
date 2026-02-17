@@ -1,0 +1,31 @@
+<docs>
+<InterestEvent>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>InterestEvent</c></strong> interface represents an event that fires when interest is shown or lost on an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">interest invoker</see>.
+</summary>
+<remarks>
+<para>This is the event object for the <see cref="HTMLElement.Interest"/> and <see cref="HTMLElement.Loseinterest"/> events, which fire on the target element when interest is shown or lost, respectively.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterestEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</InterestEvent>
+<InterestEventInterestEvent>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>InterestEvent()</c></strong> constructor creates a new <see cref="InterestEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterestEvent/InterestEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</InterestEventInterestEvent>
+<InterestEventSource>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>source</c></strong> read-only property of the <see cref="InterestEvent"/> interface is an <see cref="Element"/> object instance that represents the interest invoker element on which interest was shown or lost to fire the event.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterestEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> object instance.</value>
+</InterestEventSource>
+</docs>

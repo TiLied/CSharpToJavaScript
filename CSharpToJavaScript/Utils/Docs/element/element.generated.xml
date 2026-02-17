@@ -34,45 +34,45 @@ The <see cref="Element"/> interface's <strong><c>animate()</c></strong> method<b
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>Elements can have multiple animations applied to them. You can get a list of the<br/>animations that affect an element by calling <see cref="Element.GetAnimations"/>.</para></blockquote>
-<para>-<see cref="Animation"/><br/>-<see cref="Element.GetAnimations"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-end">animation-range-end</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-start">animation-range-start</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
+<para>-<see cref="Animation"/><br/>-<see cref="Element.GetAnimations"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-end">animation-range-end</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-start">animation-range-start</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>Returns an <see cref="Animation"/>.</returns>
 </ElementAnimate>
 <ElementAnimationcancel>
 <summary>
-The <strong><c>animationcancel</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animation</see> unexpectedly aborts. In other words, any time it stops running without sending an <see cref="Elementanimationend"/> event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
+The <strong><c>animationcancel</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animation</see> unexpectedly aborts. In other words, any time it stops running without sending an <see cref="Elementanimationend"/> event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
 </summary>
 <remarks>
 <para>An event handler for this event can be added by setting the <c>onanimationcancel</c> property, or using <see cref="EventTarget.AddEventListener"/>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationend"/>, <see cref="Elementanimationiteration"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationend"/>, <see cref="Elementanimationiteration"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationcancel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementAnimationcancel>
 <ElementAnimationend>
 <summary>
-The <strong><c>animationend</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animation</see> has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the <c>animationend</c> event is not fired.
+The <strong><c>animationend</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animation</see> has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the <c>animationend</c> event is not fired.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationcancel"/>, <see cref="Elementanimationiteration"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationcancel"/>, <see cref="Elementanimationiteration"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementAnimationend>
 <ElementAnimationiteration>
 <summary>
-The <strong><c>animationiteration</c></strong> event is fired when an iteration of a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animation</see> ends, and another one begins. This event does not occur at the same time as the <see cref="Elementanimationend"/> event, and therefore does not occur for animations with an <c>animation-iteration-count</c> of one.
+The <strong><c>animationiteration</c></strong> event is fired when an iteration of a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animation</see> ends, and another one begins. This event does not occur at the same time as the <see cref="Elementanimationend"/> event, and therefore does not occur for animations with an <c>animation-iteration-count</c> of one.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationend"/>, <see cref="Elementanimationcancel"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationstart"/>, <see cref="Elementanimationend"/>, <see cref="Elementanimationcancel"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationiteration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementAnimationiteration>
 <ElementAnimationstart>
 <summary>
-The <strong><c>animationstart</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animation</see> has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an <see cref="AnimationEventelapsedTime"/> equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
+The <strong><c>animationstart</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animation</see> has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an <see cref="AnimationEventelapsedTime"/> equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationend"/>, <see cref="Elementanimationiteration"/>, <see cref="Elementanimationcancel"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Elementanimationend"/>, <see cref="Elementanimationiteration"/>, <see cref="Elementanimationcancel"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationstart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementAnimationstart>
@@ -96,7 +96,7 @@ The <strong><c>ariaActiveDescendantElement</c></strong> property of the <see cre
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant"><c>aria-activedescendant</c></see> attribute<br/>-<see cref="ElementInternals.AriaActiveDescendantElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/ariaActiveDescendantElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An subclass of <see cref="HTMLElement"/> that represents the active descendant, or <c>null</c> if there is no active descendant.</value>
+<value>A subclass of <see cref="HTMLElement"/> that represents the active descendant, or <c>null</c> if there is no active descendant.</value>
 </ElementAriaActiveDescendantElement>
 <ElementAriaAtomic>
 <summary>
@@ -397,6 +397,16 @@ The <strong><c>ariaMultiSelectable</c></strong> property of the <see cref="Eleme
 </remarks>
 <value>A string with one of the following values:</value>
 </ElementAriaMultiSelectable>
+<ElementAriaNotify>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>ariaNotify()</c></strong> method of the <see cref="Element"/> interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
+</summary>
+<remarks>
+<para>-<see cref="Document.AriaNotify"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions">ARIA live regions</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/ariaNotify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementAriaNotify>
 <ElementAriaOrientation>
 <summary>
 The <strong><c>ariaOrientation</c></strong> property of the <see cref="Element"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation"><c>aria-orientation</c></see> attribute, which indicates whether the element&amp;apos;s orientation is horizontal, vertical, or unknown/ambiguous.
@@ -688,7 +698,7 @@ An element receives a <strong><c>beforematch</c></strong> event when it is in th
 The <strong><c>blur</c></strong> event fires when an element has lost focus. The event does not bubble, but the related <see cref="Elementfocusout"/> event that follows does bubble.
 </summary>
 <remarks>
-<para>An element will lose focus if another element is selected.<br/>An element will also lose focus if a style that does not allow focus is applied, such as <c>hidden</c>, or if the element is removed from the document — in both of these cases focus moves to the <c>body</c> element (viewport).<br/>Note however that <c>blur</c> is not fired when a focused element is removed from the document.</para><para>The opposite of <c>blur</c> is the <see cref="Elementfocus"/> event, which fires when the element has <strong>received</strong> focus.</para><para>The <c>blur</c> event is not cancelable.</para>
+<para>An element will lose focus if another element is selected.<br/>An element will also lose focus if a style that does not allow focus is applied, such as <c>hidden</c>, or if the element is removed from the document — in both of these cases focus moves to the <c>body</c> element (viewport).<br/>Note that browser behavior differs when a focused element is removed from the document. In Chromium-based browsers, removing a focused element triggers a <c>blur</c> event, while in Firefox it does not.</para><para>The opposite of <c>blur</c> is the <see cref="Elementfocus"/> event, which fires when the element has <strong>received</strong> focus.</para><para>The <c>blur</c> event is not cancelable.</para>
 <para>-The <see cref="HTMLElement.Blur"/> method<br/>-Related events: <see cref="Elementfocus"/>, <see cref="Elementfocusin"/>, <see cref="Elementfocusout"/><br/>-This event on <c>Window</c> targets: <see cref="Windowblur"/> event<br/>-<see href="https://javascript.info/focus-blur">Focusing: focus/blur</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/blur"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -698,7 +708,7 @@ The <strong><c>blur</c></strong> event fires when an element has lost focus. The
 The <strong><c>checkVisibility()</c></strong> method of the <see cref="Element"/> interface checks whether the element is visible.
 </summary>
 <remarks>
-<para>The method returns <c>false</c> in either of the following situations:</para><para>The optional parameter enables additional checks to test for other interpretations of what &amp;quot;visible&amp;quot; means.<br/>For example, you can further check whether an element has an opacity of <c>0</c>, if the value of the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"><c>visibility</c></see> property makes it invisible, or if the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property has a value of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility#auto"><c>auto</c></see> and its rendering is currently being skipped.</para>
+<para>The method returns <c>false</c> in either of the following situations:</para><para>The optional parameter enables additional checks to test for other interpretations of what &amp;quot;visible&amp;quot; means.<br/>For example, you can further check whether an element has an opacity of <c>0</c>, if the value of the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</see> property makes it invisible, or if the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property has a value of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content-visibility#auto"><c>auto</c></see> and its rendering is currently being skipped.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/checkVisibility"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>false</c> if any of the following conditions are met, otherwise <c>true</c>:</returns>
@@ -725,14 +735,14 @@ The read-only <strong><c>children</c></strong> property returns a live <see cref
 </ElementChildren>
 <ElementClassList>
 <summary>
-The <strong><c>Element.classList</c></strong> is a read-only property that<br/>returns a live <see cref="DOMTokenList"/> collection of the <c>class</c><br/>attributes of the element. This can then be used to manipulate the class list.
+The read-only <strong><c>classList</c></strong> property of the <see cref="Element"/> interface contains a live <see cref="DOMTokenList"/> collection representing the <c>class</c> attribute of the element. This can then be used to manipulate the class list.
 </summary>
 <remarks>
-<para>Using <c>classList</c> is a convenient alternative to accessing an element&amp;apos;s list<br/>of classes as a space-delimited string via <see cref="Element.ClassName"/>.</para>
-<para>-<see cref="Element.ClassName"/><br/>-<see cref="DOMTokenList"/><br/>-<see href="https://github.com/eligrey/classList.js"><c>classList.js</c></see> (a cross-browser JavaScript polyfill that fully implements <c>element.classList</c>)<br/></para>
+<para>Using <c>classList</c> is a convenient alternative to accessing an element's list of classes as a space-delimited string via <see cref="Element.ClassName"/>.</para>
+<para>-<see cref="Element.ClassName"/><br/>-<see cref="DOMTokenList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMTokenList"/> representing the contents of the element's<br/><c>class</c> attribute. If the <c>class</c> attribute is not set or empty,<br/>it returns an empty <c>DOMTokenList</c>, i.e., a <c>DOMTokenList</c> with<br/>the <c>length</c> property equal to <c>0</c>.Although the <c>classList</c> property itself is read-only, you can modify its associated <c>DOMTokenList</c> using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.You can test whether the element contains a given class using the <see cref="DOMTokenListcontains"/> method.</value>
+<value>A <see cref="DOMTokenList"/> object representing the contents of the element's <c>class</c> attribute. If the <c>class</c> attribute is not set or empty, it returns an empty <c>DOMTokenList</c>, i.e., a <c>DOMTokenList</c> with the <c>length</c> property equal to <c>0</c>.Although the <c>classList</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>classList</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </ElementClassList>
 <ElementClassName>
 <summary>
@@ -803,7 +813,7 @@ The <strong><c>clientWidth</c></strong> read-only property of the <see cref="Ele
 The <strong><c>closest()</c></strong> method of the <see cref="Element"/> interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS selector</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see> module<br/>-Other <see cref="Element"/> methods that take selectors: <see cref="Element.QuerySelector"/>, <see cref="Element.QuerySelectorAll"/>, and <see cref="Element.Matches"/>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selectors</see> module<br/>-Other <see cref="Element"/> methods that take selectors: <see cref="Element.QuerySelector"/>, <see cref="Element.QuerySelectorAll"/>, and <see cref="Element.Matches"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The closest ancestor <see cref="Element"/> or itself, which matches the <c>selectors</c>. If there are no such element, <c>null</c>.</returns>
@@ -846,15 +856,15 @@ The <strong><c>computedStyleMap()</c></strong> method of<br/>the <see cref="Elem
 <para>-<see cref="Window.GetComputedStyle"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/computedStyleMap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="StylePropertyMapReadOnly"/> object.Unlike <see cref="Window.GetComputedStyle"/>, the return value contains <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value">computed values</see>, not <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value">resolved values</see>. For most properties, they are the same, except a few layout-related properties, where the resolved value is the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value">used value</see> instead of the computed value. See the <see href="https://developer.mozilla.org#comparison_with_getcomputedstyle">comparison with <c>getComputedStyle()</c></see> example for details.</returns>
+<returns>A <see cref="StylePropertyMapReadOnly"/> object.Unlike <see cref="Window.GetComputedStyle"/>, the return value contains <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value">computed values</see>, not <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value">resolved values</see>. For most properties, they are the same, except a few layout-related properties, where the resolved value is the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value">used value</see> instead of the computed value. See the <see href="https://developer.mozilla.org#comparison_with_getcomputedstyle">comparison with <c>getComputedStyle()</c></see> example for details.</returns>
 </ElementComputedStyleMap>
 <ElementContentvisibilityautostatechange>
 <summary>
-The <strong><c>contentvisibilityautostatechange</c></strong> event fires on any element with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> set on it when it starts or stops being <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user">relevant to the user</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents">skipping its contents</see>.
+The <strong><c>contentvisibilityautostatechange</c></strong> event fires on any element with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> set on it when it starts or stops being <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Using#relevant_to_the_user">relevant to the user</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents">skipping its contents</see>.
 </summary>
 <remarks>
 <para>While the element is not relevant (between the start and end events), the user agent skips an element&amp;apos;s rendering, including layout and painting, which can significantly improve page rendering speed.<br/>The <c>contentvisibilityautostatechange</c> event provides a way for an app's code to also start or stop rendering processes (e.g., drawing on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see>) when they are not needed, thereby conserving processing power.</para><para>Note that even when hidden from view, element contents will remain semantically relevant (e.g., to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.</para>
-<para>-<see cref="ContentVisibilityAutoStateChangeEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment">CSS Containment</see><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain">contain</see> property<br/></para>
+<para>-<see cref="ContentVisibilityAutoStateChangeEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment">CSS Containment</see><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain">contain</see> property<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/contentvisibilityautostatechange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementContentvisibilityautostatechange>
@@ -880,11 +890,11 @@ The <strong><c>copy</c></strong> event of the <see href="https://developer.mozil
 </ElementCopy>
 <ElementCurrentCSSZoom>
 <summary>
-The <strong><c>currentCSSZoom</c></strong> read-only property of the <see cref="Element"/> interface provides the "effective" <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/zoom">CSS <c>zoom</c></see> of an element, taking into account the zoom applied to the element and all its parent elements.
+The <strong><c>currentCSSZoom</c></strong> read-only property of the <see cref="Element"/> interface provides the "effective" <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/zoom">CSS <c>zoom</c></see> of an element, taking into account the zoom applied to the element and all its parent elements.
 </summary>
 <remarks>
 <para>The value calculated by multiplying the CSS <c>zoom</c> values of the element and all of its parents.<br/>For example, if three elements with zoom values of 2, 1.5, and 3, are nested within each other, the most deeply nested element will have a <c>currentCSSZoom</c> value of 9.<br/>If the element doesn&amp;apos;t have a CSS box, for example because <c>display: none</c> is set on the element or one of its parents, then the <c>currentCSSZoom</c> is set to 1.</para><para>Note that some methods, such as <see cref="Element.GetBoundingClientRect"/>, return dimensions and position that are relative to the viewport, and hence include the effects of CSS <c>zoom</c>.<br/>Other properties and methods return values that are relative to the element itself, and do not include the effects of zooming.<br/>These include, for example, <c>client*</c> properties such as <see cref="Element.ClientHeight"/>, <c>scroll*()</c> methods like <see cref="Element.Scroll"/>, and <c>offset*</c> properties such as <see cref="HTMLElement.OffsetHeight"/>.<br/>The <c>currentCSSZoom</c> property can be used to scale these values to adjust for the effects of zooming.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/zoom">CSS <c>zoom</c></see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/zoom">CSS <c>zoom</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/currentCSSZoom"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number indicating the effective CSS zoom on the element, or 1 if the element is not rendered.</value>
@@ -1034,8 +1044,8 @@ The <strong><c>fullscreenerror</c></strong> event is fired when the browser cann
 The <c>getAnimations()</c> method of the <see cref="Element"/> interface<br/>(specified on the <c>Animatable</c> mixin) returns an array of all<br/><see cref="Animation"/> objects affecting this element or which are scheduled to do so<br/>in future. It can optionally return <see cref="Animation"/> objects for descendant<br/>elements too.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see><br/>-<see cref="Document.GetAnimations"/> - Fetch all animations in the document<br/>-<see cref="Animation"/><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</see><br/>-<see cref="Document.GetAnimations"/> - Fetch all animations in the document<br/>-<see cref="Animation"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An {{jsxref("Array")}} of <see cref="Animation"/> objects, each representing an<br/>animation currently targeting the <see cref="Element"/> on which this method is called,<br/>or one of its descendant elements if <c>{ subtree: true }</c> is specified.</returns>
@@ -1102,11 +1112,11 @@ The <strong><c>Element.getBoundingClientRect()</c></strong> method returns a<br/
 <para>-<see cref="Element.GetClientRects"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The returned value is a <see cref="DOMRect"/> object which is the smallest rectangle<br/>which contains the entire element, including its padding and border-width. The<br/><c>left</c>, <c>top</c>, <c>right</c>, <c>bottom</c>,<br/><c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> properties<br/>describe the position and size of the overall rectangle in pixels. Properties other than<br/><c>width</c> and <c>height</c> are relative to the top-left of the viewport.<see href="https://developer.mozilla.orgelement-box-diagram.png">DOMRect object that is the smallest rectangle containing the entire element.</see>The <c>width</c> and <c>height</c> properties of the <see cref="DOMRect"/><br/>object returned by the method include the <c>padding</c> and<br/><c>border-width</c>, not only the content width/height. In the standard box model,<br/>this would be equal to the <c>width</c> or <c>height</c> property of the<br/>element + <c>padding</c> + <c>border-width</c>. But<br/>if <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><c>box-sizing: border-box</c></see> is<br/>set for the element this would be directly equal to its <c>width</c> or<br/><c>height</c>.The returned value can be thought of as the union of the rectangles returned by<br/><see cref="Element.GetClientRects"/> for the element, i.e., the CSS<br/>border-boxes associated with the element.Empty border-boxes are completely ignored. If all the element&amp;apos;s border-boxes are empty,<br/>then a rectangle is returned with a <c>width</c> and <c>height</c> of zero<br/>and where the <c>top</c> and <c>left</c> are the top-left of the border-box<br/>for the first CSS box (in content order) for the element.The amount of scrolling that has been done of the viewport area (or any other<br/>scrollable element) is taken into account when computing the bounding rectangle. This<br/>means that the rectangle&amp;apos;s boundary edges (<c>top</c>, <c>right</c>,<br/><c>bottom</c>, <c>left</c>) change their values every time the scrolling<br/>position changes (because their values are relative to the viewport and not absolute).If you need the bounding rectangle relative to the top-left corner of the document,<br/>just add the current scrolling position to the <c>top</c> and <c>left</c><br/>properties (these can be obtained using <see cref="Window.ScrollY"/> and<br/><see cref="Window.ScrollX"/>) to get a bounding rectangle which is independent from the<br/>current scrolling position.</returns>
+<returns>The returned value is a <see cref="DOMRect"/> object which is the smallest rectangle<br/>which contains the entire element, including its padding and border-width. The<br/><c>left</c>, <c>top</c>, <c>right</c>, <c>bottom</c>,<br/><c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> properties<br/>describe the position and size of the overall rectangle in pixels. Properties other than<br/><c>width</c> and <c>height</c> are relative to the top-left of the viewport.<see href="https://developer.mozilla.orgelement-box-diagram.png">DOMRect object that is the smallest rectangle containing the entire element.</see>The <c>width</c> and <c>height</c> properties of the <see cref="DOMRect"/><br/>object returned by the method include the <c>padding</c> and<br/><c>border-width</c>, not only the content width/height. In the standard box model,<br/>this would be equal to the <c>width</c> or <c>height</c> property of the<br/>element + <c>padding</c> + <c>border-width</c>. But<br/>if <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing"><c>box-sizing: border-box</c></see> is<br/>set for the element this would be directly equal to its <c>width</c> or<br/><c>height</c>.The returned value can be thought of as the union of the rectangles returned by<br/><see cref="Element.GetClientRects"/> for the element, i.e., the CSS<br/>border-boxes associated with the element.Empty border-boxes are completely ignored. If all the element&amp;apos;s border-boxes are empty,<br/>then a rectangle is returned with a <c>width</c> and <c>height</c> of zero<br/>and where the <c>top</c> and <c>left</c> are the top-left of the border-box<br/>for the first CSS box (in content order) for the element.The amount of scrolling that has been done of the viewport area (or any other<br/>scrollable element) is taken into account when computing the bounding rectangle. This<br/>means that the rectangle&amp;apos;s boundary edges (<c>top</c>, <c>right</c>,<br/><c>bottom</c>, <c>left</c>) change their values every time the scrolling<br/>position changes (because their values are relative to the viewport and not absolute).If you need the bounding rectangle relative to the top-left corner of the document,<br/>just add the current scrolling position to the <c>top</c> and <c>left</c><br/>properties (these can be obtained using <see cref="Window.ScrollY"/> and<br/><see cref="Window.ScrollX"/>) to get a bounding rectangle which is independent from the<br/>current scrolling position.</returns>
 </ElementGetBoundingClientRect>
 <ElementGetClientRects>
 <summary>
-The <strong><c>getClientRects()</c></strong> method of the <see cref="Element"/><br/>interface returns a collection of <see cref="DOMRect"/> objects that indicate the<br/>bounding rectangles for each <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model">CSS border box</see> in a client.
+The <strong><c>getClientRects()</c></strong> method of the <see cref="Element"/><br/>interface returns a collection of <see cref="DOMRect"/> objects that indicate the<br/>bounding rectangles for each <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model/Introduction">CSS border box</see> in a client.
 </summary>
 <remarks>
 <para>Most elements only have one border box each, but a multiline <see href="https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content">inline-level element</see> (such as a multiline<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">span</see> element, by default) has a border box around each line.</para>
@@ -1209,7 +1219,7 @@ The <strong><c>hasPointerCapture()</c></strong> method of the<br/><see cref="Ele
 The <strong><c>id</c></strong> property of the <see cref="Element"/> interface<br/>represents the element&amp;apos;s identifier, reflecting the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><strong><c>id</c></strong></see><br/>global attribute.
 </summary>
 <remarks>
-<para>If the <c>id</c> value is not the empty string, it must be unique in a document.</para><para>The <c>id</c> is often used with <see cref="Document.GetElementById"/> to retrieve a particular element.<br/>Another common case is to use an element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID as a selector</see> when styling the document with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Identifiers are case-sensitive, but you should avoid creating<br/>IDs that differ only in the capitalization.</para></blockquote>
+<para>If the <c>id</c> value is not the empty string, it must be unique in a document.</para><para>The <c>id</c> is often used with <see cref="Document.GetElementById"/> to retrieve a particular element.<br/>Another common case is to use an element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors">ID as a selector</see> when styling the document with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Identifiers are case-sensitive, but you should avoid creating<br/>IDs that differ only in the capitalization.</para></blockquote>
 <para>-The DOM <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><strong>id</strong></see><br/>global attribute.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -1217,7 +1227,7 @@ The <strong><c>id</c></strong> property of the <see cref="Element"/> interface<b
 </ElementId>
 <ElementInnerHTML>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5>This property parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5>This property parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
 <para>You can mitigate this risk by always assigning <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>innerHTML</c></strong> property of the <see cref="Element"/> interface gets or sets the HTML or XML markup contained within the element, omitting any {{glossary("shadow tree", "shadow roots")}} in both cases.</para><para>To insert the HTML into the document rather than replace the contents of an element, use the method <see cref="Element.InsertAdjacentHTML"/>.</para>
@@ -1248,7 +1258,7 @@ The <strong><c>insertAdjacentElement()</c></strong> method of the<br/><see cref=
 </ElementInsertAdjacentElement>
 <ElementInsertAdjacentHTML>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML or XML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML or XML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
 <para>You can reduce the risk by assigning <see cref="TrustedHTML"/> objects instead of strings, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see> using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for"><c>require-trusted-types-for</c></see> CSP directive.<br/>This ensures that the input is passed through a transformation function, which has the chance to <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS#sanitization">sanitize</see> the input to remove potentially dangerous markup, such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> elements and event handler attributes.</para><para>The <strong><c>insertAdjacentHTML()</c></strong> method of the <see cref="Element"/> interface parses the specified input as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.</para>
@@ -1332,7 +1342,7 @@ The <strong><c>lostpointercapture</c></strong> event is fired when a <see href="
 The <strong><c>matches()</c></strong> method of the <see cref="Element"/> interface tests whether the element would be selected by the specified <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS selector</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see> module<br/>-Other <see cref="Element"/> methods that take selectors: <see cref="Element.QuerySelector"/>, <see cref="Element.QuerySelectorAll"/>, and <see cref="Element.Closest"/>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selectors</see> module<br/>-Other <see cref="Element"/> methods that take selectors: <see cref="Element.QuerySelector"/>, <see cref="Element.QuerySelectorAll"/>, and <see cref="Element.Closest"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>true</c> if the <see cref="Element"/> matches the <c>selectors</c>. Otherwise, <c>false</c>.</returns>
@@ -1419,7 +1429,7 @@ The <strong><c>mouseup</c></strong> event is fired at an <see cref="Element"/> w
 </ElementMousewheel>
 <ElementMoveBefore>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>moveBefore()</c></strong> method of the <see cref="Element"/> interface moves a given <see cref="Node"/> inside the invoking node as a direct child, before a given reference node.
+The <strong><c>moveBefore()</c></strong> method of the <see cref="Element"/> interface moves a given <see cref="Node"/> inside the invoking node as a direct child, before a given reference node.
 </summary>
 <remarks>
 <para>-<see cref="Document.MoveBefore"/><br/>-<see cref="DocumentFragment.MoveBefore"/><br/>-<see cref="Node.InsertBefore"/><br/></para>
@@ -1455,11 +1465,11 @@ The <strong><c>Element.nextElementSibling</c></strong> read-only<br/>property re
 <para>-<see cref="Element.PreviousElementSibling"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Element"/> object, or <c>null</c>.</value>
+<value>An <see cref="Element"/> object, or <c>null</c>.</value>
 </ElementNextElementSibling>
 <ElementOuterHTML>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5>This property parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5>This property parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
 <para>You can mitigate this risk by always assigning <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>outerHTML</c></strong> attribute of the <see cref="Element"/> interface gets or sets the HTML or XML markup of the element and its descendants, omitting any {{glossary("shadow tree", "shadow roots")}} in both cases.</para><para>To get or set the contents of an element, use the <see cref="Element.InnerHTML"/> property instead.</para>
@@ -1470,13 +1480,13 @@ The <strong><c>Element.nextElementSibling</c></strong> read-only<br/>property re
 </ElementOuterHTML>
 <ElementPart>
 <summary>
-The <strong><c>part</c></strong> property of the <see cref="Element"/> interface<br/>represents the part identifier(s) of the element (i.e., set using the <c>part</c><br/>attribute), returned as a <see cref="DOMTokenList"/>. These can be used to style parts<br/>of a shadow DOM, via the {{cssxref(&amp;quot;::part&amp;quot;)}} pseudo-element.
+The read-only <strong><c>part</c></strong> property of the <see cref="Element"/> interface contains a <see cref="DOMTokenList"/> object representing the part identifier(s) of the element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/part"><c>part</c></see> content attribute. These can be used to style parts of a shadow DOM, via the {{cssxref(&amp;quot;::part&amp;quot;)}} pseudo-element.
 </summary>
 <remarks>
 <para>-{{cssxref(&amp;quot;::part&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/part">part</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/part"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMTokenList"/> object.</value>
+<value>A <see cref="DOMTokenList"/> object. If the <c>part</c> attribute is not set or empty, it returns an empty <c>DOMTokenList</c>, i.e., a <c>DOMTokenList</c> with the <c>length</c> property equal to <c>0</c>.Although the <c>part</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>part</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </ElementPart>
 <ElementPaste>
 <summary>
@@ -1528,7 +1538,7 @@ The <c>pointerleave</c> event is fired when a pointing device is moved out of th
 </ElementPointerleave>
 <ElementPointermove>
 <summary>
-The <c>pointermove</c> event is fired when a pointer changes coordinates, and the pointer has not been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event">canceled</see> by a browser <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action">touch-action</see>. It's very similar to the <see cref="Elementmousemove"/> event, but with more features.
+The <c>pointermove</c> event is fired when a pointer changes coordinates, and the pointer has not been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event">canceled</see> by a browser <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/touch-action">touch-action</see>. It's very similar to the <see cref="Elementmousemove"/> event, but with more features.
 </summary>
 <remarks>
 <para>These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.</para>
@@ -1611,7 +1621,7 @@ The <strong><c>Element.previousElementSibling</c></strong><br/>read-only propert
 The <strong><c>querySelector()</c></strong> method of the <see cref="Element"/><br/>interface returns the first element that is a descendant of the element on which it is<br/>invoked that matches the specified group of selectors.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelectorAll"/><br/>-<see cref="Document.QuerySelector"/> and<br/><see cref="Document.QuerySelectorAll"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/>-Other methods that take selectors: <see cref="Element.Closest"/> and<br/><see cref="Element.Matches"/>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">Selection and traversal on the DOM tree</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelectorAll"/><br/>-<see cref="Document.QuerySelector"/> and<br/><see cref="Document.QuerySelectorAll"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/>-Other methods that take selectors: <see cref="Element.Closest"/> and<br/><see cref="Element.Matches"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The first descendant element of <c>baseElement</c> which matches the specified<br/>group of <c>selectors</c>. The entire hierarchy of elements is considered when<br/>matching, including those outside the set of elements including <c>baseElement</c><br/>and its descendants; in other words, <c>selectors</c> is first applied to the<br/>whole document, not the <c>baseElement</c>, to generate an initial list of<br/>potential elements. The resulting elements are then examined to see if they are<br/>descendants of <c>baseElement</c>. The first match of those remaining elements is<br/>returned by the <c>querySelector()</c> method.If no matches are found, the returned value is <c>null</c>.</returns>
@@ -1621,10 +1631,10 @@ The <strong><c>querySelector()</c></strong> method of the <see cref="Element"/><
 The <see cref="Element"/> method <strong><c>querySelectorAll()</c></strong><br/>returns a static (not live) <see cref="NodeList"/> representing a list of elements<br/>matching the specified group of selectors which are descendants of the element on which<br/>the method was called.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelector"/><br/>-<see cref="Document.QuerySelector"/> and<br/><see cref="Document.QuerySelectorAll"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">Selection and traversal on the DOM tree</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors">Attribute selectors</see> in the CSS<br/>Guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors">Attribute selectors</see> in the MDN Learning Area<br/>-<see cref="Element.QuerySelector"/><br/>-<see cref="Document.QuerySelector"/> and<br/><see cref="Document.QuerySelectorAll"/><br/>-<see cref="DocumentFragment.QuerySelector"/> and<br/><see cref="DocumentFragment.QuerySelectorAll"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.<blockquote class="NOTE"><h5>NOTE</h5>If the specified <c>selectors</c> include a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-element</see>, the returned list<br/>is always empty.</blockquote></returns>
+<returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.<blockquote class="NOTE"><h5>NOTE</h5>If the specified <c>selectors</c> include a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements">CSS pseudo-element</see>, the returned list<br/>is always empty.</blockquote></returns>
 </ElementQuerySelectorAll>
 <ElementReleasePointerCapture>
 <summary>
@@ -1816,7 +1826,7 @@ The <strong><c>scrollLeft</c></strong> property of the <see cref="Element"/> int
 </summary>
 <remarks>
 <para>A scrolling operation ends when the user finishes scrolling within a scroll container — for example using a touch gesture or by dragging the mouse pointer on a scroll bar — and releases the gesture.</para>
-<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollsnapchange"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementScrollsnapchange>
@@ -1826,7 +1836,7 @@ The <strong><c>scrollLeft</c></strong> property of the <see cref="Element"/> int
 </summary>
 <remarks>
 <para>Specifically, this event fires during a scrolling gesture, each time the user moves over potential new snap targets. For example, the user could scroll slowly by dragging their finger on a touch screen device, or hold down the mouse button on a scroll bar and move the mouse. <c>scrollsnapchanging</c> can therefore fire multiple times for each scrolling gesture.</para><para>However, it does not fire on all potential snap targets for a scrolling gesture that moves over multiple snap targets. Rather, it fires just for the last target that the snapping will potentially rest on.</para>
-<para>-<see cref="Elementscrollsnapchange"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para>-<see cref="Elementscrollsnapchange"/> event<br/>-<see cref="Documentscrollend"/> event<br/>-<see cref="SnapEvent"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollsnapchanging"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ElementScrollsnapchanging>
@@ -1835,6 +1845,7 @@ The <strong><c>scrollLeft</c></strong> property of the <see cref="Element"/> int
 The <strong><c>scrollTo()</c></strong> method of the <see cref="Element"/><br/>interface scrolls to a particular set of coordinates inside a given element.
 </summary>
 <remarks>
+<para>This method is an alias for <see cref="Element.Scroll"/>.</para>
 <para>-<see cref="Element.ScrollTop"/>, <see cref="Element.ScrollLeft"/><br/>-<see cref="Window.ScrollTo"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -1892,10 +1903,10 @@ The <strong><c>securitypolicyviolation</c></strong> event is fired when a <see h
 </ElementSecuritypolicyviolation>
 <ElementSetAttribute>
 <summary>
-The <strong><c>setAttribute()</c></strong> method of the <see cref="Element"/> interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+<blockquote class="WARNING"><h5>WARNING</h5>This method can take attribute values that are parsed as HTML, a script, or as a script URL, depending on the attribute.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the value originally came from an attacker.</blockquote>
 </summary>
 <remarks>
-<para>To get the current value of an attribute, use <see cref="Element.GetAttribute"/>; to remove an attribute, call <see cref="Element.RemoveAttribute"/>.</para><para>If you need to work with the <see cref="Attr"/> node (such as cloning from another element) before adding it, you can use the <see cref="Element.SetAttributeNode"/> method instead.</para>
+<para>You can mitigate this risk by always passing the appropriate trusted type object (<see cref="TrustedHTML"/>, <see cref="TrustedScript"/>, or <see cref="TrustedScriptURL"/>) instead of strings for those attributes that require them, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>setAttribute()</c></strong> method of the <see cref="Element"/> interface sets the value of an attribute on the specified element.<br/>If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.</para><para>If you need to work with the <see cref="Attr"/> node (such as cloning from another element) before adding it, you can use the <see cref="Element.SetAttributeNode"/> method instead.</para>
 <para>-<see cref="Element.HasAttribute"/><br/>-<see cref="Element.GetAttribute"/><br/>-<see cref="Element.RemoveAttribute"/><br/>-<see cref="Element.ToggleAttribute"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -1925,11 +1936,11 @@ The <strong><c>setAttributeNodeNS()</c></strong> method of the <see cref="Elemen
 </ElementSetAttributeNodeNS>
 <ElementSetAttributeNS>
 <summary>
-<c>setAttributeNS</c> adds a new attribute or changes the value of an attribute<br/>with the given namespace and name.
+<blockquote class="WARNING"><h5>WARNING</h5>This method can take attribute values that are parsed as HTML, a script, or as a script URL, depending on the attribute.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the value originally came from an attacker.</blockquote>
 </summary>
 <remarks>
-<para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.SetAttribute"/> method instead.</para>
-<para>-<see cref="Element.HasAttributeNS"/><br/>-<see cref="Element.GetAttributeNS"/><br/>-<see cref="Element.RemoveAttributeNS"/><br/></para>
+<para>You can mitigate this risk by always passing the appropriate trusted type object (<see cref="TrustedHTML"/>, <see cref="TrustedScript"/>, or <see cref="TrustedScriptURL"/>) instead of strings for those attributes that require them, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute#security_considerations">Security considerations</see> in <see cref="Element.SetAttribute"/> for more information.</para><para>The <strong><c>setAttributeNS()</c></strong> method of the <see cref="Element"/> interface adds a new attribute or changes the value of an attribute with the given namespace and name.</para><para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.SetAttribute"/> method instead.</para><para>Note that <c>setAttributeNS()</c> is the only method for namespaced attributes which expects the fully qualified name, i.e., <c>&amp;quot;namespace:local-name&amp;quot;</c>.</para>
+<para>-<see cref="Element.HasAttributeNS"/><br/>-<see cref="Element.GetAttributeNS"/><br/>-<see cref="Element.RemoveAttributeNS"/><br/>-<see cref="Element.SetAttribute"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
@@ -1947,9 +1958,10 @@ The <strong><c>setAttributeNodeNS()</c></strong> method of the <see cref="Elemen
 </ElementSetCapture>
 <ElementSetHTML>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setHTML()</c></strong> method of the <see cref="Element"/> interface provides an XSS-safe method to parse and sanitize a string of HTML into a <see cref="DocumentFragment"/>, and then insert it into the DOM as a subtree of the element.
+The <strong><c>setHTML()</c></strong> method of the <see cref="Element"/> interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
 </summary>
 <remarks>
+<para>The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.<br/>Notably, the following elements are always removed: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, {{SVGElement("use")}}, and event handler attributes.</para><para>It is recommended (if supported) as a drop-in replacement for <see cref="Element.InnerHTML"/> when setting a user-provided string of HTML.</para>
 <para>-<see cref="Element.SetHTMLUnsafe"/><br/>-<see cref="ShadowRoot.SetHTML"/> and <see cref="ShadowRoot.SetHTMLUnsafe"/><br/>-<see cref="Document.ParseHTML"/> and <see cref="Document.ParseHTMLUnsafe"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTML"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -1957,7 +1969,7 @@ The <strong><c>setAttributeNodeNS()</c></strong> method of the <see cref="Elemen
 </ElementSetHTML>
 <ElementSetHTMLUnsafe>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site-scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5>This method parses its input as HTML, writing the result into the DOM.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks, if the input originally came from an attacker.</blockquote>
 </summary>
 <remarks>
 <para>You can mitigate this risk by always passing <c>TrustedHTML</c> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><blockquote class="NOTE"><h5>NOTE</h5><para><see cref="Element.SetHTML"/> should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.</para></blockquote><para>The <strong><c>setHTMLUnsafe()</c></strong> method of the <see cref="Element"/> interface is used to parse HTML input into a <see cref="DocumentFragment"/>, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.</para>
@@ -2056,7 +2068,7 @@ The <c>touchstart</c> event is fired when one or more touch points are placed on
 </ElementTouchstart>
 <ElementTransitioncancel>
 <summary>
-The <strong><c>transitioncancel</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">CSS transition</see> is canceled.
+The <strong><c>transitioncancel</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">CSS transition</see> is canceled.
 </summary>
 <remarks>
 <para>-The <see cref="TransitionEvent"/> interface<br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see><br/>-Related events: <see cref="Elementtransitionrun"/>, <see cref="Elementtransitionstart"/>, <see cref="Elementtransitionend"/><br/></para>
@@ -2065,7 +2077,7 @@ The <strong><c>transitioncancel</c></strong> event is fired when a <see href="ht
 </ElementTransitioncancel>
 <ElementTransitionend>
 <summary>
-The <strong><c>transitionend</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">CSS transition</see> has completed. In the case where a transition is removed before completion, such as if the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see> is removed or <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> is set to <c>none</c>, then the event will not be generated.
+The <strong><c>transitionend</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">CSS transition</see> has completed. In the case where a transition is removed before completion, such as if the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see> is removed or <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> is set to <c>none</c>, then the event will not be generated.
 </summary>
 <remarks>
 <para>The <c>transitionend</c> event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired. If the <c>transitioncancel</c> event is fired, the <c>transitionend</c> event will not fire.</para><para>This event is not cancelable.</para>
@@ -2075,7 +2087,7 @@ The <strong><c>transitionend</c></strong> event is fired when a <see href="https
 </ElementTransitionend>
 <ElementTransitionrun>
 <summary>
-The <strong><c>transitionrun</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">CSS transition</see> is first created, i.e., before any <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see> has begun.
+The <strong><c>transitionrun</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">CSS transition</see> is first created, i.e., before any <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see> has begun.
 </summary>
 <remarks>
 <para>This event is not cancelable.</para>
@@ -2085,7 +2097,7 @@ The <strong><c>transitionrun</c></strong> event is fired when a <see href="https
 </ElementTransitionrun>
 <ElementTransitionstart>
 <summary>
-The <strong><c>transitionstart</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">CSS transition</see> has actually started, i.e., after any <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see> has ended.
+The <strong><c>transitionstart</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using">CSS transition</see> has actually started, i.e., after any <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see> has ended.
 </summary>
 <remarks>
 <para>This event is not cancelable.</para>

@@ -47,7 +47,7 @@ The <strong><c>digest()</c></strong> method of the <see cref="SubtleCrypto"/> in
 </summary>
 <remarks>
 <para>It takes as its arguments an identifier for the digest algorithm to use and the data to digest.<br/>It returns a <see cref="Promise"/> which will be fulfilled with the digest.</para><para>Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto">Non-cryptographic uses of SubtleCrypto</see><br/>-<see href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/">Chromium secure origins specification</see><br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</see> specifies the SHA family of digest algorithms.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto">Non-cryptographic uses of SubtleCrypto</see><br/>-<see href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/">Chromium secure origins specification</see><br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</see> specifies the SHA family of digest algorithms.<br/>-<see cref="Uint8ArrayToHex"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with an <see cref="ArrayBuffer"/> containing the digest.</returns>
@@ -86,14 +86,14 @@ The <strong><c>generateKey()</c></strong> method of the <see cref="SubtleCrypto"
 </SubtleCryptoGenerateKey>
 <SubtleCryptoImportKey>
 <summary>
-The <strong><c>importKey()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface imports a key: that is, it takes as input a key in an external, portable<br/>format and gives you a <see cref="CryptoKey"/> object that you can use in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see>.
+The <strong><c>importKey()</c></strong> method of the <see cref="SubtleCrypto"/> interface imports a key: that is, it takes as input a key in an external, portable format and gives you a <see cref="CryptoKey"/> object that you can use in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see>.
 </summary>
 <remarks>
 <para>The function accepts several import formats: see <see href="https://developer.mozilla.org#supported_formats">Supported formats</see> for details.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>SubtleCrypto.exportKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>that fulfills with the imported key as a <see cref="CryptoKey"/> object.</returns>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see> that fulfills with the imported key as a <see cref="CryptoKey"/> object.</returns>
 </SubtleCryptoImportKey>
 <SubtleCryptoSign>
 <summary>

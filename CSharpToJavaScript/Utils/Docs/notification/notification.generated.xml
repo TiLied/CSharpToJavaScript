@@ -124,7 +124,7 @@ The <strong><c>icon</c></strong> read-only property of the<br/><see cref="Notifi
 The <strong><c>lang</c></strong> read-only property of the<br/><see cref="Notification"/> interface indicates the language used in the notification,<br/>as specified in the <c>lang</c> option of the<br/><see cref="Notification.Notification"/> constructor.
 </summary>
 <remarks>
-<para>The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.<br/>See the Sitepoint <see href="https://www.sitepoint.com/iso-2-letter-language-codes/">ISO 2 letter language codes</see> page for a simple reference.</para>
+<para>The language itself is specified using a string representing a <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -142,10 +142,10 @@ The <strong><c>lang</c></strong> read-only property of the<br/><see cref="Notifi
 </NotificationMaxActions>
 <NotificationNotification>
 <summary>
-The <strong><c>Notification()</c></strong> constructor creates a new<br/><see cref="Notification"/> object instance, which represents a user notification.
+The <strong><c>Notification()</c></strong> constructor creates a new <see cref="Notification"/> object instance, which represents a user notification.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>Trying to create a notification inside the <see cref="ServiceWorkerGlobalScope"/> using the <c>Notification()</c> constructor will throw a <c>TypeError</c>. Use <see cref="ServiceWorkerRegistration.ShowNotification"/> instead.</para></blockquote>
+<para>Trying to create a notification inside the <see cref="ServiceWorkerGlobalScope"/> using the <c>Notification()</c> constructor will throw a <c>TypeError</c>. Use <see cref="ServiceWorkerRegistration.ShowNotification"/> instead.</para><para>You must first get permission before being able to display notifications, using <see cref="Notification.RequestPermission"/>. The permission may not be grantable, for example if the page is in private browsing mode.</para><para>This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications. Instead, you need to register a service worker and use <see cref="ServiceWorkerRegistration.ShowNotification"/>. See <see href="https://crbug.com/481856">Chrome issue</see> for more information.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification"> <em>See also on MDN</em> </seealso></para>
 </remarks>

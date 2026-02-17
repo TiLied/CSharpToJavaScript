@@ -1,7 +1,7 @@
 <docs>
 <CSSKeyframesRule>
 <summary>
-The <strong><c>CSSKeyframesRule</c></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframes</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The <strong><c>CSSKeyframesRule</c></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframes</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <para></para>
@@ -20,7 +20,7 @@ The <strong><c>appendRule()</c></strong> method of the <see cref="CSSKeyframeRul
 </CSSKeyframesRuleAppendRule>
 <CSSKeyframesRuleCssRules>
 <summary>
-The read-only <strong><c>cssRules</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns a <see cref="CSSRuleList"/> containing the rules in the keyframes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+The read-only <strong><c>cssRules</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns a <see cref="CSSRuleList"/> containing the rules in the keyframes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>The <c>CSSKeyframeRule</c> itself is indexable like an array, and functions similarly to its <c>cssRules</c> property.</para></blockquote>
@@ -48,7 +48,7 @@ The <strong><c>findRule()</c></strong> method of the <see cref="CSSKeyframeRule"
 </CSSKeyframesRuleFindRule>
 <CSSKeyframesRuleLength>
 <summary>
-The read-only <strong><c>length</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns the number of <see cref="CSSKeyframeRule"/> objects in its list. You can then access each keyframe rule by its index directly on the <c>CSSKeyframeRule</c> object.
+The read-only <strong><c>length</c></strong> property of the <see cref="CSSKeyframesRule"/> interface returns the number of <see cref="CSSKeyframeRule"/> objects in its list. You can then access each keyframe rule by its index directly on the <c>CSSKeyframeRule</c> object.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/length"> <em>See also on MDN</em> </seealso></para>

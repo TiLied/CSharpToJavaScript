@@ -82,7 +82,7 @@ The <strong><c>DocumentFragment.lastElementChild</c></strong> read-only property
 </DocumentFragmentLastElementChild>
 <DocumentFragmentMoveBefore>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>moveBefore()</c></strong> method of the <see cref="DocumentFragment"/> interface moves a given <see cref="Node"/> inside the invoking <c>DocumentFragment</c> as a direct child, before a given reference node.
+The <strong><c>moveBefore()</c></strong> method of the <see cref="DocumentFragment"/> interface moves a given <see cref="Node"/> inside the invoking <c>DocumentFragment</c> as a direct child, before a given reference node.
 </summary>
 <remarks>
 <para>-<see cref="Document.MoveBefore"/><br/>-<see cref="Element.MoveBefore"/><br/>-<see cref="Node.InsertBefore"/><br/></para>
@@ -110,7 +110,7 @@ The <strong><c>DocumentFragment.querySelector()</c></strong> method returns the<
 <para>-The <see cref="DocumentFragment"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.</returns>
+<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.</returns>
 </DocumentFragmentQuerySelector>
 <DocumentFragmentQuerySelectorAll>
 <summary>

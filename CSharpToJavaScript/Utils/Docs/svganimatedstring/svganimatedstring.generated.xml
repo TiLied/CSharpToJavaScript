@@ -4,23 +4,27 @@
 The <strong><c>SVGAnimatedString</c></strong> interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.
 </summary>
 <remarks>
+<para>-<see cref="SVGScriptElement.Href"/>, an object of this type.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedString>
 <SVGAnimatedStringAnimVal>
 <summary>
-The <c>animVal</c> read-only property of the <see cref="SVGAnimatedString"/> interface contains the same value as the <see cref="SVGAnimatedString.BaseVal"/> property. If the given attribute or property is being animated, it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as <c>baseVal</c>.
+The <c>animVal</c> read-only property of the <see cref="SVGAnimatedString"/> interface is a string representing the animated value of the reflected attribute.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/animVal"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<value>As string.If the given attribute or property is being animated, this is the current animated value.<br/>If the given attribute or property is not currently being animated, this is the same value as the <see cref="SVGAnimatedString.BaseVal"/> property.</value>
 </SVGAnimatedStringAnimVal>
 <SVGAnimatedStringBaseVal>
 <summary>
-BaseVal gets or sets the base value of the given attribute before any animations are applied. The base value of the given attribute before applying any animations. Setter throws DOMException.
+<blockquote class="WARNING"><h5>WARNING</h5>The <c>baseVal</c> property can be used to set the non-animated value of a reflected attribute.<br/>In the case of <see cref="SVGScriptElementhref"/> this property represents the URL of an external script loaded into the SVG script element.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/href#security_considerations">Security considerations</see> in <see cref="SVGScriptElement.Href"/> for more information.</para><para>The <strong><c>baseVal</c></strong> property of the <see cref="SVGAnimatedString"/> interface gets or sets the base value of the given attribute.</para><para>This is the value of the reflected attribute before any animations are applied.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/baseVal"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<value>Getting the property returns a string that represents the non-animated value of the reflected attribute, if it has been set.<br/>If the reflected attribute is not specified but has an alternative deprecated version that has been set, then its value will be returned instead.<br/>If neither reflected attribute is set, then the property will return an initial value for the reflected attribute if one exists, and otherwise the empty string (<c>&amp;quot;&amp;quot;</c>).The property must be set to a <see cref="TrustedScriptURL"/> if the reflected attribute's element is an <see cref="SVGScriptElement"/> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API">Trusted Types</see> are <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforced by a CSP</see>.<br/>For all other cases, the value can be a string (or an object that can be resolved to a string).<br/>The property sets the value of the reflected attribute if it is defined, but will set the alternative deprecated version of the reflected attribute if it is defined and the reflected attribute is not.Note that <see cref="TrustedScriptURL"/> or any other trusted type can be set for <c>baseVal</c> on any element, because the trusted types resolve to strings.<br/>However <see cref="TrustedScriptURL"/> <strong>must</strong> be used for <see cref="SVGScriptElementhref"/> when trusted types are enforced.</value>
 </SVGAnimatedStringBaseVal>
 </docs>

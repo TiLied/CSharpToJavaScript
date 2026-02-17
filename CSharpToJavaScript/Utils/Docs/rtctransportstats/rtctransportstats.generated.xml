@@ -180,7 +180,7 @@ The <strong><c>tlsVersion</c></strong> property of the <see cref="RTCTransportSt
 <para>It is only present for DTLS transports, and only exists after DTLS has been negotiated.</para><para>The value comes from the DTLS handshake <c>ServerHello.version</c>, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.<br/>Note however that the bytes might not map directly to version numbers.<br/>For example, DTLS represents version 1.2 as <c>&amp;apos;FEFD&amp;apos;</c> which numerically is <c>{254, 253}</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/tlsVersion"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string that indicates the negotiated DTS transport.</value>
+<value>A string that indicates the negotiated DTLS transport.</value>
 </RTCTransportStatsTlsVersion>
 <RTCTransportStatsType>
 <summary>

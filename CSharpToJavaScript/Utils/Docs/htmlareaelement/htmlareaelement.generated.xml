@@ -84,6 +84,17 @@ The <strong><c>HTMLAreaElement.href</c></strong> property is a<br/><see href="ht
 </remarks>
 <value>A string.</value>
 </HTMLAreaElementHref>
+<HTMLAreaElementInterestForElement>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>interestForElement</c></strong> property of the <see cref="HTMLAreaElement"/> interface gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("area")}} element is specified as an interest invoker.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker">Creating an interest invoker</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">The Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/interestForElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> object instance, or <c>null</c> if the associated <c>&amp;lt;area&amp;gt;</c> element does not have a target element set.</value>
+</HTMLAreaElementInterestForElement>
 <HTMLAreaElementOrigin>
 <summary>
 The <strong><c>origin</c></strong> read-only property of the <see cref="HTMLAreaElement"/> interface returns a string containing the Unicode serialization of the origin of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>.
@@ -171,14 +182,13 @@ The <strong><c>HTMLAreaElement.rel</c></strong> property reflects the <see href=
 </HTMLAreaElementRel>
 <HTMLAreaElementRelList>
 <summary>
-The <strong><c>HTMLAreaElement.relList</c></strong> read-only property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document.
+The read-only <strong><c>relList</c></strong> property of the <see cref="HTMLAreaElement"/> returns a live <see cref="DOMTokenList"/> object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document. It reflects the {{HTMLElement("area")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> content attribute.
 </summary>
 <remarks>
-<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>
 <para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>,<br/><see cref="HTMLAnchorElement.RelList"/> and <see cref="HTMLLinkElement.RelList"/>.<br/>-The very same list but as a space-separated tokens in a string:<br/><see cref="HTMLAreaElement.Rel"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="DOMTokenList"/> of strings.</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>relList</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>relList</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLAreaElementRelList>
 <HTMLAreaElementSearch>
 <summary>

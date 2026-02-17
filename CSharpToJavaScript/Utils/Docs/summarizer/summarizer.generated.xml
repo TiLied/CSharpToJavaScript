@@ -32,9 +32,10 @@
 </SummarizerCreate>
 <SummarizerDestroy>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="Summarizer"/> interface destroys the <c>Summarizer</c> instance it is called on. It makes sense to destroy <c>Summarizer</c> objects if they are no longer going to be used, as they tie up significant resources in their handling.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="Summarizer"/> interface releases the resources assigned to the <c>Summarizer</c> instance it is called on and stops any further activity on it. This means that any ongoing and subsequent method calls made on the <c>Summarizer</c> will reject with an <c>AbortError</c>.
 </summary>
 <remarks>
+<para>It makes sense to destroy <c>Summarizer</c> objects if they are no longer being used, as they tie up significant resources in their handling.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API/Using">Using the Summarizer API</see><br/>-<see href="https://chrome.dev/web-ai-demos/">Web AI demos</see> on chrome.dev<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer/destroy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -48,7 +49,7 @@
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API/Using">Using the Summarizer API</see><br/>-<see href="https://chrome.dev/web-ai-demos/">Web AI demos</see> on chrome.dev<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer/expectedContextLanguages"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of strings specifying the expected languages of any provided context strings (either the <see cref="Summarizer.SharedContext"/>, or a <c>context</c> specified during a <see cref="Summarizer.Summarize"/> or <see cref="Summarizer.SummarizeStreaming"/> call).The strings should be valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tags</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+<value>An array of strings specifying the expected languages of any provided context strings (either the <see cref="Summarizer.SharedContext"/>, or a <c>context</c> specified during a <see cref="Summarizer.Summarize"/> or <see cref="Summarizer.SummarizeStreaming"/> call).The strings should be valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </SummarizerExpectedContextLanguages>
 <SummarizerExpectedInputLanguages>
 <summary>
@@ -58,7 +59,7 @@
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API/Using">Using the Summarizer API</see><br/>-<see href="https://chrome.dev/web-ai-demos/">Web AI demos</see> on chrome.dev<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer/expectedInputLanguages"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of strings specifying the languages the <c>Summarizer</c> should support.The strings should be valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tags</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+<value>An array of strings specifying the languages the <c>Summarizer</c> should support.The strings should be valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </SummarizerExpectedInputLanguages>
 <SummarizerFormat>
 <summary>
@@ -108,7 +109,7 @@
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API/Using">Using the Summarizer API</see><br/>-<see href="https://chrome.dev/web-ai-demos/">Web AI demos</see> on chrome.dev<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Summarizer/outputLanguage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the language the summary should be generated in.The string should be a valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tag</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+<value>A string specifying the language the summary should be generated in.The string should be a valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </SummarizerOutputLanguage>
 <SummarizerSharedContext>
 <summary>

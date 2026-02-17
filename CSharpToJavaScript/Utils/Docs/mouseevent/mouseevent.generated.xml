@@ -48,7 +48,7 @@ The <strong><c>clientX</c></strong> read-only property of the <see cref="MouseEv
 </summary>
 <remarks>
 <para>For example, clicking on the left edge of the viewport will always result in a mouse event with a <c>clientX</c> value of <c>0</c>, regardless of whether the page is scrolled horizontally.</para>
-<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ClientY"/><br/>-<see cref="MouseEvent.ScreenX"/> / <see cref="MouseEvent.ScreenY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ClientY"/><br/>-<see cref="MouseEvent.ScreenX"/> / <see cref="MouseEvent.ScreenY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.</value>
@@ -59,7 +59,7 @@ The <strong><c>clientY</c></strong> read-only property of the <see cref="MouseEv
 </summary>
 <remarks>
 <para>For example, clicking on the top edge of the viewport will always result in a mouse event with a <c>clientY</c> value of <c>0</c>, regardless of whether the page is scrolled vertically.</para>
-<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ClientX"/><br/>-<see cref="MouseEvent.ScreenX"/> / <see cref="MouseEvent.ScreenY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ClientX"/><br/>-<see cref="MouseEvent.ScreenX"/> / <see cref="MouseEvent.ScreenY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.</value>
@@ -139,25 +139,25 @@ The <strong><c>MouseEvent()</c></strong> constructor creates a new <see cref="Mo
 </MouseEventMouseEvent>
 <MouseEventMovementX>
 <summary>
-The <strong><c>movementX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous <see cref="Elementmousemove"/> event.<br/>In other words, the value of the property is computed like this: <c>currentEvent.movementX = currentEvent.screenX - previousEvent.screenX</c>.
+The <strong><c>movementX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the difference in the X coordinate of the mouse (or pointer) between the given move event and the previous move event of the same type.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para>Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementX</c> and <c>screenX</c></see> than what the specification defines. Depending on the browser and operating system, the <c>movementX</c> units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values (<see cref="MouseEvent.ScreenX"/>, <see cref="MouseEvent.ScreenY"/>) and the previous client values.</para></blockquote>
+<para>In other words, the value of the property is computed like this: <c>currentEvent.movementX = currentEvent.screenX - previousEvent.screenX</c>.<br/>The value is zero for all events other than <see cref="Elementmousemove"/>, <see cref="Elementpointermove"/>, and <see cref="Elementpointerrawupdate"/>.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementX</c> and <c>screenX</c></see> than what the specification defines.<br/>Depending on the browser and operating system, the <c>movementX</c> units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values (<see cref="MouseEvent.ScreenX"/>, <see cref="MouseEvent.ScreenY"/>) and the previous client values.</para></blockquote>
 <para>-<see cref="MouseEvent.MovementY"/><br/>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number. Always zero on any <see cref="MouseEvent"/> other than <c>mousemove</c>.</value>
+<value>A number.<br/>Always zero on any <see cref="MouseEvent"/> other than <c>mousemove</c>, and any <see cref="PointerEvent"/> other than <c>pointermove</c> or <c>pointerrawupdate</c>.</value>
 </MouseEventMovementX>
 <MouseEventMovementY>
 <summary>
-The <strong><c>movementY</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous <see cref="Elementmousemove"/> event.<br/>In other words, the value of the property is computed like this: <c>currentEvent.movementY = currentEvent.screenY - previousEvent.screenY</c>.
+The <strong><c>movementY</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the difference in the Y coordinate of the mouse (or pointer) between the given move event and the previous move event of the same type.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para>Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementY</c> and <c>screenY</c></see> than what the specification defines. Depending on the browser and operating system, the <c>movementY</c> units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values (<see cref="MouseEvent.ScreenX"/>, <see cref="MouseEvent.ScreenY"/>) and the previous client values.</para></blockquote>
+<para>In other words, the value of the property is computed like this: <c>currentEvent.movementY = currentEvent.screenY - previousEvent.screenY</c>.<br/>The value is zero for all events other than <see cref="Elementmousemove"/>, <see cref="Elementpointermove"/>, and <see cref="Elementpointerrawupdate"/>.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementY</c> and <c>screenY</c></see> than what the specification defines.<br/>Depending on the browser and operating system, the <c>movementY</c> units may be a physical pixel, a logical pixel, or a CSS pixel.<br/>You may want to avoid the movement properties, and instead calculate the delta between the current client values (<see cref="MouseEvent.ScreenX"/>, <see cref="MouseEvent.ScreenY"/>) and the previous client values.</para></blockquote>
 <para>-<see cref="MouseEvent.MovementX"/><br/>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementY"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number. Always zero on any <see cref="MouseEvent"/> other than <c>mousemove</c>.</value>
+<value>A number.<br/>Always zero on any <see cref="MouseEvent"/> other than <c>mousemove</c>, and any <see cref="PointerEvent"/> other than <c>pointermove</c> or <c>pointerrawupdate</c>.</value>
 </MouseEventMovementY>
 <MouseEventMozInputSource>
 <summary>
@@ -174,7 +174,7 @@ The <strong><c>movementY</c></strong> read-only property of the <see cref="Mouse
 The <strong><c>offsetX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the offset in the X coordinate of the mouse pointer between that event and the padding edge of the target node.
 </summary>
 <remarks>
-<para>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.Early versions of the spec defined this as an integer.</value>
@@ -184,7 +184,7 @@ The <strong><c>offsetX</c></strong> read-only property of the <see cref="MouseEv
 The <strong><c>offsetY</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the offset in the Y coordinate of the mouse pointer between that event and the padding edge of the target node.
 </summary>
 <remarks>
-<para>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetY"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.Early versions of the spec defined this as an integer.</value>
@@ -194,8 +194,8 @@ The <strong><c>offsetY</c></strong> read-only property of the <see cref="MouseEv
 The <strong><c>pageX</c></strong> read-only property of the <see cref="MouseEvent"/> interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.<br/>This includes any portion of the document not currently visible.
 </summary>
 <remarks>
-<para>Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.<br/>For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by <c>pageX</c> will be 300.</para><para>Originally, this property was defined as a <c>long</c> integer. The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view">CSSOM View Module</see> redefined it as a<br/><c>double</c> float. See the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> section for<br/>details.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page">Coordinate systems</see> for additional information about coordinates specified in this fashion.</para>
-<para>-<see cref="MouseEvent.PageY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.<br/>For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by <c>pageX</c> will be 300.</para><para>Originally, this property was defined as a <c>long</c> integer. The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/CSSOM_view">CSSOM View Module</see> redefined it as a<br/><c>double</c> float. See the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> section for<br/>details.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#page">Coordinate systems</see> for additional information about coordinates specified in this fashion.</para>
+<para>-<see cref="MouseEvent.PageY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating-point number of pixels from the left edge of the <strong>document</strong> at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision<br/>floating-point number to allow for subpixel precision.<br/>Even though numeric types both are represented by <c>Number</c> in JavaScript, they may be handled differently internally in the browser&amp;apos;s code, resulting in potential behavior differences.See <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> to learn which browsers have been updated to use the revised data type.</value>
@@ -206,7 +206,7 @@ The <strong><c>pageY</c></strong> read-only property of the <see cref="MouseEven
 </summary>
 <remarks>
 <para>See <see cref="MouseEvent.PageX"/> for more information.</para>
-<para>-<see cref="MouseEvent.PageX"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent.PageX"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.</value>
@@ -224,21 +224,21 @@ The <strong><c>MouseEvent.relatedTarget</c></strong> read-only property is the s
 </MouseEventRelatedTarget>
 <MouseEventScreenX>
 <summary>
-The <strong><c>screenX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the horizontal coordinate (offset) of the mouse pointer in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen">screen coordinates</see>.
+The <strong><c>screenX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the horizontal coordinate (offset) of the mouse pointer in <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen">screen coordinates</see>.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the <c>screenX</c> value will increase to the combined width of the screens.</para></blockquote>
-<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ScreenY"/><br/>-<see cref="MouseEvent.ClientX"/> / <see cref="MouseEvent.ClientY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ScreenY"/><br/>-<see cref="MouseEvent.ClientX"/> / <see cref="MouseEvent.ClientY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/screenX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.Early versions of the spec defined this as an integer referring to the number of pixels.</value>
 </MouseEventScreenX>
 <MouseEventScreenY>
 <summary>
-The <strong><c>screenY</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the vertical coordinate (offset) of the mouse pointer in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen">screen coordinates</see>.
+The <strong><c>screenY</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the vertical coordinate (offset) of the mouse pointer in <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen">screen coordinates</see>.
 </summary>
 <remarks>
-<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ScreenX"/><br/>-<see cref="MouseEvent.ClientX"/> / <see cref="MouseEvent.ClientY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ScreenX"/><br/>-<see cref="MouseEvent.ClientX"/> / <see cref="MouseEvent.ClientY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/screenY"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value in pixels.Early versions of the spec defined this as an integer referring to the number of pixels.</value>

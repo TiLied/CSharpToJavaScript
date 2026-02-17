@@ -21,14 +21,13 @@ The <strong><c>as</c></strong> property of the <see cref="HTMLLinkElement"/> int
 </HTMLLinkElementAs>
 <HTMLLinkElementBlocking>
 <summary>
-The <strong><c>blocking</c></strong> property of the <see cref="HTMLLinkElement"/> interface is a string indicating that certain operations should be blocked on the fetching of an external resource.
+The read-only <strong><c>blocking</c></strong> property of the <see cref="HTMLLinkElement"/> returns a live <see cref="DOMTokenList"/> object containing the operations that should be blocked on the fetching of an external resource. It reflects the {{HTMLElement("link")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#blocking"><c>blocking</c></see> content attribute.
 </summary>
 <remarks>
-<para>It reflects the <c>blocking</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.</para>
 <para>-<see cref="HTMLScriptElement.Blocking"/><br/>-<see cref="HTMLStyleElement.Blocking"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/blocking"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>blocking</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>blocking</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLLinkElementBlocking>
 <HTMLLinkElementCrossOrigin>
 <summary>
@@ -46,21 +45,20 @@ The <strong><c>disabled</c></strong> property of the <see cref="HTMLLinkElement"
 </summary>
 <remarks>
 <para>If <c>disabled</c> attribute is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded only when the <c>disabled</c> property is set to <c>false</c> or removed. Setting the <c>disabled</c> property using JavaScript causes the stylesheet to be removed from the document's <see cref="Document.StyleSheets"/> list.</para><para>It reflects the <c>disabled</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.</para>
-<para>-<see cref="HTMLScriptElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</see><br/></para>
+<para>-<see cref="HTMLScriptElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/disabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean.</value>
 </HTMLLinkElementDisabled>
 <HTMLLinkElementFetchPriority>
 <summary>
-The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLLinkElement"/> interface represents a hint to the browser indicating how it should prioritize fetching a particular resource relative to other resources of the same type.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority"><c>fetchpriority</c></see> attribute of the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.
+The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLLinkElement"/> interface represents a hint to the browser indicating how it should prioritize fetching a particular resource relative to other resources of the same type.<br/>It reflects the <c>&amp;lt;link&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority"><c>fetchpriority</c></see> content attribute.
 </summary>
 <remarks>
-<para>The property allows a developer to signal that fetching a particular resource early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority, in particular when preloading resources.<br/>This in turn allows the browser to increase or decrease the priority, and potentially load the resource earlier or later than it would otherwise.<br/>The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.</para><para>The fetch priority can be used to complement <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preload">preloading</see>, allowing a developer to boost the priority of a resource ahead of less-impactful resources that are by default preloaded with a higher priority.<br/>For example, if a particular image significantly contributes to the website's <see href="https://developer.mozilla.org/en-US/docs/Glossary/Largest Contentful Paint">Largest Contentful Paint</see> (LCP) it might be set to be preloaded and with a high fetch priority.</para><para>Note that both the internal priority of any fetch operation, and the impact of <c>fetchPriority</c> on the priority, are entirely browser dependent.</para>
 <para>-<see cref="HTMLImageElement.FetchPriority"/><br/>-<see cref="HTMLScriptElement.FetchPriority"/><br/>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link</see> header<br/>-<see href="https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority">Optimize resource loading with the Fetch Priority API</see> for information about how this API affects priorities on Chrome.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/fetchPriority"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the priority hint.<br/>Possible values are:</value>
+<value>A string. For the permitted values, see the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority"><c>fetchpriority</c></see> attribute.</value>
 </HTMLLinkElementFetchPriority>
 <HTMLLinkElementHref>
 <summary>
@@ -89,8 +87,8 @@ The <strong><c>hreflang</c></strong> property of the <see cref="HTMLLinkElement"
 The <strong><c>imageSizes</c></strong> property of the <see cref="HTMLLinkElement"/> interface indicates the size and conditions for the preloaded images defined by the <see cref="HTMLLinkElement.ImageSrcset"/> property. It reflects the value of the {{htmlelement("link")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#imagesizes"><c>imagesizes</c></see> attribute. This property can retrieve or set the <c>imagesizes</c> attribute value.
 </summary>
 <remarks>
-<para>The <c>&amp;lt;link&amp;gt;</c> element&amp;apos;s <c>imagesizes</c> attribute is the same as the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's <c>sizes</c> attribute: a comma-separated <strong>source size</strong> list. Each source size includes a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries">media condition</see>, the size of the image as a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see>, or the keyword <c>auto</c>, which must come first. For more information about the syntax of the <c>sizes</c> attribute, see <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#sizes"><c>&amp;lt;img&amp;gt;</c></see>.</para><para>The <c>imagesrcset</c> and <c>imagesizes</c> attributes are only relevant on <c>&amp;lt;link&amp;gt;</c> elements that have both a <c>rel</c> attribute set to <c>preload</c> and the <c>as</c> attribute set to <c>image</c>.</para>
-<para>-<see cref="HTMLLinkElement.ImageSrcset"/><br/>-<see cref="HTMLImageElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes">Using the <c>srcset</c> and <c>sizes</c> attributes</see><br/></para>
+<para>The <c>&amp;lt;link&amp;gt;</c> element&amp;apos;s <c>imagesizes</c> attribute is the same as the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element's <c>sizes</c> attribute: a comma-separated <strong>source size</strong> list. Each source size includes a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries">media condition</see>, the size of the image as a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see>, or the keyword <c>auto</c>, which must come first. For more information about the syntax of the <c>sizes</c> attribute, see <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#sizes"><c>&amp;lt;img&amp;gt;</c></see>.</para><para>The <c>imagesrcset</c> and <c>imagesizes</c> attributes are only relevant on <c>&amp;lt;link&amp;gt;</c> elements that have both a <c>rel</c> attribute set to <c>preload</c> and the <c>as</c> attribute set to <c>image</c>.</para>
+<para>-<see cref="HTMLLinkElement.ImageSrcset"/><br/>-<see cref="HTMLImageElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes">Using the <c>srcset</c> and <c>sizes</c> attributes</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/imageSizes"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string composed of comma-separated source sizes, or the empty string <c>&amp;quot;&amp;quot;</c> if unspecified.</value>
@@ -112,7 +110,7 @@ The <strong><c>integrity</c></strong> property of the <see cref="HTMLLinkElement
 </summary>
 <remarks>
 <para>It reflects the <c>integrity</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.</para>
-<para>-<see cref="HTMLScriptElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</see><br/></para>
+<para>-<see cref="HTMLScriptElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/integrity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
@@ -151,14 +149,13 @@ The <strong><c>rel</c></strong> property of the <see cref="HTMLLinkElement"/> in
 </HTMLLinkElementRel>
 <HTMLLinkElementRelList>
 <summary>
-The <strong><c>relList</c></strong> read-only property of the <see cref="HTMLLinkElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
+The read-only <strong><c>relList</c></strong> property of the <see cref="HTMLLinkElement"/> returns a live <see cref="DOMTokenList"/> object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document. It reflects the {{HTMLElement("link")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> content attribute.
 </summary>
 <remarks>
-<para>The property itself is read-only, meaning you can not substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>
 <para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see>,<br/><see cref="HTMLAnchorElement.RelList"/> and <see cref="HTMLAreaElement.RelList"/>.<br/>-The very same list but as a space-separated tokens in a string:<br/><see cref="HTMLLinkElement.Rel"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="DOMTokenList"/> of strings.</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>relList</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>relList</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLLinkElementRelList>
 <HTMLLinkElementSheet>
 <summary>
@@ -172,14 +169,14 @@ The <strong><c>sheet</c></strong> read-only property of the <see cref="HTMLLinkE
 </HTMLLinkElementSheet>
 <HTMLLinkElementSizes>
 <summary>
-The <strong><c>sizes</c></strong> read-only property of the <see cref="HTMLLinkElement"/> interfaces defines the sizes of the icons for visual media contained in the resource. It reflects the {{HTMLElement("link")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#sizes"><c>sizes</c></see> attribute, which takes a list of space-separated sizes, each in the format <c>&amp;lt;width in pixels&amp;gt;x&amp;lt;height in pixels&amp;gt;</c>, or the keyword <c>any</c>.
+The read-only <strong><c>sizes</c></strong> property of the <see cref="HTMLLinkElement"/> interface defines the sizes of the icons for visual media contained in the resource. It reflects the {{HTMLElement("link")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#sizes"><c>sizes</c></see> attribute, which takes a list of space-separated sizes, each in the format <c>&amp;lt;width in pixels&amp;gt;x&amp;lt;height in pixels&amp;gt;</c>, or the keyword <c>any</c>.
 </summary>
 <remarks>
 <para>It is only relevant if the <see cref="HTMLLinkElement.Rel"/> is <c>icon</c> or a non-standard type like <c>apple-touch-icon</c>.</para>
 <para>-<see cref="HTMLLinkElement.Rel"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/>-<see cref="HTMLLinkElement.Type"/><br/>-<see cref="HTMLLinkElement.Href"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/sizes"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMTokenList"/></value>
+<value>A <see cref="DOMTokenList"/> object.Although the <c>sizes</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>sizes</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLLinkElementSizes>
 <HTMLLinkElementType>
 <summary>

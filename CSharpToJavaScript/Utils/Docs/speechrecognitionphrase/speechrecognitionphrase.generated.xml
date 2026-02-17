@@ -1,0 +1,42 @@
+<docs>
+<SpeechRecognitionPhrase>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SpeechRecognitionPhrase</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> represents a phrase that can be passed to the speech recognition engine for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition">contextual biasing</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/>-<see cref="SpeechRecognition.Phrases"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechRecognitionPhrase>
+<SpeechRecognitionPhraseBoost>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>boost</c></strong> read-only property of the<br/><see cref="SpeechRecognitionPhrase"/> interface returns a floating point number representing the weight you want to give the corresponding <see cref="SpeechRecognitionPhrase.Phrase"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase/boost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating point number between <c>0.0</c> and <c>10.0</c> (inclusive) that represents the weight you want to apply to the <c>phrase</c>. This value is roughly equivalent to the natural log of the number of times more likely the website thinks this phrase to appear than what the speech recognition model knows. Higher values make the <c>phrase</c> more likely to be recognized.A high value such as <c>9.0</c> or <c>10.0</c> might make the recognition engine erroneously recognize other phrases as the specified phrase. Therefore, such values should be used rarely when constructing <c>SpeechRecognitionPhrase</c> objects.</value>
+</SpeechRecognitionPhraseBoost>
+<SpeechRecognitionPhrasePhrase>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>phrase</c></strong> read-only property of the <see cref="SpeechRecognitionPhrase"/> interface returns a string containing the word or phrase you want boosted in the recognition engine's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition">contextual bias</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase/phrase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SpeechRecognitionPhrasePhrase>
+<SpeechRecognitionPhraseSpeechRecognitionPhrase>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SpeechRecognitionPhrase()</c></strong> constructor creates a new <see cref="SpeechRecognitionPhrase"/> object.
+</summary>
+<remarks>
+<para>An array of <c>SpeechRecognitionPhrase</c> objects is passed into the speech recognition engine via the <see cref="SpeechRecognition.Phrases"/> property for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition">contextual biasing</see>.</para>
+<para>-<see cref="SpeechRecognition"/><br/>-<see cref="SpeechRecognition.Phrases"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase/SpeechRecognitionPhrase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="SpeechRecognitionPhrase"/> object.</returns>
+</SpeechRecognitionPhraseSpeechRecognitionPhrase>
+</docs>

@@ -1,0 +1,21 @@
+<docs>
+<CSSOM_view_API>
+<summary>
+The <strong>CSSOM view API</strong> lets you manipulate the visual view of a document, including getting the position of element layout boxes, obtaining the width or height of the viewport through script, and also scrolling an element.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</see> API<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/CSSOM_view">CSSOM view</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow">CSS overflow</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overscroll_behavior">CSS overscroll behavior</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap">CSS scroll snap</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">Viewport</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Layout viewport">Layout viewport</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Visual viewport">Visual viewport</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/zoom">zoom</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/CSSOM">CSSOM</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Scroll container">Scroll container</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">meta</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSOM_view_API>
+<CSSOM_view_APICoordinate_systems>
+<summary>
+When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in <see href="https://en.wikipedia.org/wiki/Algebra">algebra</see>), its position is defined relative to a fixed point in the context. This fixed point is called the <see href="https://en.wikipedia.org/wiki/Origin_(mathematics)">origin</see>. The position is specified as the number of pixels offset from the origin along each dimension of the context.
+</summary>
+<remarks>
+<para>This guide describes the standard coordinate systems used by the CSS object model. These are generally only different in terms of where their origin is located.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts">Viewport concepts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transforms/Using">Using CSS transforms</see>: how to alter a coordinate system<br/>-Coordinates of a <see cref="MouseEvent"/>:-<see cref="MouseEvent.OffsetX"/> and <see cref="MouseEvent.OffsetY"/><br/>-<see cref="MouseEvent.ClientX"/> and <see cref="MouseEvent.ClientY"/><br/>-<see cref="MouseEvent.PageX"/> and <see cref="MouseEvent.PageY"/><br/>-<see cref="MouseEvent.ScreenX"/> and <see cref="MouseEvent.ScreenY"/><br/><br/>-Coordinates of a <see cref="Touch"/>:-<see cref="Touch.ClientX"/> and <see cref="Touch.ClientY"/><br/>-<see cref="Touch.PageX"/> and <see cref="Touch.PageY"/><br/>-<see cref="Touch.ScreenX"/> and <see cref="Touch.ScreenY"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSOM_view_APICoordinate_systems>
+</docs>

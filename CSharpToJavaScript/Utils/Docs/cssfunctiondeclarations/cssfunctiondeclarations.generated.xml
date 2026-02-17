@@ -1,0 +1,22 @@
+<docs>
+<CSSFunctionDeclarations>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CSSFunctionDeclarations</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see> represents a consecutive run of CSS declarations included within a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see> body.
+</summary>
+<remarks>
+<para>This can include <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties">CSS custom properties</see>, and the value of the <c>results</c> descriptor inside the <c>_function</c> body, but it doesn't include blocks such as <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">@media</see> at-rules that may be included. Such a block, included in the middle of a set of declarations, would cause the body contents to be broken up into separate <c>CSSFunctionDeclarations</c> objects, as seen in our <see href="https://developer.mozilla.org#multiple_cssfunctiondeclarations">Multiple <c>CSSFunctionDeclarations</c></see> demo.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/>-<see cref="CSSFunctionRule"/><br/>-<see cref="CSSFunctionDescriptors"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDeclarations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFunctionDeclarations>
+<CSSFunctionDeclarationsStyle>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>style</c></strong> property of the <see cref="CSSFunctionDeclarations"/> interface contains a <see cref="CSSFunctionDescriptors"/> object representing the descriptors available in the {{cssxref("@function")}} rule's body.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@function">@function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDeclarations/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFunctionDescriptors"/> object.Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFunctionDescriptors</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSFunctionDescriptors</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
+</CSSFunctionDeclarationsStyle>
+</docs>

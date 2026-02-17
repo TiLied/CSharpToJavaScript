@@ -16,4 +16,14 @@ This article explains the theory behind how the <see href="https://developer.moz
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </View_Transition_APIUsing>
+<View_Transition_APIUsing_types>
+<summary>
+View transition types provide a mechanism by which different <strong>types</strong> can be specified for active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. For example, you might want to apply different animations to an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element in an image gallery app as the displayed image changes depending on whether you are moving forward or backward in the sequence, deleting an image, or adding an image into the sequence.
+</summary>
+<remarks>
+<para>This article show how to use types along with same-document view transitions and cross-document view transitions.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View transition API</see><br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#view-transition-types">Handle multiple view transition styles with view transition types (SPA)</see> on developer.chrome.com (2024)<br/>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/cross-document#view-transition-types">View transition types in cross-document view transitions</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using_types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</View_Transition_APIUsing_types>
 </docs>

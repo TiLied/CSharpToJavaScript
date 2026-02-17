@@ -4,11 +4,20 @@
 The <strong><c>Clipboard</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> provides read and write access to the contents of the system clipboard.<br/>This allows a web application to implement cut, copy, and paste features.
 </summary>
 <remarks>
-<para></para><para>The system clipboard is exposed through the global <see cref="Navigator.Clipboard"/> property.</para><para>All of the Clipboard API methods operate asynchronously; they return a <see cref="Promise"/> which is resolved once the clipboard access has been completed.<br/>The promise is rejected if clipboard access is denied.</para><para>All the methods require a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>.<br/>Additional requirements for using the API are discussed in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#security_considerations">Security consideration</see> section of the API overview topic.</para>
+<para></para><para>The system clipboard is exposed through the global <see cref="Navigator.Clipboard"/> property.</para><para>All of the Clipboard API methods operate asynchronously; they return a <see cref="Promise"/> which is resolved once the clipboard access has been completed.<br/>The promise is rejected if clipboard access is denied.</para><para>All the methods require a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts">secure context</see>.<br/>Additional requirements for using the API are discussed in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#security_considerations">Security consideration</see> section of the API overview topic.</para>
 <para>-<see cref="Document.ExecCommand"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Clipboard>
+<ClipboardClipboardchange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>clipboardchange</c></strong> event of the <see cref="Clipboard"/> interface is fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as <see cref="Clipboard.WriteText"/>.
+</summary>
+<remarks>
+<para>-<see cref="ClipboardChangeEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/clipboardchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ClipboardClipboardchange>
 <ClipboardRead>
 <summary>
 The <strong><c>read()</c></strong> method of the <see cref="Clipboard"/> interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.

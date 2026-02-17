@@ -9,4 +9,14 @@ The <strong><c>PerformancePaintTiming</c></strong> interface provides timing inf
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformancePaintTiming>
+<PerformancePaintTimingToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="PerformancePaintTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformancePaintTiming"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformancePaintTiming"/> object.</returns>
+</PerformancePaintTimingToJSON>
 </docs>

@@ -91,6 +91,6 @@ The <strong><c>NodeIterator.whatToShow</c></strong> read-only property represent
 <para>-The interface this property belongs to: <see cref="NodeIterator"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/whatToShow"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <c>unsigned integer</c>.The values that can be combined to form the bitmask are:</value>
+<value>A non-negative integer. For the list of possible values, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNodeIterator#whattoshow"><c>document.createNodeIterator()</c></see>.</value>
 </NodeIteratorWhatToShow>
 </docs>

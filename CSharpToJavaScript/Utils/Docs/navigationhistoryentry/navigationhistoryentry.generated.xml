@@ -1,7 +1,7 @@
 <docs>
 <NavigationHistoryEntry>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationHistoryEntry</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a single navigation history entry.
+The <strong><c>NavigationHistoryEntry</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a single navigation history entry.
 </summary>
 <remarks>
 <para>These objects are commonly accessed via the <see cref="Navigation.CurrentEntry"/> property and <see cref="Navigation.Entries"/> method.</para><para>The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g., not navigations inside embedded <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.</para><para></para>
@@ -11,7 +11,7 @@
 </NavigationHistoryEntry>
 <NavigationHistoryEntryDispose>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>dispose</c></strong> event of the <see cref="NavigationHistoryEntry"/> interface is fired when the entry is no longer part of the history entry list.
+The <strong><c>dispose</c></strong> event of the <see cref="NavigationHistoryEntry"/> interface is fired when the entry is no longer part of the history entry list.
 </summary>
 <remarks>
 <para>Disposal occurs when:</para>
@@ -21,7 +21,7 @@
 </NavigationHistoryEntryDispose>
 <NavigationHistoryEntryGetState>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getState()</c></strong> method of the <see cref="NavigationHistoryEntry"/> interface returns a clone of the developer-supplied state associated with this history entry.
+The <strong><c>getState()</c></strong> method of the <see cref="NavigationHistoryEntry"/> interface returns a clone of the developer-supplied state associated with this history entry.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Methods that allow state to be updated — <see cref="Navigation.Navigate"/>, <see cref="Navigation.Reload"/>, and <see cref="Navigation.UpdateCurrentEntry"/><br/></para>
@@ -31,7 +31,7 @@
 </NavigationHistoryEntryGetState>
 <NavigationHistoryEntryId>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
+The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
 </summary>
 <remarks>
 <para>This differs from the <see cref="NavigationHistoryEntry.Key"/> of a history entry. The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo"/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).</para>
@@ -42,7 +42,7 @@
 </NavigationHistoryEntryId>
 <NavigationHistoryEntryIndex>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>index</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the index of the history entry in the history entries list (that is, the list returned by <see cref="Navigation.Entries"/>), or <c>-1</c> if the entry does not appear in the list or if current document is not fully active.
+The <strong><c>index</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the index of the history entry in the history entries list (that is, the list returned by <see cref="Navigation.Entries"/>), or <c>-1</c> if the entry does not appear in the list or if current document is not fully active.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -52,7 +52,7 @@
 </NavigationHistoryEntryIndex>
 <NavigationHistoryEntryKey>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>key</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>key</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that represents the history entry's slot in the entries list. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo"/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).
+The <strong><c>key</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>key</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that represents the history entry's slot in the entries list. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo"/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).
 </summary>
 <remarks>
 <para>This differs from the <see cref="NavigationHistoryEntry.Id"/> of a history entry. The <c>id</c> is a unique, UA-generated value that always represents a specific history entry rather than its slot in the entries list. This is useful to correlate it with an external resource such as a storage cache.</para>
@@ -63,7 +63,7 @@
 </NavigationHistoryEntryKey>
 <NavigationHistoryEntrySameDocument>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sameDocument</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns <c>true</c> if this history entry is for the same <c>document</c> as the current <see cref="Document"/> value and current document is fully active, or <c>false</c> otherwise.
+The <strong><c>sameDocument</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns <c>true</c> if this history entry is for the same <c>document</c> as the current <see cref="Document"/> value and current document is fully active, or <c>false</c> otherwise.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
@@ -73,7 +73,7 @@
 </NavigationHistoryEntrySameDocument>
 <NavigationHistoryEntryUrl>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the absolute URL of this history entry. If the entry corresponds to a different Document than the current one (like <c>sameDocument</c> property is <c>false</c>), and that Document was fetched with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> header set to <c>no-referrer</c> or <c>origin</c>, the property returns <c>null</c>. If current document is not fully active, it returns an empty string.
+The <strong><c>url</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the absolute URL of this history entry. If the entry corresponds to a different Document than the current one (like <c>sameDocument</c> property is <c>false</c>), and that Document was fetched with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> header set to <c>no-referrer</c> or <c>origin</c>, the property returns <c>null</c>. If current document is not fully active, it returns an empty string.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>

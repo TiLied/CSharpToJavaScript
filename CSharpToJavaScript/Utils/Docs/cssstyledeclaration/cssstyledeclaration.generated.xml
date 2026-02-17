@@ -1,16 +1,16 @@
 <docs>
 <CSSStyleDeclaration>
 <summary>
-The <strong><c>CSSStyleDeclaration</c></strong> interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
+The <strong><c>CSSStyleDeclaration</c></strong> interface is the base class for objects that represent CSS declaration blocks with different supported sets of CSS style information:
 </summary>
 <remarks>
-<para>A <c>CSSStyleDeclaration</c> object can be exposed using three different APIs:</para>
+<para>The interface exposes style information and various style-related methods and properties.<br/>For example, it provides <see cref="CSSStyleDeclarationgetPropertyValue"/> for getting the value of a dash-named CSS property, such as <c>border-top</c>, which can&amp;apos;t be directly accessed using dot notation because of the hyphens in its name.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Earlier versions of the specification used <c>CSSStyleDeclaration</c> to represent all CSS declaration blocks, and some browsers and browser versions may still do so (check the browser compatibility tables for the above APIs).<br/>Generally the same website code will be functional in both old and new versions, but some properties returned in a <c>CSSStyleDeclaration</c> may not be relevant in a particular context.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSStyleDeclaration>
 <CSSStyleDeclarationCssFloat>
 <summary>
-The <strong><c>cssFloat</c></strong> property of the <see cref="CSSStyleDeclaration"/> interface returns the result of invoking <see cref="CSSStyleDeclaration.GetPropertyValue"/> with <c>float</c> as an argument.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>cssFloat</c></strong> property of the <see cref="CSSStyleDeclaration"/> interface returns the result of invoking <see cref="CSSStyleDeclaration.GetPropertyValue"/> with <c>float</c> as an argument.
 </summary>
 <remarks>
 <para>When setting, it invokes <see cref="CSSStyleDeclaration.SetProperty"/> with <c>float</c> as the first argument, and the given value as the second argument. The given value must be a valid value for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property.</para>

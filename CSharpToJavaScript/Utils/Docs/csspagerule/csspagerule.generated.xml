@@ -19,11 +19,11 @@ The <strong><c>selectorText</c></strong> property of the <see cref="CSSPageRule"
 </CSSPageRuleSelectorText>
 <CSSPageRuleStyle>
 <summary>
-The <strong><c>style</c></strong> read-only property of the <see cref="CSSPageRule"/> interface returns a <see cref="CSSPageDescriptors"/> object.<br/>This represents a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">CSS declaration block</see> for a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page">@page</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>, and exposes style information and various style-related methods and properties for the page.
+The read-only <strong><c>style</c></strong> property of the <see cref="CSSPageRule"/> interface contains a <see cref="CSSPageDescriptors"/> object representing the descriptors available in the {{cssxref("@page")}} rule's body.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSPageDescriptors"/> object with properties that match the associated {{cssxref("@page")}} <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.<blockquote class="NOTE"><h5>NOTE</h5>Earlier versions of the specification defined this property as a <see cref="CSSStyleDeclaration"/>.<br/>Check the compatibility data below for your browser.</blockquote></value>
+<value>A <see cref="CSSPageDescriptors"/> object.<blockquote class="NOTE"><h5>NOTE</h5>Earlier versions of the specification defined this property as a <see cref="CSSStyleDeclaration"/>.<br/>Check the compatibility data below for your browser.</blockquote>Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSPageDescriptors</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSPageDescriptors</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
 </CSSPageRuleStyle>
 </docs>

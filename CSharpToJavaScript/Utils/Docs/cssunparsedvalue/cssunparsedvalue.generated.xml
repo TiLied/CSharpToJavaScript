@@ -1,7 +1,7 @@
 <docs>
 <CSSUnparsedValue>
 <summary>
-The <strong><c>CSSUnparsedValue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> represents property values that reference <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables">custom properties</see>. It consists of a list of string fragments and variable references.
+The <strong><c>CSSUnparsedValue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> represents property values that reference <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables">custom properties</see>. It consists of a list of string fragments and variable references.
 </summary>
 <remarks>
 <para>Custom properties are represented by <c>CSSUnparsedValue</c> and {{cssxref("var", "var()")}} references are represented using <see cref="'CSSVariableReferenceValue'"/>.</para><para></para>

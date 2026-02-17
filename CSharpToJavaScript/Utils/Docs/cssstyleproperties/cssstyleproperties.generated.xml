@@ -1,0 +1,21 @@
+<docs>
+<CSSStyleProperties>
+<summary>
+The <strong><c>CSSStyleProperties</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</see> represents inline or computed styles available on an element, or the styles associated with a CSS style rule.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleProperties"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSStyleProperties>
+<CSSStylePropertiesCssFloat>
+<summary>
+The <strong><c>cssFloat</c></strong> property of the <see cref="CSSStyleProperties"/> interface returns the CSS {{cssxref("float")}} property.
+</summary>
+<remarks>
+<para>This is the result of invoking <see cref="CSSStyleDeclaration.GetPropertyValue"/> on the object with <c>float</c> as an argument.</para><para>When setting, it invokes <see cref="CSSStyleDeclaration.SetProperty"/> with <c>float</c> as the first argument, and the given value as the second argument.<br/>The given value must be a valid value for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleProperties/cssFloat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>csd.cssFloat = null</c> is equivalent to <c>csd.cssFloat = &amp;quot;&amp;quot;</c>.</value>
+</CSSStylePropertiesCssFloat>
+</docs>

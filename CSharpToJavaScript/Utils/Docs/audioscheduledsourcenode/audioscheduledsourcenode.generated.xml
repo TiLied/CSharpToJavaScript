@@ -14,7 +14,7 @@ The <c>AudioScheduledSourceNode</c> interface—part of the Web Audio API—is a
 The <c>ended</c> event of the <see cref="AudioScheduledSourceNode"/> interface is fired when the source node has stopped playing.
 </summary>
 <remarks>
-<para>This event occurs when a <see cref="AudioScheduledSourceNode"/> has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.</para><para>This event is not cancelable and does not bubble.</para>
+<para>This event occurs when an <see cref="AudioScheduledSourceNode"/> has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.</para><para>This event is not cancelable and does not bubble.</para>
 <para>-<see cref="HTMLAudioElement"/><br/>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-The HTMLMediaElement <see cref="HTMLMediaElement.Ended"/> event<br/>-The MediaStreamTrack <see cref="MediaStreamTrack.Ended"/> event<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/ended"> <em>See also on MDN</em> </seealso></para>
 </remarks>

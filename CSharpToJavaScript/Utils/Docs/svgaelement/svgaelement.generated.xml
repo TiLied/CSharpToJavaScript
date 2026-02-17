@@ -9,6 +9,50 @@ The <strong><c>SVGAElement</c></strong> interface provides access to the propert
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAElement>
+<SVGAElementDownload>
+<summary>
+The <strong><c>download</c></strong> property of the <see cref="SVGAElement"/> interface returns a string indicating that the browser should treat the linked URL as a download.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s <c>download</c> value. It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#download"><c>download</c></see> attribute.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This value might not be used for download. This value cannot be used to determine whether the download will occur.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#download"><c>download</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/download"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementDownload>
+<SVGAElementHash>
+<summary>
+The <strong><c>hash</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the fragment identifier, including the leading hash mark (<c>#</c>), if any, in the referenced URL.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s fragment (ignores leading <c>#</c>).</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/hash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementHash>
+<SVGAElementHost>
+<summary>
+The <strong><c>host</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the hostname and port (if it's not the default port) in the referenced URL.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s host and port.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementHost>
+<SVGAElementHostname>
+<summary>
+The <strong><c>hostname</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the hostname in the referenced URL.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s hostname.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/hostname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementHostname>
 <SVGAElementHref>
 <summary>
 The <strong><c>href</c></strong> read-only property of the <see cref="SVGAElement"/> returns an <see cref="SVGAnimatedString"/> object reflecting the value of the href attribute, and, in certain cases, the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute. It specifies the target URI associated with the link.
@@ -20,6 +64,104 @@ The <strong><c>href</c></strong> read-only property of the <see cref="SVGAElemen
 </remarks>
 <value>An <see cref="SVGAnimatedString"/> indicating the value of the href attribute. Additionally, for elements defined to support it, it reflects the value of the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute when the href attribute is not set.</value>
 </SVGAElementHref>
+<SVGAElementHreflang>
+<summary>
+The <strong><c>hreflang</c></strong> property of the <see cref="SVGAElement"/> interface returns a string indicating the language of the linked resource.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s <c>hreflang</c> value. It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#hreflang"><c>hreflang</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#hreflang"><c>hreflang</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/hreflang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementHreflang>
+<SVGAElementInterestForElement>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>interestForElement</c></strong> property of the <see cref="SVGAElement"/> interface gets or sets the target element of an interest invoker, in cases where the associated {{svgelement("a")}} element is specified as an interest invoker.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker">Creating an interest invoker</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">The Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/interestForElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> object instance, or <c>null</c> if the associated <c>&amp;lt;a&amp;gt;</c> element does not have a target element set.</value>
+</SVGAElementInterestForElement>
+<SVGAElementOrigin>
+<summary>
+The <strong><c>origin</c></strong> readonly property of the <see cref="SVGAElement"/> interface returns a string containing the origin of the URL — that is, its scheme, its domain and its port.
+</summary>
+<remarks>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementOrigin>
+<SVGAElementPassword>
+<summary>
+The <strong><c>password</c></strong> property of the <see cref="SVGAElement"/> interface returns a string containing the password specified before the domain name.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s password.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/password"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementPassword>
+<SVGAElementPathname>
+<summary>
+The <strong><c>pathname</c></strong> property of the <see cref="SVGAElement"/> interface returns a string containing an initial <c>/</c> followed by the path of the URL, not including the query string or fragment.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s pathname.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/pathname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementPathname>
+<SVGAElementPing>
+<summary>
+The <strong><c>ping</c></strong> property of the <see cref="SVGAElement"/> interface returns a string that reflects the <c>ping</c> attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">POST</see> requests with the body <c>PING</c> will be sent by the browser (in the background). Typically used for tracking.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s <c>ping</c> value. It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#ping"><c>ping</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#ping"><c>ping</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/ping"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementPing>
+<SVGAElementPort>
+<summary>
+The <strong><c>port</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the port component, if any, of the referenced URL.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s port.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementPort>
+<SVGAElementProtocol>
+<summary>
+The <strong><c>protocol</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the protocol component, including trailing colon (<c>:</c>), of the referenced URL.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s protocol.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementProtocol>
+<SVGAElementReferrerpolicy>
+<summary>
+The <strong><c>referrerpolicy</c></strong> property of the <see cref="SVGAElement"/> interface returns a string specifying which <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referer">referrer</see> to send when fetching the <see href="https://developer.mozilla.org/en-US/docs/Glossary/URL">URL</see>..
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s <c>referrerpolicy</c> value. It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy"><c>referrerpolicy</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy"><c>referrerpolicy</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/referrerpolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementReferrerpolicy>
 <SVGAElementRel>
 <summary>
 The <strong><c>rel</c></strong> property of the <see cref="SVGAElement"/> returns a string reflecting the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see> attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element.
@@ -33,15 +175,25 @@ The <strong><c>rel</c></strong> property of the <see cref="SVGAElement"/> return
 </SVGAElementRel>
 <SVGAElementRelList>
 <summary>
-The <strong><c>relList</c></strong> read-only property of the <see cref="SVGAElement"/> returns a live <see cref="DOMTokenList"/> reflecting the space-separated string <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>&amp;lt;list-of-Link-Types&amp;gt;</c></see> values of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see> attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element.
+The read-only <strong><c>relList</c></strong> property of the <see cref="SVGAElement"/> returns a live <see cref="DOMTokenList"/> reflecting the space-separated string <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>&amp;lt;list-of-Link-Types&amp;gt;</c></see> values of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see> attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element.
 </summary>
 <remarks>
-<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see><br/>-<see cref="SVGAElement.Rel"/><br/>-<see cref="HTMLAnchorElement.RelList"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="DOMTokenList"/>.</value>
+<value>A live <see cref="DOMTokenList"/>.Although the <c>relList</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>relList</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </SVGAElementRelList>
+<SVGAElementSearch>
+<summary>
+The <strong><c>search</c></strong> property of the <see cref="SVGAElement"/> interface returns a string representing the URL's query string, if any, including the leading question mark (<c>?</c>).
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s query component.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/search"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementSearch>
 <SVGAElementTarget>
 <summary>
 The <strong><c>SVGAElement.target</c></strong> read-only property of <see cref="SVGAElement"/> returns an <see cref="SVGAnimatedString"/> object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
@@ -53,4 +205,35 @@ The <strong><c>SVGAElement.target</c></strong> read-only property of <see cref="
 </remarks>
 <value>An <see cref="SVGAnimatedString"/> indicating the ending resource target that opens the document when the link is activated. See {{SVGAttr("target")}} for valid values.</value>
 </SVGAElementTarget>
+<SVGAElementText>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>text</c></strong> property of the <see cref="SVGAElement"/> interface returns a string that is a synonym for the <see cref="Node.TextContent"/> property.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementText>
+<SVGAElementType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="SVGAElement"/> interface returns a string indicating the MIME type of the linked resource.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s <c>type</c> value. It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#type"><c>type</c></see> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#type"><c>type</c></see> attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementType>
+<SVGAElementUsername>
+<summary>
+The <strong><c>username</c></strong> property of the <see cref="SVGAElement"/> interface returns a string containing the username specified before the domain name.
+</summary>
+<remarks>
+<para>This property can be set, to change the URL&amp;apos;s username.</para>
+<para>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"><c>&amp;lt;a&amp;gt;</c></see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/username"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGAElementUsername>
 </docs>

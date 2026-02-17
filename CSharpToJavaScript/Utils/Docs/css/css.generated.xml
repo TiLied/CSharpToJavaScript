@@ -32,7 +32,7 @@ The <strong>CSS numeric factory</strong><strong><br/></strong><strong>functions<
 The static, read-only <strong><c>highlights</c></strong> property of the <see cref="CSS"/> interface provides access to the <c>HighlightRegistry</c> used to style arbitrary text ranges using the {{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
 </summary>
 <remarks>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/highlights"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <see cref="HighlightRegistry"/> object.</value>
@@ -49,7 +49,7 @@ The static, read-only <strong><c>highlights</c></strong> property of the <see cr
 </CSSPaintWorklet>
 <CSSRegisterProperty>
 <summary>
-The <strong><c>CSS.registerProperty()</c></strong> static method registers<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties</see>, allowing for property type checking, default<br/>values, and properties that do or do not inherit their value.
+The <strong><c>CSS.registerProperty()</c></strong> static method registers<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/--*">custom properties</see>, allowing for property type checking, default<br/>values, and properties that do or do not inherit their value.
 </summary>
 <remarks>
 <para>Registering a custom property allows you to tell the browser how the custom property<br/>should behave; what types are allowed, whether the custom property inherits its value,<br/>and what the default value of the custom property is.</para>

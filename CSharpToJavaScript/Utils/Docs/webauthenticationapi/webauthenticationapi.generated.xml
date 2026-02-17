@@ -1,9 +1,10 @@
 <docs>
 <Web_Authentication_API>
 <summary>
-The Web Authentication API (WebAuthn) is an extension of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API">Credential Management API</see> that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
+The Web Authentication API (WebAuthn) is an extension of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API">Credential Management API</see> that enables strong authentication with public key cryptography, enabling passwordless authentication and secure <see href="https://developer.mozilla.org/en-US/docs/Glossary/multi-factor authentication">multi-factor authentication</see> (MFA) without SMS texts.
 </summary>
 <remarks>
+<para>On the web, <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Authentication/Passkeys">passkeys</see> are implemented using the Web Authentication API.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Web_Authentication_API>

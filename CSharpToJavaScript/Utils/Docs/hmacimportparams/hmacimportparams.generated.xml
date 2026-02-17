@@ -1,10 +1,10 @@
 <docs>
 <HmacImportParams>
 <summary>
-The <strong><c>HmacImportParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.ImportKey"/> or <see cref="SubtleCrypto.UnwrapKey"/>, when generating a key for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</see> algorithm.
+The <strong><c>HmacImportParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed when importing, unwrapping, or deriving a key for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</see> algorithm, as:
 </summary>
 <remarks>
-<para>-<see cref="SubtleCrypto.ImportKey"/>.<br/>-<see cref="SubtleCrypto.UnwrapKey"/>.<br/></para>
+<para>-<see cref="SubtleCrypto.ImportKey"/>.<br/>-<see cref="SubtleCrypto.UnwrapKey"/>.<br/>-<see cref="SubtleCrypto.DeriveKey"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HmacImportParams"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HmacImportParams>

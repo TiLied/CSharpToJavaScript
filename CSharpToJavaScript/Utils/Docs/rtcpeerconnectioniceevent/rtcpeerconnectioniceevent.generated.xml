@@ -29,4 +29,15 @@ The <strong><c>RTCPeerConnectionIceEvent()</c></strong> constructor creates a ne
 </remarks>
 <returns>A new <see cref="RTCPeerConnectionIceEvent"/> object, configured as specified in the provided options.</returns>
 </RTCPeerConnectionIceEventRTCPeerConnectionIceEvent>
+<RTCPeerConnectionIceEventUrl>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>url</c></strong> property of the <see cref="RTCPeerConnectionIceEvent"/> interface returns the URL of the {{Glossary("STUN")}} or {{Glossary("TURN")}} server used to gather the ICE candidate that caused the event. If the candidate was not gathered from a {{Glossary("STUN")}} or {{Glossary("TURN")}} server, the value is <c>null</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is considered deprecated by the specification in favor of the <c>url</c> property on the <see cref="RTCIceCandidate"/> interface itself.</para></blockquote>
+<para>-<see cref="RTCPeerConnection.Icecandidate"/><br/>-<see cref="RTCPeerConnectionIceEvent.Candidate"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URL of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> or <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see> server used to gather this candidate, or <c>null</c> if the candidate was not gathered from a server (for example, a local host candidate).</value>
+</RTCPeerConnectionIceEventUrl>
 </docs>

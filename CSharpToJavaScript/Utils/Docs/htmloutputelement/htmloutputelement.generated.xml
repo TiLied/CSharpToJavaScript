@@ -42,13 +42,13 @@ The <strong><c>form</c></strong> read-only property of the <see cref="HTMLOutput
 </HTMLOutputElementForm>
 <HTMLOutputElementHtmlFor>
 <summary>
-The <strong><c>htmlFor</c></strong> property of the <see cref="HTMLOutputElement"/> interface is a string containing a space-separated list of other elements' <c>id</c>s, indicating that those elements contributed input values to (or otherwise affected) the calculation. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output#for"><c>for</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> element.
+The read-only <strong><c>htmlFor</c></strong> property of the <see cref="HTMLOutputElement"/> returns a live <see cref="DOMTokenList"/> object containing a list of <c>id</c>s of those elements contributing input values to (or otherwise affected) the calculation. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output#for"><c>for</c></see> content attribute.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/htmlFor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>htmlFor</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>htmlFor</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLOutputElementHtmlFor>
 <HTMLOutputElementLabels>
 <summary>

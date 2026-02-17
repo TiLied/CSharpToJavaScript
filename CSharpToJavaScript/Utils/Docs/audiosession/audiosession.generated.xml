@@ -1,0 +1,23 @@
+<docs>
+<AudioSession>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>AudioSession</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Session_API">Audio Session API</see> allows developers to specify how audio from a web application interacts with other audio playing on a device.
+</summary>
+<remarks>
+<para>An audio session represents the aggregated audio output from a web page. It allows web pages to express the general nature of their audio output, such as playback, recording, or transient sounds like notifications. The platform can then use this information to determine how web-based audio should interact with other applications on the device, for example, whether web audio should pause other audio or play alongside it.</para><para></para>
+<para>-<see cref="Navigator.AudioSession"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Session_API">Audio Session API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioSession>
+<AudioSessionType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>type</c></strong> property of the <see cref="AudioSession"/> interface returns or sets the type of the audio session.
+</summary>
+<remarks>
+<para>The audio session type describes the general nature of a web page&amp;apos;s audio output, allowing the platform to determine how web-based audio should interact with other audio playing on the device.</para>
+<para>-<see cref="AudioSession"/><br/>-<see cref="Navigator.AudioSession"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Session_API">Audio Session API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioSession/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the audio session type. Possible values are:</value>
+</AudioSessionType>
+</docs>

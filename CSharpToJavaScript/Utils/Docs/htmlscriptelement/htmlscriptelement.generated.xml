@@ -4,7 +4,7 @@
 JavaScript files should be served with the <c>text/javascript</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types">MIME type</see>, but browsers are lenient and block them only if the script is served with an image type (<c>image/*</c>), video type (<c>video/*</c>), audio type (<c>audio/*</c>), or <c>text/csv</c>. If the script is blocked, its element receives an <see cref="HTMLElementerror"/> event; otherwise, it receives a <see cref="Windowload"/> event.
 </summary>
 <remarks>
-<para></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When inserted using the <see cref="Document.Write"/> method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using <see cref="Element.InnerHTML"/> or <see cref="Element.OuterHTML"/>, they do not execute at all.</para></blockquote><para></para>
 <para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element<br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript">noscript</see> element<br/>-<see cref="Document.CurrentScript"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</see> (code snippets similar to scripts but executed in <see href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope">another global context</see>)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -22,7 +22,7 @@ The <strong><c>async</c></strong> property of the <see cref="HTMLScriptElement"/
 </HTMLScriptElementAsync>
 <HTMLScriptElementAttributionSrc>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>attributionSrc</c></strong> property of the <see cref="HTMLScriptElement"/> interface gets and sets the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc"><c>attributionsrc</c></see> attribute on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element programmatically, reflecting the value of that attribute. <c>attributionsrc</c> specifies that you want the browser to send an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible">Attribution-Reporting-Eligible</see> header along with the script resource request.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>attributionSrc</c></strong> property of the <see cref="HTMLScriptElement"/> interface gets and sets the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc"><c>attributionsrc</c></see> attribute on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element programmatically, reflecting the value of that attribute. <c>attributionsrc</c> specifies that you want the browser to send an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible">Attribution-Reporting-Eligible</see> header along with the script resource request.
 </summary>
 <remarks>
 <para>On the server-side this is used to trigger sending an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source">Attribution-Reporting-Register-Source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger">Attribution-Reporting-Register-Trigger</see> header in the response, to register a JavaScript-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers">attribution trigger</see>, respectively. Which response header should be sent back depends on the value of the <c>Attribution-Reporting-Eligible</c> header that triggered the registration.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Alternatively, JavaScript-based attribution sources or triggers can be registered by sending a <see cref="Windowfetch"/> request containing the <c>attributionReporting</c> option (either set directly on the <c>fetch()</c> call or on a <see cref="Request"/> object passed into the <c>fetch()</c> call), or by sending an <see cref="XMLHttpRequest"/> with <see cref="XMLHttpRequest.SetAttributionReporting"/> invoked on the request object.</para></blockquote><para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see> for more details.</para>
@@ -33,14 +33,13 @@ The <strong><c>async</c></strong> property of the <see cref="HTMLScriptElement"/
 </HTMLScriptElementAttributionSrc>
 <HTMLScriptElementBlocking>
 <summary>
-The <strong><c>blocking</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string indicating that certain operations should be blocked on the fetching of the script.
+The read-only <strong><c>blocking</c></strong> property of the <see cref="HTMLScriptElement"/> returns a live <see cref="DOMTokenList"/> object containing the operations that should be blocked on the fetching of an external resource. It reflects the {{HTMLElement("script")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#blocking"><c>blocking</c></see> content attribute.
 </summary>
 <remarks>
-<para>It reflects the <c>blocking</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
 <para>-<see cref="HTMLLinkElement.Blocking"/><br/>-<see cref="HTMLStyleElement.Blocking"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/blocking"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>blocking</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>blocking</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLScriptElementBlocking>
 <HTMLScriptElementCrossOrigin>
 <summary>
@@ -65,22 +64,32 @@ The <strong><c>defer</c></strong> property of the <see cref="HTMLScriptElement"/
 </HTMLScriptElementDefer>
 <HTMLScriptElementFetchPriority>
 <summary>
-The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents a hint to the browser indicating how it should prioritize fetching an external script relative to other external scripts.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#fetchpriority"><c>fetchpriority</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.
+The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents a hint to the browser indicating how it should prioritize fetching an external script relative to other external scripts.<br/>It reflects the <c>&amp;lt;script&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#fetchpriority"><c>fetchpriority</c></see> content attribute.
 </summary>
 <remarks>
-<para>The property allows a developer to signal that fetching a particular script early or late in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.<br/>This in turn allows the browser to increase or decrease the priority, and potentially load the script earlier or later than it would otherwise.<br/>The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.</para><para>The fetch priority allows you to decrease the priority of late-body scripts, or to increase the priority of <c>async</c> scripts without having to use <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preload">preloading</see>.<br/>When early loading of a script is important, the priority can be used to complement preloading, boosting the priority ahead of less-impactful resources that have a higher default priority.</para><para>Note that both the internal priority of any fetch operation, and the impact of <c>fetchPriority</c> on the priority, are entirely browser dependent.</para>
 <para>-<see cref="HTMLImageElement.FetchPriority"/><br/>-<see cref="HTMLLinkElement.FetchPriority"/><br/>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link</see> header<br/>-<see href="https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority">Optimize resource loading with the Fetch Priority API</see> for information about how this API affects priorities on Chrome.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/fetchPriority"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the priority hint. Possible values are:</value>
+<value>A string. For the permitted values, see the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority"><c>fetchpriority</c></see> attribute.</value>
 </HTMLScriptElementFetchPriority>
+<HTMLScriptElementInnerText>
+<summary>
+<blockquote class="WARNING"><h5>WARNING</h5>This property represents the text content of a script element, which may be executable depending on the script type.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
+</summary>
+<remarks>
+<para>You can mitigate this risk by always assigning <see cref="TrustedScript"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>innerText</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents the text content of the {{HTMLElement("script")}} element.<br/>It behaves in the same way as the <see cref="HTMLScriptElement.TextContent"/> and <see cref="HTMLScriptElement.Text"/> properties.</para>
+<para>-<see cref="HTMLElement.InnerText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/innerText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Getting the property returns a string containing the scripts&amp;apos;s text.Setting the property accepts either a <see cref="TrustedScript"/> object or a string.</value>
+</HTMLScriptElementInnerText>
 <HTMLScriptElementIntegrity>
 <summary>
 The <strong><c>integrity</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation.
 </summary>
 <remarks>
 <para>It reflects the <c>integrity</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
-<para>-<see cref="HTMLLinkElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</see><br/></para>
+<para>-<see cref="HTMLLinkElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/integrity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
@@ -107,13 +116,13 @@ The <strong><c>referrerPolicy</c></strong> property of the<br/><see cref="HTMLSc
 </HTMLScriptElementReferrerPolicy>
 <HTMLScriptElementSrc>
 <summary>
-The <strong><c>src</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
+<blockquote class="WARNING"><h5>WARNING</h5>This property represents the URI of an external script loaded into the script element, which may be executable depending on the script <see cref="HTMLScriptElementtype"/>.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
-<para>It reflects the <c>src</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>src</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.</para><para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#src"><c>src</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/src"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>Getting the property returns a string containing the element&amp;apos;s script URI.Setting the property accepts either a <see cref="TrustedScriptURL"/> object or a string.</value>
 </HTMLScriptElementSrc>
 <HTMLScriptElementSupports>
 <summary>
@@ -128,14 +137,26 @@ The <strong><c>supports()</c></strong> static method of the <see cref="HTMLScrip
 </HTMLScriptElementSupports>
 <HTMLScriptElementText>
 <summary>
-The <strong><c>text</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that reflects the text content inside the {{HTMLElement("script")}} element. It acts the same way as the <see cref="Node.TextContent"/> property.
+<blockquote class="WARNING"><h5>WARNING</h5>This property represents the text content of a script element, which may be executable depending on the script type.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
-<para>It reflects the <c>text</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>You can mitigate this risk by always assigning <see cref="TrustedScript"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>text</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents the inline text content of the {{HTMLElement("script")}} element.<br/>It behaves in the same way as the <see cref="HTMLScriptElement.TextContent"/> and <see cref="HTMLScriptElement.InnerText"/> property.</para>
+<para>-<see cref="HTMLScriptElement.TextContent"/><br/>-<see cref="HTMLScriptElement.InnerText"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/text"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>Getting the property returns a string containing the script&amp;apos;s text.Setting the property accepts either a <see cref="TrustedScript"/> object or a string.</value>
 </HTMLScriptElementText>
+<HTMLScriptElementTextContent>
+<summary>
+<blockquote class="WARNING"><h5>WARNING</h5>This property represents the text content of a script element, which may be executable depending on the script type.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
+</summary>
+<remarks>
+<para>You can mitigate this risk by always assigning <see cref="TrustedScript"/> objects instead of strings and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>textContent</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents the inline text content of the {{HTMLElement("script")}} element.<br/>It behaves in the same way as the <see cref="HTMLScriptElement.Text"/> and <see cref="HTMLScriptElement.InnerText"/> properties.</para>
+<para>-<see cref="HTMLScriptElement.Text"/><br/>-<see cref="HTMLScriptElement.InnerText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/textContent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Getting the property returns a string containing the script&amp;apos;s text.Setting the property accepts either a <see cref="TrustedScript"/> object or a string.</value>
+</HTMLScriptElementTextContent>
 <HTMLScriptElementType>
 <summary>
 The <strong><c>type</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that reflects the type of the script.

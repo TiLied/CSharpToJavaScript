@@ -33,6 +33,7 @@ The <strong><c>PageSwapEvent()</c></strong> constructor creates a new<br/><see c
 The <strong><c>viewTransition</c></strong> read-only property of the <see cref="PageRevealEvent"/> interface contains a <see cref="ViewTransition"/> object representing the active view transition for the cross-document navigation.
 </summary>
 <remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The active view transition can also be accessed via the <see cref="Document.ActiveViewTransition"/> property.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/viewTransition"> <em>See also on MDN</em> </seealso></para>
 </remarks>

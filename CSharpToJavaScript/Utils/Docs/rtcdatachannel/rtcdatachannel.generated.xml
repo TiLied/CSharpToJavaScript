@@ -176,6 +176,16 @@ The read-only <c>RTCDataChannel</c> property <strong><c>ordered</c></strong> ind
 </remarks>
 <value>A boolean value which is <c>true</c> if in-order delivery is<br/>guaranteed and is otherwise <c>false</c>.</value>
 </RTCDataChannelOrdered>
+<RTCDataChannelPriority>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>priority</c></strong> property of the <see cref="RTCDataChannel"/> interface returns a string indicating the priority of the data channel. The priority is assigned by the user agent at channel creation time based on the <c>priority</c> option in the <c>dataChannelDict</c> parameter passed to <see cref="RTCPeerConnection.CreateDataChannel"/>, or from the remote peer for incoming data channels.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the priority of the data channel. Possible values are, in order from lowest to highest priority:</value>
+</RTCDataChannelPriority>
 <RTCDataChannelProtocol>
 <summary>
 The read-only <c>RTCDataChannel</c> property<br/><strong><c>protocol</c></strong> returns a string containing the<br/>name of the subprotocol in use. If no protocol was specified when the data channel was<br/>created, then this property&amp;apos;s value is the empty string (<c>&amp;quot;&amp;quot;</c>).

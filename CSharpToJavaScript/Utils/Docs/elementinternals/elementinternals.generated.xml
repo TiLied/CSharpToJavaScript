@@ -17,7 +17,7 @@ The <strong><c>ariaActiveDescendantElement</c></strong> property of the <see cre
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant"><c>aria-activedescendant</c></see> attribute<br/>-<see cref="Element.AriaActiveDescendantElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references">Reflected element references</see> in the <strong>Attribute reflection</strong> guide.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaActiveDescendantElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An subclass of <see cref="HTMLElement"/> that represents the active descendant, or <c>null</c> if there is no active descendant.</value>
+<value>A subclass of <see cref="HTMLElement"/> that represents the active descendant, or <c>null</c> if there is no active descendant.</value>
 </ElementInternalsAriaActiveDescendantElement>
 <ElementInternalsAriaAtomic>
 <summary>
@@ -591,7 +591,7 @@ The <strong><c>reportValidity()</c></strong> method of the <see cref="ElementInt
 </ElementInternalsReportValidity>
 <ElementInternalsRole>
 <summary>
-The <strong><c>role</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">WAI-ARIA role</see> for the element. For example, a checkbox might have <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>role=&amp;quot;checkbox&amp;quot;</c></see>. It reflects the <c>role</c> attribute; it does not return the element&amp;apos;s implicit ARIA role, if any, unless explicitly set.
+The <strong><c>role</c></strong> property of the <see cref="ElementInternals"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">WAI-ARIA role</see> for the element. For example, a checkbox might have <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><c>role=&amp;quot;checkbox&amp;quot;</c></see>. It reflects the <c>role</c> attribute; it does not return the element&amp;apos;s implicit ARIA role, if any, unless explicitly set.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/role"> <em>See also on MDN</em> </seealso></para>

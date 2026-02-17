@@ -62,14 +62,14 @@ The <strong><c>connection</c></strong> read-only property of the <see cref="Work
 </WorkerNavigatorConnection>
 <WorkerNavigatorDeviceMemory>
 <summary>
-The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="WorkerNavigator"/> interface returns the approximate amount of<br/>device memory in gigabytes.
+The <strong><c>deviceMemory</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns the approximate amount of device memory in gigabytes.
 </summary>
 <remarks>
-<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>. It's approximated by<br/>rounding down to the nearest power of 2, then dividing that number by 1024. It is then<br/>clamped within lower and upper bounds to protect the privacy of owners of very low-memory or<br/>high-memory devices.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see> HTTP header<br/></para>
+<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>.<br/>It&amp;apos;s approximated by rounding the actual value to the nearest power of 2, then dividing that number by 1024.<br/>It is then clamped within lower and upper bounds to protect the privacy of owners of very low-memory or high-memory devices.<br/>These bounds may change over time (see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility table</see>).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-Device-Memory">Sec-CH-Device-Memory</see> HTTP header<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/deviceMemory"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A floating point number; one of <c>0.25</c>, <c>0.5</c>, <c>1</c>, <c>2</c>, <c>4</c>, <c>8</c>.</value>
+<value>A floating point number coarsened to a power of two value, clamped to implement-defined limits.For example, if a browser does not report below <c>2</c> or above <c>32</c> then the value is one of: <c>2</c>, <c>4</c>, <c>8</c>, <c>16</c>, <c>32</c>.</value>
 </WorkerNavigatorDeviceMemory>
 <WorkerNavigatorGlobalPrivacyControl>
 <summary>
@@ -121,11 +121,11 @@ The <strong><c>WorkerNavigator.language</c></strong> read-only property returns<
 <para>-<see cref="WorkerNavigator.Languages"/><br/>-<see cref="WorkerNavigator"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/language"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the<br/>language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language<br/>codes include &amp;quot;en&amp;quot;, &amp;quot;en-US&amp;quot;, &amp;quot;fr&amp;quot;, &amp;quot;fr-FR&amp;quot;, &amp;quot;es-ES&amp;quot;, etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:<br/>&amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
+<value>A string representing the<br/>language version as a <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>, for example <c>en</c>, <c>en-US</c>, <c>fr</c>, <c>fr-FR</c>, <c>es-ES</c>, etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:<br/>&amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
 </WorkerNavigatorLanguage>
 <WorkerNavigatorLanguages>
 <summary>
-The <strong><c>WorkerNavigator.languages</c></strong> read-only property<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using language tags according to<br/>{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned<br/>array they are ordered by preference with the most preferred language first.
+The <strong><c>WorkerNavigator.languages</c></strong> read-only property<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>. In the returned<br/>array they are ordered by preference with the most preferred language first.
 </summary>
 <remarks>
 <para>The value of <see cref="WorkerNavigator.Language"/> is the<br/>first element of the returned array.</para><para>When its value changes, as the user&amp;apos;s preferred languages are changed a<br/><see cref="Window.Languagechange"/> event is fired on the <see cref="WorkerGlobalScope"/> object.</para><para>The <c>Accept-Language</c> HTTP header in every HTTP request from the user&amp;apos;s<br/>browser uses the same value for the <c>navigator.languages</c> property except for<br/>the extra <c>qvalues</c> (quality values) field (e.g., <c>en-US;q=0.8</c>).</para>
@@ -258,7 +258,7 @@ The <strong><c>WorkerNavigator.userAgent</c></strong> read-only property returns
 </WorkerNavigatorUserAgent>
 <WorkerNavigatorUserAgentData>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>userAgentData</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns an <see cref="NavigatorUAData"/> object which can be used to access the {{domxref("User-Agent Client Hints API", &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>userAgentData</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns a <see cref="NavigatorUAData"/> object which can be used to access the {{domxref("User-Agent Client Hints API", &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see><br/></para>

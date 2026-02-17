@@ -1,10 +1,10 @@
 <docs>
 <ToggleEvent>
 <summary>
-The <strong><c>ToggleEvent</c></strong> interface represents an event notifying the user an Element&amp;apos;s state has changed.
+The <strong><c>ToggleEvent</c></strong> interface represents an event that fires when a popover element is toggled between being shown and hidden.
 </summary>
 <remarks>
-<para>This is the event object for the <c>HTMLElement</c> <see cref="HTMLElement.Beforetoggle"/> and <see cref="HTMLElement.Toggle"/> events, which fire on some elements just before and just after they transition between showing and hidden, respectively.</para><para></para>
+<para>This is the event object for the <see cref="HTMLElement.Beforetoggle"/> and <see cref="HTMLElement.Toggle"/> events, which fire on elements as follows:</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforetoggle_event"><c>beforetoggle</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/toggle_event"><c>toggle</c> event</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -31,7 +31,7 @@ The <strong><c>oldState</c></strong> read-only property of the <see cref="Toggle
 </ToggleEventOldState>
 <ToggleEventSource>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>source</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is an <see cref="Element"/> object instance representing the HTML popover control element that initiated the toggle.
+The <strong><c>source</c></strong> read-only property of the <see cref="ToggleEvent"/> interface is an <see cref="Element"/> object instance representing the HTML popover control element that initiated the toggle.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>

@@ -10,9 +10,10 @@ The <strong><c>SVGScriptElement</c></strong> interface corresponds to the SVG <s
 </SVGScriptElement>
 <SVGScriptElementHref>
 <summary>
-The <strong><c>href</c></strong> read-only property of the <see cref="SVGScriptElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.
+<blockquote class="WARNING"><h5>WARNING</h5>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/baseVal"><c>href.baseVal</c></see> property represents the URL of an external script loaded into the SVG script element.<br/>APIs like this are known as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage">injection sinks</see>, and are potentially a vector for <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS">cross-site scripting (XSS)</see> attacks.</blockquote>
 </summary>
 <remarks>
+<para>You can mitigate this risk by having a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> that restricts the locations from which scripts can be loaded, and by always assigning <see cref="TrustedScriptURL"/> objects instead of strings, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types">enforcing trusted types</see>.<br/>See <see href="https://developer.mozilla.org#security_considerations">Security considerations</see> for more information.</para><para>The <strong><c>href</c></strong> read-only property of the <see cref="SVGScriptElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/href"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="SVGAnimatedString"/> object.</value>
@@ -24,6 +25,6 @@ The <strong><c>type</c></strong> read-only property of the <see cref="SVGScriptE
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An string.</value>
+<value>A string.</value>
 </SVGScriptElementType>
 </docs>

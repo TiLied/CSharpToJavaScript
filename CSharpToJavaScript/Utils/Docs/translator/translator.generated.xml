@@ -32,9 +32,10 @@
 </TranslatorCreate>
 <TranslatorDestroy>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="Translator"/> interface destroys the <c>Translator</c> instance it is called on. It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="Translator"/> interface releases the resources assigned to the <c>Translator</c> instance it is called on and stops any further activity on it. This means that any ongoing and subsequent method calls made on the <c>Translator</c> will reject with an <c>AbortError</c>.
 </summary>
 <remarks>
+<para>It makes sense to destroy <c>Translator</c> objects if they are no longer being used, as they tie up significant resources in their handling.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Translator/destroy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
@@ -69,7 +70,7 @@
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Translator/sourceLanguage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the source language. This will be a valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tag</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+<value>A string specifying the source language. This will be a valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </TranslatorSourceLanguage>
 <TranslatorTargetLanguage>
 <summary>
@@ -80,7 +81,7 @@
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Translator/targetLanguage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the source language. This will be a valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tag</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+<value>A string specifying the source language. This will be a valid <see href="https://developer.mozilla.org/en-US/docs/Glossary/BCP 47 language tag">BCP 47 language tag</see>.</value>
 </TranslatorTargetLanguage>
 <TranslatorTranslate>
 <summary>

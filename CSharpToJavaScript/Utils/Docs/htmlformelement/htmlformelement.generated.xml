@@ -142,14 +142,13 @@ The <strong><c>rel</c></strong> property of the <see cref="HTMLFormElement"/> in
 </HTMLFormElementRel>
 <HTMLFormElementRelList>
 <summary>
-The <strong><c>relList</c></strong> read-only property of the <see cref="HTMLFormElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
+The read-only <strong><c>relList</c></strong> property of the <see cref="HTMLFormElement"/> returns a live <see cref="DOMTokenList"/> object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document. It reflects the {{HTMLElement("form")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> content attribute.
 </summary>
 <remarks>
-<para>The property itself is read-only, meaning you can not reassign the property with another <see cref="DOMTokenList"/>, but the content of the returned list can be changed.</para><para>To retrieve a string containing the values as space-separated tokens, use <see cref="HTMLFormElement.Rel"/>. The <c>rel</c> property can also be used to set the <c>rel</c> attribute value.</para>
 <para>-<see cref="HTMLAnchorElement.RelList"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/>-<see cref="HTMLFormElement.Rel"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="DOMTokenList"/> of strings.</value>
+<value>A live <see cref="DOMTokenList"/> object.Although the <c>relList</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>DOMTokenList</c> object, you can still assign to the <c>relList</c> property directly, which is equivalent to assigning to its <see cref="DOMTokenListvalue"/> property. You can also modify the <c>DOMTokenList</c> object using the <see cref="DOMTokenListadd"/>, <see cref="DOMTokenListremove"/>, <see cref="DOMTokenListreplace"/>, and <see cref="DOMTokenListtoggle"/> methods.</value>
 </HTMLFormElementRelList>
 <HTMLFormElementReportValidity>
 <summary>

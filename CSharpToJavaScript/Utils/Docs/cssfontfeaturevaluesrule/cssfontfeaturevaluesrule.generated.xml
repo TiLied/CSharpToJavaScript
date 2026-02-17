@@ -1,21 +1,81 @@
 <docs>
 <CSSFontFeatureValuesRule>
 <summary>
-The <strong><c>CSSFontFeatureValuesRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>, letting developers assign for each font face a common name to specify features indices to be used in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+The <strong><c>CSSFontFeatureValuesRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules">at-rule</see>. The values of its instance properties can be accessed with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap"><c>CSSFontFeatureValuesMap</c></see>interface.
 </summary>
 <remarks>
-<para></para>
+<para><c>_font-feature-values</c> allows developers to associate, for a given font face, a human-readable name with a numeric index that controls a particular <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts">OpenType font feature</see>.<br/>For features that select alternative glyphs (stylistic, styleset, character-variant, swash, ornament or annotation), the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> property can then reference the human-readable name in order to apply the associated feature.<br/>This is convenient, because it allows the same name to be used of represent a set of alternative glyphs across a number of fonts.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSFontFeatureValuesRule>
+<CSSFontFeatureValuesRuleAnnotation>
+<summary>
+The read-only <strong>annotation</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">user-defined-ident</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/annotation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>annotation</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>annotation</c> property directly. You can also modify the values of the <c>annotation</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleAnnotation>
+<CSSFontFeatureValuesRuleCharacterVariant>
+<summary>
+The read-only <strong>characterVariant</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">user-defined-ident</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/characterVariant"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>characterVariant</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>characterVariant</c> property directly. You can also modify the values of the <c>characterVariant</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleCharacterVariant>
 <CSSFontFeatureValuesRuleFontFamily>
 <summary>
-The <strong><c>fontFamily</c></strong> property of the <see cref="CSSConditionRule"/> interface represents the name of the font family it applies to.
+The <strong><c>fontFamily</c></strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface represents the name of the font family it applies to.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/fontFamily"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>
 </CSSFontFeatureValuesRuleFontFamily>
+<CSSFontFeatureValuesRuleOrnaments>
+<summary>
+The read-only <strong>ornaments</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">user-defined-ident</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/ornaments"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>ornaments</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>ornaments</c> property directly. You can also modify the values of the <c>ornaments</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleOrnaments>
+<CSSFontFeatureValuesRuleStyleset>
+<summary>
+The read-only <strong>styleset</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">user-defined-ident</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/styleset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>styleset</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>styleset</c> property directly. You can also modify the values of the <c>styleset</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleStyleset>
+<CSSFontFeatureValuesRuleStylistic>
+<summary>
+The read-only <strong>stylistic</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">user-defined-ident</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/stylistic"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>stylistic</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>stylistic</c> property directly. You can also modify the values of the <c>stylistic</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleStylistic>
+<CSSFontFeatureValuesRuleSwash>
+<summary>
+The read-only <strong>swash</strong> property of the <see cref="CSSFontFeatureValuesRule"/> interface contains a <see cref="CSSFontFeatureValuesMap"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/custom-ident">developer-provided name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value">feature index</see> for a variable font which supports <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-feature-values">@font-feature-values</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates">font-variant-alternates</see> functional notation<br/>-<see cref="CSSFontFeatureValuesMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesRule/swash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSFontFeatureValuesMap"/> object.Although the <c>swash</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSFontFeatureValuesMap</c> object, you can still assign to the <c>swash</c> property directly. You can also modify the values of the <c>swash</c> using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods"><c>CSSFontFeatureValuesMap</c> instance methods</see>.</value>
+</CSSFontFeatureValuesRuleSwash>
 </docs>

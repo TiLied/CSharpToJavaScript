@@ -33,7 +33,7 @@ The <strong><c>HTMLElement.accessKeyLabel</c></strong><br/>read-only property re
 <div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>anchorElement</c></strong> property of the <see cref="HTMLElement"/> interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> HTML attribute, not elements associated with their anchors via the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties.
 </summary>
 <remarks>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning">CSS anchor positioning</see> module<br/></para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/anchor"><c>anchor</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning">CSS anchor positioning</see> module<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/anchorElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="HTMLElement"/> instance representing the element's anchor element, or <c>null</c> if it doesn&amp;apos;t have one.</value>
@@ -83,10 +83,10 @@ The <strong><c>autocorrect</c></strong> property of the <see cref="HTMLElement"/
 </HTMLElementAutocorrect>
 <HTMLElementAutofocus>
 <summary>
-The <strong><c>autofocus</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select#autofocus"><c>autofocus</c></see> HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> elements or elements whose popover attribute is set.
+The <strong><c>autofocus</c></strong> property of the <see cref="HTMLElement"/> interface represents a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"><c>autofocus</c></see> HTML global attribute. This indicates whether the element should be focused on page load or, if it is nested inside a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"><c>popover</c></see> element, when the <c>&amp;lt;dialog&amp;gt;</c> or popover is shown.
 </summary>
 <remarks>
-<para>Only one form-associated element inside a document, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element, or an element whose <c>popover</c> attribute is set, can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, gets the initial focus.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Setting this property doesn&amp;apos;t set the focus to the associated element: it merely tells the browser to focus to it when <strong>the element is inserted</strong> in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.</para></blockquote>
+<para>Only one element inside a document, <c>&amp;lt;dialog&amp;gt;</c> element, or popover may have this attribute specified. If applied to multiple elements, the first focusable one will receive focus.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Setting this property doesn&amp;apos;t set the focus to the associated element: it merely tells the browser to focus to it when <strong>the element is inserted</strong> in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value.</value>
@@ -155,11 +155,11 @@ The <strong><c>contentEditable</c></strong> property of<br/>the <see cref="HTMLE
 The <strong><c>dataset</c></strong> read-only property<br/>of the <see cref="HTMLElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">custom data attributes</see><br/>(<c>data-*</c>) on elements. It exposes a map of strings<br/>(<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>dataset</c> property itself can be read, but not directly written.<br/>Instead, all writes must be to the individual properties within the<br/><c>dataset</c>, which in turn represent the data attributes.</para></blockquote><para>An HTML <c>data-*</c> attribute and its corresponding DOM<br/><c>dataset.property</c> modify their shared name according to where<br/>they are read or written:</para><para>Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.</para><para>In addition to the information below, you&amp;apos;ll find a how-to guide for using HTML data<br/>attributes in our article <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes"><strong>Using data attributes</strong></see>.</para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>dataset</c> property itself can be read, but not directly written.<br/>Instead, all writes must be to the individual properties within the<br/><c>dataset</c>, which in turn represent the data attributes.</para></blockquote>
 <para>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*"><c>data-*</c></see> class<br/>of global attributes<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using data attributes</see><br/>-<see cref="Element.GetAttribute"/> and <see cref="Element.SetAttribute"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMStringMap"/>.</value>
+<value>A <see cref="DOMStringMap"/>.An HTML <c>data-*</c> attribute and its corresponding DOM<br/><c>dataset.property</c> modify their shared name according to where<br/>they are read or written:Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.In addition to the information below, you&amp;apos;ll find a how-to guide for using HTML data<br/>attributes in our article <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes"><strong>Using data attributes</strong></see>.</value>
 </HTMLElementDataset>
 <HTMLElementDir>
 <summary>
@@ -321,8 +321,8 @@ The <strong><c>hidePopover()</c></strong> method of the <see cref="HTMLElement"/
 The <see cref="HTMLElement"/> property <strong><c>inert</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"><c>inert</c></see> attribute. It is a boolean value that, when present, makes the browser &amp;quot;ignore&amp;quot; user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to &amp;quot;trap&amp;quot; the focus inside the modal when it&amp;apos;s visible.
 </summary>
 <remarks>
-<para>Note that if the <c>inert</c> attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property&amp;apos;s value.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert">Global attribute: <c>inert</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/>-<see href="https://github.com/WICG/inert">Inert Polyfill</see><br/>-<see cref="HTMLInputElement.Disabled"/><br/></para>
+<para>Note that if the <c>inert</c> attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property&amp;apos;s value. Explicitly setting the property to <c>false</c> cannot revert inertness inherited from the parent.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert">Global attribute: <c>inert</c></see><br/>-<see cref="HTMLInputElement.Disabled"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/interactivity">interactivity</see> property<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A Boolean which is <c>true</c> if the element is inert; otherwise, the value is <c>false</c>.</value>
@@ -333,10 +333,10 @@ The <strong><c>innerText</c></strong> property of the <see cref="HTMLElement"/> 
 </summary>
 <remarks>
 <para>As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.<br/>As a setter this will replace the element's children with the given value, converting any line breaks into <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">br</see> elements.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>innerText</c> is easily confused with <see cref="Node.TextContent"/>, but there are important differences between the two.<br/>Basically, <c>innerText</c> is aware of the rendered appearance of text, while <c>textContent</c> is not.</para></blockquote>
-<para>-<see cref="HTMLElement.OuterText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
+<para>-<see cref="HTMLScriptElement.InnerText"/><br/>-<see cref="HTMLElement.OuterText"/><br/>-<see cref="Element.InnerHTML"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the rendered text content of an element.If the element itself is not <see href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being rendered</see> (for example, is detached from the document or is hidden from view), the returned value is the same as the <see cref="Node.TextContent"/> property.<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>innerText</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
+<value>A string representing the rendered text content of an element.If the element itself is not <see href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being rendered</see> (for example, is detached from the document or is hidden from view), the returned value is the same as the <see cref="Node.TextContent"/> property.<blockquote class="WARNING"><h5>WARNING</h5>Setting <c>innerText</c> on a node removes <strong>all</strong> of the node&amp;apos;s children and replaces them with a single text node with the given string value.</blockquote></value>
 </HTMLElementInnerText>
 <HTMLElementInputMode>
 <summary>
@@ -349,6 +349,15 @@ The <see cref="HTMLElement"/> property <strong><c>inputMode</c></strong> reflect
 </remarks>
 <value>This attribute may have one of the following values:For details on the usage of this attribute, see the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><c>inputmode</c></see> HTML attribute that this property reflects.</value>
 </HTMLElementInputMode>
+<HTMLElementInterest>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>interest</c></strong> event of the <see cref="HTMLElement"/> interface is fired on an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">interest invoker</see>&amp;apos;s target element when interest is shown, allowing code to be run in response.
+</summary>
+<remarks>
+<para>-<see cref="HTMLElement.Loseinterest"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/interest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementInterest>
 <HTMLElementIsContentEditable>
 <summary>
 The <strong><c>HTMLElement.isContentEditable</c></strong> read-only property<br/>returns a boolean value that is <c>true</c> if the contents of the element<br/>are editable; otherwise it returns <c>false</c>.
@@ -361,7 +370,7 @@ The <strong><c>HTMLElement.isContentEditable</c></strong> read-only property<br/
 </HTMLElementIsContentEditable>
 <HTMLElementLang>
 <summary>
-The <strong><c>lang</c></strong> property of the <see cref="HTMLElement"/> interface indicates the base language of an element's attribute values and text content, in the form of a {{RFC(5646, "BCP 47 language identifier tag")}}. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang"><c>lang</c></see> attribute; the <c>xml:lang</c> attribute does not affect this property.
+The <strong><c>lang</c></strong> property of the <see cref="HTMLElement"/> interface indicates the base language of an element's attribute values and text content, in the form of a {{glossary("BCP 47 language tag")}}. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang"><c>lang</c></see> attribute; the <c>xml:lang</c> attribute does not affect this property.
 </summary>
 <remarks>
 <para>Note that if the <c>lang</c> attribute is unspecified, the element itself may still inherit the language from its parent. However, that inherited language is not reflected by this property&amp;apos;s value.</para>
@@ -379,6 +388,16 @@ The <strong><c>load</c></strong> event fires for elements containing a resource 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/load"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLElementLoad>
+<HTMLElementLoseinterest>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>loseinterest</c></strong> event of the <see cref="HTMLElement"/> interface is fired on the target element of an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">interest invoker</see> when interest is lost, allowing code to be run in response.
+</summary>
+<remarks>
+<para>This event is normally <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelable">cancelable</see>, except when the user hits the &amp;lt;kbd&amp;gt;Esc&amp;lt;/kbd&amp;gt; key to lose interest in all interest invokers contained in the document.</para>
+<para>-<see cref="HTMLElement.Interest"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers">Using interest invokers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/loseinterest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementLoseinterest>
 <HTMLElementNonce>
 <summary>
 The <strong><c>nonce</c></strong> property of the <see cref="HTMLElement"/> interface returns the cryptographic number used once that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
@@ -488,14 +507,13 @@ The <strong><c>spellcheck</c></strong> property of the <see cref="HTMLElement"/>
 </HTMLElementSpellcheck>
 <HTMLElementStyle>
 <summary>
-The read-only <strong><c>style</c></strong> property of the <see cref="HTMLElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
+The read-only <strong><c>style</c></strong> property of the <see cref="HTMLElement"/> interface returns the <strong>inline</strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> of an element in the form of a live <see cref="CSSStyleProperties"/> object.<br/>This object can be used to get and set the inline styles of an element.
 </summary>
 <remarks>
-<para>Shorthand properties are expanded. If you set <c>style=&amp;quot;border-top: 1px solid black&amp;quot;</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>This property is read-only, meaning it is not possible to assign a <see cref="CSSStyleDeclaration"/> object to it. Nevertheless, it is possible to set an inline style by assigning a <strong>string</strong> directly to the <c>style</c> property. In this case the string is forwarded to <see cref="CSSStyleDeclaration.CssText"/>. Using <c>style</c> in this manner will completely overwrite all inline styles on the element.</para><para>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the <see cref="CSSStyleDeclaration"/> object. For example, you can write <c>element.style.backgroundColor = &amp;quot;red&amp;quot;</c>.</para><para>A style declaration is reset by setting it to <c>null</c> or an empty string, e.g., <c>elt.style.color = null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSS property names are converted to JavaScript identifier with these rules:</para><para>The <c>style</c> property has the same priority in the CSS cascade as an inline style declaration set via the <c>style</c> attribute.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="SVGElement.Style"/><br/>-<see cref="MathMLElement.Style"/><br/>-<see cref="HTMLElement.AttributeStyleMap"/><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="CSSStyleDeclaration"/> object.</value>
+<value>A live <see cref="CSSStyleProperties"/> object.<blockquote class="NOTE"><h5>NOTE</h5>Earlier versions of the specification returned a <see cref="CSSStyleDeclaration"/> (from which <see cref="CSSStyleProperties"/> is derived).<br/>See the <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> table for browser support information.</blockquote>Although the <c>style</c> property itself is read-only in the sense that you can&amp;apos;t replace the <c>CSSStyleProperties</c> object, you can still assign to the <c>style</c> property directly, which is equivalent to assigning to its <see cref="CSSStyleDeclarationcssText"/> property. You can also modify the <c>CSSStyleProperties</c> object using the <see cref="CSSStyleDeclarationsetProperty"/> and <see cref="CSSStyleDeclarationremoveProperty"/> methods.</value>
 </HTMLElementStyle>
 <HTMLElementTabIndex>
 <summary>

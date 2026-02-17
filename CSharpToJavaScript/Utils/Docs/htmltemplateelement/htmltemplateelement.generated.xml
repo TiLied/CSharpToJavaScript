@@ -10,9 +10,10 @@ The <strong><c>HTMLTemplateElement</c></strong> interface enables access to the 
 </HTMLTemplateElement>
 <HTMLTemplateElementContent>
 <summary>
-The <strong><c>HTMLTemplateElement.content</c></strong> property returns a<br/><c>&amp;lt;template&amp;gt;</c> element&amp;apos;s template contents (a<br/><see cref="DocumentFragment"/>).
+The <strong><c>content</c></strong> property of the <see cref="HTMLTemplateElement"/> interface returns the <c>&amp;lt;template&amp;gt;</c> element's template contents as a <see cref="DocumentFragment"/>. This content's <see cref="NodeownerDocument"/> is a separate <see cref="Document"/> from the one that contains the <c>&amp;lt;template&amp;gt;</c> element itself — unless the containing document is itself constructed for the purpose of holding template content.
 </summary>
 <remarks>
+<para>The <see cref="Node.CloneNode"/> and <see cref="Document.ImportNode"/> methods both create a copy of a node. The difference is that <c>importNode()</c> clones the node in the context of the calling document, whereas <c>cloneNode()</c> uses the document of the node being cloned. The document context determines the <see cref="CustomElementRegistry"/> for constructing any custom elements. For this reason, use <c>document.importNode()</c> to clone the <c>content</c> fragment so that custom element descendants are constructed using the definitions in the current document, rather than the separate document that owns the template content. See the <see cref="Node.CloneNode"/> page's examples for more details.</para>
 <para>-<see cref="HTMLTemplateElement"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/content"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -27,7 +27,7 @@ The <strong><c>getPhotoSettings()</c></strong> method of<br/>the <see cref="Imag
 </ImageCaptureGetPhotoSettings>
 <ImageCaptureGrabFrame>
 <summary>
-The <strong><c>grabFrame()</c></strong> method of the<br/><see cref="ImageCapture"/> interface takes a snapshot of the live video in a<br/><see cref="MediaStreamTrack"/> and returns a {{jsxref("Promise")}} that resolves with<br/>a <see cref="ImageBitmap"/> containing the snapshot.
+The <strong><c>grabFrame()</c></strong> method of the<br/><see cref="ImageCapture"/> interface takes a snapshot of the live video in a<br/><see cref="MediaStreamTrack"/> and returns a {{jsxref("Promise")}} that resolves with<br/>an <see cref="ImageBitmap"/> containing the snapshot.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/grabFrame"> <em>See also on MDN</em> </seealso></para>

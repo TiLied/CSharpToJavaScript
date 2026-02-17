@@ -34,6 +34,7 @@ internal class Walker : CSharpSyntaxWalker
 	
 	private string _NameSpaceStr = string.Empty;
 	private string _CurrentClassStr = string.Empty;
+	private string _CurrentClassInheritanceStr = string.Empty;
 	
 	private List<Prop> _Properties = new();
 	
@@ -304,8 +305,15 @@ internal class Walker : CSharpSyntaxWalker
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
 					case SyntaxKind.BaseList:
-						VisitBaseList((BaseListSyntax)asNode);
-						break;
+						{
+							BaseListSyntax _baseList = (BaseListSyntax)asNode;
+
+							//TODO! list!
+							_CurrentClassInheritanceStr = _baseList.Types[0].ToString();
+
+							VisitBaseList(_baseList);
+							break;
+						}
 					case SyntaxKind.FieldDeclaration:
 						VisitFieldDeclaration((FieldDeclarationSyntax)asNode);
 						break;
@@ -358,11 +366,14 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 
-		//clear get and set list
+		//clear properties
 		if (_Options.MakePropertiesEnumerable)
 		{
 			_Properties.Clear();
 		}
+
+		//clear _CurrentClassInheritanceStr
+		_CurrentClassInheritanceStr = string.Empty;
 	}
 
 	public override void VisitConstructorDeclaration(ConstructorDeclarationSyntax node)
@@ -3097,7 +3108,7 @@ internal class Walker : CSharpSyntaxWalker
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 		
 		bool skipTokens = false;
-
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -3184,7 +3195,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.CloseParenToken:
-						break;
+							break;
 					default:
 						Log.ErrorLine($"asToken : {kind}");
 						break;
@@ -6538,7 +6549,12 @@ internal class Walker : CSharpSyntaxWalker
 							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
 								return false;
 						}
-						if (((IMethodSymbol)iSymbol).ReceiverType.ToString().EndsWith(_CurrentClassStr) && !iSymbol.IsStatic)
+						
+						string _reciverType = ((IMethodSymbol)iSymbol).ReceiverType.ToString();
+
+						if (!iSymbol.IsStatic &&
+						((_reciverType.EndsWith(_CurrentClassStr) ||
+						(_reciverType.EndsWith(_CurrentClassInheritanceStr)))))
 						{
 							VisitLeadingTrivia(identifier);
 
@@ -6549,6 +6565,7 @@ internal class Walker : CSharpSyntaxWalker
 
 							return true;
 						}
+						
 						return false;
 					}
 
@@ -6563,7 +6580,8 @@ internal class Walker : CSharpSyntaxWalker
 						}
 						string? _type = iSymbol.ContainingType.ToString();
 						if (_type != null &&
-							_type.EndsWith(_CurrentClassStr))
+							(_type.EndsWith(_CurrentClassStr) ||
+							_type.EndsWith(_CurrentClassInheritanceStr)))
 						{
 							VisitLeadingTrivia(identifier);
 

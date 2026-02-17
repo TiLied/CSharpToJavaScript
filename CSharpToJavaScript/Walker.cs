@@ -2941,6 +2941,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (nodesAndTokens[1].IsKind(SyntaxKind.AsExpression))
 			_IgnoreAsParenthesis = true;
 
+		if (nodesAndTokens[1].IsKind(SyntaxKind.CastExpression))
+			_IgnoreAsParenthesis = true;
+			
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -3059,6 +3062,9 @@ internal class Walker : CSharpSyntaxWalker
 						break;
 					case SyntaxKind.AnonymousObjectCreationExpression:
 						VisitAnonymousObjectCreationExpression((AnonymousObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.CastExpression:
+						VisitCastExpression((CastExpressionSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");

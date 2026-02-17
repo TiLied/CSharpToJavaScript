@@ -162,16 +162,22 @@ public partial class GlobalObject
 	[To(ToAttribute.Default)]
 	public class Infinity
 	{
-
+		[To(ToAttribute.NoneWithLeadingDotRemoved)]
+		public static Infinity Value { get; } = new();
 	}
 	[To(ToAttribute.Default)]
 	public class NaN
 	{
-
+		[To(ToAttribute.NoneWithLeadingDotRemoved)]
+		public static NaN Value { get; } = new();
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class Undefined { }
+	public class Undefined
+	{
+		[To(ToAttribute.NoneWithLeadingDotRemoved)]
+		public static Undefined Value { get; } = new();
+	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static dynamic Eval(string x)

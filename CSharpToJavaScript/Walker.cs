@@ -27,7 +27,6 @@ internal class Walker : CSharpSyntaxWalker
 	private readonly CSTOJSOptions _Options;
 	private readonly SemanticModel _Model;
 
-	private SyntaxNode? _SNOriginalAsExpression = null;
 	private SyntaxNode? _SNBaseConstructorInitializerNode = null;
 	private SyntaxNode? _SNPropertyType = null;
 	private SyntaxNode? _SNAdditionalArgument = null;
@@ -1083,18 +1082,9 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.GreaterThanOrEqualExpression:
 					case SyntaxKind.IsExpression:
 					case SyntaxKind.CoalesceExpression:
+					case SyntaxKind.AsExpression:
 						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
 						break;
-					case SyntaxKind.AsExpression:
-						{
-							//Todo double/multiply asExpression?? How?
-							_SNOriginalAsExpression = ((BinaryExpressionSyntax)asNode).Left;
-
-							Visit(_SNOriginalAsExpression.WithoutTrailingTrivia());
-
-							_SNOriginalAsExpression = null;
-							break;
-						}
 					case SyntaxKind.ObjectCreationExpression:
 						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
 						break;
@@ -2938,10 +2928,7 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-		if (nodesAndTokens[1].IsKind(SyntaxKind.AsExpression))
-			_IgnoreAsParenthesis = true;
-
-		if (nodesAndTokens[1].IsKind(SyntaxKind.CastExpression))
+		if (nodesAndTokens[1].IsKind(SyntaxKind.AsExpression) || nodesAndTokens[1].IsKind(SyntaxKind.CastExpression))
 			_IgnoreAsParenthesis = true;
 			
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -2978,21 +2965,12 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.GreaterThanOrEqualExpression:
 					case SyntaxKind.IsExpression:
 					case SyntaxKind.CoalesceExpression:
+					case SyntaxKind.AsExpression:
 						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.IdentifierName:
 						VisitIdentifierName((IdentifierNameSyntax)asNode);
 						break;
-					case SyntaxKind.AsExpression:
-						{
-							//Todo double/multiply asExpression?? How?
-							_SNOriginalAsExpression = ((BinaryExpressionSyntax)asNode).Left;
-
-							Visit(_SNOriginalAsExpression.WithoutTrailingTrivia());
-
-							_SNOriginalAsExpression = null;
-							break;
-						}
 					case SyntaxKind.UnaryPlusExpression:
 					case SyntaxKind.UnaryMinusExpression:
 					case SyntaxKind.BitwiseNotExpression:
@@ -3830,34 +3808,10 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		SymbolInfo? _symbolInfo = null;
 
-		if (_SNOriginalAsExpression != null)
-		{
-			IEnumerable<SyntaxNodeOrToken> _identifierNameSyntax = _SNOriginalAsExpression.DescendantNodesAndTokens().Where(e => e.IsToken == true);
-			foreach (SyntaxNodeOrToken _item in _identifierNameSyntax)
-			{
-				SyntaxToken _syntaxToken = _item.AsToken();
-
-				if (_syntaxToken.IsKind(SyntaxKind.IdentifierToken))
-				{
-					if (_syntaxToken.Text == asToken.Text)
-					{
-						if (_item.Parent != null)
-							_symbolInfo = _Model.GetSymbolInfo(_item.Parent);
-						else
-							Log.ErrorLine("_item.Parent is null");
-						break;
-					}
-				}
-			}
-			//node = _SNOriginalAsExpression;
-		}
+		if (_SNPropertyType != null)
+			_symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
 		else
-		{
-			if (_SNPropertyType != null)
-				_symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
-			else
-				_symbolInfo = _Model.GetSymbolInfo(identifier);
-		}
+			_symbolInfo = _Model.GetSymbolInfo(identifier);
 
 		ISymbol? _symbol = null;
 
@@ -4166,8 +4120,20 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
+		bool ignoreNext = false;
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
+			if (ignoreNext)
+			{
+				//TODO! Ignore trailing trivia if second token is 'as' keyword.
+				//removing whitespace before 'as' keyword
+				JSSB.Remove(JSSB.Length - 1, 1);
+				
+				ignoreNext = false;
+				continue;
+			}
+			
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
 			if (asNode != null)
@@ -4297,6 +4263,11 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.LessThanToken:
 						VisitToken(asToken);
 						break;
+					case SyntaxKind.AsKeyword:
+						{
+							ignoreNext = true;
+							break;
+						}
 					default:
 						Log.ErrorLine($"asToken : {kind}");
 						break;
@@ -6462,51 +6433,28 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 		SymbolInfo? symbolInfo = null;
-		if (_SNOriginalAsExpression != null)
+		
+		try
 		{
-			IEnumerable<SyntaxNodeOrToken> _identifierNameSyntax = _SNOriginalAsExpression.DescendantNodesAndTokens().Where(e => e.IsToken == true);
-			foreach (SyntaxNodeOrToken _item in _identifierNameSyntax)
-			{
-				SyntaxToken _syntaxToken = _item.AsToken();
-
-				if (_syntaxToken.IsKind(SyntaxKind.IdentifierToken))
-				{
-					if (_syntaxToken.Text == text)
-					{
-						if (_item.Parent != null)
-							symbolInfo = _Model.GetSymbolInfo(_item.Parent);
-						else
-							Log.ErrorLine("_item.Parent is null");
-						break;
-					}
-				}
-			}
-			node = _SNOriginalAsExpression;
+			if (_SNPropertyType != null)
+				symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
+			else
+				symbolInfo = _Model.GetSymbolInfo(node);
 		}
-		else
+		catch (Exception e)
 		{
-			try
+			symbolInfo = null;
+			/*
+			ImmutableArray<Diagnostic> diags = _Model.GetDeclarationDiagnostics();
+			foreach (Diagnostic item in diags)
 			{
-				if (_SNPropertyType != null)
-					symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
-				else
-					symbolInfo = _Model.GetSymbolInfo(node);
+				Log.WarningLine(item.ToString());
 			}
-			catch (Exception e)
-			{
-				symbolInfo = null;
-				/*
-				ImmutableArray<Diagnostic> diags = _Model.GetDeclarationDiagnostics();
-				foreach (Diagnostic item in diags)
-				{
-					Log.WarningLine(item.ToString());
-				}
-				*/
-				Log.WarningLine(e.ToString());
-				//throw;
-			}
+			*/
+			Log.WarningLine(e.ToString());
+			//throw;
 		}
-
+		
 		ISymbol? iSymbol = null;
 
 		if (symbolInfo?.CandidateSymbols.Length >= 1)

@@ -4126,8 +4126,8 @@ internal class Walker : CSharpSyntaxWalker
 		{
 			if (ignoreNext)
 			{
-				//TODO! Ignore trailing trivia if second token is 'as' keyword.
-				//removing whitespace before 'as' keyword
+				//TODO! Ignore trailing trivia if the second token is the 'as' keyword.
+				//removing whitespace before the 'as' keyword
 				JSSB.Remove(JSSB.Length - 1, 1);
 				
 				ignoreNext = false;
@@ -6508,7 +6508,7 @@ internal class Walker : CSharpSyntaxWalker
 
 						if (!iSymbol.IsStatic &&
 						((_reciverType.EndsWith(_CurrentClassStr) ||
-						(_reciverType.EndsWith(_CurrentClassInheritanceStr)))))
+						((_reciverType.EndsWith(_CurrentClassInheritanceStr) && _CurrentClassInheritanceStr != string.Empty)))))
 						{
 							VisitLeadingTrivia(identifier);
 
@@ -6533,9 +6533,10 @@ internal class Walker : CSharpSyntaxWalker
 								return false;
 						}
 						string? _type = iSymbol.ContainingType.ToString();
+						
 						if (_type != null &&
 							(_type.EndsWith(_CurrentClassStr) ||
-							_type.EndsWith(_CurrentClassInheritanceStr)))
+							(_type.EndsWith(_CurrentClassInheritanceStr) && _CurrentClassInheritanceStr != string.Empty)))
 						{
 							VisitLeadingTrivia(identifier);
 

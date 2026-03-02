@@ -30,13 +30,14 @@ internal class Walker : CSharpSyntaxWalker
 	private SyntaxNode? _SNBaseConstructorInitializerNode = null;
 	private SyntaxNode? _SNPropertyType = null;
 	private SyntaxNode? _SNAdditionalArgument = null;
+
+	private ITypeSymbol? _CurrentClassSymbol = null;
 	
 	private string _NameSpaceStr = string.Empty;
-	private string _CurrentClassStr = string.Empty;
-	private string _CurrentClassInheritanceStr = string.Empty;
-	
+
 	private List<Prop> _Properties = new();
-	
+
+	private bool _PropOrField = false;
 	private bool _PropertyStatic = false;
 	private bool _ConstKeyword = false;
 	private bool _IgnoreArrayType = false;
@@ -306,10 +307,6 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.BaseList:
 						{
 							BaseListSyntax _baseList = (BaseListSyntax)asNode;
-
-							//TODO! list!
-							_CurrentClassInheritanceStr = _baseList.Types[0].ToString();
-
 							VisitBaseList(_baseList);
 							break;
 						}
@@ -353,7 +350,8 @@ internal class Walker : CSharpSyntaxWalker
 						break;
 					case SyntaxKind.IdentifierToken:
 						{
-							_CurrentClassStr = asToken.Text;
+							_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
+						
 							VisitToken(asToken);
 							break;
 						}
@@ -370,9 +368,6 @@ internal class Walker : CSharpSyntaxWalker
 		{
 			_Properties.Clear();
 		}
-
-		//clear _CurrentClassInheritanceStr
-		_CurrentClassInheritanceStr = string.Empty;
 	}
 
 	public override void VisitConstructorDeclaration(ConstructorDeclarationSyntax node)
@@ -888,6 +883,9 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.AppendLine("*/");
 		}
 
+		//reset
+		_PropOrField = false;
+		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -6494,6 +6492,9 @@ internal class Walker : CSharpSyntaxWalker
 			{
 				if (!_ThisIsUsed)
 				{
+					//TODO?
+					//Can I unify method and prop/field?
+					
 					if (iSymbol.Kind == SymbolKind.Method &&
 						((IMethodSymbol)iSymbol).MethodKind == MethodKind.Ordinary)
 					{
@@ -6503,21 +6504,28 @@ internal class Walker : CSharpSyntaxWalker
 							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
 								return false;
 						}
-						
-						string _reciverType = ((IMethodSymbol)iSymbol).ReceiverType.ToString();
 
-						if (!iSymbol.IsStatic &&
-						((_reciverType.EndsWith(_CurrentClassStr) ||
-						((_reciverType.EndsWith(_CurrentClassInheritanceStr) && _CurrentClassInheritanceStr != string.Empty)))))
+						if (!iSymbol.IsStatic && !_PropOrField)
 						{
-							VisitLeadingTrivia(identifier);
+							string _reciverType = ((IMethodSymbol)iSymbol).ReceiverType.ToString();
+							
+							//TODO! Interfaces too.
+							ITypeSymbol? _base = _CurrentClassSymbol;
+							while (_base != null)
+							{
+								if (_reciverType.EndsWith(_base.ToString()))
+								{
+									VisitLeadingTrivia(identifier);
 
-							JSSB.Append($"this.");
-							VisitToken(identifier.WithoutTrivia());
+									JSSB.Append($"this.");
+									VisitToken(identifier.WithoutTrivia());
 
-							VisitTrailingTrivia(identifier);
+									VisitTrailingTrivia(identifier);
 
-							return true;
+									return true;
+								}
+								_base = _base.BaseType;
+							}
 						}
 						
 						return false;
@@ -6532,20 +6540,32 @@ internal class Walker : CSharpSyntaxWalker
 							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
 								return false;
 						}
-						string? _type = iSymbol.ContainingType.ToString();
-						
-						if (_type != null &&
-							(_type.EndsWith(_CurrentClassStr) ||
-							(_type.EndsWith(_CurrentClassInheritanceStr) && _CurrentClassInheritanceStr != string.Empty)))
+						if (!_PropOrField)
 						{
-							VisitLeadingTrivia(identifier);
+							string? _type = iSymbol.ContainingType.ToString();
 
-							JSSB.Append($"this.");
-							VisitToken(identifier.WithoutTrivia());
+							if (_type != null)
+							{
+								//TODO! Interfaces too.
+								ITypeSymbol? _base = _CurrentClassSymbol;
+								while (_base != null)
+								{
+									if (_type.EndsWith(_base.ToString()))
+									{
+										VisitLeadingTrivia(identifier);
 
-							VisitTrailingTrivia(identifier);
+										JSSB.Append($"this.");
+										VisitToken(identifier.WithoutTrivia());
 
-							return true;
+										VisitTrailingTrivia(identifier);
+
+										_PropOrField = true;
+
+										return true;
+									}
+									_base = _base.BaseType;
+								}
+							}
 						}
 						return false;
 					}

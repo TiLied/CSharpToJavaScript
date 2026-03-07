@@ -37,7 +37,6 @@ internal class Walker : CSharpSyntaxWalker
 
 	private List<Prop> _Properties = new();
 
-	private bool _PropOrField = false;
 	private bool _PropertyStatic = false;
 	private bool _ConstKeyword = false;
 	private bool _IgnoreArrayType = false;
@@ -883,9 +882,6 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.AppendLine("*/");
 		}
 
-		//reset
-		_PropOrField = false;
-		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -1027,7 +1023,7 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitArgument(ArgumentSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -1093,8 +1089,14 @@ internal class Walker : CSharpSyntaxWalker
 						VisitAnonymousObjectCreationExpression((AnonymousObjectCreationExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.IdentifierName:
-						VisitIdentifierName((IdentifierNameSyntax)asNode);
-						break;
+						{
+							//???
+							bool _l = _ThisIsUsed;
+							_ThisIsUsed = false;
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							_ThisIsUsed = _l;
+							break;
+						}
 					case SyntaxKind.ArgListExpression:
 					case SyntaxKind.NumericLiteralExpression:
 					case SyntaxKind.StringLiteralExpression:
@@ -1104,8 +1106,14 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.FalseLiteralExpression:
 					case SyntaxKind.NullLiteralExpression:
 					case SyntaxKind.DefaultLiteralExpression:
-						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
-						break;
+						{
+							//Literal expressions cannot have this.. so mark it as used!
+							bool _l = _ThisIsUsed;
+							_ThisIsUsed = true;
+							VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+							_ThisIsUsed = _l;
+							break;
+						}
 					case SyntaxKind.PostIncrementExpression:
 					case SyntaxKind.PostDecrementExpression:
 					case SyntaxKind.SuppressNullableWarningExpression:
@@ -1184,6 +1192,8 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
+		_ThisIsUsed = false;
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -1204,14 +1214,14 @@ internal class Walker : CSharpSyntaxWalker
 						VisitGenericName((GenericNameSyntax)asNode);
 						break;
 					case SyntaxKind.IdentifierName:
-						VisitIdentifierName((IdentifierNameSyntax)asNode);
-						break;
-					case SyntaxKind.ThisExpression:
 						{
-							_ThisIsUsed = true;
-							VisitThisExpression((ThisExpressionSyntax)asNode);
+							IdentifierNameSyntax identifierName = (IdentifierNameSyntax)asNode;
+							VisitIdentifierName(identifierName);
 							break;
 						}
+					case SyntaxKind.ThisExpression:
+						VisitThisExpression((ThisExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.ParenthesizedExpression:
 						VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
 						break;
@@ -1280,8 +1290,6 @@ internal class Walker : CSharpSyntaxWalker
 				}
 			}
 		}
-		
-		_ThisIsUsed = false;
 	}
 	public override void VisitAnonymousObjectCreationExpression(AnonymousObjectCreationExpressionSyntax node)
 	{
@@ -1523,6 +1531,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.NullableType:
 					case SyntaxKind.TypeParameterList:
 					case SyntaxKind.TypeParameterConstraintClause:
 					case SyntaxKind.AttributeList:
@@ -2894,6 +2903,7 @@ internal class Walker : CSharpSyntaxWalker
 						break;
 					case SyntaxKind.Interpolation:
 						{
+							_ThisIsUsed = false;
 							JSSB.Append('$');
 							VisitInterpolation((InterpolationSyntax)asNode);
 							break;
@@ -3575,6 +3585,8 @@ internal class Walker : CSharpSyntaxWalker
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
+		_ThisIsUsed = true;
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -3638,6 +3650,10 @@ internal class Walker : CSharpSyntaxWalker
 						{
 							VisitLeadingTrivia(asToken);
 							JSSB.Append($"super");
+							
+							//This is not used with super keyword.
+							//Treat super as this.
+							_ThisIsUsed = true;
 							break;
 						}
 					default:
@@ -3868,7 +3884,7 @@ internal class Walker : CSharpSyntaxWalker
 						if (_toAttr.To == ToAttribute.NoneWithLeadingDotRemoved)
 							JSSB.Remove(JSSB.Length - 1, 1);
 							
-						if (_toAttr.To == ToAttribute.NoneWithTailingDotRemoved)
+						if (_toAttr.To == ToAttribute.NoneWithTrailingDotRemoved)
 							_IgnoreTailingDot = true;
 							
 						SyntaxTriviaList _syntaxTrivias = identifier.GetLeadingTrivia();
@@ -3904,7 +3920,13 @@ internal class Walker : CSharpSyntaxWalker
 #if DEBUG
 		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
 #endif
+		//TODO!
+		_ThisIsUsed = false;
+
 		base.VisitAssignmentExpression(node);
+		//TODO!
+		_ThisIsUsed = false;
+
 	}
 
 	public override void VisitAttribute(AttributeSyntax node)
@@ -5124,7 +5146,7 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-
+		
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -5137,8 +5159,10 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					case SyntaxKind.SimpleMemberAccessExpression:
 					case SyntaxKind.PointerMemberAccessExpression:
-						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
-						break;
+						{
+							VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+							break;
+						}
 					case SyntaxKind.EmptyStatement:
 						VisitEmptyStatement((EmptyStatementSyntax)asNode);
 						break;
@@ -5319,18 +5343,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
-		if (_Options.Debug)
-		{
-			JSSB.Append("/*");
-			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
-			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
-			JSSB.AppendLine("*/");
-		}
-		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		_ThisIsUsed = false;
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
+
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
 			if (asNode != null)
@@ -5340,16 +5359,18 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.GenericName:
-							VisitGenericName((GenericNameSyntax)asNode);
-							break;
+						VisitGenericName((GenericNameSyntax)asNode);
+						break;
 					case SyntaxKind.IdentifierName:
-							VisitIdentifierName((IdentifierNameSyntax)asNode);
+						{
+							IdentifierNameSyntax identifierName = (IdentifierNameSyntax)asNode;
+							VisitIdentifierName(identifierName);
 							break;
+						}
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
-							
-							
+
 							if (_AttributeDatasForInvocation[0] != string.Empty)
 							{
 								if (_AttributeDatasForInvocation[0] == nameof(BinaryAttribute))
@@ -5361,17 +5382,17 @@ internal class Walker : CSharpSyntaxWalker
 
 									if (!_arguments.Arguments[0].HasTrailingTrivia)
 										JSSB.Append(' ');
-									
+
 									JSSB.Append(_operator);
 									VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
 									VisitArgument(_arguments.Arguments[1]);
-									
+
 									SyntaxTriviaList _syntaxTrivias = _arguments.GetTrailingTrivia();
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
-									
+
 									goto BreakArgumentList;
 								}
 
@@ -5392,26 +5413,26 @@ internal class Walker : CSharpSyntaxWalker
 									string _operator = _AttributeDatasForInvocation[1];
 
 									JSSB.Append(_operator);
-									
+
 									//Generic
 									JSSB.Append(_AttributeDatasForInvocation[2]);
 									_AttributeDatasForInvocation[2] = string.Empty;
 
 									goto BreakArgumentList;
 								}
-								
+
 								if (_AttributeDatasForInvocation[0] == nameof(GenericBinaryAttribute))
 								{
 									_AttributeDatasForInvocation[0] = string.Empty;
 									string _operator = _AttributeDatasForInvocation[1];
-									
+
 									VisitArgument(_arguments.Arguments[0]);
 									JSSB.Append(_operator);
-									
+
 									//Generic
 									JSSB.Append(_AttributeDatasForInvocation[2]);
 									_AttributeDatasForInvocation[2] = string.Empty;
-									
+
 									goto BreakArgumentList;
 								}
 							}
@@ -5427,7 +5448,7 @@ internal class Walker : CSharpSyntaxWalker
 								JSSB.Append(")");
 								_SNAdditionalArgument = null;
 							}
-							
+
 						BreakArgumentList:
 							break;
 						}
@@ -5468,6 +5489,8 @@ internal class Walker : CSharpSyntaxWalker
 				}
 			}
 		}
+
+		_ThisIsUsed = false;
 	}
 	public override void VisitIsPatternExpression(IsPatternExpressionSyntax node)
 	{
@@ -5961,10 +5984,75 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.AppendLine("*/");
 		}
 
-#if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
-#endif
-		base.VisitReturnStatement(node);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.SimpleMemberAccessExpression:
+					case SyntaxKind.PointerMemberAccessExpression:
+						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.UnaryPlusExpression:
+					case SyntaxKind.UnaryMinusExpression:
+					case SyntaxKind.BitwiseNotExpression:
+					case SyntaxKind.LogicalNotExpression:
+					case SyntaxKind.PreIncrementExpression:
+					case SyntaxKind.PreDecrementExpression:
+					case SyntaxKind.AddressOfExpression:
+					case SyntaxKind.PointerIndirectionExpression:
+					case SyntaxKind.IndexExpression:
+						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ObjectCreationExpression:
+						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ImplicitObjectCreationExpression:
+						VisitImplicitObjectCreationExpression((ImplicitObjectCreationExpressionSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.ReturnKeyword:
+					case SyntaxKind.SemicolonToken:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitScopedType(ScopedTypeSyntax node)
 	{
@@ -6492,62 +6580,27 @@ internal class Walker : CSharpSyntaxWalker
 			{
 				if (!_ThisIsUsed)
 				{
-					//TODO?
-					//Can I unify method and prop/field?
-					
-					if (iSymbol.Kind == SymbolKind.Method &&
-						((IMethodSymbol)iSymbol).MethodKind == MethodKind.Ordinary)
+					//see "Test_This" for example.
+					if (node.Parent is MemberAccessExpressionSyntax member)
 					{
-						if (node.Parent is MemberAccessExpressionSyntax member)
-						{
-							ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
-							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
-								return false;
-						}
+						ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
 
-						if (!iSymbol.IsStatic && !_PropOrField)
-						{
-							string _reciverType = ((IMethodSymbol)iSymbol).ReceiverType.ToString();
-							
-							//TODO! Interfaces too.
-							ITypeSymbol? _base = _CurrentClassSymbol;
-							while (_base != null)
-							{
-								if (_reciverType.EndsWith(_base.ToString()))
-								{
-									VisitLeadingTrivia(identifier);
-
-									JSSB.Append($"this.");
-									VisitToken(identifier.WithoutTrivia());
-
-									VisitTrailingTrivia(identifier);
-
-									return true;
-								}
-								_base = _base.BaseType;
-							}
-						}
-						
-						return false;
+						if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local ||
+						_iSymbolParent.Kind == SymbolKind.Method))
+							return false;
 					}
 
-					if (iSymbol.Kind == SymbolKind.Property ||
-						iSymbol.Kind == SymbolKind.Field)
+					if (iSymbol != null && !iSymbol.IsStatic)
 					{
-						if (node.Parent is MemberAccessExpressionSyntax member)
+						if (((iSymbol.Kind == SymbolKind.Method &&
+						((IMethodSymbol)iSymbol).MethodKind == MethodKind.Ordinary)) ||
+							iSymbol.Kind == SymbolKind.Property ||
+							iSymbol.Kind == SymbolKind.Field)
 						{
-							ISymbol? _iSymbolParent = _Model.GetSymbolInfo(member.Expression).Symbol;
-							if (_iSymbolParent != null && (_iSymbolParent.Kind == SymbolKind.Local || _iSymbolParent.Kind == SymbolKind.Method))
-								return false;
-						}
-						if (!_PropOrField)
-						{
-							string? _type = iSymbol.ContainingType.ToString();
-
+							ITypeSymbol? _base = _CurrentClassSymbol;
+							string? _type = iSymbol.ContainingType?.ToString();
 							if (_type != null)
 							{
-								//TODO! Interfaces too.
-								ITypeSymbol? _base = _CurrentClassSymbol;
 								while (_base != null)
 								{
 									if (_type.EndsWith(_base.ToString()))
@@ -6559,7 +6612,7 @@ internal class Walker : CSharpSyntaxWalker
 
 										VisitTrailingTrivia(identifier);
 
-										_PropOrField = true;
+										_ThisIsUsed = true;
 
 										return true;
 									}
@@ -6567,9 +6620,9 @@ internal class Walker : CSharpSyntaxWalker
 								}
 							}
 						}
-						return false;
 					}
 				}
+				
 				return false;
 			}
 		}

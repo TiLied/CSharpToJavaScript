@@ -33,14 +33,14 @@ public class ValueAttribute : Attribute
 /// FirstCharToLowerCase: convert the first char to lowercase.<br />
 /// None: convert to empty.<br />
 /// NoneWithLeadingDotRemoved: convert to empty with the leading dot removed.<br />
-/// NoneWithTailingDotRemoved: convert to empty with the trailing dot removed.<br />
+/// NoneWithTrailingDotRemoved: convert to empty with the trailing dot removed.<br />
 /// </remarks>
 [AttributeUsage(AttributeTargets.All)]
 public class ToAttribute : Attribute
 {
 	public const string None = "None";
 	public const string NoneWithLeadingDotRemoved = "NoneWithLeadingDotRemoved";
-	public const string NoneWithTailingDotRemoved = "NoneWithTailingDotRemoved";
+	public const string NoneWithTrailingDotRemoved = "NoneWithTrailingDotRemoved";
 	public const string Default = "Default";
 	public const string ToLower = "ToLower";
 	public const string FirstCharToLowerCase = "FirstCharToLowerCase";
@@ -60,7 +60,7 @@ public class ToAttribute : Attribute
 			case FirstCharToLowerCase:
 				return str.FirstCharToLowerCase();
 			case NoneWithLeadingDotRemoved:
-			case NoneWithTailingDotRemoved:
+			case NoneWithTrailingDotRemoved:
 			case None:
 				return "";
 			case Default:

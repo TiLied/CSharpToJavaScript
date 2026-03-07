@@ -1,4 +1,4 @@
-//17.02.2026 21:27:36
+//06.03.2026 11:06:32
 
 #nullable enable
 //Disable missing XML comments.
@@ -165,7 +165,7 @@ using XRWebGLRenderingContext = Union235;
 using FormDataEntryValue = Union237;
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AccelerometerLocalCoordinateSystem
 {
 	[Value("\"device\"")]
@@ -174,7 +174,7 @@ public enum AccelerometerLocalCoordinateSystem
 	Screen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioSessionType
 {
 	[Value("\"auto\"")]
@@ -191,7 +191,7 @@ public enum AudioSessionType
 	PlayAndRecord,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioSessionState
 {
 	[Value("\"inactive\"")]
@@ -202,7 +202,7 @@ public enum AudioSessionState
 	Interrupted,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AutoplayPolicy
 {
 	[Value("\"allowed\"")]
@@ -213,7 +213,7 @@ public enum AutoplayPolicy
 	Disallowed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AutoplayPolicyMediaType
 {
 	[Value("\"mediaelement\"")]
@@ -222,7 +222,7 @@ public enum AutoplayPolicyMediaType
 	Audiocontext,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BackgroundFetchResult
 {
 	[Value("\"\"")]
@@ -233,7 +233,7 @@ public enum BackgroundFetchResult
 	Failure,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BackgroundFetchFailureReason
 {
 	[Value("\"\"")]
@@ -250,7 +250,7 @@ public enum BackgroundFetchFailureReason
 	DownloadTotalExceeded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PresentationStyle
 {
 	[Value("\"unspecified\"")]
@@ -261,7 +261,7 @@ public enum PresentationStyle
 	Attachment,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CompressionFormat
 {
 	[Value("\"deflate\"")]
@@ -272,14 +272,14 @@ public enum CompressionFormat
 	Gzip,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PressureSource
 {
 	[Value("\"cpu\"")]
 	Cpu,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PressureState
 {
 	[Value("\"nominal\"")]
@@ -292,7 +292,7 @@ public enum PressureState
 	Critical,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ContactProperty
 {
 	[Value("\"address\"")]
@@ -307,7 +307,7 @@ public enum ContactProperty
 	Tel,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ContentCategory
 {
 	[Value("\"\"")]
@@ -322,7 +322,7 @@ public enum ContentCategory
 	Audio,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CookieSameSite
 {
 	[Value("\"strict\"")]
@@ -333,7 +333,7 @@ public enum CookieSameSite
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CredentialMediationRequirement
 {
 	[Value("\"silent\"")]
@@ -346,7 +346,7 @@ public enum CredentialMediationRequirement
 	Required,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScriptingPolicyViolationType
 {
 	[Value("\"externalScript\"")]
@@ -359,7 +359,7 @@ public enum ScriptingPolicyViolationType
 	Eval,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SecurityPolicyViolationEventDisposition
 {
 	[Value("\"enforce\"")]
@@ -368,7 +368,7 @@ public enum SecurityPolicyViolationEventDisposition
 	Report,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FontFaceLoadStatus
 {
 	[Value("\"unloaded\"")]
@@ -381,7 +381,7 @@ public enum FontFaceLoadStatus
 	Error,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FontFaceSetLoadStatus
 {
 	[Value("\"loading\"")]
@@ -390,7 +390,7 @@ public enum FontFaceSetLoadStatus
 	Loaded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HighlightType
 {
 	[Value("\"highlight\"")]
@@ -401,7 +401,7 @@ public enum HighlightType
 	GrammarError,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ChildDisplayType
 {
 	[Value("\"block\"")]
@@ -410,7 +410,7 @@ public enum ChildDisplayType
 	Normal,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LayoutSizingMode
 {
 	[Value("\"block-like\"")]
@@ -419,7 +419,7 @@ public enum LayoutSizingMode
 	Manual,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BlockFragmentationType
 {
 	[Value("\"none\"")]
@@ -432,7 +432,7 @@ public enum BlockFragmentationType
 	Region,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BreakType
 {
 	[Value("\"none\"")]
@@ -447,7 +447,7 @@ public enum BreakType
 	Region,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SpatialNavigationDirection
 {
 	[Value("\"up\"")]
@@ -460,7 +460,7 @@ public enum SpatialNavigationDirection
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FocusableAreaSearchMode
 {
 	[Value("\"visible\"")]
@@ -469,7 +469,7 @@ public enum FocusableAreaSearchMode
 	All,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CSSNumericBaseType
 {
 	[Value("\"length\"")]
@@ -488,7 +488,7 @@ public enum CSSNumericBaseType
 	Percent,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CSSMathOperator
 {
 	[Value("\"sum\"")]
@@ -507,7 +507,7 @@ public enum CSSMathOperator
 	Clamp,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScrollBehavior
 {
 	[Value("\"auto\"")]
@@ -518,7 +518,7 @@ public enum ScrollBehavior
 	Smooth,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScrollLogicalPosition
 {
 	[Value("\"start\"")]
@@ -531,7 +531,7 @@ public enum ScrollLogicalPosition
 	Nearest,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CSSBoxType
 {
 	[Value("\"margin\"")]
@@ -544,7 +544,7 @@ public enum CSSBoxType
 	Content,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DevicePostureType
 {
 	[Value("\"continuous\"")]
@@ -553,7 +553,7 @@ public enum DevicePostureType
 	Folded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ItemType
 {
 	[Value("\"product\"")]
@@ -562,7 +562,7 @@ public enum ItemType
 	Subscription,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ShadowRootMode
 {
 	[Value("\"open\"")]
@@ -571,7 +571,7 @@ public enum ShadowRootMode
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SlotAssignmentMode
 {
 	[Value("\"manual\"")]
@@ -580,7 +580,7 @@ public enum SlotAssignmentMode
 	Named,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum UnderlineStyle
 {
 	[Value("\"none\"")]
@@ -595,7 +595,7 @@ public enum UnderlineStyle
 	Wavy,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum UnderlineThickness
 {
 	[Value("\"none\"")]
@@ -606,7 +606,7 @@ public enum UnderlineThickness
 	Thick,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaKeysRequirement
 {
 	[Value("\"required\"")]
@@ -617,7 +617,7 @@ public enum MediaKeysRequirement
 	NotAllowed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaKeySessionType
 {
 	[Value("\"temporary\"")]
@@ -626,7 +626,7 @@ public enum MediaKeySessionType
 	PersistentLicense,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaKeySessionClosedReason
 {
 	[Value("\"internal-error\"")]
@@ -641,7 +641,7 @@ public enum MediaKeySessionClosedReason
 	ResourceEvicted,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaKeyStatus
 {
 	[Value("\"usable\"")]
@@ -662,7 +662,7 @@ public enum MediaKeyStatus
 	InternalError,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaKeyMessageType
 {
 	[Value("\"license-request\"")]
@@ -675,7 +675,7 @@ public enum MediaKeyMessageType
 	IndividualizationRequest,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IdentityCredentialRequestOptionsContext
 {
 	[Value("\"signin\"")]
@@ -688,7 +688,7 @@ public enum IdentityCredentialRequestOptionsContext
 	Continue,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IdentityCredentialRequestOptionsMode
 {
 	[Value("\"active\"")]
@@ -697,14 +697,14 @@ public enum IdentityCredentialRequestOptionsMode
 	Passive,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OpaqueProperty
 {
 	[Value("\"opaque\"")]
 	Opaque,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FenceReportingDestination
 {
 	[Value("\"buyer\"")]
@@ -720,7 +720,7 @@ public enum FenceReportingDestination
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestDestination/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestDestination
 {
 	[Value("\"\"")]
@@ -768,7 +768,7 @@ public enum RequestDestination
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestMode/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestMode
 {
 	[Value("\"navigate\"")]
@@ -782,7 +782,7 @@ public enum RequestMode
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestCredentials/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestCredentials
 {
 	[Value("\"omit\"")]
@@ -794,7 +794,7 @@ public enum RequestCredentials
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestCache/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestCache
 {
 	[Value("\"default\"")]
@@ -812,7 +812,7 @@ public enum RequestCache
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestRedirect/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestRedirect
 {
 	[Value("\"follow\"")]
@@ -824,7 +824,7 @@ public enum RequestRedirect
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestDuplex/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestDuplex
 {
 	[Value("\"half\"")]
@@ -832,7 +832,7 @@ public enum RequestDuplex
 }
 
 ///<include file='CSharpToJavaScript/Utils/Docs/request/request.generated.xml' path='docs/RequestPriority/*'/>
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RequestPriority
 {
 	[Value("\"high\"")]
@@ -843,7 +843,7 @@ public enum RequestPriority
 	Auto,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ResponseType
 {
 	[Value("\"basic\"")]
@@ -860,7 +860,7 @@ public enum ResponseType
 	Opaqueredirect,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FileSystemPermissionMode
 {
 	[Value("\"read\"")]
@@ -869,7 +869,7 @@ public enum FileSystemPermissionMode
 	Readwrite,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WellKnownDirectory
 {
 	[Value("\"desktop\"")]
@@ -887,7 +887,7 @@ public enum WellKnownDirectory
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum EndingType
 {
 	[Value("\"transparent\"")]
@@ -896,7 +896,7 @@ public enum EndingType
 	Native,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FileSystemHandleKind
 {
 	[Value("\"file\"")]
@@ -905,7 +905,7 @@ public enum FileSystemHandleKind
 	Directory,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WriteCommandType
 {
 	[Value("\"write\"")]
@@ -916,7 +916,7 @@ public enum WriteCommandType
 	Truncate,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FullscreenNavigationUI
 {
 	[Value("\"auto\"")]
@@ -927,7 +927,7 @@ public enum FullscreenNavigationUI
 	Hide,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GamepadHand
 {
 	[Value("\"\"")]
@@ -938,7 +938,7 @@ public enum GamepadHand
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GamepadMappingType
 {
 	[Value("\"\"")]
@@ -949,7 +949,7 @@ public enum GamepadMappingType
 	XrStandard,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GamepadHapticsResult
 {
 	[Value("\"complete\"")]
@@ -958,7 +958,7 @@ public enum GamepadHapticsResult
 	Preempted,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GamepadHapticEffectType
 {
 	[Value("\"dual-rumble\"")]
@@ -967,7 +967,7 @@ public enum GamepadHapticEffectType
 	TriggerRumble,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GyroscopeLocalCoordinateSystem
 {
 	[Value("\"device\"")]
@@ -976,7 +976,7 @@ public enum GyroscopeLocalCoordinateSystem
 	Screen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HandwritingRecognitionType
 {
 	[Value("\"text\"")]
@@ -985,7 +985,7 @@ public enum HandwritingRecognitionType
 	PerCharacter,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HandwritingInputType
 {
 	[Value("\"mouse\"")]
@@ -996,7 +996,7 @@ public enum HandwritingInputType
 	Touch,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DocumentReadyState
 {
 	[Value("\"loading\"")]
@@ -1007,7 +1007,7 @@ public enum DocumentReadyState
 	Complete,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DocumentVisibilityState
 {
 	[Value("\"visible\"")]
@@ -1017,7 +1017,7 @@ public enum DocumentVisibilityState
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanPlayTypeResult
 {
 	[Value("\"\"")]
@@ -1029,7 +1029,7 @@ public enum CanPlayTypeResult
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TextTrackMode
 {
 	[Value("\"disabled\"")]
@@ -1040,7 +1040,7 @@ public enum TextTrackMode
 	Showing,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TextTrackKind
 {
 	[Value("\"subtitles\"")]
@@ -1055,7 +1055,7 @@ public enum TextTrackKind
 	Metadata,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SelectionMode
 {
 	[Value("\"select\"")]
@@ -1068,7 +1068,7 @@ public enum SelectionMode
 	Preserve,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PredefinedColorSpace
 {
 	[Value("\"srgb\"")]
@@ -1077,7 +1077,7 @@ public enum PredefinedColorSpace
 	DisplayP3,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasFillRule
 {
 	[Value("\"nonzero\"")]
@@ -1086,7 +1086,7 @@ public enum CanvasFillRule
 	Evenodd,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ImageSmoothingQuality
 {
 	[Value("\"low\"")]
@@ -1097,7 +1097,7 @@ public enum ImageSmoothingQuality
 	High,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasLineCap
 {
 	[Value("\"butt\"")]
@@ -1108,7 +1108,7 @@ public enum CanvasLineCap
 	Square,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasLineJoin
 {
 	[Value("\"round\"")]
@@ -1119,7 +1119,7 @@ public enum CanvasLineJoin
 	Miter,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasTextAlign
 {
 	[Value("\"start\"")]
@@ -1134,7 +1134,7 @@ public enum CanvasTextAlign
 	Center,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasTextBaseline
 {
 	[Value("\"top\"")]
@@ -1151,7 +1151,7 @@ public enum CanvasTextBaseline
 	Bottom,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasDirection
 {
 	[Value("\"ltr\"")]
@@ -1162,7 +1162,7 @@ public enum CanvasDirection
 	Inherit,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasFontKerning
 {
 	[Value("\"auto\"")]
@@ -1173,7 +1173,7 @@ public enum CanvasFontKerning
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasFontStretch
 {
 	[Value("\"ultra-condensed\"")]
@@ -1196,7 +1196,7 @@ public enum CanvasFontStretch
 	UltraExpanded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasFontVariantCaps
 {
 	[Value("\"normal\"")]
@@ -1215,7 +1215,7 @@ public enum CanvasFontVariantCaps
 	TitlingCaps,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CanvasTextRendering
 {
 	[Value("\"auto\"")]
@@ -1228,7 +1228,7 @@ public enum CanvasTextRendering
 	GeometricPrecision,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OffscreenRenderingContextId
 {
 	[Value("\"2d\"")]
@@ -1243,7 +1243,7 @@ public enum OffscreenRenderingContextId
 	Webgpu,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScrollRestoration
 {
 	[Value("\"auto\"")]
@@ -1252,7 +1252,7 @@ public enum ScrollRestoration
 	Manual,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NavigationHistoryBehavior
 {
 	[Value("\"auto\"")]
@@ -1263,7 +1263,7 @@ public enum NavigationHistoryBehavior
 	Replace,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NavigationType
 {
 	[Value("\"push\"")]
@@ -1276,7 +1276,7 @@ public enum NavigationType
 	Traverse,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NavigationFocusReset
 {
 	[Value("\"after-transition\"")]
@@ -1285,7 +1285,7 @@ public enum NavigationFocusReset
 	Manual,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NavigationScrollBehavior
 {
 	[Value("\"after-transition\"")]
@@ -1294,7 +1294,7 @@ public enum NavigationScrollBehavior
 	Manual,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DOMParserSupportedType
 {
 	[Value("\"text/html\"")]
@@ -1309,7 +1309,7 @@ public enum DOMParserSupportedType
 	ImageSvgXml,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ImageOrientation
 {
 	[Value("\"from-image\"")]
@@ -1318,7 +1318,7 @@ public enum ImageOrientation
 	FlipY,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PremultiplyAlpha
 {
 	[Value("\"none\"")]
@@ -1329,7 +1329,7 @@ public enum PremultiplyAlpha
 	Default,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ColorSpaceConversion
 {
 	[Value("\"none\"")]
@@ -1338,7 +1338,7 @@ public enum ColorSpaceConversion
 	Default,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ResizeQuality
 {
 	[Value("\"pixelated\"")]
@@ -1351,7 +1351,7 @@ public enum ResizeQuality
 	High,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WorkerType
 {
 	[Value("\"classic\"")]
@@ -1362,7 +1362,7 @@ public enum WorkerType
 
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum UserIdleState
 {
 	[Value("\"active\"")]
@@ -1371,7 +1371,7 @@ public enum UserIdleState
 	Idle,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScreenIdleState
 {
 	[Value("\"locked\"")]
@@ -1380,7 +1380,7 @@ public enum ScreenIdleState
 	Unlocked,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RedEyeReduction
 {
 	[Value("\"never\"")]
@@ -1391,7 +1391,7 @@ public enum RedEyeReduction
 	Controllable,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FillLightMode
 {
 	[Value("\"auto\"")]
@@ -1402,7 +1402,7 @@ public enum FillLightMode
 	Flash,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MeteringMode
 {
 	[Value("\"none\"")]
@@ -1415,7 +1415,7 @@ public enum MeteringMode
 	Continuous,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IDBRequestReadyState
 {
 	[Value("\"pending\"")]
@@ -1424,7 +1424,7 @@ public enum IDBRequestReadyState
 	Done,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IDBTransactionDurability
 {
 	[Value("\"default\"")]
@@ -1435,7 +1435,7 @@ public enum IDBTransactionDurability
 	Relaxed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IDBCursorDirection
 {
 	[Value("\"next\"")]
@@ -1448,7 +1448,7 @@ public enum IDBCursorDirection
 	Prevunique,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IDBTransactionMode
 {
 	[Value("\"readonly\"")]
@@ -1459,7 +1459,7 @@ public enum IDBTransactionMode
 	Versionchange,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LoginStatus
 {
 	[Value("\"logged-in\"")]
@@ -1468,7 +1468,7 @@ public enum LoginStatus
 	LoggedOut,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScriptInvokerType
 {
 	[Value("\"classic-script\"")]
@@ -1485,7 +1485,7 @@ public enum ScriptInvokerType
 	RejectPromise,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScriptWindowAttribution
 {
 	[Value("\"self\"")]
@@ -1500,7 +1500,7 @@ public enum ScriptWindowAttribution
 	Other,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MagnetometerLocalCoordinateSystem
 {
 	[Value("\"device\"")]
@@ -1509,7 +1509,7 @@ public enum MagnetometerLocalCoordinateSystem
 	Screen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AppBannerPromptOutcome
 {
 	[Value("\"accepted\"")]
@@ -1518,7 +1518,7 @@ public enum AppBannerPromptOutcome
 	Dismissed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaDecodingType
 {
 	[Value("\"file\"")]
@@ -1529,7 +1529,7 @@ public enum MediaDecodingType
 	Webrtc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaEncodingType
 {
 	[Value("\"record\"")]
@@ -1538,7 +1538,7 @@ public enum MediaEncodingType
 	Webrtc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HdrMetadataType
 {
 	[Value("\"smpteSt2086\"")]
@@ -1549,7 +1549,7 @@ public enum HdrMetadataType
 	SmpteSt209440,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ColorGamut
 {
 	[Value("\"srgb\"")]
@@ -1560,7 +1560,7 @@ public enum ColorGamut
 	Rec2020,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TransferFunction
 {
 	[Value("\"srgb\"")]
@@ -1571,7 +1571,7 @@ public enum TransferFunction
 	Hlg,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ReadyState
 {
 	[Value("\"closed\"")]
@@ -1582,7 +1582,7 @@ public enum ReadyState
 	Ended,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum EndOfStreamError
 {
 	[Value("\"network\"")]
@@ -1591,7 +1591,7 @@ public enum EndOfStreamError
 	Decode,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AppendMode
 {
 	[Value("\"segments\"")]
@@ -1600,7 +1600,7 @@ public enum AppendMode
 	Sequence,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MockCapturePromptResult
 {
 	[Value("\"granted\"")]
@@ -1609,7 +1609,7 @@ public enum MockCapturePromptResult
 	Denied,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CaptureAction
 {
 	[Value("\"next\"")]
@@ -1622,7 +1622,7 @@ public enum CaptureAction
 	Last,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaStreamTrackState
 {
 	[Value("\"live\"")]
@@ -1631,7 +1631,7 @@ public enum MediaStreamTrackState
 	Ended,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoFacingModeEnum
 {
 	[Value("\"user\"")]
@@ -1644,7 +1644,7 @@ public enum VideoFacingModeEnum
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoResizeModeEnum
 {
 	[Value("\"none\"")]
@@ -1653,7 +1653,7 @@ public enum VideoResizeModeEnum
 	CropAndScale,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaDeviceKind
 {
 	[Value("\"audioinput\"")]
@@ -1664,7 +1664,7 @@ public enum MediaDeviceKind
 	Videoinput,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaSessionPlaybackState
 {
 	[Value("\"none\"")]
@@ -1675,7 +1675,7 @@ public enum MediaSessionPlaybackState
 	Playing,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MediaSessionAction
 {
 	[Value("\"play\"")]
@@ -1714,7 +1714,7 @@ public enum MediaSessionAction
 	Voiceactivity,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BitrateMode
 {
 	[Value("\"constant\"")]
@@ -1723,7 +1723,7 @@ public enum BitrateMode
 	Variable,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RecordingState
 {
 	[Value("\"inactive\"")]
@@ -1734,7 +1734,7 @@ public enum RecordingState
 	Paused,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCDegradationPreference
 {
 	[Value("\"maintain-framerate\"")]
@@ -1745,7 +1745,7 @@ public enum RTCDegradationPreference
 	Balanced,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NavigationTimingType
 {
 	[Value("\"navigate\"")]
@@ -1758,7 +1758,7 @@ public enum NavigationTimingType
 	Prerender,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ConnectionType
 {
 	[Value("\"bluetooth\"")]
@@ -1781,7 +1781,7 @@ public enum ConnectionType
 	Wimax,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum EffectiveConnectionType
 {
 	[Value("\"2g\"")]
@@ -1794,7 +1794,7 @@ public enum EffectiveConnectionType
 	Slow2g,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NotificationPermission
 {
 	[Value("\"default\"")]
@@ -1805,7 +1805,7 @@ public enum NotificationPermission
 	Granted,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum NotificationDirection
 {
 	[Value("\"auto\"")]
@@ -1816,7 +1816,7 @@ public enum NotificationDirection
 	Rtl,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OrientationSensorLocalCoordinateSystem
 {
 	[Value("\"device\"")]
@@ -1825,7 +1825,7 @@ public enum OrientationSensorLocalCoordinateSystem
 	Screen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ClientLifecycleState
 {
 	[Value("\"active\"")]
@@ -1834,7 +1834,7 @@ public enum ClientLifecycleState
 	Frozen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PaymentDelegation
 {
 	[Value("\"shippingAddress\"")]
@@ -1847,7 +1847,7 @@ public enum PaymentDelegation
 	PayerEmail,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PaymentShippingType
 {
 	[Value("\"shipping\"")]
@@ -1858,7 +1858,7 @@ public enum PaymentShippingType
 	Pickup,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PaymentComplete
 {
 	[Value("\"fail\"")]
@@ -1869,7 +1869,7 @@ public enum PaymentComplete
 	Unknown,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PermissionState
 {
 	[Value("\"granted\"")]
@@ -1880,7 +1880,7 @@ public enum PermissionState
 	Prompt,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PresentationConnectionState
 {
 	[Value("\"connecting\"")]
@@ -1893,7 +1893,7 @@ public enum PresentationConnectionState
 	Terminated,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PresentationConnectionCloseReason
 {
 	[Value("\"error\"")]
@@ -1904,7 +1904,7 @@ public enum PresentationConnectionCloseReason
 	Wentaway,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IPAddressSpace
 {
 	[Value("\"public\"")]
@@ -1915,7 +1915,7 @@ public enum IPAddressSpace
 	Local,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PushEncryptionKeyName
 {
 	[Value("\"p256dh\"")]
@@ -1924,7 +1924,7 @@ public enum PushEncryptionKeyName
 	Auth,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ReferrerPolicy
 {
 	[Value("\"\"")]
@@ -1947,7 +1947,7 @@ public enum ReferrerPolicy
 	UnsafeUrl,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RemotePlaybackState
 {
 	[Value("\"connecting\"")]
@@ -1958,7 +1958,7 @@ public enum RemotePlaybackState
 	Disconnected,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ResizeObserverBoxOptions
 {
 	[Value("\"border-box\"")]
@@ -1969,7 +1969,7 @@ public enum ResizeObserverBoxOptions
 	DevicePixelContentBox,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RenderBlockingStatusType
 {
 	[Value("\"blocking\"")]
@@ -1978,7 +1978,7 @@ public enum RenderBlockingStatusType
 	NonBlocking,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SameSiteCookiesType
 {
 	[Value("\"all\"")]
@@ -1987,14 +1987,14 @@ public enum SameSiteCookiesType
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SanitizerPresets
 {
 	[Value("\"default\"")]
 	Default,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TaskPriority
 {
 	[Value("\"user-blocking\"")]
@@ -2005,7 +2005,7 @@ public enum TaskPriority
 	Background,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CaptureStartFocusBehavior
 {
 	[Value("\"focus-capturing-application\"")]
@@ -2016,7 +2016,7 @@ public enum CaptureStartFocusBehavior
 	NoFocusChange,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SelfCapturePreferenceEnum
 {
 	[Value("\"include\"")]
@@ -2025,7 +2025,7 @@ public enum SelfCapturePreferenceEnum
 	Exclude,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SystemAudioPreferenceEnum
 {
 	[Value("\"include\"")]
@@ -2034,7 +2034,7 @@ public enum SystemAudioPreferenceEnum
 	Exclude,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SurfaceSwitchingPreferenceEnum
 {
 	[Value("\"include\"")]
@@ -2043,7 +2043,7 @@ public enum SurfaceSwitchingPreferenceEnum
 	Exclude,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MonitorTypeSurfacesEnum
 {
 	[Value("\"include\"")]
@@ -2052,7 +2052,7 @@ public enum MonitorTypeSurfacesEnum
 	Exclude,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DisplayCaptureSurfaceType
 {
 	[Value("\"monitor\"")]
@@ -2063,7 +2063,7 @@ public enum DisplayCaptureSurfaceType
 	Browser,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CursorCaptureConstraint
 {
 	[Value("\"never\"")]
@@ -2074,7 +2074,7 @@ public enum CursorCaptureConstraint
 	Motion,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OrientationLockType
 {
 	[Value("\"any\"")]
@@ -2095,7 +2095,7 @@ public enum OrientationLockType
 	LandscapeSecondary,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OrientationType
 {
 	[Value("\"portrait-primary\"")]
@@ -2108,14 +2108,14 @@ public enum OrientationType
 	LandscapeSecondary,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WakeLockType
 {
 	[Value("\"screen\"")]
 	Screen,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScrollAxis
 {
 	[Value("\"block\"")]
@@ -2128,7 +2128,7 @@ public enum ScrollAxis
 	Y,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ParityType
 {
 	[Value("\"none\"")]
@@ -2139,7 +2139,7 @@ public enum ParityType
 	Odd,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FlowControlType
 {
 	[Value("\"none\"")]
@@ -2148,7 +2148,7 @@ public enum FlowControlType
 	Hardware,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ServiceWorkerState
 {
 	[Value("\"parsed\"")]
@@ -2165,7 +2165,7 @@ public enum ServiceWorkerState
 	Redundant,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ServiceWorkerUpdateViaCache
 {
 	[Value("\"imports\"")]
@@ -2176,7 +2176,7 @@ public enum ServiceWorkerUpdateViaCache
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FrameType
 {
 	[Value("\"auxiliary\"")]
@@ -2189,7 +2189,7 @@ public enum FrameType
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ClientType
 {
 	[Value("\"window\"")]
@@ -2202,7 +2202,7 @@ public enum ClientType
 	All,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RunningStatus
 {
 	[Value("\"running\"")]
@@ -2211,7 +2211,7 @@ public enum RunningStatus
 	NotRunning,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RouterSourceEnum
 {
 	[Value("\"cache\"")]
@@ -2224,7 +2224,7 @@ public enum RouterSourceEnum
 	RaceNetworkAndFetchHandler,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LandmarkType
 {
 	[Value("\"mouth\"")]
@@ -2235,7 +2235,7 @@ public enum LandmarkType
 	Nose,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BarcodeFormat
 {
 	[Value("\"aztec\"")]
@@ -2269,7 +2269,7 @@ public enum BarcodeFormat
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SpeechRecognitionErrorCode
 {
 	[Value("\"no-speech\"")]
@@ -2290,7 +2290,7 @@ public enum SpeechRecognitionErrorCode
 	LanguageNotSupported,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SpeechSynthesisErrorCode
 {
 	[Value("\"canceled\"")]
@@ -2319,21 +2319,21 @@ public enum SpeechSynthesisErrorCode
 	NotAllowed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ReadableStreamReaderMode
 {
 	[Value("\"byob\"")]
 	Byob,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ReadableStreamType
 {
 	[Value("\"bytes\"")]
 	Bytes,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TouchType
 {
 	[Value("\"direct\"")]
@@ -2342,7 +2342,7 @@ public enum TouchType
 	Stylus,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RefreshPolicy
 {
 	[Value("\"none\"")]
@@ -2351,14 +2351,14 @@ public enum RefreshPolicy
 	Refresh,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TokenVersion
 {
 	[Value("\"1\"")]
 	_1,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OperationType
 {
 	[Value("\"token-request\"")]
@@ -2369,7 +2369,7 @@ public enum OperationType
 	TokenRedemption,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum KAnonStatus
 {
 	[Value("\"passedAndEnforced\"")]
@@ -2382,7 +2382,7 @@ public enum KAnonStatus
 	NotCalculated,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ImportExportKind
 {
 	[Value("\"function\"")]
@@ -2395,7 +2395,7 @@ public enum ImportExportKind
 	Global,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TableKind
 {
 	[Value("\"externref\"")]
@@ -2404,7 +2404,7 @@ public enum TableKind
 	Anyfunc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ValueType
 {
 	[Value("\"i32\"")]
@@ -2423,7 +2423,7 @@ public enum ValueType
 	Anyfunc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum IterationCompositeOperation
 {
 	[Value("\"replace\"")]
@@ -2432,7 +2432,7 @@ public enum IterationCompositeOperation
 	Accumulate,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AnimationPlayState
 {
 	[Value("\"idle\"")]
@@ -2445,7 +2445,7 @@ public enum AnimationPlayState
 	Finished,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AnimationReplaceState
 {
 	[Value("\"active\"")]
@@ -2456,7 +2456,7 @@ public enum AnimationReplaceState
 	Persisted,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum FillMode
 {
 	[Value("\"none\"")]
@@ -2471,7 +2471,7 @@ public enum FillMode
 	Auto,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PlaybackDirection
 {
 	[Value("\"normal\"")]
@@ -2484,7 +2484,7 @@ public enum PlaybackDirection
 	AlternateReverse,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CompositeOperation
 {
 	[Value("\"replace\"")]
@@ -2495,7 +2495,7 @@ public enum CompositeOperation
 	Accumulate,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CompositeOperationOrAuto
 {
 	[Value("\"replace\"")]
@@ -2508,7 +2508,7 @@ public enum CompositeOperationOrAuto
 	Auto,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LockMode
 {
 	[Value("\"shared\"")]
@@ -2517,14 +2517,14 @@ public enum LockMode
 	Exclusive,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OTPCredentialTransportType
 {
 	[Value("\"sms\"")]
 	Sms,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioContextState
 {
 	[Value("\"suspended\"")]
@@ -2535,7 +2535,7 @@ public enum AudioContextState
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioContextRenderSizeCategory
 {
 	[Value("\"default\"")]
@@ -2544,7 +2544,7 @@ public enum AudioContextRenderSizeCategory
 	Hardware,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioContextLatencyCategory
 {
 	[Value("\"balanced\"")]
@@ -2555,14 +2555,14 @@ public enum AudioContextLatencyCategory
 	Playback,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioSinkType
 {
 	[Value("\"none\"")]
 	None,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ChannelCountMode
 {
 	[Value("\"max\"")]
@@ -2573,7 +2573,7 @@ public enum ChannelCountMode
 	Explicit,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ChannelInterpretation
 {
 	[Value("\"speakers\"")]
@@ -2582,7 +2582,7 @@ public enum ChannelInterpretation
 	Discrete,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AutomationRate
 {
 	[Value("\"a-rate\"")]
@@ -2591,7 +2591,7 @@ public enum AutomationRate
 	KRate,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BiquadFilterType
 {
 	[Value("\"lowpass\"")]
@@ -2612,7 +2612,7 @@ public enum BiquadFilterType
 	Allpass,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OscillatorType
 {
 	[Value("\"sine\"")]
@@ -2627,7 +2627,7 @@ public enum OscillatorType
 	Custom,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PanningModelType
 {
 	[Value("\"equalpower\"")]
@@ -2636,7 +2636,7 @@ public enum PanningModelType
 	HRTF,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DistanceModelType
 {
 	[Value("\"linear\"")]
@@ -2647,7 +2647,7 @@ public enum DistanceModelType
 	Exponential,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OverSampleType
 {
 	[Value("\"none\"")]
@@ -2658,7 +2658,7 @@ public enum OverSampleType
 	_4x,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AuthenticatorAttachment
 {
 	[Value("\"platform\"")]
@@ -2667,7 +2667,7 @@ public enum AuthenticatorAttachment
 	CrossPlatform,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ResidentKeyRequirement
 {
 	[Value("\"discouraged\"")]
@@ -2678,7 +2678,7 @@ public enum ResidentKeyRequirement
 	Required,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AttestationConveyancePreference
 {
 	[Value("\"none\"")]
@@ -2691,7 +2691,7 @@ public enum AttestationConveyancePreference
 	Enterprise,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum TokenBindingStatus
 {
 	[Value("\"present\"")]
@@ -2700,14 +2700,14 @@ public enum TokenBindingStatus
 	Supported,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PublicKeyCredentialType
 {
 	[Value("\"public-key\"")]
 	PublicKey,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AuthenticatorTransport
 {
 	[Value("\"usb\"")]
@@ -2725,7 +2725,7 @@ public enum AuthenticatorTransport
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum UserVerificationRequirement
 {
 	[Value("\"required\"")]
@@ -2736,7 +2736,7 @@ public enum UserVerificationRequirement
 	Discouraged,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ClientCapability
 {
 	[Value("\"conditionalCreate\"")]
@@ -2759,7 +2759,7 @@ public enum ClientCapability
 	SignalUnknownCredential,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PublicKeyCredentialHint
 {
 	[Value("\"security-key\"")]
@@ -2770,7 +2770,7 @@ public enum PublicKeyCredentialHint
 	Hybrid,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LargeBlobSupport
 {
 	[Value("\"required\"")]
@@ -2779,7 +2779,7 @@ public enum LargeBlobSupport
 	Preferred,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AacBitstreamFormat
 {
 	[Value("\"aac\"")]
@@ -2788,7 +2788,7 @@ public enum AacBitstreamFormat
 	Adts,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AvcBitstreamFormat
 {
 	[Value("\"annexb\"")]
@@ -2797,7 +2797,7 @@ public enum AvcBitstreamFormat
 	Avc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HevcBitstreamFormat
 {
 	[Value("\"annexb\"")]
@@ -2806,7 +2806,7 @@ public enum HevcBitstreamFormat
 	Hevc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OpusBitstreamFormat
 {
 	[Value("\"opus\"")]
@@ -2815,7 +2815,7 @@ public enum OpusBitstreamFormat
 	Ogg,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OpusSignal
 {
 	[Value("\"auto\"")]
@@ -2826,7 +2826,7 @@ public enum OpusSignal
 	Voice,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum OpusApplication
 {
 	[Value("\"voip\"")]
@@ -2837,7 +2837,7 @@ public enum OpusApplication
 	Lowdelay,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HardwareAcceleration
 {
 	[Value("\"no-preference\"")]
@@ -2848,7 +2848,7 @@ public enum HardwareAcceleration
 	PreferSoftware,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AlphaOption
 {
 	[Value("\"keep\"")]
@@ -2857,7 +2857,7 @@ public enum AlphaOption
 	Discard,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LatencyMode
 {
 	[Value("\"quality\"")]
@@ -2866,7 +2866,7 @@ public enum LatencyMode
 	Realtime,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoEncoderBitrateMode
 {
 	[Value("\"constant\"")]
@@ -2877,7 +2877,7 @@ public enum VideoEncoderBitrateMode
 	Quantizer,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum CodecState
 {
 	[Value("\"unconfigured\"")]
@@ -2888,7 +2888,7 @@ public enum CodecState
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum EncodedAudioChunkType
 {
 	[Value("\"key\"")]
@@ -2897,7 +2897,7 @@ public enum EncodedAudioChunkType
 	Delta,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum EncodedVideoChunkType
 {
 	[Value("\"key\"")]
@@ -2906,7 +2906,7 @@ public enum EncodedVideoChunkType
 	Delta,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AudioSampleFormat
 {
 	[Value("\"u8\"")]
@@ -2927,7 +2927,7 @@ public enum AudioSampleFormat
 	F32Planar,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoPixelFormat
 {
 	[Value("\"I420\"")]
@@ -2978,7 +2978,7 @@ public enum VideoPixelFormat
 	BGRX,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoColorPrimaries
 {
 	[Value("\"bt709\"")]
@@ -2993,7 +2993,7 @@ public enum VideoColorPrimaries
 	Smpte432,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoTransferCharacteristics
 {
 	[Value("\"bt709\"")]
@@ -3010,7 +3010,7 @@ public enum VideoTransferCharacteristics
 	Hlg,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum VideoMatrixCoefficients
 {
 	[Value("\"rgb\"")]
@@ -3025,7 +3025,7 @@ public enum VideoMatrixCoefficients
 	Bt2020Ncl,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum KeyType
 {
 	[Value("\"public\"")]
@@ -3036,7 +3036,7 @@ public enum KeyType
 	Secret,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum KeyUsage
 {
 	[Value("\"encrypt\"")]
@@ -3057,7 +3057,7 @@ public enum KeyUsage
 	UnwrapKey,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum KeyFormat
 {
 	[Value("\"raw\"")]
@@ -3070,7 +3070,7 @@ public enum KeyFormat
 	Jwk,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WebGLPowerPreference
 {
 	[Value("\"default\"")]
@@ -3081,7 +3081,7 @@ public enum WebGLPowerPreference
 	HighPerformance,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUPowerPreference
 {
 	[Value("\"low-power\"")]
@@ -3090,7 +3090,7 @@ public enum GPUPowerPreference
 	HighPerformance,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUFeatureName
 {
 	[Value("\"depth-clip-control\"")]
@@ -3127,7 +3127,7 @@ public enum GPUFeatureName
 	DualSourceBlending,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUBufferMapState
 {
 	[Value("\"unmapped\"")]
@@ -3138,7 +3138,7 @@ public enum GPUBufferMapState
 	Mapped,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUTextureDimension
 {
 	[Value("\"1d\"")]
@@ -3150,7 +3150,7 @@ public enum GPUTextureDimension
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUTextureViewDimension
 {
 	[Value("\"1d\"")]
@@ -3167,7 +3167,7 @@ public enum GPUTextureViewDimension
 	_3d,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUTextureAspect
 {
 	[Value("\"all\"")]
@@ -3178,7 +3178,7 @@ public enum GPUTextureAspect
 	DepthOnly,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUTextureFormat
 {
 	[Value("\"r8unorm\"")]
@@ -3373,7 +3373,7 @@ public enum GPUTextureFormat
 	Astc12x12UnormSrgb,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUAddressMode
 {
 	[Value("\"clamp-to-edge\"")]
@@ -3384,7 +3384,7 @@ public enum GPUAddressMode
 	MirrorRepeat,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUFilterMode
 {
 	[Value("\"nearest\"")]
@@ -3393,7 +3393,7 @@ public enum GPUFilterMode
 	Linear,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUMipmapFilterMode
 {
 	[Value("\"nearest\"")]
@@ -3402,7 +3402,7 @@ public enum GPUMipmapFilterMode
 	Linear,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUCompareFunction
 {
 	[Value("\"never\"")]
@@ -3423,7 +3423,7 @@ public enum GPUCompareFunction
 	Always,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUBufferBindingType
 {
 	[Value("\"uniform\"")]
@@ -3434,7 +3434,7 @@ public enum GPUBufferBindingType
 	ReadOnlyStorage,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUSamplerBindingType
 {
 	[Value("\"filtering\"")]
@@ -3445,7 +3445,7 @@ public enum GPUSamplerBindingType
 	Comparison,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUTextureSampleType
 {
 	[Value("\"float\"")]
@@ -3460,7 +3460,7 @@ public enum GPUTextureSampleType
 	Uint,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUStorageTextureAccess
 {
 	[Value("\"write-only\"")]
@@ -3471,7 +3471,7 @@ public enum GPUStorageTextureAccess
 	ReadWrite,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUCompilationMessageType
 {
 	[Value("\"error\"")]
@@ -3482,7 +3482,7 @@ public enum GPUCompilationMessageType
 	Info,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUPipelineErrorReason
 {
 	[Value("\"validation\"")]
@@ -3491,14 +3491,14 @@ public enum GPUPipelineErrorReason
 	Internal,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUAutoLayoutMode
 {
 	[Value("\"auto\"")]
 	Auto,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUPrimitiveTopology
 {
 	[Value("\"point-list\"")]
@@ -3513,7 +3513,7 @@ public enum GPUPrimitiveTopology
 	TriangleStrip,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUFrontFace
 {
 	[Value("\"ccw\"")]
@@ -3522,7 +3522,7 @@ public enum GPUFrontFace
 	Cw,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUCullMode
 {
 	[Value("\"none\"")]
@@ -3533,7 +3533,7 @@ public enum GPUCullMode
 	Back,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUBlendFactor
 {
 	[Value("\"zero\"")]
@@ -3572,7 +3572,7 @@ public enum GPUBlendFactor
 	OneMinusSrc1Alpha,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUBlendOperation
 {
 	[Value("\"add\"")]
@@ -3587,7 +3587,7 @@ public enum GPUBlendOperation
 	Max,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUStencilOperation
 {
 	[Value("\"keep\"")]
@@ -3608,7 +3608,7 @@ public enum GPUStencilOperation
 	DecrementWrap,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUIndexFormat
 {
 	[Value("\"uint16\"")]
@@ -3617,7 +3617,7 @@ public enum GPUIndexFormat
 	Uint32,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUVertexFormat
 {
 	[Value("\"uint8\"")]
@@ -3704,7 +3704,7 @@ public enum GPUVertexFormat
 	Unorm8x4Bgra,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUVertexStepMode
 {
 	[Value("\"vertex\"")]
@@ -3713,7 +3713,7 @@ public enum GPUVertexStepMode
 	Instance,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPULoadOp
 {
 	[Value("\"load\"")]
@@ -3722,7 +3722,7 @@ public enum GPULoadOp
 	Clear,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUStoreOp
 {
 	[Value("\"store\"")]
@@ -3731,7 +3731,7 @@ public enum GPUStoreOp
 	Discard,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUQueryType
 {
 	[Value("\"occlusion\"")]
@@ -3740,7 +3740,7 @@ public enum GPUQueryType
 	Timestamp,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUCanvasAlphaMode
 {
 	[Value("\"opaque\"")]
@@ -3749,7 +3749,7 @@ public enum GPUCanvasAlphaMode
 	Premultiplied,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUCanvasToneMappingMode
 {
 	[Value("\"standard\"")]
@@ -3758,7 +3758,7 @@ public enum GPUCanvasToneMappingMode
 	Extended,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUDeviceLostReason
 {
 	[Value("\"unknown\"")]
@@ -3767,7 +3767,7 @@ public enum GPUDeviceLostReason
 	Destroyed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum GPUErrorFilter
 {
 	[Value("\"validation\"")]
@@ -3778,7 +3778,7 @@ public enum GPUErrorFilter
 	Internal,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum HIDUnitSystem
 {
 	[Value("\"none\"")]
@@ -3800,7 +3800,7 @@ public enum HIDUnitSystem
 
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MIDIPortType
 {
 	[Value("\"input\"")]
@@ -3809,7 +3809,7 @@ public enum MIDIPortType
 	Output,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MIDIPortDeviceState
 {
 	[Value("\"disconnected\"")]
@@ -3818,7 +3818,7 @@ public enum MIDIPortDeviceState
 	Connected,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MIDIPortConnectionState
 {
 	[Value("\"open\"")]
@@ -3829,7 +3829,7 @@ public enum MIDIPortConnectionState
 	Pending,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLDeviceType
 {
 	[Value("\"cpu\"")]
@@ -3840,7 +3840,7 @@ public enum MLDeviceType
 	Npu,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLPowerPreference
 {
 	[Value("\"default\"")]
@@ -3851,7 +3851,7 @@ public enum MLPowerPreference
 	LowPower,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLInputOperandLayout
 {
 	[Value("\"nchw\"")]
@@ -3860,7 +3860,7 @@ public enum MLInputOperandLayout
 	Nhwc,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLOperandDataType
 {
 	[Value("\"float32\"")]
@@ -3881,7 +3881,7 @@ public enum MLOperandDataType
 	Uint8,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLConv2dFilterOperandLayout
 {
 	[Value("\"oihw\"")]
@@ -3894,7 +3894,7 @@ public enum MLConv2dFilterOperandLayout
 	Ihwo,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLConvTranspose2dFilterOperandLayout
 {
 	[Value("\"iohw\"")]
@@ -3905,7 +3905,7 @@ public enum MLConvTranspose2dFilterOperandLayout
 	Ohwi,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLGruWeightLayout
 {
 	[Value("\"zrn\"")]
@@ -3914,7 +3914,7 @@ public enum MLGruWeightLayout
 	Rzn,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLRecurrentNetworkActivation
 {
 	[Value("\"relu\"")]
@@ -3925,7 +3925,7 @@ public enum MLRecurrentNetworkActivation
 	Tanh,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLRecurrentNetworkDirection
 {
 	[Value("\"forward\"")]
@@ -3936,7 +3936,7 @@ public enum MLRecurrentNetworkDirection
 	Both,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLLstmWeightLayout
 {
 	[Value("\"iofg\"")]
@@ -3945,7 +3945,7 @@ public enum MLLstmWeightLayout
 	Ifgo,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLPaddingMode
 {
 	[Value("\"constant\"")]
@@ -3958,7 +3958,7 @@ public enum MLPaddingMode
 	Symmetric,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLRoundingType
 {
 	[Value("\"floor\"")]
@@ -3967,7 +3967,7 @@ public enum MLRoundingType
 	Ceil,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum MLInterpolationMode
 {
 	[Value("\"nearest-neighbor\"")]
@@ -3976,7 +3976,7 @@ public enum MLInterpolationMode
 	Linear,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SFrameTransformRole
 {
 	[Value("\"encrypt\"")]
@@ -3985,7 +3985,7 @@ public enum SFrameTransformRole
 	Decrypt,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum SFrameTransformErrorEventType
 {
 	[Value("\"authentication\"")]
@@ -3996,7 +3996,7 @@ public enum SFrameTransformErrorEventType
 	Syntax,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCEncodedVideoFrameType
 {
 	[Value("\"empty\"")]
@@ -4007,7 +4007,7 @@ public enum RTCEncodedVideoFrameType
 	Delta,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCErrorDetailTypeIdp
 {
 	[Value("\"idp-bad-script-failure\"")]
@@ -4028,7 +4028,7 @@ public enum RTCErrorDetailTypeIdp
 	IdpTokenInvalid,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCPriorityType
 {
 	[Value("\"very-low\"")]
@@ -4041,7 +4041,7 @@ public enum RTCPriorityType
 	High,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCStatsType
 {
 	[Value("\"codec\"")]
@@ -4074,7 +4074,7 @@ public enum RTCStatsType
 	Certificate,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCQualityLimitationReason
 {
 	[Value("\"none\"")]
@@ -4087,7 +4087,7 @@ public enum RTCQualityLimitationReason
 	Other,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCDtlsRole
 {
 	[Value("\"client\"")]
@@ -4098,7 +4098,7 @@ public enum RTCDtlsRole
 	Unknown,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCStatsIceCandidatePairState
 {
 	[Value("\"frozen\"")]
@@ -4113,7 +4113,7 @@ public enum RTCStatsIceCandidatePairState
 	Succeeded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceTransportPolicy
 {
 	[Value("\"relay\"")]
@@ -4122,7 +4122,7 @@ public enum RTCIceTransportPolicy
 	All,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCBundlePolicy
 {
 	[Value("\"balanced\"")]
@@ -4133,14 +4133,14 @@ public enum RTCBundlePolicy
 	MaxBundle,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCRtcpMuxPolicy
 {
 	[Value("\"require\"")]
 	Require,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCSignalingState
 {
 	[Value("\"stable\"")]
@@ -4157,7 +4157,7 @@ public enum RTCSignalingState
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceGatheringState
 {
 	[Value("\"new\"")]
@@ -4168,7 +4168,7 @@ public enum RTCIceGatheringState
 	Complete,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCPeerConnectionState
 {
 	[Value("\"closed\"")]
@@ -4185,7 +4185,7 @@ public enum RTCPeerConnectionState
 	Connected,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceConnectionState
 {
 	[Value("\"closed\"")]
@@ -4204,7 +4204,7 @@ public enum RTCIceConnectionState
 	Connected,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCSdpType
 {
 	[Value("\"offer\"")]
@@ -4217,7 +4217,7 @@ public enum RTCSdpType
 	Rollback,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceProtocol
 {
 	[Value("\"udp\"")]
@@ -4226,7 +4226,7 @@ public enum RTCIceProtocol
 	Tcp,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceTcpCandidateType
 {
 	[Value("\"active\"")]
@@ -4237,7 +4237,7 @@ public enum RTCIceTcpCandidateType
 	So,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceCandidateType
 {
 	[Value("\"host\"")]
@@ -4250,7 +4250,7 @@ public enum RTCIceCandidateType
 	Relay,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceServerTransportProtocol
 {
 	[Value("\"udp\"")]
@@ -4261,7 +4261,7 @@ public enum RTCIceServerTransportProtocol
 	Tls,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCRtpTransceiverDirection
 {
 	[Value("\"sendrecv\"")]
@@ -4276,7 +4276,7 @@ public enum RTCRtpTransceiverDirection
 	Stopped,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCDtlsTransportState
 {
 	[Value("\"new\"")]
@@ -4291,7 +4291,7 @@ public enum RTCDtlsTransportState
 	Failed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceGathererState
 {
 	[Value("\"new\"")]
@@ -4302,7 +4302,7 @@ public enum RTCIceGathererState
 	Complete,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceTransportState
 {
 	[Value("\"closed\"")]
@@ -4321,7 +4321,7 @@ public enum RTCIceTransportState
 	Connected,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceRole
 {
 	[Value("\"unknown\"")]
@@ -4332,7 +4332,7 @@ public enum RTCIceRole
 	Controlled,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCIceComponent
 {
 	[Value("\"rtp\"")]
@@ -4341,7 +4341,7 @@ public enum RTCIceComponent
 	Rtcp,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCSctpTransportState
 {
 	[Value("\"connecting\"")]
@@ -4352,7 +4352,7 @@ public enum RTCSctpTransportState
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCDataChannelState
 {
 	[Value("\"connecting\"")]
@@ -4365,7 +4365,7 @@ public enum RTCDataChannelState
 	Closed,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum RTCErrorDetailType
 {
 	[Value("\"data-channel-failure\"")]
@@ -4384,7 +4384,7 @@ public enum RTCErrorDetailType
 	HardwareEncoderError,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum BinaryType
 {
 	[Value("\"blob\"")]
@@ -4393,7 +4393,7 @@ public enum BinaryType
 	Arraybuffer,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WebTransportReliabilityMode
 {
 	[Value("\"pending\"")]
@@ -4404,7 +4404,7 @@ public enum WebTransportReliabilityMode
 	SupportsUnreliable,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WebTransportCongestionControl
 {
 	[Value("\"default\"")]
@@ -4415,7 +4415,7 @@ public enum WebTransportCongestionControl
 	LowLatency,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum WebTransportErrorSource
 {
 	[Value("\"stream\"")]
@@ -4424,7 +4424,7 @@ public enum WebTransportErrorSource
 	Session,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum USBTransferStatus
 {
 	[Value("\"ok\"")]
@@ -4435,7 +4435,7 @@ public enum USBTransferStatus
 	Babble,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum USBRequestType
 {
 	[Value("\"standard\"")]
@@ -4446,7 +4446,7 @@ public enum USBRequestType
 	Vendor,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum USBRecipient
 {
 	[Value("\"device\"")]
@@ -4459,7 +4459,7 @@ public enum USBRecipient
 	Other,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum USBDirection
 {
 	[Value("\"in\"")]
@@ -4468,7 +4468,7 @@ public enum USBDirection
 	Out,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum USBEndpointType
 {
 	[Value("\"bulk\"")]
@@ -4479,7 +4479,7 @@ public enum USBEndpointType
 	Isochronous,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AutoKeyword
 {
 	[Value("\"auto\"")]
@@ -4487,7 +4487,7 @@ public enum AutoKeyword
 }
 
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum DirectionSetting
 {
 	[Value("\"\"")]
@@ -4498,7 +4498,7 @@ public enum DirectionSetting
 	Lr,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum LineAlignSetting
 {
 	[Value("\"start\"")]
@@ -4509,7 +4509,7 @@ public enum LineAlignSetting
 	End,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum PositionAlignSetting
 {
 	[Value("\"line-left\"")]
@@ -4522,7 +4522,7 @@ public enum PositionAlignSetting
 	Auto,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum AlignSetting
 {
 	[Value("\"start\"")]
@@ -4537,7 +4537,7 @@ public enum AlignSetting
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum ScrollSetting
 {
 	[Value("\"\"")]
@@ -4546,7 +4546,7 @@ public enum ScrollSetting
 	Up,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XREnvironmentBlendMode
 {
 	[Value("\"opaque\"")]
@@ -4557,7 +4557,7 @@ public enum XREnvironmentBlendMode
 	Additive,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRInteractionMode
 {
 	[Value("\"screen-space\"")]
@@ -4566,7 +4566,7 @@ public enum XRInteractionMode
 	WorldSpace,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRDepthUsage
 {
 	[Value("\"cpu-optimized\"")]
@@ -4575,7 +4575,7 @@ public enum XRDepthUsage
 	GpuOptimized,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRDepthDataFormat
 {
 	[Value("\"luminance-alpha\"")]
@@ -4586,7 +4586,7 @@ public enum XRDepthDataFormat
 	UnsignedShort,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRDOMOverlayType
 {
 	[Value("\"screen\"")]
@@ -4597,7 +4597,7 @@ public enum XRDOMOverlayType
 	HeadLocked,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRHandJoint
 {
 	[Value("\"wrist\"")]
@@ -4652,7 +4652,7 @@ public enum XRHandJoint
 	PinkyFingerTip,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRHitTestTrackableType
 {
 	[Value("\"point\"")]
@@ -4663,7 +4663,7 @@ public enum XRHitTestTrackableType
 	Mesh,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRReflectionFormat
 {
 	[Value("\"srgba8\"")]
@@ -4672,7 +4672,7 @@ public enum XRReflectionFormat
 	Rgba16f,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRPlaneOrientation
 {
 	[Value("\"horizontal\"")]
@@ -4681,7 +4681,7 @@ public enum XRPlaneOrientation
 	Vertical,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRSessionMode
 {
 	[Value("\"inline\"")]
@@ -4692,7 +4692,7 @@ public enum XRSessionMode
 	ImmersiveAr,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRVisibilityState
 {
 	[Value("\"visible\"")]
@@ -4703,7 +4703,7 @@ public enum XRVisibilityState
 	Hidden,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRReferenceSpaceType
 {
 	[Value("\"viewer\"")]
@@ -4718,7 +4718,7 @@ public enum XRReferenceSpaceType
 	Unbounded,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XREye
 {
 	[Value("\"none\"")]
@@ -4729,7 +4729,7 @@ public enum XREye
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRHandedness
 {
 	[Value("\"none\"")]
@@ -4740,7 +4740,7 @@ public enum XRHandedness
 	Right,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRTargetRayMode
 {
 	[Value("\"gaze\"")]
@@ -4753,7 +4753,7 @@ public enum XRTargetRayMode
 	TransientPointer,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRLayerLayout
 {
 	[Value("\"default\"")]
@@ -4768,7 +4768,7 @@ public enum XRLayerLayout
 	StereoTopBottom,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRLayerQuality
 {
 	[Value("\"default\"")]
@@ -4779,7 +4779,7 @@ public enum XRLayerQuality
 	GraphicsOptimized,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XRTextureType
 {
 	[Value("\"texture\"")]
@@ -4788,7 +4788,7 @@ public enum XRTextureType
 	TextureArray,
 }
 
-[To(ToAttribute.NoneWithTailingDotRemoved)]
+[To(ToAttribute.NoneWithTrailingDotRemoved)]
 public enum XMLHttpRequestResponseType
 {
 	[Value("\"\"")]

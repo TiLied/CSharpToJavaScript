@@ -22,8 +22,10 @@ public static class CSTOJS
 	/// <returns></returns>
 	public static FileData Translate(FileData file, MetadataReference[]? references = null)
 	{
-		FileData[] files = Translate([file], references);
-		return files[0];
+		new Walker2(file);
+		return file;
+		//FileData[] files = Translate([file], references);
+		//return files[0];
 	}
 	/// <summary>
 	/// This method translates CSharp string into JavaScript with specified options.
@@ -122,7 +124,7 @@ public static class CSTOJS
 		return files;
 	}
 
-	private static MetadataReference[] GetReferences(CSTOJSOptions options)
+	public static MetadataReference[] GetReferences(CSTOJSOptions options)
 	{
 		HashSet<MetadataReference> assemblyMetadata = new();
 
@@ -222,7 +224,7 @@ public static class CSTOJS
 		return references;
 	}
 
-	private static SyntaxTree AddGlobalUsings(SyntaxTree tree)
+	public static SyntaxTree AddGlobalUsings(SyntaxTree tree)
 	{
 		CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 		UsingDirectiveSyntax[] oldUsing = root.Usings.ToArray();
@@ -402,4 +404,15 @@ public class FileData
 	/// JS translated string.
 	/// </summary>
 	public string TranslatedStr { get; set; } = string.Empty;
+	
+	
+	/// <summary>
+	/// Debug string.
+	/// </summary>
+	public string Debug_WithSemanticRewriter { get; set; } = string.Empty;
+	
+	/// <summary>
+	/// Debug string.
+	/// </summary>
+	public string Debug_WithoutSemanticRewriter { get; set; } = string.Empty;
 }

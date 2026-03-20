@@ -10,90 +10,90 @@ namespace CSharpToJavaScript;
 internal class StringBuilderWalker : CSharpSyntaxWalker
 {
 	public StringBuilder JSSB { get; set; } = new(512);
-	
-	public StringBuilderWalker(): base(SyntaxWalkerDepth.Trivia)
+
+	public StringBuilderWalker() : base(SyntaxWalkerDepth.Trivia)
 	{
-		
+
 	}
-	
+
 #if DEBUG
 	public override void Visit(SyntaxNode? node)
 	{
-		if(node != null)
+		if (node != null)
 			Log.InfoLine($"kind: {node.Kind()} \n\t{node.ToString()}");
-		
+
 		base.Visit(node);
 	}
 #endif
-	
+
 	public override void VisitTrivia(SyntaxTrivia trivia)
 	{
 		switch (trivia.Kind())
-		{	
+		{
 			case SyntaxKind.SingleLineCommentTrivia:
-			{
-				string _full = trivia.ToString();
-				
-				//special syntax.
-				//for writing js code //...\\
-				if (_full.EndsWith(@"\\"))
-					JSSB.Append(_full.AsSpan(2, _full.Length - 4));
-				else
-					JSSB.Append(_full);
-				return;
-			}
+				{
+					string _full = trivia.ToString();
+
+					//special syntax.
+					//for writing js code //...\\
+					if (_full.EndsWith(@"\\"))
+						JSSB.Append(_full.AsSpan(2, _full.Length - 4));
+					else
+						JSSB.Append(_full);
+					return;
+				}
 			case SyntaxKind.MultiLineCommentTrivia:
 			case SyntaxKind.WhitespaceTrivia:
-			{
-				string _full = trivia.ToFullString();
-				JSSB.Append(_full);
-				return;
-			}
+				{
+					string _full = trivia.ToFullString();
+					JSSB.Append(_full);
+					return;
+				}
 			case SyntaxKind.EndOfLineTrivia:
-			{
-				string _full = trivia.ToFullString();
-				JSSB.Append(_full);
-				return;
-			}
+				{
+					string _full = trivia.ToFullString();
+					JSSB.Append(_full);
+					return;
+				}
 			// Todo? how? convert to jsdoc?
 			case SyntaxKind.SingleLineDocumentationCommentTrivia:
 			case SyntaxKind.MultiLineDocumentationCommentTrivia:
-			{
-				//JSSB.Append("/**");
-				string _full = trivia.ToFullString();
-				JSSB.Append(_full);
-				//JSSB.AppendLine("");
-				return;
-			}
+				{
+					//JSSB.Append("/**");
+					string _full = trivia.ToFullString();
+					JSSB.Append(_full);
+					//JSSB.AppendLine("");
+					return;
+				}
 			//TODO???
 			case SyntaxKind.SkippedTokensTrivia:
-			{
-				string _full = trivia.ToFullString();
-				JSSB.Append(_full);
-				return;
-			}
+				{
+					string _full = trivia.ToFullString();
+					JSSB.Append(_full);
+					return;
+				}
 			default:
 				Log.ErrorLine($"Trivia : {trivia.Kind()}");
 				break;
 		}
-		
+
 		base.VisitTrivia(trivia);
 	}
-	
+
 	public override void VisitToken(SyntaxToken token)
 	{
 		switch (token.Kind())
 		{
 			//TODO?
 			case SyntaxKind.IdentifierToken:
-			{
-				VisitLeadingTrivia(token);
-				
-				JSSB.Append(token.Text.Replace("DollarSign_", "$"));
-				
-				VisitTrailingTrivia(token);
-				return;
-			}
+				{
+					VisitLeadingTrivia(token);
+
+					JSSB.Append(token.Text.Replace("DollarSign_", "$"));
+
+					VisitTrailingTrivia(token);
+					return;
+				}
 			case SyntaxKind.InKeyword:
 			case SyntaxKind.StaticKeyword:
 			case SyntaxKind.TrueKeyword:
@@ -174,64 +174,64 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			case SyntaxKind.TypeOfKeyword:
 			case SyntaxKind.ExclamationEqualsToken:
 			case SyntaxKind.EqualsEqualsToken:
-			{
-				VisitLeadingTrivia(token);
-				
-				JSSB.Append(token.Text);
-				
-				VisitTrailingTrivia(token);
-				return;
-			}
+				{
+					VisitLeadingTrivia(token);
+
+					JSSB.Append(token.Text);
+
+					VisitTrailingTrivia(token);
+					return;
+				}
 			case SyntaxKind.EndOfFileToken:
-			{
-				VisitLeadingTrivia(token);
-				
-				JSSB.Append(token.Text);
-				
-				VisitTrailingTrivia(token);
-				
-				return;
-			}
-			case SyntaxKind.OpenBraceToken: 
-			{
-				VisitLeadingTrivia(token);
-				
-				JSSB.Append(token.Text);
-				
-				VisitTrailingTrivia(token);
-				return;
-			}
+				{
+					VisitLeadingTrivia(token);
+
+					JSSB.Append(token.Text);
+
+					VisitTrailingTrivia(token);
+
+					return;
+				}
+			case SyntaxKind.OpenBraceToken:
+				{
+					VisitLeadingTrivia(token);
+
+					JSSB.Append(token.Text);
+
+					VisitTrailingTrivia(token);
+					return;
+				}
 			default:
 				Log.ErrorLine($"Token : {token.Kind()}");
 				break;
 		}
-		
+
 		base.VisitToken(token);
 	}
-	
+
 	public override void VisitCompilationUnit(CompilationUnitSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-		
+
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-			
+
 			if (asNode != null)
 			{
 				SyntaxKind kind = asNode.Kind();
-				
+
 				switch (kind)
 				{
 					case SyntaxKind.AttributeList:
 					case SyntaxKind.ExternAliasDirective:
 					case SyntaxKind.UsingDirective:
-					{
-						#if DEBUG
-						Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
-						#endif
-						break;
-					}
+						{
+#if DEBUG
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
+#endif
+							break;
+						}
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
@@ -253,7 +253,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			{
 				SyntaxToken asToken = nodesAndTokens[i].AsToken();
 				SyntaxKind kind = asToken.Kind();
-				
+
 				switch (kind)
 				{
 					case SyntaxKind.EndOfFileToken:
@@ -269,15 +269,15 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 	public override void VisitNamespaceDeclaration(NamespaceDeclarationSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-		
+
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-			
+
 			if (asNode != null)
 			{
 				SyntaxKind kind = asNode.Kind();
-				
+
 				switch (kind)
 				{
 					case SyntaxKind.UsingDirective:
@@ -286,12 +286,12 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.StructDeclaration:
 					case SyntaxKind.QualifiedName:
 					case SyntaxKind.IdentifierName:
-					{
-						#if DEBUG
-						Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
-						#endif
-						break;
-					}
+						{
+#if DEBUG
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
+#endif
+							break;
+						}
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
@@ -310,7 +310,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			{
 				SyntaxToken asToken = nodesAndTokens[i].AsToken();
 				SyntaxKind kind = asToken.Kind();
-				
+
 				switch (kind)
 				{
 					//Todo? make a scope??? {...}
@@ -329,15 +329,15 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 	public override void VisitFileScopedNamespaceDeclaration(FileScopedNamespaceDeclarationSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-		
+
 		for (int i = 0; i < nodesAndTokens.Count; i++)
 		{
 			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-			
+
 			if (asNode != null)
 			{
 				SyntaxKind kind = asNode.Kind();
-				
+
 				switch (kind)
 				{
 					case SyntaxKind.DelegateDeclaration:
@@ -345,12 +345,12 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.StructDeclaration:
 					case SyntaxKind.QualifiedName:
 					case SyntaxKind.IdentifierName:
-					{
-						#if DEBUG
-						Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
-						#endif
-						break;
-					}
+						{
+#if DEBUG
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|");
+#endif
+							break;
+						}
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
@@ -369,12 +369,69 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			{
 				SyntaxToken asToken = nodesAndTokens[i].AsToken();
 				SyntaxKind kind = asToken.Kind();
-				
+
 				switch (kind)
 				{
 					case SyntaxKind.SemicolonToken:
 					case SyntaxKind.NamespaceKeyword:
 						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
+	}
+
+	//Can't do in "WithoutSemanticRewriter". Throws an error:
+	//An exception of type 'System.ArgumentException' occurred in Microsoft.CodeAnalysis.CSharp.dll but was not handled in user code: 'colonToken'
+	//Code:
+	/*
+	public override SyntaxNode? VisitBaseList(BaseListSyntax node)
+	{
+		node = (BaseListSyntax)base.VisitBaseList(node)!;
+		
+		node = node.ReplaceToken(node.ColonToken, SyntaxFactory.Token(SyntaxKind.None));
+		
+		return node;
+	} 
+	*/
+	public override void VisitBaseList(BaseListSyntax node)
+	{
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.SimpleBaseType:
+						VisitSimpleBaseType((SimpleBaseTypeSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.ColonToken:
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append("extends");
+							VisitTrailingTrivia(asToken);
+							break;
+						}
 					default:
 						Log.ErrorLine($"asToken : {kind}");
 						break;

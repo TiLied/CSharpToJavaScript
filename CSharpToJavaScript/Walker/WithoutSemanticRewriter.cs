@@ -37,6 +37,76 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
 		}
 
+		for(int i = 0; i < node.Members.Count; i++)
+		{
+			//properties need to be handled in VisitClassDeclaration
+			if(node.Members[i].IsKind(SyntaxKind.PropertyDeclaration))
+			{
+				PropertyDeclarationSyntax _prop = (PropertyDeclarationSyntax)node.Members[i];
+				
+				if(_prop.AccessorList != null)
+				{
+					//TODO!
+					//somehow without ToString.
+					string _getSetStr = _prop.AccessorList.ToString().Trim().Replace(" ", "");
+					if (_getSetStr == "{get;set;}" || _getSetStr == "{get;}")
+					{
+						string _fieldIdentifier = $"#_{_prop.Identifier}_";
+						
+						FieldDeclarationSyntax _field = SyntaxFactory.FieldDeclaration(
+							SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(""),
+							  SyntaxFactory.SingletonSeparatedList(
+							  SyntaxFactory.VariableDeclarator(
+							  SyntaxFactory.Identifier(_fieldIdentifier))
+								.WithInitializer(_prop.Initializer))))
+								.WithLeadingTrivia(_prop.GetLeadingTrivia())
+								.WithTrailingTrivia(_prop.GetTrailingTrivia());
+						
+						node = node.ReplaceNode(node.Members[i], _field);
+						
+						if(_getSetStr.Contains("get;"))
+						{
+							MethodDeclarationSyntax _getM = SyntaxFactory.MethodDeclaration(
+							 SyntaxFactory.IdentifierName("get "), _prop.Identifier.WithoutTrivia())
+							.WithBody(
+								SyntaxFactory.Block(
+									SyntaxFactory.ReturnStatement(
+										SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression,
+											 SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier))
+									).NormalizeWhitespace()))
+							.WithLeadingTrivia(_prop.GetLeadingTrivia())
+							.WithTrailingTrivia(_prop.GetTrailingTrivia());
+							
+							//TODO!
+							//Insert after field!
+							node = node.AddMembers(_getM);
+						}
+						if(_getSetStr.Contains("set;"))
+						{
+							MethodDeclarationSyntax _setM = SyntaxFactory.MethodDeclaration(
+								SyntaxFactory.IdentifierName("set "), _prop.Identifier.WithoutTrivia())
+							.WithParameterList(
+								SyntaxFactory.ParameterList(
+									SyntaxFactory.SingletonSeparatedList(
+									SyntaxFactory.Parameter(SyntaxFactory.Identifier("value")))))
+							.WithBody(
+								SyntaxFactory.Block(SyntaxFactory.ExpressionStatement(
+									SyntaxFactory.AssignmentExpression(SyntaxKind.SimpleAssignmentExpression,
+										SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression,
+										 SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier)),
+										SyntaxFactory.IdentifierName("value")).NormalizeWhitespace())))
+							.WithLeadingTrivia(_prop.GetLeadingTrivia())
+							.WithTrailingTrivia(_prop.GetTrailingTrivia());
+							
+							//TODO!
+							//Insert after field!
+							node = node.AddMembers(_setM);
+						}
+					}
+				}
+			}
+		}
+		
 		return node;
 	}
 
@@ -75,8 +145,9 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	{
 		node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node)!;
 
+		node = node.ReplaceToken(node.Identifier, node.Identifier.WithLeadingTrivia(node.ReturnType.GetLeadingTrivia()));
 		node = node.ReplaceNode(node.ReturnType, SyntaxFactory.ParseTypeName(""));
-
+		
 		//TODO! Static method!
 		if (node.Modifiers.Count >= 1)
 		{
@@ -86,7 +157,23 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-
+	
+    public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)
+    {
+		node = (PropertyDeclarationSyntax)base.VisitPropertyDeclaration(node)!;
+		
+		//TODO! Static property!
+		if (node.Modifiers.Count >= 1)
+		{
+			node = node.ReplaceNode(node.Type, node.Type.WithLeadingTrivia(node.Modifiers[0].LeadingTrivia).WithTrailingTrivia(node.Modifiers[0].TrailingTrivia));
+			node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
+		}
+		
+		node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("").WithLeadingTrivia(node.Type.GetLeadingTrivia()));
+		
+		return node;
+    }
+	
 	public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 	{
 		if (_Options.UseVarOverLet)

@@ -115,7 +115,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		node = (ConstructorDeclarationSyntax)base.VisitConstructorDeclaration(node)!;
 
 		//TODO! Static constructor!
-		node = node.ReplaceToken(node.Identifier, SyntaxFactory.Identifier("constructor"));
+		node = node.ReplaceToken(node.Identifier, SyntaxFactory.Identifier("constructor").WithLeadingTrivia(node.Identifier.LeadingTrivia));
 
 		if (node.Modifiers.Count >= 1)
 		{

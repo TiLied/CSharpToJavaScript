@@ -44,11 +44,15 @@ internal class Walker2
 		SyntaxNode newRoot1 = withSemanticRewriter.Visit(root);
 		if (root != newRoot1)
 			root = newRoot1;
+		/*
 		root = root.ReplaceTokens(withSemanticRewriter.ReplaceTokens.Keys, (o, r) =>
 		{
 			return withSemanticRewriter.ReplaceTokens[o];
+		});*/
+		root = root.ReplaceNodes(withSemanticRewriter.ReplaceNodes.Keys, (o, r) =>
+		{
+			return withSemanticRewriter.ReplaceNodes[o];
 		});
-
 
 		if (file.OptionsForFile.Debug)
 			file.Debug_WithSemanticRewriter = root.ToFullString();

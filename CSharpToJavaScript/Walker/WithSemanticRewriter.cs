@@ -13,9 +13,11 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 	private readonly SemanticModel _Model;
 	private readonly CSTOJSOptions _Options;
-
-	public Dictionary<SyntaxToken, SyntaxToken> ReplaceTokens = new();
-
+	
+	private ITypeSymbol? _CurrentClassSymbol = null;	
+	
+	public Dictionary<SyntaxNode, SyntaxNode> ReplaceNodes = new();
+	
 	public WithSemanticRewriter(SemanticModel semanticModel, CSTOJSOptions options)
 	{
 		_Model = semanticModel;
@@ -31,7 +33,16 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		return base.Visit(node);
 	}
 #endif
-
+	
+    public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
+    {
+		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
+		
+		node = (ClassDeclarationSyntax)base.VisitClassDeclaration(node)!;
+		
+		return node;
+    }
+	
 	public override SyntaxNode? VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
 		if (node.Expression is IdentifierNameSyntax ||
@@ -46,7 +57,57 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-
+	
+	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
+	{
+		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
+		
+		if(node.Expression is MemberAccessExpressionSyntax expr)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node).Symbol;
+			
+			if (symbol != null && !symbol.IsStatic)
+			{
+				if (((symbol.Kind == SymbolKind.Method &&
+					((IMethodSymbol)symbol).MethodKind == MethodKind.Ordinary)) ||
+					symbol.Kind == SymbolKind.Property ||
+					symbol.Kind == SymbolKind.Field)
+				{
+					ITypeSymbol? _base = _CurrentClassSymbol;
+					
+					string? _type = symbol.ContainingType?.ToString();
+					
+					if (_type != null)
+					{
+						while (_base != null)
+						{
+							if (_type.EndsWith(_base.ToString()))
+							{
+								MemberAccessExpressionSyntax _member = SyntaxFactory.MemberAccessExpression(
+									SyntaxKind.SimpleMemberAccessExpression,
+									
+									SyntaxFactory.MemberAccessExpression(
+										SyntaxKind.SimpleMemberAccessExpression,
+										SyntaxFactory.ThisExpression(),
+										 expr.Expression as IdentifierNameSyntax),
+									 expr.Name);
+								
+								ReplaceNodes.Add(node.Expression, _member);
+								
+								return node;
+							}
+							_base = _base.BaseType;
+						}
+					}
+				}
+			}
+		}
+		return node;
+	}
+	
+	
+	
+	
 	private void VisitSimpleName(SimpleNameSyntax identifier)
 	{
 		ISymbol? symbol = _Model.GetSymbolInfo(identifier).Symbol;
@@ -64,7 +125,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 					{
 						string _v = _attributeData[i].ConstructorArguments[0].Value.ToString();
 
-						ReplaceTokens.Add(identifier.Identifier, SyntaxFactory.Identifier(_v).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
+						ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_v).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
 						//return node;
 						return;
 					}
@@ -81,7 +142,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 						//if (_toAttr.To == ToAttribute.NoneWithTrailingDotRemoved)
 						//	_IgnoreTailingDot = true;
 
-						ReplaceTokens.Add(identifier.Identifier, SyntaxFactory.Identifier(_toAttr.Convert(identifier.Identifier.Text)).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
+						ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_toAttr.Convert(identifier.Identifier.Text)).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
 						//return node;
 						return;
 					}
@@ -98,8 +159,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		if (_Options.CustomCSNamesToJS.TryGetValue(identifier.Identifier.Text, out string? _value))
 		{
-			ReplaceTokens.Add(identifier.Identifier, SyntaxFactory.Identifier(_value));
-			//return node;
+			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_value));
 			return;
 		}
 
@@ -108,12 +168,10 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			if (str == string.Empty)
 			{
 				Log.ErrorLine("str == string.Empty!");
-				//return node;
 				return;
 			}
 
-			ReplaceTokens.Add(identifier.Identifier, SyntaxFactory.Identifier(str).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
-			//return node;
+			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
 			return;
 		}
 	}

@@ -13,11 +13,11 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 	private readonly SemanticModel _Model;
 	private readonly CSTOJSOptions _Options;
-	
-	private ITypeSymbol? _CurrentClassSymbol = null;	
-	
+
+	private ITypeSymbol? _CurrentClassSymbol = null;
+
 	public Dictionary<SyntaxNode, SyntaxNode> ReplaceNodes = new();
-	
+
 	public WithSemanticRewriter(SemanticModel semanticModel, CSTOJSOptions options)
 	{
 		_Model = semanticModel;
@@ -33,18 +33,41 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		return base.Visit(node);
 	}
 #endif
-	
-    public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
-    {
+
+	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
+	{
 		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
-		
+
 		node = (ClassDeclarationSyntax)base.VisitClassDeclaration(node)!;
-		
+
 		return node;
-    }
-	
+	}
+
 	public override SyntaxNode? VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
+		MemberAccessExpressionSyntax? _expr = (MemberAccessExpressionSyntax)node;
+
+		while (_expr != null)
+		{
+			if (_expr.Expression is IdentifierNameSyntax)
+			{
+				ISymbol? symbol = _Model.GetSymbolInfo(node).Symbol;
+
+				if (symbol != null)
+				{
+					if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)_expr.Expression))
+						return node;
+					else
+						break;
+				}
+			}
+
+			if (_expr.Expression is MemberAccessExpressionSyntax)
+				_expr = (MemberAccessExpressionSyntax)_expr.Expression;
+			else
+				_expr = null;
+		}
+
 		if (node.Expression is IdentifierNameSyntax ||
 			node.Expression is GenericNameSyntax)
 			VisitSimpleName((SimpleNameSyntax)node.Expression);
@@ -57,57 +80,102 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-	
-	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
+	public override SyntaxNode? VisitArgument(ArgumentSyntax node)
 	{
-		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
-		
-		if(node.Expression is MemberAccessExpressionSyntax expr)
+		if (node.Expression is IdentifierNameSyntax)
 		{
-			ISymbol? symbol = _Model.GetSymbolInfo(node).Symbol;
-			
-			if (symbol != null && !symbol.IsStatic)
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
+
+			if (symbol != null)
 			{
-				if (((symbol.Kind == SymbolKind.Method &&
-					((IMethodSymbol)symbol).MethodKind == MethodKind.Ordinary)) ||
-					symbol.Kind == SymbolKind.Property ||
-					symbol.Kind == SymbolKind.Field)
-				{
-					ITypeSymbol? _base = _CurrentClassSymbol;
-					
-					string? _type = symbol.ContainingType?.ToString();
-					
-					if (_type != null)
-					{
-						while (_base != null)
-						{
-							if (_type.EndsWith(_base.ToString()))
-							{
-								MemberAccessExpressionSyntax _member = SyntaxFactory.MemberAccessExpression(
-									SyntaxKind.SimpleMemberAccessExpression,
-									
-									SyntaxFactory.MemberAccessExpression(
-										SyntaxKind.SimpleMemberAccessExpression,
-										SyntaxFactory.ThisExpression(),
-										 expr.Expression as IdentifierNameSyntax),
-									 expr.Name);
-								
-								ReplaceNodes.Add(node.Expression, _member);
-								
-								return node;
-							}
-							_base = _base.BaseType;
-						}
-					}
-				}
+				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
+					return node;
 			}
 		}
+		node = (ArgumentSyntax)base.VisitArgument(node)!;
+
 		return node;
 	}
-	
-	
-	
-	
+
+	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
+	{
+		if (node.Expression is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
+
+			if (symbol != null)
+			{
+				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
+					return node;
+			}
+		}
+		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
+
+		return node;
+	}
+	public override SyntaxNode? VisitBinaryExpression(BinaryExpressionSyntax node)
+	{
+		if (node.Left is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Left).Symbol;
+
+			if (symbol != null)
+			{
+				TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Left);
+			}
+		}
+		if (node.Right is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Right).Symbol;
+
+			if (symbol != null)
+			{
+				TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Right);
+			}
+		}
+		node = (BinaryExpressionSyntax)base.VisitBinaryExpression(node)!;
+
+		return node;
+	}
+	private bool TryReplaceIdentifierWithThis(ISymbol symbol, IdentifierNameSyntax identifier)
+	{
+		if (symbol != null && !symbol.IsStatic)
+		{
+			if (((symbol.Kind == SymbolKind.Method &&
+				((IMethodSymbol)symbol).MethodKind == MethodKind.Ordinary)) ||
+				symbol.Kind == SymbolKind.Property ||
+				symbol.Kind == SymbolKind.Field)
+			{
+				ITypeSymbol? _base = _CurrentClassSymbol;
+
+				while (_base != null)
+				{
+					ImmutableArray<ISymbol> _members = _base.GetMembers();
+
+					for (int i = 0; i < _members.Length; i++)
+					{
+						if (_members[i].Name == identifier.Identifier.Text)
+						{
+							MemberAccessExpressionSyntax _member = SyntaxFactory.MemberAccessExpression(
+								SyntaxKind.SimpleMemberAccessExpression,
+								SyntaxFactory.ThisExpression(),
+								(IdentifierNameSyntax)identifier.WithoutTrivia())
+								.WithLeadingTrivia(identifier.GetLeadingTrivia());
+
+							ReplaceNodes.Add(identifier, _member);
+
+							return true;
+						}
+					}
+					_base = _base.BaseType;
+				}
+
+			}
+		}
+
+		return false;
+	}
+
 	private void VisitSimpleName(SimpleNameSyntax identifier)
 	{
 		ISymbol? symbol = _Model.GetSymbolInfo(identifier).Symbol;
@@ -175,7 +243,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			return;
 		}
 	}
-
+	
 	private bool BuiltInTypesGenerics(SimpleNameSyntax node, ISymbol? symbol, out string str)
 	{
 		str = string.Empty;

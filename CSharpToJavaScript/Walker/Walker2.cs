@@ -60,6 +60,9 @@ internal class Walker2
 		if (file.OptionsForFile.Debug)
 			file.Debug_WithoutSemanticRewriter = root.ToFullString();
 
+		if (file.OptionsForFile.NormalizeWhitespace)
+			root = root.NormalizeWhitespace();
+
 		stringBuilderWalker.JSSB.Append(file.OptionsForFile.AddSBAtTheTop);
 		stringBuilderWalker.Visit(root);
 		stringBuilderWalker.JSSB.Append(file.OptionsForFile.AddSBAtTheBottom);

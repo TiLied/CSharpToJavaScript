@@ -43,7 +43,7 @@ public partial class GlobalObject
 	/// </remarks>
 	/// <param name="arg">object.property</param>
 	/// <returns>true for all cases except when the property is an own non-configurable property, in which case false is returned in non-strict mode.</returns>
-	[Unary("delete ")]
+	[Unary("delete")]
 	public static bool Delete(dynamic arg)
 	{
 		return true;
@@ -57,7 +57,7 @@ public partial class GlobalObject
 	/// </remarks>
 	/// <param name="arg">expression</param>
 	/// <returns>Undefined</returns>
-	[Unary("void ")]
+	[Unary("void")]
 	public static Undefined Void(dynamic arg)
 	{
 		return new Undefined();
@@ -71,7 +71,7 @@ public partial class GlobalObject
 	/// </remarks>
 	/// <param name="operand">An expression representing the object or primitive whose type is to be returned.</param>
 	/// <returns>string</returns>
-	[Unary("typeof ")]
+	[Unary("typeof")]
 	public static string TypeOf(object operand)
 	{
 		return string.Empty;
@@ -84,7 +84,7 @@ public partial class GlobalObject
 	/// </remarks>
 	/// <param name="operand">An expression representing the object or primitive whose type is to be returned.</param>
 	/// <returns>string</returns>
-	[Unary("typeof ")]
+	[Unary("typeof")]
 	public static string TypeOf(Func<dynamic> operand)
 	{
 		return string.Empty;
@@ -97,7 +97,7 @@ public partial class GlobalObject
 	/// </remarks>
 	/// <typeparam name="O">An expression representing the object or primitive whose type is to be returned.</typeparam>
 	/// <returns>string</returns>
-	[GenericUnary("typeof ")]
+	[GenericUnary("typeof")]
 	public static string TypeOf<O>()
 	{
 		return string.Empty;
@@ -112,7 +112,7 @@ public partial class GlobalObject
 	/// <typeparam name="C">Constructor to test against.</typeparam>
 	/// <param name="obj">The object to test.</param>
 	/// <returns>bool</returns>
-	[GenericBinary(" instanceof ")]
+	[GenericBinary("instanceof")]
 	public static bool InstanceOf<C>(dynamic obj)
 	{
 		return true;

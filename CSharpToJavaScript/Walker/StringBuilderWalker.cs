@@ -383,6 +383,35 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 		}
 	}
 
+	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
+	{
+		if (node.Expression.HasAnnotation(BinaryAttribute.Annotation))
+		{
+			VisitArgument(node.ArgumentList.Arguments[0]);
+
+			if (!node.ArgumentList.Arguments[0].HasTrailingTrivia)
+				JSSB.Append(' ');
+
+			JSSB.Append(node.Expression.ToString());
+
+			VisitTrailingTrivia(node.ArgumentList.Arguments.GetSeparator(0));
+
+			VisitArgument(node.ArgumentList.Arguments[1]);
+			return;
+		}
+		if (node.Expression.HasAnnotation(UnaryAttribute.Annotation))
+		{
+			JSSB.Append(node.Expression.ToString());
+
+			if (!node.Expression.HasTrailingTrivia)
+				JSSB.Append(' ');
+				
+			VisitArgument(node.ArgumentList.Arguments[0]);
+			return;
+		}
+		base.VisitInvocationExpression(node);
+	}
+
 	//Can't do in "WithoutSemanticRewriter". Throws an error:
 	//An exception of type 'System.ArgumentException' occurred in Microsoft.CodeAnalysis.CSharp.dll but was not handled in user code: 'colonToken'
 	//Code:

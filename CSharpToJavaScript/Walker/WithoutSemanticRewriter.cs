@@ -2,7 +2,6 @@ using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Collections.Generic;
 
 namespace CSharpToJavaScript;
 
@@ -52,6 +51,8 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 					string _getSetStr = _prop.AccessorList.ToString().Trim().Replace(" ", "");
 					if (_getSetStr == "{get;set;}" || _getSetStr == "{get;}")
 					{
+						int _indexToInsert = i + 1;
+						
 						string _fieldIdentifier = $"#_{_prop.Identifier}_";
 
 						FieldDeclarationSyntax _field = SyntaxFactory.FieldDeclaration(
@@ -78,11 +79,9 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 							.WithLeadingTrivia(_prop.GetLeadingTrivia())
 							.WithTrailingTrivia(_prop.GetTrailingTrivia());
 
-							//TODO!
-							//Insert after field!
-							node = node.AddMembers(_getM);
+							node = node.WithMembers(node.Members.Insert(_indexToInsert++, _getM));
 						}
-						if (_getSetStr.Contains("set;"))
+						if (_getSetStr.Contains("get;") && _getSetStr.Contains("set;"))
 						{
 							MethodDeclarationSyntax _setM = SyntaxFactory.MethodDeclaration(
 								SyntaxFactory.IdentifierName("set "), _prop.Identifier.WithoutTrivia())
@@ -99,9 +98,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 							.WithLeadingTrivia(_prop.GetLeadingTrivia())
 							.WithTrailingTrivia(_prop.GetTrailingTrivia());
 
-							//TODO!
-							//Insert after field!
-							node = node.AddMembers(_setM);
+							node = node.WithMembers(node.Members.Insert(_indexToInsert++, _setM));
 						}
 					}
 				}
@@ -133,7 +130,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		if (node.Modifiers.Count >= 1)
 		{
-			SyntaxToken? _static = CreateStaticKeyword(node.Modifiers);
+			SyntaxToken? _static = CreateStaticModifier(node.Modifiers);
 			if (_static == null)
 			{
 				node = node.ReplaceNode(node.Declaration.Type, node.Declaration.Type.WithLeadingTrivia(node.Modifiers[0].LeadingTrivia).WithTrailingTrivia(node.Modifiers[0].TrailingTrivia));
@@ -161,7 +158,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		if (node.Modifiers.Count >= 1)
 		{
-			SyntaxToken? _static = CreateStaticKeyword(node.Modifiers);
+			SyntaxToken? _static = CreateStaticModifier(node.Modifiers);
 			if (_static == null)
 			{
 				node = node.ReplaceToken(node.Identifier, node.Identifier.WithLeadingTrivia(node.Modifiers[0].LeadingTrivia));
@@ -194,7 +191,14 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
+	public override SyntaxNode? VisitLocalFunctionStatement(LocalFunctionStatementSyntax node)
+	{
+		node = (LocalFunctionStatementSyntax)base.VisitLocalFunctionStatement(node)!;
 
+		node = node.ReplaceNode(node.ReturnType, SyntaxFactory.IdentifierName("function").WithLeadingTrivia(node.ReturnType.GetLeadingTrivia()).WithTrailingTrivia(node.ReturnType.GetTrailingTrivia()));
+		
+		return node;
+	}
 	public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 	{
 		if (_Options.UseVarOverLet)
@@ -223,7 +227,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		if (node.Expression.IsKind(SyntaxKind.AsExpression) || node.Expression.IsKind(SyntaxKind.CastExpression))
 		{
 			node = (ParenthesizedExpressionSyntax)base.VisitParenthesizedExpression(node)!;
-			return node.Expression;
+			return node.Expression.WithLeadingTrivia(node.GetLeadingTrivia());
 		}
 		else
 		{
@@ -253,7 +257,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		return null;
 	}
 
-	private SyntaxToken? CreateStaticKeyword(SyntaxTokenList modifiers)
+	private static SyntaxToken? CreateStaticModifier(SyntaxTokenList modifiers)
 	{
 		SyntaxToken? _static = null;
 		for (int i = 0; i < modifiers.Count; i++)

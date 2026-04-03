@@ -99,6 +99,8 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
+		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
+		
 		if (node.Expression is IdentifierNameSyntax)
 		{
 			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
@@ -107,9 +109,34 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			{
 				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
 					return node;
+
+				ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
+				for (int i = 0; i < _attributeData.Length; i++)
+				{
+					if (_attributeData[i].AttributeClass != null)
+					{
+						if (_attributeData[i].AttributeClass!.Name == nameof(BinaryAttribute))
+						{
+							ReplaceNodes.Add(node.Expression, SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
+							.WithAdditionalAnnotations(BinaryAttribute.Annotation)
+							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
+							.WithTrailingTrivia(node.Expression.GetTrailingTrivia()));
+
+							return node;
+						}
+						if (_attributeData[i].AttributeClass!.Name == nameof(UnaryAttribute))
+						{
+							ReplaceNodes.Add(node.Expression, SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
+							.WithAdditionalAnnotations(UnaryAttribute.Annotation)
+							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
+							.WithTrailingTrivia(node.Expression.GetTrailingTrivia()));
+
+							return node;
+						}
+					}
+				}
 			}
 		}
-		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
 
 		return node;
 	}
@@ -194,7 +221,6 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 						string _v = _attributeData[i].ConstructorArguments[0].Value.ToString();
 
 						ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_v).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
-						//return node;
 						return;
 					}
 

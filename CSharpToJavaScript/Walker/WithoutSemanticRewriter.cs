@@ -46,13 +46,13 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 				if (_prop.AccessorList != null)
 				{
+					int _indexToInsert = i + 1;
+					
 					//TODO!
 					//somehow without ToString.
 					string _getSetStr = _prop.AccessorList.ToString().Trim().Replace(" ", "");
 					if (_getSetStr == "{get;set;}" || _getSetStr == "{get;}")
 					{
-						int _indexToInsert = i + 1;
-						
 						string _fieldIdentifier = $"#_{_prop.Identifier}_";
 
 						FieldDeclarationSyntax _field = SyntaxFactory.FieldDeclaration(
@@ -101,6 +101,42 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 							node = node.WithMembers(node.Members.Insert(_indexToInsert++, _setM));
 						}
 					}
+					else
+					{
+						for (int j = 0; j < _prop.AccessorList.Accessors.Count; j++)
+						{
+							if (_prop.AccessorList.Accessors[j].Keyword.Text == "get")
+							{
+								MethodDeclarationSyntax _getM = SyntaxFactory.MethodDeclaration(
+								SyntaxFactory.IdentifierName("get ")
+									.WithLeadingTrivia(_prop.GetLeadingTrivia()), _prop.Identifier.WithoutTrivia())
+								.WithTrailingTrivia(_prop.AccessorList.Accessors[j].Keyword.TrailingTrivia)
+								.WithBody(_prop.AccessorList.Accessors[j].Body)
+								.WithLeadingTrivia(_prop.GetLeadingTrivia())
+								.WithTrailingTrivia(_prop.AccessorList.Accessors[j].GetTrailingTrivia());
+
+								node = node.WithMembers(node.Members.Insert(_indexToInsert++, _getM));
+							}
+							if (_prop.AccessorList.Accessors[j].Keyword.Text == "set")
+							{
+								MethodDeclarationSyntax _setM = SyntaxFactory.MethodDeclaration(
+								SyntaxFactory.IdentifierName("set ")
+									.WithLeadingTrivia(_prop.GetLeadingTrivia()), _prop.Identifier.WithoutTrivia())
+								.WithParameterList(
+								SyntaxFactory.ParameterList(
+									SyntaxFactory.SingletonSeparatedList(
+									SyntaxFactory.Parameter(SyntaxFactory.Identifier("value")))))
+									.WithTrailingTrivia(_prop.AccessorList.Accessors[j].Keyword.TrailingTrivia)
+									.WithBody(_prop.AccessorList.Accessors[j].Body)
+									.WithLeadingTrivia(_prop.GetLeadingTrivia())
+									.WithTrailingTrivia(_prop.AccessorList.Accessors[j].GetTrailingTrivia());
+
+								node = node.WithMembers(node.Members.Insert(_indexToInsert++, _setM));
+							}
+						}
+						
+						node = node.RemoveNode(node.Members[i], SyntaxRemoveOptions.KeepNoTrivia);
+					}
 				}
 			}
 		}
@@ -123,7 +159,6 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-
 	public override SyntaxNode? VisitFieldDeclaration(FieldDeclarationSyntax node)
 	{
 		node = (FieldDeclarationSyntax)base.VisitFieldDeclaration(node)!;
@@ -175,7 +210,6 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-
 	public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)
 	{
 		node = (PropertyDeclarationSyntax)base.VisitPropertyDeclaration(node)!;
@@ -187,6 +221,16 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
 		}
 
+		if (node.Initializer != null &&
+			node.Initializer is EqualsValueClauseSyntax evc)
+		{
+			if (evc.Value is ImplicitObjectCreationExpressionSyntax ioce)
+			{
+				ObjectCreationExpressionSyntax _obj = SyntaxFactory.ObjectCreationExpression(node.Type, ioce.ArgumentList, ioce.Initializer).NormalizeWhitespace();
+				node = node.ReplaceNode(ioce, _obj);
+			}
+		}
+		
 		node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("").WithLeadingTrivia(node.Type.GetLeadingTrivia()));
 
 		return node;
@@ -196,17 +240,23 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		node = (LocalFunctionStatementSyntax)base.VisitLocalFunctionStatement(node)!;
 
 		node = node.ReplaceNode(node.ReturnType, SyntaxFactory.IdentifierName("function").WithLeadingTrivia(node.ReturnType.GetLeadingTrivia()).WithTrailingTrivia(node.ReturnType.GetTrailingTrivia()));
-		
+
 		return node;
 	}
-	public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
-	{
-		if (_Options.UseVarOverLet)
-			node = node.WithDeclaration(node.Declaration.ReplaceNode(node.Declaration.Type, SyntaxFactory.IdentifierName("var").WithLeadingTrivia(node.Declaration.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Declaration.Type.GetTrailingTrivia())));
-		else
-			node = node.WithDeclaration(node.Declaration.ReplaceNode(node.Declaration.Type, SyntaxFactory.IdentifierName("let").WithLeadingTrivia(node.Declaration.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Declaration.Type.GetTrailingTrivia())));
 
-		node = (LocalDeclarationStatementSyntax)base.VisitLocalDeclarationStatement(node)!;
+	public override SyntaxNode? VisitVariableDeclaration(VariableDeclarationSyntax node)
+	{
+		if (node.Parent is ForStatementSyntax ||
+			node.Parent is LocalDeclarationStatementSyntax)
+		{
+			if (_Options.UseVarOverLet)
+				node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("var").WithLeadingTrivia(node.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Type.GetTrailingTrivia()));
+			else
+				node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("let").WithLeadingTrivia(node.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Type.GetTrailingTrivia()));
+
+		}
+
+		node = (VariableDeclarationSyntax)base.VisitVariableDeclaration(node)!;
 
 		return node;
 	}
@@ -253,6 +303,18 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		return null;
 	}
 	public override SyntaxNode? VisitTypeParameterList(TypeParameterListSyntax node)
+	{
+		return null;
+	}
+	public override SyntaxNode? VisitUsingDirective(UsingDirectiveSyntax node)
+	{
+		return null;
+	}
+	public override SyntaxNode? VisitStructDeclaration(StructDeclarationSyntax node)
+	{
+		return null;
+	}
+	public override SyntaxNode? VisitInterfaceDeclaration(InterfaceDeclarationSyntax node)
 	{
 		return null;
 	}

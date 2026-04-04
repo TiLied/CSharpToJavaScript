@@ -405,7 +405,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 
 			if (!node.Expression.HasTrailingTrivia)
 				JSSB.Append(' ');
-				
+
 			VisitArgument(node.ArgumentList.Arguments[0]);
 			return;
 		}
@@ -468,4 +468,68 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			}
 		}
 	}
+
+	//Can't replace a token. Same as VisitBaseList
+	//see "tokenInList"
+	//https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeextensions.replacetoken?view=roslyn-dotnet-4.13.0#microsoft-codeanalysis-syntaxnodeextensions-replacetoken-1(-0-microsoft-codeanalysis-syntaxtoken-system-collections-generic-ienumerable((microsoft-codeanalysis-syntaxtoken)))
+	//"The token to be replaced. This must be a direct element of a SyntaxTokenList (such as a modifier in a list of modifiers), and a descendant of the root node. If the token is not part of a SyntaxTokenList, an InvalidOperationException will be thrown."
+	//But it throws a 'System.ArgumentException', not an 'InvalidOperationException':
+	//An exception of type 'System.ArgumentException' occurred in Microsoft.CodeAnalysis.CSharp.dll but was not handled in user code: 'stringStartToken'
+	//Code:
+	/*
+	public override SyntaxNode? VisitInterpolatedStringExpression(InterpolatedStringExpressionSyntax node)
+	{
+		node = (InterpolatedStringExpressionSyntax)base.VisitInterpolatedStringExpression(node)!;
+		node = node.ReplaceToken(node.StringStartToken, SyntaxFactory.Token(SyntaxKind.SingleQuoteToken));
+		node = node.ReplaceToken(node.StringEndToken, SyntaxFactory.Token(SyntaxKind.SingleQuoteToken));
+		return node;
+	}
+	*/
+	public override void VisitInterpolatedStringExpression(InterpolatedStringExpressionSyntax node)
+	{
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.InterpolatedStringText:
+						VisitInterpolatedStringText((InterpolatedStringTextSyntax)asNode);
+						break;
+					case SyntaxKind.Interpolation:
+						{
+							JSSB.Append('$');
+							VisitInterpolation((InterpolationSyntax)asNode);
+							break;
+						}
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.InterpolatedStringStartToken:
+					case SyntaxKind.InterpolatedStringEndToken:
+						JSSB.Append('`');
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
+	}
+
 }

@@ -45,38 +45,61 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 	public override SyntaxNode? VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
+		node = (MemberAccessExpressionSyntax)base.VisitMemberAccessExpression(node)!;
+
 		MemberAccessExpressionSyntax? _expr = (MemberAccessExpressionSyntax)node;
 
-		while (_expr != null)
+		if (_expr.Expression is IdentifierNameSyntax)
 		{
-			if (_expr.Expression is IdentifierNameSyntax)
+			ISymbol? symbol = _Model.GetSymbolInfo(node).Symbol;
+
+			if (symbol != null)
 			{
-				ISymbol? symbol = _Model.GetSymbolInfo(node).Symbol;
-
-				if (symbol != null)
-				{
-					if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)_expr.Expression))
-						return node;
-					else
-						break;
-				}
+				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)_expr.Expression))
+					goto Name;
 			}
-
-			if (_expr.Expression is MemberAccessExpressionSyntax)
-				_expr = (MemberAccessExpressionSyntax)_expr.Expression;
-			else
-				_expr = null;
 		}
 
 		if (node.Expression is IdentifierNameSyntax ||
 			node.Expression is GenericNameSyntax)
 			VisitSimpleName((SimpleNameSyntax)node.Expression);
-
+	Name:
 		if (node.Name is IdentifierNameSyntax ||
 			node.Name is GenericNameSyntax)
 			VisitSimpleName(node.Name);
 
-		node = (MemberAccessExpressionSyntax)base.VisitMemberAccessExpression(node)!;
+		return node;
+	}
+	public override SyntaxNode? VisitElementAccessExpression(ElementAccessExpressionSyntax node)
+	{
+		node = (ElementAccessExpressionSyntax)base.VisitElementAccessExpression(node)!;
+
+		if (node.Expression is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
+
+			if (symbol != null)
+			{
+				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
+					return node;
+			}
+		}
+
+		return node;
+	}
+	public override SyntaxNode? VisitInterpolation(InterpolationSyntax node)
+	{
+		if (node.Expression is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
+
+			if (symbol != null)
+			{
+				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
+					return node;
+			}
+		}
+		node = (InterpolationSyntax)base.VisitInterpolation(node)!;
 
 		return node;
 	}
@@ -96,18 +119,27 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
+	public override SyntaxNode? VisitTypeArgumentList(TypeArgumentListSyntax node)
+	{
+		if (node.Arguments[0] is IdentifierNameSyntax)
+			VisitSimpleName((SimpleNameSyntax)node.Arguments[0]);
 
+		node = (TypeArgumentListSyntax)base.VisitTypeArgumentList(node)!;
+
+		return node;
+	}
 	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
 		node = (InvocationExpressionSyntax)base.VisitInvocationExpression(node)!;
-		
-		if (node.Expression is IdentifierNameSyntax)
+
+		if (node.Expression is IdentifierNameSyntax ||
+			node.Expression is GenericNameSyntax)
 		{
 			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
 
 			if (symbol != null)
 			{
-				if (TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression))
+				if (TryReplaceIdentifierWithThis(symbol, (SimpleNameSyntax)node.Expression))
 					return node;
 
 				ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
@@ -130,6 +162,45 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							.WithAdditionalAnnotations(UnaryAttribute.Annotation)
 							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
 							.WithTrailingTrivia(node.Expression.GetTrailingTrivia()));
+
+							return node;
+						}
+						if (_attributeData[i].AttributeClass!.Name == nameof(GenericUnaryAttribute))
+						{
+							TypeSyntax _arg = ((GenericNameSyntax)node.Expression).TypeArgumentList.Arguments[0];
+
+							//Check if the generic is contained in ReplaceNodes.
+							//If yes, then use the replaced node.
+							//The same applies to GenericBinaryAttribute.
+							if (ReplaceNodes.ContainsKey(_arg))
+								_arg = (TypeSyntax)ReplaceNodes[_arg];
+
+							//Replace GenericName with IdentifierName from an attribute.
+							ReplaceNodes.Add(node.Expression, SyntaxFactory.IdentifierName(SyntaxFactory.Identifier(_attributeData[i].ConstructorArguments[0].Value.ToString()))
+							.WithAdditionalAnnotations(UnaryAttribute.Annotation)
+							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
+							.WithTrailingTrivia(node.Expression.GetTrailingTrivia()));
+
+							ReplaceNodes.Add(node.ArgumentList, node.ArgumentList
+							.AddArguments(SyntaxFactory.Argument(SyntaxFactory.IdentifierName(_arg.ToString()))));
+
+							return node;
+						}
+						if (_attributeData[i].AttributeClass!.Name == nameof(GenericBinaryAttribute))
+						{
+							TypeSyntax _arg = ((GenericNameSyntax)node.Expression).TypeArgumentList.Arguments[0];
+
+							if (ReplaceNodes.ContainsKey(_arg))
+								_arg = (TypeSyntax)ReplaceNodes[_arg];
+
+							ReplaceNodes.Add(node.Expression, SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
+							.WithAdditionalAnnotations(BinaryAttribute.Annotation)
+							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
+							.WithTrailingTrivia(node.Expression.GetTrailingTrivia()));
+
+							ReplaceNodes.Add(node.ArgumentList, node.ArgumentList
+							.AddArguments(SyntaxFactory.Argument(SyntaxFactory.IdentifierName(_arg.ToString())))
+							.NormalizeWhitespace());
 
 							return node;
 						}
@@ -164,7 +235,58 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
-	private bool TryReplaceIdentifierWithThis(ISymbol symbol, IdentifierNameSyntax identifier)
+	public override SyntaxNode? VisitAssignmentExpression(AssignmentExpressionSyntax node)
+	{
+		if (node.Left is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Left).Symbol;
+
+			if (symbol != null)
+			{
+				TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Left);
+			}
+		}
+		if (node.Right is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Right).Symbol;
+
+			if (symbol != null)
+			{
+				TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Right);
+			}
+		}
+		node = (AssignmentExpressionSyntax)base.VisitAssignmentExpression(node)!;
+
+		return node;
+	}
+	public override SyntaxNode? VisitReturnStatement(ReturnStatementSyntax node)
+	{
+		if (node.Expression is IdentifierNameSyntax)
+		{
+			ISymbol? symbol = _Model.GetSymbolInfo(node.Expression).Symbol;
+
+			if (symbol != null)
+			{
+				TryReplaceIdentifierWithThis(symbol, (IdentifierNameSyntax)node.Expression);
+			}
+		}
+		node = (ReturnStatementSyntax)base.VisitReturnStatement(node)!;
+
+		return node;
+	}
+	public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)
+	{
+		node = (PropertyDeclarationSyntax)base.VisitPropertyDeclaration(node)!;
+
+		if (node.Type is IdentifierNameSyntax ||
+			node.Type is GenericNameSyntax)
+			VisitSimpleName((SimpleNameSyntax)node.Type);
+
+		return node;
+	}
+
+
+	private bool TryReplaceIdentifierWithThis(ISymbol symbol, SimpleNameSyntax identifier)
 	{
 		if (symbol != null && !symbol.IsStatic)
 		{
@@ -185,9 +307,9 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 						{
 							MemberAccessExpressionSyntax _member = SyntaxFactory.MemberAccessExpression(
 								SyntaxKind.SimpleMemberAccessExpression,
-								SyntaxFactory.ThisExpression(),
-								(IdentifierNameSyntax)identifier.WithoutTrivia())
-								.WithLeadingTrivia(identifier.GetLeadingTrivia());
+								SyntaxFactory.ThisExpression(), identifier.WithoutTrivia())
+								.WithLeadingTrivia(identifier.GetLeadingTrivia())
+								.WithTrailingTrivia(identifier.GetTrailingTrivia());
 
 							ReplaceNodes.Add(identifier, _member);
 
@@ -202,7 +324,6 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 		return false;
 	}
-
 	private void VisitSimpleName(SimpleNameSyntax identifier)
 	{
 		ISymbol? symbol = _Model.GetSymbolInfo(identifier).Symbol;
@@ -269,7 +390,6 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			return;
 		}
 	}
-	
 	private bool BuiltInTypesGenerics(SimpleNameSyntax node, ISymbol? symbol, out string str)
 	{
 		str = string.Empty;

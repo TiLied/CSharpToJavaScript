@@ -6,6 +6,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis;
 using System.Linq;
 using CSharpToJavaScript.Utils;
+using System.Collections.Immutable;
 
 namespace CSharpToJavaScript;
 
@@ -49,55 +50,6 @@ public static class CSTOJS
 
 		trees[0] = AddGlobalUsings(trees[0]);
 
-		for (int i = 0; i < files.Length; i++)
-		{
-			if (files[i].OptionsForFile.TranslateFile == false)
-				continue;
-
-			if (files[i].OptionsForFile.NormalizeWhitespace)
-				trees[i] = trees[i].GetRoot().NormalizeWhitespace().SyntaxTree;
-
-			if (files[i].OptionsForFile.KeepBraceOnTheSameLine)
-			{
-				//Mostly deleted whitespaces, still TODO?
-				SyntaxToken[] allBraces = trees[i].GetRoot().DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
-
-				List<SyntaxTrivia> allTriviaToDelete = new();
-
-				for (int j = 0; j < allBraces.Length; j++)
-				{
-					if (allBraces[j].HasLeadingTrivia)
-					{
-						SyntaxTriviaList _lt = allBraces[j].LeadingTrivia;
-						for (int y = 0; y < _lt.Count; y++)
-						{
-							allTriviaToDelete.Add(_lt[y]);
-						}
-					}
-				}
-				//Is this the right way to delete trivia?
-				trees[i] = trees[i].GetRoot().ReplaceTrivia(allTriviaToDelete, (o, r) => SyntaxFactory.ElasticMarker).SyntaxTree;
-
-				allBraces = trees[i].GetRoot().DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
-
-				List<SyntaxTrivia> allTriviaToReplace = new();
-
-				for (int j = 0; j < allBraces.Length; j++)
-				{
-					SyntaxToken _token = allBraces[j].GetPreviousToken();
-					if (_token.HasTrailingTrivia)
-					{
-						SyntaxTrivia _trivia = _token.TrailingTrivia.Where((e) => e.IsKind(SyntaxKind.EndOfLineTrivia)).FirstOrDefault();
-						if (!_trivia.IsKind(SyntaxKind.None))
-						{
-							allTriviaToReplace.Add(_trivia);
-						}
-					}
-				}
-				trees[i] = trees[i].GetRoot().ReplaceTrivia(allTriviaToReplace, (o, r) => SyntaxFactory.Space).SyntaxTree;
-			}
-		}
-
 		CSharpCompilation compilation = CSharpCompilation
 			.Create("HelloWorld")
 			.AddReferences(references)
@@ -108,15 +60,65 @@ public static class CSTOJS
 			if (files[i].OptionsForFile.TranslateFile == false)
 				continue;
 
-			Walker _walker = new(files[i].OptionsForFile, compilation.GetSemanticModel(trees[i]));
+			SemanticModel _model = compilation.GetSemanticModel(trees[i]);
 
-			_walker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheTop);
+			ImmutableArray<Diagnostic> diagnostics = _model.GetDiagnostics();
+			for (int j = 0; j < diagnostics.Length; j++)
+			{
+				if (files[i].OptionsForFile.Debug)
+					Log.WarningLine(diagnostics[j].ToString());
 
-			_walker.Visit(trees[i].GetRoot());
+				//Print an error if compilation fails.
+				if (diagnostics[j].Severity == DiagnosticSeverity.Error)
+				{
+					if (files[i].OptionsForFile.DisableCompilationErrors == false)
+						Log.ErrorLine(diagnostics[i].ToString());
+				}
+			}
 
-			_walker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheBottom);
+			SyntaxNode _root = trees[i].GetRoot();
 
-			files[i].TranslatedStr = _walker.JSSB.ToString();
+			WithSemanticRewriter _withSemanticRewriter = new(_model, files[i].OptionsForFile);
+			WithoutSemanticRewriter _withoutSemanticRewriter = new(files[i].OptionsForFile);
+			
+			StringBuilderWalker _stringBuilderWalker = new();
+
+			SyntaxNode newRoot1 = _withSemanticRewriter.Visit(_root);
+			if (_root != newRoot1)
+				_root = newRoot1;
+
+			_root = _root.ReplaceNodes(_withSemanticRewriter.ReplaceNodes.Keys, (o, r) =>
+			{
+				return _withSemanticRewriter.ReplaceNodes[o];
+			});
+
+			if (files[i].OptionsForFile.Debug)
+				files[i].Debug_WithSemanticRewriter = _root.ToFullString();
+
+			SyntaxNode newRoot2 = _withoutSemanticRewriter.Visit(_root);
+			if (_root != newRoot2)
+				_root = newRoot2;
+
+			if (files[i].OptionsForFile.Debug)
+				files[i].Debug_WithoutSemanticRewriter = _root.ToFullString();
+
+			if (files[i].OptionsForFile.NormalizeWhitespace)
+				_root = _root.NormalizeWhitespace();
+
+			if (files[i].OptionsForFile.KeepBraceOnTheSameLine)
+			{
+				KeepBraceOnTheSameLineRewriter _keepBraceOnTheSameLineRewriter = new();
+				
+				SyntaxNode newRoot3 = _keepBraceOnTheSameLineRewriter.Visit(_root);
+				if (_root != newRoot3)
+					_root = newRoot3;
+			}
+
+			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheTop);
+			_stringBuilderWalker.Visit(_root);
+			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheBottom);
+
+			files[i].TranslatedStr = _stringBuilderWalker.JSSB.ToString();
 		}
 
 		return files;
@@ -200,7 +202,7 @@ public static class CSTOJS
 			}
 			Log.InfoLine($"---");
 		}
-		
+
 		MetadataReference[] references = new MetadataReference[assemblyMetadata.Count];
 		int i = 0;
 		foreach (MetadataReference metadata in assemblyMetadata)
@@ -218,7 +220,7 @@ public static class CSTOJS
 			}
 			Log.InfoLine($"+++");
 		}
-		
+
 		return references;
 	}
 
@@ -397,9 +399,20 @@ public class FileData
 	/// CS input string.
 	/// </summary>
 	public string SourceStr { get; set; } = string.Empty;
-	
+
 	/// <summary>
 	/// JS translated string.
 	/// </summary>
 	public string TranslatedStr { get; set; } = string.Empty;
+
+
+	/// <summary>
+	/// Debug string.
+	/// </summary>
+	public string Debug_WithSemanticRewriter { get; set; } = string.Empty;
+
+	/// <summary>
+	/// Debug string.
+	/// </summary>
+	public string Debug_WithoutSemanticRewriter { get; set; } = string.Empty;
 }

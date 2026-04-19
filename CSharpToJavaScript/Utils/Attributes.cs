@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using System;
 
 namespace CSharpToJavaScript.Utils;
 
@@ -76,6 +77,7 @@ public class ToAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class BinaryAttribute : Attribute
 {
+	public static SyntaxAnnotation Annotation { get; } = new(nameof(BinaryAttribute));
 	public string Value { get; init; }
 	public BinaryAttribute(string value)
 	{
@@ -100,6 +102,7 @@ public class GenericBinaryAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class UnaryAttribute : Attribute
 {
+	public static SyntaxAnnotation Annotation { get; } = new(nameof(UnaryAttribute));
 	public string Value { get; init; }
 	public UnaryAttribute(string value)
 	{
@@ -125,8 +128,8 @@ public class GenericUnaryAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class ToObjectAttribute : Attribute
 {
-
+	public static SyntaxAnnotation Annotation { get; } = new(nameof(ToObjectAttribute));
 }
 
 [AttributeUsage(AttributeTargets.Method)]
-public class GenericAsArgument : Attribute { }
+public class GenericAsArgumentAttribute : Attribute { }

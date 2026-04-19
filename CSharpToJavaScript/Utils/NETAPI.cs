@@ -6,7 +6,7 @@
 
 internal class NETAPI
 {
-	private readonly TypeName[] _TypeNames = new TypeName[8];
+	private readonly TypeName[] _TypeNames = new TypeName[9];
 
 	public NETAPI()
 	{
@@ -38,6 +38,7 @@ internal class NETAPI
 		_TypeNames[2].Name = nameof(System.Collections.Generic.List<object>);
 		_TypeNames[2].JSName = "Array";
 
+		_TypeNames[2].SymbolNames.Add(".ctor", "Array");
 		_TypeNames[2].SymbolNames.Add(nameof(System.Collections.Generic.List<object>.Sort), "sort");
 		_TypeNames[2].SymbolNames.Add(nameof(System.Collections.Generic.List<object>.FindLast), "findLast");
 		_TypeNames[2].SymbolNames.Add(nameof(System.Collections.Generic.List<object>.Count), "length");
@@ -60,7 +61,7 @@ internal class NETAPI
 		//
 		_TypeNames[4] = new();
 		_TypeNames[4].Name = nameof(System.String);
-		_TypeNames[4].JSName = "string";
+		_TypeNames[4].JSName = "String";
 
 		_TypeNames[4].SymbolNames.Add(nameof(string.Contains), "includes");
 		_TypeNames[4].SymbolNames.Add(nameof(string.Length), "length");
@@ -73,6 +74,7 @@ internal class NETAPI
 		_TypeNames[4].SymbolNames.Add(nameof(string.ToUpper), "toUpperCase");
 		_TypeNames[4].SymbolNames.Add(nameof(string.ToLower), "toLowerCase");
 		_TypeNames[4].SymbolNames.Add(nameof(string.EndsWith), "endsWith");
+		_TypeNames[4].SymbolNames.Add(nameof(string.Empty), "raw``");
 		
 		//
 		//
@@ -104,6 +106,13 @@ internal class NETAPI
 		_TypeNames[7].SymbolNames.Add(nameof(System.Math.Exp), "exp");
 		_TypeNames[7].SymbolNames.Add(nameof(System.Math.Abs), "abs");
 		_TypeNames[7].SymbolNames.Add(nameof(System.Math.Max), "max");
+		
+		//
+		//
+		//
+		_TypeNames[8] = new();
+		_TypeNames[8].Name = nameof(System.Object);
+		_TypeNames[8].JSName = "Object";
 	}
 
 	public string? ReturnJSString(string typeName, string? symbolName = null) 

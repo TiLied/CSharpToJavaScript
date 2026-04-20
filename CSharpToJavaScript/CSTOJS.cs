@@ -83,9 +83,7 @@ public static class CSTOJS
 			
 			StringBuilderWalker _stringBuilderWalker = new();
 
-			SyntaxNode newRoot1 = _withSemanticRewriter.Visit(_root);
-			if (_root != newRoot1)
-				_root = newRoot1;
+			_root = _withSemanticRewriter.Visit(_root);
 
 			_root = _root.ReplaceNodes(_withSemanticRewriter.ReplaceNodes.Keys, (o, r) =>
 			{
@@ -95,9 +93,7 @@ public static class CSTOJS
 			if (files[i].OptionsForFile.Debug)
 				files[i].Debug_WithSemanticRewriter = _root.ToFullString();
 
-			SyntaxNode newRoot2 = _withoutSemanticRewriter.Visit(_root);
-			if (_root != newRoot2)
-				_root = newRoot2;
+			_root = _withoutSemanticRewriter.Visit(_root);
 
 			if (files[i].OptionsForFile.Debug)
 				files[i].Debug_WithoutSemanticRewriter = _root.ToFullString();
@@ -108,10 +104,8 @@ public static class CSTOJS
 			if (files[i].OptionsForFile.KeepBraceOnTheSameLine)
 			{
 				KeepBraceOnTheSameLineRewriter _keepBraceOnTheSameLineRewriter = new();
-				
-				SyntaxNode newRoot3 = _keepBraceOnTheSameLineRewriter.Visit(_root);
-				if (_root != newRoot3)
-					_root = newRoot3;
+
+				_root = _keepBraceOnTheSameLineRewriter.Visit(_root);
 			}
 
 			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheTop);

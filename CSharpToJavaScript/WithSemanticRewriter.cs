@@ -35,7 +35,14 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		return base.Visit(node);
 	}
 #endif
-
+	public override SyntaxNode? VisitUsingDirective(UsingDirectiveSyntax node)
+	{
+		return node;
+	}
+	public override SyntaxNode? VisitExternAliasDirective(ExternAliasDirectiveSyntax node)
+	{
+		return node;
+	}
 	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
 		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);

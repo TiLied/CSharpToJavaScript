@@ -129,7 +129,7 @@ public static class CSTOJS
 
 		string? assemblyPath = Path.GetDirectoryName(assembly?.Location);
 		string? objectAssemblyPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
-		string? binPath = Directory.Exists("./bin/") ? "./bin/" : null;
+		string? customPath = Directory.Exists(options.CustomPathToDLLs) ? options.CustomPathToDLLs : null;
 
 		if (assemblyNames.Length > 0)
 		{
@@ -176,9 +176,9 @@ public static class CSTOJS
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Console.dll")))
 				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Console.dll")));
 		}
-		if (binPath != null)
+		if (customPath != null)
 		{
-			string[] files = Directory.GetFiles(binPath, "*.dll", SearchOption.AllDirectories);
+			string[] files = Directory.GetFiles(customPath, "*.dll", SearchOption.AllDirectories);
 			for (int j = 0; j < files.Length; j++)
 			{
 				assemblyMetadata.Add(MetadataReference.CreateFromFile(files[j]));
@@ -188,14 +188,16 @@ public static class CSTOJS
 		{
 			Log.InfoLine($"+++");
 
-			Log.InfoLine($"assemblyPath: {assemblyPath}");
-			Log.InfoLine($"objectAssemblyPath: {objectAssemblyPath}");
-			Log.InfoLine($"binPath: {binPath}");
+			Log.InfoLine($"assemblyPath: '{assemblyPath}'");
+			Log.InfoLine($"objectAssemblyPath: '{objectAssemblyPath}'");
+			Log.InfoLine($"binPath: '{customPath}'");
 
 			foreach (MetadataReference metadata in assemblyMetadata)
 			{
 				Log.WriteLine(metadata.Display ?? "null display string");
 			}
+			
+			Log.InfoLine($"assemblyMetadata count: '{assemblyMetadata.Count}'");
 			Log.InfoLine($"---");
 		}
 
@@ -214,6 +216,7 @@ public static class CSTOJS
 				Log.WriteLine(references[j].Display ?? "null display string");
 
 			}
+			Log.InfoLine($"references length: '{references.Length}'");
 			Log.InfoLine($"+++");
 		}
 

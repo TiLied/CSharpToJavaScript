@@ -138,6 +138,29 @@ public class CSTOJSOptions
 	public Dictionary<string, string> CustomCSNamesToJS { get; set; } = new();
 
 	/// <summary>
+	/// Custom directory path to the DLLs.
+	/// </summary>
+	/// <remarks>
+	/// <para>
+	/// Searches for any DLL in the specified directory and then imports references into compilation.
+	/// </para>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	/// cstojs_options.xml: &lt;Option CustomPathToDLLs=&quot;./bin&quot; /&gt;
+	/// </para>
+	/// </blockquote>
+	/// <blockquote class="IMPORTANT"><h5>IMPORTANT</h5>
+	/// <para>
+	/// The option needs to be specified in the first file or globally if using CSTOJS_CLI.
+	/// </para>
+	/// </blockquote>
+	/// </remarks>
+	/// <value>
+	/// Default: <c>./bin/</c>
+	/// </value>
+	public string CustomPathToDLLs { get; set; } = "./bin/";
+	
+	/// <summary>
 	/// Add a <see cref="StringBuilder" /> to the front of a javascript file.
 	/// </summary>
 	/// <remarks>

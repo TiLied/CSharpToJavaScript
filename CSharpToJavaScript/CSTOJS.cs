@@ -62,20 +62,22 @@ public static class CSTOJS
 
 			SemanticModel _model = compilation.GetSemanticModel(trees[i]);
 
-			ImmutableArray<Diagnostic> diagnostics = _model.GetDiagnostics();
-			for (int j = 0; j < diagnostics.Length; j++)
+			if (files[i].OptionsForFile.DisableDiagnostics == false)
 			{
-				if (files[i].OptionsForFile.Debug)
-					Log.WarningLine(diagnostics[j].ToString());
-
-				//Print an error if compilation fails.
-				if (diagnostics[j].Severity == DiagnosticSeverity.Error)
+				ImmutableArray<Diagnostic> diagnostics = _model.GetDiagnostics();
+				for (int j = 0; j < diagnostics.Length; j++)
 				{
-					if (files[i].OptionsForFile.DisableCompilationErrors == false)
+					if (diagnostics[j].Severity == DiagnosticSeverity.Hidden && files[i].OptionsForFile.Debug == true)
+						Log.WriteLine(diagnostics[j].ToString());
+					else if (diagnostics[j].Severity == DiagnosticSeverity.Info && files[i].OptionsForFile.Debug == true)
+						Log.InfoLine(diagnostics[j].ToString());
+					else if (diagnostics[j].Severity == DiagnosticSeverity.Warning)
+						Log.WarningLine(diagnostics[i].ToString());
+					else if (diagnostics[j].Severity == DiagnosticSeverity.Error)
 						Log.ErrorLine(diagnostics[i].ToString());
 				}
 			}
-
+			
 			SyntaxNode _root = trees[i].GetRoot();
 
 			WithSemanticRewriter _withSemanticRewriter = new(_model, files[i].OptionsForFile);

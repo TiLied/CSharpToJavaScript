@@ -22,20 +22,23 @@ public class CSTOJSOptions
 	/// Default: <c>false</c>
 	/// </value>
 	public bool Debug { get; set; } = false;
+
 	/// <summary>
-	/// Useful for the tests.
+	/// Getting diagnostics is expensive. 
+	/// Enable if you want faster translation.
 	/// </summary>
 	/// <remarks>
 	/// <blockquote class="NOTE"><h5>NOTE</h5>
 	/// <para>
-	/// cstojs_options.xml: &lt;Option DisableCompilationErrors=&quot;false&quot; /&gt;
+	/// cstojs_options.xml: &lt;Option DisableDiagnostics=&quot;false&quot; /&gt;
 	/// </para>
 	/// </blockquote>
+	/// <para><see href = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.semanticmodel.getdiagnostics?view=roslyn-dotnet-4.13.0#remarks"><em>See remarks.</em></see></para>
 	/// </remarks>
 	/// <value>
 	/// Default: <c>false</c>
 	/// </value>
-	public bool DisableCompilationErrors { get; set; } = false;
+	public bool DisableDiagnostics { get; set; } = false;
 
 	/// <summary>
 	/// Self-explanatory, Use <c>var</c> over <c>let</c>.
@@ -163,7 +166,7 @@ public class CSTOJSOptions
 	/// Default: <c>new()</c>
 	/// </value>
 	public StringBuilder AddSBAtTheBottom { get; set; } = new();
-
+	
 	/// <summary>
 	/// Creates new default options. See <see cref="CSTOJSOptions" />.
 	/// </summary>

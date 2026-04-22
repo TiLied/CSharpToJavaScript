@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis;
-using System.Linq;
 using CSharpToJavaScript.Utils;
 using System.Collections.Immutable;
 
@@ -45,15 +44,40 @@ public static class CSTOJS
 
 		for (int i = 0; i < files.Length; i++)
 		{
-			trees[i] = CSharpSyntaxTree.ParseText(files[i].SourceStr);
+			trees[i] = CSharpSyntaxTree.ParseText(files[i].SourceStr, path: files[i].FileName);
 		}
 
-		trees[0] = AddGlobalUsings(trees[0]);
-
+		trees[0] = AddGlobalUsings(trees[0]).WithFilePath(files[0].FileName);
+		
 		CSharpCompilation compilation = CSharpCompilation
 			.Create("HelloWorld")
 			.AddReferences(references)
 			.AddSyntaxTrees(trees);
+
+
+		Dictionary<string, List<string>> _exportedClasses = new();
+
+		//Enable modules if, more than 2 files.
+		if (files.Length >= 2)
+		{
+			for (int i = 0; i < files.Length; i++)
+			{
+				if (files[i].OptionsForFile.EnableModules == 1)
+					files[i].OptionsForFile.EnableModules = 2;
+			}
+		}			
+		
+		for (int i = 0; i < files.Length; i++)
+		{
+			if (files[i].OptionsForFile.EnableModules >= 2)
+			{
+				SemanticModel _model = compilation.GetSemanticModel(trees[i]);
+				
+				ExportClassesWalker _exportClassesWalker = new(_model, ref _exportedClasses);
+				SyntaxNode _root = trees[i].GetRoot();
+				_exportClassesWalker.Visit(_root);
+			}
+		}
 
 		for (int i = 0; i < files.Length; i++)
 		{
@@ -80,7 +104,7 @@ public static class CSTOJS
 			
 			SyntaxNode _root = trees[i].GetRoot();
 
-			WithSemanticRewriter _withSemanticRewriter = new(_model, files[i].OptionsForFile);
+			WithSemanticRewriter _withSemanticRewriter = new(_model, files[i].OptionsForFile, _exportedClasses);
 			WithoutSemanticRewriter _withoutSemanticRewriter = new(files[i].OptionsForFile);
 			
 			StringBuilderWalker _stringBuilderWalker = new();
@@ -111,7 +135,47 @@ public static class CSTOJS
 			}
 
 			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheTop);
+
+			//Import modules
+			if (files[i].OptionsForFile.EnableModules >= 2)
+			{
+				Dictionary<string, List<string>>.KeyCollection _keys = _withSemanticRewriter.ImportClasses.Keys;
+
+				foreach (string _filename in _keys)
+				{
+					_stringBuilderWalker.JSSB.AppendLine();
+					_stringBuilderWalker.JSSB.Append("import { ");
+					for (int j = 0; j < _withSemanticRewriter.ImportClasses[_filename].Count; j++)
+					{
+						if (j == _withSemanticRewriter.ImportClasses[_filename].Count - 1)
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticRewriter.ImportClasses[_filename][j]}");
+						else
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticRewriter.ImportClasses[_filename][j]}, ");
+					}
+					_stringBuilderWalker.JSSB.AppendLine($" }} from './{_filename}';");
+				}
+			}
+			
 			_stringBuilderWalker.Visit(_root);
+
+			//Export modules
+			if (files[i].OptionsForFile.EnableModules >= 2)
+			{
+				if (_exportedClasses.TryGetValue(files[i].FileName, out List<string>? _value))
+				{
+					_stringBuilderWalker.JSSB.AppendLine();
+					_stringBuilderWalker.JSSB.Append("export { ");
+					for (int j = 0; j < _value.Count; j++)
+					{
+						if (j == _value.Count - 1)
+							_stringBuilderWalker.JSSB.Append($"{_value[j]}");
+						else
+							_stringBuilderWalker.JSSB.Append($"{_value[j]}, ");
+					}
+					_stringBuilderWalker.JSSB.AppendLine(" };");
+				}
+			}
+			
 			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheBottom);
 
 			files[i].TranslatedStr = _stringBuilderWalker.JSSB.ToString();
@@ -226,12 +290,8 @@ public static class CSTOJS
 	private static SyntaxTree AddGlobalUsings(SyntaxTree tree)
 	{
 		CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
-		UsingDirectiveSyntax[] oldUsing = root.Usings.ToArray();
 
-		//https://stackoverflow.com/a/72938702
-		root = root.WithUsings
-		(
-			SyntaxFactory.List<UsingDirectiveSyntax>
+		SyntaxList<UsingDirectiveSyntax> newUsing = SyntaxFactory.List<UsingDirectiveSyntax>
 			(
 				new UsingDirectiveSyntax[]
 				{
@@ -377,8 +437,10 @@ public static class CSTOJS
 						SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
 					)
 				}
-			)
-		).AddUsings(oldUsing);
+			).AddRange(root.Usings);
+		
+		//https://stackoverflow.com/a/72938702
+		root = root.WithUsings(newUsing);
 
 		return root.SyntaxTree;
 	}
@@ -389,6 +451,10 @@ public static class CSTOJS
 /// </summary>
 public class FileData
 {
+	/// <summary>
+	/// Full JS filename. Needed for modules.
+	/// </summary>
+	public string FileName { get; set; } = string.Empty;
 	/// <summary>
 	/// Options for a translation.
 	/// </summary>

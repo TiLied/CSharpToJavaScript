@@ -121,7 +121,38 @@ public class CSTOJSOptions
 	/// Default: <c>false</c>
 	/// </value>
 	public bool MakePropertiesEnumerable { get; set; } = false;
-	
+
+	/// <summary>
+	/// Enable module export/import. Three-state value.
+	/// </summary>
+	/// <remarks>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	/// cstojs_options.xml: &lt;Option EnableModules=&quot;1&quot; /&gt;
+	/// </para>
+	/// </blockquote>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	/// Note, for imports a filename needs to be supplied.
+	/// </para>
+	/// </blockquote>
+	/// <blockquote class="IMPORTANT"><h5>IMPORTANT</h5>
+	/// <para>
+	/// Only public classes are exported/imported.
+	/// </para>
+	/// </blockquote>
+	/// <para>
+	/// Possible values: <br />
+	/// 0 = Disable modules. No exports or imports. <br />
+	/// 1 = Automatic. If 2 or more files are supplied, enable modules. <br />
+	/// 2 = Enable modules. <br />
+	/// </para>
+	/// </remarks>
+	/// <value>
+	/// Default: <c>1</c>
+	/// </value>
+	public byte EnableModules { get; set; } = 1;
+
 	/// <summary>
 	/// Array of custom names to convert.
 	/// </summary>

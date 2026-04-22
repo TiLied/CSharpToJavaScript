@@ -1,4 +1,4 @@
-//06.03.2026 11:06:32
+//22.04.2026 19:18:40
 
 #nullable enable
 //Disable missing XML comments.
@@ -9,6 +9,8 @@
 #pragma warning disable CS8625
 //Ignore non-nullable property must contain a non-null value
 #pragma warning disable CS8618
+//Ignore 'Use the new keyword if hiding was intended.'
+#pragma warning disable CS0108
 
 using static CSharpToJavaScript.APIs.JS.Ecma.GlobalObject;
 using CSharpToJavaScript.APIs.JS.Ecma;

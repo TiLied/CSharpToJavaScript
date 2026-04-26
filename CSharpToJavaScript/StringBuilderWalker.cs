@@ -249,11 +249,11 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
-					case SyntaxKind.EnumDeclaration:
-						VisitEnumDeclaration((EnumDeclarationSyntax)asNode);
-						break;
 					case SyntaxKind.NamespaceDeclaration:
 						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.GlobalStatement:
+						VisitGlobalStatement((GlobalStatementSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
@@ -300,11 +300,11 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
-					case SyntaxKind.EnumDeclaration:
-						VisitEnumDeclaration((EnumDeclarationSyntax)asNode);
-						break;
 					case SyntaxKind.NamespaceDeclaration:
 						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.GlobalStatement:
+						VisitGlobalStatement((GlobalStatementSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");

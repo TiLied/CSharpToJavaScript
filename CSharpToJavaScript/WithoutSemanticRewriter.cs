@@ -354,7 +354,11 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		if (node.Type.HasAnnotation(ToObjectAttribute.Annotation))
 		{
-			SyntaxTriviaList trivias = node.ArgumentList.GetTrailingTrivia();
+			SyntaxTriviaList trivias = node.Type.GetTrailingTrivia();
+			
+			if (node.ArgumentList != null)
+				trivias = node.ArgumentList.GetTrailingTrivia();
+				
 			trivias = trivias.AddRange(node.Initializer.GetLeadingTrivia());
 
 			return node.Initializer.WithLeadingTrivia(trivias);
@@ -405,8 +409,8 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		node = (ArrayCreationExpressionSyntax)base.VisitArrayCreationExpression(node)!;
 
 		InitializerExpressionSyntax? initializer = node.Initializer;
-		ArgumentListSyntax arguments = SyntaxFactory.ArgumentList(); 
-		
+		ArgumentListSyntax arguments = SyntaxFactory.ArgumentList();
+
 		if (initializer != null)
 		{
 			List<ArgumentSyntax> _list = new();
@@ -417,7 +421,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			arguments = arguments.WithArguments(SyntaxFactory.SeparatedList<ArgumentSyntax>(_list));
 		}
 		ObjectCreationExpressionSyntax obj = SyntaxFactory.ObjectCreationExpression(node.NewKeyword, SyntaxFactory.IdentifierName("Array"), argumentList: arguments, initializer: null);
-		
+
 		return obj;
 	}
 	public override SyntaxNode? VisitCatchDeclaration(CatchDeclarationSyntax node)

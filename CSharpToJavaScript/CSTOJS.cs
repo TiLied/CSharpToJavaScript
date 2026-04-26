@@ -55,7 +55,7 @@ public static class CSTOJS
 			.AddSyntaxTrees(trees);
 
 
-		Dictionary<string, List<string>> _exportedClasses = new();
+		Dictionary<string, List<string>> exportedClasses = new();
 
 		//Enable modules if, more than 2 files.
 		if (files.Length >= 2)
@@ -73,7 +73,7 @@ public static class CSTOJS
 			{
 				SemanticModel _model = compilation.GetSemanticModel(trees[i]);
 				
-				ExportClassesWalker _exportClassesWalker = new(_model, ref _exportedClasses);
+				ExportClassesWalker _exportClassesWalker = new(_model, ref exportedClasses);
 				SyntaxNode _root = trees[i].GetRoot();
 				_exportClassesWalker.Visit(_root);
 			}
@@ -104,16 +104,16 @@ public static class CSTOJS
 			
 			SyntaxNode _root = trees[i].GetRoot();
 
-			WithSemanticRewriter _withSemanticRewriter = new(_model, files[i].OptionsForFile, _exportedClasses);
+			WithSemanticWalker _withSemanticWalker = new(_model, files[i].OptionsForFile, exportedClasses);
 			WithoutSemanticRewriter _withoutSemanticRewriter = new(files[i].OptionsForFile);
 			
 			StringBuilderWalker _stringBuilderWalker = new();
 
-			_root = _withSemanticRewriter.Visit(_root);
+			_withSemanticWalker.Visit(_root);
 
-			_root = _root.ReplaceNodes(_withSemanticRewriter.ReplaceNodes.Keys, (o, r) =>
+			_root = _root.ReplaceNodes(_withSemanticWalker.ReplaceNodes.Keys, (o, r) =>
 			{
-				return _withSemanticRewriter.ReplaceNodes[o];
+				return _withSemanticWalker.ReplaceNodes[o];
 			});
 
 			if (files[i].OptionsForFile.Debug)
@@ -139,18 +139,23 @@ public static class CSTOJS
 			//Import modules
 			if (files[i].OptionsForFile.EnableModules >= 2)
 			{
-				Dictionary<string, List<string>>.KeyCollection _keys = _withSemanticRewriter.ImportClasses.Keys;
+				Dictionary<string, List<string>>.KeyCollection _keys = _withSemanticWalker.ImportClasses.Keys;
 
 				foreach (string _filename in _keys)
 				{
-					_stringBuilderWalker.JSSB.AppendLine();
-					_stringBuilderWalker.JSSB.Append("import { ");
-					for (int j = 0; j < _withSemanticRewriter.ImportClasses[_filename].Count; j++)
+					if (_stringBuilderWalker.JSSB.Length != 0)
 					{
-						if (j == _withSemanticRewriter.ImportClasses[_filename].Count - 1)
-							_stringBuilderWalker.JSSB.Append($"{_withSemanticRewriter.ImportClasses[_filename][j]}");
+						if (_stringBuilderWalker.JSSB[_stringBuilderWalker.JSSB.Length - 1] != '\n')
+							_stringBuilderWalker.JSSB.AppendLine();
+					}
+					
+					_stringBuilderWalker.JSSB.Append("import { ");
+					for (int j = 0; j < _withSemanticWalker.ImportClasses[_filename].Count; j++)
+					{
+						if (j == _withSemanticWalker.ImportClasses[_filename].Count - 1)
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticWalker.ImportClasses[_filename][j]}");
 						else
-							_stringBuilderWalker.JSSB.Append($"{_withSemanticRewriter.ImportClasses[_filename][j]}, ");
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticWalker.ImportClasses[_filename][j]}, ");
 					}
 					_stringBuilderWalker.JSSB.AppendLine($" }} from './{_filename}';");
 				}
@@ -161,9 +166,11 @@ public static class CSTOJS
 			//Export modules
 			if (files[i].OptionsForFile.EnableModules >= 2)
 			{
-				if (_exportedClasses.TryGetValue(files[i].FileName, out List<string>? _value))
+				if (exportedClasses.TryGetValue(files[i].FileName, out List<string>? _value))
 				{
-					_stringBuilderWalker.JSSB.AppendLine();
+					if (_stringBuilderWalker.JSSB[_stringBuilderWalker.JSSB.Length - 1] != '\n')
+						_stringBuilderWalker.JSSB.AppendLine();
+						
 					_stringBuilderWalker.JSSB.Append("export { ");
 					for (int j = 0; j < _value.Count; j++)
 					{
@@ -172,7 +179,7 @@ public static class CSTOJS
 						else
 							_stringBuilderWalker.JSSB.Append($"{_value[j]}, ");
 					}
-					_stringBuilderWalker.JSSB.AppendLine(" };");
+					_stringBuilderWalker.JSSB.Append(" };");
 				}
 			}
 			
@@ -254,7 +261,7 @@ public static class CSTOJS
 
 			Log.InfoLine($"assemblyPath: '{assemblyPath}'");
 			Log.InfoLine($"objectAssemblyPath: '{objectAssemblyPath}'");
-			Log.InfoLine($"binPath: '{customPath}'");
+			Log.InfoLine($"customPath: '{customPath}'");
 
 			foreach (MetadataReference metadata in assemblyMetadata)
 			{

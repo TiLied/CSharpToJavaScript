@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 
 namespace CSharpToJavaScript;
 
-internal class WithSemanticRewriter : CSharpSyntaxRewriter
+internal class WithSemanticWalker : CSharpSyntaxWalker
 {
 	private readonly NETAPI _NETAPI = new();
 
@@ -21,40 +21,39 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 	private bool _NoneWithTrailingDotRemoved = false;
 
 	public Dictionary<SyntaxNode, SyntaxNode> ReplaceNodes = new();
-
 	public Dictionary<string, List<string>> ImportClasses = new();
 	
-	public WithSemanticRewriter(SemanticModel semanticModel, CSTOJSOptions options, Dictionary<string, List<string>> _exportedClasses)
+	public WithSemanticWalker(SemanticModel semanticModel, CSTOJSOptions options, Dictionary<string, List<string>> exportedClasses)
 	{
 		_Model = semanticModel;
 		_Options = options;
-		_ExportedClasses = _exportedClasses;
+		_ExportedClasses = exportedClasses;
 	}
 
 #if DEBUG
-	public override SyntaxNode? Visit(SyntaxNode? node)
+	public override void Visit(SyntaxNode? node)
 	{
 		if (node != null)
 			Log.InfoLine($"kind: {node.Kind()} \n\t{node.ToString()}");
 
-		return base.Visit(node);
+		base.Visit(node);
 	}
 #endif
-	public override SyntaxNode? VisitUsingDirective(UsingDirectiveSyntax node)
+	public override void VisitUsingDirective(UsingDirectiveSyntax node)
 	{
-		return node;
+		return;
 	}
-	public override SyntaxNode? VisitExternAliasDirective(ExternAliasDirectiveSyntax node)
+	public override void VisitExternAliasDirective(ExternAliasDirectiveSyntax node)
 	{
-		return node;
+		return;
 	}
-	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
+	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
 		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
 				
-		return base.VisitClassDeclaration(node);
+		base.VisitClassDeclaration(node);
 	}
-	public override SyntaxNode? VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
+	public override void VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
 		base.VisitMemberAccessExpression(node);
 
@@ -71,41 +70,78 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			if (TryReplaceIdentifierWithThis(syntax))
-				return node;
+				return;
 		}
-		return node;
 	}
-	public override SyntaxNode? VisitElementAccessExpression(ElementAccessExpressionSyntax node)
+	public override void VisitEqualsValueClause(EqualsValueClauseSyntax node)
+	{
+		base.VisitEqualsValueClause(node);
+
+		if (node.Value is IdentifierNameSyntax syntax)
+		{
+			if (TryReplaceIdentifierWithThis(syntax))
+				return;
+		}
+	}
+	public override void VisitConditionalExpression(ConditionalExpressionSyntax node)
+	{
+		if (node.WhenTrue is IdentifierNameSyntax syntax)
+		{
+			TryReplaceIdentifierWithThis(syntax);
+		}
+		if (node.WhenFalse is IdentifierNameSyntax syntax1)
+		{
+			TryReplaceIdentifierWithThis(syntax1);
+		}
+		base.VisitConditionalExpression(node);
+	}
+	public override void VisitSwitchStatement(SwitchStatementSyntax node)
+	{
+		base.VisitSwitchStatement(node);
+		
+		if (node.Expression is IdentifierNameSyntax syntax)
+		{
+			if (TryReplaceIdentifierWithThis(syntax))
+				return;
+		}
+	}
+	public override void VisitPostfixUnaryExpression(PostfixUnaryExpressionSyntax node)
+	{
+		if (node.Operand is IdentifierNameSyntax syntax)
+		{
+			TryReplaceIdentifierWithThis(syntax);
+		}
+		base.VisitPostfixUnaryExpression(node);
+	}
+	public override void VisitElementAccessExpression(ElementAccessExpressionSyntax node)
 	{
 		base.VisitElementAccessExpression(node);
 
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			if (TryReplaceIdentifierWithThis(syntax))
-				return node;
+				return;
 		}
-
-		return node;
 	}
-	public override SyntaxNode? VisitInterpolation(InterpolationSyntax node)
+	public override void VisitInterpolation(InterpolationSyntax node)
 	{
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			if (TryReplaceIdentifierWithThis(syntax))
-				return node;
+				return;
 		}
-		return base.VisitInterpolation(node);
+		base.VisitInterpolation(node);
 	}
-	public override SyntaxNode? VisitArgument(ArgumentSyntax node)
+	public override void VisitArgument(ArgumentSyntax node)
 	{
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			if (TryReplaceIdentifierWithThis(syntax))
-				return node;
+				return;
 		}
-		return base.VisitArgument(node);
+		base.VisitArgument(node);
 	}
-	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
+	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
 		base.VisitInvocationExpression(node);
 
@@ -117,7 +153,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			if (symbol != null)
 			{
 				if (TryReplaceIdentifierWithThis((SimpleNameSyntax)node.Expression))
-					return node;
+					return;
 
 				ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
 				for (int i = 0; i < _attributeData.Length; i++)
@@ -136,7 +172,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							else
 								ReplaceNodes.Add(node.Expression, _identifier);
 
-							return node;
+							return;
 						}
 						if (_attributeData[i].AttributeClass!.Name == nameof(UnaryAttribute))
 						{
@@ -150,7 +186,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							else
 								ReplaceNodes.Add(node.Expression, _identifier);
 
-							return node;
+							return;
 						}
 						if (_attributeData[i].AttributeClass!.Name == nameof(GenericUnaryAttribute))
 						{
@@ -176,7 +212,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							ReplaceNodes.Add(node.ArgumentList, node.ArgumentList
 							.AddArguments(SyntaxFactory.Argument(SyntaxFactory.IdentifierName(_arg.ToString()))));
 
-							return node;
+							return;
 						}
 						if (_attributeData[i].AttributeClass!.Name == nameof(GenericBinaryAttribute))
 						{
@@ -199,7 +235,7 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							.AddArguments(SyntaxFactory.Argument(SyntaxFactory.IdentifierName(_arg.ToString())))
 							.NormalizeWhitespace());
 
-							return node;
+							return;
 						}
 					}
 				}
@@ -228,16 +264,14 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 							.AddArguments(SyntaxFactory.Argument(SyntaxFactory.IdentifierName(_arg.ToString())))
 							.NormalizeWhitespace());
 
-							return node;
+							return;
 						}
 					}
 				}
 			}
 		}
-		
-		return node;
 	}
-	public override SyntaxNode? VisitBinaryExpression(BinaryExpressionSyntax node)
+	public override void VisitBinaryExpression(BinaryExpressionSyntax node)
 	{
 		if (node.Left is IdentifierNameSyntax syntax)
 		{
@@ -247,9 +281,9 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		{
 			TryReplaceIdentifierWithThis(syntax1);
 		}
-		return base.VisitBinaryExpression(node);
+		base.VisitBinaryExpression(node);
 	}
-	public override SyntaxNode? VisitAssignmentExpression(AssignmentExpressionSyntax node)
+	public override void VisitAssignmentExpression(AssignmentExpressionSyntax node)
 	{
 		if (node.Left is IdentifierNameSyntax syntax)
 		{
@@ -259,41 +293,41 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 		{
 			TryReplaceIdentifierWithThis(syntax1);
 		}
-		return base.VisitAssignmentExpression(node);
+		base.VisitAssignmentExpression(node);
 	}
-	public override SyntaxNode? VisitReturnStatement(ReturnStatementSyntax node)
+	public override void VisitReturnStatement(ReturnStatementSyntax node)
 	{
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			TryReplaceIdentifierWithThis(syntax);
 		}
-		return base.VisitReturnStatement(node);
+		base.VisitReturnStatement(node);
 	}
-	public override SyntaxNode? VisitPrefixUnaryExpression(PrefixUnaryExpressionSyntax node)
+	public override void VisitPrefixUnaryExpression(PrefixUnaryExpressionSyntax node)
 	{
 		if (node.Operand is IdentifierNameSyntax syntax)
 		{
 			TryReplaceIdentifierWithThis(syntax);
 		}
-		return base.VisitPrefixUnaryExpression(node);
+		base.VisitPrefixUnaryExpression(node);
 	}
-	public override SyntaxNode? VisitIfStatement(IfStatementSyntax node)
+	public override void VisitIfStatement(IfStatementSyntax node)
 	{
 		if (node.Condition is IdentifierNameSyntax syntax)
 		{
 			TryReplaceIdentifierWithThis(syntax);
 		}
-		return base.VisitIfStatement(node);
+		base.VisitIfStatement(node);
 	}
-	public override SyntaxNode? VisitCastExpression(CastExpressionSyntax node)
+	public override void VisitCastExpression(CastExpressionSyntax node)
 	{
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			TryReplaceIdentifierWithThis(syntax);
 		}
-		return base.VisitCastExpression(node);
+		base.VisitCastExpression(node);
 	}
-	public override SyntaxNode? VisitObjectCreationExpression(ObjectCreationExpressionSyntax node)
+	public override void VisitObjectCreationExpression(ObjectCreationExpressionSyntax node)
 	{
 		base.VisitObjectCreationExpression(node);
 
@@ -314,10 +348,8 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 				}
 			}
 		}
-
-		return node;
 	}
-	public override SyntaxNode? VisitImplicitObjectCreationExpression(ImplicitObjectCreationExpressionSyntax node)
+	public override void VisitImplicitObjectCreationExpression(ImplicitObjectCreationExpressionSyntax node)
 	{
 		base.VisitImplicitObjectCreationExpression(node);
 
@@ -346,11 +378,9 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			_args,
 			_initializer));
 		}
-
-		return node;
 	}
 
-	public override SyntaxNode? VisitIdentifierName(IdentifierNameSyntax node)
+	public override void VisitIdentifierName(IdentifierNameSyntax node)
 	{
 		ISymbol? symbol = TryGetISymbol(node);
 
@@ -359,17 +389,15 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			if (symbol != null)
 				AddImportModule(symbol);
 		}
-	
+
 		VisitSimpleName(node, symbol);
-		return node;
 	}
-	public override SyntaxNode? VisitGenericName(GenericNameSyntax node)
+	public override void VisitGenericName(GenericNameSyntax node)
 	{
 		base.VisitGenericName(node);
 		VisitSimpleName(node, TryGetISymbol(node));
-		return node;
 	}
-	public override SyntaxNode? VisitPredefinedType(PredefinedTypeSyntax node)
+	public override void VisitPredefinedType(PredefinedTypeSyntax node)
 	{
 		ISymbol? symbol = TryGetISymbol(node);
 
@@ -378,10 +406,9 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			if (BuiltInTypesGenerics(node, symbol, out string str))
 			{
 				ReplaceNodes.Add(node, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(node.GetLeadingTrivia()).WithTrailingTrivia(node.GetTrailingTrivia()));
-				return node;
+				return;
 			}
 		}
-		return node;
 	}
 
 	private void AddImportModule(ISymbol symbol)
@@ -393,25 +420,30 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 			if (symbol.Locations[0].IsInMetadata)
 				return;
 			
-			if (symbol.Locations[0].SourceTree.FilePath != _CurrentClassSymbol.Locations[0].SourceTree.FilePath)
+			if (symbol.Locations[0].SourceTree != null)
 			{
-				//If the symbol location is empty, 
-				//return, the import requires a file path/filename.
-				//Warning printed in ExportClassesWalker.VisitClassDeclaration
-				if (symbol.Locations[0].SourceTree.FilePath == string.Empty)
-					return;
-					
-				if (_ExportedClasses.TryGetValue(symbol.Locations[0].SourceTree.FilePath, out List<string>? _classes))
+				string _filename = symbol.Locations[0].SourceTree!.FilePath;
+				
+				if (_filename != _CurrentClassSymbol.Locations[0].SourceTree.FilePath)
 				{
-					if (_classes.Contains(symbol.Name))
+					//If the symbol location is empty, 
+					//return, the import requires a file path/filename.
+					//Warning printed in "ExportClassesWalker.VisitClassDeclaration"
+					if (_filename == string.Empty)
+						return;
+
+					if (_ExportedClasses.TryGetValue(_filename, out List<string>? _classes))
 					{
-						if (ImportClasses.ContainsKey(symbol.Locations[0].SourceTree.FilePath))
+						if (_classes.Contains(symbol.Name))
 						{
-							if (!ImportClasses[symbol.Locations[0].SourceTree.FilePath].Contains(symbol.Name))
-								ImportClasses[symbol.Locations[0].SourceTree.FilePath].Add(symbol.Name);
+							if (ImportClasses.ContainsKey(_filename))
+							{
+								if (!ImportClasses[_filename].Contains(symbol.Name))
+									ImportClasses[_filename].Add(symbol.Name);
+							}
+							else
+								ImportClasses.Add(_filename, new() { symbol.Name });
 						}
-						else
-							ImportClasses.Add(symbol.Locations[0].SourceTree.FilePath, new() { symbol.Name });
 					}
 				}
 			}
@@ -439,13 +471,21 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 					{
 						if (_members[i].Name == identifier.Identifier.Text)
 						{
+							//Check if an identifier exists before creating a member.
+							SimpleNameSyntax _temp = identifier;
+							if (ReplaceNodes.ContainsKey(identifier))
+								_temp = (SimpleNameSyntax)ReplaceNodes[identifier];
+
 							MemberAccessExpressionSyntax _member = SyntaxFactory.MemberAccessExpression(
 								SyntaxKind.SimpleMemberAccessExpression,
-								SyntaxFactory.ThisExpression(), identifier.WithoutTrivia())
-								.WithLeadingTrivia(identifier.GetLeadingTrivia())
-								.WithTrailingTrivia(identifier.GetTrailingTrivia());
+								SyntaxFactory.ThisExpression(), _temp.WithoutTrivia())
+								.WithLeadingTrivia(_temp.GetLeadingTrivia())
+								.WithTrailingTrivia(_temp.GetTrailingTrivia());
 
-							ReplaceNodes.Add(identifier, _member);
+							if (ReplaceNodes.ContainsKey(identifier))
+								ReplaceNodes[identifier] = _member;
+							else
+								ReplaceNodes.Add(identifier, _member);
 
 							return true;
 						}
@@ -581,7 +621,11 @@ internal class WithSemanticRewriter : CSharpSyntaxRewriter
 
 			if (typeSymbol.Kind != SymbolKind.NamedType)
 			{
-				Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+				//We are only interested in 'SymbolKind.NamedType'
+				//so silently ignore and return.
+				//TODO? Rewrite the whole method? Or just check for the kind at the beginning.
+
+				//Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 		}

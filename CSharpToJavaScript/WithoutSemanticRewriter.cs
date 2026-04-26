@@ -387,6 +387,19 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return SyntaxFactory.Parameter(attributeLists: node.AttributeLists, modifiers: node.Modifiers, type: null, identifier: node.Identifier, @default: node.Default);
 	}
+	public override SyntaxNode? VisitBaseList(BaseListSyntax node)
+	{
+		//TODO!
+		//Erase interfaces!
+		if (node.Types.Count >= 2)
+		{
+			List<BaseTypeSyntax> baseTypes = new();
+			baseTypes.Add(node.Types[0].WithTrailingTrivia(node.Types[node.Types.Count - 1].GetTrailingTrivia()));
+			node = node.WithTypes(SyntaxFactory.SeparatedList(baseTypes));
+		}
+		
+		return node;
+	}
 	public override SyntaxNode? VisitArrayCreationExpression(ArrayCreationExpressionSyntax node)
 	{
 		node = (ArrayCreationExpressionSyntax)base.VisitArrayCreationExpression(node)!;

@@ -407,6 +407,12 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		
 		return obj;
 	}
+	public override SyntaxNode? VisitCatchDeclaration(CatchDeclarationSyntax node)
+	{
+		node = (CatchDeclarationSyntax)base.VisitCatchDeclaration(node)!;
+		node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName(""));
+		return node;
+	}
 	public override SyntaxNode? VisitCastExpression(CastExpressionSyntax node)
 	{
 		return node.Expression;

@@ -381,6 +381,32 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return node;
 	}
+	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
+	{
+		if (node.Expression is IdentifierNameSyntax identifier)
+		{
+			if (identifier.Identifier.Text == "nameof")
+			{
+				ExpressionSyntax _arg = node.ArgumentList.Arguments[0].Expression;
+				if (_arg is IdentifierNameSyntax)
+				{
+					LiteralExpressionSyntax literal = SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(_arg.ToString()));
+					return literal;
+				}
+				else if (_arg is MemberAccessExpressionSyntax syntax)
+				{
+					LiteralExpressionSyntax literal = SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(syntax.Name.ToString()));
+					return literal;
+				}
+				else
+				{
+					Log.WarningLine($"The argument of a nameof: \"{_arg.Kind()}\" is not supported.");
+				}
+			}
+		}
+		
+		return base.VisitInvocationExpression(node);
+	}
 	public override SyntaxNode? VisitBaseExpression(BaseExpressionSyntax node)
 	{
 		return SyntaxFactory.IdentifierName("super").WithLeadingTrivia(node.GetLeadingTrivia());

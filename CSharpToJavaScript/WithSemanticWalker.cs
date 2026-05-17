@@ -143,8 +143,18 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	}
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
+		//Return if the expression is nameof.
+		//With an early return, we won't process built-in arguments(if used) in nameof.
+		if (node.Expression is IdentifierNameSyntax identifier)
+		{
+			if (identifier.Identifier.Text == "nameof")
+			{
+				return;
+			}
+		}
+		
 		base.VisitInvocationExpression(node);
-
+		
 		if (node.Expression is IdentifierNameSyntax ||
 			node.Expression is GenericNameSyntax)
 		{

@@ -119,7 +119,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 						{
 							if (_Options.MakePropertiesEnumerable)
 							{
-									_enumProp += $", set: function (value) {{ this.{_fieldIdentifier} = value; }} }}";
+								_enumProp += $", set: function (value) {{ this.{_fieldIdentifier} = value; }} }}";
 							}
 							else
 							{
@@ -137,7 +137,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 										SyntaxFactory.IdentifierName("value")).NormalizeWhitespace())))
 							.WithLeadingTrivia(_prop.GetLeadingTrivia())
 							.WithTrailingTrivia(_prop.GetTrailingTrivia());
-							
+
 								if (_static != null)
 									_setM = _setM.WithoutLeadingTrivia().WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
 
@@ -145,22 +145,25 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 							}
 						}
 
-						if (_constructorIndex == -1)
+						if (_Options.MakePropertiesEnumerable)
 						{
-							Log.WarningLine($"Constructor is 'null' for: {node.Identifier}. MakePropertiesEnumerable is ignored!");
+							if (_constructorIndex == -1)
+							{
+								Log.WarningLine($"Constructor is 'null' for: {node.Identifier}. MakePropertiesEnumerable is ignored!");
 
-						}
-						else
-						{
-							_enumProp += ")";
+							}
+							else
+							{
+								_enumProp += ")";
 
-							ConstructorDeclarationSyntax _constr = (ConstructorDeclarationSyntax)node.Members[_constructorIndex];
+								ConstructorDeclarationSyntax _constr = (ConstructorDeclarationSyntax)node.Members[_constructorIndex];
 
-							node = node.ReplaceNode(_constr.Body,
-								_constr.Body.WithStatements(_constr.Body.Statements.Insert(0,
-										SyntaxFactory.ExpressionStatement(
-											SyntaxFactory.IdentifierName(_enumProp))
-											.WithTrailingTrivia(SyntaxFactory.CarriageReturnLineFeed))).WithLeadingTrivia(_constr.Body.GetLeadingTrivia()).WithTrailingTrivia(_constr.Body.GetTrailingTrivia()));
+								node = node.ReplaceNode(_constr.Body,
+									_constr.Body.WithStatements(_constr.Body.Statements.Insert(0,
+											SyntaxFactory.ExpressionStatement(
+												SyntaxFactory.IdentifierName(_enumProp))
+												.WithTrailingTrivia(SyntaxFactory.CarriageReturnLineFeed))).WithLeadingTrivia(_constr.Body.GetLeadingTrivia()).WithTrailingTrivia(_constr.Body.GetTrailingTrivia()));
+							}
 						}
 					}
 					else
@@ -216,7 +219,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		node = (ConstructorDeclarationSyntax)base.VisitConstructorDeclaration(node)!;
 
 		SyntaxToken? staticModifier = TryGetModifier(SyntaxKind.StaticKeyword, node.Modifiers);
-		
+
 		if (staticModifier == null)
 			node = node.ReplaceToken(node.Identifier, SyntaxFactory.Identifier("constructor").WithLeadingTrivia(node.Identifier.LeadingTrivia));
 		else
@@ -238,10 +241,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 			if (node.Body.Statements.Count > 0)
 				_super = _super.WithLeadingTrivia(node.Body.Statements[0].GetLeadingTrivia()).WithTrailingTrivia(node.Body.Statements[0].GetTrailingTrivia());
-		
+
 			node = node.ReplaceNode(node.Body, node.Body.WithStatements(node.Body.Statements.Insert(0, _super)));
 		}
-		
+
 		return node;
 	}
 	public override SyntaxNode? VisitFieldDeclaration(FieldDeclarationSyntax node)

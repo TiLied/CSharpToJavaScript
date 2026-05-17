@@ -5,7 +5,7 @@ namespace CSharpToJavaScript.APIs.JS;
 public partial interface ParentNode
 {
 	///<include file='CSharpToJavaScript/Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelector/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
+	[Value("querySelector")]
 	public T? QuerySelector<T>(string selectors) where T : Element { throw new System.NotImplementedException(); }
 }
 

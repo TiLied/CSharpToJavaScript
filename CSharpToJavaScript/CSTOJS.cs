@@ -117,12 +117,12 @@ public static class CSTOJS
 			});
 
 			if (files[i].OptionsForFile.Debug)
-				files[i].Debug_WithSemanticRewriter = _root.ToFullString();
+				files[i].DebugStrings[0] = _root.ToFullString();
 
 			_root = _withoutSemanticRewriter.Visit(_root);
 
 			if (files[i].OptionsForFile.Debug)
-				files[i].Debug_WithoutSemanticRewriter = _root.ToFullString();
+				files[i].DebugStrings[1] = _root.ToFullString();
 
 			if (files[i].OptionsForFile.NormalizeWhitespace)
 				_root = _root.NormalizeWhitespace();
@@ -477,14 +477,10 @@ public class FileData
 	/// </summary>
 	public string TranslatedStr { get; set; } = string.Empty;
 
-
 	/// <summary>
-	/// Debug string.
+	/// Debug strings.
+	/// 0: WithSemanticWalker
+	/// 1: WithoutSemanticRewriter
 	/// </summary>
-	public string Debug_WithSemanticRewriter { get; set; } = string.Empty;
-
-	/// <summary>
-	/// Debug string.
-	/// </summary>
-	public string Debug_WithoutSemanticRewriter { get; set; } = string.Empty;
+	public string[] DebugStrings { get; set; } = [string.Empty, string.Empty];
 }

@@ -6,12 +6,12 @@ namespace CSharpToJavaScript.APIs.JS;
 
 public partial interface WindowOrWorkerGlobalScope
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+	[Value("setTimeout")]
 	public long SetTimeout(Action handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
 
-	[To(ToAttribute.FirstCharToLowerCase)]
+	[Value("setInterval")]
 	public long SetInterval(Action handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+	[Value("fetch")]
 	public Task<Response> Fetch(string input) { throw new System.NotImplementedException(); }
 
 }

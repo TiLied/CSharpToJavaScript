@@ -14,7 +14,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	private readonly SemanticModel _Model;
 	private readonly CSTOJSOptions _Options;
 
-	private readonly Dictionary<string, List<string>> _ExportedClasses = new();
+	private readonly Dictionary<string, List<string>> _ExportedClasses;
 	
 	private ITypeSymbol? _CurrentClassSymbol = null;
 
@@ -598,7 +598,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 
 		if (BuiltInTypesGenerics(identifier, symbol, out string str))
 		{
-			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.Identifier.TrailingTrivia));
+			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.GetTrailingTrivia()));
 			return;
 		}
 	}

@@ -606,17 +606,17 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	{
 		str = string.Empty;
 
+		//We need a symbol, if it is null, return.
 		if (symbol == null)
 		{
-			Log.WarningLine($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
+			//Log.WarningLine($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
 			return false;
 		}
-		if (symbol.Name == "dynamic")
-		{
-			//Hitting with "AllInOneNoPreprocessor-v6.cs"
-			Log.WarningLine($"node: \"{node}\", symbol is \"dynamic\".");
+
+		//If symbol locations are zero, return. Treat as symbol null.
+		//Also, if symbol in a source return, it is not a built-in type.
+		if (symbol.Locations.Length == 0 || symbol.Locations[0].IsInSource)
 			return false;
-		}
 
 		ISymbol typeSymbol = symbol;
 
@@ -625,17 +625,13 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			typeSymbol = symbol.ContainingSymbol;
 			if (typeSymbol == null)
 			{
-				Log.WarningLine($"node: \"{node}\", typeSymbol is null. USE \"CustomCSNamesToJS\"!");
+				Log.WarningLine($"node: \"{node}\", symbol: \"{symbol}\", typeSymbol is null. USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 
 			if (typeSymbol.Kind != SymbolKind.NamedType)
 			{
-				//We are only interested in 'SymbolKind.NamedType'
-				//so silently ignore and return.
-				//TODO? Rewrite the whole method? Or just check for the kind at the beginning.
-
-				//Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+				Log.WarningLine($"node: \"{node}\", symbol: \"{symbol}\", symbol kind: \"{symbol.Kind}\", typeSymbol kind: \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 		}
@@ -643,22 +639,26 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		string typeName = typeSymbol.Name;
 
 		string? jsStr = _NETAPI.ReturnJSString(typeName);
+		
 		if (jsStr == null)
 		{
-			Log.WarningLine($"typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
+			Log.WarningLine($"typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
 			return false;
 		}
 		else
 		{
+			//return early if the type name is the same as a symbol.
 			if (typeName == symbol.Name)
 			{
 				str = jsStr;
 				return true;
 			}
+
 			jsStr = _NETAPI.ReturnJSString(typeName, symbol.Name);
+			
 			if (jsStr == null)
 			{
-				Log.WarningLine($"node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", symbolName: \"{symbol.Name}\", Is not supported! USE \"CustomCSNamesToJS\"");
+				Log.WarningLine($"node: \"{node}\", typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", symbolName: \"{symbol.Name}\", Is not supported! USE \"CustomCSNamesToJS\"");
 				return false;
 			}
 			else

@@ -14,7 +14,7 @@ jobs:
       commitCount: ${{ steps.step2.outputs.commitCount }}
     
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - id: step1
@@ -36,7 +36,7 @@ jobs:
 
     if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - id: step1
@@ -50,7 +50,7 @@ jobs:
       - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)' --output=./release.txt   
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ env.newTag }}
           body_path: ./release.txt
@@ -64,7 +64,7 @@ jobs:
       #    echo "releaseNotes=$file" >> $GITHUB_ENV
         run: sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>https://github.com/TiLied/CSharpToJavaScript/releases/tag/${{env.newTag}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
       - name: Setup .NET
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: 10.0.x
       - name: Generate NuGet package
@@ -73,12 +73,12 @@ jobs:
         run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       - run: cat ./CSharpToJavaScript.csproj
       - name: Upload nuget artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: CSharpToJavaScript-nuget-${{ env.newTag }}
           path: ./packages/
       - name: Upload bin artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: CSharpToJavaScript-bin-${{ env.newTag }}
           path: ./bin/Release/net10.0/

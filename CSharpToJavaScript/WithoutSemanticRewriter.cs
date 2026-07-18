@@ -545,6 +545,12 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	{
 		return SyntaxFactory.IdentifierName(node.Identifier);
 	}
+	
+	public override SyntaxNode? VisitQualifiedName(QualifiedNameSyntax node)
+	{
+		return node.Right;
+	}
+	
 	public override SyntaxNode? VisitEnumDeclaration(EnumDeclarationSyntax node)
 	{
 		node = (EnumDeclarationSyntax)base.VisitEnumDeclaration(node)!;

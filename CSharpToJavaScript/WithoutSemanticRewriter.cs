@@ -162,7 +162,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 									_constr.Body.WithStatements(_constr.Body.Statements.Insert(0,
 											SyntaxFactory.ExpressionStatement(
 												SyntaxFactory.IdentifierName(_enumProp))
-												.WithTrailingTrivia(SyntaxFactory.CarriageReturnLineFeed))).WithLeadingTrivia(_constr.Body.GetLeadingTrivia()).WithTrailingTrivia(_constr.Body.GetTrailingTrivia()));
+												.WithTrailingTrivia(SyntaxFactory.LineFeed))).WithLeadingTrivia(_constr.Body.GetLeadingTrivia()).WithTrailingTrivia(_constr.Body.GetTrailingTrivia()));
 							}
 						}
 					}
@@ -275,6 +275,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitMethodDeclaration(MethodDeclarationSyntax node)
 	{
+		//Ignore method translation if the IgnoreAttribute is used.
+		if(node.ReturnType.HasAnnotation(IgnoreAttribute.Annotation))
+			return null;
+		
 		node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node)!;
 
 		node = node.ReplaceToken(node.Identifier, node.Identifier.WithLeadingTrivia(node.ReturnType.GetLeadingTrivia()));

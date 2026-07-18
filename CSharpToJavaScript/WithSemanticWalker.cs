@@ -53,6 +53,35 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 				
 		base.VisitClassDeclaration(node);
 	}
+    public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
+    {
+		base.VisitMethodDeclaration(node);
+	    
+		IMethodSymbol? symbol = _Model.GetDeclaredSymbol(node);
+		
+		if (symbol != null)
+		{
+			ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
+			for (int i = 0; i < _attributeData.Length; i++)
+			{
+				if (_attributeData[i].AttributeClass != null)
+				{
+					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
+					{
+						TypeSyntax _return = node.ReturnType;
+						
+						if (ReplaceNodes.ContainsKey(_return))
+							_return = (TypeSyntax)ReplaceNodes[_return];
+						
+						ReplaceNodes.Add(_return, _return.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+						
+						continue;
+					}
+				}
+			}
+		}
+	}  
+	
 	public override void VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
 		base.VisitMemberAccessExpression(node);
@@ -473,6 +502,20 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 				symbol.Kind == SymbolKind.Property ||
 				symbol.Kind == SymbolKind.Field)
 			{
+				//Check for the Ignore attribute before continuing.
+				ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
+				for (int i = 0; i < _attributeData.Length; i++)
+				{
+					if (_attributeData[i].AttributeClass != null)
+					{
+						if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
+						{
+							return false;
+						}
+					}
+					
+				}
+				
 				ITypeSymbol? _base = _CurrentClassSymbol;
 
 				while (_base != null)

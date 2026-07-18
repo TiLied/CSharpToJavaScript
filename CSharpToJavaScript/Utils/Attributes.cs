@@ -4,12 +4,12 @@ using System;
 namespace CSharpToJavaScript.Utils;
 
 /// <summary>
-/// 
+/// Ignore methods. Useful for basic interop for calling JS code. Can be combined with ImportAttribute/ValueAttribute.
 /// </summary>
-[AttributeUsage(AttributeTargets.Class)]
-internal class IgnoreAttribute : Attribute
+[AttributeUsage(AttributeTargets.Method)]
+public class IgnoreAttribute : Attribute 
 {
-	public IgnoreAttribute() { }
+	public static SyntaxAnnotation Annotation { get; } = new(nameof(IgnoreAttribute));
 }
 
 /// <summary>

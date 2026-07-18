@@ -101,7 +101,28 @@ public class CSTOJSOptions
 	/// Default: <c>true</c>
 	/// </value>
 	public bool TranslateFile { get; set; } = true;
-
+	
+	/// <summary>
+	/// Process the nameof expression.
+	/// </summary>
+	/// <remarks>
+	/// <blockquote class="NOTE"><h5>NOTE</h5>
+	/// <para>
+	/// cstojs_options.xml: &lt;Option ProcessNameOfExpression=&quot;true&quot; /&gt;
+	/// </para>
+	/// </blockquote>
+	/// For example: 
+	/// <c>nameof(List&lt;int&gt;.Add);</c>
+	/// If true, the expression will be translated as:
+	/// <c>"push"</c>
+	/// If false:
+	/// <c>"Add"</c>
+	/// </remarks>
+	/// <value>
+	/// Default: <c>true</c>
+	/// </value>
+	public bool ProcessNameOfExpression { get; set; } = true;
+	
 	/// <summary>
 	/// Make properties enumerable, needed if you want to use JSON.stringify.
 	/// </summary>
@@ -133,7 +154,7 @@ public class CSTOJSOptions
 	/// </blockquote>
 	/// <blockquote class="NOTE"><h5>NOTE</h5>
 	/// <para>
-	/// Note, for imports a filename needs to be supplied.
+	/// Note, for imports a <see cref="FileData.FileName" /> needs to be supplied.
 	/// </para>
 	/// </blockquote>
 	/// <blockquote class="IMPORTANT"><h5>IMPORTANT</h5>

@@ -13,6 +13,21 @@ public class IgnoreAttribute : Attribute
 }
 
 /// <summary>
+/// Add a custom import to the file. Useful for basic interop for calling JS code. Can be combined with IgnoreAttribute/ValueAttribute.
+/// </summary>
+[AttributeUsage(AttributeTargets.All)]
+public class ImportAttribute : Attribute 
+{
+	private string _ImportWhat = string.Empty;
+	private string _ImportFrom = string.Empty;
+	
+	public ImportAttribute(string importWhat, string importFrom)
+	{
+		_ImportWhat = importWhat;
+		_ImportFrom = importFrom;
+	}
+}
+/// <summary>
 /// Translates class/method to a specified value.
 /// </summary>
 [AttributeUsage(AttributeTargets.All)]
@@ -131,5 +146,8 @@ public class ToObjectAttribute : Attribute
 	public static SyntaxAnnotation Annotation { get; } = new(nameof(ToObjectAttribute));
 }
 
+/// <summary>
+/// Translates generic as argument.
+/// </summary>
 [AttributeUsage(AttributeTargets.Method)]
 public class GenericAsArgumentAttribute : Attribute { }

@@ -135,8 +135,33 @@ public static class CSTOJS
 			}
 
 			_stringBuilderWalker.JSSB.Append(files[i].OptionsForFile.AddSBAtTheTop);
-
-			//Import modules
+			
+			//Import from an attribute if ImportAttribute is used.
+			if(_withSemanticWalker.ImportFromAttribute.Count > 0)
+			{
+				Dictionary<string, List<string>>.KeyCollection _keys = _withSemanticWalker.ImportFromAttribute.Keys;
+				
+				foreach (string _path in _keys)
+				{
+					if (_stringBuilderWalker.JSSB.Length != 0)
+					{
+						if (_stringBuilderWalker.JSSB[_stringBuilderWalker.JSSB.Length - 1] != '\n')
+							_stringBuilderWalker.JSSB.AppendLine();
+					}
+					
+					_stringBuilderWalker.JSSB.Append("import { ");
+					for (int j = 0; j < _withSemanticWalker.ImportFromAttribute[_path].Count; j++)
+					{
+						if (j == _withSemanticWalker.ImportFromAttribute[_path].Count - 1)
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticWalker.ImportFromAttribute[_path][j]}");
+						else
+							_stringBuilderWalker.JSSB.Append($"{_withSemanticWalker.ImportFromAttribute[_path][j]}, ");
+					}
+					_stringBuilderWalker.JSSB.AppendLine($" }} from '{_path}';");
+				}
+			}
+			
+			//Import modules if EnableModules is enabled.
 			if (files[i].OptionsForFile.EnableModules >= 2)
 			{
 				Dictionary<string, List<string>>.KeyCollection _keys = _withSemanticWalker.ImportClasses.Keys;

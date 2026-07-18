@@ -22,6 +22,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 
 	public Dictionary<SyntaxNode, SyntaxNode> ReplaceNodes = new();
 	public Dictionary<string, List<string>> ImportClasses = new();
+	public Dictionary<string, List<string>> ImportFromAttribute = new();
 	
 	public WithSemanticWalker(SemanticModel semanticModel, CSTOJSOptions options, Dictionary<string, List<string>> exportedClasses)
 	{
@@ -50,7 +51,23 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
 		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
-				
+		
+		if (_CurrentClassSymbol != null)
+		{
+			ImmutableArray<AttributeData> _attributeData = _CurrentClassSymbol.GetAttributes();
+			for (int i = 0; i < _attributeData.Length; i++)
+			{
+				if (_attributeData[i].AttributeClass != null)
+				{
+					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
+					{
+						ProcessImportAttribute(_attributeData[i]);
+						break;
+					}
+				}
+			}
+		}
+		
 		base.VisitClassDeclaration(node);
 	}
     public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
@@ -74,6 +91,12 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 							_return = (TypeSyntax)ReplaceNodes[_return];
 						
 						ReplaceNodes.Add(_return, _return.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+						
+						continue;
+					}
+					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
+					{
+						ProcessImportAttribute(_attributeData[i]);
 						
 						continue;
 					}
@@ -728,6 +751,20 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			symbol = symbolInfo?.Symbol;
 
 		return symbol;
+	}
+	
+	private void ProcessImportAttribute(AttributeData data)
+	{
+		string _importWhat = data.ConstructorArguments[0].Value.ToString();
+		string _importFrom = data.ConstructorArguments[1].Value.ToString();
+		
+		if (ImportFromAttribute.ContainsKey(_importFrom))
+		{
+			if (!ImportFromAttribute[_importFrom].Contains(_importWhat))
+				ImportFromAttribute[_importFrom].Add(_importWhat);
+		}
+		else
+			ImportFromAttribute.Add(_importFrom, new() { _importWhat });
 	}
 }
 

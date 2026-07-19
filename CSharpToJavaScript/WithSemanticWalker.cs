@@ -59,15 +59,27 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			{
 				if (_attributeData[i].AttributeClass != null)
 				{
+					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
+					{
+						ClassDeclarationSyntax _class = node;
+						
+						if (ReplaceNodes.ContainsKey(_class))
+							_class = (ClassDeclarationSyntax)ReplaceNodes[_class];
+						
+						ReplaceNodes.Add(_class, _class.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+						
+						continue;
+					}
 					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
 					{
 						ProcessImportAttribute(_attributeData[i]);
-						break;
+						continue;
 					}
 				}
 			}
 		}
 		
+		//Process class after storing symbol.
 		base.VisitClassDeclaration(node);
 	}
     public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
@@ -103,7 +115,43 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 				}
 			}
 		}
-	}  
+	}
+	
+    public override void VisitFieldDeclaration(FieldDeclarationSyntax node)
+    {
+		base.VisitFieldDeclaration(node);
+		
+		//TODO?
+		IFieldSymbol? symbol = _Model.GetDeclaredSymbol(node.Declaration.Variables[0]) as IFieldSymbol;
+		
+		if (symbol != null)
+		{
+			ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
+			for (int i = 0; i < _attributeData.Length; i++)
+			{
+				if (_attributeData[i].AttributeClass != null)
+				{
+					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
+					{
+						VariableDeclarationSyntax _vds = node.Declaration;
+						
+						if (ReplaceNodes.ContainsKey(_vds))
+							_vds = (VariableDeclarationSyntax)ReplaceNodes[_vds];
+						
+						ReplaceNodes.Add(_vds, _vds.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+						
+						continue;
+					}
+					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
+					{
+						ProcessImportAttribute(_attributeData[i]);
+						
+						continue;
+					}
+				}
+			}
+		}
+    }
 	
 	public override void VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
@@ -686,6 +734,11 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		if (symbol.Locations.Length == 0 || symbol.Locations[0].IsInSource)
 			return false;
 
+		//Hitting with foreach, sooo return.
+		//see Test_Foreach
+		if (node.IsVar)
+			return false;
+		
 		ISymbol typeSymbol = symbol;
 
 		if (typeSymbol.Kind != SymbolKind.NamedType)

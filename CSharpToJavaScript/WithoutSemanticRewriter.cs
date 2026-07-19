@@ -31,6 +31,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 #endif
 	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
+		//Ignore class translation if the IgnoreAttribute is used.
+		if(node.HasAnnotation(IgnoreAttribute.Annotation))
+			return null;
+		
 		node = (ClassDeclarationSyntax)base.VisitClassDeclaration(node)!;
 
 		if (node.Modifiers.Count >= 1)
@@ -249,6 +253,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitFieldDeclaration(FieldDeclarationSyntax node)
 	{
+		//Ignore field translation if the IgnoreAttribute is used.
+		if(node.Declaration.HasAnnotation(IgnoreAttribute.Annotation))
+			return null;
+		
 		node = (FieldDeclarationSyntax)base.VisitFieldDeclaration(node)!;
 
 		if (node.Modifiers.Count >= 1)

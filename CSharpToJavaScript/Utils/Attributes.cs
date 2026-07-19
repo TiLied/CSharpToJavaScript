@@ -4,9 +4,9 @@ using System;
 namespace CSharpToJavaScript.Utils;
 
 /// <summary>
-/// Ignore methods. Useful for basic interop for calling JS code. Can be combined with ImportAttribute/ValueAttribute.
+/// Ignore methods, fields etc. Useful for basic interop for calling JS code. Can be combined with ImportAttribute/ValueAttribute.
 /// </summary>
-[AttributeUsage(AttributeTargets.Method)]
+[AttributeUsage(AttributeTargets.All)]
 public class IgnoreAttribute : Attribute 
 {
 	public static SyntaxAnnotation Annotation { get; } = new(nameof(IgnoreAttribute));

@@ -4,13 +4,16 @@
 //See GenDocsLib/GenDocs.cs/GenerateDocs
 //TODO!!!
 
+//TODO!
+//I don't like it.
+//I need something where I can replace the whole expression and not only the identifier...
+
 internal class NETAPI
 {
-	private readonly TypeName[] _TypeNames = new TypeName[9];
+	private readonly TypeName[] _TypeNames = new TypeName[15];
 
 	public NETAPI()
 	{
-
 		//
 		//
 		//
@@ -113,6 +116,66 @@ internal class NETAPI
 		_TypeNames[8] = new();
 		_TypeNames[8].Name = nameof(System.Object);
 		_TypeNames[8].JSName = "Object";
+		
+		//
+		//
+		//
+		_TypeNames[9] = new();
+		_TypeNames[9].Name = nameof(System.SByte);
+		_TypeNames[9].JSName = "Number";
+		
+		_TypeNames[9].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-128\")");
+		_TypeNames[9].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"127\")");
+		
+		//
+		//
+		//
+		_TypeNames[10] = new();
+		_TypeNames[10].Name = nameof(System.Byte);
+		_TypeNames[10].JSName = "Number";
+		
+		_TypeNames[10].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"0\")");
+		_TypeNames[10].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"255\")");
+		
+		//
+		//
+		//
+		_TypeNames[11] = new();
+		_TypeNames[11].Name = nameof(System.Int16);
+		_TypeNames[11].JSName = "Number";
+		
+		_TypeNames[11].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-32768\")");
+		_TypeNames[11].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"32767\")");
+		
+		//
+		//
+		//
+		_TypeNames[12] = new();
+		_TypeNames[12].Name = nameof(System.UInt16);
+		_TypeNames[12].JSName = "Number";
+		
+		_TypeNames[12].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"0\")");
+		_TypeNames[12].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"65535\")");
+		
+		//
+		//
+		//
+		_TypeNames[13] = new();
+		_TypeNames[13].Name = nameof(System.Int32);
+		_TypeNames[13].JSName = "Number";
+		
+		_TypeNames[13].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-2147483648\")");
+		_TypeNames[13].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"2147483647\")");
+		
+		//
+		//
+		//
+		_TypeNames[14] = new();
+		_TypeNames[14].Name = nameof(System.UInt32);
+		_TypeNames[14].JSName = "Number";
+		
+		_TypeNames[14].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"0\")");
+		_TypeNames[14].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"4294967295\")");
 	}
 
 	public string? ReturnJSString(string typeName, string? symbolName = null) 

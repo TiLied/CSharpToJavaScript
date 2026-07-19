@@ -124,8 +124,8 @@ internal class NETAPI
 		_TypeNames[9].Name = nameof(System.SByte);
 		_TypeNames[9].JSName = "Number";
 		
-		_TypeNames[9].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-128\")");
-		_TypeNames[9].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"127\")");
+		_TypeNames[9].SymbolNames.Add(nameof(System.SByte.MinValue), "parseInt(\"-128\")");
+		_TypeNames[9].SymbolNames.Add(nameof(System.SByte.MaxValue), "parseInt(\"127\")");
 		
 		//
 		//
@@ -144,8 +144,8 @@ internal class NETAPI
 		_TypeNames[11].Name = nameof(System.Int16);
 		_TypeNames[11].JSName = "Number";
 		
-		_TypeNames[11].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-32768\")");
-		_TypeNames[11].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"32767\")");
+		_TypeNames[11].SymbolNames.Add(nameof(System.Int16.MinValue), "parseInt(\"-32768\")");
+		_TypeNames[11].SymbolNames.Add(nameof(System.Int16.MaxValue), "parseInt(\"32767\")");
 		
 		//
 		//
@@ -154,8 +154,8 @@ internal class NETAPI
 		_TypeNames[12].Name = nameof(System.UInt16);
 		_TypeNames[12].JSName = "Number";
 		
-		_TypeNames[12].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"0\")");
-		_TypeNames[12].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"65535\")");
+		_TypeNames[12].SymbolNames.Add(nameof(System.UInt16.MinValue), "parseInt(\"0\")");
+		_TypeNames[12].SymbolNames.Add(nameof(System.UInt16.MaxValue), "parseInt(\"65535\")");
 		
 		//
 		//
@@ -164,8 +164,8 @@ internal class NETAPI
 		_TypeNames[13].Name = nameof(System.Int32);
 		_TypeNames[13].JSName = "Number";
 		
-		_TypeNames[13].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"-2147483648\")");
-		_TypeNames[13].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"2147483647\")");
+		_TypeNames[13].SymbolNames.Add(nameof(System.Int32.MinValue), "parseInt(\"-2147483648\")");
+		_TypeNames[13].SymbolNames.Add(nameof(System.Int32.MaxValue), "parseInt(\"2147483647\")");
 		
 		//
 		//
@@ -174,8 +174,8 @@ internal class NETAPI
 		_TypeNames[14].Name = nameof(System.UInt32);
 		_TypeNames[14].JSName = "Number";
 		
-		_TypeNames[14].SymbolNames.Add(nameof(System.Byte.MinValue), "parseInt(\"0\")");
-		_TypeNames[14].SymbolNames.Add(nameof(System.Byte.MaxValue), "parseInt(\"4294967295\")");
+		_TypeNames[14].SymbolNames.Add(nameof(System.UInt32.MinValue), "parseInt(\"0\")");
+		_TypeNames[14].SymbolNames.Add(nameof(System.UInt32.MaxValue), "parseInt(\"4294967295\")");
 	}
 
 	public string? ReturnJSString(string typeName, string? symbolName = null) 

@@ -117,8 +117,21 @@ public static class CSTOJS
 			});
 
 			if (files[i].OptionsForFile.Debug)
+			{
 				files[i].DebugStrings[0] = _root.ToFullString();
-
+				files[i].DebugStrings[0] += "\n-\n";
+				files[i].DebugStrings[0] += "\n-\n";
+				files[i].DebugStrings[0] += "\n-\n";
+				foreach (KeyValuePair<SyntaxNode, SyntaxNode> _nodes in _withSemanticWalker.ReplaceNodes)
+				{
+					files[i].DebugStrings[0] += $"\tNode({_nodes.Key.GetLocation().GetLineSpan()}): \n";
+					files[i].DebugStrings[0] += _nodes.Key.ToString();
+					files[i].DebugStrings[0] += "\n";
+					files[i].DebugStrings[0] += "\tReplaced node: \n";
+					files[i].DebugStrings[0] += _nodes.Value.ToString();
+					files[i].DebugStrings[0] += "\n\n";
+				}
+			}
 			_root = _withoutSemanticRewriter.Visit(_root);
 
 			if (files[i].OptionsForFile.Debug)

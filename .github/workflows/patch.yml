@@ -69,8 +69,12 @@ jobs:
           dotnet-version: 10.0.x
       - name: Generate NuGet package
         run: dotnet pack --configuration Release --output ./packages
-      - name: Publish NuGet package
+      - name: Publish NuGet package to nuget
         run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      - name: Add github source
+        run: dotnet nuget add source --username TiLied --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/TiLied/index.json"
+      - name: Publish NuGet package to github
+        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
       - run: cat ./CSharpToJavaScript.csproj
       - name: Upload nuget artifact
         uses: actions/upload-artifact@v7

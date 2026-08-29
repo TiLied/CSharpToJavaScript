@@ -1,7 +1,7 @@
-//22.04.2026 19:18:40
+//8/27/2026 4:57:54 PM
 
 #nullable enable
-//Disable missing XML comments.
+//Ignore missing XML comments.
 #pragma warning disable CS1591
 //Ignore files not found.
 #pragma warning disable CS1589
@@ -11,6 +11,8 @@
 #pragma warning disable CS8618
 //Ignore 'Use the new keyword if hiding was intended.'
 #pragma warning disable CS0108
+//Ignore 'XML comment has cref attribute '...' that could not be resolved'
+#pragma warning disable CS1574
 
 using static CSharpToJavaScript.APIs.JS.Ecma.GlobalObject;
 using CSharpToJavaScript.APIs.JS.Ecma;

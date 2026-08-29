@@ -724,21 +724,22 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 
 		//We need a symbol, if it is null, return.
 		if (symbol == null)
-		{
-			//Log.WarningLine($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
 			return false;
-		}
 
 		//If symbol locations are zero, return. Treat as symbol null.
 		//Also, if symbol in a source return, it is not a built-in type.
 		if (symbol.Locations.Length == 0 || symbol.Locations[0].IsInSource)
 			return false;
+		
+		//If symbol is a namespace, return.
+		//We do not translate namespaces as they are completely ignored later in WithoutSemanticRewriter.
+		if(symbol.Kind == SymbolKind.Namespace)
+			return false;
 
-		//Hitting with foreach, sooo return.
-		//see Test_Foreach
+		//If the node is a var, keep it(return) for extra safety, most likely, it will be replaced later in WithoutSemanticRewriter.
 		if (node.IsVar)
 			return false;
-		
+
 		ISymbol typeSymbol = symbol;
 
 		if (typeSymbol.Kind != SymbolKind.NamedType)

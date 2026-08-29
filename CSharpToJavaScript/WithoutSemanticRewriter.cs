@@ -10,7 +10,7 @@ namespace CSharpToJavaScript;
 internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 {
 	private readonly CSTOJSOptions _Options;
-	public static SyntaxAnnotation StaticConstructor { get; set; } = new("StaticConstructor");
+	public static SyntaxAnnotation StaticConstructor { get; set; } = new(Extensions.AnnotationKind, "StaticConstructor");
 	
 	public WithoutSemanticRewriter(CSTOJSOptions options)
 	{
@@ -32,7 +32,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
 		//Ignore class translation if the IgnoreAttribute is used.
-		if(node.HasAnnotation(IgnoreAttribute.Annotation))
+		if(node.HasDataAnnotation(IgnoreAttribute.Annotation.Data!))
 			return null;
 		
 		node = (ClassDeclarationSyntax)base.VisitClassDeclaration(node)!;
@@ -254,7 +254,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	public override SyntaxNode? VisitFieldDeclaration(FieldDeclarationSyntax node)
 	{
 		//Ignore field translation if the IgnoreAttribute is used.
-		if(node.Declaration.HasAnnotation(IgnoreAttribute.Annotation))
+		if(node.Declaration.HasDataAnnotation(IgnoreAttribute.Annotation.Data!))
 			return null;
 		
 		node = (FieldDeclarationSyntax)base.VisitFieldDeclaration(node)!;
@@ -284,7 +284,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	public override SyntaxNode? VisitMethodDeclaration(MethodDeclarationSyntax node)
 	{
 		//Ignore method translation if the IgnoreAttribute is used.
-		if(node.ReturnType.HasAnnotation(IgnoreAttribute.Annotation))
+		if(node.ReturnType.HasDataAnnotation(IgnoreAttribute.Annotation.Data!))
 			return null;
 		
 		node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node)!;
@@ -367,7 +367,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	{
 		node = (ObjectCreationExpressionSyntax)base.VisitObjectCreationExpression(node)!;
 
-		if (node.Type.HasAnnotation(ToObjectAttribute.Annotation))
+		if (node.Type.HasDataAnnotation(ToObjectAttribute.Annotation.Data))
 		{
 			SyntaxTriviaList trivias = node.Type.GetTrailingTrivia();
 			

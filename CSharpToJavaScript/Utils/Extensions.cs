@@ -1,9 +1,63 @@
 ﻿using System;
+using System.Collections.Generic;
+
+using Microsoft.CodeAnalysis;
 
 namespace CSharpToJavaScript.Utils;
 
 internal static class Extensions
 {
+	//Todo? Transfer to a separate file?
+	public const string AnnotationKind = "Global";
+	
+	public static bool HasDataAnnotation(this SyntaxNode node, string data)
+	{
+		if(!node.HasAnnotations(AnnotationKind))
+			return false;
+		
+		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+		
+		foreach(SyntaxAnnotation ann in annotations)
+		{
+			if(ann.Data == data)
+				return true;
+		}
+			
+		return false;
+	}
+	public static bool HasDataAnnotation(this SyntaxToken token, string data)
+	{
+		if(!token.HasAnnotations(AnnotationKind))
+			return false;
+		
+		IEnumerable<SyntaxAnnotation> annotations = token.GetAnnotations(Extensions.AnnotationKind);
+		
+		foreach(SyntaxAnnotation ann in annotations)
+		{
+			if(ann.Data == data)
+				return true;
+		}
+		
+		return false;
+	}
+	
+	public static string? GetDataAnnotation(this SyntaxNode node)
+	{
+		if(!node.HasAnnotations(AnnotationKind))
+			return null;
+		
+		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+		
+		foreach(SyntaxAnnotation ann in annotations)
+		{
+			return ann.Data;
+		}
+		
+		return null;
+	}
+	
+	
+	
 	//https://stackoverflow.com/a/21755933
 	public static string? FirstCharToLowerCase(this string? str)
 	{

@@ -119,24 +119,25 @@ public static class CSTOJS
 			if (files[i].OptionsForFile.Debug)
 			{
 				files[i].DebugStrings[0] = _root.ToFullString();
-				files[i].DebugStrings[0] += "\n-\n";
-				files[i].DebugStrings[0] += "\n-\n";
-				files[i].DebugStrings[0] += "\n-\n";
+				files[i].DebugStrings[0] += "\n--- --- ---\n";
+				files[i].DebugStrings[0] += "ReplaceNodes:";
+				files[i].DebugStrings[0] += "\n--- --- ---\n";
 				foreach (KeyValuePair<SyntaxNode, SyntaxNode> _nodes in _withSemanticWalker.ReplaceNodes)
 				{
-					files[i].DebugStrings[0] += $"\tNode({_nodes.Key.GetLocation().GetLineSpan()}): \n";
+					files[i].DebugStrings[0] += $"\tNode ({_nodes.Key.GetLocation().GetLineSpan()}): \n|";
 					files[i].DebugStrings[0] += _nodes.Key.ToString();
-					files[i].DebugStrings[0] += "\n";
-					files[i].DebugStrings[0] += "\tReplaced node: \n";
+					files[i].DebugStrings[0] += "|\n";
+					files[i].DebugStrings[0] += $"\tReplaced node (data annotation: {_nodes.Value.GetDataAnnotation()}): \n|";
 					files[i].DebugStrings[0] += _nodes.Value.ToString();
-					files[i].DebugStrings[0] += "\n\n";
+					files[i].DebugStrings[0] += "|\n";
 				}
 			}
+			
 			_root = _withoutSemanticRewriter.Visit(_root);
 
 			if (files[i].OptionsForFile.Debug)
 				files[i].DebugStrings[1] = _root.ToFullString();
-
+			
 			if (files[i].OptionsForFile.NormalizeWhitespace)
 				_root = _root.NormalizeWhitespace();
 

@@ -9,12 +9,19 @@ namespace CSharpToJavaScript.Utils;
 [AttributeUsage(AttributeTargets.All)]
 public class IgnoreAttribute : Attribute 
 {
-	public static SyntaxAnnotation Annotation { get; } = new(nameof(IgnoreAttribute));
+	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(IgnoreAttribute));
 }
 
 /// <summary>
 /// Add a custom import to the file. Useful for basic interop for calling JS code. Can be combined with IgnoreAttribute/ValueAttribute.
 /// </summary>
+/// <remarks>
+/// <blockquote class="IMPORTANT"><h5>IMPORTANT</h5>
+/// <para>
+/// Only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#named_import"><em>named imports</em></see> supported with this attribute.
+/// </para>
+/// </blockquote>
+/// </remarks>
 [AttributeUsage(AttributeTargets.All)]
 public class ImportAttribute : Attribute 
 {
@@ -92,7 +99,7 @@ public class ToAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class BinaryAttribute : Attribute
 {
-	public static SyntaxAnnotation Annotation { get; } = new(nameof(BinaryAttribute));
+	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(BinaryAttribute));
 	public string Value { get; init; }
 	public BinaryAttribute(string value)
 	{
@@ -117,7 +124,7 @@ public class GenericBinaryAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class UnaryAttribute : Attribute
 {
-	public static SyntaxAnnotation Annotation { get; } = new(nameof(UnaryAttribute));
+	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(UnaryAttribute));
 	public string Value { get; init; }
 	public UnaryAttribute(string value)
 	{
@@ -143,7 +150,7 @@ public class GenericUnaryAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class ToObjectAttribute : Attribute
 {
-	public static SyntaxAnnotation Annotation { get; } = new(nameof(ToObjectAttribute));
+	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(ToObjectAttribute));
 }
 
 /// <summary>

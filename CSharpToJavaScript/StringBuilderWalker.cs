@@ -280,7 +280,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
-		if (node.Expression.HasAnnotation(BinaryAttribute.Annotation))
+		if (node.Expression.HasDataAnnotation(BinaryAttribute.Annotation.Data!))
 		{
 			VisitArgument(node.ArgumentList.Arguments[0]);
 
@@ -294,7 +294,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			VisitArgument(node.ArgumentList.Arguments[1]);
 			return;
 		}
-		if (node.Expression.HasAnnotation(UnaryAttribute.Annotation))
+		if (node.Expression.HasDataAnnotation(UnaryAttribute.Annotation.Data!))
 		{
 			JSSB.Append(node.Expression.ToString());
 
@@ -308,7 +308,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 	}
 	public override void VisitConstructorDeclaration(ConstructorDeclarationSyntax node)
 	{
-		if (!node.Identifier.HasAnnotation(WithoutSemanticRewriter.StaticConstructor))
+		if (!node.Identifier.HasDataAnnotation(WithoutSemanticRewriter.StaticConstructor.Data!))
 			base.VisitConstructorDeclaration(node);
 		else
 		{

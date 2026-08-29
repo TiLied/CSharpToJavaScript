@@ -587,6 +587,12 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		return local;
 	}
+	public override SyntaxNode? VisitNamespaceDeclaration(NamespaceDeclarationSyntax node)
+	{
+		node = (NamespaceDeclarationSyntax)base.VisitNamespaceDeclaration(node)!;		
+		
+		return SyntaxFactory.FileScopedNamespaceDeclaration(node.AttributeLists, node.Modifiers, node.NamespaceKeyword, node.Name,SyntaxFactory.Token(SyntaxKind.SemicolonToken), node.Externs, node.Usings, node.Members);
+	}
 	public override SyntaxNode? VisitAttributeList(AttributeListSyntax node)
 	{
 		return null;

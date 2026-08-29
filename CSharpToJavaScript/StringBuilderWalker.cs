@@ -229,57 +229,6 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			}
 		}
 	}
-	public override void VisitNamespaceDeclaration(NamespaceDeclarationSyntax node)
-	{
-		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-
-		for (int i = 0; i < nodesAndTokens.Count; i++)
-		{
-			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-
-			if (asNode != null)
-			{
-				SyntaxKind kind = asNode.Kind();
-
-				switch (kind)
-				{
-					case SyntaxKind.QualifiedName:
-					case SyntaxKind.IdentifierName:
-						break;
-					case SyntaxKind.ClassDeclaration:
-						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
-						break;
-					case SyntaxKind.NamespaceDeclaration:
-						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
-						break;
-					case SyntaxKind.GlobalStatement:
-						VisitGlobalStatement((GlobalStatementSyntax)asNode);
-						break;
-					default:
-						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
-						break;
-				}
-			}
-			else
-			{
-				SyntaxToken asToken = nodesAndTokens[i].AsToken();
-				SyntaxKind kind = asToken.Kind();
-
-				switch (kind)
-				{
-					//Todo? make a scope??? {...}
-					//OpenBraceToken and CloseBraceToken
-					case SyntaxKind.OpenBraceToken:
-					case SyntaxKind.CloseBraceToken:
-					case SyntaxKind.NamespaceKeyword:
-						break;
-					default:
-						Log.ErrorLine($"asToken : {kind}");
-						break;
-				}
-			}
-		}
-	}
 	public override void VisitFileScopedNamespaceDeclaration(FileScopedNamespaceDeclarationSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -300,8 +249,8 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.ClassDeclaration:
 						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
-					case SyntaxKind.NamespaceDeclaration:
-						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+					case SyntaxKind.FileScopedNamespaceDeclaration:
+						VisitFileScopedNamespaceDeclaration((FileScopedNamespaceDeclarationSyntax)asNode);
 						break;
 					case SyntaxKind.GlobalStatement:
 						VisitGlobalStatement((GlobalStatementSyntax)asNode);

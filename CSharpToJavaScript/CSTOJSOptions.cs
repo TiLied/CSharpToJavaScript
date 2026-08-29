@@ -88,40 +88,40 @@ public class CSTOJSOptions
 	public bool NormalizeWhitespace { get; set; } = false;
 
 	/// <summary>
-	/// Translate current <see cref="FileData" />. If false, walker will not be called.
+	/// Do not translate current <see cref="FileData" />. If true, walkers/rewriters will not be called.
 	/// </summary>
 	/// <remarks>
 	/// <blockquote class="NOTE"><h5>NOTE</h5>
 	/// <para>
-	/// cstojs_options.xml: &lt;Option TranslateFile=&quot;true&quot; /&gt;
+	/// cstojs_options.xml: &lt;Option DisableTranslation=&quot;false&quot; /&gt;
 	/// </para>
 	/// </blockquote>
 	/// </remarks>
 	/// <value>
-	/// Default: <c>true</c>
+	/// Default: <c>false</c>
 	/// </value>
-	public bool TranslateFile { get; set; } = true;
+	public bool DisableTranslation { get; set; } = false;
 	
 	/// <summary>
-	/// Process the nameof expression.
+	/// Disable processing of the nameof expression.
 	/// </summary>
 	/// <remarks>
 	/// <blockquote class="NOTE"><h5>NOTE</h5>
 	/// <para>
-	/// cstojs_options.xml: &lt;Option ProcessNameOfExpression=&quot;true&quot; /&gt;
+	/// cstojs_options.xml: &lt;Option DisableNameOfProcessing=&quot;false&quot; /&gt;
 	/// </para>
 	/// </blockquote>
 	/// For example: 
 	/// <c>nameof(List&lt;int&gt;.Add);</c>
-	/// If true, the expression will be translated as:
+	/// If false, the expression will be translated as:
 	/// <c>"push"</c>
-	/// If false:
+	/// If true:
 	/// <c>"Add"</c>
 	/// </remarks>
 	/// <value>
-	/// Default: <c>true</c>
+	/// Default: <c>false</c>
 	/// </value>
-	public bool ProcessNameOfExpression { get; set; } = true;
+	public bool DisableNameOfProcessing { get; set; } = false;
 	
 	/// <summary>
 	/// Make properties enumerable, needed if you want to use JSON.stringify.

@@ -244,7 +244,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
 		//With an early return, we won't process the nameof expression.
-		if(!_Options.ProcessNameOfExpression)
+		if(_Options.DisableNameOfProcessing)
 		{
 			if (node.Expression is IdentifierNameSyntax identifier)
 			{

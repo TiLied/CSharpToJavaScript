@@ -81,7 +81,7 @@ public static class CSTOJS
 
 		for (int i = 0; i < files.Length; i++)
 		{
-			if (files[i].OptionsForFile.TranslateFile == false)
+			if (files[i].OptionsForFile.DisableTranslation)
 				continue;
 
 			SemanticModel _model = compilation.GetSemanticModel(trees[i]);

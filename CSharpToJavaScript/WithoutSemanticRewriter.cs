@@ -380,20 +380,40 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		}
 		return node;
 	}
+	
+    public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
+    {
+		//first process local declaration
+        node = (LocalDeclarationStatementSyntax)base.VisitLocalDeclarationStatement(node)!;
+		
+		SyntaxToken? constToken = TryGetModifier(SyntaxKind.ConstKeyword, node.Modifiers);
+		
+		if(constToken != null)
+		{
+			//Add type with const.
+			node = node.WithDeclaration(node.Declaration.WithType(SyntaxFactory.IdentifierName("const").WithLeadingTrivia(node.Modifiers[0].LeadingTrivia).WithTrailingTrivia(node.Modifiers[0].TrailingTrivia)));
+			//Clear modifiers.
+			node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
+		}
+		
+		return node;
+    }
+	
 	public override SyntaxNode? VisitVariableDeclaration(VariableDeclarationSyntax node)
 	{
-		if (node.Parent is ForStatementSyntax ||
-			node.Parent is LocalDeclarationStatementSyntax)
-		{
-			if (_Options.UseVarOverLet)
-				node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("var").WithLeadingTrivia(node.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Type.GetTrailingTrivia()));
-			else
-				node = node.ReplaceNode(node.Type, SyntaxFactory.IdentifierName("let").WithLeadingTrivia(node.Type.GetLeadingTrivia()).WithTrailingTrivia(node.Type.GetTrailingTrivia()));
-
-		}
-
+		node = node.ReplaceNode(node.Type, GetTypeVarOrLet(node.Type));
+		
 		node = (VariableDeclarationSyntax)base.VisitVariableDeclaration(node)!;
 
+		return node;
+	}
+	//There is no VariableDeclaration in ForEachStatement, so do an explicit replacement of a type.
+	public override SyntaxNode? VisitForEachStatement(ForEachStatementSyntax node)
+	{
+		node = node.ReplaceNode(node.Type, GetTypeVarOrLet(node.Type));
+		
+		node = (ForEachStatementSyntax)base.VisitForEachStatement(node)!;
+		
 		return node;
 	}
 	public override SyntaxNode? VisitInvocationExpression(InvocationExpressionSyntax node)
@@ -670,6 +690,15 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			}
 		}
 		return mod;
+	}
+	
+	private TypeSyntax GetTypeVarOrLet(TypeSyntax type)
+	{
+		if (_Options.UseVarOverLet)
+			return SyntaxFactory.IdentifierName("var").WithLeadingTrivia(type.GetLeadingTrivia()).WithTrailingTrivia(type.GetTrailingTrivia());
+		else
+			return SyntaxFactory.IdentifierName("let").WithLeadingTrivia(type.GetLeadingTrivia()).WithTrailingTrivia(type.GetTrailingTrivia());
+		
 	}
 }
 

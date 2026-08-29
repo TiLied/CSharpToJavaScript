@@ -1,11 +1,11 @@
-﻿using System.Reflection;
-using System.IO;
-using System.Collections.Generic;
+﻿using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis;
-using CSharpToJavaScript.Utils;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
+using System.Reflection;
 
 namespace CSharpToJavaScript;
 
@@ -96,9 +96,9 @@ public static class CSTOJS
 					else if (diagnostics[j].Severity == DiagnosticSeverity.Info && files[i].OptionsForFile.Debug == true)
 						Log.InfoLine(diagnostics[j].ToString());
 					else if (diagnostics[j].Severity == DiagnosticSeverity.Warning)
-						Log.WarningLine(diagnostics[i].ToString());
+						Log.WarningLine(diagnostics[j].ToString());
 					else if (diagnostics[j].Severity == DiagnosticSeverity.Error)
-						Log.ErrorLine(diagnostics[i].ToString());
+						Log.ErrorLine(diagnostics[j].ToString());
 				}
 			}
 			
@@ -231,7 +231,7 @@ public static class CSTOJS
 
 	private static MetadataReference[] GetReferences(CSTOJSOptions options)
 	{
-		HashSet<MetadataReference> assemblyMetadata = new();
+		Dictionary<string, MetadataReference> assemblyMetadata = new();
 
 		Assembly? assembly = Assembly.GetEntryAssembly();
 		AssemblyName[] assemblyNames = assembly?.GetReferencedAssemblies() ?? [];
@@ -244,55 +244,63 @@ public static class CSTOJS
 		{
 			for (int j = 0; j < assemblyNames.Length; j++)
 			{
-				if (assemblyPath != null && File.Exists(Path.Combine(assemblyPath, assemblyNames[j].Name + ".dll")))
-					assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, assemblyNames[j].Name + ".dll")));
+				string _name = assemblyNames[j].Name + ".dll";
+				
+				if (assemblyPath != null && File.Exists(Path.Combine(assemblyPath, _name)))
+					assemblyMetadata.TryAdd(_name, MetadataReference.CreateFromFile(Path.Combine(assemblyPath, _name)));
 
-				if (objectAssemblyPath != null && File.Exists(Path.Combine(objectAssemblyPath, assemblyNames[j].Name + ".dll")))
-					assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, assemblyNames[j].Name + ".dll")));
+				if (objectAssemblyPath != null && File.Exists(Path.Combine(objectAssemblyPath, _name)))
+					assemblyMetadata.TryAdd(_name, MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, _name)));
 			}
 		}
+		
 		if (assemblyPath != null)
 		{
 			if (File.Exists(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")));
+				assemblyMetadata.TryAdd("CSharpToJavaScript.dll", MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")));
 		}
+		
 		if (objectAssemblyPath != null)
 		{
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")));
+				assemblyMetadata.TryAdd("System.Private.CoreLib.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.dll")));
+				assemblyMetadata.TryAdd("System.dll",MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Collections.Generics.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Collections.Generics.dll")));
+				assemblyMetadata.TryAdd("System.Collections.Generics.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Collections.Generics.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.IO.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.IO.dll")));
+				assemblyMetadata.TryAdd("System.IO.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.IO.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Linq.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Linq.dll")));
+				assemblyMetadata.TryAdd("System.Linq.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Linq.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Net.Http.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Net.Http.dll")));
+				assemblyMetadata.TryAdd("System.Net.Http.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Net.Http.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Threading.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.dll")));
+				assemblyMetadata.TryAdd("System.Threading.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Threading.Tasks.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.Tasks.dll")));
+				assemblyMetadata.TryAdd("System.Threading.Tasks.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.Tasks.dll")));
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Console.dll")))
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Console.dll")));
+				assemblyMetadata.TryAdd("System.Console.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Console.dll")));
 		}
+		
 		if (customPath != null)
 		{
-			string[] files = Directory.GetFiles(customPath, "*.dll", SearchOption.AllDirectories);
-			for (int j = 0; j < files.Length; j++)
+			string[] _paths = Directory.GetFiles(customPath, "*.dll", SearchOption.AllDirectories);
+			
+			for (int j = 0; j < _paths.Length; j++)
 			{
-				assemblyMetadata.Add(MetadataReference.CreateFromFile(files[j]));
+				string _filename = Path.GetFileName(_paths[j]);
+				assemblyMetadata.TryAdd(_filename, MetadataReference.CreateFromFile(_paths[j]));
 			}
 		}
+		
 		if (options.Debug)
 		{
 			Log.InfoLine($"+++");
@@ -301,9 +309,9 @@ public static class CSTOJS
 			Log.InfoLine($"objectAssemblyPath: '{objectAssemblyPath}'");
 			Log.InfoLine($"customPath: '{customPath}'");
 
-			foreach (MetadataReference metadata in assemblyMetadata)
+			foreach (KeyValuePair<string, MetadataReference> metadata in assemblyMetadata)
 			{
-				Log.WriteLine(metadata.Display ?? "null display string");
+				Log.WriteLine($"{metadata.Key}:{metadata.Value.Display}");
 			}
 			
 			Log.InfoLine($"assemblyMetadata count: '{assemblyMetadata.Count}'");
@@ -312,9 +320,9 @@ public static class CSTOJS
 
 		MetadataReference[] references = new MetadataReference[assemblyMetadata.Count];
 		int i = 0;
-		foreach (MetadataReference metadata in assemblyMetadata)
+		foreach (KeyValuePair<string, MetadataReference> metadata in assemblyMetadata)
 		{
-			references[i] = metadata;
+			references[i] = metadata.Value;
 			i++;
 		}
 
@@ -322,8 +330,7 @@ public static class CSTOJS
 		{
 			for (int j = 0; j < references.Length; j++)
 			{
-				Log.WriteLine(references[j].Display ?? "null display string");
-
+				Log.WriteLine($"{references[j].Display}");
 			}
 			Log.InfoLine($"references length: '{references.Length}'");
 			Log.InfoLine($"+++");
@@ -334,6 +341,9 @@ public static class CSTOJS
 
 	private static SyntaxTree AddGlobalUsings(SyntaxTree tree)
 	{
+		//
+		//TODO!
+		//Exclude duplicates? How? Or remove non-global usings from files?
 		CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
 		SyntaxList<UsingDirectiveSyntax> newUsing = SyntaxFactory.List<UsingDirectiveSyntax>

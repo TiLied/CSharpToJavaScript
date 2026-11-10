@@ -30,6 +30,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
       
     needs: setup-outputs
     
@@ -66,8 +67,13 @@ jobs:
           dotnet-version: 10.0.x
       - name: Generate NuGet package
         run: dotnet pack --configuration Release --output ./packages
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: TiLied
       - name: Publish NuGet package to nuget
-        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./packages/*.nupkg --api-key ${{steps.login.outputs.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
       - name: Add github source
         run: dotnet nuget add source --username TiLied --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/TiLied/index.json"
       - name: Publish NuGet package to github

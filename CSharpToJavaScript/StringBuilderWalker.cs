@@ -751,4 +751,64 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			}
 		}
 	}
+
+	public override void VisitOperatorDeclaration(OperatorDeclarationSyntax node)
+	{
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					case SyntaxKind.ParameterList:
+						VisitParameterList((ParameterListSyntax)asNode);
+						break;
+					case SyntaxKind.Block:
+						VisitBlock((BlockSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.StaticKeyword:
+						VisitToken(asToken);
+						break;
+					case SyntaxKind.OperatorKeyword:
+						break;
+					case SyntaxKind.PlusToken:
+						JSSB.Append("OperatorPlus");
+						break;
+					case SyntaxKind.MinusToken:
+						JSSB.Append("OperatorMinus");
+						break;
+					case SyntaxKind.AsteriskToken:
+						JSSB.Append("OperatorAsterisk");
+						break;
+					case SyntaxKind.SlashToken:
+						JSSB.Append("OperatorSlash");
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
+	}
 }

@@ -585,9 +585,56 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitNamespaceDeclaration(NamespaceDeclarationSyntax node)
 	{
-		node = (NamespaceDeclarationSyntax)base.VisitNamespaceDeclaration(node)!;		
-		
-		return SyntaxFactory.FileScopedNamespaceDeclaration(node.AttributeLists, node.Modifiers, node.NamespaceKeyword, node.Name,SyntaxFactory.Token(SyntaxKind.SemicolonToken), node.Externs, node.Usings, node.Members);
+		node = (NamespaceDeclarationSyntax)base.VisitNamespaceDeclaration(node)!;
+
+		return SyntaxFactory.FileScopedNamespaceDeclaration(node.AttributeLists, node.Modifiers, node.NamespaceKeyword, node.Name, SyntaxFactory.Token(SyntaxKind.SemicolonToken), node.Externs, node.Usings, node.Members);
+	}
+
+	public override SyntaxNode? VisitOperatorDeclaration(OperatorDeclarationSyntax node)
+	{
+		node = (OperatorDeclarationSyntax)base.VisitOperatorDeclaration(node)!;
+
+		SyntaxToken? _static = TryGetModifier(SyntaxKind.StaticKeyword, node.Modifiers);
+
+		if (_static == null)
+		{
+			Log.WarningLine("See error CS0558, static and public must be present. Returning.");
+			return node;
+		}
+		else
+		{
+			//Clear modifiers first.
+			node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
+			//Add static modifier.
+			node = node.WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
+		}
+
+
+		node = node.WithReturnType(SyntaxFactory.IdentifierName(""));
+
+		//same as method.
+		//TODO! make a separate helper method.
+		if (node.ExpressionBody != null)
+		{
+			BlockSyntax block = SyntaxFactory.Block(SyntaxFactory.ReturnStatement(node.AttributeLists,
+				SyntaxFactory.Token(SyntaxKind.ReturnKeyword).WithLeadingTrivia(node.ExpressionBody!.Expression.GetLeadingTrivia()),
+				node.ExpressionBody!.Expression.WithLeadingTrivia(SyntaxFactory.Space),
+				SyntaxFactory.Token(SyntaxKind.SemicolonToken)));
+
+			block = block.ReplaceToken(block.OpenBraceToken, block.OpenBraceToken.WithTrailingTrivia(node.ExpressionBody.ArrowToken.TrailingTrivia));
+
+			block = block.ReplaceToken(block.CloseBraceToken, block.CloseBraceToken.WithLeadingTrivia(SyntaxFactory.Space).WithTrailingTrivia(node.SemicolonToken.TrailingTrivia));
+
+			//first remove semicolon
+			node = node.ReplaceToken(node.SemicolonToken, SyntaxFactory.Token(SyntaxKind.None));
+
+			//second remove body expression
+			node = node.RemoveNode(node.ExpressionBody!, SyntaxRemoveOptions.KeepNoTrivia)!;
+
+			node = node.WithBody(block);
+		}
+
+		return node;
 	}
 	public override SyntaxNode? VisitAttributeList(AttributeListSyntax node)
 	{
@@ -626,10 +673,6 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		return null;
 	}
 	public override SyntaxNode? VisitUnsafeStatement(UnsafeStatementSyntax node)
-	{
-		return null;
-	}
-	public override SyntaxNode? VisitOperatorDeclaration(OperatorDeclarationSyntax node)
 	{
 		return null;
 	}

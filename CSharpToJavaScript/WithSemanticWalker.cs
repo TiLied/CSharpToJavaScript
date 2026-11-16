@@ -341,7 +341,44 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		{
 			TryReplaceIdentifierWithThis(syntax1);
 		}
+
 		base.VisitBinaryExpression(node);
+
+		//Transfer to WithoutSemanticRewriter?
+		//This may conflict with already replaced nodes...
+		IMethodSymbol? symbol = TryGetISymbol(node) as IMethodSymbol;
+		if (symbol != null && symbol.MethodKind == MethodKind.UserDefinedOperator)
+		{
+			string _typeName = symbol.ContainingType.Name;
+			string _methodName = "Operator";
+			
+			switch (node.OperatorToken.Kind())
+			{
+				case SyntaxKind.PlusToken:
+					_methodName += "Plus";
+					break;
+				case SyntaxKind.MinusToken:
+					_methodName += "Minus";
+					break;
+				case SyntaxKind.AsteriskToken:
+					_methodName += "Asterisk";
+					break;
+				case SyntaxKind.SlashToken:
+					_methodName += "Slash";
+					break;
+			}
+			
+			List<ArgumentSyntax> _args = new();
+			_args.Add(SyntaxFactory.Argument(node.Left.WithoutTrailingTrivia()));
+			_args.Add(SyntaxFactory.Argument(node.Right.WithLeadingTrivia(node.OperatorToken.TrailingTrivia)));
+
+			InvocationExpressionSyntax _invocation = SyntaxFactory.InvocationExpression(
+				SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression, SyntaxFactory.IdentifierName(_typeName), SyntaxFactory.IdentifierName(_methodName)),
+				SyntaxFactory.ArgumentList().AddArguments(_args.ToArray()));
+			
+			ReplaceNodes.Add(node, _invocation);
+		}
+	
 	}
 	public override void VisitAssignmentExpression(AssignmentExpressionSyntax node)
 	{

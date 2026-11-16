@@ -194,7 +194,7 @@ public class CSTOJSOptions
 	/// </summary>
 	/// <remarks>
 	/// <para>
-	/// Searches for any DLL in the specified directory and then imports references into compilation.
+	/// Searches for any DLL in the specified directory and then imports references into compilation. To disable, change it to an empty string.
 	/// </para>
 	/// <blockquote class="NOTE"><h5>NOTE</h5>
 	/// <para>

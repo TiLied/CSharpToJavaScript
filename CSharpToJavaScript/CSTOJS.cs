@@ -232,7 +232,7 @@ public static class CSTOJS
 
 	private static MetadataReference[] GetReferences(CSTOJSOptions options)
 	{
-		Dictionary<string, MetadataReference> assemblyMetadata = new();
+		Dictionary<string, string> assemblyMetadata = new();
 
 		Assembly? assembly = Assembly.GetEntryAssembly();
 		AssemblyName[] assemblyNames = assembly?.GetReferencedAssemblies() ?? [];
@@ -246,49 +246,145 @@ public static class CSTOJS
 			for (int j = 0; j < assemblyNames.Length; j++)
 			{
 				string _name = assemblyNames[j].Name + ".dll";
+				string _path = string.Empty;
 				
 				if (assemblyPath != null && File.Exists(Path.Combine(assemblyPath, _name)))
-					assemblyMetadata.TryAdd(_name, MetadataReference.CreateFromFile(Path.Combine(assemblyPath, _name)));
+				{
+					_path = Path.Combine(assemblyPath, _name);
+
+					if (assemblyMetadata.ContainsKey(_name))
+						assemblyMetadata[_name] = _path;
+					else
+						assemblyMetadata.Add(_name, _path);
+				}
 
 				if (objectAssemblyPath != null && File.Exists(Path.Combine(objectAssemblyPath, _name)))
-					assemblyMetadata.TryAdd(_name, MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, _name)));
+				{
+					_path = Path.Combine(objectAssemblyPath, _name);
+					
+					if (assemblyMetadata.ContainsKey(_name))
+						assemblyMetadata[_name] = _path;
+					else
+						assemblyMetadata.Add(_name, _path);
+				}
 			}
 		}
 		
 		if (assemblyPath != null)
 		{
 			if (File.Exists(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")))
-				assemblyMetadata.TryAdd("CSharpToJavaScript.dll", MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")));
+			{
+				string _path = Path.Combine(assemblyPath, "CSharpToJavaScript.dll");
+				
+				if (assemblyMetadata.ContainsKey("CSharpToJavaScript.dll"))
+					assemblyMetadata["CSharpToJavaScript.dll"] = _path;
+				else
+					assemblyMetadata.Add("CSharpToJavaScript.dll", _path);
+			}
 		}
 		
 		if (objectAssemblyPath != null)
 		{
-			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")))
-				assemblyMetadata.TryAdd("System.Private.CoreLib.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")));
+			string _name = string.Empty;
+			string _path = string.Empty;
 
+			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Private.CoreLib.dll")))
+			{
+				_name = "System.Private.CoreLib.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+				
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.dll")))
-				assemblyMetadata.TryAdd("System.dll",MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.dll")));
+			{
+				_name = "System.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Collections.Generics.dll")))
-				assemblyMetadata.TryAdd("System.Collections.Generics.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Collections.Generics.dll")));
+			{
+				_name = "System.Collections.Generics.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.IO.dll")))
-				assemblyMetadata.TryAdd("System.IO.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.IO.dll")));
+			{
+				_name = "System.IO.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Linq.dll")))
-				assemblyMetadata.TryAdd("System.Linq.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Linq.dll")));
+			{
+				_name = "System.Linq.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Net.Http.dll")))
-				assemblyMetadata.TryAdd("System.Net.Http.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Net.Http.dll")));
+			{
+				_name = "System.Net.Http.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Threading.dll")))
-				assemblyMetadata.TryAdd("System.Threading.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.dll")));
+			{
+				_name = "System.Threading.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Threading.Tasks.dll")))
-				assemblyMetadata.TryAdd("System.Threading.Tasks.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Threading.Tasks.dll")));
+			{
+				_name = "System.Threading.Tasks.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 
 			if (File.Exists(Path.Combine(objectAssemblyPath, "System.Console.dll")))
-				assemblyMetadata.TryAdd("System.Console.dll", MetadataReference.CreateFromFile(Path.Combine(objectAssemblyPath, "System.Console.dll")));
+			{
+				_name = "System.Console.dll";
+				_path = Path.Combine(objectAssemblyPath, _name);
+
+				if (assemblyMetadata.ContainsKey(_name))
+					assemblyMetadata[_name] = _path;
+				else
+					assemblyMetadata.Add(_name, _path);
+			}
 		}
 		
 		if (customPath != null)
@@ -298,7 +394,11 @@ public static class CSTOJS
 			for (int j = 0; j < _paths.Length; j++)
 			{
 				string _filename = Path.GetFileName(_paths[j]);
-				assemblyMetadata.TryAdd(_filename, MetadataReference.CreateFromFile(_paths[j]));
+				
+				if (assemblyMetadata.ContainsKey(_filename))
+					assemblyMetadata[_filename] = _paths[j];
+				else
+					assemblyMetadata.Add(_filename, _paths[j]);
 			}
 		}
 		
@@ -310,9 +410,9 @@ public static class CSTOJS
 			Log.InfoLine($"objectAssemblyPath: '{objectAssemblyPath}'");
 			Log.InfoLine($"customPath: '{customPath}'");
 
-			foreach (KeyValuePair<string, MetadataReference> metadata in assemblyMetadata)
+			foreach (KeyValuePair<string, string> metadata in assemblyMetadata)
 			{
-				Log.WriteLine($"{metadata.Key}:{metadata.Value.Display}");
+				Log.WriteLine($"{metadata.Key}:{metadata.Value}");
 			}
 			
 			Log.InfoLine($"assemblyMetadata count: '{assemblyMetadata.Count}'");
@@ -321,9 +421,9 @@ public static class CSTOJS
 
 		MetadataReference[] references = new MetadataReference[assemblyMetadata.Count];
 		int i = 0;
-		foreach (KeyValuePair<string, MetadataReference> metadata in assemblyMetadata)
+		foreach (KeyValuePair<string, string> metadata in assemblyMetadata)
 		{
-			references[i] = metadata.Value;
+			references[i] = MetadataReference.CreateFromFile(metadata.Value);
 			i++;
 		}
 

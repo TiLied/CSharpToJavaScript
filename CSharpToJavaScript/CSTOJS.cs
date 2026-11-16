@@ -132,6 +132,12 @@ public static class CSTOJS
 					files[i].DebugStrings[0] += "|\n";
 				}
 			}
+
+			if (files[i].OptionsForFile.MakePropertiesEnumerable)
+			{
+				MakePropertiesEnumerableRewriter _makePropertiesEnumerableRewriter = new();
+				_root = _makePropertiesEnumerableRewriter.Visit(_root);
+			}
 			
 			_root = _withoutSemanticRewriter.Visit(_root);
 

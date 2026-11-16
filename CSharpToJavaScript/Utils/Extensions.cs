@@ -25,6 +25,7 @@ internal static class Extensions
 			
 		return false;
 	}
+	
 	public static bool HasDataAnnotation(this SyntaxToken token, string data)
 	{
 		if(!token.HasAnnotations(AnnotationKind))

@@ -54,23 +54,6 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 								
 				if (_prop.AccessorList != null)
 				{
-					//TODO! do MakePropertiesEnumerable
-					//in seperate rewriter before WithoutSemanticRewriter
-					int _constructorIndex = -1;
-					string _enumProp = $"Object.defineProperty(this, '{_prop.Identifier}', {{ enumerable: true, ";
-					
-					if (_Options.MakePropertiesEnumerable)
-					{
-						for (int j = 0; j < node.Members.Count; j++)
-						{
-							if (node.Members[j] is ConstructorDeclarationSyntax)
-							{
-								_constructorIndex = j;
-								break;
-							}
-						}
-					}
-					
 					int _indexToInsert = i + 1;
 
 					//TODO!
@@ -96,78 +79,43 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 						if (_getSetStr.Contains("get;"))
 						{
-							if (_Options.MakePropertiesEnumerable)
-							{
-									_enumProp += $"get: function() {{ return this.{_fieldIdentifier}; }}";
-							}
-							else
-							{
-								MethodDeclarationSyntax _getM = SyntaxFactory.MethodDeclaration(
-								 SyntaxFactory.IdentifierName("get "), _prop.Identifier.WithoutTrivia())
-								.WithBody(
-									SyntaxFactory.Block(
-										SyntaxFactory.ReturnStatement(
-											SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression,
-												 SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier))
-										).NormalizeWhitespace()))
-								.WithLeadingTrivia(_prop.GetLeadingTrivia())
-								.WithTrailingTrivia(_prop.GetTrailingTrivia());
-
-								if (_static != null)
-									_getM = _getM.WithoutLeadingTrivia().WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
-
-								node = node.WithMembers(node.Members.Insert(_indexToInsert++, _getM));
-							}
-						}
-						if (_getSetStr.Contains("get;") && _getSetStr.Contains("set;"))
-						{
-							if (_Options.MakePropertiesEnumerable)
-							{
-								_enumProp += $", set: function (value) {{ this.{_fieldIdentifier} = value; }} }}";
-							}
-							else
-							{
-								MethodDeclarationSyntax _setM = SyntaxFactory.MethodDeclaration(
-								SyntaxFactory.IdentifierName("set "), _prop.Identifier.WithoutTrivia())
-							.WithParameterList(
-								SyntaxFactory.ParameterList(
-									SyntaxFactory.SingletonSeparatedList(
-									SyntaxFactory.Parameter(SyntaxFactory.Identifier("value")))))
+							MethodDeclarationSyntax _getM = SyntaxFactory.MethodDeclaration(
+								SyntaxFactory.IdentifierName("get "), _prop.Identifier.WithoutTrivia())
 							.WithBody(
-								SyntaxFactory.Block(SyntaxFactory.ExpressionStatement(
-									SyntaxFactory.AssignmentExpression(SyntaxKind.SimpleAssignmentExpression,
+								SyntaxFactory.Block(
+									SyntaxFactory.ReturnStatement(
 										SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression,
-										 SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier)),
-										SyntaxFactory.IdentifierName("value")).NormalizeWhitespace())))
+												SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier))
+									).NormalizeWhitespace()))
 							.WithLeadingTrivia(_prop.GetLeadingTrivia())
 							.WithTrailingTrivia(_prop.GetTrailingTrivia());
 
-								if (_static != null)
-									_setM = _setM.WithoutLeadingTrivia().WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
+							if (_static != null)
+								_getM = _getM.WithoutLeadingTrivia().WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
 
-								node = node.WithMembers(node.Members.Insert(_indexToInsert++, _setM));
-							}
+							node = node.WithMembers(node.Members.Insert(_indexToInsert++, _getM));
 						}
-
-						if (_Options.MakePropertiesEnumerable)
+						if (_getSetStr.Contains("get;") && _getSetStr.Contains("set;"))
 						{
-							if (_constructorIndex == -1)
-							{
-								Log.WarningLine($"Constructor is 'null' for: {node.Identifier}. MakePropertiesEnumerable is ignored!");
+							MethodDeclarationSyntax _setM = SyntaxFactory.MethodDeclaration(
+							SyntaxFactory.IdentifierName("set "), _prop.Identifier.WithoutTrivia())
+						.WithParameterList(
+							SyntaxFactory.ParameterList(
+								SyntaxFactory.SingletonSeparatedList(
+								SyntaxFactory.Parameter(SyntaxFactory.Identifier("value")))))
+						.WithBody(
+							SyntaxFactory.Block(SyntaxFactory.ExpressionStatement(
+								SyntaxFactory.AssignmentExpression(SyntaxKind.SimpleAssignmentExpression,
+									SyntaxFactory.MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression,
+										SyntaxFactory.IdentifierName("this"), SyntaxFactory.IdentifierName(_fieldIdentifier)),
+									SyntaxFactory.IdentifierName("value")).NormalizeWhitespace())))
+						.WithLeadingTrivia(_prop.GetLeadingTrivia())
+						.WithTrailingTrivia(_prop.GetTrailingTrivia());
 
-							}
-							else
-							{
-								_enumProp += ")";
+							if (_static != null)
+								_setM = _setM.WithoutLeadingTrivia().WithModifiers(SyntaxFactory.TokenList((SyntaxToken)_static));
 
-								ConstructorDeclarationSyntax _constr = (ConstructorDeclarationSyntax)node.Members[_constructorIndex];
-
-								node = node.ReplaceNode(_constr.Body,
-									_constr.Body.WithStatements(_constr.Body.Statements.Insert(0,
-											SyntaxFactory.ExpressionStatement(
-												SyntaxFactory.IdentifierName(_enumProp))
-												.WithTrailingTrivia(SyntaxFactory.LineFeed))).WithLeadingTrivia(_constr.Body.GetLeadingTrivia()).WithTrailingTrivia(_constr.Body.GetTrailingTrivia()));
-							}
+							node = node.WithMembers(node.Members.Insert(_indexToInsert++, _setM));
 						}
 					}
 					else
@@ -700,43 +648,4 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			return SyntaxFactory.IdentifierName("let").WithLeadingTrivia(type.GetLeadingTrivia()).WithTrailingTrivia(type.GetTrailingTrivia());
 		
 	}
-}
-
-internal class KeepBraceOnTheSameLineRewriter : CSharpSyntaxRewriter
-{
-	private SyntaxToken? _ReplacedPreviousToken = null;
-	public override SyntaxToken VisitToken(SyntaxToken token)
-	{
-		if (token.IsKind(SyntaxKind.OpenBraceToken))
-		{
-			if (_ReplacedPreviousToken != null)
-			{
-				_ReplacedPreviousToken = null;
-				token = token.WithLeadingTrivia(SyntaxFactory.Space);
-				return token;
-			}
-		}
-
-		SyntaxToken _nextToken = token.GetNextToken();
-		
-		if (_nextToken.IsKind(SyntaxKind.OpenBraceToken))
-		{
-			if (token.HasTrailingTrivia)
-			{
-				SyntaxTriviaList trivias = token.TrailingTrivia;
-
-				for (int i = 0; i < trivias.Count; i++)
-				{
-					if (trivias[i].IsKind(SyntaxKind.EndOfLineTrivia))
-					{
-						token = token.WithoutTrivia().WithLeadingTrivia(token.LeadingTrivia);
-						_ReplacedPreviousToken = token;
-						return token;
-					}
-				}
-			}
-		}
-		return base.VisitToken(token);
-	}
-
 }

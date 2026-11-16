@@ -15,7 +15,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	private readonly CSTOJSOptions _Options;
 
 	private readonly Dictionary<string, List<string>> _ExportedClasses;
-	
+
 	private ITypeSymbol? _CurrentClassSymbol = null;
 
 	private bool _NoneWithTrailingDotRemoved = false;
@@ -23,7 +23,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public Dictionary<SyntaxNode, SyntaxNode> ReplaceNodes = new();
 	public Dictionary<string, List<string>> ImportClasses = new();
 	public Dictionary<string, List<string>> ImportFromAttribute = new();
-	
+
 	public WithSemanticWalker(SemanticModel semanticModel, CSTOJSOptions options, Dictionary<string, List<string>> exportedClasses)
 	{
 		_Model = semanticModel;
@@ -51,108 +51,56 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
 		_CurrentClassSymbol = _Model.GetDeclaredSymbol(node);
-		
+
 		if (_CurrentClassSymbol != null)
 		{
 			ImmutableArray<AttributeData> _attributeData = _CurrentClassSymbol.GetAttributes();
-			for (int i = 0; i < _attributeData.Length; i++)
-			{
-				if (_attributeData[i].AttributeClass != null)
-				{
-					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
-					{
-						ClassDeclarationSyntax _class = node;
-						
-						if (ReplaceNodes.ContainsKey(_class))
-							_class = (ClassDeclarationSyntax)ReplaceNodes[_class];
-						
-						ReplaceNodes.Add(_class, _class.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
-						
-						continue;
-					}
-					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
-					{
-						ProcessImportAttribute(_attributeData[i]);
-						continue;
-					}
-				}
-			}
+			ProcessAttributes<ClassDeclarationSyntax>(_attributeData, node);
 		}
-		
+
 		//Process class after storing symbol.
 		base.VisitClassDeclaration(node);
 	}
-    public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
-    {
+	public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
+	{
 		base.VisitMethodDeclaration(node);
-	    
+
 		IMethodSymbol? symbol = _Model.GetDeclaredSymbol(node);
-		
+
 		if (symbol != null)
 		{
 			ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
-			for (int i = 0; i < _attributeData.Length; i++)
-			{
-				if (_attributeData[i].AttributeClass != null)
-				{
-					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
-					{
-						TypeSyntax _return = node.ReturnType;
-						
-						if (ReplaceNodes.ContainsKey(_return))
-							_return = (TypeSyntax)ReplaceNodes[_return];
-						
-						ReplaceNodes.Add(_return, _return.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
-						
-						continue;
-					}
-					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
-					{
-						ProcessImportAttribute(_attributeData[i]);
-						
-						continue;
-					}
-				}
-			}
+			ProcessAttributes<TypeSyntax>(_attributeData, node.ReturnType);
 		}
 	}
-	
-    public override void VisitFieldDeclaration(FieldDeclarationSyntax node)
-    {
+
+	public override void VisitFieldDeclaration(FieldDeclarationSyntax node)
+	{
 		base.VisitFieldDeclaration(node);
-		
+
 		//TODO?
 		IFieldSymbol? symbol = _Model.GetDeclaredSymbol(node.Declaration.Variables[0]) as IFieldSymbol;
-		
+
 		if (symbol != null)
 		{
 			ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
-			for (int i = 0; i < _attributeData.Length; i++)
-			{
-				if (_attributeData[i].AttributeClass != null)
-				{
-					if (_attributeData[i].AttributeClass!.Name == nameof(IgnoreAttribute))
-					{
-						VariableDeclarationSyntax _vds = node.Declaration;
-						
-						if (ReplaceNodes.ContainsKey(_vds))
-							_vds = (VariableDeclarationSyntax)ReplaceNodes[_vds];
-						
-						ReplaceNodes.Add(_vds, _vds.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
-						
-						continue;
-					}
-					if (_attributeData[i].AttributeClass!.Name == nameof(ImportAttribute))
-					{
-						ProcessImportAttribute(_attributeData[i]);
-						
-						continue;
-					}
-				}
-			}
+			ProcessAttributes<VariableDeclarationSyntax>(_attributeData, node.Declaration);
 		}
-    }
-	
+	}
+
+	public override void VisitPropertyDeclaration(PropertyDeclarationSyntax node)
+	{
+		base.VisitPropertyDeclaration(node);
+
+		IPropertySymbol? symbol = _Model.GetDeclaredSymbol(node);
+
+		if (symbol != null)
+		{
+			ImmutableArray<AttributeData> _attributeData = symbol.GetAttributes();
+			ProcessAttributes<TypeSyntax>(_attributeData, node.Type);
+		}
+	}
+
 	public override void VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
 	{
 		base.VisitMemberAccessExpression(node);
@@ -198,7 +146,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public override void VisitSwitchStatement(SwitchStatementSyntax node)
 	{
 		base.VisitSwitchStatement(node);
-		
+
 		if (node.Expression is IdentifierNameSyntax syntax)
 		{
 			if (TryReplaceIdentifierWithThis(syntax))
@@ -244,7 +192,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
 		//With an early return, we won't process the nameof expression.
-		if(_Options.DisableNameOfProcessing)
+		if (_Options.DisableNameOfProcessing)
 		{
 			if (node.Expression is IdentifierNameSyntax identifier)
 			{
@@ -254,9 +202,9 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 				}
 			}
 		}
-		
+
 		base.VisitInvocationExpression(node);
-		
+
 		if (node.Expression is IdentifierNameSyntax ||
 			node.Expression is GenericNameSyntax)
 		{
@@ -491,7 +439,6 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			_initializer));
 		}
 	}
-
 	public override void VisitIdentifierName(IdentifierNameSyntax node)
 	{
 		ISymbol? symbol = TryGetISymbol(node);
@@ -531,11 +478,11 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			//Return it if it is not in the source files.
 			if (symbol.Locations[0].IsInMetadata)
 				return;
-			
+
 			if (symbol.Locations[0].SourceTree != null)
 			{
 				string _filename = symbol.Locations[0].SourceTree!.FilePath;
-				
+
 				if (_filename != _CurrentClassSymbol.Locations[0].SourceTree.FilePath)
 				{
 					//If the symbol location is empty, 
@@ -584,9 +531,9 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 							return false;
 						}
 					}
-					
+
 				}
-				
+
 				ITypeSymbol? _base = _CurrentClassSymbol;
 
 				while (_base != null)
@@ -730,10 +677,10 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		//Also, if symbol in a source return, it is not a built-in type.
 		if (symbol.Locations.Length == 0 || symbol.Locations[0].IsInSource)
 			return false;
-		
+
 		//If symbol is a namespace, return.
 		//We do not translate namespaces as they are completely ignored later in WithoutSemanticRewriter.
-		if(symbol.Kind == SymbolKind.Namespace)
+		if (symbol.Kind == SymbolKind.Namespace)
 			return false;
 
 		//If the node is a var, keep it(return) for extra safety, most likely, it will be replaced later in WithoutSemanticRewriter.
@@ -761,7 +708,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		string typeName = typeSymbol.Name;
 
 		string? jsStr = _NETAPI.ReturnJSString(typeName);
-		
+
 		if (jsStr == null)
 		{
 			Log.WarningLine($"typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
@@ -777,7 +724,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			}
 
 			jsStr = _NETAPI.ReturnJSString(typeName, symbol.Name);
-			
+
 			if (jsStr == null)
 			{
 				Log.WarningLine($"node: \"{node}\", typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", symbolName: \"{symbol.Name}\", Is not supported! USE \"CustomCSNamesToJS\"");
@@ -807,46 +754,40 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 		return symbol;
 	}
 	
-	private void ProcessImportAttribute(AttributeData data)
+	//Only Ignore/Import. TODO? rest?
+	private void ProcessAttributes<T>(ImmutableArray<AttributeData> attributes, T nodeToReplace) where T : SyntaxNode
 	{
-		string _importWhat = data.ConstructorArguments[0].Value.ToString();
-		string _importFrom = data.ConstructorArguments[1].Value.ToString();
-		
-		if (ImportFromAttribute.ContainsKey(_importFrom))
+		for (int i = 0; i < attributes.Length; i++)
 		{
-			if (!ImportFromAttribute[_importFrom].Contains(_importWhat))
-				ImportFromAttribute[_importFrom].Add(_importWhat);
-		}
-		else
-			ImportFromAttribute.Add(_importFrom, new() { _importWhat });
-	}
-}
-
-internal class ExportClassesWalker : CSharpSyntaxWalker
-{
-	private readonly SemanticModel _Model;
-	private readonly Dictionary<string, List<string>> _ExportClasses;
-
-	public ExportClassesWalker(SemanticModel semanticModel, ref Dictionary<string, List<string>> exportClasses)
-	{
-		_Model = semanticModel;
-		_ExportClasses = exportClasses;
-	}
-	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
-	{
-		INamedTypeSymbol? classSymbol = _Model.GetDeclaredSymbol(node);
-
-		if (classSymbol != null)
-		{
-			if (classSymbol.DeclaredAccessibility == Accessibility.Public)
+			if (attributes[i].AttributeClass != null)
 			{
-				if (node.SyntaxTree.FilePath == string.Empty)
-					Log.WarningLine("'FileName' is empty. Modules won't be imported! (Only exported)");
+				if (attributes[i].AttributeClass!.Name == nameof(IgnoreAttribute))
+				{
+					if (ReplaceNodes.ContainsKey(nodeToReplace))
+					{
+						T _node = (T)ReplaceNodes[nodeToReplace];
+						
+						ReplaceNodes[nodeToReplace] = _node.WithAdditionalAnnotations(IgnoreAttribute.Annotation);
+						continue;
+					}
+					
+					ReplaceNodes.Add(nodeToReplace, nodeToReplace.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+					continue;
+				}
+				if (attributes[i].AttributeClass!.Name == nameof(ImportAttribute))
+				{
+					string _importWhat = attributes[i].ConstructorArguments[0].Value.ToString();
+					string _importFrom = attributes[i].ConstructorArguments[1].Value.ToString();
 
-				if (_ExportClasses.ContainsKey(node.SyntaxTree.FilePath))
-					_ExportClasses[node.SyntaxTree.FilePath].Add(classSymbol.Name);
-				else
-					_ExportClasses.Add(node.SyntaxTree.FilePath, new() { classSymbol.Name });
+					if (ImportFromAttribute.ContainsKey(_importFrom))
+					{
+						if (!ImportFromAttribute[_importFrom].Contains(_importWhat))
+							ImportFromAttribute[_importFrom].Add(_importWhat);
+					}
+					else
+						ImportFromAttribute.Add(_importFrom, new() { _importWhat });
+					continue;
+				}
 			}
 		}
 	}

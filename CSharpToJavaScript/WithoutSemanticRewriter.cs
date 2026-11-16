@@ -50,6 +50,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			{
 				PropertyDeclarationSyntax _prop = (PropertyDeclarationSyntax)node.Members[i];
 
+				//Ignore property translation if the IgnoreAttribute is used.
+				if (_prop.Type.HasDataAnnotation(IgnoreAttribute.Annotation.Data!))
+					continue;
+
 				SyntaxToken? _static = TryGetModifier(SyntaxKind.StaticKeyword, _prop.Modifiers);
 								
 				if (_prop.AccessorList != null)
@@ -242,7 +246,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 
 		if (node.Modifiers.Count >= 1)
 		{
-			SyntaxToken? _static = TryGetModifier(SyntaxKind.StaticKeyword ,node.Modifiers);
+			SyntaxToken? _static = TryGetModifier(SyntaxKind.StaticKeyword, node.Modifiers);
 			SyntaxToken? _async = TryGetModifier(SyntaxKind.AsyncKeyword, node.Modifiers);
 
 			if (_static == null && _async == null)
@@ -250,7 +254,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 				node = node.ReplaceToken(node.Identifier, node.Identifier.WithLeadingTrivia(node.Modifiers[0].LeadingTrivia));
 				node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
 			}
-			else if(_async == null)
+			else if (_async == null)
 			{
 				//Clear modifiers first.
 				node = node.ReplaceTokens(node.Modifiers, (o, r) => SyntaxFactory.Token(SyntaxKind.None));
@@ -279,6 +283,10 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)
 	{
+		//Ignore property translation if the IgnoreAttribute is used.
+		if (node.Type.HasDataAnnotation(IgnoreAttribute.Annotation.Data!))
+			return null;
+		
 		node = (PropertyDeclarationSyntax)base.VisitPropertyDeclaration(node)!;
 
 		if (node.Modifiers.Count >= 1)
@@ -318,17 +326,17 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 		if (node.Type.HasDataAnnotation(ToObjectAttribute.Annotation.Data))
 		{
 			SyntaxTriviaList trivias = node.Type.GetTrailingTrivia();
-			
+
 			if (node.ArgumentList != null)
 				trivias = node.ArgumentList.GetTrailingTrivia();
-				
+
 			trivias = trivias.AddRange(node.Initializer.GetLeadingTrivia());
 
 			return node.Initializer.WithLeadingTrivia(trivias);
 		}
 		return node;
 	}
-	
+
     public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
     {
 		//first process local declaration

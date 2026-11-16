@@ -11,7 +11,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 {
 	private readonly CSTOJSOptions _Options;
 	public static SyntaxAnnotation StaticConstructor { get; set; } = new(Extensions.AnnotationKind, "StaticConstructor");
-	
+
 	public WithoutSemanticRewriter(CSTOJSOptions options)
 	{
 		_Options = options;
@@ -547,6 +547,34 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 				node = node.ReplaceToken(node.Token, SyntaxFactory.Literal(SymbolDisplay.FormatLiteral(_value, quote: false), _value).WithLeadingTrivia(node.GetLeadingTrivia()).WithTrailingTrivia(node.GetTrailingTrivia()));
 			}
 		}
+		return node;
+	}
+	public override SyntaxNode? VisitIsPatternExpression(IsPatternExpressionSyntax node)
+	{
+		node = (IsPatternExpressionSyntax)base.VisitIsPatternExpression(node)!;
+
+		if (node.Pattern.IsKind(SyntaxKind.ConstantPattern))
+		{
+			ConstantPatternSyntax _pattern = (ConstantPatternSyntax)node.Pattern;
+			if (_pattern.Expression.IsKind(SyntaxKind.NullLiteralExpression))
+			{
+				node = node.ReplaceToken(node.IsKeyword, node.IsKeyword.WithAdditionalAnnotations(new SyntaxAnnotation(Extensions.AnnotationKind, "===")));
+			}
+		}
+		else if (node.Pattern.IsKind(SyntaxKind.NotPattern))
+		{
+			UnaryPatternSyntax _unaryPattern = (UnaryPatternSyntax)node.Pattern;
+			if (_unaryPattern.Pattern.IsKind(SyntaxKind.ConstantPattern))
+			{
+				ConstantPatternSyntax _pattern = (ConstantPatternSyntax)_unaryPattern.Pattern;
+				if (_pattern.Expression.IsKind(SyntaxKind.NullLiteralExpression))
+				{
+					node = node.ReplaceToken(node.IsKeyword, node.IsKeyword.WithAdditionalAnnotations(new SyntaxAnnotation(Extensions.AnnotationKind, "!==")));
+					node = node.ReplaceNode(node, node.WithPattern(_pattern));
+				}
+			}
+		}
+
 		return node;
 	}
 	public override SyntaxNode? VisitGenericName(GenericNameSyntax node)

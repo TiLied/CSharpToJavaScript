@@ -811,4 +811,50 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			}
 		}
 	}
+	public override void VisitIsPatternExpression(IsPatternExpressionSyntax node)
+	{
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					case SyntaxKind.ConstantPattern:
+						VisitConstantPattern((ConstantPatternSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IsKeyword:
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append(asToken.GetDataAnnotation());
+							VisitTrailingTrivia(asToken);
+							break;
+						}
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
+	}
 }

@@ -56,9 +56,23 @@ internal static class Extensions
 		
 		return null;
 	}
-	
-	
-	
+
+	public static string? GetDataAnnotation(this SyntaxToken node)
+	{
+		if (!node.HasAnnotations(AnnotationKind))
+			return null;
+
+		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+
+		foreach (SyntaxAnnotation ann in annotations)
+		{
+			return ann.Data;
+		}
+
+		return null;
+	}
+
+
 	//https://stackoverflow.com/a/21755933
 	public static string? FirstCharToLowerCase(this string? str)
 	{

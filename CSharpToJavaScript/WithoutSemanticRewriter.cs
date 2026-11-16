@@ -279,6 +279,26 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 			}
 		}
 
+		if (node.ExpressionBody != null)
+		{
+			BlockSyntax block = SyntaxFactory.Block(SyntaxFactory.ReturnStatement(node.AttributeLists,
+				SyntaxFactory.Token(SyntaxKind.ReturnKeyword).WithLeadingTrivia(node.ExpressionBody!.Expression.GetLeadingTrivia()),
+				node.ExpressionBody!.Expression.WithLeadingTrivia(SyntaxFactory.Space),
+				SyntaxFactory.Token(SyntaxKind.SemicolonToken)));
+
+			block = block.ReplaceToken(block.OpenBraceToken, block.OpenBraceToken.WithTrailingTrivia(node.ExpressionBody.ArrowToken.TrailingTrivia));
+
+			block = block.ReplaceToken(block.CloseBraceToken, block.CloseBraceToken.WithLeadingTrivia(SyntaxFactory.Space).WithTrailingTrivia(node.SemicolonToken.TrailingTrivia));
+			
+			//first remove semicolon
+			node = node.ReplaceToken(node.SemicolonToken, SyntaxFactory.Token(SyntaxKind.None));
+
+			//second remove body expression
+			node = node.RemoveNode(node.ExpressionBody!, SyntaxRemoveOptions.KeepNoTrivia)!;
+			
+			node = node.WithBody(block);
+		}
+
 		return node;
 	}
 	public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)

@@ -101,9 +101,9 @@ public static class CSTOJS
 						Log.ErrorLine(diagnostics[j].ToString());
 				}
 			}
-			
-			SyntaxNode _root = trees[i].GetRoot();
 
+			SyntaxNode? _root = trees[i].GetRoot();
+			
 			WithSemanticWalker _withSemanticWalker = new(_model, files[i].OptionsForFile, exportedClasses);
 			WithoutSemanticRewriter _withoutSemanticRewriter = new(files[i].OptionsForFile);
 			
@@ -115,6 +115,9 @@ public static class CSTOJS
 			{
 				return _withSemanticWalker.ReplaceNodes[o];
 			});
+			
+			ProcessBuiltIns _processBuiltIns = new();
+			_root = _processBuiltIns.ProcessRoot(_root);
 
 			if (files[i].OptionsForFile.Debug)
 			{

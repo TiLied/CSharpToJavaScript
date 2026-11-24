@@ -9,8 +9,7 @@ namespace CSharpToJavaScript;
 
 internal class WithSemanticWalker : CSharpSyntaxWalker
 {
-	private readonly NETAPI _NETAPI = new();
-
+	private readonly ProcessBuiltIns _ProcessBuiltIns = new();
 	private readonly SemanticModel _Model;
 	private readonly CSTOJSOptions _Options;
 
@@ -223,7 +222,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 						if (_attributeData[i].AttributeClass!.Name == nameof(BinaryAttribute))
 						{
 							IdentifierNameSyntax _identifier = SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
-							.WithAdditionalAnnotations(BinaryAttribute.Annotation)
+							.WithAdditionalAnnotations(PredefinedAnnotations.BinaryAttribute)
 							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
 							.WithTrailingTrivia(node.Expression.GetTrailingTrivia());
 
@@ -237,7 +236,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 						if (_attributeData[i].AttributeClass!.Name == nameof(UnaryAttribute))
 						{
 							IdentifierNameSyntax _identifier = SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
-							.WithAdditionalAnnotations(UnaryAttribute.Annotation)
+							.WithAdditionalAnnotations(PredefinedAnnotations.UnaryAttribute)
 							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
 							.WithTrailingTrivia(node.Expression.GetTrailingTrivia());
 
@@ -260,7 +259,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 
 							//Replace GenericName with IdentifierName from an attribute.
 							IdentifierNameSyntax _identifier = SyntaxFactory.IdentifierName(SyntaxFactory.Identifier(_attributeData[i].ConstructorArguments[0].Value.ToString()))
-							.WithAdditionalAnnotations(UnaryAttribute.Annotation)
+							.WithAdditionalAnnotations(PredefinedAnnotations.UnaryAttribute)
 							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
 							.WithTrailingTrivia(node.Expression.GetTrailingTrivia());
 
@@ -282,7 +281,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 								_arg = (TypeSyntax)ReplaceNodes[_arg];
 
 							IdentifierNameSyntax _identifier = SyntaxFactory.IdentifierName(_attributeData[i].ConstructorArguments[0].Value.ToString())
-							.WithAdditionalAnnotations(BinaryAttribute.Annotation)
+							.WithAdditionalAnnotations(PredefinedAnnotations.BinaryAttribute)
 							.WithLeadingTrivia(node.Expression.GetLeadingTrivia())
 							.WithTrailingTrivia(node.Expression.GetTrailingTrivia());
 
@@ -439,7 +438,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 				{
 					if (_attributeData[i].AttributeClass!.Name == nameof(ToObjectAttribute))
 					{
-						ReplaceNodes.Add(node.Type, node.Type.WithAdditionalAnnotations(ToObjectAttribute.Annotation));
+						ReplaceNodes.Add(node.Type, node.Type.WithAdditionalAnnotations(PredefinedAnnotations.ToObjectAttribute));
 						break;
 					}
 				}
@@ -495,16 +494,7 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 	}
 	public override void VisitPredefinedType(PredefinedTypeSyntax node)
 	{
-		ISymbol? symbol = TryGetISymbol(node);
-
-		if (symbol != null)
-		{
-			if (BuiltInTypesGenerics(node, symbol, out string str))
-			{
-				ReplaceNodes.Add(node, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(node.GetLeadingTrivia()).WithTrailingTrivia(node.GetTrailingTrivia()));
-				return;
-			}
-		}
+		BuiltInTypesGenerics(node, TryGetISymbol(node));
 	}
 
 	private void AddImportModule(ISymbol symbol)
@@ -692,38 +682,37 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 
 		if (_Options.CustomCSNamesToJS.TryGetValue(identifier.Identifier.Text, out string? _value))
 		{
-			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_value));
+			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(_value).WithLeadingTrivia(identifier.GetLeadingTrivia()).WithTrailingTrivia(identifier.GetTrailingTrivia()));
 			return;
 		}
-
-		if (BuiltInTypesGenerics(identifier, symbol, out string str))
-		{
-			ReplaceNodes.Add(identifier, SyntaxFactory.IdentifierName(str).WithLeadingTrivia(identifier.Identifier.LeadingTrivia).WithTrailingTrivia(identifier.GetTrailingTrivia()));
-			return;
-		}
+		
+		BuiltInTypesGenerics(identifier, symbol);
 	}
-	private bool BuiltInTypesGenerics(TypeSyntax node, ISymbol? symbol, out string str)
-	{
-		str = string.Empty;
 
+	private void BuiltInTypesGenerics(TypeSyntax node, ISymbol? symbol)
+	{
 		//We need a symbol, if it is null, return.
 		if (symbol == null)
-			return false;
+			return;
 
 		//If symbol locations are zero, return. Treat as symbol null.
 		//Also, if symbol in a source return, it is not a built-in type.
 		if (symbol.Locations.Length == 0 || symbol.Locations[0].IsInSource)
-			return false;
+			return;
 
 		//If symbol is a namespace, return.
-		//We do not translate namespaces as they are completely ignored later in WithoutSemanticRewriter.
+		//We do not translate namespaces as they are completely ignored later in the WithoutSemanticRewriter.
 		if (symbol.Kind == SymbolKind.Namespace)
-			return false;
+			return;
 
-		//If the node is a var, keep it(return) for extra safety, most likely, it will be replaced later in WithoutSemanticRewriter.
+		//If the node is a var, keep it(return) for extra safety, most likely, it will be replaced later in the WithoutSemanticRewriter.
 		if (node.IsVar)
-			return false;
+			return;
 
+		//If the parent is an attribute, return, the attributelist is ignored later in the WithoutSemanticRewriter.
+		if (node.Parent != null && node.Parent is AttributeSyntax)
+			return; 
+		
 		ISymbol typeSymbol = symbol;
 
 		if (typeSymbol.Kind != SymbolKind.NamedType)
@@ -732,45 +721,40 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 			if (typeSymbol == null)
 			{
 				Log.WarningLine($"node: \"{node}\", symbol: \"{symbol}\", typeSymbol is null. USE \"CustomCSNamesToJS\"!");
-				return false;
+				return;
 			}
 
 			if (typeSymbol.Kind != SymbolKind.NamedType)
 			{
 				Log.WarningLine($"node: \"{node}\", symbol: \"{symbol}\", symbol kind: \"{symbol.Kind}\", typeSymbol kind: \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
-				return false;
+				return;
 			}
 		}
-
 		string typeName = typeSymbol.Name;
 
-		string? jsStr = _NETAPI.ReturnJSString(typeName);
-
-		if (jsStr == null)
+		if (!_ProcessBuiltIns.BuiltIns.ContainsKey(typeName))
 		{
 			Log.WarningLine($"typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
-			return false;
+			return;
 		}
 		else
 		{
 			//return early if the type name is the same as a symbol.
 			if (typeName == symbol.Name)
 			{
-				str = jsStr;
-				return true;
+				ReplaceNodes.Add(node, node.WithAdditionalAnnotations(new SyntaxAnnotation(PredefinedAnnotations.GlobalBuiltIn_Kind, typeName)));
+				return;
 			}
 
-			jsStr = _NETAPI.ReturnJSString(typeName, symbol.Name);
-
-			if (jsStr == null)
+			if (!_ProcessBuiltIns.BuiltIns.ContainsKey(typeName + symbol.Name))
 			{
 				Log.WarningLine($"node: \"{node}\", typeName: \"{typeName}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", symbolName: \"{symbol.Name}\", Is not supported! USE \"CustomCSNamesToJS\"");
-				return false;
+				return;
 			}
 			else
 			{
-				str = jsStr;
-				return true;
+				ReplaceNodes.Add(node, node.WithAdditionalAnnotations(new SyntaxAnnotation(PredefinedAnnotations.GlobalBuiltIn_Kind, typeName + symbol.Name)));
+				return;
 			}
 		}
 	}
@@ -804,11 +788,11 @@ internal class WithSemanticWalker : CSharpSyntaxWalker
 					{
 						T _node = (T)ReplaceNodes[nodeToReplace];
 						
-						ReplaceNodes[nodeToReplace] = _node.WithAdditionalAnnotations(IgnoreAttribute.Annotation);
+						ReplaceNodes[nodeToReplace] = _node.WithAdditionalAnnotations(PredefinedAnnotations.IgnoreAttribute);
 						continue;
 					}
 					
-					ReplaceNodes.Add(nodeToReplace, nodeToReplace.WithAdditionalAnnotations(IgnoreAttribute.Annotation));
+					ReplaceNodes.Add(nodeToReplace, nodeToReplace.WithAdditionalAnnotations(PredefinedAnnotations.IgnoreAttribute));
 					continue;
 				}
 				if (attributes[i].AttributeClass!.Name == nameof(ImportAttribute))

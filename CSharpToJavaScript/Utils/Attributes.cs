@@ -7,10 +7,7 @@ namespace CSharpToJavaScript.Utils;
 /// Ignore methods, fields etc. Useful for basic interop for calling JS code. Can be combined with ImportAttribute/ValueAttribute.
 /// </summary>
 [AttributeUsage(AttributeTargets.All)]
-public class IgnoreAttribute : Attribute 
-{
-	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(IgnoreAttribute));
-}
+public class IgnoreAttribute : Attribute { }
 
 /// <summary>
 /// Add a custom import to the file. Useful for basic interop for calling JS code. Can be combined with IgnoreAttribute/ValueAttribute.
@@ -99,7 +96,6 @@ public class ToAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class BinaryAttribute : Attribute
 {
-	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(BinaryAttribute));
 	public string Value { get; init; }
 	public BinaryAttribute(string value)
 	{
@@ -124,7 +120,6 @@ public class GenericBinaryAttribute : Attribute
 [AttributeUsage(AttributeTargets.All)]
 public class UnaryAttribute : Attribute
 {
-	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(UnaryAttribute));
 	public string Value { get; init; }
 	public UnaryAttribute(string value)
 	{
@@ -148,10 +143,7 @@ public class GenericUnaryAttribute : Attribute
 /// Translates a class into a JS object.
 /// </summary>
 [AttributeUsage(AttributeTargets.All)]
-public class ToObjectAttribute : Attribute
-{
-	public static SyntaxAnnotation Annotation { get; } = new(Extensions.AnnotationKind, nameof(ToObjectAttribute));
-}
+public class ToObjectAttribute : Attribute { }
 
 /// <summary>
 /// Translates generic as argument.

@@ -469,6 +469,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitCastExpression(CastExpressionSyntax node)
 	{
+		node = (CastExpressionSyntax)base.VisitCastExpression(node)!;
 		return node.Expression;
 	}
 	public override SyntaxNode? VisitParenthesizedExpression(ParenthesizedExpressionSyntax node)

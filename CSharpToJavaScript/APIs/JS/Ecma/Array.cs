@@ -153,3 +153,103 @@ public partial class ArrayPrototype : FunctionPrototype
 	public Array With(int index, dynamic value ) { throw new System.NotImplementedException(); }
 	public Array with(int index, dynamic value) { throw new System.NotImplementedException(); }
 }
+
+[To(ToAttribute.Default)]
+public partial class Array<T> : ArrayPrototype
+{
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static ArrayPrototype<T> Prototype { get; } = new();
+
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public int Length { get; } = 0;
+	public int length { get; } = 0;
+
+	public Array(params T[] values) { throw new System.NotImplementedException(); }
+
+	//Todo! Function for mapfn?
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static Array<T> From(T items, Action<T>? mapfn = null, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static bool IsArray(dynamic arg) { throw new System.NotImplementedException(); }
+
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static Array<T> Of(params T[] items) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ArrayPrototype<T> : FunctionPrototype
+{
+	public ArrayPrototype() { }
+	public T? At(int index) { throw new System.NotImplementedException(); }
+
+	public Array<T> CopyWithin(T target, int start, int end = 0) { throw new System.NotImplementedException(); }
+
+	public List<dynamic> Entries() { throw new System.NotImplementedException(); }
+
+	public bool Every(Action callbackfn, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public Array<T> Fill(T value, int start = 0, int end = 0) { throw new System.NotImplementedException(); }
+
+	public Array<T> Filter(Action callbackfn, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public T? Find(Action predicate, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public int FindIndex(Action predicate, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public T? FindLast(Action predicate, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public int FindLastIndex(Action predicate, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public Array<T> Flat(int depth = 1) { throw new System.NotImplementedException(); }
+
+	public Array<T> FlatMap(Action mapperFunction, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public GlobalObject.Undefined ForEach(Action callbackfn, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public bool Includes(T searchElement, int fromIndex = 0) { throw new System.NotImplementedException(); }
+
+	public int IndexOf(T searchElement, int fromIndex = 0) { throw new System.NotImplementedException(); }
+
+	public string Join(string separator = ",") { throw new System.NotImplementedException(); }
+
+	public List<T> Keys() { throw new System.NotImplementedException(); }
+
+	public int LastIndexOf(dynamic searchElement, int fromIndex = 0) { throw new System.NotImplementedException(); }
+
+	public Array<T> Map(Action callbackfn, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public T Pop() { throw new System.NotImplementedException(); }
+
+	public int Push(params T[] tems) { throw new System.NotImplementedException(); }
+
+	public T Reduce(Action callbackfn, dynamic? initialValue = null) { throw new System.NotImplementedException(); }
+
+	public T ReduceRight(Action callbackfn, dynamic? initialValue = null) { throw new System.NotImplementedException(); }
+
+	public Array<T> Reverse() { throw new System.NotImplementedException(); }
+
+	public T? Shift() { throw new System.NotImplementedException(); }
+
+	public Array<T> Slice(int start = 0, int end = 0) { throw new System.NotImplementedException(); }
+
+	public bool Some(Action callbackfn, dynamic? thisArg = null) { throw new System.NotImplementedException(); }
+
+	public Array<T> Sort(Action comparefn) { throw new System.NotImplementedException(); }
+
+	public Array<T> Splice(int start, int deleteCount, params T[] items) { throw new System.NotImplementedException(); }
+
+	public Array<T> ToReversed() { throw new System.NotImplementedException(); }
+
+	public Array<T> ToSorted(Action comparefn) { throw new System.NotImplementedException(); }
+
+	public Array<T> ToSpliced(int start, int skipCount, params dynamic[] items) { throw new System.NotImplementedException(); }
+
+	public new string ToString() { throw new System.NotImplementedException(); }
+
+	public int Unshift(params T[] items) { throw new System.NotImplementedException(); }
+
+	public List<T> Values() { throw new System.NotImplementedException(); }
+
+	public Array<T> With(int index, T value) { throw new System.NotImplementedException(); }
+}

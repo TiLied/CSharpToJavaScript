@@ -13,7 +13,8 @@ public partial class Promise : PromisePrototype
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static PromisePrototype Prototype { get; } = new();
 	public Promise(Action executor) { }
-
+	public Promise(Func<Action, Action> executor) { }
+	
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static Promise All(Array iterable) 
 	{
@@ -55,7 +56,7 @@ public class PromisePrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public Promise Finally (Action onFinally)
+	public Promise Finally(Action onFinally)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -63,4 +64,10 @@ public class PromisePrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
+}
+
+public partial class Promise<T> : Promise
+{
+	public Promise(Action executor) : base(executor) { }
+	public Promise(Func<Action, Action> executor) : base(executor) { }
 }

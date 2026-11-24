@@ -3,13 +3,8 @@
 
 using CSharpToJavaScript.Utils;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace CSharpToJavaScript.APIs.JS.Ecma;
 //https://262.ecma-international.org/14.0/#sec-typedarray-objects

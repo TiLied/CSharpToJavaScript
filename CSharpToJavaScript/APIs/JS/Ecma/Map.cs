@@ -7,9 +7,10 @@ using System.Collections.Generic;
 
 namespace CSharpToJavaScript.APIs.JS.Ecma;
 
-//TODO? Generic variant? or replace with generic???
-//That way, I can replace the Dictionary in the generated cs. See GenCSharpLib.
-//Or, I cant...
+//TODO! Replace the Dictionary in the generated cs. See GenCSharpLib.
+
+
+//And maybe add a webidl record that translates as an object?
 //spec: https://w3c.github.io/clipboard-apis/#dom-clipboarditem-clipboarditem
 //mdn js: https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/ClipboardItem
 //First parameter is an object in js, but in webidl is a record...
@@ -62,6 +63,56 @@ public class MapPrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 	public List<dynamic> Values()
+	{
+		throw new System.NotImplementedException();
+	}
+}
+
+public partial class Map<K, V> : Map
+{
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public static MapPrototype<K, V> Prototype { get; } = new();
+	public Map(Array? iterable = default) { }
+}
+[To(ToAttribute.FirstCharToLowerCase)]
+public class MapPrototype<K, V> : FunctionPrototype
+{
+	public int Size { get; } = 0;
+	public MapPrototype() { }
+
+	public GlobalObject.Undefined Clear()
+	{
+		throw new System.NotImplementedException();
+	}
+	public bool Delete(K key)
+	{
+		throw new System.NotImplementedException();
+	}
+	public List<dynamic> Entries()
+	{
+		throw new System.NotImplementedException();
+	}
+	public GlobalObject.Undefined ForEach(Action callbackfn, dynamic? thisArg = null)
+	{
+		throw new System.NotImplementedException();
+	}
+	public V? Get(K key)
+	{
+		throw new System.NotImplementedException();
+	}
+	public bool Has(K key)
+	{
+		throw new System.NotImplementedException();
+	}
+	public List<K> Keys()
+	{
+		throw new System.NotImplementedException();
+	}
+	public Map Set(K key, V value)
+	{
+		throw new System.NotImplementedException();
+	}
+	public List<V> Values()
 	{
 		throw new System.NotImplementedException();
 	}

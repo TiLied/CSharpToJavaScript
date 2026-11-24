@@ -7,15 +7,12 @@ namespace CSharpToJavaScript.Utils;
 
 internal static class Extensions
 {
-	//Todo? Transfer to a separate file?
-	public const string AnnotationKind = "Global";
-	
-	public static bool HasDataAnnotation(this SyntaxNode node, string data)
+	public static bool HasDataAnnotation(this SyntaxNode node, string data, string annotationKind = PredefinedAnnotations.Global_Kind)
 	{
-		if(!node.HasAnnotations(AnnotationKind))
+		if(!node.HasAnnotations(annotationKind))
 			return false;
 		
-		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(annotationKind);
 		
 		foreach(SyntaxAnnotation ann in annotations)
 		{
@@ -26,12 +23,12 @@ internal static class Extensions
 		return false;
 	}
 	
-	public static bool HasDataAnnotation(this SyntaxToken token, string data)
+	public static bool HasDataAnnotation(this SyntaxToken token, string data, string annotationKind = PredefinedAnnotations.Global_Kind)
 	{
-		if(!token.HasAnnotations(AnnotationKind))
+		if(!token.HasAnnotations(annotationKind))
 			return false;
 		
-		IEnumerable<SyntaxAnnotation> annotations = token.GetAnnotations(Extensions.AnnotationKind);
+		IEnumerable<SyntaxAnnotation> annotations = token.GetAnnotations(annotationKind);
 		
 		foreach(SyntaxAnnotation ann in annotations)
 		{
@@ -42,12 +39,12 @@ internal static class Extensions
 		return false;
 	}
 	
-	public static string? GetDataAnnotation(this SyntaxNode node)
+	public static string? GetDataAnnotation(this SyntaxNode node, string annotationKind = PredefinedAnnotations.Global_Kind)
 	{
-		if(!node.HasAnnotations(AnnotationKind))
+		if(!node.HasAnnotations(annotationKind))
 			return null;
 		
-		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(annotationKind);
 		
 		foreach(SyntaxAnnotation ann in annotations)
 		{
@@ -57,12 +54,12 @@ internal static class Extensions
 		return null;
 	}
 
-	public static string? GetDataAnnotation(this SyntaxToken node)
+	public static string? GetDataAnnotation(this SyntaxToken token, string annotationKind = PredefinedAnnotations.Global_Kind)
 	{
-		if (!node.HasAnnotations(AnnotationKind))
+		if (!token.HasAnnotations(annotationKind))
 			return null;
 
-		IEnumerable<SyntaxAnnotation> annotations = node.GetAnnotations(Extensions.AnnotationKind);
+		IEnumerable<SyntaxAnnotation> annotations = token.GetAnnotations(annotationKind);
 
 		foreach (SyntaxAnnotation ann in annotations)
 		{
@@ -72,6 +69,22 @@ internal static class Extensions
 		return null;
 	}
 
+	public static string? GetAllDataAnnotation(this SyntaxNode node)
+	{
+		string str = string.Empty;
+		str += node.GetDataAnnotation();
+		str += " ";
+		str += node.GetDataAnnotation(PredefinedAnnotations.GlobalBuiltIn_Kind);
+		return str;
+	}
+	public static string? GetAllDataAnnotation(this SyntaxToken token)
+	{
+		string str = string.Empty;
+		str += token.GetDataAnnotation();
+		str += " ";
+		str += token.GetDataAnnotation(PredefinedAnnotations.GlobalBuiltIn_Kind);
+		return str;
+	}
 
 	//https://stackoverflow.com/a/21755933
 	public static string? FirstCharToLowerCase(this string? str)

@@ -120,15 +120,15 @@ public static class CSTOJS
 			{
 				files[i].DebugStrings[0] = _root.ToFullString();
 				files[i].DebugStrings[0] += "\n--- --- ---\n";
-				files[i].DebugStrings[0] += "ReplaceNodes:";
+				files[i].DebugStrings[0] += "_withSemanticWalker.ReplaceNodes:";
 				files[i].DebugStrings[0] += "\n--- --- ---\n";
 				foreach (KeyValuePair<SyntaxNode, SyntaxNode> _nodes in _withSemanticWalker.ReplaceNodes)
 				{
 					files[i].DebugStrings[0] += $"\tNode ({_nodes.Key.GetLocation().GetLineSpan()}): \n|";
-					files[i].DebugStrings[0] += _nodes.Key.ToString();
+					files[i].DebugStrings[0] += _nodes.Key.ToFullString();
 					files[i].DebugStrings[0] += "|\n";
-					files[i].DebugStrings[0] += $"\tReplaced node (data annotation: {_nodes.Value.GetDataAnnotation()}): \n|";
-					files[i].DebugStrings[0] += _nodes.Value.ToString();
+					files[i].DebugStrings[0] += $"\tReplaced node (data annotations: {_nodes.Value.GetAllDataAnnotation()}): \n|";
+					files[i].DebugStrings[0] += _nodes.Value.ToFullString();
 					files[i].DebugStrings[0] += "|\n";
 				}
 			}
@@ -138,12 +138,54 @@ public static class CSTOJS
 				MakePropertiesEnumerableRewriter _makePropertiesEnumerableRewriter = new();
 				_root = _makePropertiesEnumerableRewriter.Visit(_root);
 			}
-			
-			_root = _withoutSemanticRewriter.Visit(_root);
 
 			if (files[i].OptionsForFile.Debug)
+			{
+				WithoutSemanticRewriter_Debug _withoutSemanticRewriter_Debug = new(files[i].OptionsForFile);
+				_withoutSemanticRewriter = _withoutSemanticRewriter_Debug;
+				
+				_root = _withoutSemanticRewriter_Debug.Visit(_root);
+				
 				files[i].DebugStrings[1] = _root.ToFullString();
-			
+				
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				files[i].DebugStrings[1] += "_withoutSemanticRewriter_Debug.ReplaceTokens:";
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				foreach (KeyValuePair<SyntaxToken, SyntaxToken> _tokens in _withoutSemanticRewriter_Debug.ReplacedTokens)
+				{
+					files[i].DebugStrings[1] += $"\tToken ({_tokens.Key.GetLocation().GetLineSpan()}): \n|";
+					files[i].DebugStrings[1] += _tokens.Key.ToFullString();
+					files[i].DebugStrings[1] += "|\n";
+					files[i].DebugStrings[1] += $"\tReplaced token (data annotations: {_tokens.Value.GetAllDataAnnotation()}): \n|";
+					files[i].DebugStrings[1] += _tokens.Value.ToFullString();
+					files[i].DebugStrings[1] += "|\n";
+				}
+
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				files[i].DebugStrings[1] += "_withoutSemanticRewriter_Debug.ReplacedNodes:";
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				foreach (KeyValuePair<SyntaxNode, SyntaxNode> _nodes in _withoutSemanticRewriter_Debug.ReplacedNodes)
+				{
+					files[i].DebugStrings[1] += $"\tNode ({_nodes.Key.GetLocation().GetLineSpan()}): \n|";
+					files[i].DebugStrings[1] += _nodes.Key.ToFullString();
+					files[i].DebugStrings[1] += "|\n";
+					files[i].DebugStrings[1] += $"\tReplaced node (data annotations: {_nodes.Value.GetAllDataAnnotation()}): \n|";
+					files[i].DebugStrings[1] += _nodes.Value.ToFullString();
+					files[i].DebugStrings[1] += "|\n";
+				}
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				files[i].DebugStrings[1] += "_withoutSemanticRewriter_Debug.RemovedNodes:";
+				files[i].DebugStrings[1] += "\n--- --- ---\n";
+				foreach (KeyValuePair<SyntaxNode, SyntaxRemoveOptions> _nodes in _withoutSemanticRewriter_Debug.RemovedNodes)
+				{
+					files[i].DebugStrings[1] += $"\tNode ({_nodes.Key.GetLocation().GetLineSpan()}) SyntaxRemoveOption: {_nodes.Value.ToString()}: \n|";
+					files[i].DebugStrings[1] += _nodes.Key.ToFullString();
+					files[i].DebugStrings[1] += "|\n";
+				}
+			}
+			else
+				_root = _withoutSemanticRewriter.Visit(_root);
+
 			if (files[i].OptionsForFile.NormalizeWhitespace)
 				_root = _root.NormalizeWhitespace();
 

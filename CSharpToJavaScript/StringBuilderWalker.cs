@@ -11,10 +11,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 {
 	public StringBuilder JSSB { get; set; } = new(512);
 
-	public StringBuilderWalker() : base(SyntaxWalkerDepth.Trivia)
-	{
-
-	}
+	public StringBuilderWalker() : base(SyntaxWalkerDepth.Trivia) {	}
 
 #if DEBUG
 	public override void Visit(SyntaxNode? node)
@@ -280,7 +277,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
-		if (node.Expression.HasDataAnnotation(BinaryAttribute.Annotation.Data!))
+		if (node.Expression.HasDataAnnotation(PredefinedAnnotations.BinaryAttribute_Data))
 		{
 			VisitArgument(node.ArgumentList.Arguments[0]);
 
@@ -294,7 +291,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 			VisitArgument(node.ArgumentList.Arguments[1]);
 			return;
 		}
-		if (node.Expression.HasDataAnnotation(UnaryAttribute.Annotation.Data!))
+		if (node.Expression.HasDataAnnotation(PredefinedAnnotations.UnaryAttribute_Data))
 		{
 			JSSB.Append(node.Expression.ToString());
 
@@ -308,7 +305,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 	}
 	public override void VisitConstructorDeclaration(ConstructorDeclarationSyntax node)
 	{
-		if (!node.Identifier.HasDataAnnotation(WithoutSemanticRewriter.StaticConstructor.Data!))
+		if (!node.Identifier.HasDataAnnotation(PredefinedAnnotations.StaticConstructor_Data))
 			base.VisitConstructorDeclaration(node);
 		else
 		{
@@ -480,6 +477,7 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.InterpolatedVerbatimStringStartToken:
 					case SyntaxKind.InterpolatedStringStartToken:
 					case SyntaxKind.InterpolatedStringEndToken:
 						JSSB.Append('`');

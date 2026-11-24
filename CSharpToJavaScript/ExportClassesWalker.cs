@@ -19,6 +19,10 @@ internal class ExportClassesWalker : CSharpSyntaxWalker
 	}
 	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
+		//Ignore class export if the IgnoreAttribute is used.
+		if (node.HasDataAnnotation(PredefinedAnnotations.IgnoreAttribute_Data))
+			return;
+			
 		INamedTypeSymbol? classSymbol = _Model.GetDeclaredSymbol(node);
 
 		if (classSymbol != null)

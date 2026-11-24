@@ -1,4 +1,4 @@
-//8/27/2026 4:57:54 PM
+//11/24/2026 1:59:47 PM
 
 #nullable enable
 //Ignore missing XML comments.
@@ -170,15 +170,17 @@ using FormDataEntryValue = Union237;
 
 
 ///<summary>
-///<see cref="RequestInfo"/> or <see cref="List{RequestInfo}"/>
+///<see cref="List{RequestInfo}"/> or <see cref="Request"/> or <see cref="USVString"/>
 ///</summary>
 public struct Union0
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union0(RequestInfo value){return new Union0 { Value = value };}
-	public static implicit operator RequestInfo(Union0 value){return new Union0 { Value = value };}
 	public static implicit operator Union0(List<RequestInfo> value){return new Union0 { Value = value };}
 	public static implicit operator List<RequestInfo>(Union0 value){return new Union0 { Value = value };}
+	public static implicit operator Union0(Request value){return new Union0 { Value = value };}
+	public static implicit operator Request(Union0 value){return new Union0 { Value = value };}
+	public static implicit operator Union0(USVString value){return new Union0 { Value = value };}
+	public static implicit operator USVString(Union0 value){return new Union0 { Value = value };}
 }
 
 ///<summary>
@@ -206,15 +208,17 @@ public struct Union2
 }
 
 ///<summary>
-///<see cref="CSSOMString"/> or <see cref="BufferSource"/>
+///<see cref="CSSOMString"/> or <see cref="ArrayBufferView"/> or <see cref="ArrayBuffer"/>
 ///</summary>
 public struct Union3
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union3(CSSOMString value){return new Union3 { Value = value };}
 	public static implicit operator CSSOMString(Union3 value){return new Union3 { Value = value };}
-	public static implicit operator Union3(BufferSource value){return new Union3 { Value = value };}
-	public static implicit operator BufferSource(Union3 value){return new Union3 { Value = value };}
+	public static implicit operator Union3(ArrayBufferView value){return new Union3 { Value = value };}
+	public static implicit operator ArrayBufferView(Union3 value){return new Union3 { Value = value };}
+	public static implicit operator Union3(ArrayBuffer value){return new Union3 { Value = value };}
+	public static implicit operator ArrayBuffer(Union3 value){return new Union3 { Value = value };}
 }
 
 ///<summary>
@@ -340,15 +344,17 @@ public struct Union13
 }
 
 ///<summary>
-///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordish"/>
+///<see cref="CSSNumericValue"/> or <see cref="DOMString"/> or <see cref="CSSKeywordValue"/>
 ///</summary>
 public struct Union14
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union14(CSSNumericValue value){return new Union14 { Value = value };}
 	public static implicit operator CSSNumericValue(Union14 value){return new Union14 { Value = value };}
-	public static implicit operator Union14(CSSKeywordish value){return new Union14 { Value = value };}
-	public static implicit operator CSSKeywordish(Union14 value){return new Union14 { Value = value };}
+	public static implicit operator Union14(DOMString value){return new Union14 { Value = value };}
+	public static implicit operator DOMString(Union14 value){return new Union14 { Value = value };}
+	public static implicit operator Union14(CSSKeywordValue value){return new Union14 { Value = value };}
+	public static implicit operator CSSKeywordValue(Union14 value){return new Union14 { Value = value };}
 }
 
 ///<summary>
@@ -364,51 +370,59 @@ public struct Union15
 }
 
 ///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///<see cref="CSSKeywordish"/> or <see cref="Number"/> or <see cref="CSSNumericValue"/>
 ///</summary>
 public struct Union16
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union16(CSSNumberish value){return new Union16 { Value = value };}
-	public static implicit operator CSSNumberish(Union16 value){return new Union16 { Value = value };}
 	public static implicit operator Union16(CSSKeywordish value){return new Union16 { Value = value };}
 	public static implicit operator CSSKeywordish(Union16 value){return new Union16 { Value = value };}
+	public static implicit operator Union16(Number value){return new Union16 { Value = value };}
+	public static implicit operator Number(Union16 value){return new Union16 { Value = value };}
+	public static implicit operator Union16(CSSNumericValue value){return new Union16 { Value = value };}
+	public static implicit operator CSSNumericValue(Union16 value){return new Union16 { Value = value };}
 }
 
 ///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///<see cref="CSSKeywordish"/> or <see cref="Number"/> or <see cref="CSSNumericValue"/>
 ///</summary>
 public struct Union17
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union17(CSSNumberish value){return new Union17 { Value = value };}
-	public static implicit operator CSSNumberish(Union17 value){return new Union17 { Value = value };}
 	public static implicit operator Union17(CSSKeywordish value){return new Union17 { Value = value };}
 	public static implicit operator CSSKeywordish(Union17 value){return new Union17 { Value = value };}
+	public static implicit operator Union17(Number value){return new Union17 { Value = value };}
+	public static implicit operator Number(Union17 value){return new Union17 { Value = value };}
+	public static implicit operator Union17(CSSNumericValue value){return new Union17 { Value = value };}
+	public static implicit operator CSSNumericValue(Union17 value){return new Union17 { Value = value };}
 }
 
 ///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///<see cref="CSSKeywordish"/> or <see cref="Number"/> or <see cref="CSSNumericValue"/>
 ///</summary>
 public struct Union18
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union18(CSSNumberish value){return new Union18 { Value = value };}
-	public static implicit operator CSSNumberish(Union18 value){return new Union18 { Value = value };}
 	public static implicit operator Union18(CSSKeywordish value){return new Union18 { Value = value };}
 	public static implicit operator CSSKeywordish(Union18 value){return new Union18 { Value = value };}
+	public static implicit operator Union18(Number value){return new Union18 { Value = value };}
+	public static implicit operator Number(Union18 value){return new Union18 { Value = value };}
+	public static implicit operator Union18(CSSNumericValue value){return new Union18 { Value = value };}
+	public static implicit operator CSSNumericValue(Union18 value){return new Union18 { Value = value };}
 }
 
 ///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///<see cref="CSSKeywordish"/> or <see cref="Number"/> or <see cref="CSSNumericValue"/>
 ///</summary>
 public struct Union19
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union19(CSSNumberish value){return new Union19 { Value = value };}
-	public static implicit operator CSSNumberish(Union19 value){return new Union19 { Value = value };}
 	public static implicit operator Union19(CSSKeywordish value){return new Union19 { Value = value };}
 	public static implicit operator CSSKeywordish(Union19 value){return new Union19 { Value = value };}
+	public static implicit operator Union19(Number value){return new Union19 { Value = value };}
+	public static implicit operator Number(Union19 value){return new Union19 { Value = value };}
+	public static implicit operator Union19(CSSNumericValue value){return new Union19 { Value = value };}
+	public static implicit operator CSSNumericValue(Union19 value){return new Union19 { Value = value };}
 }
 
 ///<summary>
@@ -656,33 +670,93 @@ public struct Union39
 }
 
 ///<summary>
-///<see cref="Blob"/> or <see cref="BufferSource"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="USVString"/>
+///<see cref="Blob"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union40
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union40(Blob value){return new Union40 { Value = value };}
 	public static implicit operator Blob(Union40 value){return new Union40 { Value = value };}
-	public static implicit operator Union40(BufferSource value){return new Union40 { Value = value };}
-	public static implicit operator BufferSource(Union40 value){return new Union40 { Value = value };}
 	public static implicit operator Union40(FormData value){return new Union40 { Value = value };}
 	public static implicit operator FormData(Union40 value){return new Union40 { Value = value };}
 	public static implicit operator Union40(URLSearchParams value){return new Union40 { Value = value };}
 	public static implicit operator URLSearchParams(Union40 value){return new Union40 { Value = value };}
 	public static implicit operator Union40(USVString value){return new Union40 { Value = value };}
 	public static implicit operator USVString(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(ArrayBuffer value){return new Union40 { Value = value };}
+	public static implicit operator ArrayBuffer(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Int8Array value){return new Union40 { Value = value };}
+	public static implicit operator Int8Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Int16Array value){return new Union40 { Value = value };}
+	public static implicit operator Int16Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Int32Array value){return new Union40 { Value = value };}
+	public static implicit operator Int32Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Uint8Array value){return new Union40 { Value = value };}
+	public static implicit operator Uint8Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Uint16Array value){return new Union40 { Value = value };}
+	public static implicit operator Uint16Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Uint32Array value){return new Union40 { Value = value };}
+	public static implicit operator Uint32Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Uint8ClampedArray value){return new Union40 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(BigInt64Array value){return new Union40 { Value = value };}
+	public static implicit operator BigInt64Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(BigUint64Array value){return new Union40 { Value = value };}
+	public static implicit operator BigUint64Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Unsupported /*Float16Array*/ value){return new Union40 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Float32Array value){return new Union40 { Value = value };}
+	public static implicit operator Float32Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Float64Array value){return new Union40 { Value = value };}
+	public static implicit operator Float64Array(Union40 value){return new Union40 { Value = value };}
+	public static implicit operator Union40(DataView value){return new Union40 { Value = value };}
+	public static implicit operator DataView(Union40 value){return new Union40 { Value = value };}
 }
 
 ///<summary>
-///<see cref="ReadableStream"/> or <see cref="XMLHttpRequestBodyInit"/>
+///<see cref="ReadableStream"/> or <see cref="Blob"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union41
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union41(ReadableStream value){return new Union41 { Value = value };}
 	public static implicit operator ReadableStream(Union41 value){return new Union41 { Value = value };}
-	public static implicit operator Union41(XMLHttpRequestBodyInit value){return new Union41 { Value = value };}
-	public static implicit operator XMLHttpRequestBodyInit(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Blob value){return new Union41 { Value = value };}
+	public static implicit operator Blob(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(FormData value){return new Union41 { Value = value };}
+	public static implicit operator FormData(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(URLSearchParams value){return new Union41 { Value = value };}
+	public static implicit operator URLSearchParams(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(USVString value){return new Union41 { Value = value };}
+	public static implicit operator USVString(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(ArrayBuffer value){return new Union41 { Value = value };}
+	public static implicit operator ArrayBuffer(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Int8Array value){return new Union41 { Value = value };}
+	public static implicit operator Int8Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Int16Array value){return new Union41 { Value = value };}
+	public static implicit operator Int16Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Int32Array value){return new Union41 { Value = value };}
+	public static implicit operator Int32Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Uint8Array value){return new Union41 { Value = value };}
+	public static implicit operator Uint8Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Uint16Array value){return new Union41 { Value = value };}
+	public static implicit operator Uint16Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Uint32Array value){return new Union41 { Value = value };}
+	public static implicit operator Uint32Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Uint8ClampedArray value){return new Union41 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(BigInt64Array value){return new Union41 { Value = value };}
+	public static implicit operator BigInt64Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(BigUint64Array value){return new Union41 { Value = value };}
+	public static implicit operator BigUint64Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Unsupported /*Float16Array*/ value){return new Union41 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Float32Array value){return new Union41 { Value = value };}
+	public static implicit operator Float32Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Float64Array value){return new Union41 { Value = value };}
+	public static implicit operator Float64Array(Union41 value){return new Union41 { Value = value };}
+	public static implicit operator Union41(DataView value){return new Union41 { Value = value };}
+	public static implicit operator DataView(Union41 value){return new Union41 { Value = value };}
 }
 
 ///<summary>
@@ -710,17 +784,43 @@ public struct Union43
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
+///<see cref="Blob"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union44
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union44(BufferSource value){return new Union44 { Value = value };}
-	public static implicit operator BufferSource(Union44 value){return new Union44 { Value = value };}
 	public static implicit operator Union44(Blob value){return new Union44 { Value = value };}
 	public static implicit operator Blob(Union44 value){return new Union44 { Value = value };}
 	public static implicit operator Union44(USVString value){return new Union44 { Value = value };}
 	public static implicit operator USVString(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(ArrayBuffer value){return new Union44 { Value = value };}
+	public static implicit operator ArrayBuffer(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Int8Array value){return new Union44 { Value = value };}
+	public static implicit operator Int8Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Int16Array value){return new Union44 { Value = value };}
+	public static implicit operator Int16Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Int32Array value){return new Union44 { Value = value };}
+	public static implicit operator Int32Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Uint8Array value){return new Union44 { Value = value };}
+	public static implicit operator Uint8Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Uint16Array value){return new Union44 { Value = value };}
+	public static implicit operator Uint16Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Uint32Array value){return new Union44 { Value = value };}
+	public static implicit operator Uint32Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Uint8ClampedArray value){return new Union44 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(BigInt64Array value){return new Union44 { Value = value };}
+	public static implicit operator BigInt64Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(BigUint64Array value){return new Union44 { Value = value };}
+	public static implicit operator BigUint64Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Unsupported /*Float16Array*/ value){return new Union44 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Float32Array value){return new Union44 { Value = value };}
+	public static implicit operator Float32Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Float64Array value){return new Union44 { Value = value };}
+	public static implicit operator Float64Array(Union44 value){return new Union44 { Value = value };}
+	public static implicit operator Union44(DataView value){return new Union44 { Value = value };}
+	public static implicit operator DataView(Union44 value){return new Union44 { Value = value };}
 }
 
 ///<summary>
@@ -748,33 +848,85 @@ public struct Union46
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
+///<see cref="Blob"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union47
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union47(BufferSource value){return new Union47 { Value = value };}
-	public static implicit operator BufferSource(Union47 value){return new Union47 { Value = value };}
 	public static implicit operator Union47(Blob value){return new Union47 { Value = value };}
 	public static implicit operator Blob(Union47 value){return new Union47 { Value = value };}
 	public static implicit operator Union47(USVString value){return new Union47 { Value = value };}
 	public static implicit operator USVString(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(ArrayBuffer value){return new Union47 { Value = value };}
+	public static implicit operator ArrayBuffer(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Int8Array value){return new Union47 { Value = value };}
+	public static implicit operator Int8Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Int16Array value){return new Union47 { Value = value };}
+	public static implicit operator Int16Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Int32Array value){return new Union47 { Value = value };}
+	public static implicit operator Int32Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Uint8Array value){return new Union47 { Value = value };}
+	public static implicit operator Uint8Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Uint16Array value){return new Union47 { Value = value };}
+	public static implicit operator Uint16Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Uint32Array value){return new Union47 { Value = value };}
+	public static implicit operator Uint32Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Uint8ClampedArray value){return new Union47 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(BigInt64Array value){return new Union47 { Value = value };}
+	public static implicit operator BigInt64Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(BigUint64Array value){return new Union47 { Value = value };}
+	public static implicit operator BigUint64Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Unsupported /*Float16Array*/ value){return new Union47 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Float32Array value){return new Union47 { Value = value };}
+	public static implicit operator Float32Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(Float64Array value){return new Union47 { Value = value };}
+	public static implicit operator Float64Array(Union47 value){return new Union47 { Value = value };}
+	public static implicit operator Union47(DataView value){return new Union47 { Value = value };}
+	public static implicit operator DataView(Union47 value){return new Union47 { Value = value };}
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/> or <see cref="WriteParams"/>
+///<see cref="Blob"/> or <see cref="USVString"/> or <see cref="WriteParams"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union48
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union48(BufferSource value){return new Union48 { Value = value };}
-	public static implicit operator BufferSource(Union48 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(Blob value){return new Union48 { Value = value };}
 	public static implicit operator Blob(Union48 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(USVString value){return new Union48 { Value = value };}
 	public static implicit operator USVString(Union48 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(WriteParams value){return new Union48 { Value = value };}
 	public static implicit operator WriteParams(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(ArrayBuffer value){return new Union48 { Value = value };}
+	public static implicit operator ArrayBuffer(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Int8Array value){return new Union48 { Value = value };}
+	public static implicit operator Int8Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Int16Array value){return new Union48 { Value = value };}
+	public static implicit operator Int16Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Int32Array value){return new Union48 { Value = value };}
+	public static implicit operator Int32Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Uint8Array value){return new Union48 { Value = value };}
+	public static implicit operator Uint8Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Uint16Array value){return new Union48 { Value = value };}
+	public static implicit operator Uint16Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Uint32Array value){return new Union48 { Value = value };}
+	public static implicit operator Uint32Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Uint8ClampedArray value){return new Union48 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(BigInt64Array value){return new Union48 { Value = value };}
+	public static implicit operator BigInt64Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(BigUint64Array value){return new Union48 { Value = value };}
+	public static implicit operator BigUint64Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Unsupported /*Float16Array*/ value){return new Union48 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Float32Array value){return new Union48 { Value = value };}
+	public static implicit operator Float32Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Float64Array value){return new Union48 { Value = value };}
+	public static implicit operator Float64Array(Union48 value){return new Union48 { Value = value };}
+	public static implicit operator Union48(DataView value){return new Union48 { Value = value };}
+	public static implicit operator DataView(Union48 value){return new Union48 { Value = value };}
 }
 
 ///<summary>
@@ -1068,13 +1220,11 @@ public struct Union71
 }
 
 ///<summary>
-///<see cref="HTMLOrSVGImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/>
+///<see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/> or <see cref="HTMLImageElement"/> or <see cref="SVGImageElement"/>
 ///</summary>
 public struct Union72
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union72(HTMLOrSVGImageElement value){return new Union72 { Value = value };}
-	public static implicit operator HTMLOrSVGImageElement(Union72 value){return new Union72 { Value = value };}
 	public static implicit operator Union72(HTMLVideoElement value){return new Union72 { Value = value };}
 	public static implicit operator HTMLVideoElement(Union72 value){return new Union72 { Value = value };}
 	public static implicit operator Union72(HTMLCanvasElement value){return new Union72 { Value = value };}
@@ -1085,6 +1235,10 @@ public struct Union72
 	public static implicit operator OffscreenCanvas(Union72 value){return new Union72 { Value = value };}
 	public static implicit operator Union72(VideoFrame value){return new Union72 { Value = value };}
 	public static implicit operator VideoFrame(Union72 value){return new Union72 { Value = value };}
+	public static implicit operator Union72(HTMLImageElement value){return new Union72 { Value = value };}
+	public static implicit operator HTMLImageElement(Union72 value){return new Union72 { Value = value };}
+	public static implicit operator Union72(SVGImageElement value){return new Union72 { Value = value };}
+	public static implicit operator SVGImageElement(Union72 value){return new Union72 { Value = value };}
 }
 
 ///<summary>
@@ -1348,17 +1502,29 @@ public struct Union92
 }
 
 ///<summary>
-///<see cref="CanvasImageSource"/> or <see cref="Blob"/> or <see cref="ImageData"/>
+///<see cref="Blob"/> or <see cref="ImageData"/> or <see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/> or <see cref="HTMLImageElement"/> or <see cref="SVGImageElement"/>
 ///</summary>
 public struct Union93
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union93(CanvasImageSource value){return new Union93 { Value = value };}
-	public static implicit operator CanvasImageSource(Union93 value){return new Union93 { Value = value };}
 	public static implicit operator Union93(Blob value){return new Union93 { Value = value };}
 	public static implicit operator Blob(Union93 value){return new Union93 { Value = value };}
 	public static implicit operator Union93(ImageData value){return new Union93 { Value = value };}
 	public static implicit operator ImageData(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(HTMLVideoElement value){return new Union93 { Value = value };}
+	public static implicit operator HTMLVideoElement(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(HTMLCanvasElement value){return new Union93 { Value = value };}
+	public static implicit operator HTMLCanvasElement(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(ImageBitmap value){return new Union93 { Value = value };}
+	public static implicit operator ImageBitmap(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(OffscreenCanvas value){return new Union93 { Value = value };}
+	public static implicit operator OffscreenCanvas(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(VideoFrame value){return new Union93 { Value = value };}
+	public static implicit operator VideoFrame(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(HTMLImageElement value){return new Union93 { Value = value };}
+	public static implicit operator HTMLImageElement(Union93 value){return new Union93 { Value = value };}
+	public static implicit operator Union93(SVGImageElement value){return new Union93 { Value = value };}
+	public static implicit operator SVGImageElement(Union93 value){return new Union93 { Value = value };}
 }
 
 ///<summary>
@@ -1424,39 +1590,45 @@ public struct Union98
 }
 
 ///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
+///<see cref="bool"/> or <see cref="Number"/> or <see cref="ConstrainDoubleRange"/>
 ///</summary>
 public struct Union99
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union99(bool value){return new Union99 { Value = value };}
 	public static implicit operator bool(Union99 value){return new Union99 { Value = value };}
-	public static implicit operator Union99(ConstrainDouble value){return new Union99 { Value = value };}
-	public static implicit operator ConstrainDouble(Union99 value){return new Union99 { Value = value };}
+	public static implicit operator Union99(Number value){return new Union99 { Value = value };}
+	public static implicit operator Number(Union99 value){return new Union99 { Value = value };}
+	public static implicit operator Union99(ConstrainDoubleRange value){return new Union99 { Value = value };}
+	public static implicit operator ConstrainDoubleRange(Union99 value){return new Union99 { Value = value };}
 }
 
 ///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
+///<see cref="bool"/> or <see cref="Number"/> or <see cref="ConstrainDoubleRange"/>
 ///</summary>
 public struct Union100
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union100(bool value){return new Union100 { Value = value };}
 	public static implicit operator bool(Union100 value){return new Union100 { Value = value };}
-	public static implicit operator Union100(ConstrainDouble value){return new Union100 { Value = value };}
-	public static implicit operator ConstrainDouble(Union100 value){return new Union100 { Value = value };}
+	public static implicit operator Union100(Number value){return new Union100 { Value = value };}
+	public static implicit operator Number(Union100 value){return new Union100 { Value = value };}
+	public static implicit operator Union100(ConstrainDoubleRange value){return new Union100 { Value = value };}
+	public static implicit operator ConstrainDoubleRange(Union100 value){return new Union100 { Value = value };}
 }
 
 ///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
+///<see cref="bool"/> or <see cref="Number"/> or <see cref="ConstrainDoubleRange"/>
 ///</summary>
 public struct Union101
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union101(bool value){return new Union101 { Value = value };}
 	public static implicit operator bool(Union101 value){return new Union101 { Value = value };}
-	public static implicit operator Union101(ConstrainDouble value){return new Union101 { Value = value };}
-	public static implicit operator ConstrainDouble(Union101 value){return new Union101 { Value = value };}
+	public static implicit operator Union101(Number value){return new Union101 { Value = value };}
+	public static implicit operator Number(Union101 value){return new Union101 { Value = value };}
+	public static implicit operator Union101(ConstrainDoubleRange value){return new Union101 { Value = value };}
+	public static implicit operator ConstrainDoubleRange(Union101 value){return new Union101 { Value = value };}
 }
 
 ///<summary>
@@ -1706,27 +1878,79 @@ public struct Union121
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="DOMString"/>
+///<see cref="DOMString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union122
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union122(BufferSource value){return new Union122 { Value = value };}
-	public static implicit operator BufferSource(Union122 value){return new Union122 { Value = value };}
 	public static implicit operator Union122(DOMString value){return new Union122 { Value = value };}
 	public static implicit operator DOMString(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(ArrayBuffer value){return new Union122 { Value = value };}
+	public static implicit operator ArrayBuffer(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Int8Array value){return new Union122 { Value = value };}
+	public static implicit operator Int8Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Int16Array value){return new Union122 { Value = value };}
+	public static implicit operator Int16Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Int32Array value){return new Union122 { Value = value };}
+	public static implicit operator Int32Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Uint8Array value){return new Union122 { Value = value };}
+	public static implicit operator Uint8Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Uint16Array value){return new Union122 { Value = value };}
+	public static implicit operator Uint16Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Uint32Array value){return new Union122 { Value = value };}
+	public static implicit operator Uint32Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Uint8ClampedArray value){return new Union122 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(BigInt64Array value){return new Union122 { Value = value };}
+	public static implicit operator BigInt64Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(BigUint64Array value){return new Union122 { Value = value };}
+	public static implicit operator BigUint64Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Unsupported /*Float16Array*/ value){return new Union122 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Float32Array value){return new Union122 { Value = value };}
+	public static implicit operator Float32Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(Float64Array value){return new Union122 { Value = value };}
+	public static implicit operator Float64Array(Union122 value){return new Union122 { Value = value };}
+	public static implicit operator Union122(DataView value){return new Union122 { Value = value };}
+	public static implicit operator DataView(Union122 value){return new Union122 { Value = value };}
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="USVString"/>
+///<see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union123
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union123(BufferSource value){return new Union123 { Value = value };}
-	public static implicit operator BufferSource(Union123 value){return new Union123 { Value = value };}
 	public static implicit operator Union123(USVString value){return new Union123 { Value = value };}
 	public static implicit operator USVString(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(ArrayBuffer value){return new Union123 { Value = value };}
+	public static implicit operator ArrayBuffer(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Int8Array value){return new Union123 { Value = value };}
+	public static implicit operator Int8Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Int16Array value){return new Union123 { Value = value };}
+	public static implicit operator Int16Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Int32Array value){return new Union123 { Value = value };}
+	public static implicit operator Int32Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Uint8Array value){return new Union123 { Value = value };}
+	public static implicit operator Uint8Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Uint16Array value){return new Union123 { Value = value };}
+	public static implicit operator Uint16Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Uint32Array value){return new Union123 { Value = value };}
+	public static implicit operator Uint32Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Uint8ClampedArray value){return new Union123 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(BigInt64Array value){return new Union123 { Value = value };}
+	public static implicit operator BigInt64Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(BigUint64Array value){return new Union123 { Value = value };}
+	public static implicit operator BigUint64Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Unsupported /*Float16Array*/ value){return new Union123 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Float32Array value){return new Union123 { Value = value };}
+	public static implicit operator Float32Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Float64Array value){return new Union123 { Value = value };}
+	public static implicit operator Float64Array(Union123 value){return new Union123 { Value = value };}
+	public static implicit operator Union123(DataView value){return new Union123 { Value = value };}
+	public static implicit operator DataView(Union123 value){return new Union123 { Value = value };}
 }
 
 ///<summary>
@@ -2416,17 +2640,43 @@ public struct Union178
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="BufferSource"/> or <see cref="NDEFMessageInit"/>
+///<see cref="DOMString"/> or <see cref="NDEFMessageInit"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union179
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union179(DOMString value){return new Union179 { Value = value };}
 	public static implicit operator DOMString(Union179 value){return new Union179 { Value = value };}
-	public static implicit operator Union179(BufferSource value){return new Union179 { Value = value };}
-	public static implicit operator BufferSource(Union179 value){return new Union179 { Value = value };}
 	public static implicit operator Union179(NDEFMessageInit value){return new Union179 { Value = value };}
 	public static implicit operator NDEFMessageInit(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(ArrayBuffer value){return new Union179 { Value = value };}
+	public static implicit operator ArrayBuffer(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Int8Array value){return new Union179 { Value = value };}
+	public static implicit operator Int8Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Int16Array value){return new Union179 { Value = value };}
+	public static implicit operator Int16Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Int32Array value){return new Union179 { Value = value };}
+	public static implicit operator Int32Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Uint8Array value){return new Union179 { Value = value };}
+	public static implicit operator Uint8Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Uint16Array value){return new Union179 { Value = value };}
+	public static implicit operator Uint16Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Uint32Array value){return new Union179 { Value = value };}
+	public static implicit operator Uint32Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Uint8ClampedArray value){return new Union179 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(BigInt64Array value){return new Union179 { Value = value };}
+	public static implicit operator BigInt64Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(BigUint64Array value){return new Union179 { Value = value };}
+	public static implicit operator BigUint64Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Unsupported /*Float16Array*/ value){return new Union179 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Float32Array value){return new Union179 { Value = value };}
+	public static implicit operator Float32Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(Float64Array value){return new Union179 { Value = value };}
+	public static implicit operator Float64Array(Union179 value){return new Union179 { Value = value };}
+	public static implicit operator Union179(DataView value){return new Union179 { Value = value };}
+	public static implicit operator DataView(Union179 value){return new Union179 { Value = value };}
 }
 
 ///<summary>
@@ -2502,15 +2752,43 @@ public struct Union185
 }
 
 ///<summary>
-///<see cref="AllowSharedBufferSource"/> or <see cref="ReadableStream"/>
+///<see cref="ReadableStream"/> or <see cref="ArrayBuffer"/> or <see cref="SharedArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union186
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union186(AllowSharedBufferSource value){return new Union186 { Value = value };}
-	public static implicit operator AllowSharedBufferSource(Union186 value){return new Union186 { Value = value };}
 	public static implicit operator Union186(ReadableStream value){return new Union186 { Value = value };}
 	public static implicit operator ReadableStream(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(ArrayBuffer value){return new Union186 { Value = value };}
+	public static implicit operator ArrayBuffer(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(SharedArrayBuffer value){return new Union186 { Value = value };}
+	public static implicit operator SharedArrayBuffer(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Int8Array value){return new Union186 { Value = value };}
+	public static implicit operator Int8Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Int16Array value){return new Union186 { Value = value };}
+	public static implicit operator Int16Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Int32Array value){return new Union186 { Value = value };}
+	public static implicit operator Int32Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Uint8Array value){return new Union186 { Value = value };}
+	public static implicit operator Uint8Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Uint16Array value){return new Union186 { Value = value };}
+	public static implicit operator Uint16Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Uint32Array value){return new Union186 { Value = value };}
+	public static implicit operator Uint32Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Uint8ClampedArray value){return new Union186 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(BigInt64Array value){return new Union186 { Value = value };}
+	public static implicit operator BigInt64Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(BigUint64Array value){return new Union186 { Value = value };}
+	public static implicit operator BigUint64Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Unsupported /*Float16Array*/ value){return new Union186 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Float32Array value){return new Union186 { Value = value };}
+	public static implicit operator Float32Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(Float64Array value){return new Union186 { Value = value };}
+	public static implicit operator Float64Array(Union186 value){return new Union186 { Value = value };}
+	public static implicit operator Union186(DataView value){return new Union186 { Value = value };}
+	public static implicit operator DataView(Union186 value){return new Union186 { Value = value };}
 }
 
 ///<summary>
@@ -2526,15 +2804,41 @@ public struct Union187
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="JsonWebKey"/>
+///<see cref="JsonWebKey"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union188
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union188(BufferSource value){return new Union188 { Value = value };}
-	public static implicit operator BufferSource(Union188 value){return new Union188 { Value = value };}
 	public static implicit operator Union188(JsonWebKey value){return new Union188 { Value = value };}
 	public static implicit operator JsonWebKey(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(ArrayBuffer value){return new Union188 { Value = value };}
+	public static implicit operator ArrayBuffer(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Int8Array value){return new Union188 { Value = value };}
+	public static implicit operator Int8Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Int16Array value){return new Union188 { Value = value };}
+	public static implicit operator Int16Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Int32Array value){return new Union188 { Value = value };}
+	public static implicit operator Int32Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Uint8Array value){return new Union188 { Value = value };}
+	public static implicit operator Uint8Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Uint16Array value){return new Union188 { Value = value };}
+	public static implicit operator Uint16Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Uint32Array value){return new Union188 { Value = value };}
+	public static implicit operator Uint32Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Uint8ClampedArray value){return new Union188 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(BigInt64Array value){return new Union188 { Value = value };}
+	public static implicit operator BigInt64Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(BigUint64Array value){return new Union188 { Value = value };}
+	public static implicit operator BigUint64Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Unsupported /*Float16Array*/ value){return new Union188 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Float32Array value){return new Union188 { Value = value };}
+	public static implicit operator Float32Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(Float64Array value){return new Union188 { Value = value };}
+	public static implicit operator Float64Array(Union188 value){return new Union188 { Value = value };}
+	public static implicit operator Union188(DataView value){return new Union188 { Value = value };}
+	public static implicit operator DataView(Union188 value){return new Union188 { Value = value };}
 }
 
 ///<summary>
@@ -3004,19 +3308,43 @@ public struct Union223
 }
 
 ///<summary>
-///<see cref="ArrayBufferView"/> or <see cref="ArrayBuffer"/>
+///<see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union224
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union224(ArrayBufferView value){return new Union224 { Value = value };}
-	public static implicit operator ArrayBufferView(Union224 value){return new Union224 { Value = value };}
 	public static implicit operator Union224(ArrayBuffer value){return new Union224 { Value = value };}
 	public static implicit operator ArrayBuffer(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Int8Array value){return new Union224 { Value = value };}
+	public static implicit operator Int8Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Int16Array value){return new Union224 { Value = value };}
+	public static implicit operator Int16Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Int32Array value){return new Union224 { Value = value };}
+	public static implicit operator Int32Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Uint8Array value){return new Union224 { Value = value };}
+	public static implicit operator Uint8Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Uint16Array value){return new Union224 { Value = value };}
+	public static implicit operator Uint16Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Uint32Array value){return new Union224 { Value = value };}
+	public static implicit operator Uint32Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Uint8ClampedArray value){return new Union224 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(BigInt64Array value){return new Union224 { Value = value };}
+	public static implicit operator BigInt64Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(BigUint64Array value){return new Union224 { Value = value };}
+	public static implicit operator BigUint64Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Unsupported /*Float16Array*/ value){return new Union224 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Float32Array value){return new Union224 { Value = value };}
+	public static implicit operator Float32Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(Float64Array value){return new Union224 { Value = value };}
+	public static implicit operator Float64Array(Union224 value){return new Union224 { Value = value };}
+	public static implicit operator Union224(DataView value){return new Union224 { Value = value };}
+	public static implicit operator DataView(Union224 value){return new Union224 { Value = value };}
 }
 
 ///<summary>
-///<see cref="ArrayBuffer"/> or <see cref="SharedArrayBuffer"/> or <see cref="ArrayBufferView"/>
+///<see cref="ArrayBuffer"/> or <see cref="SharedArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union225
 {
@@ -3025,8 +3353,32 @@ public struct Union225
 	public static implicit operator ArrayBuffer(Union225 value){return new Union225 { Value = value };}
 	public static implicit operator Union225(SharedArrayBuffer value){return new Union225 { Value = value };}
 	public static implicit operator SharedArrayBuffer(Union225 value){return new Union225 { Value = value };}
-	public static implicit operator Union225(ArrayBufferView value){return new Union225 { Value = value };}
-	public static implicit operator ArrayBufferView(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Int8Array value){return new Union225 { Value = value };}
+	public static implicit operator Int8Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Int16Array value){return new Union225 { Value = value };}
+	public static implicit operator Int16Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Int32Array value){return new Union225 { Value = value };}
+	public static implicit operator Int32Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Uint8Array value){return new Union225 { Value = value };}
+	public static implicit operator Uint8Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Uint16Array value){return new Union225 { Value = value };}
+	public static implicit operator Uint16Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Uint32Array value){return new Union225 { Value = value };}
+	public static implicit operator Uint32Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Uint8ClampedArray value){return new Union225 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(BigInt64Array value){return new Union225 { Value = value };}
+	public static implicit operator BigInt64Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(BigUint64Array value){return new Union225 { Value = value };}
+	public static implicit operator BigUint64Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Unsupported /*Float16Array*/ value){return new Union225 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Float32Array value){return new Union225 { Value = value };}
+	public static implicit operator Float32Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(Float64Array value){return new Union225 { Value = value };}
+	public static implicit operator Float64Array(Union225 value){return new Union225 { Value = value };}
+	public static implicit operator Union225(DataView value){return new Union225 { Value = value };}
+	public static implicit operator DataView(Union225 value){return new Union225 { Value = value };}
 }
 
 ///<summary>
@@ -3114,17 +3466,43 @@ public struct Union232
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
+///<see cref="Blob"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union233
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union233(BufferSource value){return new Union233 { Value = value };}
-	public static implicit operator BufferSource(Union233 value){return new Union233 { Value = value };}
 	public static implicit operator Union233(Blob value){return new Union233 { Value = value };}
 	public static implicit operator Blob(Union233 value){return new Union233 { Value = value };}
 	public static implicit operator Union233(USVString value){return new Union233 { Value = value };}
 	public static implicit operator USVString(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(ArrayBuffer value){return new Union233 { Value = value };}
+	public static implicit operator ArrayBuffer(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Int8Array value){return new Union233 { Value = value };}
+	public static implicit operator Int8Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Int16Array value){return new Union233 { Value = value };}
+	public static implicit operator Int16Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Int32Array value){return new Union233 { Value = value };}
+	public static implicit operator Int32Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Uint8Array value){return new Union233 { Value = value };}
+	public static implicit operator Uint8Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Uint16Array value){return new Union233 { Value = value };}
+	public static implicit operator Uint16Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Uint32Array value){return new Union233 { Value = value };}
+	public static implicit operator Uint32Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Uint8ClampedArray value){return new Union233 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(BigInt64Array value){return new Union233 { Value = value };}
+	public static implicit operator BigInt64Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(BigUint64Array value){return new Union233 { Value = value };}
+	public static implicit operator BigUint64Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Unsupported /*Float16Array*/ value){return new Union233 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Float32Array value){return new Union233 { Value = value };}
+	public static implicit operator Float32Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(Float64Array value){return new Union233 { Value = value };}
+	public static implicit operator Float64Array(Union233 value){return new Union233 { Value = value };}
+	public static implicit operator Union233(DataView value){return new Union233 { Value = value };}
+	public static implicit operator DataView(Union233 value){return new Union233 { Value = value };}
 }
 
 ///<summary>
@@ -3152,15 +3530,49 @@ public struct Union235
 }
 
 ///<summary>
-///<see cref="Document"/> or <see cref="XMLHttpRequestBodyInit"/>
+///<see cref="Document"/> or <see cref="Blob"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="USVString"/> or <see cref="ArrayBuffer"/> or <see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union236
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union236(Document value){return new Union236 { Value = value };}
 	public static implicit operator Document(Union236 value){return new Union236 { Value = value };}
-	public static implicit operator Union236(XMLHttpRequestBodyInit value){return new Union236 { Value = value };}
-	public static implicit operator XMLHttpRequestBodyInit(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Blob value){return new Union236 { Value = value };}
+	public static implicit operator Blob(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(FormData value){return new Union236 { Value = value };}
+	public static implicit operator FormData(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(URLSearchParams value){return new Union236 { Value = value };}
+	public static implicit operator URLSearchParams(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(USVString value){return new Union236 { Value = value };}
+	public static implicit operator USVString(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(ArrayBuffer value){return new Union236 { Value = value };}
+	public static implicit operator ArrayBuffer(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Int8Array value){return new Union236 { Value = value };}
+	public static implicit operator Int8Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Int16Array value){return new Union236 { Value = value };}
+	public static implicit operator Int16Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Int32Array value){return new Union236 { Value = value };}
+	public static implicit operator Int32Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Uint8Array value){return new Union236 { Value = value };}
+	public static implicit operator Uint8Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Uint16Array value){return new Union236 { Value = value };}
+	public static implicit operator Uint16Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Uint32Array value){return new Union236 { Value = value };}
+	public static implicit operator Uint32Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Uint8ClampedArray value){return new Union236 { Value = value };}
+	public static implicit operator Uint8ClampedArray(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(BigInt64Array value){return new Union236 { Value = value };}
+	public static implicit operator BigInt64Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(BigUint64Array value){return new Union236 { Value = value };}
+	public static implicit operator BigUint64Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Unsupported /*Float16Array*/ value){return new Union236 { Value = value };}
+	public static implicit operator Unsupported /*Float16Array*/(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Float32Array value){return new Union236 { Value = value };}
+	public static implicit operator Float32Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(Float64Array value){return new Union236 { Value = value };}
+	public static implicit operator Float64Array(Union236 value){return new Union236 { Value = value };}
+	public static implicit operator Union236(DataView value){return new Union236 { Value = value };}
+	public static implicit operator DataView(Union236 value){return new Union236 { Value = value };}
 }
 
 ///<summary>

@@ -81,6 +81,9 @@ public static class CSTOJS
 
 		for (int i = 0; i < files.Length; i++)
 		{
+			if (files[i].OptionsForFile.Debug)
+				files[i].OptionsForFile.Print();
+			
 			if (files[i].OptionsForFile.DisableTranslation)
 				continue;
 

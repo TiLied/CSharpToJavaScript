@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using CSharpToJavaScript.Utils;
 
 namespace CSharpToJavaScript;
 
@@ -241,13 +242,60 @@ public class CSTOJSOptions
 	/// Default: <c>new()</c>
 	/// </value>
 	public StringBuilder AddSBAtTheBottom { get; set; } = new();
-	
+
 	/// <summary>
 	/// Creates new default options. See <see cref="CSTOJSOptions" />.
 	/// </summary>
-	public CSTOJSOptions()
+	public CSTOJSOptions() { }
+	
+	/// <summary>
+	/// Clone CSTOJSOptions. See <see cref="CSTOJSOptions" />.
+	/// </summary>
+	public CSTOJSOptions(CSTOJSOptions options)
 	{
+		Debug = options.Debug;
+		DisableDiagnostics = options.DisableDiagnostics;
+		UseVarOverLet = options.UseVarOverLet;
+		KeepBraceOnTheSameLine = options.KeepBraceOnTheSameLine;
+		NormalizeWhitespace = options.NormalizeWhitespace;
+		MakePropertiesEnumerable = options.MakePropertiesEnumerable;
+		DisableTranslation = options.DisableTranslation;
+		DisableNameOfProcessing = options.DisableNameOfProcessing;
 
+		EnableModules = options.EnableModules;
+
+		CustomPathToDLLs = options.CustomPathToDLLs;
+
+		CustomCSNamesToJS = options.CustomCSNamesToJS;
+		
+		AddSBAtTheTop = options.AddSBAtTheTop;
+		AddSBAtTheBottom = options.AddSBAtTheBottom;
+	}
+	
+	/// <summary>
+	/// Print options.
+	/// </summary>
+	public void Print()
+	{
+		Log.InfoLine($"Debug: {Debug}");
+		Log.InfoLine($"DisableDiagnostics: {DisableDiagnostics}");
+		Log.InfoLine($"UseVarOverLet: {UseVarOverLet}");
+		Log.InfoLine($"KeepBraceOnTheSameLine: {KeepBraceOnTheSameLine}");
+		Log.InfoLine($"NormalizeWhitespace: {NormalizeWhitespace}");
+		Log.InfoLine($"MakePropertiesEnumerable: {MakePropertiesEnumerable}");
+		Log.InfoLine($"DisableTranslation: {DisableTranslation}");
+		Log.InfoLine($"DisableNameOfProcessing: {DisableNameOfProcessing}");
+
+		Log.InfoLine($"EnableModules: {EnableModules}");
+
+		Log.InfoLine($"CustomPathToDLLs: {CustomPathToDLLs}");
+		Log.InfoLine($"CustomCSNamesToJS:");
+		foreach (KeyValuePair<string, string> item in CustomCSNamesToJS)
+		{
+			Log.InfoLine($"\t{item.Key}-{item.Value}");
+		}
+		Log.InfoLine($"AddSBAtTheTop: {AddSBAtTheTop}");
+		Log.InfoLine($"AddSBAtTheBottom: {AddSBAtTheBottom}");
 	}
 }
 

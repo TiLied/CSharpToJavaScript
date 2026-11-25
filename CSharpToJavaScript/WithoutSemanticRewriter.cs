@@ -601,7 +601,7 @@ internal class WithoutSemanticRewriter : CSharpSyntaxRewriter
 	}
 	public override SyntaxNode? VisitGenericName(GenericNameSyntax node)
 	{
-		return SyntaxFactory.IdentifierName(node.Identifier);
+		return SyntaxFactory.IdentifierName(node.Identifier.WithTrailingTrivia(node.GetTrailingTrivia()));
 	}
 
 	public override SyntaxNode? VisitQualifiedName(QualifiedNameSyntax node)

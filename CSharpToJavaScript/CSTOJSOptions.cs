@@ -265,11 +265,14 @@ public class CSTOJSOptions
 		EnableModules = options.EnableModules;
 
 		CustomPathToDLLs = options.CustomPathToDLLs;
-
-		CustomCSNamesToJS = options.CustomCSNamesToJS;
 		
-		AddSBAtTheTop = options.AddSBAtTheTop;
-		AddSBAtTheBottom = options.AddSBAtTheBottom;
+		foreach (KeyValuePair<string, string> item in  options.CustomCSNamesToJS)
+		{
+			CustomCSNamesToJS.Add(item.Key, item.Value);
+		}
+		
+		AddSBAtTheTop = new(options.AddSBAtTheTop.ToString());
+		AddSBAtTheBottom = new(options.AddSBAtTheBottom.ToString());
 	}
 	
 	/// <summary>

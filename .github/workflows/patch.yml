@@ -1,8 +1,8 @@
 name: patch
 
 on: 
-  schedule:
-    - cron: "0 13 * * 1"
+ # schedule:
+ #   - cron: "0 13 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
     
     runs-on: ubuntu-latest
 
-    if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
+    # if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
     steps:
       - uses: actions/checkout@v7
         with:

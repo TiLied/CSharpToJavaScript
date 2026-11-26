@@ -704,6 +704,9 @@ internal class StringBuilderWalker : CSharpSyntaxWalker
 					case SyntaxKind.PointerMemberAccessExpression:
 						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.InvocationExpression:
+						VisitInvocationExpression((InvocationExpressionSyntax)asNode);
+						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;

@@ -201,6 +201,10 @@ internal class ProcessBuiltIns
 				//TODO!
 				return ReplaceIdentifier(root, node, "raw``");
 			});
+		BuiltIns.Add(nameof(String) + nameof(string.Split), (root, node) =>
+		{
+			return ReplaceIdentifier(root, node, "split");
+		});
 
 		//
 		//

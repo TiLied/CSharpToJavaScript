@@ -163,20 +163,20 @@ public partial class GlobalObject
 	public class Infinity
 	{
 		[To(ToAttribute.NoneWithLeadingDotRemoved)]
-		public static Infinity Value { get; } = new();
+		public static dynamic Value { get; } = string.Empty;
 	}
 	[To(ToAttribute.Default)]
 	public class NaN
 	{
 		[To(ToAttribute.NoneWithLeadingDotRemoved)]
-		public static NaN Value { get; } = new();
+		public static dynamic Value { get; } = string.Empty;
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public class Undefined
 	{
 		[To(ToAttribute.NoneWithLeadingDotRemoved)]
-		public static Undefined Value { get; } = new();
+		public static dynamic Value { get; } = string.Empty;
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
